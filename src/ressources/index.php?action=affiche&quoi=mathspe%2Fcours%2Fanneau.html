@@ -1,0 +1,354 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Résumé de cours : Anneaux et arithmétique</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Résumé de cours : Anneaux et arithmétique</h1>
+<div class=cours>
+
+<div class=titrepartie>Anneaux</div>
+<p class=utexte>On appelle <span class=rougedico>anneau</span> la donnée d'un ensemble $A$ et de deux lois de composition interne
+ notées $+$ et $\times$ sur $A$ vérifiant les propriétés suivantes :</p>
+<div class=liste>
+<ol>
+<li>$(A,+)$ est un groupe abélien dont le neutre sera noté $0_A$;
+<li>La loi $\times$ est associative : pour tous $a,b,c\in A$, $a\times(b\times c)=(a\times b)\times c$;
+<li>la loi $\times$ possède un élément neutre noté $1_A$;
+<li>la loi $\times$ est distributive par rapport à la loi $+$, c'est-à-dire que pour tout $a,b,c\in A$, on a 
+$$a\times(b+c)=a\times b+a\times c\textrm{ et }(b+c)\times a=b\times a+c\times a.$$
+</ol>
+</div>
+<p class=untexte>
+Lorsque la loi $\times$ est commutative, on dit que l'anneau est commutatif. </p>
+<div class=exemple>
+<p class=untexte>Exemples : $(\mathbb Z,+,\times)$, $(\mathbb R,+,\times)$, $(\mathbb C,+,\times)$ sont des anneaux commutatifs.
+$(\mathcal M_n(\mathbb R),+,\times)$ est un anneau qui n'est pas commutatif.</p>
+</div>
+<div class=theo>
+<span class=grastheo>Règles de calculs dans un anneau : </span>soit $A$ un anneau, et $a,b\in A$. Alors
+<div class=liste>
+<ul>
+<li>$a\times 0_A=0_A\times a=0_A$;
+<li>pour tout $n\in\mathbb Z$, $n(ab)=(na)b=a(nb)$;
+<li>$(-a)(-b)=ab$;
+<li>si $a$ et $b$ commutent, 
+$$(a+b)^n=\sum_{k=0}^n \binom nk a^k b^{n-k}\textrm{ et }a^n-b^n=(a-b)\sum_{k=0}^{n-1}a^k b^{n-1-k}.$$
+</ul>
+</div>
+</div>
+<p class=utexte>Dans un anneau $A$, tous les éléments $a\in A$ n'admettent pas forcément d'inverse pour la loi $\times$. 
+Lorsque c'est le cas, on dit que $a$ est <span class=rougedico>inversible</span> et on note
+son inverse $a^{-1}$. L'ensemble des éléments inversible de l'anneau est noté $U(A)$. C'est un groupe pour la loi $\times.$
+</p>
+<p class=utexte>Si $A$ est un anneau et $B$ est une partie de $A$, on dit que $B$ est un <span class=rougedico>sous-anneau</span> de $A$ 
+si $B$ est stable pour les lois $+$ et $\times$ et si $B$ munit des lois $+$ et $\times$ est un anneau.</p>
+<div class=theo><span class=grastheo>Proposition (caractérisation des sous-anneaux) :</span>
+Une partie $B$ de l'anneau $A$ est un sous-anneau de $A$ si et seulement si :
+<div class=liste>
+<ul>
+<li>$1_A\in B$;
+<li>pour tous $a,b\in B$, $a-b\in B$;
+<li>pour tous $a,b\in B$, $a\times b\in B$.
+</ul>
+</div>
+</div>
+<p class=utexte>Soit $A,B$ deux anneaux. Une application $f:A\to B$ est un <span class=rougedico>morphisme d'anneaux</span>
+ si les conditions suivantes sont vérifiées : </p>
+ <div class=liste>
+<ol>
+<li>$f(1_A)=1_B$;
+<li>pour tous $a,b\in A$, on a $f(a+b)=f(a)+f(b)$;
+<li>pour tous $a,b\in A$, on a $f(a\times b)=f(a)\times f(b)$.
+</ol>
+</div>
+<p class=untexte>
+Lorsque $f$ est bijective, on parle d'<span class=rougedico>isomorphisme d'anneaux.</span> Remarquons que pour un morphisme d'anneaux $f:A\to B,$
+on a toujours $f(0_A)=0_B$ et $f(na)=nf(a),$ avec $n\in\mathbb Z$ et $a\in A.$
+</p>
+
+<p class=utexte>Si $A$ et $B$ sont deux anneaux, on munit $A\times B$ d'une structure d'anneau
+ en posant $(a,b)+ (a',b')=(a+a',b+b')$ et
+$(a,b) \times (a',b')=(a\times a',b\times b')$.</p>
+
+<div class=titrepartie>Corps</div>
+<p class=utexte>
+Un anneau $A$ est <span class=rougedico>intègre</span> s'il est commutatif, et si l'équation $a\times b=0$ entraîne $a=0$ ou $b=0$.</p>
+<div class=exemple>
+<p class=untexte>Exemples : $\mathbb Z$, $\mathbb R$ et $\mathbb C$ sont des anneaux intègres.
+En revanche, pour $n\geq 2$, $\mathcal M_n(\mathbb R)$ n'est pas intègre.</p>
+</div>
+<p class=utexte>Un <span class=rougedico>corps</span> est un anneau commutatif dans lequel tout élément non nul est inversible. </p>
+<div class=exemple>
+<p class=untexte>Exemples : $\mathbb R$ et $\mathbb C$ sont des corps.
+En revanche, $\mathbb Z$ n'est pas un corps et pour $n\geq 2$, $\mathcal M_n(\mathbb R)$ n'est pas un corps.</p>
+</div>
+<p class=utexte>Une partie $\mathbb L$ d'un corps $\mathbb K$ est un sous-corps de $\mathbb K$ si c'est un sous-anneau
+de $\mathbb K$ tel que, pour tout $x\in \mathbb L,$ $x\neq 0,$ alors $x^{-1}\in\mathbb L.$ $\mathbb L$ est alors
+un corps pour les lois induites par celles de $\mathbb K.$</p>
+
+<div class=titrepartie>Idéaux - divisibilité</div>
+<p class=utexte>Soit $A$ un anneau commutatif.
+Une partie $I$ de $A$ est un <span class=rougedico>idéal</span> si $(I,+)$ est un groupe et si, 
+pour tout $a\in A$ et tout $u\in I$, alors $au\in I$ (propriété d'absorbtion).</p>
+<div class=exemple>
+<span class=grastheo>Exemple : </span>
+Le noyau d'un morphisme d'anneaux commutatifs est un idéal.
+</div>
+<div class=theo><span class=grastheo>Proposition :</span> 
+Une partie $I$ de $A$ est un idéal si et seulement si $I$ est non vide et vérifie :
+<div class=liste>
+<ul>
+<li>pour tous $x,y\in I$, $x-y\in I$;
+<li>pour tout $x\in I$ et tout $a\in A$, $ax\in I$.
+</ul>
+</div>
+</div>
+<div class=theo><span class=grastheo>Proposition :</span>
+Soit $I$ et $J$ deux idéaux de $A$. Alors $I\cap J$ et $I+J$ sont deux idéaux de $A.$
+</div>
+<p class=utexte>Si $x$ est un élément de $A$, alors $xA=\{xa;\ a\in A\}$ est un idéal de $A$ et c'est 
+le plus petit idéal contenant $x$. On l'appelle
+<span class=rougedico>idéal engendré par $x.$</span></p>
+<p class=utexte>Si $A$ est intègre et $x,y\in A$, on dit que $x$ <span class=rougedico>divise</span> $y$ lorsqu'il existe $c\in A$ tel que $cx=y$.</p>
+<div class=theo><span class=grastheo>Proposition :</span> Soit $A$ un anneau commutatif intègre et $x,y\in A$.
+Alors $x$ divise $y$ si et seulement si $yA\subset xA$. 
+</div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Anneau $\mathbb Z$</div>
+<p class=utexte>$(\mathbb Z,+,\times)$ est un anneau commutatif intègre dont les éléments inversibles sont $+1$ et $-1.$
+
+<div class=theo><span class=grastheo>Théorème :</span> Les idéaux de $\mathbb Z$ sont les ensembles $n\mathbb Z$ pour $n\in\mathbb N$.</div>
+<p class=utexte>Soit $a_1,\dots,a_r$ des entiers. Alors $a_1\mathbb Z+\cdots+a_r \mathbb Z$ est un idéal de $\mathbb Z.$
+Il existe donc un unique entier naturel $d$ tel que $a_1\mathbb Z+\cdots+a_r\mathbb Z=d\mathbb Z.$
+Cet entier $d$ s'appelle le <span class=rougedico>pgcd</span> de $a_1,\dots,a_r.$ On le note
+$a_1\wedge \cdots\wedge a_r.$</p>
+<div class=theo><span class=grastheo>Proposition :</span> Soit $a_1,\dots,a_r\in\mathbb Z$ et $d\in\mathbb N.$
+Alors $d=a_1\wedge\cdots\wedge a_r$ si et seulement si :
+<div class=liste>
+<ul>
+<li>$d|a_1|,\dots,d|a_r;$
+<li>pour tout entier $k$ tel que $k|a_1,\dots,k|a_r$, alors $k|d.$
+</ul>
+</div></div>
+<p class=utexte>Soit $a_1,\dots,a_r$ des entiers. Alors $a_1\mathbb Z\cap\cdots\cap a_r\mathbb Z$ est un idéal de $\mathbb Z.$
+Il existe donc un unique entier naturel $m$ tel que $a_1\mathbb Z\cap \cdots\cap a_r\mathbb Z=m\mathbb Z.$
+Cet entier $m$ s'appelle le <span class=rougedico>ppcm</span> de $a_1,\dots,a_r$ et on le note $a_1\vee\cdots\vee a_r.$
+</p>
+
+<div class=titrepartie>Anneau de polynômes</div>
+<p class=untexte>Dans ce paragraphe, $\mathbb K$ désigne un sous-corps de $\mathbb C$.</p>
+<div class=theo><span class=grastheo>Théorème :</span> Les idéaux de $\mathbb K[X]$ sont les 
+idéaux $(P)$ engendrés par un polynôme $P\in\mathbb K[X]$ :
+$( P)=\{AP;\ A\in\mathbb K[X]\}.$
+De plus, on a $(P)=(Q)$ si et seulement si il existe $\lambda\in\mathbb K^*$ tel que $Q=\lambda P$.
+</div>
+<p class=utexte>Si $P$ et $Q$ sont deux polynômes de $\mathbb K[X]$, l'ensemble 
+$$(P)+(Q)=\{AP+BQ;\ A,B\in\mathbb K[X]\}$$ 
+est un idéal de $\mathbb K[X]$. 
+Il existe un unique polynôme unitaire $D\in\mathbb K[X]$ tel que $( P)+(Q)=(D)$. 
+$D$ s'appelle le <span class=rougedico>pgcd</span> de $P$ et $Q$ et est noté $P\wedge Q.$
+On dit que $P$ et $Q$ sont <span class=rougedico>premiers entre eux</span> si $P\wedge Q=1$.
+<div class=theo><span class=grastheo>Théorème de Bézout :</span> Soient $P,Q\in\mathbb K[X]$ non-nuls. Alors 
+$P\wedge Q=1$ si et seulement s'il existe $U,V\in\mathbb K[X]$ tels que $UP+VQ=1$.
+</div>
+<div class=theo><span class=grastheo>Lemme de Gauss :</span> Soient $P,Q,R\in\mathbb K[X]$ non-nuls. On suppose que 
+$P\wedge Q=1$. Alors si $P|QR$, on a $P|R$.</div>
+<p class=utexte>
+On peut généraliser la définition du pgcd à un nombre fini de polynômes $P_1,\dots,P_r$ : le pgcd de ces polynômes est
+ l'unique polynôme unitaire $D\in\mathbb K[X]$ tel que 
+$(D)$ est égal à l'idéal $\{A_1P_1+\dots+A_rP_r:\ A_1,\dots,A_r\in\mathbb K[X]\}$.
+On le note $P_1\wedge\cdots\wedge P_r.$
+En particulier, si $P_1\wedge\cdots\wedge P_r=Q,$ il existe $U_1,\dots,U_r\in\mathbb K[X]$ tel que $\sum_{i=1}^r U_i P_i=Q.$</p>
+<p class=utexte>Un polynôme $P\in\mathbb K[X]$ est <span class=rougedico>irréductible</span> s'il est de degré supérieur ou égal à 1 et si tous ses diviseurs
+sont les polynômes constants ou les polynômes associés à $P$ (c'est-à-dire les polynômes qui s'écrivent $\lambda P$ avec $\lambda\in\mathbb K$).
+<div class=theo><span class=grastheo>Théorème : </span> Tout polynôme $P\in\mathbb K[X]$ non nul s'écrit 
+$$P=\lambda P_1\cdots P_r$$
+où $\lambda\in\mathbb K$ et où les $P_i$ sont des polynômes irréductibles et unitaires de $\mathbb K[X]$. De plus, cette décomposition est unique 
+à l'ordre des termes près.</div>
+<div class=theo><span class=grastheo>Théorème :</span> Les polynômes irréductibles de $\mathbb C[X]$ sont les polynômes de degré 1.
+</div>
+<div class=theo><span class=grastheo>Théorème :</span> Les polynômes irréductibles de $\mathbb R[X]$ sont les polynômes de degré 1 et les polynômes de degré 2 de discriminant strictement négatif.
+</div>
+
+
+<div class=titrepartie>L'anneau $\mathbb Z/n\mathbb Z$</div>
+<div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Cours vidéo sur l'anneau Z/nZ</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AdUmRMYd2FA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
+<p class=utexte>Soit $n\geq 2$. On rappelle que la relation de congruence modulo $n$ est une relation d'équivalence sur $\mathbb Z$ :
+ $k\equiv \ell\ [n]\iff k-\ell\in n\mathbb Z$.
+On note $\bar k$ la classe d'équivalence de $k$, et $\mathbb Z/n\mathbb Z$ l'ensemble des classes d'équivalence pour cette relation.
+<div class=exemple>
+<span class=grastheo>Exemple : </span> Dans $\mathbb Z/6\mathbb Z,$ on a $\bar 1=\overline{13}=\overline{-5}.$
+</div>
+<p class=utexte>En considérant le reste de la division euclidienne par $n,$ 
+on constate que tout entier est toujours congru modulo $n$
+à un entier compris entre $0$ et $n-1.$ On a en particulier $\mathbb Z/n\mathbb Z=\{\bar 0,\bar 1,\dots,\overline {n-1}\}$
+et donc le cardinal de $\mathbb Z/n\mathbb Z$ est égal à $n.$</p>
+<div class=theo><span class=grastheo>Théorème :</span> On définit une addition et une multiplication 
+sur  $\mathbb Z/n\mathbb Z$ en posant 
+$$\bar k+\bar \ell=\overline{k+\ell}$$
+$$\bar k\times \bar \ell=\overline{k\times l}.$$
+Ces deux opérations font de $(\mathbb Z/n\mathbb Z,+,\times)$ un anneau commutatif d'élément neutre $\bar 0$
+et d'unité $\bar 1.$
+L'application $\psi:\mathbb Z\to\mathbb Z/n\mathbb Z$, $k\mapsto \bar k$ est alors un morphisme surjectif d'anneaux.
+</div>
+<div class=exemple><span class=grastheo>Exemple :</span> Dans $\mathbb Z/7\mathbb Z,$ on a 
+$$\bar 9+\bar 3=\overline{12}=\bar 5\textrm{ et }\bar 9\times\bar 3=\overline{27}=\bar 6.$$
+</div>
+<div class=theo><span class=grastheo>Théorème :</span> 
+Soit $(n,k)\in\mathbb N^*\times \mathbb Z.$ Alors $\bar k$ est inversible dans $\mathbb Z/n\mathbb Z$ 
+si et seulement $k\wedge n=1$.</div>
+<div class=theo><span class=grastheo>Corollaire :</span> Soit $n\in\mathbb N^*$. 
+Alors $(\mathbb Z/n\mathbb Z,+,\times)$ est un corps si et seulement si $n$ est premier.</div>
+<p class=utexte>Pour $p$ un nombre premier, on note $\mathbb F_p$ le corps $\mathbb Z/p\mathbb Z.$</p>
+<div class=theo><span class=grastheo>Théorème chinois :</span> Si $m,n\geq 1$ sont des entiers premiers entre eux, alors 
+l'application 
+$$\begin{array}{rcl}
+\mathbb Z/mn\mathbb Z&\to&\mathbb Z/m\mathbb Z\times \mathbb Z/n\mathbb Z\\
+\bar k&\mapsto &(\hat k,\tilde k),
+\end{array}
+$$
+où $\bar k,\ \hat k$ et $\tilde k$ désignent la classe de $k$ dans respectivement $\mathbb Z/mn\mathbb Z,$
+$\mathbb Z/m\mathbb Z$ et $\mathbb Z/n\mathbb Z$, est bien définie et est un isomorphisme d'anneaux.
+<div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/v17Jww9Hf7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
+</div>
+<div class=theo><span class=grastheo>Corollaire : </span> Si $m,n\geq 1$ sont des entiers premiers entre eux,
+alors pour tout $(a,b)\in\mathbb Z^2,$ le système
+$$\left\{
+\begin{array}{rcll}
+x&\equiv&a\ [m]\\
+x&\equiv&b\ [n]\\
+\end{array}\right.$$
+admet toujours une solution. De plus, si $k$ est une solution, alors les solutions
+de ce système sont exactement les entiers congrus à $k$ modulo $mn.$
+</div>
+<div class=theo><span class=grastheo>Corollaire : </span>
+Si $n_1,\dots,n_r\geq 1$ sont des entiers premiers entre eux deux à deux, alors 
+$\mathbb Z/(n_1\cdots n_r)\mathbb Z$ et $(\mathbb Z/n_1\mathbb Z)\times\cdots\times (\mathbb Z/n_r\mathbb Z)$
+sont isomorphes.
+</div>
+
+<p class=utexte>Soit $n\in\mathbb N^*$. On note $\varphi(n)$ le nombre d'éléments inversibles dans l'anneau $\mathbb Z/n\mathbb Z$.
+C'est également le nombre d'entiers de $\{0,\dots,n-1\}$ qui sont premiers avec $n$.
+On appelle <span class=rougedico>indicatrice d'Euler</span> la fonction $\varphi:\mathbb N^*\to\mathbb N^*.$</p>
+<div class=theo><span class=grastheo>Théorème :</span> L'indicatrice d'Euler vérifie les propriétés suivantes :
+<div class=liste>
+<ul>
+<li>Si $p$ est un nombre premier et $k\geq 1,$ alors 
+$$\varphi(p^k)=p^{k}-p^{k-1}.$$
+<li>Si $m,n\geq 1$ sont premiers entre eux, alors $\varphi(mn)=\varphi(m)\varphi(n).$
+</ul>
+</div>
+En particulier, si la décomposition en produit de facteurs premiers de $n\geq 1$ est 
+$n=p_1^{\alpha_1}\cdots p_r^{\alpha_r}$, alors 
+$$\varphi(n)=\prod_{i=1}^r (p_i^{\alpha_i}-p_i^{\alpha_i-1}).$$
+</div>
+<div class=theo><span class=grastheo>Théorème d'Euler :</span> Pour tout entier naturel $n\geq 2$ et tout entier $k$ premier avec $n$, on a $k^{\varphi(n)}\equiv 1\ [n].$</div>
+<p class=utexte>Puisque si $p$ est un nombre premier, $\varphi(p)=p-1,$
+ce théorème constitue une extension du petit théorème de Fermat.</p>
+
+
+<div class=titrepartie>Algèbre</div>
+<p class=utexte>Dans ce paragraphe, $\mathbb K$ est un corps.
+On appelle <span class=rougedico>$\mathbb K$-algèbre</span> un ensemble muni de deux lois internes $+$ et $\times$ et d'une loi externe sur le corps
+$\mathbb K$, notée $\cdot$, telles que </p>
+<div class=liste>
+<ul>
+<li>$(E,+,\times)$ est un anneau;
+<li>$(E,+,\cdot)$ est un espace vectoriel sur $\mathbb K$;
+<li>Pour tout $\alpha\in\mathbb K$, pour tout $(x,y)\in E^2$, on a 
+$$(\alpha \cdot x)\times y=x\times (\alpha\cdot y)=\alpha\cdot(x\times y).$$
+</ul>
+</div>
+<div class=exemple>
+<span class=grastheo>Exemples :</span> 
+$(\mathbb K[X],+,\times,\cdot)$, $(\mathcal L(E),+,\circ,\cdot)$ où $E$ est un $\mathbb K$-espace vectoriel,
+ $(\mathcal M_n(\mathbb K),+,\times,\cdot)$ où $n\geq 1$, l'ensemble des fonctions $(\mathcal F(X,\mathbb K),+,\times,\cdot)$
+d'un ensemble $X$ dans $\mathbb K$, sont des $\mathbb K$-algèbres. 
+</div>
+<p class=utexte>Une partie $F$ d'une algèbre $E$ est une <span class=rougedico>sous-algèbre</span> de $E$ si, munie des lois $+$, $\times$, $\cdot$ héritées de $E$, c'est une algèbre.</p>
+<p class=utexte>Si $E$ et $F$ sont deux algèbres, une application $f:E\to F$ est un <span class=rougedico>morphisme d'algèbre</span> si c'est un morphisme d'anneaux et une application linéaire.</p>
+
+
+
+</div>
+
+<div class=cardcours>
+<div class="titrecours">Anneaux</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcours%252Fanneau.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Ffeuillesexo%252Fanneau&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fmethodes%252Fanneau.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcolles%252Fanneau&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fvideos%252Fanneau.html">Vidéos</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fquizz%252Fanneau.html">Quizz</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

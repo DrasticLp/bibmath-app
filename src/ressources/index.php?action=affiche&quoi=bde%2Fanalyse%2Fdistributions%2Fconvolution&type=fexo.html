@@ -1,0 +1,322 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Produit tensoriel et convolution de distributions</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Produit tensoriel et convolution de distributions</h1>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2472"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2472"),	max:5, rating:1.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2472,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Premiers calculs - premières propriétés <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2472.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2472,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2472','imageenonce2472');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2472"></a><div class=inner id="innerenonce2472"><ol class="enumeratechiffre">
+<li> Calculer $\delta_a'\otimes \delta_b'$.
+<li> Calculer $\delta_0'\star \delta_0'$.
+<li> Soient $T$ et $S$ deux distributions sur $\mtr$, $S$ étant à support compact; $X^n$ désigne la fonction
+$x\mapsto x^n$. Démontrer la formule suivante :
+$$X^n(T\star S)=\sum_{k=0}^n \binom n k(X^kT)\star (X^{n-k}S).$$
+<li> Soit $T\in\mcd'(\mtr)$. Montrer qu'il existe une distribution $E$ à support compact telle que
+$E\star T=T^{(k)}$.
+<li> Montrer que $\delta_a\star T=\tau_a T$, où $\tau_a T$ est la distribution définie par
+$(\tau_a T)(\phi)=T(\phi(.+a))$.
+<li> Soient $S$ et $T$ deux distributions convolables. Montrer que $\textrm{Supp}(S\star T)\subset \textrm{Supp}(S)+\textrm{Supp}(T)$.
+<li> Soient $f_1,f_2\in L^1_{loc}(\mtr)$, $Y$ la fonction d'Heaviside. Montrez que 
+$T_{Yf_1}$ et $T_{Yf_2}$ sont convolables et que $T_{Yf_1}\star T_{Yf_2}=T_{Yf_1\star Yf_2}=T_F$ avec
+$F(x)=Y(x)\int_0^x f_1(t)f_2(x-t)dt.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2472','imageindication2472');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2472"></a><div class=inner id="innerindication2472" style="display:none;"><ol class="enumeratechiffre">
+<li> Le faire d'abord sur les fonctions $\phi\otimes\psi$, ou bien le faire étape par étape.
+<li> Utiliser la définition, ou dériver deux fois $\delta_0\star\delta_0=\delta_0$.
+<li> Appliquer la définition, et dérouler...
+<li> Partir de $\delta\star T=T$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2472','imagecorrige2472',2472);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2472"></a><div class=inner id="innercorrige2472" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $\theta\in\mcd(\mtr^2)$. Pour $x\in\mtr$, on note $\theta_x$ la fonction de $\mcd(\mtr)$ définie
+par $\theta_x(y)=\theta(x,y)$. On a 
+$$\langle \delta_a'\otimes\delta_b',\theta\rangle=\langle \delta_a',\langle \delta_b',\theta_x\rangle\rangle.$$
+Mais, $\langle \delta_b',\theta_x\rangle=-\frac{\partial \theta_x}{\partial y}(b)=-\frac{\partial \theta}{\partial y}(x,b)$.
+De ceci, on déduit :
+$$\langle \delta_a'\otimes\delta_b',\theta\rangle=\frac{\partial^2\theta}{\partial x\partial y}(a,b).$$
+<li> Il y a plusieurs possibilités pour résoudre cette question. La première est d'utiliser la définition :
+\begin{eqnarray*}
+\langle \delta_0'\star\delta_0',\theta\rangle&=&\langle \delta_0'\otimes\delta_0',\theta(x+y)\rangle\\
+&=&\langle \delta_0',-\theta'(x)\rangle\\
+&=&\theta''(0).
+\end{eqnarray*}
+On aurait pu aussi dériver deux fois l'identité $\delta_0\star\delta_0=\delta_0$.
+<li> Il suffit de calculer en appliquant la définition à la fois du produit de convolution et de la multiplication
+par une fonction $C^\infty$.
+\begin{eqnarray*}
+\langle X^n(T\star S),\theta\rangle&=&\langle T\star S,X^n \theta\rangle\\
+&=&\langle T_x\otimes S_y,(x+y)^n \theta(x+y)\rangle\\
+&=&\sum_{k=0}^n \binom nk \langle T_x\otimes S_y,x^ky^{n-k}\theta(x+y)\rangle\\
+&=&\sum_{k=0}^n \binom nk \langle (x^k T_x)\otimes (y^{n-k}S_y),\theta(x+y)\rangle\\
+&=&\langle\sum_{k=0}^n \binom nk (X^kT)\star (X^{n-k}S),\theta\rangle.
+\end{eqnarray*}
+<li> $E=\delta^{(k)}$ convient. En effet, $\delta\star T=T$, et il suffit de dériver $k$ fois cette équation!
+<li> Il suffit d'appliquer la définition :
+$$\delta_a\star T(\phi)=\langle \delta_a\otimes T_y,\phi(x+y)\rangle=\langle T_y,\phi(y+a)\rangle.$$
+<li> Posons $\Omega=\big[\textrm{Supp}(S)+\textrm{Supp}(T)\big]^c$, et montrons que si $\phi\in\mcd(\mtr^n)$ est à
+support dans $\Omega$, alors $\langle S\star T,\phi\rangle=0$.
+Posons pour cela $\psi(x)=\langle T_y,\phi(x+y)\rangle$, et cherchons le support de $\psi$. On a :
+$$x\in\textrm{Supp}(\psi)\implies \textrm{Supp}(T)\cap\textrm{Supp}(\phi(x+.))\neq\varnothing\implies
+x\in\textrm{Supp}(\phi)-\textrm{Supp}(T).$$
+Mais, 
+$$\big[\textrm{Supp}(\phi)-\textrm{Supp}(T)\big]\cap\textrm{Supp}(S)=\varnothing.$$
+Ainsi, $\langle S_x,\psi\rangle=0$ ce qui est le résultat souhaité.
+<li> Remarquons d'abord que les supports de $T_{Yf_1}$ et $T_{Yf_2}$ sont inclus dans $[0,+\infty[$.
+Ainsi, ces deux distributions sont convolables car si $x_n+y_n\in[0,+\infty[\times [0,+\infty[$ est bornée, chaque 
+suite $(x_n)$ $(y_n)$ est bornée. D'après une proposition du cours, ceci entraine que les deux fonctions sont convolables et que $T_{Yf_1}\star T_{Yf_2}=T_{Yf_1\star Yf_2}$. En outre, il est clair que 
+$$Yf_1(x)\star Yf_2(x)=\int_0^{+\infty}f_1(t)Y(x-t)f_2(x-t)dt.$$
+Mais $Y(x-t)\neq 0\implies t\leq x$. Ainsi, si $x&lt;0$, le produit de convolution est nul sinon il vaut :
+$$\int_0^x f_1(t)f_2(x-t)dt.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2473"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2473"),	max:5, rating:2.8666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2473,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Support, produit tensoriel et convolution <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2473.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2473,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2473','imageenonce2473');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2473"></a><div class=inner id="innerenonce2473"><ol class="enumeratechiffre">
+<li> Soient $S,T\in\mcd'(\mtr^d)$, et $\theta\in\mcd(\mtr^d\times\mtr^d)$ tels que 
+$$\supp(\theta)\cap(\supp(S)\times\supp(T))=\varnothing.$$
+Pour $x\in\mtr^d$, on note $\theta_x$ la fonction définie par $\theta_x(y)=\theta(x,y)$, membre de $\mcd(\mtr^d)$.
+<ol class="enumeratechiffre">
+<li> Montrer qu'il existe un voisinage $V$ de $\supp(S)$ tel que, si $x\in V$, $\langle T,\theta_x\rangle=0$.
+<li> En déduire que $\supp(S\otimes T)=\supp(S)\times\supp(T)$.
+</ol>
+<li> Soient $S$ et $T$ deux distributions telles que, pour tout compact $K$ de $\mtr^{2d}$, l'ensemble
+$$L=\left\{(\xi,\eta)\in\mtr^d\times\mtr^d;\ \xi+\eta\in K\right\}\cap(\supp S\times\supp T)$$
+est compact. Montrer que l'on peut définir $S\star T$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2473','imageindication2473');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2473"></a><div class=inner id="innerindication2473" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Démontrer d'abord le résultat si $x\in\supp S$.
+<li> Une des deux inclusions est donnée par la question précédente. Pour l'autre, reprendre la définition du support
+de façon précise!
+</ol>
+<li> Utiliser (de façon forte!) la question précédente!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2473','imagecorrige2473',2473);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2473"></a><div class=inner id="innercorrige2473" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<ol class="enumeratechiffre">
+<li> $\supp(\theta)$ est un compact disjoint du fermé $\supp(S)\times \supp(T)$. Il existe donc un ouvert $V$ contenant
+$\supp(S)$ et tel que $\supp(\theta)\cap(V\times\supp(T))=\varnothing$. Montrons alors que si $x\in V$, $\supp(\theta_x)\cap\supp(T)=\varnothing$,
+ce qui prouvera la question. Prenons donc $y\in\supp(\theta_x)$. Il existe une suite $(y_n)$ telle que
+$\theta_x(y_n)\neq 0$ et $y_n\to y$. Mais alors, $\theta(x,y_n)\neq 0$ et $(x,y_n)\to (x,y)$. Ceci entraîne que 
+$(x,y)\in\supp(\theta)$. Comme $x$ est élément de $V$ on a forcément $y\notin \supp(T)$.
+<li> Soit $\theta$ une fonction test vérifiant la propriété des supports de la question précédente. On a alors
+$$\langle S\otimes T,\theta\rangle=\langle S_x,\langle T_y,\theta_x\rangle\rangle=0$$
+d'après la question précédente (le support de $x\mapsto \langle T,\theta_x\rangle$ est disjoint du support de $S$).
+Ceci prouve que $\supp(S\otimes T)\subset \supp(S)\times\supp(T)$. Réciproquement, soit $W$ un ouvert tel que
+$W\cap \supp(S)\times\supp(T)\neq \varnothing$. $W$ contient alors un ouvert de la forme $U\times V$ tel que
+$U\cap\supp(S)\neq\varnothing$ et $V\cap\supp(T)\neq\varnothing$. Par définition du support, il existe $\phi\in\mcd(\mtr^d)$ et
+$\psi\in\mcd(\mtr^d)$ tels que $\langle S,\phi\rangle\neq 0$ et $\langle T,\psi\rangle\neq 0$. On a alors 
+$$\langle S\otimes T,\phi\otimes\psi\rangle\neq 0,$$
+ce qui prouve l'inclusion inverse.
+</ol>
+<li> Soit $\phi\in\mcd(\mtr^d)$, $K$ son support, et $L$ l'ensemble donné par l'énoncé. On sait qu'il existe une
+fonction test $\theta$ valant $1$ au voisinage de $L$. Mais alors, si $(\eta_k)$ est une suite admissible, pour 
+$k$ assez grand, on a
+$$\langle S_x\otimes T_y,\eta_k(x,y)\phi(x+y)\rangle=\langle S_x\otimes T_y,\theta(x,y)\phi(x+y)\rangle,$$
+puisque $(x,y)\mapsto \eta_k(x,y)\phi(x+y)$ et $(x,y)\mapsto \theta(x,y)\phi(x+y)$ coincident au voisinage
+du support de $S_x\otimes T_y$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2474"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2474"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2474,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateur différentiel <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2474.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2474,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2474','imageenonce2474');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2474"></a><div class=inner id="innerenonce2474"><ol class="enumeratechiffre">
+<li> Trouver deux distributions $H_1$ et $H_2$ de $\mcd'(\mtr)$ telles que $H_k'=\delta_0$ ($k=1,2$), $\supp(H_1)\subset]-\infty,0]$,
+$\supp(H_2)\subset[0,+\infty[$.
+<li> Soit $\phi_1,\phi_2$ une partition de l'unité subordonnée au recouvrement $\mtr=]-\infty,1[\cup]-1,+\infty[$,
+et soit $T\in\mcd'(\mtr)$. Montrer que $\phi_1T$ est convolable avec $H_1$ et $\phi_2T$ est convolable avec $H_2$.
+<li> Démontrer que l'opérateur $V:T\mapsto H\star \phi_1T+H_2\star\phi_2T$ est un inverse à droite
+de l'opérateur $D:=\frac{d}{dx}$ dans $\mcd'(\mtr)$, i.e. $D\circ V=I_{\mcd'(\mtr)}$. En déduire en particulier que $D$ est
+surjectif dans $\mcd'(\mtr)$.
+<li> Déduire de la question précédente que l'opérateur $D-\lambda I$ admet un inverse à droite
+dans $\mcd'(\mtr)$ quel que soit $\lambda\in\mtc$.
+<li> Soit $P$ un polynôme à coefficients complexes, $P\neq 0$. Montrer que l'opérateur $P(D)$
+admet un inverse à droite dans $\mcd'(\mtr)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2474','imageindication2474');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2474"></a><div class=inner id="innerindication2474" style="display:none;"><ol class="enumeratechiffre">
+<li> Penser aux fonctions de Heaviside!
+<li> Utiliser le critère sur les supports!
+<li> Calculer $D\circ V$, et utiliser les propriétés de la dérivation et de la convolution.
+<li> Reconnaitre dans $(D-\lambda I)(T)$ la dérivée d'une fonction exponentielle multipliée par $T$.
+<li> Factoriser!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2474','imagecorrige2474',2474);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2474"></a><div class=inner id="innercorrige2474" style="display:none;"><ol class="enumeratechiffre">
+<li> Les fonctions de Heaviside conviennent, ie $H_1$ est l'indicatrice de $]-\infty,0]$ et $H_2$ est l'indicatrice
+de $[0,+\infty[$.
+<li> Il suffit de prouver que pour tout compact $K$ de $\mtr$, la partie 
+$$L=\left\{(x,y)\in\mtr^2;\ x+y\in K\right\}\cap(\supp(\phi_1 T)\times \supp(H_1))$$
+est compacte. On peut supposer que $K=[-R,R]$. Mais alors, pour $(x,y)\in L$, on a 
+$$|x+y|\leq R,\ x\leq 1,\ y\leq 0.$$
+Ceci entraîne que $L\subset [-R,1]\times [-R-1,0]$, qui est bien une partie compacte. On procède de même pour $\phi_2T$ 
+et $H_2$.
+<li> Soit $T\in\mcd'(\mtr)$. On a
+$$D\circ V(T)=D(H_1\star \phi_1T+H_2\star\phi_2 T)=\delta_0\star \phi_1T+\delta_0\star\phi_2 T=(\phi_1+\phi_2)T=T.$$
+Tout opérateur inversible à droite est surjectif. On retrouve en particulier qu'une distribution admet une primitive!
+<li> Il faut reconnaitre dans $D-\lambda I$ l'expression de la dérivée du produit d'une distribution
+par une fonction exponentielle. On remarque en effet que
+$$(D-\lambda I)T=D(e^{-\lambda x}T)e^{\lambda x}.$$
+En particulier, on obtient 
+$$(D-\lambda I)(e^{\lambda x}VT)=e^{\lambda x}T.$$
+Ainsi, il vient
+$$(D-\lambda I)(e^{\lambda x}V(e^{-\lambda x}T)=T.$$
+$D-\lambda I$ est donc inversible à droite, un inverse à droite est donné
+par $V_\lambda(T)=e^{\lambda x}V(e^{-\lambda x}T).$
+<li> Il suffit de factoriser $P$ en produit $\prod (X-\lambda_i)$. Un inverse de $P(D)$ est donné
+par $\prod V_{\lambda_i}$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2475"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2475"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2475,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distributions causales <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2475.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2475,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2475','imageenonce2475');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2475"></a><div class=inner id="innerenonce2475">On note $\mcd'_+=\{T\in\mcd'(\mtr);\ \supp(T)\subset[0,+\infty[\}$.
+<ol class="enumeratechiffre">
+<li> Montrer que $\mcd_+'$ est une algèbre de convolution.
+<li> Montrer que pour tout $\lambda\in\mtc$, la distribution $\delta'-\lambda \delta$ est inversible dans
+cette algèbre, et que l'on a
+$$(\delta'-\lambda\delta)^{\star -1}=H(t)e^{\lambda t},$$
+$$(\delta'-\lambda\delta)^{\star -n}=H(t)\frac{t^{n-1}e^{\lambda t}}{(n-1)!}.$$
+<li> On considère une équation différentielle à coefficients constants (non tous nuls), où l'inconnue
+est la distribution $T$ et où $S$ est une distribution
+$$a_kT^{(k)}+\dots+a_0T=S.$$
+Montrer qu'il existe une distribution $E$ que l'on explicitera telle que l'équation différentielle
+est équivalente à 
+$$E\star T=S.$$
+<li> On suppose désormais que $S$ est dans $\mcd_+'$. Montrer que l'équation différentielle admet toujours une
+solution $T$ dans $\mcd_+'$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2475','imageindication2475');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2475"></a><div class=inner id="innerindication2475" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner à l'aide des supports!
+<li> Faire le calcul. Il vient une intégrale dans laquelle on fera un changement de variables!
+<li> Exprimer $T^{(k)}$ à l'aide de la convolution de $T$ par la dérivée d'une masse de Dirac.
+<li> Remarquer que $\delta^{(k)}=(\delta')^{\star k}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2475','imagecorrige2475',2475);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2475"></a><div class=inner id="innercorrige2475" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $S$ et $T$ deux éléments de $\mcd'_+$. Soit $K=[-R,R]$ et 
+$$L=\{(x,y)\in\mtr^2,\ x+y\in K\}\cap(\supp S\times \supp T).$$
+Si $(x,y)$ est dans $L$, on a forcément $x\geq 0$, $y\geq 0$ et $x+y\leq R$.
+Ainsi, $L\subset[0,R]\times[0,R]$, ce qui prouve que $L$ est compact et que l'on peut bien définir 
+le produit de convolution de $S$ par $T$. De $\supp(S\star T)\subset\overline{\supp(S)+\supp(T)}$, on déduit
+que $S\star T$ est encore élément de $\mcd_+'$. En outre, il est clair que l'élément neutre $\delta_0=\delta$ est
+dans $\mcd_+'$. Il reste à montrer que le produit est associatif. On considère donc $S,T,U$ trois éléments
+de $\mcd_+'$, et $\phi\in\mcd(\mtr)$. Notons 
+$$M=\{(x,y,z)\in\mtr^3;x+y+z\in K\}\cap(\supp S\times\supp T\times\supp U).$$
+Alors $M$ est compact, et si $\theta$ est une fonction valant $1$ au voisinage de $M$, on a
+$$\langle S\star(T\star U),\phi\rangle=\langle S_x\otimes T_y\otimes U_z,\theta(x,y,z)\phi(x+y+z)\rangle.$$
+<li> Il suffit de faire le calcul! Remarquons en effet d'abord que $H(t)e^{\lambda t}$ est bien dans $\mcd_+'$.
+Ensuite :
+\begin{eqnarray*}
+\langle(\delta'-\lambda\delta)\star(H(t)e^{\lambda t},\phi\rangle&=&
+\langle (\delta'-\lambda\delta),\int_0^{+\infty}e^{\lambda y}\phi(x+y)dy\rangle\\
+&=&\langle (\delta'-\lambda\delta),e^{-\lambda x}\int_x^{+\infty}e^{\lambda u}\phi(u)du\rangle\\
+&=&\phi(0)\\
+&=&\langle\delta,\phi\rangle.
+\end{eqnarray*}
+Ceci montre que $\delta'-\lambda\delta$ est inversible dans $\mcd_+'$, et que l'on a 
+$$(\delta'-\lambda\delta)^{\star -1}=H(t)e^{\lambda t},$$
+On en déduit
+$$(\delta'-\lambda\delta)^{\star -n}=(H(t)e^{\lambda t})^{\star n}.$$
+On calcule le membre de droite par récurrence sur $n$ (il faut faire le même changement de variables que
+précédemment dans l'intégrale).
+<li> On rappelle que $T^{(k)}=\delta^{(k)}\star T$. En posant $E=\sum_{k=0}^{n}a_k\delta^{(k)}$,
+l'équation différentielle est équivalente à $E\star T=S$.
+<li> Remarquons que $\delta^{(k)}=(\delta')^{\star k}$. On factorise alors $E$ en 
+$$E=a_n(\delta'-\lambda_1\delta)^{\star \alpha_1}\star\dots\star (\delta'-\lambda_l\delta)^{\star \alpha_l}.$$
+Chacun des facteurs étant inversible, $E$ est inversible, notons $F$ son inverse. Une solution est alors donnée
+par $F\star S$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2476"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2476"),	max:5, rating:4.5454545454545, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2476,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation de Volterra <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2476.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2476,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2476','imageenonce2476');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2476"></a><div class=inner id="innerenonce2476">On considère l'algèbre de convolution $\mcd'_+=\{T\in\mcd'(\mtr);\ \supp(T)\subset[0,+\infty[\}$.
+<ol class="enumeratechiffre">
+<li> Soit $(T_j)$ une suite de $\mcd'_+$, qui convergent vers $T$, et soit $S\in\mcd_+'$. Montrer que $S\star T_j$
+converge vers $S\star T$.
+<li> Soit $K\in L^\infty_{loc}(\mtr_+)$. Pour $n\in\mtn$, on note $K_n=K^{\star n}=K\star\dots\star K$ ($n$ facteurs).
+Montrer que pour tout $a&gt;0$, tout $x\in[0,a]$, tout $n\in\mtn^*$, on a 
+$$|K_n(x)|\leq M(a)^n\frac{x^{n-1}}{(n-1)!},$$
+où $M(a)=\sup_{x\in[0,a]}|K(x)|$.
+<li> Montrer que la série 
+$$\sum_{n=0}^{+\infty}(-1)^n K_n=\delta-K+K^{\star 2}-\dots$$
+converge dans $\mcd'_+$. En déduire que la distribution $\delta+K$ est inversible,
+et que l'on a $(\delta+K)^{-1}=\delta+L$, où $L$ est une fonction localement bornée.
+<li> Soient $f$ et $g$ deux fonctions de $L^1_{loc}(\mtr_+)$ telles que
+$$f(x)+\int_0^x e^{\lambda(x-y)}f(y)dy=g(x),\ x\geq 0$$
+$(\lambda\in\mtc)$.
+Montrer que ceci est équivalent au fait que
+$$(\delta+He^{\lambda x})\star f=g,$$
+où $H$ est la fonction de Heaviside.
+<li> En déduire que l'équation intégrale précédente admet toujours une solution.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2476','imageindication2476');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2476"></a><div class=inner id="innerindication2476" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la définition.
+<li> Procéder par récurrence.
+<li> Montrer la convergence absolue de l'évaluation de la série en une fonction test.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2476','imagecorrige2476',2476);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2476"></a><div class=inner id="innercorrige2476" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'appliquer la définition et du produit de convolution, et de la limite d'une suite de distributions.
+<li> On démontre le résultat par récurrence sur $n$, puisqu'il est clair au rang $n=1$. Supposons le vérifié
+au rang $n$, et prouvons-le au rang $n+1$ (il est clair que le support des fonctions $K_n$ est inclus dans $\mtr_+$).
+ On a 
+\begin{eqnarray*}
+K_{n+1}(x)&=&K_n\star K(x)\\
+&=&\int_{\mtr}K(x-y)K_n(y)dy\\
+&=&\int_0^x K(x-y)K_n(y)dy\\
+&\leq&\frac{M(a)^{n}}{(n-1)!}\int_0^x M(a)\times y^{n-1}dy\\
+&\leq&\frac{M(a)^{n+1}}{(n-1)!}\frac{x^n}{n}.
+\end{eqnarray*}
+<li> Il suffit de prouver que, pour chaque $\phi\in\mcd(\mtr)$, la série
+$$\sum_{n=0}^{+\infty}|\langle K^{\star n},\phi\rangle|$$
+converge absolument. Mais, si $\supp(\phi)\subset [-a,a]$, on a
+$$\sum_{n=0}^{+\infty}|\langle K^{\star n},\phi\rangle|\leq\int_0^a M(a)\phi(x)e^{M(a)x}dx&lt;+\infty.$$
+D'autre part, on a 
+$$(\delta+K)\star (\sum_{n=0}^N K_n)=\delta+(-1)^N K_{N+1}.$$
+Il est facile de vérifier, en comparant la croissance d'une puissance et d'une factorielle, que $K_N\to 0$ quand
+$N\to\infty$. En utilisant le résultat démontré à la première question, on en déduit que $\delta+K$ est inversible, son inverse étant donnée par
+$$\delta+\sum_{n=1}^{+\infty} (-1)^nK_n.$$
+Pour conclure, remarquons que pour chaque $x$ $\sum_{n=1}^{+\infty}(-1)^n K_n(x)$ converge vers $L(x)$, et
+que $L$ est localement bornée (on a en effet, pour $x$ dans $[0,a]$, $|L(x)|\leq M(a)\exp(M(a)a)$).
+Enfin, le théorème de convergence dominée montre aussi que, au sens des distributions, 
+$$\sum_{n=1}^{+\infty}(-1)^n K_n=L.$$
+<li> Puisqu'on a affaire à des fonctions localement intégrables, l'égalité au sens presque partout
+est équivalente à l'égalité au sens distribution. Il reste à remarquer que
+$$(\delta+He^{\lambda x})\star f=f+\int_0^x e^{\lambda(x-y)}f(y)dy.$$
+<li> Puisque $x\mapsto H(x)e^{\lambda x}$ est localement bornée, la distribution $\delta+He^{\lambda x}$
+admet un inverse de la forme $\delta+L$, où $L$ est une fonction localement bornée. Une solution de l'équation de départ est donc
+donnée par $(\delta+L)\star g$, c'est-à-dire
+$$f(x)=g(x)+\int_0^x L(x-y)g(y)dy.$$
+Remarquons qu'il s'agit bien d'une fonction localement intégrable.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

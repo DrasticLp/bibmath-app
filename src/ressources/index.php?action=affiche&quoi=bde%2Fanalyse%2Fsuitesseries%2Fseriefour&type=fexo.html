@@ -1,0 +1,1234 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Séries de Fourier</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Séries de Fourier</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater164"></span><script>var myRating = raterJs( { element:document.querySelector("#rater164"),	max:5, rating:0.92105263157895, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(164,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Comprendre le cours <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=164.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(164,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce164','imageenonce164');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce164"></a><div class=inner id="innerenonce164"><ol class="enumeratechiffre">
+<li> Donner la décomposition en série de Fourier de la fonction $f$ définie par $f(x)=\cos(5x)$.
+<li> En utilisant le théorème de Parseval, prouver que deux fonctions continues $2\pi$-périodiques
+ayant les mêmes coefficients de Fourier sont égales.
+<li> Soit $f$ une fonction continue $2\pi-$périodique. Montrer que $(c_n(f))$ tend vers 0 lorsque $|n|$ tend vers $+\infty$.
+<li> On suppose de plus que $f$ est de classe $C^k$. Prouver que $c_n(f)=o(1/n^k)$.
+<li> Soit $f$ la fonction "créneau" définie par $f(x)=1$ si $x\in[0,\pi[$, $f(x)=-1$ si $x\in[-\pi,0[$,
+et prolongée par $2\pi$-périodicité. Quelle est la régularité de cette fonction? Que dire de la série de Fourier de $f$ en 0?
+Peut-on avoir convergence normale de la série de Fourier de $f$ vers $f$ sur $[-\pi,\pi]$?
+<li> Soit $f$ la fonction paire $2\pi$-périodique définie par $f(x)=\sqrt{x}$ sur $[0,\pi]$.
+$f$ est-elle $C^1$ par morceaux?</div></div><div class=indication><a href="javascript:showAll('innerindication164','imageindication164');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication164"></a><div class=inner id="innerindication164" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Rappel : si $h:[a,b]\to\mathbb R_+$ est continue et vérifie $\int_a^b h(t)dt=0$, alors $h=0$.
+<li> Utiliser l'identité de Parseval.
+<li> Intégrer par parties.
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige164','imagecorrige164',164);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige164"></a><div class=inner id="innercorrige164" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut bien sûr se lancer dans des calculs très complexes.... On peut! Mais quand même, la décomposition en série de Fourier
+consiste à représenter une fonction périodique comme somme des fonctions périodiques les plus élémentaires possibles (à savoir les sinus et les cosinus).
+Alors, bien entendu, la décomposition en série de Fourier de $\cos(5x)$ est $\dots \cos(5x)$! A vous de voir si vous jugez utile
+de justifier cela! Cela dit, c'est une bonne occasion de rappeler que
+$$\int_0^{2\pi}\cos(px)\cos(qx)dx=0\textrm{ si }p\neq q$$
+et 
+$$\int_0^{2\pi}\cos(px)\sin(qx)dx=0\textrm{ pour tous }p,q.$$
+<li> Posons $h=f-g$. Alors $c_n(h)=c_n(f)-c_n(g)=0$. De plus, $h$ est continue et vérifie donc les conclusions
+du théorème de Parseval, à savoir 
+$$\int_{-\pi}^{\pi}|h(t)|^2dt=\sum_{n\in\mathbb Z}|c_n(h)|^2=0.$$
+Puisque $t\mapsto |h(t)|^2$ est continue, positive, d'intégrale nulle sur $[-\pi,\pi]$, on en déduit
+que $h=0$ sur $[-\pi,\pi]$. Par $2\pi-$périodicité, $f=g$ sur $\mathbb R$ tout entier.
+<li> D'après le théorème de Parseval, on sait que
+$$\int_{-\pi}^{\pi}|f(t)|^2dt=\sum_{n\in\mathbb Z}|c_n(f)|^2.$$
+La série $\sum_{n\in\mathbb Z)}|c_n(f)|^2$ est donc convergente. Son terme général tend vers 0, et
+on conclut que $(c_n(f))$ converge bien vers 0 lorsque $|n|$ tend vers $+\infty$.
+<li> Tout repose sur des intégrations par parties. En effet, si $f$ est $C^1$ et $2\pi-$périodique, on a
+\begin{eqnarray*}
+c_n(f')&=&\frac1{2\pi}\int_{-\pi}^{\pi}f'(t)e^{-int}dt\\
+&=&\frac{1}{2\pi}\left[f(t)e^{-int}\right]_{-\pi}^{\pi}+\frac{in}{2\pi}\int_{-\pi}^{\pi}f(t)e^{-int}dt\\
+&=&(in)c_n(f).
+\end{eqnarray*}
+Par récurrence, on obtient que $c_n(f^{(k)})=(in)^kc_n(f)$. Pour $n\neq 0$, on a donc :
+$$c_n(f)=\frac{1}{i^k n^k}c_n(f^{(k)}).$$
+Pour conclure, il suffit de remarquer que $c_n(f^{(k)})$ tend vers 0 lorsque $|n|$ tend vers $+\infty$
+d'après la question précédente.
+Cette idée d'intégration par parties est très utile lorsqu'on veut relier régularité d'une fonction
+et comportement de ses coefficients de Fourier.
+<li> La fonction $f$ est de classe $C^1$ par morceaux. En effet, sur l'intervalle $[0,\pi[$,
+elle est la restriction à $[0,\pi[$ d'une fonction de classe $C^1$ sur $[0,\pi]$ (la fonction
+identiquement égale à 1), et sur $[-\pi,0[$, elle est la restriction de d'une fonction de
+classe $C^1$ sur $[0,\pi]$ (la fonction identiquement égale à $-1$). Le théorème de convergence simple peut donc s'appliquer.
+En particulier, en 0, la série de Fourier de $f$ converge vers 
+$$\frac{1}{2}\left(\lim_{x\to 0^-}f(x)+\lim_{x\to 0^+}f(x)\right)=0.$$
+La série de Fourier de $f$ ne peut pas converger normalement vers $f$. En effet, si on avait convergence normale, 
+chaque somme partielle étant continue, la limite serait elle aussi continue. Et $f$ n'est pas continue en 0.
+<li> $f$ n'est pas $C^1$ par morceaux : en effet, sinon, on pourrait définir sur $[0,\pi]$
+une fonction de classe $C^1$ qui coïncide avec $f$ sur $]0,\pi]$. Ce n'est pas possible
+car $f'(x)$ tend vers $+\infty$ en 0.
+</ol></div></div></div>
+<div class=titrepartie>Exercices de calcul</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater165"></span><script>var myRating = raterJs( { element:document.querySelector("#rater165"),	max:5, rating:1.8703703703704, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(165,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quelques décompositions en séries de Fourier <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=165.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(165,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce165','imageenonce165');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce165"></a><div class=inner id="innerenonce165">Déterminer les séries de Fourier (termes en sinus et cosinus) des fonctions suivantes :
+<ol class="enumeratechiffre">
+<li> $f$ $2\pi-$périodique, définie par $f(x)=x$ si $-\pi\leq x&lt;\pi$.
+<li> la fonction créneau : $f$ est $2\pi$-périodique, définie par $f(x)=1$ si $x\in[0,\pi[$, et $f(x)=-1$ si $x\in[-\pi,0[$.
+<li> la fonction $L-$périodique, où $L&gt;0$, définie par $f(x)=|x|$ si $x\in[-L/2,L/2]$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication165','imageindication165');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication165"></a><div class=inner id="innerindication165" style="display:none;">Il suffit de calculer les intégrales, et elles sont toutes très élémentaires. On pourra se simplifier un petit peu la vie si l'on utilise la parité des fonctions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige165','imagecorrige165',165);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige165"></a><div class=inner id="innercorrige165" style="display:none;"><ol class="enumeratechiffre">
+<li> Cette fonction est impaire, les coefficients en cosinus sont nuls. On a par définition :
+$$b_n=\frac{1}{\pi}\int_{-\pi}^\pi x\sin(nx)dx.$$
+On calcule ce coefficient grâce à une intégration par parties :
+$$b_n=(-1)^{n+1}\frac{2}{n}$$
+<li> Cette fonction est elle-aussi impaire, et il suffit là encore de calculer les coefficients en sinus :
+$$b_n=\frac{1}{\pi}\int_{-\pi}^0(-1)\sin(nx)dx+\frac{1}{\pi}\int_0^\pi\sin(nx)dx=\frac{2}{n\pi}(1-\cos(n\pi)).$$
+Ceci s'écrit plus simplement :
+$$b_n=\left\{
+\begin{array}{cl}
+0&\textrm{pour $n$ pair}\\
+\frac{4}{n\pi}&\textrm{pour $n$ impair}\end{array}\right.$$
+<li> Remarquons que la fonction est paire : il suffit de calculer les coefficients en cosinus. On a :
+$$a_0=\frac{1}{L}\int_{-L/2}^{L/2}|x|dx=\frac{2}{L}\int_{0}^{L/2}xdx=\frac{L}{4}.$$
+$$a_n=\frac{2}{L}\int_{-L/2}^{L/2}|x|\cos\left(\frac{2\pi}{L}nx\right)dx=\frac{4}{L}\int_0^{L/2}x\cos\left(\frac{2\pi}{L}nx\right)dx.$$
+On calcule ceci par intégration par parties pour trouver :
+$$a_n=\frac{L}{n^2\pi^2}\left((-1)^{n}-1\right)=
+\left\{
+\begin{array}{cl}
+0&\textrm{si $n$ est pair}\\
+-\frac{2L}{n^2\pi^2}&\textrm{si $n$ est impair}\end{array}\right.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater166"></span><script>var myRating = raterJs( { element:document.querySelector("#rater166"),	max:5, rating:1.4222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(166,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application aux calculs de séries <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=166.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(166,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce166','imageenonce166');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce166"></a><div class=inner id="innerenonce166">Déterminer la série de Fourier de la fonction périodique de période $2\pi$ définie par $f(x)=x^2$ pour $-\pi\leq x\leq \pi$. En déduire la somme des séries $\dis \sum_{n\geq 1}\frac{1}{n^2}$, $\dis \sum_{n\geq 1}\frac{(-1)^{n+1}}{n^2},\ \sum_{n\geq 1}\frac{1}{n^4}$.</div></div><div class=indication><a href="javascript:showAll('innerindication166','imageindication166');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication166"></a><div class=inner id="innerindication166" style="display:none;">Le calcul des coefficients de Fourier se fait par intégration par parties. Appliquer ensuite le théorème de Dirichlet, et trouver les deux premières sommes en prenant des valeurs particulières pour $x$. Pour la troisième somme, on pourra appliquer le théorème de Parseval.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige166','imagecorrige166',166);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige166"></a><div class=inner id="innercorrige166" style="display:none;">La fonction $f$ est paire, ses coefficients en sinus sont nuls, et on a :
+$$a_0=\frac{1}{2\pi}\int_{-\pi}^\pi x^2dx=\frac{\pi^2}{3},$$
+$$a_n=\frac{2}{\pi}\int_0^\pi x^2\cos(nx)dx.$$
+La calcul de $a_n$ se fait par une double intégration par parties, et on trouve :
+$$a_n=(-1)^n\frac{4}{n^2}.$$
+Maintenant, $f$ est continue et $C^1$ par morceaux : cette fonction est somme de sa série de Fourier pour tout réel, et on a donc, pour tout $x$ dans $[-\pi,\pi]$, 
+$$x^2=\frac{\pi^2}{3}+4\sum_{n\geq 1}\frac{(-1)^{n}}{n^2}\cos(nx).$$
+Si l'on fait $x=\pi$, on obtient :
+$$\pi^2=\frac{\pi^2}{3}+4\sum_{n\geq 1}\frac{1}{n^2}.$$
+On obtient exactement :
+$$\sum_{n\geq 1}\frac{1}{n^2}=\frac{\pi^2}{6}.$$
+Si l'on fait $x=0$, on obtient cette fois :
+$$\sum_{n\geq 1}\frac{(-1)^{n+1}}{n^2}=\frac{\pi^2}{12}.$$
+Pour calculer la dernière somme demandée, il faut pouvoir mettre les coefficients au carré, et c'est ce que l'on obtient dans l'égalité de Parseval, que l'on peut appliquer ici puisque $f$ est continue :
+$$\frac{1}{2\pi}\int_{-\pi}^\pi x^4dx=\frac{\pi^4}{9}+\frac{1}{2}\sum_{n\geq 1}\frac{16}{n^4}.$$
+Ceci donne :
+$$\sum_{n\geq 1}\frac{1}{n^4}=\frac{\pi^4}{8}\left(\frac{1}{5}-\frac{1}{9}\right)=\frac{\pi^4}{90}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater167"></span><script>var myRating = raterJs( { element:document.querySelector("#rater167"),	max:5, rating:1.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(167,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application au calcul de séries <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=167.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(167,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce167','imageenonce167');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce167"></a><div class=inner id="innerenonce167">Soit $f$ la fonction $2\pi-$périodique, définie pour $x\in[0,2\pi[$ par $f(x)=x^2$. 
+<ol class="enumeratechiffre">
+<li> Déterminer la série de Fourier  de $f$.
+<li> Calculer $\dis \sum_{n\geq 1}\frac{1}{n^2}$, puis $\dis \sum_{n\geq 1}\frac{1}{n^4}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication167','imageindication167');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication167"></a><div class=inner id="innerindication167" style="display:none;"><ol class="enumeratechiffre">
+<li> Double intégration par parties!
+<li> &Eacute;tudier la convergence de la série de Fourier en 0, 
+puis utiliser le théorème de Parseval.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige167','imagecorrige167',167);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige167"></a><div class=inner id="innercorrige167" style="display:none;"><ol class="enumeratechiffre">
+<li> Prenons d'abord garde au fait suivant : ce n'est pas parce que la fonction est définie par $x^2$ sur $[0,2\pi[$ que la fonction est paire. Sa définition par $2\pi$-périodicité fait que $f$ n'est pas égale à $x^2$ sur $]-2\pi,0]$. En particulier, on ne peut pas dire que les coefficients $b_n$ sont nuls. Pour le calcul des coefficients de Fourier, on a d'abord :
+$$a_0(f)=\frac{1}{2\pi}\int_{0}^{2\pi}x^2dx=\frac{4\pi^2}{3}.$$
+D'autre part, en réalisant deux intégrations par parties, on a :
+\begin{eqnarray*}
+a_n(f)&=&\frac{1}{\pi}\int_0^{2\pi}x^2\cos(nx)dx\\
+&=&\frac{1}{\pi}\left[x^2\frac{\sin nx}{n}\right]_0^{2\pi}-\frac{2}{\pi n}\int_0^{2\pi}x\sin(nx)dx\\
+&=&\frac{2}{\pi n}\left[x\frac{\cos nx}{n}\right]_0^{2\pi}-\frac{2}{\pi n^2}\int_0^{2\pi}\cos(nx)dx\\
+&=&\frac{4}{n^2}.
+\end{eqnarray*}
+De même, on trouve $\dis b_n=\frac{-4\pi}{n}.$ La série de Fourier de $f$ est donc :
+$$\frac{4\pi^2}{3}+\sum_{n\geq 1}\left(\frac{4}{n^2}\cos(nx)-\frac{4\pi}{n}\sin(nx)\right).$$
+<li> $f$ est $C^1$ par morceaux. Pour tout $x$ de $\mtr$, on a donc :
+$$\frac{1}{2}\big(f(x+0)+f(x-0)\big)=\frac{4\pi^2}{3}+\sum_{n\geq 1}\left(\frac{4}{n^2}\cos(nx)-\frac{4\pi}{n}\sin(nx)\right).$$
+Pour $x=0$, on trouve :
+$$\frac{1}{2}((2\pi)^2+0)=\frac{4\pi^2}{3}+\sum_{n\geq 1}\frac{4}{n^2}.$$
+Ceci donne donc :
+$$\sum_{n\geq 1}\frac{1}{n^2}=\frac{\pi^2}{6}.$$
+L'autre somme se calcule en appliquant le théorème de Parseval. On a donc :
+$$\frac1{2\pi}\int_0^{2\pi}x^4dx=\left(\frac{4\pi^2}{3}\right)^2+\frac{1}{2}\sum_{n\geq 1}\left(\frac{16}{n^4}+\frac{16\pi^2}{n^2}\right).$$
+En utilisant le fait que $\frac 1{2\pi}\int_0^{2\pi}x^4dx=\frac{16\pi^4}{5}$, et en réinjectant le calcul précédent, on trouve que
+$$\sum_{n\geq 1}\frac{1}{n^4}=\frac{\pi^4}{90}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater168"></span><script>var myRating = raterJs( { element:document.querySelector("#rater168"),	max:5, rating:1.4324324324324, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(168,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Termes impairs <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=168.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(168,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce168','imageenonce168');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce168"></a><div class=inner id="innerenonce168">Déterminer la série de Fourier de la fonction $2\pi-$périodique définie sur $[-\pi,\pi]$ par $f(x)=|x|$.
+ En déduire la valeur des sommes suivantes :
+$$\sum_{n=0}^{+\infty}\frac{1}{(2n+1)^2}\textrm{ et }\sum_{n=0}^{+\infty}\frac{1}{(2n+1)^4}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication168','imageindication168');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication168"></a><div class=inner id="innerindication168" style="display:none;">Remarquer que la fonction est paire, et intégrer par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige168','imagecorrige168',168);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige168"></a><div class=inner id="innercorrige168" style="display:none;">&Eacute;videmment, la fonction est paire, donc les coefficients de Fourier en sinus sont nuls. Calculons les autres coefficients : 
+$$a_0(f)=\frac{1}{\pi}\int_0^\pi xdx=\frac \pi 2,\ a_n=\frac{2}{\pi}\int_0^{\pi}x\cos(nx)dx=\frac{2}{\pi n^2}\left(\cos(n\pi)-1\right).$$
+Or, $\cos(n\pi)=(-1)^n$, et donc on a $a_{2n}=0$, et $\dis a_{2n+1}=\frac{-4}{\pi(2n+1)^2}.$
+La série de Fourier de $f$ est donc :
+$$\frac{\pi}{2}-\frac{4}{\pi}\sum_{n\geq 0}\frac{\cos((2n+1)x)}{(2n+1)^2}.$$
+Elle est continue et $C^1$ par morceaux. Elle vérifie donc les hypothèses du théorème de Dirichlet, et $f$ est somme de sa série de Fourier
+pour tout $x$ de $\mtr$. En particulier, pour $x=0$, il vient :
+$$\sum_{n\geq 0}\frac{1}{(2n+1)^2}=\frac{\pi^2}{8}.$$
+Enfin, écrivons l'égalité de Parseval :
+$$\frac{1}{2\pi}\int_{-\pi}^\pi x^2dx=\frac{\pi^2}{4}+\frac{1}{2}\times \frac{16}{\pi^2}\times\sum_{n\geq 0}\frac{1}{(2n+1)^4}.$$
+En isolant la somme, on trouve donc :
+$$\sum_{n\geq 0}\frac{1}{(2n+1)^4}=\frac{\pi^4}{96}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater169"></span><script>var myRating = raterJs( { element:document.querySelector("#rater169"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(169,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=169.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(169,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce169','imageenonce169');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce169"></a><div class=inner id="innerenonce169">Soit $f$ la fonction $2\pi$-périodique telle que $f(x)=e^x$ si $x\in[-\pi,\pi[$. 
+Déterminer la série de Fourier de $f$. En déduire la valeur des sommes suivantes :
+$\sum_{n\geq 1}\frac{1}{n^2+1}$ et $\sum_{n\geq 1}\frac{(-1)^n}{n^2+1}$.</div></div><div class=indication><a href="javascript:showAll('innerindication169','imageindication169');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication169"></a><div class=inner id="innerindication169" style="display:none;">Pour calculer les intégrales, on peut réaliser une double intégration par parties,
+ou bien écrire $\cos(nx)=\Re e(e^{inx})$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige169','imagecorrige169',169);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige169"></a><div class=inner id="innercorrige169" style="display:none;">On calcule les coefficients de Fourier de $f$. On trouve
+$$a_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)dx=\frac{1}{2\pi}\left(e^{\pi}-e^{-\pi}\right)=\frac{\sinh \pi}{\pi}.$$
+Pour $n\geq 1$, il vient
+\begin{eqnarray*}
+a_n&=&\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx)dx\\
+&=&\frac{1}\pi \int_{-\pi}^\pi e^x\cos (nx)dx\\
+&=&\frac1\pi \int_{-\pi}^\pi e^x\Re e(e^{inx})dx\\
+&=&\Re e\left(\frac1\pi \int_{-\pi}^\pi e^{(1+in)x}dx\right)\\
+&=&\Re e\left(\frac1\pi\left[\frac{1}{1+in}e^{(1+in)\pi}-e^{(1+in)-\pi}\right]\right)\\
+&=&\frac1\pi \Re e\left(\frac{(-1)^n e^{\pi}-(-1)^n e^{-\pi}}{1+in}\right)\\
+&=&\frac{(-1)^n}{\pi}\Re e\left(\frac{2\sinh \pi}{1+in}\right)\\
+&=&\frac{(-1)^n}{\pi}\Re e\left(\frac{2(1-in)\sinh \pi}{n^2+1}\right)\\
+&=&\frac{2(-1)^n\sinh \pi}{\pi(n^2+1)}.
+\end{eqnarray*}
+Pour les coefficients en sinus, une démarche similaire donne
+\begin{eqnarray*}
+b_n&=&\frac{(-1)^n}{\pi}\Im m\left(\frac{2\sinh \pi}{1+in}\right)\\
+&=&\frac{(-1)^n}{\pi}\Im m \left(\frac{2(1-in)\sinh \pi}{n^2+1}\right)\\
+&=&\frac{2n(-1)^{n+1}\sinh \pi}{\pi(n^2+1)}.
+\end{eqnarray*}
+La série de Fourier de $f$ est donc
+$$\frac{\sinh \pi}{\pi}+\sum_{n\geq 1}\left(\frac{2(-1)^n\sinh \pi}{\pi(n^2+1)}\cos(nx)+\frac{2n(-1)^{n+1}\sinh \pi}{\pi(n^2+1)}\sin(nx)\right).$$
+Remarquons aussi que la fonction $f$ est de classe $C^1$ par morceaux (mais elle n'est pas continue
+en les points $\pi+2k\pi$, $k\in\mathbb Z$). D'après le théorème de Dirichlet, la série de Fourier de $f$ converge en chaque réel
+$x$ vers $\frac12\left(f(x^+)+f(x^-)\right)$. En particulier, pour $x=0$, on trouve
+$$\frac{\sinh \pi}{\pi}+\sum_{n\geq 1}\left(\frac{2(-1)^n\sinh \pi}{\pi(n^2+1)}\cos(n0)+\frac{2n(-1)^{n+1}\sinh \pi}{\pi(n^2+1)}\sin(n0)\right)=f(0)$$
+soit 
+$$\frac{\sinh \pi}{\pi}+\sum_{n\geq 1}\frac{2(-1)^n\sinh\pi}{\pi(n^2+1)}=1.$$
+On trouve donc
+\begin{eqnarray*}
+\sum_{n\geq 1}\frac{(-1)^n}{n^2+1}&=&\frac{\pi}{2\sinh \pi}\times \left(1-\frac{\sinh \pi}{\pi}\right)=\frac{\pi-\sinh \pi}{2\sinh \pi}.
+\end{eqnarray*}
+Pour calculer la première somme, on choisit $x=\pi$, et on remarque que
+$$\frac{f(\pi^+)+f(\pi-)}{2}=\frac{e^\pi+e^{-\pi}}{2}=\cosh \pi.$$
+On trouve donc 
+$$\frac{\sinh \pi}{\pi}+\sum_{n\geq 1}\frac{2(-1)^n\sinh \pi}{\pi(n^2+1)}\cos(n\pi)+\frac{2n(-1)^{n+1}\sinh \pi}{\pi(n^2+1)}\sin(n\pi)=\cosh\pi$$
+soit
+\begin{eqnarray*}
+\sum_{n\geq 1}\frac1{n^2+1}=\frac{\pi}{2\sinh \pi}\times\left(\cosh \pi-\frac{\sinh \pi}{\pi}\right)=\frac{\pi\cosh \pi-\sinh\pi}{2\sinh \pi}.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater170"></span><script>var myRating = raterJs( { element:document.querySelector("#rater170"),	max:5, rating:2.1333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(170,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une autre période <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=170.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(170,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce170','imageenonce170');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce170"></a><div class=inner id="innerenonce170">Soit $f$ la fonction périodique de période $2$ vérifiant $f(x)=x-x^3$ pour tout 
+$x\in]-1,1]$.
+<ol class="enumeratechiffre">
+ <li> Déterminer les coefficients de Fourier de $f$.
+ <li> En déduire la somme de la série $\sum_{p=0}^{+\infty}\frac{(-1)^p}{(2p+1)^3}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication170','imageindication170');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication170"></a><div class=inner id="innerindication170" style="display:none;">Pour la deuxième question, calculer la série de Fourier en 1/2.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige170','imagecorrige170',170);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige170"></a><div class=inner id="innercorrige170" style="display:none;"><ol class="enumeratechiffre">
+ <li> La fonction $f$ est impaire. Les coefficients de Fourier en cosinus sont donc nuls.
+Pour calculer les coefficients de Fourier en sinus, on utilise la formule et on réalise
+des intégrations par parties successives.
+\begin{eqnarray*}
+ b_n&=&\int_{-1}^1 f(t)\sin(n\pi t)dt\\
+&=&2\int_0^1 f(t)\sin(n\pi t)dt\\
+&=&\frac{-2}{\pi n}\int_0^1(3t^2-1)\cos(n\pi t)dt\\
+&=&\frac{12}{\pi^2n^2}\int_0^1t\sin(n\pi t)dt\\
+&=&\frac{12}{\pi^2n^2}\left[-\frac{t\cos(n\pi t)}{\pi n}\right]_0^1+\frac{12}{\pi^2n^3}\int_0^1\cos(n\pi t)dt\\
+&=&\frac{(-1)^{n+1}12}{\pi^3n^3}.                           
+\end{eqnarray*}
+<li> Remarquons que la fonction $f$ est continue et $C^1$-par morceaux. La continuité n'est pas complètement triviale. 
+Elle vient de l'imparité de la fonction $f$ qui fait qu'on a un recollement continu en $1$. Ainsi, en tout réel,
+$f$ est somme de sa série de Fourier. En particulier, en $1/2$, on a 
+$$\frac38=f\left(\frac12\right)=\sum_{n=0}^{+\infty}\frac{12(-1)^{n+1}}{\pi^3 n^3}\sin\left(n\frac\pi2\right).$$
+Or, $\sin(n\pi/2)$ est nul si $n$ est pair. Si $n=2p+1$, alors $\sin(n\pi/2)=\sin(p\pi+\frac\pi2)=(-1)^p.$
+On en déduit que 
+$$\frac38=\sum_{p=0}^{+\infty}\frac{(-1)^{p}12}{\pi^3(2p+1)^3}\implies \sum_{p=0}^{+\infty}\frac{(-1)^p}{(2p+1)^3}=\frac{\pi^3}{32}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater171"></span><script>var myRating = raterJs( { element:document.querySelector("#rater171"),	max:5, rating:1.7083333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(171,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une égalité étonnante! <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=171.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(171,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce171','imageenonce171');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce171"></a><div class=inner id="innerenonce171">Soit $f$ la fonction impaire et $2\pi$-périodique définie par $f(x)=\frac{\pi-x}{2}$ si $x\in]0,\pi[$,
+et soit $g$ définie sur $\mathbb R$ par $g(x)=f(x+1)-f(x-1)$.
+<ol class="enumeratechiffre">
+<li> Déterminer les séries de Fourier de $f$ et de $g$.
+<li> En déduire que $\sum_{n\geq 1}\frac{\sin n}{n}=\sum_{n\geq 1}\frac{\sin^2 n}{n^2}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication171','imageindication171');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication171"></a><div class=inner id="innerindication171" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour trouver la série de Fourier de $g$, on pourra utiliser que
+$$\int_{-1}^{-1+2\pi}f(x+1)\cos(nx)dx=\int_{0}^{2\pi}f(u)\cos(nu-n)du.$$
+<li> La première somme correspond à $f(1)$, la seconde est donnée par l'égalité de Parseval appliquée à $g$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige171','imagecorrige171',171);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige171"></a><div class=inner id="innercorrige171" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par remarquer que la fonction est $C^1$ par morceaux (elle n'est pas continue en les points de 
+$\pi\mathbb Z$) et est impaire, et donc les coefficients de Fourier en cosinus sont nuls. Pour calculer ceux en sinus, il suffit
+d'une simple intégration par parties, et on trouve que la série de Fourier de $f$ est
+$$\sum_{n\geq 1}\frac{\sin nx }{n}.$$
+Pour trouver la série de Fourier de $g$, on peut chercher la valeur de $g$ sur un intervalle de longueur
+$2\pi$ puis intégrer... On peut aussi ruser de la façon suivante : on commence par remarquer que $g$ est paire
+(vérification facile). De plus, on a
+\begin{eqnarray*}
+\int_0^{2\pi}g(x)\cos(nx)dx&=&
+\int_{0}^{2\pi}f(x+1)\cos(nx)dx-\int_0^{2\pi}f(x-1)\cos(nx)dx\\
+&=&\int_{-1}^{2\pi-1}f(x+1)\cos(nx)dx-\int_1^{2\pi+1}f(x-1)\cos(nx)dx\\
+&=&\int_0^{2\pi}f(u)\cos(nu-n)du-\int_0^{2\pi}f(u)\cos(nu+n)du\\
+&=&\int_0^{2\pi}2f(u)\sin(n)\sin(nu)du\\
+&=&2\frac{\sin n}{n}.
+\end{eqnarray*}
+La série de Fourier de $g$ est donc
+$$\sum_{n\geq 1}\frac{2\sin n}{n}\cos(nx).$$
+<li> Puisque $f$ est $C^1$ par morceaux et qu'elle est continue en 1, on a
+$$\sum_{n\geq 1}\frac{\sin n}{n}=f(1)=\frac{\pi-1}{2}.$$
+D'autre part, $g$ est continue par morceaux, $2\pi$-périodique, on peut donc lui appliquer le théorème
+de Parseval, et on obtient 
+$$\frac{1}{2\pi}\int_0^{2\pi}\big(g(x)\big)^2dx=\frac{1}2\sum_{n\geq 1}\frac{4\sin^2 n}{n^2}.$$
+Reste à calculer l'intégrale. On commence par remarquer que $g$ est paire et
+on se contente de calculer $g$ sur $]0,\pi[$. Remarquons aussi que si $y\in ]-\pi,0[$, alors $f(y)=\frac{-\pi-y}2$. On a donc :
+<ul class="rien">
+<li> si $x\in]0,1]$, alors $x+1\in [0,\pi]$ 
+et $f(x+1)=\frac{\pi-x-1}2$. D'autre part, $x-1\in ]-\pi,0]$ et $f(x-1)=\frac{-\pi-(x-1)}{2}=\frac{-\pi-x+1}2$.
+On a alors $$g(x)=f(x+1)-f(x-1)=\frac{\pi-x-1+\pi+x-1}2=\pi-1.$$
+<li> si $x\in]1,\pi-1]$, alors $$g(x)=\frac{\pi-x-1}{2}-\frac{\pi-x+1}{2}=-1.$$
+<li> si $x\in]\pi-1,\pi]$ alors
+$f(x+1)=f(x+1-2\pi)=-f(2\pi-x-1)=\frac{\pi-x-1}2$ et on obtient
+$$g(x)=-1.$$
+</ul>
+On en déduit
+$$\int_0^{\pi}\big(g(x)\big)^2dx=(-1+\pi)^2+(\pi-1)(-1)^2=\pi(\pi-1).$$
+Revenant à l'identité de Parseval, on trouve
+$$\sum_{n\geq 1}\frac{\sin^2 n}{n^2}=\frac{\pi-1}{2},$$
+ce qui est bien l'égalité demandée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater172"></span><script>var myRating = raterJs( { element:document.querySelector("#rater172"),	max:5, rating:2.4137931034483, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(172,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des séries entières <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=172.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(172,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce172','imageenonce172');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce172"></a><div class=inner id="innerenonce172"><ol class="enumeratechiffre">
+<li> Développer en série entière la fonction $f(x)=\frac{1}{x+e^a}$, $a&gt;0$.
+<li> Démontrer que, pour tout $x\in\mathbb R$ et tout $a&gt;0$, on a
+$$\frac{1}{\cos x+\cosh a}=\frac{1}{\sinh a}\left(\frac{e^a}{e^{ix}+e^a}-\frac{e^{-a}}{e^{ix}+e^{-a}}\right).$$
+<li> En déduire le développement en série de Fourier de la fonction $g$ définie par
+$$g(x)=\frac{1}{\cos x+\cosh a},\ a&gt;0.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication172','imageindication172');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication172"></a><div class=inner id="innerindication172" style="display:none;"><ol class="enumeratechiffre">
+<li> Se ramener à une série géométrique.
+<li> 
+<li> Utiliser la question 1, mais attention au deuxième terme!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige172','imagecorrige172',172);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige172"></a><div class=inner id="innercorrige172" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit
+$$\frac{1}{x+e^a}=\frac{e^{-a}}{1+e^{-a}x}=e^{-a}\sum_{n\geq 0}(-1)^n e^{-na}x^n,$$
+développement valable pour $|x|&lt;e^a$.
+<li> C'est une simple vérification.
+<li> Puisque $a&gt;0$, on a $|e^{ix}|&lt;e^a$, et donc
+$$\frac{e^a}{e^{ix}+e^a}=\sum_{n\geq 0}(-1)^ne^{inx}e^{-na}.$$
+Pour la seconde partie, il faut faire attention au fait que $e^{-a}&lt;1$, et donc que le résultat de la première question 
+ne peut pas s'appliquer directement. Mais on écrit
+$$\frac{e^{-a}}{e^{ix}+e^{-a}}=\frac{e^{-a}e^{-ix}}{1+e^{-a}e^{-ix}}=\sum_{n\geq 1}(-1)^{n-1}e^{-nix}e^{-na}.$$
+Il vient 
+$$g(x)=\frac{1}{\sinh a}\left(1+\sum_{n\geq 1}(-1)^n e^{-na}\left(e^{inx}+e^{-inx}\right)\right)=\frac{1}{\sinh a}+\sum_{n\geq 1}\frac{2(-1)^ne^{-na}}{\sinh a}\cos(nx).$$
+$g$ s'écrit donc comme somme d'une série trigonométrique qui converge uniformément
+(car normalement, la série $\sum_{n\geq 1}e^{-na}$ est convergente) sur $\mathbb R$. La série de Fourier de $g$ est donc bien
+$$\frac{1}{\sinh a}+\sum_{n\geq 1}\frac{2(-1)^ne^{-na}}{\sinh a}\cos(nx).$$
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater173"></span><script>var myRating = raterJs( { element:document.querySelector("#rater173"),	max:5, rating:4.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(173,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Décomposition de sinus en produit infini <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=173.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(173,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce173','imageenonce173');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce173"></a><div class=inner id="innerenonce173">Soit $\alpha\in\mathbb R\backslash\mathbb Z$. 
+<ol class="enumeratechiffre">
+<li> Prouver que la série de Fourier de la fonction $f:\mathbb R\to\mathbb R$
+définie par $f(t)=\cos(\alpha t)$ pour $t\in[-\pi,\pi[$, et prolongée par $2\pi$-périodicité est :
+$$\frac{\sin(\alpha \pi)}{\alpha \pi}\left(1+2\alpha^2\sum_{n=1}^{+\infty}\frac{(-1)^n}{\alpha^2-n^2}\cos(nt)\right).$$
+<li> En déduire que
+$$\textrm{cotan} (\alpha\pi)=\frac{1}{\alpha \pi}+\sum_{n=1}^{+\infty}\frac{2\alpha}{\pi(\alpha^2-n^2)}.$$
+<li> Démontrer que la série $\sum_{n\geq 1}\ln\left(1-\frac{t^2}{n^2}\right)$
+converge pour tout $t\in]-1,1[$. On note, pour $t\in]-1,1[$, $g(t)$ la somme de cette série.
+Prouver que $g$ est une fonction de classe $C^1$, et calculer $g'$.
+<li> En déduire que, pour tout $t\in]-1,1[$, on a
+$$\frac{\sin(\pi t)}{\pi t}=\prod_{k=1}^{+\infty}\left(1-\frac{t^2}{k^2}\right).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication173','imageindication173');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication173"></a><div class=inner id="innerindication173" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction est paire, et passer par l'exponentielle.
+<li> &Eacute;crire qu'en $\pi$, $f$ est somme de sa série de Fourier.
+<li> Prouver la convergence simple de la série (par critère d'équivalent)
+et la convergence normale de la série des dérivées sur tout segment $[-a,a]\subset]-1,1[$.
+<li> Calculer $g$ en intégrant et en utilisant les questions précédentes. En déduire le résultat.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige173','imagecorrige173',173);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige173"></a><div class=inner id="innercorrige173" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction est paire, on a donc $b_n(f)=0$ pour tout $n\geq 1$. De plus,
+$$a_0(f)=\frac{1}{2\pi}\int_{-\pi}^{\pi}\cos(\alpha t)dt=\frac{2\sin(\alpha\pi)}{2\alpha \pi}.$$
+De même, pour $n\geq 1$, on réalise une double intégration par parties pour calculer $a_n(f)$ :
+\begin{eqnarray*}
+a_n(f)&=&\frac{1}\pi\int_{-\pi}^\pi\cos(\alpha t)\cos(nt)dt\\
+&=&\frac1{n\pi}\left[-\cos(\alpha t)\sin(nt)\right]_{-\pi}^{\pi}+\frac{\alpha}{n\pi}\int_{-\pi}^{\pi}\sin(\alpha t)\sin(nt)dt\\
+&=&\frac{\alpha}{\pi n}\int_{-\pi}^{\pi}\sin(\alpha t)\sin(nt)dt\\
+&=&\frac{\alpha}{\pi n^2}\left[-\sin(\alpha t)\cos(nt)\right]_{-\pi}^\pi+\frac{\alpha^2}{n^2\pi}\int_{-\pi}^{\pi}\cos(\alpha t)\cos(nt)dt\\
+&=&\frac{2(-1)^{n+1}\alpha\sin(\alpha \pi)}{\pi n^2}+\frac{\alpha^2}{n^2}a_n(f).
+\end{eqnarray*}
+On en déduit que
+$$a_n(f)\left(1-\frac{\alpha^2}{n^2}\right)=\frac{2\alpha(-1)^{n+1}\sin(\alpha\pi)}{\pi n^2}$$
+soit
+$$a_n(f)=\frac{2\alpha(-1)^{n+1}\sin(\alpha\pi)}{\pi(n^2-\alpha^2)}=\frac{\sin(\alpha \pi)}{\alpha \pi}\times\frac{(-1)^{n}2\alpha^2}{\alpha^2-n^2}.$$
+Ceci démontre bien que la série de Fourier de $f$ est 
+$$\frac{\sin(\alpha \pi)}{\alpha \pi}\left(1+2\alpha^2\sum_{n=1}^{+\infty}\frac{(-1)^n}{\alpha^2-n^2}\cos(nt)\right).$$
+<li> On remarque que, par parité de $\cos$, la fonction $f$ est continue (les seuls points qui pourraient poser problème sont ceux
+de $\pi+2\pi\mathbb Z$, mais on a bien par construction
+$$\lim_{x\to \pi^-}f(x)=\cos(\alpha\pi)=\cos(-\alpha \pi)=\lim_{x\to\pi^+}f(x)$$
+et donc $f$ est aussi continue en ces points). De plus, $f$ est $C^1$ par morceaux. Ainsi, $f$ est en tout point somme de sa série de Fourier. En particulier, en $\pi$,
+on a
+$$\cos(\alpha\pi)=\frac{\sin(\alpha\pi)}{\alpha\pi}\left(1+2\alpha^2\sum_{n=1}^{+\infty}\frac{(-1)^n}{\alpha^2-n^2}(-1)^n\right).$$
+Ceci entraine immédiatement que 
+$$\textrm{cotan} (\alpha\pi)=\frac{1}{\alpha \pi}+\sum_{n=1}^{+\infty}\frac{2\alpha}{\pi(\alpha^2-n^2)}.$$
+<li> On a 
+$$\ln\left(1-\frac{t^2}{n^2}\right)\sim_{n\to+\infty}\frac{-t^2}{n^2}.$$
+Puisque, à $t$ fixé, la série $\sum_{n\geq 1}\frac{-t^2}{n^2}$ est une série numérique convergente dont le terme général est toujours négatif, 
+on en déduit par critère d'équivalence que la série $\sum_{n\geq 1}\ln\left(1-\frac{t^2}{n^2}\right)$ converge pour chaque
+$t\in]-1,1[$. Ainsi, la série de fonctions $\sum_{n\geq 1}\ln\left(1-\frac{t^2}{n^2}\right)$ converge simplement vers une fonction $g$ sur
+$]-1,1[$. Pour prouver que $g$ est $C^1$, on va utiliser un argument de convergence uniforme de la série des dérivées. Soit $a\in]0,1[$, et posons,
+pour $n\geq 1$ et $t\in[-a,a]$, 
+$$u_n(t)=\ln\left(1-\frac{t^2}{n^2}\right).$$
+Chaque fonction $u_n$ est dérivable sur $[-a,a]$, avec 
+$$u_n'(t)=\frac{2t}{t^2-n^2}.$$
+De plus, pour $t\in[-a,a]$, on a
+$$n^2-t^2\geq n^2-a^2\textrm{ et }|2t|\leq a.$$
+On en déduit que
+$$|u_n'(t)|\leq\frac{2a}{n^2-a^2}.$$
+Le membre de droite (qui ne dépend pas de $t$!) est le terme général d'une série numérique convergente. Ainsi, la série de fonctions
+$\sum_{n\geq 1}u_n'(t)$ converge normalement, donc uniformément, sur $[-a,a]$. On en déduit que $g$ est de classe $C^1$ sur tout segment $[-a,a]\subset]-1,1[$,
+donc sur $]-1,1[$, avec 
+$$g'(t)=\sum_{n\geq 1}\frac{2t}{t^2-n^2}.$$
+<li> D'après les résultats des questions précédentes, on a, pour tout $t\in]-1,1[$, $t\neq 0$,
+$$g'(t)=\pi\textrm{cotan} (\pi t)-\frac{1}{t}.$$
+On intègre cette relation et on obtient qu'il existe une constante $C\in\mathbb R$ tel que, pour tout
+$t\in]0,1[$, on a
+$$g(t)=\ln\left(\frac{\sin(\pi t)}{t}\right)+C.$$
+On fait tendre $t$ vers 0. Le membre de gauche tend vers 0, celui de droite vers $\ln(\pi)+C$.
+On en déduit que $C=-\ln\pi$ et donc que, pour tout $t\in[0,1]$, on a
+$$g(t)=\ln\left(\frac{\sin(\pi t)}{\pi t}\right).$$
+Un raisonnement similaire donne le même résultat sur $[-1,0]$. 
+Passant à l'exponentielle, on obtient
+\begin{eqnarray*}
+\frac{\sin(\pi t)}{\pi t}&=&\exp(g(t))\\
+&=&\exp\left(\sum_{k=1}^{+\infty}\ln\left(\left(1-\frac{t^2}{k^2}\right)\right)\right)\\
+&=&\prod_{k=1}^{+\infty}\left(1-\frac{t^2}{k^2}\right),
+\end{eqnarray*}
+le symbole $\prod_{k=1}^{+\infty}$ devant être compris comme $\lim_{n\to+\infty}\prod_{k=1}^n$.
+</ol></div></div></div>
+<div class=titrepartie>Exercices théoriques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater174"></span><script>var myRating = raterJs( { element:document.querySelector("#rater174"),	max:5, rating:2.0588235294118, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(174,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des sommes partielles à $f$ <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=174.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(174,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce174','imageenonce174');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce174"></a><div class=inner id="innerenonce174">Soit $f$ une fonction continue $2\pi-$périodique telle que, pour chaque $n$, on ait $\|S_n(f)\|_\infty\leq 1$.
+Montrer que $\|f\|_\infty\leq 1$.</div></div><div class=indication><a href="javascript:showAll('innerindication174','imageindication174');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication174"></a><div class=inner id="innerindication174" style="display:none;">Utiliser le théorème de Féjer.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige174','imagecorrige174',174);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige174"></a><div class=inner id="innercorrige174" style="display:none;">Puisque $f$ est seulement supposée continue, le seul théorème "ponctuel" que l'on a à notre disposition est
+celui de Féjer. Pour tout $x$, on a 
+$$f(x)=\lim_{N\to+\infty}\frac{S_0(f)(x)+\dots+S_N(f)(x)}{N+1}.$$
+Maintenant, il est clair par l'inégalité triangulaire que 
+$$\left\| \frac{S_0(f)(x)+\dots+S_N(f)(x)}{N+1} \right\|_\infty\leq 1,$$
+ce qui prouve le résultat.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater175"></span><script>var myRating = raterJs( { element:document.querySelector("#rater175"),	max:5, rating:2.5555555555556, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(175,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Régularité et décroissance des coefficients - sans indications <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=175.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(175,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce175','imageenonce175');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce175"></a><div class=inner id="innerenonce175">Soit $f:\mathbb R\to\mathbb R$ une application continue et $2\pi$-périodique.
+Montrer que $f$ est de classe $C^\infty$ si et seulement si, pour tout $k\in\mathbb N$,
+on a $c_n(f)=o(1/n^k)$ quand $|n|$ tend vers $+\infty$.</div></div><div class=indication><a href="javascript:showAll('innerindication175','imageindication175');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication175"></a><div class=inner id="innerindication175" style="display:none;">Dans un sens, relier $c_n(f)$ et $c_n(f^{(k)})$. Réciproquement, montrer que $f$ est somme de sa
+série de Fourier, et que cette série de Fourier définit une fonction $C^\infty$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige175','imagecorrige175',175);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige175"></a><div class=inner id="innercorrige175" style="display:none;">Supposons d'abord que $f$ est de classe $C^\infty$. Alors, par intégrations par parties successives, on a
+$$c_n(f)=\frac{1}{(in)^k}c_n(f^{(k)}).$$
+D'autre part, les coefficients de Fourier d'une fonction continue tendent vers 0 en $+\infty$. C'est par exemple
+une conséquence du théorème de Parseval. Ainsi, on a
+$$n^k c_n(f)=\frac{c_n(f^{(k)})}{i^k}\xrightarrow{|n|\to+\infty}0.$$
+Réciproquement, supposons que $n^k c_n(f)\to 0$ quand $|n|\to+\infty$, et ce pour tout $k\in\mathbb N$. On considère la série trigonométrique
+$$S(t)=\sum_{n\in\mathbb Z}c_n(f)e^{int}.$$
+Cette série converge normalement sur $\mathbb R$, car il existe une constante $M&gt;0$ telle que
+$|c_n(f)|\leq\frac{M}{|n|^2+1}$ pour tout $n\in\mathbb Z$, et donc
+on a
+$$|c_n(f)e^{int}|\leq \frac{M}{|n|^2+1},$$
+et le membre de droite de l'inégalité précédente est le terme général d'une série numérique convergente. Ainsi,
+$S$ est définie sur $\mathbb R$ tout entier, et est continue. De plus, on a
+$$|(in)^k c_n(f)|\leq \frac{C_k}{|n|^2+1}$$
+pour une certaine constante $C_k$ puisque $n^{k+2}c_n(f)\to 0$ quand $|n|\to+\infty$. Ceci montre que toutes les
+séries dérivées de $S$ convergent normalement sur $\mathbb R$, et donc que $S$ définit une fonction $C^\infty$ sur
+$\mathbb R$.<br>
+Reste à prouver que $S$ et $f$ coincident. Mais, $S$ est somme d'une série trigonométrique qui converge normalement,
+donc uniformément, et donc ses coefficients de Fourier sont les coefficients de la série trigonométrique.
+Autrement dit, on a $c_n(f)=c_n(S)$. Maintenant, comme conséquence du théorème de Parseval, on sait que deux fonctions
+continues qui ont les mêmes coefficients de Fourier sont égales. Donc $f=S$ et $f$ est $C^\infty$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater176"></span><script>var myRating = raterJs( { element:document.querySelector("#rater176"),	max:5, rating:1.9565217391304, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(176,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Régularité et décroissance des coefficients - avec indications <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=176.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(176,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce176','imageenonce176');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce176"></a><div class=inner id="innerenonce176">Soit $f:\mathbb R\to\mathbb R$ une application continue et $2\pi$-périodique.
+<ol class="enumeratechiffre">
+<li> Démontrer que $(c_n(f))$ tend vers 0 lorsque $|n|$ tend vers $+\infty$.
+<li> On suppose que $f$ est $C^k$. &Eacute;tablir une relation entre les coefficients de Fourier de $f$
+et ceux de $f^{(k)}$. 
+<li> En déduire que si $f$ est de classe $C^\infty$, alors $c_n(f)=o(1/n^k)$ pour tout entier $k$.
+<li> Réciproquement, on suppose que $c_n(f)=o(1/n^k)$ quand $|n|\to+\infty$ pour tout entier $k$
+et on pose $S(x)=\sum_{n\in\mathbb Z}c_n(f)e^{inx}$. 
+<ol class="enumeratechiffre">
+<li> Calculer les coefficients de Fourier de $S$.
+<li> Démontrer que $S$ est de classe $C^\infty$.
+<li> En utilisant le théorème de Parseval, démontrer que deux fonctions continues qui ont les mêmes coefficients
+de Fourier sont égales.
+<li> En déduire que $f=S$ et donc que $f$ est de classe $C^\infty$.
+</ol>
+<li> Quel théorème a-t-on démontré dans cet exercice?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige176','imagecorrige176',176);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige176"></a><div class=inner id="innercorrige176" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est une conséquence du théorème de Parseval : la série $\sum |c_n(f)|^2$ converge, son terme général tend donc vers 0.
+<li> Par intégrations par parties successives, on trouve
+$$c_n(f)=\frac{1}{(in)^k}c_n(f^{(k)}).$$
+<li> En mettant ensemble les deux questions précédentes, on trouve :
+$$n^k c_n(f)=\frac{c_n(f^{(k)})}{i^k}\xrightarrow{|n|\to+\infty}0.$$
+<li> <ol class="enumeratechiffre">
+<li> Voir la question suivante
+<li> 
+La série définissant $S$ converge normalement sur $\mathbb R$, car il existe une constante $M&gt;0$ telle que
+$|c_n(f)|\leq\frac{M}{|n|^2+1}$ pour tout $n\in\mathbb Z$, et donc
+on a
+$$|c_n(f)e^{int}|\leq \frac{M}{|n|^2+1},$$
+et le membre de droite de l'inégalité précédente est le terme général d'une série numérique convergente. Ainsi,
+$S$ est définie sur $\mathbb R$ tout entier, et est continue. De plus, on a
+$$|(in)^k c_n(f)|\leq \frac{C_k}{|n|^2+1}$$
+pour une certaine constante $C_k$ puisque $n^{k+2}c_n(f)\to 0$ quand $|n|\to+\infty$. Ceci montre que toutes les
+séries dérivées de $S$ convergent normalement sur $\mathbb R$, et donc que $S$ définit une fonction $C^\infty$ sur
+$\mathbb R$.
+$S$ est somme d'une série trigonométrique qui converge normalement,
+donc uniformément, et donc ses coefficients de Fourier sont les coefficients de la série trigonométrique.
+<li> Soient $u$ et $v$ deux fonctions continues ayant les mêmes coefficients de Fourier. Alors la fonction $u-v$ a ses coefficients de Fourier nuls.
+Par le théorème de Parseval, on en déduit que 
+$$\int_0^{2\pi}|u(t)-v(t)|^2 dt=0.$$
+L'intégrale sur $[0,2\pi]$ de la fonction continue et positive $|u-v|^2$ est nulle. C'est que cette fonction est identiquement nulle,
+et donc que $u=v$.
+<li> Il suffit de mettre ensemble les résultats précédents.
+</ol>
+<li> Soit $f:\mathbb R\to\mathbb R$ une application continue et $2\pi$-périodique.
+$f$ est de classe $C^\infty$ si et seulement si, pour tout $k\in\mathbb N$,
+on a $c_n(f)=o(1/n^k)$ quand $|n|$ tend vers $+\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater177"></span><script>var myRating = raterJs( { element:document.querySelector("#rater177"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(177,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Régularité et fonctions höldériennes <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=177.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(177,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce177','imageenonce177');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce177"></a><div class=inner id="innerenonce177">Soit $f:\mathbb R\to\mathbb C$ $2\pi$-périodique. On suppose qu'il existe $\alpha&gt;0$ et $C&gt;0$ tels que, pour tous
+$x,y\in\mathbb R$, 
+$$|f(x)-f(y)|\leq C|x-y|^\alpha.$$
+<ol class="enumeratechiffre">
+<li> Pour $a\in\mathbb R$ et $n\in\mathbb Z$, exprimer 
+$$\int_0^{2\pi}f(t+a)e^{-int}dt$$
+en fonction de $c_n(f)$.
+<li> En déduire l'existence de $M&gt;0$ tel que, pour tout $n\in\mathbb Z^*$,
+$$|c_n(f)|\leq \frac M{n^\alpha}.$$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication177','imageindication177');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication177"></a><div class=inner id="innerindication177" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire un changement de variables.
+<li> Appliquer en $a=\pi/n$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige177','imagecorrige177',177);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige177"></a><div class=inner id="innercorrige177" style="display:none;"><ol class="enumeratechiffre">
+<li> Par $2\pi-$périodicité et changement de variables $x=t+a$, on sait que
+$$c_n(f)=\frac1{2\pi}\int_0^{2\pi}f(t+a)e^{-in(t+a)}dt=\frac{e^{-ina}}{2\pi}\int_0^{2\pi}f(t+a)e^{-int}dt.$$
+<li> L'idée est de faire apparaitre une différence $f(x)-f(y)$ pour exploiter l'hypothèse.
+Pour cela, on va faire la somme des deux expression de $c_n(f)$, celle que l'on utilise usuellement
+et celle établie à la question précédente, et on va choisir $a$ de sorte que $e^{ina}=-1$, c'est-à-dire
+$a=\pi/n$. Il vient 
+$$2c_n(f)=\frac 1{2\pi}\int_0^{2\pi}\big(f(t)-f(t+\pi/n)\big)e^{-int}dt.$$
+On en déduit
+$$|c_n(f)|\leq \frac1{4\pi}\int_0^{2\pi}|f(t)-f(t+\pi/n)|dt\leq \frac{M\pi^\alpha}{2n^\alpha}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater178"></span><script>var myRating = raterJs( { element:document.querySelector("#rater178"),	max:5, rating:2.9473684210526, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(178,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Phénomène de Gibbs <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=178.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(178,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce178','imageenonce178');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce178"></a><div class=inner id="innerenonce178">On se propose dans cet exercice d'étudier la convergence de la série de Fourier de la fonction impaire, $2\pi$-périodique,
+définie par 
+$$f(x)=\left\{
+\begin{array}{ll}
+1&\textrm{ si }x\in]0,\pi[\\
+0&\textrm{ si }x=k\pi,\ k\in\mathbb Z.
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Question préliminaire : 
+<ol class="enumeratechiffre">
+<li> Montrer que, pour tout $x\in[0,\pi/2]$, on a
+$\sin(x)\geq\frac{2}\pi x.$
+<li> Montrer que, pour tout $x\in\mathbb R$, on a
+$|\sin x-x|\leq \frac{|x|^3}6.$
+<li> Soit $h_n$ la fonction définie sur $[0,\pi]$ par 
+$$h_n(t)=\left\{
+\begin{array}{ll}
+\frac{\sin t}{(2n)\sin\left(\frac{t}{2n}\right)}&\textrm{ si }t\neq 0\\
+1&\textrm{si }t=0.
+\end{array}\right.$$
+Déduire des questions précédentes que $(h_n)$ converge uniformément sur $[0,\pi]$ vers une fonction $h$ que l'on précisera.
+</ol>
+<li> Calculer la série de Fourier de $f$ et prouver qu'elle converge simplement vers $f$.
+Y-a-t-il convergence uniforme?
+<li> Soit $S_n$ la $(2n-1)$-ième somme partielle de la série de Fourier de $f$,
+$$S_n(x)=\frac{4}{\pi}\sum_{k=1}^n \frac{\sin\big((2k-1)x\big)}{2k-1}.$$
+Justifier que $S_n$ est dérivable sur $\mathbb R$ et que sa dérivée vérifie
+$$S_n'(x)=\left\{
+\begin{array}{ll}
+\frac{2}\pi\times\frac{\sin(2nx)}{\sin x}&\textrm{ si }x\notin\pi\mathbb Z\\
+\frac{(-1)^q 4n}\pi&\textrm{ si }x=q\pi,\ q\in\mathbb Z.
+\end{array}\right.$$
+En déduire que $S_n$ présente $(2n-1)$ extrema locaux sur l'intervalle $]0,\pi[$.
+Montrer que le premier d'entre eux est un maximum et qu'il est atteint en $x_n=\frac{\pi}{2n}$.
+On posera pour la suite $a_n=S_n(x_n)$.
+<li> Montrer que, pour tout $x\in[0,\pi[$, on a
+$$S_n(x)=\frac2\pi\int_0^x\frac{\sin(2nt)}{\sin t}dt.$$
+En déduire que
+$$a_n=\frac{2}\pi\int_0^{\pi}\frac{\sin t}{(2n)\sin\left(\frac{t}{2n}\right)}dt.$$
+<li> Montrer que $\lim_{n\to+\infty}a_n=\frac2\pi\int_0^{\pi}\frac{\sin t}tdt.$
+</ol>
+On peut vérifier que $\frac2\pi\int_0^{\pi}\frac{\sin t}tdt&gt;1.$</div></div><div class=indication><a href="javascript:showAll('innerindication178','imageindication178');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication178"></a><div class=inner id="innerindication178" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> 
+<li> Appliquer une formule de Taylor à la fonction $\sin$.
+<li> Soit $h(t)=\sin t/t$. Prouver la convergence simple de $(h_n)$ vers $h$, puis écrire
+$$|h_n(t)-h(t)|=\frac{(2n)|\sin t|\times |\sin(t/2n)-(t/2n)|}{|(2n)t\sin(t/2n)|}.$$
+</ol>
+<li>
+<li> On peut dériver terme à terme la somme finie. Revoir ensuite comment exprimer sans somme
+une somme de cosinus...
+<li> 
+<li> Permuter limite et intégrale à l'aide de la convergence uniforme prouvé plus haut.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige178','imagecorrige178',178);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige178"></a><div class=inner id="innercorrige178" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> La fonction $\sin$ est concave dans $[0,\pi/2]$. Son graphe est au-dessus de ses cordes,
+en particulier au dessus de la corde qui relie le point $(0,0)$ au point $(\pi/2,1)$.
+Ceci donne exactement l'inégalité demandée.
+<li> Il s'agit juste de l'inégalité de Taylor-Lagrange à l'ordre 3 appliquée à la fonction $t\mapsto \sin t$,
+entre les points $0$ et $x$.
+<li> Puisque $\sin(t/2n)\sim_{+\infty}t/2n$, on en déduit que pour $t\in]0,\pi]$, $(h_n(t))$
+converge vers $\frac{\sin t}{t}$. Soit $h$ défini par $h(t)=\frac{\sin t}{t}$ si $t\in]0,\pi]$
+et $h(0)=1$. On va démontrer que $(h_n)$ converge uniformément vers $h$ sur $]0,\pi]$.
+On a, pour $t\in]0,\pi]$,
+\begin{eqnarray*}
+|h_n(t)-h(t)|&=&\frac{(2n)|\sin t|\times |\sin(t/2n)-(t/2n)|}{|(2n)t\sin(t/2n)|}.
+\end{eqnarray*}
+Mais, $|\sin t|\leq 1$ et $|\sin(t/2n)-(t/2n)|\leq\frac{t^3}{8n^3}$. 
+De plus, puisque $t\in]0,\pi]$, $t/2n\in]0,\pi/2]$ et on a 
+$$\sin(t/2n)\geq \frac{2}{\pi}\times\frac{t}{2n}=\frac{t}{\pi n}$$
+ce qui donne finalement
+$$|h_n(t)-h(t)|\leq 2n\times\frac{t^3}{8n^3}\times \frac{\pi n}{t^2}=\frac{\pi t}{4 n^2}\leq\frac{\pi^2}{4n^2}.$$
+Ceci prouve bien la convergence uniforme de $(h_n)$ vers $h$ sur l'intervalle $[0,\pi]$.
+</ol>
+<li> La fonction $f$ est impaire, donc $a_n(f)=0$ pour tout $n\in\mathbb N$. Pour $n\geq 1$, on a
+\begin{eqnarray*}
+b_n(f)&=&\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\sin(nt)dt=\frac{1}{\pi}\int_{-\pi}^0-\sin(nt)dt+\frac{1}{\pi}\int_{0}^{\pi}\sin(nt)dt\\
+&=&+\frac1{\pi n}\big(\cos(0)-\cos(-n\pi)\big)+\frac{1}{n}\big(\cos(n\pi)-\cos(0)\big)\\
+&=&-\frac{1}{\pi n}\big(2-2(-1)^n\big).
+\end{eqnarray*}
+Ainsi, si $n$ est pair, $b_n(f)=0$ et si $n$ est impair, $b_n(f)=\frac{4}{\pi n}.$
+Puisque $f$ est $C^1$ par morceaux, sa série de Fourier converge en tout point $x\in\mathbb R$
+vers la demi-somme des limites à gauche et à droite de $f$ en $x$. En les points où $f$ est continue,
+cette demi-somme est bien sûr égale à $f(x)$. En $k\pi$, cette demi-somme fait 0, et donc
+vaut aussi $f(k\pi)$. Bien sûr, la convergence ne saurait être uniforme, puisque $f$ n'est pas continue
+alors que chaque somme partielle de la série de Fourier l'est.
+<li> $S_n$ est dérivable comme somme de fonctions dérivables, et de plus, pour tout $x\in\mathbb R$, on a
+$$S_n'(x)=\frac{4}{\pi}\sum_{k=1}^n \cos\big((2k-1)x\big).$$
+Reste à calculer cette somme. Si $x=k\pi$, on trouve bien que $S_n'(x)=\frac{(-1)^q4n}\pi$.
+Pour $x\neq k\pi$, $k\in\mathbb Z$, on écrit que 
+$$S_n'(x)=\frac4\pi\Re e\left(\sum_{k=1}^n e^{i(2k-1)x}\right).$$
+On utilise ensuite la somme d'une série géométrique :
+\begin{eqnarray*}
+\sum_{k=1}^n e^{i(2k-1)x}&=&e^{-ix}\sum_{k=1}^n e^{2ikx}\\
+&=&e^{-ix}\frac{e^{2ix}-e^{i(2n+2)x}}{1-e^{2ix}}\\
+&=&\frac{e^{-ix}e^{i(n+2)x}}{e^{ix}}\frac{e^{-inx}-e^{inx}}{e^{-ix}-e^{ix}}\\
+&=&e^{inx}\frac{\sin(nx)}{\sin(x)}.
+\end{eqnarray*}
+En prenant la partie réelle, on trouve finalement
+$$S_n'(x)=\frac{4}{\pi}\frac{\cos (nx)\sin(nx)}{\sin x}=\frac{2}\pi\times\frac{\sin 2nx}{\sin x}.$$
+Ainsi, en chaque point de la forme $\frac{k\pi}{2n}$, $k\in\{1,\dots,2n-1\}$, la fonction $S_n'$ s'annule
+et change de signe. Ainsi, $S_n$ présente un extremum en ces points. De plus, $S_n'$ ne s'annule
+sur l'intervalle $]0,\pi[$ qu'en ces points. On a donc trouvé les $2n-1$ extrema locaux de $f$ sur
+$]0,\pi[$. 
+Le premier d'entre eux est bien atteint en $x_n=\frac{\pi}{2n}$, et $S_n'\geq 0$ avant $x_n$
+tandis que $S_n'\leq 0$ après $x_n$. $x_n$ est bien un maximum local de $S_n$.
+<li> Puisque $S_n'$ est continue, le théorème fondamental du calcul intégral nous dit que, pour tout $x\in\mathbb R$, on a
+$$S_n(x)-S_n(0)=\int_0^x S_n'(t)dt.$$
+D'après les calculs effectués précédemment, on trouve
+$$S_n(x)=\frac2\pi\int_0^x\frac{\sin(2nt)}{\sin t}dt.$$
+En particulier, 
+$$a_n=S_n(x_n)=\frac2\pi\int_0^{\pi/2n}\frac{\sin(2nt)}{\sin t}dt.$$
+Le changement de variables $u=nt$ donne le résultat souhaité.
+<li> On a 
+$$a_n=\frac2\pi\int_0^\pi h_n(t)dt.$$
+Or, la fonction $(h_n)$ converge uniformément vers $h$ sur $[0,\pi]$. On peut donc permuter la limite et l'intégrale et on a
+$$\lim_{n\to+\infty}a_n=\frac2\pi\int_0^{\pi}\frac{\sin t}tdt.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater179"></span><script>var myRating = raterJs( { element:document.querySelector("#rater179"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(179,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Séries trigonométriques qui convergent uniformément <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=179.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(179,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce179','imageenonce179');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce179"></a><div class=inner id="innerenonce179"><ol class="enumeratechiffre">
+<li> Soit une série de fonctions $\sum_n u_n$ uniformément convergente sur un intervalle $I$.
+Démontrer que les fonctions $u_n$ sont toutes bornées sur $I$ pour $n$ assez grand, et
+que $\|u_n\|_\infty$ tend vers 0 lorsque $n$ tend vers $+\infty$.
+<li> Soit $I$ un intervalle fermé de longueur au moins égale à $\pi$, et $a,b$
+deux réels quelconques. Montrer que le maximum de $|a\cos x+b\sin x|$ sur $I$
+est $\sqrt{a^2+b^2}$.
+<li> Soit $I=[\alpha,\beta]$ un intervalle fermé de longueur strictement positive.
+On suppose que la série de fonctions $\sum_{n\geq 0}\big(a_n\cos(nx)+b_n\sin(nx)\big)$
+converge uniformément sur $I$. Montrer que $\lim_{n\to+\infty}a_n=\lim_{n\to+\infty}b_n=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication179','imageindication179');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication179"></a><div class=inner id="innerindication179" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder comme dans la preuve que si $\sum_n x_n$ est une série numérique convergente,
+alors $x_n\to 0$.
+<li> Mettre $\sqrt{a^2+b^2}$ en facteur...Rappelons que si $u^2+v^2=1$, alors
+il existe un réel $\theta$ tel que $u=\cos\theta$ et $v=\sin\theta$.
+<li> Utiliser les deux questions précédentes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige179','imagecorrige179',179);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige179"></a><div class=inner id="innercorrige179" style="display:none;"><ol class="enumeratechiffre">
+<li> Ceci découle directement du critère de Cauchy uniforme. On peut aussi reprouver ceci simplement
+(c'est le sens facile du critère de Cauchy uniforme que l'on utilise). Puisque la série converge uniformément
+ sur $I$, pour tout $\veps&gt;0$, il existe $N\in\mathbb N$ tel que, pour tout $x\in I$ et tout $n\geq N$, 
+ $$\left|\sum_{k=n}^{+\infty} u_k(x)\right|\leq\veps.$$
+Puisque $u_n=\sum_{k=n}^{+\infty}u_k-\sum_{k=n+1}^{+\infty}u_k$, on en déduit que pour tout $n\geq N$
+et tout $x\in I$, on a 
+$$|u_n(x)|\leq2\veps.$$
+Ceci prouve à la fois que $u_n$ est bornée sur $I$ pour $n$ assez grand, et aussi que $(\|u_n\|_{\infty})$ tend vers 0.
+<li> C'est classique (et semblable au passage de l'écriture d'un nombre complexe de la forme cartésienne à la forme trigonométrique).
+On met $\sqrt{a^2+b^2}$ en facteur, et on a
+$$a\cos(x)+b\sin(x)=\sqrt{a^2+b^2}\left(\frac{a}{\sqrt{a^2+b^2}}\cos(x)+\frac{b}{\sqrt{a^2+b^2}}\sin(x)\right).$$
+Posons $u=\frac{a}{\sqrt{a^2+b^2}}$ et $v=\frac{b}{\sqrt{a^2+b^2}}$. Alors $u$ et $v$ sont deux réels tels que
+$u^2+v^2=1$. Il existe donc $\theta\in\mathbb R$ tel que $u=\cos(\theta)$ et $v=\sin(\theta)$. 
+On obtient donc
+$$|a\cos(x)+b\sin(x)|=\sqrt{a^2+b^2}\big|\cos(\theta)\cos(x)+\sin(\theta)\sin(x)\big|=\sqrt{a^2+b^2}\big|\cos(x-\theta)\big|.$$
+Or, la fonction $x\mapsto|\cos(x-\theta)|$ atteint son maximum, qui vaut $1$, en tous les points de $\theta+\pi\mathbb Z$.
+Puisque $I$ est de longeur au moins $\pi$, un de ces points est dans $I$. Ceci prouve que le maximum de $|a\cos x+b\sin x|$ sur $I$
+est $\sqrt{a^2+b^2}$.
+<li> On utilise les deux questions précédentes :
+<ul class="rien">
+<li> On sait que $\sup_{x\in I}|a_n\cos(nx)+b_n\sin(nx)|$ tend vers 0.
+<li> De plus, soit $I_n=nI=[n\alpha,n\beta]$. Alors 
+$$\sup_{x\in I}|a_n\cos(nx)+b_n\sin(nx)|=\sup_{y\in I_n}|a_n\cos(y)+b_n\sin(y)|.$$
+Or, pour $n$ assez grand, $I_n$ est de longueur au moins $\pi$ et donc
+$$\sup_{x\in I}|a_n\cos(nx)+b_n\sin(nx)|=\sqrt{a_n^2+b_n^2}.$$
+</ul>
+Combinant les deux propriétés, on trouve que
+$$\lim_{n\to+\infty}\sqrt{a^2_n+b_n^2}=0\implies \lim_{n\to+\infty}a_n^2+b_n^2=0$$
+Ceci implique que $\lim_{n\to+\infty}a_n^2=\lim_{n\to+\infty}b_n^2=0$ - on peut justifier cela
+par le théorème des gendarmes,
+$$0\leq a_n^2\leq a_n^2+b_n^2.$$
+Prenant la racine carrée, on conclut que $\lim_{n\to+\infty}a_n=\lim_{n\to+\infty}b_n=0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater180"></span><script>var myRating = raterJs( { element:document.querySelector("#rater180"),	max:5, rating:5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(180,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Féjer <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=180.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(180,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce180','imageenonce180');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce180"></a><div class=inner id="innerenonce180">Si $f$ et $g$ sont deux fonctions continues et $2\pi$-périodiques, on définit leur produit de convolution par 
+$$f\star g(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-t)g(t)dt.$$
+Dans toute la suite, $f$ désigne une telle fonction continue $2\pi-$périodique. Pour $k\in\mtz$, on note $e_k(x)=e^{ikx}$. On note 
+$$S_n=e_{-n}+e_{-(n-1)}+\dots+e_0+\dots+e_{n-1}+e_n,\textrm{ }C_n=\frac{S_0+S_1+\dots+S_n}{n+1}.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $f\star S_n$ est un polynôme trigonométrique. Quel nom donne-t-on usuellement à $f\star S_n$?
+<li> Montrer que si $x\in \mtr\backslash 2\pi\mtz$, on a :
+$$C_n(x)=\frac{1}{n+1}\left(\frac{\sin((n+1)x/2)}{\sin(x/2)}\right)^2.$$
+<li> Montrer que $C_n\geq 0$, que $\frac{1}{2\pi}\int_{-\pi}^\pi C_n(t)dt=1$, et que pour tout $\alpha\in]0,\pi]$, $(C_n)$ converge uniformément vers 0 sur 
+$[-\pi,\pi]\backslash [-\alpha,\alpha]$. 
+<li> Montrer que $(f\star C_n)$ converge uniformément vers $f$ sur $\mtr$.
+</ol>
+Ainsi, cet exercice prouve le théorème de Féjer : toute fonction continue $2\pi-$périodique est limite uniforme sur $\mtr$ de polynômes trigonométriques. En outre, il donne 
+une suite qui réalise l'approximation uniforme - la suite des moyennes de Ces\`aro de la série de Fourier de $f$.</div></div><div class=indication><a href="javascript:showAll('innerindication180','imageindication180');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication180"></a><div class=inner id="innerindication180" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire le calcul en observant que $f\star e_k=e_k\star f$.
+<li> Calculer d'abord $S_n$ en reconnaissant une somme géométrique. En déduire $C_n$ en utilisant que $\sin(ax)=\Im(e^{iax})$.
+<li> Pour l'intégrale, utiliser la linéarité et l'expression à partir des $e_k$. Pour la convergence uniforme, utiliser le résultat précédent.
+<li> Exprimer $f(x)$ à l'aide d'une intégrale faisant intervenir $C_n$, et calculer $f\star C_n-f$. Couper l'intégrale en 2, traiter l'une par la convergence
+uniforme de $C_n$, l'autre par continuité uniforme de $f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige180','imagecorrige180',180);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige180"></a><div class=inner id="innercorrige180" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que le changement de variables $y=x-t$ et la $2\pi-$périodicité des fonctions assure que $f\star e_k=e_k\star f$. Ainsi, on en déduit
+$$f\star e_k(x)=\frac{1}{2\pi}\int_{-\pi}^\pi e^{ik(x-t)}f(t)dt=\left(\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{-ikt}f(t)dt\right)e_k(x).$$
+Par linéarité, $f\star S_n$ est un polynôme trigonométrique, et on reconnait même que c'est la $n-$ième somme partielle de la série de Fourier de $f$.
+<li> C'est un calcul très classique! En remarquant que $S_n$ est une somme géométrique, on en déduit, pour $x\notin\mtr\backslash 2\pi\mtz$ :
+\begin{align*}
+S_n(x)&=e^{-inx}\frac{e^{(2n+1)ix}-1}{e^{ix}-1}\\
+&=e^{-inx}\times \frac{e^{i(2n+1)x/2}}{e^{ix/2}}\times \frac{e^{(n+1/2)ix}-e^{-(n+1/2)ix}}{e^{ix/2}-e^{-ix/2}}\\
+&=\frac{\sin( (n+\frac 12)x)}{\sin(x/2)}.
+\end{align*}
+On recommence, en utilisant l'astuce classique d'écrire $\sin( (n+\frac 12)x)=\Im(e^{i(n+\frac 12)x})$. On commence donc par calculer
+\begin{align*}
+\sum_{k=0}^{n}e^{i(k+1/2)x}&=e^{ix/2}\sum_{k=0}^n e^{ikx}\\
+&=e^{ix/2}\frac{1-e^{i(n+1)x}}{1-e^{ix}}\\
+&=e^{i(n+1)x/2}\frac{\sin((n+1)x/2)}{\sin(x/2)}.
+\end{align*}
+On conclut que 
+\begin{align*}
+C_n&=\frac{1}{n+1}\times\frac{1}{\sin(x/2)}\Im m \left(e^{i(n+1)x/2}\frac{\sin((n+1)x/2}{\sin(x/2)}\right)\\
+&=\frac{1}{n+1}\left(\frac{\sin((n+1)x/2)}{\sin(x/2)}\right)^2.
+\end{align*}
+<li> La positivité de $C_n$ résulte immédiatement de l'expression précédente qui fait intervenir un carré. Pour l'intégrale, il suffit d'abord de remarquer que :
+$$\frac{1}{2\pi}\int_{-\pi}^\pi S_n(t)=1$$
+(calcul immédiat), ce qui donne le même résultat pour $C_n$ par linéarité. Ensuite, si $x\in[-\pi,\pi]\backslash [-\alpha,\alpha]$, on a $|\sin(x/2)|\geq |\sin(\alpha/2)|$, ce qui entraîne 
+$$|C_n(x)|\leq \frac{1}{(n+1)\sin^2(\alpha/2)},$$
+quantité qui tend vers 0 indépendamment de $x$.
+<li> Remarquons d'abord que si $x\in\mtr$, on a :
+$$f\star C_n(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-u)C_n(u)du.$$
+Prouvons la convergence uniforme. On fixe $\veps&gt;0$. On a :
+$$|f\star C_n(x)-f(x)|=\left|\frac{1}{2\pi}\int_{-\pi}^{\pi}(f(x-u)-f(x))C_n(u)du\right|.$$
+On fixe un $\alpha\in]0,\pi]$ (une valeur précise sera explicitée plus tard), et on découpe l'intégrale. On obtient :
+$$|f\star C_n(x)-f(x)|\leq\frac{1}{2\pi}\int_{\alpha\leq |u|\leq \pi}|f(x-u)-f(x)|C_n(u)du+\frac{1}{2\pi}\int_{|u|\leq\alpha}|f(x-u)-f(x)|C_n(u)du.$$
+On gère les deux parties de l'intégrale très différemment. D'une part, $f$ est une fonction continue et périodique. Elle est donc bornée par une constante $M$ sur $\mtr$ (la borne $M$ étant celle qui apparait 
+sur l'intervalle $[0,2\pi]$). On a donc :
+$$\frac{1}{2\pi}\int_{\alpha\leq |u|\leq \pi}|f(x-u)-f(x)|C_n(u)du\leq \frac{2M}{2\pi}\int_{\alpha\leq |u|\leq\pi}C_n(u)du.$$
+Maintenant, puisque la suite de fonctions $(C_n)$ converge uniformément vers $0$ sur $[-\pi,-\alpha]\cup[\alpha,\pi]$, l'intégrale qui apparait dans cette dernière expression tend vers 0. Il existe donc $N\in\mtn$ tel que, pour $n\geq N$, on a
+$$\frac{1}{2\pi}\int_{|\alpha|\leq u\leq \pi}|f(x-u)-f(x)|C_n(u)du\leq\veps.$$
+Pour l'autre expression, on remarque que si $\alpha$ est petit, $x-u$ et $x$ seront proches, et on peut espérer que $|f(x-u)-f(x)|$ sera petit. Il nous faut ici un argument d'uniforme continuité. C'est possible, car toute fonction
+continue et périodique est en fait uniformément continue (c'est un très bon exercice utilisant le théorème de Heine et des découpages avec des $\veps$). Pour $\veps&gt;0$ fixé, il existe donc $\alpha&gt;0$ (c'est maintenant qu'on le fixe) tel que
+$$|z-y|\leq\alpha\implies |f(z)-f(y)|\leq\veps.$$
+On obtient 
+$$\frac{1}{2\pi}\int_{|u|\leq \alpha}|f(x-u)-f(x)|C_n(u)du\leq \veps\frac{1}{2\pi}\int_{-\pi}^{\pi}C_n(u)du\leq\veps.$$
+Finalement, pour $n\geq N$, on a bien 
+$$|f\star C_n(x)-f(x)|\leq 2\veps,$$
+ce qui prouve la convergence uniforme (sur $\mtr$).
+</ol></div></div></div>
+<div class=titrepartie>Applications des séries de Fourier</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater181"></span><script>var myRating = raterJs( { element:document.querySelector("#rater181"),	max:5, rating:2.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(181,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité entre $f$ et sa dérivée <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=181.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(181,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce181','imageenonce181');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce181"></a><div class=inner id="innerenonce181">Soit $f:\mathbb R\to\mathbb R$ une fonction $2\pi$-périodique de classe $C^1$ et telle que 
+$$\int_0^{2\pi}f(t)dt=0.$$
+<ol class="enumeratechiffre">
+<li> Rappeler le lien entre les coefficients de Fourier $c_n(f)$ et $c_n(f')$.
+<li> En déduire que, pour tout $t\in\mathbb R$, on a 
+$$|f(t)|\leq \sum_{n\in\mathbb Z^*}\frac 1{|n|}|c_n(f')|.$$
+<li> En déduire l'inégalité suivante :
+$$\|f\|^2_\infty\leq\frac{\pi}6\int_0^{2\pi}\big(f'(t)\big)^2dt$$
+(on rappelle que $\sum_{n\geq 1}\frac 1{n^2}=\frac{\pi^2}6$).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication181','imageindication181');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication181"></a><div class=inner id="innerindication181" style="display:none;"><ol class="enumeratechiffre">
+<li> Intégrer par parties.
+<li> $f$ est somme de sa série de Fourier.
+<li> Utiliser l'inégalité de Cauchy-Schwarz.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige181','imagecorrige181',181);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige181"></a><div class=inner id="innercorrige181" style="display:none;"><ol class="enumeratechiffre">
+<li> L'hypothèse donne $c_0(f)=0$, tandis qu'une intégration par parties donne 
+$$c_n(f')=inc_n(f).$$
+<li> $f$ étant de classe $C^1$, elle est partout somme de sa série de Fourier (et on a même convergence
+normale). On peut donc écrire, en utilisant les résultats de la question précédente :
+$$f(t)=\sum_{n\in\mathbb Z^*}c_n(f)e^{int}=\sum_{n\in\mathbb Z^*}\frac{1}{in}c_n(f')e^{int}.$$
+On conclut en utilisant l'inégalité triangulaire.
+<li> On applique l'inégalité de Cauchy-Schwarz, qui donne 
+$$|f(t)|^2\leq \left(\sum_{n\in\mathbb Z^*}\frac 1{n^2}\right)\times\left(\sum_{n\in\mathbb Z^*}|c_n(f')|^2\right).$$
+La première somme vaut, d'après le rappel, $\pi^2/3$, et pour la seconde, on utilise l'identité de Parseval qui donne
+$$\sum_{n\in\mathbb Z^*}|c_n(f')|^2\leq \sum_{n\in\mathbb Z}|c_n(f')|^2=\frac1{2\pi}\int_0^{2\pi}\big(f'(t)\big)^2dt.$$
+On en déduit 
+$$|f'(t)|^2\leq \frac\pi 6\int_0^{2\pi}\big(f'(t)\big)^2dt$$
+ce qui donne la conclusion.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater182"></span><script>var myRating = raterJs( { element:document.querySelector("#rater182"),	max:5, rating:2.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(182,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Wirtinger <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=182.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(182,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce182','imageenonce182');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce182"></a><div class=inner id="innerenonce182">Soit $f:\mtr\to\mtc$ une application $2\pi-$périodique de classe $C^1$ telle que $\int_0^{2\pi}f(t)dt=0$. Montrer que 
+$$\int_0^{2\pi}|f(t)|^2dt\leq \int_0^{2\pi}|f'(t)|^2dt,$$
+et caractériser l'égalité.</div></div><div class=indication><a href="javascript:showAll('innerindication182','imageindication182');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication182"></a><div class=inner id="innerindication182" style="display:none;">Utiliser l'identité de Parseval.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige182','imagecorrige182',182);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige182"></a><div class=inner id="innercorrige182" style="display:none;">Le fait de regarder des inégalités concernant des intégrales de fonction prises au carré incite à utiliser l'identité de Parseval.
+On note $c_n(f)$ les coefficients de Fourier trigonométriques de $f$. L'énoncé donne $c_0(f)=0$. Par ailleurs, une simple intégration
+par parties montre que $c_n(f')=inc_n(f)$. L'identité de Parseval appliquée aux deux fonctions $f$ et $f'$ donne donc 
+$$\frac{1}{2\pi}\int_0^{2\pi}|f(t)|^2=\sum_{n\in\mtz^*}|c_n(f)|^2\leq \sum_{n\in\mtz^*}n^2|c_n(f)|^2=\sum_{n\in\mtz}|c_n(f')|^2=\frac{1}{2\pi}\int_0^{2\pi}|f'(t)|^2dt,$$
+ce qui donne l'inégalité voulue. Pour qu'il y ait égalité, il faut que partout les inégalités soient des égalités. En particulier, 
+on doit avoir $n^2|c_n(f)|^2=|c_n(f)|^2$ pour tout $n\in\mtz^*$. Ceci entraîne en particulier que $c_n(f)=0$ pour $|n|&gt;1$. Comme $f$ est de classe $C^1$, sa série de Fourier 
+converge normalement vers $f$, et on obtient donc que $f(t)=ae^{-it}+be^{it}$, avec $a,b\in\mtc$. Réciproquement, il est facile de vérifier que pour des 
+fonctions de cette forme, il y a égalité.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater183"></span><script>var myRating = raterJs( { element:document.querySelector("#rater183"),	max:5, rating:2.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(183,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lien entre $f$ et sa dérivée seconde <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=183.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(183,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce183','imageenonce183');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce183"></a><div class=inner id="innerenonce183">Trouver toutes les fonctions $f$ de classe $C^2$ sur $[0,2\pi]$ vérifiant $\int_0^{2\pi}f(t)dt=0$ et $|f''|\leq |f|$.</div></div><div class=indication><a href="javascript:showAll('innerindication183','imageindication183');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication183"></a><div class=inner id="innerindication183" style="display:none;">Quel est le lien entre les coefficients de Fourier de $f$ et ceux de $f''$? Puis appliquer l'identité de Parseval à $f$ et à $f''$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige183','imagecorrige183',183);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige183"></a><div class=inner id="innercorrige183" style="display:none;">Par une double intégration par parties, on trouve que $c_n(f'')=-n^2 c_n(f)$. En particulier, on a $|c_n(f'')|\geq |c_n(f)|\geq 0$
+pour $n\neq 0$. De plus, on sait par hypothèse que $c_0(f)=0$. D'après le théorème de Parseval, on a 
+$$\int_0^{2\pi}|f''(t)|^2dt=2\pi \sum_{n\neq 0}|c_n(f'')|^2$$
+et 
+$$\int_0^{2\pi}|f(t)|^2dt=2\pi \sum_{n\neq 0}|c_n(f)|^2.$$
+Puisque $|f''|\leq |f|$, on en déduit que 
+$$\sum_{n\neq 0}|c_n(f'')|^2=\sum_{n\neq 0}n^4 |c_n(f)|^2\leq \sum_{n\neq 0}|c_n(f)|^2.$$
+Ceci entraîne nécessairement que $c_n(f)=0$ pour $|n|&gt;1$. Ainsi, puisque $c_0(f)=0$, on doit avoir
+$$f(t)=ae^{it}+be^{-it}$$
+pour $a,b$ des constantes complexes. Réciproquement, si $f(t)=ae^{it}+be^{-it}$, on vérifie facilement que $f''=-f$ et donc $|f''|=|f|$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater184"></span><script>var myRating = raterJs( { element:document.querySelector("#rater184"),	max:5, rating:2.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(184,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions $2\pi-$périodiques et croissances des dérivées <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=184.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(184,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce184','imageenonce184');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce184"></a><div class=inner id="innerenonce184">Trouver les fonctions $f\in C^\infty(\mtr,\mtc)$ $2\pi-$périodiques pour lesquelles il existe $\lambda\in\mtr_+^*$ et $M\in\mtr_+^*$ tels que :
+$$\forall n\in\mtn,\ \forall x\in\mtr,\ \left|f^{(n)}(x)\right|\leq M\lambda^n.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige184','imagecorrige184',184);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige184"></a><div class=inner id="innercorrige184" style="display:none;">Procédons par analyse-synthèse. Soit $f$ une solution du problème. Puisque $f$ est de classe $C^\infty$, $f$, ainsi que toutes 
+ses dérivées, sont sommes de leur série de Fourier qui converge normalement sur $\mtr$. On écrit donc $\dis f(x)=\sum_{p\in\mtz}c_p e^{ipx}$.
+On sait que $c_p(f^{(n)})=(ip)^nc_p(f)$. De plus, on a 
+\begin{eqnarray*}
+\left|c_p(f^{(n)})\right|&=&\dis\frac{1}{2\pi}\left|\int_0^{2\pi}f^{(n)}(t)e^{ipt}dt\right|\\
+&\leq&\frac{1}{2\pi}\int_0^{2\pi}{M\lambda^n}dx\\
+&\leq&{M\lambda^n}.
+\end{eqnarray*}
+On en déduit $$c_p(f)\leq M\frac{\lambda^n}{|p|^n}.$$
+Ainsi, dès que $|p|\geq\lambda$, faisant tendre $n$ vers l'infini, on trouve que $c_p(f)=0$. Ainsi, $f$ est nécessairement un polynôme trigonométrique.
+Réciproquement, si $f$ est un polynôme trigonométrique, il s'écrit $\dis f(x)=\sum_{p=-p_0}^{p_0}c_pe^{ipx}$. On a alors, pour tout $n$,
+$\dis f^{(n)}(x)=\sum_{p=-p_0}^{p_0}(ip)^n c_p e^{ipx}$, d'où l'on déduit 
+$$\left|f^{(n)}(x)\right|\leq p_0^n \sum_{p=-p_0}^{p_0}|c_p|,$$
+ce qui montre que $f$ est solution du problème avec $\lambda=p_0$ et $\dis M=\sum_{p=-p_0}^{p_0}|c_p|.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater185"></span><script>var myRating = raterJs( { element:document.querySelector("#rater185"),	max:5, rating:3.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(185,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Bernstein <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=185.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(185,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce185','imageenonce185');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce185"></a><div class=inner id="innerenonce185"><ol class="enumeratechiffre">
+<li> Soit $S$ la fonction $2\pi-$périodique définie par $S(t)=t$ si $-\pi/2\leq t\leq \pi/2$, et $S(t)=\pi-t$ si $\pi/2\leq t\leq 3\pi/2$.
+Calculer $c_k(S)$ et en déduire que $\sum_{k\in\mtz}|c_k(S)|=\frac{\pi}{2}$.
+<li> Soient $\lambda_1,\dots,\lambda_n$ des réels distincts tels que $\max_j |\lambda_j|\leq\frac{\pi}{2}$,
+$a_1,\dots,a_n\in\mtc$, et $h(t)=\sum_{j=1}^n a_je^{i\lambda_j t}$. Prouver que
+$$\|h'\|_\infty\leq \frac{\pi}{2}\|h\|_\infty.$$
+<li> En déduire le théorème de Bernstein suivant : si $P(t)=\sum_{j=1}a_j e^{i\lambda j t}$, 
+avec $\lambda_j$ des réels distincts et $\max_j |\lambda_j|\leq \lambda$, alors 
+$$\|P'\|_\infty\leq \lambda\|P\|_\infty.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication185','imageindication185');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication185"></a><div class=inner id="innerindication185" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Remplacer $\lambda_j$ par $S(\lambda_j)$ dans l'expression de $h'$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige185','imagecorrige185',185);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige185"></a><div class=inner id="innercorrige185" style="display:none;"><ol class="enumeratechiffre">
+<li> Par le changement de variables $u=t-\pi$, on a
+$$\int_{\pi/2}^{3\pi/2}(\pi-t)e^{ikt}dt=-e^{in\pi}\int_{-\pi/2}^{\pi/2}ue^{iku}du.$$
+On en déduit immédiatement que $c_{2p}(S)=0$ pour tout $p\in\mathbb Z$. D'autre part, on a 
+$$c_{2p+1}(S)=\frac 2{2\pi}\int_{-\pi/2}^{\pi/2}te^{ipt}dt.$$
+Un petit calcul à base d'intégration par parties donne alors
+$$c_{2p+1}(S)=\frac {2(-1)^p}{(2p+1)^2}e^{ip\pi/2}.$$
+En particulier, on a
+$$\sum_{k\in\mtz}|c_k|=\sum_{k\in\mtz}c_ke^{ik\pi/2}.$$
+D'autre part, puisque $S$ est continue et de classe $C^1$ par morceaux,  on a 
+$$\frac{\pi}{2}=S(\pi/2)=\sum_{k\in\mtz}c_ke^{ik\pi/2}=\sum_{k\in\mtz}|c_k|.$$
+<li> On a 
+$$h'(t)=\sum_{j=1}^n i\lambda_j a_j e^{i\lambda_j t}=\sum_{j=1}^n i S(\lambda_j)a_je^{ijt}.$$
+Puisque la série de Fourier de $S$ converge normalement vers $S$ sur $\mtr$, on a 
+\begin{eqnarray*}
+h'(t)&=&\sum_{j=1}^n i a_je^{i\lambda_j t}\left(\sum_{k\in\mtz}c_k(S)e^{ik\lambda j}\right)\\
+&=&\sum_{k\in\mtz}ic_k(S)\left(\sum_{j=1}^n a_j e^{i\lambda_j(t+k)}\right)\\
+&=&\sum_{k=-\infty}^{+\infty}ic_k(S)h(t+k)\\
+\end{eqnarray*}
+d'où
+\begin{eqnarray*}
+|h'(t)|&\leq&\sum_{k=-\infty}^{+\infty}|c_k(S)|\|h\|_\infty\\
+&\leq&\frac{\pi}{2}\|h\|_\infty.
+\end{eqnarray*}
+<li> Il suffit de poser $h(t)=P(\alpha t)$, avec $\alpha=\frac{\pi}{2\lambda}$, 
+puis d'appliquer le résultat précédent à h, et de remonter à $P$!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater186"></span><script>var myRating = raterJs( { element:document.querySelector("#rater186"),	max:5, rating:2.3571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(186,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Séries de Fourier et équations différentielles <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=186.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(186,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce186','imageenonce186');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce186"></a><div class=inner id="innerenonce186">Le but de l'exercice est de déterminer si l'équation différentielle $(E)$
+$$y''+e^{it}y=0$$
+admet des solutions $2\pi$-périodiques.
+<ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Montrer que la série trigonométrique $\sum_{n\geq 0}\frac{1}{(n!)^2}e^{int}$ converge uniformément sur $\mathbb R$ vers une fonction $f$
+$2\pi$-périodique.
+<li> Montrer que la fonction $f$ est de classe $C^2$ et qu'elle est solution de $(E)$.
+</ol>
+<li> Soit $g:\mathbb R\to\mathbb C$ une solution $2\pi$-périodique de classe $C^2$ de $(E)$. On désigne par
+$\sum_{n\in\mathbb Z}c_n(g)e^{int}$ et $\sum_{n\in\mathbb Z}c_n(g'')e^{int}$ les séries de Fourier respectives de $g$
+et de $g''$.
+<ol class="enumeratechiffre">
+<li> Exprimer $c_n(g'')$ en fonction de $c_n(g)$.
+<li> En utilisant que $g$ est solution de $(E)$, exprimer $c_n(g'')$ en fonction de $c_{n-1}(g)$. 
+<li> En déduire que l'ensemble des solutions $2\pi$-périodiques de $(E)$ est l'espace
+vectoriel de dimension 1 engendré par la fonction $f$.
+</ol>
+<li> $(E)$ possède-t-elle des solutions qui ne sont pas $2\pi$-périodiques?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication186','imageindication186');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication186"></a><div class=inner id="innerindication186" style="display:none;"><ol class="enumeratechiffre">
+<li> On prouve la convergence normale de la série, puis de la série dérivée, puis de la série dérivée seconde sur $\mathbb R$.
+<li> <ol class="enumeratechiffre">
+<li> Intégrer par parties.
+<li> &Eacute;crire la définition de $c_n(g'')$ puis remplacer $g''$ par $e^{it}g$.
+<li> 
+</ol>
+<li> Quelle est la taille de l'espace vectoriel des solutions?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige186','imagecorrige186',186);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige186"></a><div class=inner id="innercorrige186" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> On a, pour tout $t\in\mathbb R$,
+$$\left|\frac{1}{(n!)^2}e^{int}\right|\leq\frac{1}{(n!)^2}$$
+et le membre de droite est le terme général d'une série numérique convergente. La série trigonométrique converge normalement, donc uniformément
+sur $\mathbb R$.
+<li> Puisque, pour chaque $n\in\mathbb N$, la fonction $f_n:t\mapsto \frac{1}{(n!)^2}e^{int}$ est continue, et puisque la série trigonométrique
+converge uniformément, la fonction $f$ est continue. De plus, $f_n$ est de classe $C^2$ et on a, pour tout $t\in\mathbb R$,
+$$\left|f_n'(t)\right|\leq \frac{n}{(n!)^2}\textrm{ et }\left|f_n''(t)\right|\leq\frac{1}{\big((n-1)!\big)^2}.$$
+Les membres de droite sont à chaque fois des séries numériques convergentes (par exemple, d'après la règle de d'Alembert),
+les séries de fonctions $\sum_{n\geq 0}f_n(t)$ et $\sum_{n\geq 0}f_n''(t)$ convergent donc normalement sur $\mathbb R$. Ceci
+prouve que $f$ est de classe $C^2$, et de plus que $f''(t)=\sum_{n\geq 0}\frac{(in)^2}{n!}e^{int}$.
+On en déduit
+\begin{eqnarray*}
+f''(t)+e^{it}f(t)&=&\sum_{n\geq 1}\frac{-1}{\big((n-1)!\big)^2}e^{int}+\sum_{n\geq 0}\frac{1}{(n!)^2}e^{i(n+1)t}\\
+&=&\sum_{n\geq 0}\frac{-1}{(n!)^2}e^{i(n+1)t}+\sum_{n\geq 0}\frac{1}{(n!)^2}e^{i(n+1)t}\\
+&=&0.
+\end{eqnarray*}
+La fonction $f$ est donc bien solution de l'équation différentielle $(E)$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Il suffit de faire une double intégration par parties pour prouver que
+$$c_n(g'')=(in)^2 c_n(g)=-n^2 c_n(g).$$
+<li> Puisque $g$ est solution de l'équation différentielle $(E)$, on sait que $g''(t)=-g(t)e^{it}$
+pour tout $t\in\mathbb R$. Ceci donne
+\begin{eqnarray*}
+c_n(g'')&=&\frac{1}{2\pi}\int_{-\pi}^{\pi}g(t)e^{it}e^{-int}dt\\
+&=&-c_{n-1}(g).
+\end{eqnarray*}
+<li> Les deux résultats précédents pris ensemble prouvent que, pour chaque $n\in\mathbb Z$, on a 
+$$c_{n-1}(g)=n^2c_n(g).$$
+Par deux récurrences faciles, on prouve alors que, pour tout $n\geq 0$, $\dis c_n(g)=\frac{c_0(g)}{(n!)^2}$, et pour tout $n&lt;0$, $c_n(g)=0$.
+De plus, puisque $g$ est $C^1$ et $2\pi$-périodique, elle est somme de sa série de Fourier. Autrement dit, on a
+$$g(t)=\sum_{n\in\mathbb Z}c_n(g)e^{int}=c_0\sum_{n\geq 0}\frac{1}{(n!)^2}e^{int}.$$
+Ainsi, $g$ est proportionnelle à la fonction $f$ et l'ensemble des solutions $2\pi$-périodiques de $(E)$ est l'espace vectoriel engendré par $f$.
+</ol>
+<li> On rappelle que d'après le théorème de Cauchy, l'ensemble des solutions sur $\mtr$ de cette équation est un espace vectoriel de dimension 2.
+Il existe donc des solutions qui ne sont pas $2\pi$-périodiques.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater187"></span><script>var myRating = raterJs( { element:document.querySelector("#rater187"),	max:5, rating:3.2666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(187,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Solutions périodiques d'une équation différentielle <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=187.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(187,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce187','imageenonce187');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce187"></a><div class=inner id="innerenonce187">Soit $f:\mathbb R\to\mathbb C$ $2\pi$-périodique, dérivable, telle qu'il existe $\lambda\in\mathbb R$ 
+vérifiant
+$$\forall t\in\mathbb R,\ f'(t)=f(t+\lambda).$$
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\in\mathbb Z$, 
+$$(in-e^{in\lambda})c_n(f)=0.$$
+<li> En déduire pour quelle(s) valeur(s) de $\lambda$ on peut effectivement trouver une telle fonction
+non identiquement nulle. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication187','imageindication187');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication187"></a><div class=inner id="innerindication187" style="display:none;"><ol class="enumeratechiffre">
+<li> Quel est le lien entre les coefficients de Fourier de $f$ et ceux de $f'$?
+<li> Une fonction continue et $2\pi$-périodique est nulle si et seulement si $c_n(f)=0$ pour tout $n$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige187','imagecorrige187',187);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige187"></a><div class=inner id="innercorrige187" style="display:none;"><ol class="enumeratechiffre">
+<li> Par intégration par parties, on sait que $c_n(f')=inc_n(f)$.
+D'autre part, l'équation différentielle nous donne
+$$c_n(f')=\frac1{2\pi}\int_0^{2\pi}f(t+\lambda)e^{int}dt=\frac1{2\pi}e^{in\lambda}\int_0^{2\pi}f(t+\lambda)e^{in(t+\lambda)}dt=e^{in\lambda}c_n(f).$$
+On en déduit la relation demandée.
+<li> Si $f$ est une solution de l'équation, $f$ est dérivable et la relation $f'(t)=f(t+\lambda)$ entraîne que $f$ est $C^1$. $f$ est donc
+somme de sa série de Fourier, 
+$$f(t)=\sum_{n\in\mathbb Z}c_n(f)e^{int}.$$
+Si on a une solution non identiquement nulle, il existe $n$ dans $\mathbb N$ tel que $c_n(f)\neq 0$, et
+donc, par la question précédente, on doit avoir  $in=e^{in\lambda}$.
+Mais alors, prenant le module, ceci entraîne aussi que $n=\pm 1$ et $e^{i\lambda}=i$, soit $\lambda=\pi/2$. 
+Réciproquement, si $\lambda=\pi/2$, alors la fonction $t\mapsto e^{it}$ vérifie l'équation.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater188"></span><script>var myRating = raterJs( { element:document.querySelector("#rater188"),	max:5, rating:4.3076923076923, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(188,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Equation de la chaleur <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=188.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(188,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce188','imageenonce188');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce188"></a><div class=inner id="innerenonce188">On considère une barre métallique de longueur $L$, qu'on représente par le segment $[0,L]$. La température à l'instant $t$
+au point d'abscisse $x$ est notée $u(x,t)$. On pose $Q=]0,L[\times ]0,+\infty[$. La fonction $u$ est supposée continue sur $\overline{Q}$, 
+et de classe $C^\infty$ sur $Q$. Elle vérifie en outre les conditions suivantes :
+\begin{eqnarray}
+\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0,\quad \textrm{ si }(x,t)\in Q\quad\quad(1)
+\end{eqnarray}
+(équation de la chaleur)
+\begin{eqnarray}
+u(x,0)=h(x)\quad\textrm{ si }x\in[0,L]\quad\quad(2)
+\end{eqnarray}
+(condition initiale), où $h$ est une fonction de classe $C^1$ sur $[0,L]$ avec $h(0)=h(L)=0$
+\begin{eqnarray}
+u(0,t)=u(L,t)=0\quad\textrm{ si }t\in[0,+\infty[.\quad\quad(3)
+\end{eqnarray}
+On va démontrer l'existence d'une solution à ce problème.
+<ol class="enumeratechiffre">
+<li> Montrer que si la fonction $u$ s'écrit sous la forme $u(x,t)=f(x)g(t)$ (où $f$ et $g$ ne s'annulent pas) et si $u$ est solution de $(1)$, alors 
+les fonctions $f$ et $g$ vérifient chacune une équation différentielle simple.
+<li> Résoudre ces équations différentielles en tenant compte de $(3)$. En déduire qu'une fonction qui s'écrit
+$\dis u(x,t)=\sum_{n\geq 1}a_n\sin\left(\frac{n\pi}{L}x\right)e^{\frac{-n^2\pi^2}{L^2}t}$ (en admettant que la série converge et qu'on peut la dériver terme à terme)
+est une solution de $(1)$ et de $(3)$.
+<li> Soit $\tilde{h}$ la fonction déduite de $h$ par imparité et $2L-$périodicité. Développer $\tilde{h}$ en série de Fourier.
+Quelle valeur donner aux $a_n$?
+<li> Justifier que la fonction ainsi exhibée est bien solution du problème.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication188','imageindication188');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication188"></a><div class=inner id="innerindication188" style="display:none;"><ol class="enumeratechiffre">
+<li> Introduire la fonction $u$ dans l'équation, et séparer les variables.
+<li> Il faut traiter 3 cas pour résoudre l'équation différentielle de $f$, suivant la valeur du paramètre $\lambda$. Deux des cas
+sont impossibles d'après la dernière condition à résoudre. Pour le dernier, il faut obtenir des conditions sur les valeurs possibles du paramètre $\lambda$.
+<li> La fonction $\tilde{h}$ est continue, $C^1$ par morceaux, et impaire. On procède ensuite par identification pour deviner la valeur des $a_k$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige188','imagecorrige188',188);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige188"></a><div class=inner id="innercorrige188" style="display:none;"><ol class="enumeratechiffre">
+<li> On introduit la fonction $u$ dans l'équation aux dérivées partielles. En supposant que les fonctions $f$ et $g$ ne s'annulent pas,
+on obtient que :
+$$\forall (x,t)\in Q,\ \frac{f''(x)}{f(x)}=\frac{g'(t)}{g(t)}.$$
+Comme le membre de droite ne dépend pas de $x$ et celui de gauche ne dépend pas de $x$, on en déduit l'existence d'une constante $\lambda\in\mtr$
+telle que :
+$$f''(x)-\lambda f(x)=0\quad\quad g'(t)-\lambda g(t)=0.$$
+<li> Il y a plusieurs possibilités pour résoudre l'équation différentielle vérifiée par $f$, suivant les valeurs de $\lambda$. D'abord,
+si $\lambda&gt;0$, $f$ s'écrit $f(x)=Ae^{\sqrt{\lambda}x}+Be^{-\sqrt{\lambda}x}$. Puisque $u$ vérifie la dernière condition imposée,
+on a forcément : $f(0)=f(L)=0$. Ceci donne le système
+$$\left\{
+\begin{array}{rcl}
+A+B&=&0\\
+Ae^{\sqrt{\lambda} L}+Be^{-\sqrt{\lambda} L}&=&0
+\end{array}\right.$$
+Ce système étant inversible, ceci donne $A=B=0$, et la fonction $u$ est identiquement nulle : ce n'est guère intéressant!
+Si maintenant $\lambda=0$, $f$ s'écrit $f(x)=Ax+B$. On obtient encore avec $f(0)=f(L)=0$ que $A=B=0$ : ce n'est pas plus intéressant!
+La dernière possibilité est donc $\lambda&lt;0$ : en posant $\omega$ tel que $\lambda=-\omega^2$, $f$ s'écrit $A\cos(\omega x)+B\sin(\omega x)$. La valeur en $0$ donne $A=0$.
+Pour avoir $B\neq 0$, il faut donc que $\sin(\omega L)=0$. Donc, $\dis \omega=\frac{k\pi}{L}$, avec $k\in\mtz$. On résoud maintenant l'équation pour $g$. 
+On trouve $\dis g(t)=Ce^{ -\frac{n^2\pi^2}{L^2}t}$. Une solution de l'équation vérifiant aussi la dernière condition s'écrit donc 
+$$u(x,t)=C\times \sin\left(\frac{n\pi}{L}x\right)e^{-\frac{n^2\pi^2}{L^2}t}.$$
+La somme de deux solutions étant encore une solution (c'est le principe de superposition), une solution de la forme donnée 
+par l'énoncé est plausible.
+<li> $\tilde{h}$ est une fonction continue, $C^1$ par morceaux, $2L-$périodique, et impaire. Elle est donc somme de sa série de Fourier (qui converge normalement)
+et qui ne comporte que des termes en sinus :
+$$\tilde{h}(x)=\sum_{n\geq 1}b_n(\tilde{h}) \sin\left(\frac{n\pi}{L}x\right).$$
+Si on veut faire coïncider $u(x,0)$ avec $h(x)$, on est donc conduit à poser $a_k=b_k(h)$.
+<li> Passons à l'étape de synthèse. Soit donc $u$ donné par :
+$$u(x,t)=\sum_{n\geq 1}b_n(\tilde{h})\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{n^2\pi^2}{L^2}t}.$$
+Remarquons d'abord que cette série est normalement convergente sur $\overline{Q}$. On a en effet :
+$$\forall (x,t)\in Q,\quad \left|b_n(\tilde{h})\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{n^2\pi^2}{L^2}t}\right|\leq |b_n(\tilde{h})|,$$
+et on sait que la série $\sum |b_n(\tilde{h})|$ est convergente. Ainsi, ceci définit bien une fonction continue sur $\overline{Q}$, et il est clair
+que $u$ vérifie les deux dernières conditions. Pour prouver que $u$ vérifie aussi l'équation de la chaleur, il est simplement nécessaire
+de prouver que l'on peut dériver terme à terme sous le signe somme. Ceci est justifié par la convergence normale de toutes les séries dérivées sur 
+$[0,L]\times [\veps,+\infty[$, où $\veps$ est n'importe quel réel strictement positif. Posons en effet $u_n(x,t)=b_n(\tilde{h})\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{n^2\pi^2}{L^2}t}.$
+Si $\alpha$ et $\beta$ sont des entiers, on a :
+$$\frac{\partial^{\alpha+\beta}u}{\partial x^\alpha \partial t^\beta}u_n(x,t)=P_{\alpha,\beta}(n)b_n(\tilde{h})\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{n^2\pi^2}{L^2}t},$$
+où $P_{\alpha,\beta}$ est un polynôme. En particulier, puisque la suite $b_n(\tilde{h})$ est bornée par une constante $M$, on a :
+$$\left|\frac{\partial^{\alpha+\beta}u}{\partial x^\alpha \partial t^\beta}u_n(x,t)\right|\leq M P_{\alpha,\beta}(n)e^{-\frac{n^2\pi^2}{L^2}\veps}$$
+pour tout $x\in[0,L]$ et tout $t\geq\veps$. Cette dernière série converge, ce qui prouve le résultat voulu.
+</ol></div></div></div>
+<div class="r89-outstream-video"></div><div class=titrepartie>Exercices typés master/agrégation</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater189"></span><script>var myRating = raterJs( { element:document.querySelector("#rater189"),	max:5, rating:4.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(189,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formule sommatoire de Poisson <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=189.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(189,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce189','imageenonce189');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce189"></a><div class=inner id="innerenonce189">Soit $F\in L^1(\mtr)\cap C^0(\mtr)$. On note $\hat{F}$ sa transformée de Fourier. On suppose que $F$ vérifie les deux
+conditions suivantes :
+$$\exists M&gt;0, \exists \alpha&gt;1,\ \forall x\in\mtr,\ |F(x)|\leq \frac M{(1+|x|)^\alpha},$$
+$$\sum_{n\in\mtz} |\hat{F}(n)|&lt;+\infty.$$
+Le but de l'exercice est de démontrer la formule 
+sommatoire de Poisson, à savoir l'identité 
+$$\sum_{n\in\mtz}F(n)=\sum_{n\in\mtz}\hat{F}(n).$$
+<ol class="enumeratechiffre">
+<li> Soit $f$ la fonction définie sur $\mtr$ par $\dis f(x)=\sum_{-\infty}^{\infty}F(x+n)$. Vérifier que ceci définit une fonction continue sur $\mtr$, $1$-périodique.
+<li> Calculer les coefficients de Fourier exponentiels de $f$.
+<li> Justifier que $f$ est partout somme de sa série de Fourier.
+<li> En déduire la formule sommatoire de Poisson.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication189','imageindication189');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication189"></a><div class=inner id="innerindication189" style="display:none;"><ol class="enumeratechiffre">
+<li> Prouver que la série est normalement convergente sur tout compact.
+<li> Il faut inverser la série et l'intégrale... en justifiant! On trouve $c_m(f)=\hat{F}(m)$.
+<li> Si la série de Fourier d'une fonction continue converge normalement (ou même uniformément), alors cette fonction 
+continue est partout somme de sa série de Fourier : c'est un résultat que l'on peut savoir, ou qu'il faut savoir redémontrer 
+à l'aide du fait que deux fonctions continues qui ont même coefficients de Fourier sont égales.
+<li> Ecrire $f$ comme somme de sa série de Fourier en 0.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige189','imagecorrige189',189);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige189"></a><div class=inner id="innercorrige189" style="display:none;"><ol class="enumeratechiffre">
+<li> On va prouver que la série est normalement convergente sur tout compact de $\mtr$. Comme il s'agit de fonctions continues,
+la somme sera évidemment continue. Fixons donc $A&gt;0$. Si $|x|\leq A$, et $|n|\geq 2A$, on a $|x+n|\geq |n|-|x|\geq |n|/2$, ce qui donne par hypothèse
+$$|F(x+n)|\leq \frac{M}{(1+n/2)^\alpha}.$$
+Il s'agit ici du terme général d'une série qui converge, et $f$ est continue. Le changement d'indices $n'=n+1$ montre en outre que $f$ est 1-périodique.
+<li> On a :
+$$c_m(f)=\int_0^1 f(t)e^{-i2\pi mt}dt=\int_0^1\sum_{n\in\mtz}F(t+n)e^{-i2\pi mt}dt=\sum_{n\in\mtz}\int_0^1F(t+n)e^{-i2\pi mt}.$$
+L'interversion limite intégrale est ici justifiée par la convergence normale de $\sum_{n\in\mtz}F(t+n)$ sur $[0,1]$, et le fait que $|e^{-i2\pi mt}|=1$.
+On obtient 
+$$c_m(f)=\sum_{n\in\mtz}\int_n^{n+1}F(u)e^{-i 2\pi mu}du=\int_{-\infty}^{\infty}F(u)e^{-i 2\pi mu}du=\hat{F}(m).$$
+<li> Il s'agit d'un résultat général qui dit que si la série de Fourier d'une fonction continue est absolument convergente, alors elle est partout somme de
+sa série de Fourier. Redémontrons ce résultat dans ce cas. Soit $g(t)=\sum_{m\in \mtz}c_m(f)e^{imt}.$ Puisque 
+$\sum_{m\in\mtz}|c_m(f)|=\sum_{m\in\mtz}|\hat{F}(m)|&lt;+\infty$, $g$ est une fonction continue qui est somme de sa série de Fourier 
+(série trigonométrique qui converge uniformément). Maintenant, $g$ et $f$ sont deux fonctions continues qui ont les mêmes coefficients de Fourier : elles
+sont égales!
+<li> D'après les deux questions précédentes, $f$ est partout somme de sa série de Fourier. C'est en particulier le cas en 0. On obtient donc que
+$$\sum_{n\in\mtz}F(n)=f(0)=\sum_{n\in\mtz}\hat{F}(m).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater191"></span><script>var myRating = raterJs( { element:document.querySelector("#rater191"),	max:5, rating:5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(191,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une série trigonométrique qui n'est pas une série de Fourier... <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=191.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(191,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce191','imageenonce191');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce191"></a><div class=inner id="innerenonce191"><ol class="enumeratechiffre">
+<li> Soit $f$ une fonction continue $2\pi-$périodique telle que $c_n(f)\geq 0$ pour tout $n\in\mtz$.
+Justifier que $\sum_{n\in\mtz}c_n(f)&lt;+\infty$ - on pourra écrire
+$$\sum_{n\in\mtz}c_n=\sum_{n\in\mtz}\liminf_{N\to+\infty}\left(1-\frac{|n|}{N}\right)^+c_n,$$
+et utiliser le théorème de F....
+<li> Soit $\sum_{n\geq 2}\frac{1}{\ln n}\sin(nt)$. Justifier que cette série trigonométrique converge pour tout $t\in\mtr$.
+<li> Soit $\sum_{1}^{+\infty} a_n \sin(nt)$ une série trigonométrique, où $a_n\geq 0$ pour tout $n\geq 1$. On suppose
+que cette série est la série de Fourier de $f\in L^1(\mathbb T)$, c'est-à-dire que $c_0(f)=0$, $c_n(f)=\frac{a_n}{2i}$ si $n\geq 1$
+et $c_{-n}(f)=\frac{-a_n}{2i}$ si $n\geq 1$. Soit $F=\int_0^t f(u)du$. Calculer $c_n(F)$, et en déduire que
+$\sum_{1}^{+\infty}\frac{a_n}{n}&lt;+\infty.$
+<li> Montrer que la série trigonométrique (partout convergente) $\sum_{n\geq 2}\frac{1}{\ln n}\sin(nt)$ n'est pas une série de Fourier.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige191','imagecorrige191',191);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige191"></a><div class=inner id="innercorrige191" style="display:none;"><ol class="enumeratechiffre">
+<li> En écrivant comme dans l'énoncé et en utilisant le théorème de Fatou, on a 
+$$\sum_{n=-\infty}^{+\infty}c_n\leq\liminf_{N\to+\infty}\sum_{n=-N}^N \left(1-\frac{n}{N}\right)c_n.$$
+Maintenant, la quantité de droite (à l'intérieur de la limite) est exactement $\sigma_N(f)(0)$, et cette quantité 
+tend vers $f(0)$.
+<li> Pour $t\in2\pi\mtz$, c'est clair (le sinus est nul). Sinon, cela résulte d'une transformation d'Abel. En effet, les sommes $S_N=\sum_{n=1}^N \sin(nt)$ sont bornées (utiliser $\sin(nt)=\textrm{Im}(e^{int})$. On a aussi
+\begin{align*}
+\frac{1}{\ln n}-\frac 1{\ln (n+1)}&=\frac{1}{\ln n}-\frac{1}{\ln n+\ln(1+1/n)}\\
+&=\frac{\ln(1+1/n)-1}{\ln n\times\big( \ln n+\ln(1+1/n)\big)}\\
+&\sim_{+\infty} \frac{1}{n\ln ^2 n}
+\end{align*}
+et la série $\sum\frac{1}{n\ln^2 n}$ est convergente.
+<li> Une intégration par parties entraîne que $c_n(F)=\frac{c_n(f)}{i\pi}$, et donc $c_{|n|}(F)=\frac{-a_{|n|}}{2|n|}$
+pour $|n|\geq 1$. En vertu de la réponse à la question 1, on en déduit $\sum_1^{+\infty}\frac{a_n}{n}&lt;+\infty.$
+<li> Résulte de la question précédente et du fait que $\sum\frac{1}{n\ln n}=+\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater192"></span><script>var myRating = raterJs( { element:document.querySelector("#rater192"),	max:5, rating:3.2941176470588, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(192,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Divergence de la série de Fourier d'une fonction continue <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=192.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(192,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce192','imageenonce192');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce192"></a><div class=inner id="innerenonce192">On note $D_n$ le noyau de Dirichlet, et $T_n$ l'application linéaire qui à $f\in C(\mathbb T)$ 
+associe $S_n(f)(0)$. 
+<ol class="enumeratechiffre">
+<li> Montrer que $\|T_n\|_{\mathcal{L}(C(\mathbb T))}=\|D_n\|_1$.
+<li> Montrer que $\|D_n\|_1\to +\infty$.
+<li> En utilisant le théorème de Banach-Steinhaus, en déduire l'existence d'une fonction continue
+dont la série de Fourier diverge en 0.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige192','imagecorrige192',192);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige192"></a><div class=inner id="innercorrige192" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$|T_n(f)|=\frac{1}{2\pi}\left|\int_0^{2\pi}D_n(t)f(-t)dt\right|\leq \|D_n\|_1\|f\|_\infty,$$
+ce qui prouve que $\|T_n\|\leq \|D_n\|_1$. Pour l'autre inégalité, l'idéal serait de pouvoir prendre
+$\veps$ continue $2\pi-$périodique telle que $\veps(t)=\textrm{signe}(D_n(t))$, auquel cas on aurait exactement
+$$T_n(\veps)=\|D_n\|_1=\|D_n\|_1\|\veps\|_\infty.$$
+La continuité est impossible à satisfaire, mais il existe une suite $\veps_k$ de fonctions continues,
+avec $\|\veps_k\|_\infty\leq 1$, qui converge simplement vers $\veps$. Utilisant le théorème de convergence
+dominée, on obtient alors
+$$\lim_k |T(\veps_k)|=\|D_n\|_1,$$
+alors qu'on a toujours $\|T_n(\veps_k)\|\leq \|D_n\|_1$, ce qui donne le résultat.
+<li> Observons que $D_n(t)=\frac{\sin((n+1/2)t)}{\sin (t/2)}.$ L'idée est de faire un changement de variables, et de
+faire intervenir $\sin(t)/t$. Ecrivons en effet
+$$D_n(t)=\frac{\sin((n+1/2)t}{t/2}+\varphi(t)\sin ((n+1/2)t),$$
+où $\varphi(t)=\frac{1}{\sin(t/2)}-\frac{1}{t/2}$. Cette fonction est continue sur $[0,2\pi]$, on peut appliquer
+le théorème de Riemann-Lebesgue pour obtenir que 
+$$\lim_{n\to+\infty}\int_0^{2\pi}\varphi(t)\sin ((n+1/2)t)dt=0.$$
+D'autre part, on a 
+\begin{eqnarray*}
+\int_0^{2\pi}\frac{|\sin((n+1/2)t)|}{t/2}&=&\int_0^{(n+1/2)2\pi}\frac{|\sin(u)|}{u/2}du.
+\end{eqnarray*}
+Mais $u\mapsto \frac{\sin u}{u}$ n'est pas dans $L^1(\mtr)$ et cette dernière quantité tend vers $=\infty$,
+ce qui prouve bien que $\|D_n\|_1\to+\infty$.
+<li> Si pour toute fonction continue $f$, $S_n(f)(0)$ converge, alors 
+$$\sup_n |T_n(f)|&lt;+\infty.$$
+Par le théorème de Banach-Steinhaus, on aurait $\sup_n\|T_n\|&lt;+\infty$, ce qui n'est pas le cas!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater190"></span><script>var myRating = raterJs( { element:document.querySelector("#rater190"),	max:5, rating:4.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(190,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Wiener-Lévy <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=190.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(190,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce190','imageenonce190');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce190"></a><div class=inner id="innerenonce190">Si $f\in L^1(\mathbb T)$, on note $(\hat{f}(n))_{n\in\mtz}$ la suite de ses coefficients de Fourier.
+Soit $A(\mathbb T)$ l'ensemble des éléments de $L^1(\mathbb T)$ tels que $(\hat{f}(n))$ est 
+un élément de $\ell^1(\mtz)$, $\sum_{n\in\mtz}|\hat{f}(n)|&lt;+\infty$. $A(\mathbb T)$ est un espace de Banach
+pour la norme $\|f\|=\sum_{n\in\mtz}|\hat{f}(n)|$. 
+<ol class="enumeratechiffre">
+<li> Montrer que si $f\in A(\mathbb T)$, alors 
+$$f=\sum_{n\in\mtz}\hat{f}(n)e^{int}.$$
+<li> Montrer que si $f$ et $g$ sont éléments de $A(\mathbb T)$, alors $fg$ est élément de $A(\mathbb T)$ et que
+$$\|fg\|\leq \|f\|\|g\|.$$
+<li> Soit $f$ une fonction continue, $2\pi-$périodique, et $C^1$ par morceaux. Montrer que $f\in A(\mathbb T)$, et que l'on a 
+$$\|f\|\leq |\hat{f}(0)|+C\left(\int_0^{2\pi}|f'(x)|^2dx\right)^{1/2}$$
+($C$ est une constante qui ne dépend pas de $f$).
+<li> Montrer que les polynômes trigonométriques sont denses dans $A(\mathbb T)$.
+<li> Soit $f$ une fonction continue $2\pi-$périodique telle que, pour tout $x\in[0,2\pi]$, il existe un voisinage $V_x$de $x$
+et une fonction $g_x\in A(\mathbb T)$ telle que $g_x(y)=f(y)$ pour tout $y\in V_x$. Montrer que $f$ appartient à $A(\mathbb T)$ 
+(on pourra utiliser une partition de l'unité associée à un recouvrement bien choisi de $[0,2\pi]$).
+<li> Pour tout entier $k\geq 1$, on considère la fonction $2\pi-$périodique $\Delta_k$ telle que
+$\Delta_k(x)=\max(1-k|x|,0)$ pour $|x|\leq\pi$.
+<ol class="enumeratechiffre">
+<li> Calculer les coefficients de Fourier de $\Delta_k$; en déduire que $\Delta_k\in A(\mathbb T)$ et
+$\sup_{k\geq 1}\| \Delta_k\|&lt;+\infty$ - on pourra établir que
+$$\sum_{n\in\mtz}|\hat{\Delta_k}(n)|\leq \frac{1}{2\pi}+\frac{2}{\pi}\left(k\sum_{n=1}^k \frac{1}{2k^2}+2k\sum_{n=k+1}^{+\infty}\frac{1}{n^2}\right)$$
+<li> On pose $V_k=2\Delta_k-\Delta_{2k}$, et soit $f\in A(\mathbb T)$ telle que $f(0)=0$.
+Montrer que, dans $A(\mathbb T)$, la suite $(V_k(f))_{k\geq 1}$ converge vers 0. On pourra commencer par le cas où
+$f$ est de classe $C^\infty$ et utiliser le résultat de la question 3.
+</ol>
+<li> Soit $f\in A(\mathbb T)$ telle que $f(0)=0$, et soit $F$ une fonction analytique au voisinage de $0$. On pose
+$F(z)=\sum_{n=0}^{+\infty}c_n z^n$. Montrer que, pour $k$ assez grand, la série $\sum_{n=0}^{+\infty}c_k(V_k f)^n$ converge dans
+$A(\mathbb T)$. En déduire que $F\circ f$ coïncide, au voisinage de 0, avec une fonction appartenant à $A(\mathbb T)$.
+<li> Déduire des résultats précédents le théorème de Wiener-Lévy (1934) : si $f$ est un élément de $A(\mathbb T)$ et si $F$ est
+une fonction analytique au voisinage de $f(\mathbb T)$, alors $F\circ f\in A(\mathbb T)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige190','imagecorrige190',190);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige190"></a><div class=inner id="innercorrige190" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $g=\sum_{n\in\mtz}\hat{f}(n)e^{int}$, qui est une fonction continue $2\pi-$périodique (la série
+converge normalement). D'autre part, le théorème de convergence dominée (par exemple) assure que $\hat{g}(n)=\hat{f}(n)$.
+Par injectivité de la fonction qui à un élément de $L^1(\mathbb T)$ associe ses coefficients de Fourier, on en déduit que $f=g$.
+<li> Ecrivons $f=\sum_{n\in\mtz}\hat{f}(n)e^{int}$, et $g=\sum_{n\in\mtz}\hat{g}(n)e^{int}$. Les deux séries étant
+absolument convergentes pour tout $t$, il est possible de prendre leur produit de Cauchy, et on a donc :
+$$fg=\sum_{n\in\mtz}\sum_{i+j=n}\hat{f}(i)\hat{g}(j)e^{int}.$$
+On a donc 
+$$\|fg\|\leq\sum_{n\in\mtz}\sum_{i+j=n}\|\hat{f}(i)\hat{g}(j).$$
+On reconnait alors dans le membre de droite de cette dernière inégalité le produit de Cauchy de $\sum_n |\hat{f}(n)|$
+avec $\sum_n |\hat{g}(n)|$.
+<li> Une intégration par parties montre que 
+$$\hat{f}(n)=\frac{\hat{f'}(n)}{in},\ n\neq 0.$$
+En appliquant l'inégalité de Cauchy-Schwarz, puis le théorème de Parseval-Bessel (à la fonction $f'$), il vient 
+\begin{eqnarray*}
+\sum_{n\in\mtz}|\hat{f}(n)|&\leq&|\hat{f}(0)|+\sum_{n\neq 0}\frac{1}{|n|}|\hat{f'}(n)|\\
+&\leq&|\hat{f}(0)|+\left(\sum_{n\neq 0}\frac{1}{n^2}\right)^{1/2}\left(\sum_{n\neq 0}|\hat{f'}(n)|^2\right)^{1/2}\\
+&\leq&|\hat{f}(0)|+C\left(\int_0^{2\pi}|f'(x)|^2dx\right)^{1/2}.
+\end{eqnarray*}
+<li> Soit $f\in A(\mathbb T)$, et posons $f_N=\sum_{|n|\leq N}\hat{f}(n)e^{int}.$
+Alors on a 
+$$\|f-f_N\|\leq \sum_{n&gt;|N|}\hat{f}(n),$$
+quantité qui tend vers 0 comme reste d'une série divergente.
+<li> Puisque les $V_x$ recouvrent $[0,2\pi]$, et que $[0,2\pi]$, on peut en extraire un sous-recouvrement fini
+$V_1,\dots,V_N$. Considérons $\psi_1,\dots,\psi_N$ une partition de l'unité $C^\infty$ associée à ce recouvrement,
+ie $\psi_i$ à son support inclus dans $V_i$, $\psi_i$ est $C^\infty$, et $\sum_{j=1}^n\psi_j=1$. On a alors,
+pour tout $x$ de $[0,2\pi]$, $f(x)=\sum_{j=1}^N g_j(x)\psi_j(x)$. Prolongeons alors chaque $\psi_j$ par $2\pi-$périodicité
+en une fonction $C^\infty$ sur $\mtr$ (il suffit de remarquer qu'il est possible de supposer que chaque voisinage
+$V_j$ peut être inclus dans un intervalle de longueur inférieure à $2\pi$). Par la question précédente, $\psi_j$ et $g_j$ sont
+tous deux éléments de $A(\mathbb T)$. Puisque $A(\mathbb T)$ est une algèbre, $f$ est élément de $A(\mathbb T)$.
+<li>
+<ol class="enumeratechiffre">
+<li> Un calcul simple montre que 
+$$\hat{\Delta_k}(0)=\frac{1}{2k\pi},\ \hat{\Delta_k}(n)=\frac{k}{\pi n^2}(1-\cos(n/k)).$$
+On utilise alors l'une des majorations suivantes 
+$$1-\cos x\leq\frac{x^2}{2},\ 1-\cos(x)\leq 2$$
+ce qui donne
+$$\sum_{n\in\mtz}|\hat{\Delta_k}(n)|\leq \frac{1}{2\pi}+\frac{2}{\pi}\left(k\sum_{n=1}^k \frac{1}{2k^2}+2k\sum_{n=k+1}^{+\infty}\frac{1}{n^2}\right).$$
+Or, 
+$$k\sum_{n=1}^k \frac{1}{2k^2}\leq \frac{1}{2},$$
+tandis qu'il est bien connu que (et cela s'obtient par exemple en comparant une série et une intégrale) 
+$$\sum_{n=k+1}^{+\infty}\frac{1}{n^2}=O(1/k),$$
+ce qui donne bien la majoration!
+<li> Supposons d'abord $f$ de classe $C^\infty$. En utilisant le résultat de la question 3., il suffit d'établir que $\hat{\delta_k(0)}$ et $\int_0^{2\pi}|(\Delta_k f)'|^2$
+tendent vers 0. Mais, $0\leq V_k\leq 1$, et le support de $V_k$ est inclus dans $[-1/k,1/k]$, d'où
+$$|\hat{V_k}(0)|\leq \frac{\|f\|_\infty}{k\pi},$$
+$$\int_{-\pi}^\pi |V_k(x)f'(x)|^2dx\leq\frac{\|f'\|_\infty^2}{k\pi}.$$
+On a enfin $|V_k'|\leq 2k$, et par hypothèse sur $f$, $|f(x)|\leq\|f'\|_\infty k^{-1}$ sur le support de $V'_k$. Cela donne
+$$\int_{-\pi}^\pi |V_k'(x)f(x)|^2 dx\leq\frac{2\|f'\|_\infty^2}{k\pi}.$$
+Traitons enfin le cas où $f$ n'est plus supposé $C^\infty$. Fixons $\veps&gt;0$. Par la densité des polynômes trigonométriques dans $A(\mathbb T)$,
+il existe une fonction $g$ de classe $C^\infty$ telle que $\|f-g\|\leq \veps$ et $g(0)=0$. Par le résultat précédent,
+il existe $K$ tel que $k\geq K\implies \|V_k g\|\leq\veps$. Remarquons enfin que la question précédente
+entraine l'existence de $C&gt;0$ tel que $\|V_k\|\leq C$. On a donc
+$$\|V_kf\|\leq \|V_k(f-g)\|+\|V_k g\|\leq (C+1)\veps$$
+dès que $k\geq K$.
+</ol>
+<li> Soit $R$ le rayon de convergence de la série entière $\sum c_n z^n$. Pour $k$ assez grand, $\|V_k f\|&lt;R$, 
+ce qui garantit la convergence de la série $\sum\|c_k (V_k f)^n\|$. $A(\mathbb T)$ étant un espace de Banach, la convergence "absolue"
+des séries entraîne leur convergence, et donc $\sum_k c_k(V_k f)^n$ converge dans $A(\mathbb T)$. En outre, pour $|x|&lt;1/2k$,
+$V_k f(x)=f(x)$. Autrement dit, $F\circ f$ coïncide au voisinage de $0$ avec $\sum c_k (V_k f)^n$, qui est élément de $A(\mathbb T)$.
+<li> D'après la question 5, il suffit de prouver que pour tout $a$ de $[0,2\pi]$, $F\circ f$ coïncide au voisinage
+de $a$ avec une fonction de $A(\mathbb T)$. Pour cela, on pose 
+$$f_a(x)=f(x+a)-f(x),\ G_a(z)=F(f(a)+z)-F(f(a)).$$
+$f_a$ et $G_a$ satisfont aux hypothèses de la question précédente : il existe donc une fonction $h_a$ de $A(\mathbb T)$ telle
+que $h_a$ coïncide avec $G_a\circ f_a$ sur un voisinage de $0$. Il suffit alors de poser $g_a(x)=h_a(x-a)+F(f(a))$.
+$g_a$ coïncide avec $F\circ f$ au voisinage de $a$.
+</ol></div></div></div>
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

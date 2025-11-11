@@ -1,0 +1,233 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Algorithmique : listes, files,...</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fgraphes.html">Exercices de théorie des graphes et d'algorithmique</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Algorithmique : listes, files,...</h1>
+<div class=titrepartie>Tableaux</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3570"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3570"),	max:5, rating:1.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3570,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dans un tableau <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3570.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3570,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3570','imageenonce3570');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3570"></a><div class=inner id="innerenonce3570"><ol class="enumeratechiffre">
+<li> On considère la fonction Python suivante : 
+<pre><code class="language-python">def f(tab):
+    m=tab[0]
+    a=0
+    n=len(tab)
+    for i in range(1,n):
+        if (tab[i]&lt;m):
+            m=tab[i]
+            a=i
+    return a
+</code></pre>
+Quel résultat obtient-on en exécutant $\verb+f([8,1,3,7,2,3,6,8,19,4,2,0,1,2,1,10])+$ ?
+<li> Si $t$ est un tableau d'entiers de longueur $n\geq 3$, on dit que $i$ est la position d'un minimum local de $t$ si $1\leq i\leq n-2,$ $t[i]\leq t[i-1]$ et $t[i]\leq t[i+1]$. &Eacute;crire une fonction Python qui prend en entrée un tableau d'entiers et retourne la liste des positions de ces minimums locaux. On supposera que le tableau est de longueur au moins égal à $3$.
+</ol> </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3570','imagecorrige3570',3570);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3570"></a><div class=inner id="innercorrige3570" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $f$ retourne la position du minimum global de $t$ (si le minimum est atteint en plusieurs positions, alors la fonction $f$ retourne la première position où ce minimum est atteint). Ainsi, ici, avec le tableau passé en argument, on obtient la réponse $11.$ 
+<li> Voici une fonction :
+<pre><code class="language-python">def g(tab):
+    l=[]
+    for i in range(1,len(tab)-2):
+        if ( (tab[i]&lt;=tab[i-1]) and (tab[i]&lt;=tab[i+1])):
+            l.append(i)
+    return l
+</code></pre></div></div></div>
+
+<div class=titrepartie>Listes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2574"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2574"),	max:5, rating:1.0909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2574,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Insertion dans une liste triée <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2574.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2574,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2574','imageenonce2574');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2574"></a><div class=inner id="innerenonce2574">&Eacute;crire une fonction qui prend en argument une liste triée $l$ et un entier $elt$ et qui renvoie la liste triée obtenue par insertion à sa place de $elt$ dans $l$. On fera attention à ce que la liste $l$ peut être vide.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2574','imagecorrige2574',2574);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2574"></a><div class=inner id="innercorrige2574" style="display:none;"><pre><code class="language-python">def insere(l,elt):
+    m=l.copy()
+    if (len(m)==0):
+        m.append(elt)
+        return m
+    if (elt&gt;m[len(m)-1]):
+        m.append(elt)
+        return m
+    i=0
+    while (m[i]&lt;elt):
+        i+=1
+    m.insert(i,elt)
+    return m
+</code></pre>
+Dans la fonction, on commence par tester si la liste est vide. Si ce n'est pas le cas, on regarde si l'élément est plus grand que tous les éléments de la liste : si c'est le cas, on l'ajoute à la fin. Sinon, on parcourt tous les éléments de la liste jusqu'à trouver la bonne place. Remarquons que la boucle se termine car, si on exécute la boucle, on sait que elt est inférieur ou égal au dernier élément de la liste. On réalise au début de la fonction une copie de la liste l pour ne pas modifier celle-ci.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2575"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2575"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2575,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Recherche du premier élément d'une liste <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2575.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2575,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2575','imageenonce2575');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2575"></a><div class=inner id="innerenonce2575">&Eacute;crire une fonction prenant en argument une liste Liste et une variable x, et qui retourne le plus petit indice k de la liste tel que Liste[k] soit égal à x. Si la liste ne contient pas x, alors la fonction doit retourner -1.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2575','imagecorrige2575',2575);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2575"></a><div class=inner id="innercorrige2575" style="display:none;"><pre><code class="language-python">def plus_petit(liste,x):
+    n=len(liste)
+    i=0
+    while (i&lt;n) and (liste[i]!=x):
+        i+=1
+    if i==n:
+        return -1
+    else:
+        return i
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2429"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2429"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2429,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fusion de deux listes <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2429.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2429,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2429','imageenonce2429');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2429"></a><div class=inner id="innerenonce2429">&Eacute;crire une fonction fusion qui prend en argument deux listes triées $L1$ et $L2$ et qui renvoie une seule liste triée contenant les éléments de $L1$ et $L2$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2429','imagecorrige2429',2429);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2429"></a><div class=inner id="innercorrige2429" style="display:none;">On parcourt les deux listes en même temps afin de déterminer un premier rangement. On s'arrête lorsqu'une des deux listes est épuisée. On ajoute alors les termes qui restent de l'autre liste. Voici l'algorithme présenté sous Python.
+
+<pre><code class="language-python">def fusion(L1,L2):
+    n1=len(L1)
+    n2=len(L2)
+    i,j=0,0
+    L=[]
+    while ( (i&lt;n1) and (j&lt;n2)):
+        if (L1[i]&lt;L2[j]):
+            L.append(L1[i])
+            i=i+1
+        else:
+            L.append(L2[j])
+            j=j+1
+    # On ajoute encore les termes de la liste non epuisee
+    for i in range(i,n1):
+        L.append(L1[i])
+    for j in range(j,n2):
+        L.append(L2[j])
+    return L
+
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2616"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2616"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2616,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre d'occurences <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2616.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2616,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2616','imageenonce2616');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2616"></a><div class=inner id="innerenonce2616"><ol class="enumeratechiffre">
+<li> &Eacute;crire une fonction Python $maxi(L)$ prenant en argument une liste d'entiers naturels $L$ et renvoyant le maximum des entiers de cette liste (on n'utilisera pas de fonction spécifique de Python déterminant ce maximum). Quelle est le nombre d'opérations élémentaires effectué par cette fonction en fonction de la longueur $n$ de la liste?
+<li> &Eacute;crire une fonction Python $nboc(L)$ prenant en argument une liste d'entiers naturels $L$ et retournant une liste $T$ de longueur $M=maxi(L)+1$ où, pour tout $i\in\{0,\dots,M\}$, $T[i]$ est le nombre d'occurences de $i$ dans la liste $L$.
+<li> Quel est, en fonction de $n$ et $M$, le nombre d'opérations élémentaires effectué par votre fonction $nboc(L)$?
+<li> On veut que ce nombre ne dépende pas de $L$. Modifier votre fonction si ce n'est pas le cas.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2616','imageindication2616');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2616"></a><div class=inner id="innerindication2616" style="display:none;"><ol class="enumeratechiffre">
+<li> Parcourir une fois la liste.
+<li> &Eacute;crire une fonction intermédiaire $nb(L,i)$ qui donne le nombre de fois où $i$ apparait dans $L$.
+<li> 
+<li> Parcourir une seule fois la liste $L$ et modifier la liste $T$ au fur et à mesure de ce parcours.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2616','imagecorrige2616',2616);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2616"></a><div class=inner id="innercorrige2616" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<pre><code class="language-python">def maxi(L):
+    retour=L[0]
+    for i in range(1,len(L)):
+        if (L[i]&gt;retour):
+             retour=L[i]
+    return retour;
+</code></pre>
+Cet algorithme parcourt une fois la liste, et à chaque étape, effectue une ou deux opérations élementaires. La complexité de cette fonction est donc en $O(n)$.
+<li> On commence par écrire une fonction intermédiaire $nb(L,i)$ qui donne le nombre de fois où $i$ apparait dans $L$ puis on crée $T$ en donnant à $T[i]$ la valeur de $nb(L,i)$ pour toute valeur de $i$ possible.
+<pre><code class="language-python">def nb(L,i):
+    retour=0
+    for j in range(len(L)):
+        if (L[j]==i):
+            retour+=1
+    return retour
+
+def nboc(L):
+    T=[]
+    for i in range(maxi(L)+1):
+        T.append(nb(L,i))
+    return T;
+</code></pre>
+<li> La fonction $nb(L,i)$ effectue $O(n)$ opérations élémentaires. La fonction $nboc(L)$ appelle $M+1$ fois la fonction $nb(L,i)$. La complexité de cette dernière fonction est donc en $O(M\times n)$. Remarquons que $M$ peut être beaucoup plus grand que $n$.
+<li> On va parcourir une seule fois la liste $L$ et modifier la liste $T$ au fur et à mesure de ce parcours.
+<pre><code class="language-python">def nboc2(L):
+    T=[0]*(maxi(L)+1)  # On crée une liste de longeur maxi(L)+1
+    # où tous les éléments sont nuls 
+    for i in range(len(L)):
+        T[L[i]]+=1
+    return T
+</code></pre>
+La complexité de cette fonction est désormais en $O(n)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2534"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2534"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2534,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Recherche par dichotomie dans une liste triée <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2534.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2534,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2534','imageenonce2534');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2534"></a><div class=inner id="innerenonce2534">On propose l'algorithme suivant :
+<pre><code class="language-python">def rech_dicho(L,g,d,x):
+    """L est une liste telle que L[g:d+1] est triee"""
+    if x&gt;L(d):
+        return d+1
+    else:
+        a=g
+        b=d
+        while a!=b:
+            c=(a+b)//2
+            if x&lt;=L[c]:
+                b=c
+            else:
+                a=c+1
+    return a
+</code></pre>
+<ol class="enumeratechiffre">
+<li> On prend $L=[2,4,5,7,7,8,10]$. Que renvoient les instructions suivantes?
+<ul class="rien">
+<li> rech_dicho(L,1,5,6)
+<li> rech_dicho(L,0,5,1)
+</ul>
+<li> Que fait la fonction rech_dicho?
+<li> Quelle est la complexité de cette fonction, mesurée en nombre de comparaisons. On pourra exprimer cette complexité en fonction d'un ou plusieurs paramètres parmi $\textrm{len}(L),g,d,x$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2534','imageindication2534');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2534"></a><div class=inner id="innerindication2534" style="display:none;"><ol class="enumeratechiffre">
+<li> Bien suivre l'évolution de $a$ et de $b$ au cours de la boucle.
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2534','imagecorrige2534',2534);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2534"></a><div class=inner id="innercorrige2534" style="display:none;"><ol class="enumeratechiffre">
+<li> <ul class="rien">
+<li> D'abord $L[5]=8$ qui est plus grand que $x=6$. On entre dans la partie "else" de la fonction, avec $a=1$ et $b=5$, puis $c=3$. On a $L[3]=7$ qui est plus grand que $x$, donc on change $b$ en $3$. On a ensuite (deuxième exécution de la boucle while) $c=2$ et $L[2]=5&lt;6$. Il vient $a=3$ et on sort de la boucle. La fonction retourne donc $3$.
+<li> Là encore, on va rentrer dans la boucle while. Comme $x$ est inférieur à tous les éléments de la liste, c'est toujours $b$ qu'on va changer. La fonction va donc retourner $0$.
+</ul>
+<li> Si $x&gt;L[d]$, alors rech_dico retourne $d+1$. Sinon, rech_dico retourne un entier $k$ compris entre $g$ et $d$ tel que
+<ul class="rien">
+<li> tous les éléments $L[g],\dots,L[k-1]$ sont strictement inférieurs à $x$;
+<li> tous les élements $L[k],\dots,L[g]$ sont supérieurs ou égaux à $x$.
+</ul>
+Cette propriété se démontre par le fait que, à chaque itération de la boucle, les éléments $L[g],\dots,L[a-1]$ sont strictement inférieurs ou égaux à $x$, et les éléments $L[b],\dots,L[d]$ sont supérieurs ou égaux à $x$. Cette propriété est vraie en rentrant dans la boucle. Ensuite, si la propriété est vraie au début d'une itération de la boucle, elle l'est encore en sortant de la boucle. En effet, si $L[c]\geq x$, alors $b=c$ et les éléments $L[b],\dots,L[d]$ sont encore supérieurs ou égaux à $x$ en sortant de la boucle (et $a$ est inchangé). Sinon, $L[c]&lt;x$, et puisque $a=c+1$, les éléments $L[g],\dots,L[a-1]=L[c]$ sont bien strictement inférieurs à $x$.
+<li> Le nombre de comparaisons effectué est proportionnel au nombre d'itérations de la boucle. Notons $a_n$ (resp. $b_n$) la valeur de $a$ (resp. $b$) au début de la $n$-ième itération de la boucle. Alors $a_1=g$ et $b_1=d$. De plus, on a $b_{n+1}-a_{n+1}\leq\frac{b_n-a_n}{2}$. C'est vrai si $b_{n+1}=c\leq \frac{a_n+b_n}2$. En effet, on a alors
+$$b_{n+1}-a_{n+1}\leq\frac{a_n+b_n}2-a_n=\frac{b_n-a_n}2.$$
+C'est aussi vrai si $a_{n+1}=c+1\geq\frac{a_n+b_n}2$ comme le montre un calcul similaire.<br>
+On a donc, tant qu'on n'est pas sorti de la boucle, 
+$$b_n-a_n=\frac{g-d}{2^{n-1}}.$$
+On sort pour le premier $n$ tel que $b_n-a_n&lt;1$, et donc dès que $n$ vérifie l'inégalité 
+$$1&gt;\frac{g-d}{2^{n-1}}\iff n&gt; 1+\log_2(g-d).$$
+La complexité est donc $O\left(\log_2(g-d)\right)$.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

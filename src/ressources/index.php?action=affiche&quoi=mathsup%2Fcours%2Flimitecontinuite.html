@@ -1,0 +1,200 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Résumé de cours : limites et continuité</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Résumé de cours : limites et continuité</h1>
+
+
+
+<div class=titrepartie>Limites de fonctions</div>
+<p class=utexte>Soit $f:I\to\mathbb R$ une fonction, $a$ un point de $I$ ou une extrémité de $I$, et $\ell\in\mathbb R$. 
+On dit que $f$ admet pour limite $\ell$ en $a$ si 
+$$\forall\veps>0,\ \exists\eta>0,\ \forall x\in I,\ |x-a|&lt;\eta\implies |f(x)-\ell|<\veps.$$
+</p>
+<p class=utexte>Soit $f:I\to\mathbb R$ une fonction, $a$ une extrémité de $I$. 
+On dit que $f$ admet pour limite $+\infty$ en $a$ si 
+$$\forall M>0,\ \exists\eta>0,\ \forall x\in I,\ |x-a|&lt;\eta\implies f(x)>M.$$
+</p>
+<p class=utexte>Soit $f:[a,+\infty[\to\mathbb R$ et $\ell\in\mathbb R$. On dit que $f$ admet pour limite $\ell$ en $+\infty$ si 
+$$\forall\veps>0,\ \exists A>0,\ \forall x\in [a,+\infty[,\ x\geq A\implies |f(x)-\ell|<\veps.$$</p>
+<p class=utexte>Soit $f:[a,+\infty[\to\mathbb R$. On dit que $f$ admet pour limite $+\infty$ en $+\infty$ si 
+$$\forall M>0,\ \exists A>0,\ \forall x\in [a,+\infty[,\ x\geq A\implies f(x)&gt;M.$$</p>
+<div class=theo><span class=grastheo>Proposition (unicité de la limite) : </span> Soit $a,\ell,\ell'\in\overline{\mathbb R}$. Si $f$
+admet pour limite $\ell$ en $a$ et admet pour limite $\ell'$ en $a$, alors $\ell=\ell'.$
+</div>
+<p class=untexte>On note alors $\displaystyle \lim_{x\to a}f(x)=\ell$ ou $\displaystyle f(x)\xrightarrow[x\to a]{}\ell.$</p>
+<div class=theo><span class=grastheo>Proposition :</span> Si $f$ est définie en $a$ et admet une limite en $a$, alors
+$f(a)=\lim_{x\to a}f(x).$</div>
+<div class=theo><span class=grastheo>Proposition :</span> Si $f:I\to\mathbb R$ admet une limite (finie) en $a$, alors 
+$f$ est localement bornée en $a$ : il existe $h&gt;0$ et $M&gt;0$ tels que, pour tout $x\in ]a-h,a+h[\cap I$, $|f(x)|\leq M.$
+</div>
+<p class=utexte>Soit $f:I\to\mathbb R$ et $a\in I$. On dit que $f$ admet $\ell\in\mathbb R$ comme <span class=rougedico>limite à droite</span>
+ en $a$ si 
+ $$\forall\veps>0,\ \exists\eta>0,\ \forall x\in I,\ a\leq x&lt;a+\eta\implies |f(x)-\ell|&lt;\veps.$$
+ On dit que $f$ admet $\ell\in\mathbb R$ comme <span class=rougedico>limite à gauche</span>
+ en $a$ si 
+ $$\forall\veps>0,\ \exists\eta>0,\ \forall x\in I,\ a-\eta&lt;x\leq a\implies |f(x)-\ell|&lt;\veps.$$
+ On définit de la même façon une limite à droite ou à gauche égale à $\pm\infty,$ en interdisant toutefois $x=a.$</p>
+<div class=theo><span class=grastheo>Proposition :</span> Soit $f:I\to\mathbb R$ et $a$ un point à l'intérieur de $I$. Alors
+ $f$ admet une limite en $a$ si et seulement si $f$ admet une limite à droite et une limite à gauche en $a$.</div>
+<div class=theo><span class=grastheo>Théorème (caractérisation séquentielle de la limite) :</span> $f$ admet pour limite $\ell$ en $a$ si et seulement si,
+ pour toute suite $(x_n)$ qui converge vers $a$, alors $(f(x_n))$ converge vers $\ell$.</div>
+<p class=utexte>Toutes les opérations usuelles sur les limites (somme, produit, quotients), valables pour les suites, se transposent avec une preuve identique pour les fonctions.
+</p>
+<div class=theo><span class=grastheo>Proposition (composition des limites) :</span> Si $f:I\to J$ et $g:J\to\mathbb R$ sont telles que $\lim_{x\to a}f(x)=b$ et $\lim_{y\to b}g(y)=\ell$, alors $\lim_{x\to a}g\circ f(x)=\ell$. </div>
+<div class=theo><span class=grastheo>Théorème (encadrement) :</span> Si $f,u,v:I\to\mathbb R$ sont trois fonctions telles que, pour tout $x\in I$, 
+$u(x)\leq f(x)\leq v(x)$, si $\lim_{x\to a}u(x)=\lim_{x\to a}v(x)=\ell$, alors $\lim_{x\to a}f(x)=\ell$. </div>
+<div class=theo><span class=grastheo>Proposition (passage à la limite dans une inégalité) :</span> Soient $f,g:I\to\mathbb R$ deux fonctions admettant
+des limites finies en $a$. Si pour tout $x\in I$, $f(x)\leq g(x)$, alors $\lim_{x\to a}f(x)\leq \lim_{x\to a}g(x)$.</div>
+<div class=theo><span class=grastheo>Théorème (limite monotone) :</span> Soit $f:[a,b[\to\mathbb R$ une fonction croissante et majorée.
+Alors $f$ admet une limite (à gauche) en $b$.</div>
+
+
+<div class=titrepartie>Continuité</div>
+<p class=utexte>Soit $f:I\to\mathbb R$ une fonction et $a\in I$.
+On dit que $f$ est <span class=rougedico>continue</span> en $a$ si $f$ admet pour limite $f(a)$ en $a$ :
+$$\forall\veps>0,\ \exists\eta>0,\ \forall x\in I,\ |x-a|<\eta\implies |f(x)-f(a)|<\veps.$$
+</p>
+<div class=theo><span class=grastheo>Théorème (caractérisation séquentielle de la continuité) :</span> 
+$f$ est continue en $a$ si et seulement si,
+ pour toute suite $(x_n)$ qui converge vers $a$, alors $(f(x_n))$ converge vers $f(a)$.</div>
+<p class=utexte>On parle de continuité à droite ou de continuité à gauche lorsqu'on utilise les notions de limite à droite et de limite à gauche.
+On dit que $f$ est continue sur $I$ si $f$ est continue en tout point de $I$.</p>
+<p class=utexte>
+Toute combinaison linéaire, tout produit, toute composée, tout quotient dont le dénominateur ne s'annule pas de fonctions continues est une fonction continue.
+</p>
+
+<div class=titrepartie>Grands théorèmes sur la continuité</div>
+<div class=theo><span class=grastheo>Théorème des valeurs intermédiaires : </span>
+Soit $f:[a,b]\to\mathbb R$ une fonction continue.
+ Soit $\gamma\in \mathbb R$ tel que $\gamma$ est compris entre $f(a)$ et $f(b)$. Alors il existe $c\in [a,b]$ tel que $f(c)=\gamma$.
+</div>
+<div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/uJC7c1JR_W4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<p class=untexte>En particulier, l'image d'un intervalle par une fonction continue est un intervalle.</p>
+<div class=theo><span class=grastheo>Corollaire :</span> Si $f$ est continue et strictement monotone sur $I$,
+le tableau suivant donne l'intervalle $f(I)$ en fonction de $I$ : 
+<table class=tablebibmath>
+<tr>
+<td> </td> <td> $[a,b]$ </td> <td> $]a,b]$ </td> <td>$[a,b[$ </td> <td> $]a,b[$ </td>
+</tr>
+<tr>
+<td>$f$ croissante</td> <td> $[f(a),f(b)]$ </td> <td> $]\lim_a f,f(b)]$ </td> <td>$[f(a),\lim_b f[$ </td> <td> $]\lim_a f,\lim_b f[$ </td>
+</tr>
+<tr>
+<td>$f$ décroissante </td> <td> $[f(b),f(a)]$ </td> <td> $[f(b),\lim_a f[$ </td> <td>$]\lim_b f,f(a)]$ </td> <td> $]\lim_b f,\lim_a f[$ </td>
+</tr>
+</table>
+</div>
+
+<p class=utexte>Bien sûr, il existe des variantes au résultat précédent, en considérant par exemple des intervalles semi-ouverts
+ou en considérant une fonction strictement décroissante (il faut alors inverser les bornes à l'arrivée).</p>
+<div class=theo><span class=grastheo>Théorème des bornes atteintes :</span> Si $f:[a,b]\to\mathbb R$ est continue, alors $f$ est bornée et atteint ses bornes.</div>
+<div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/Qo0bJZ8dRGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<p class=untexte>En particulier, en combinant ce théorème et le théorème des valeurs intermédiaires, on obtient que
+ l'image d'un segment par une fonction continue est un segment.</p>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Dichotomie</div>
+<p class=utexte>L'algorithme de dichotomie permet de déterminer une valeur approchée d'une solution de l'équation $f(x)=0$.
+Considérons $f:[a,b]\to\mathbb R$ continue telle que $f(a)f(b)<0$. Ceci signifie que $f(a)$ et $f(b)$ sont de signes opposés, et par
+le théorème des valeurs intermédiaires, il existe une solution à $f(x)=0$ dans l'intervalle $[a,b]$. Considérons maintenant le milieu
+de $[a,b]$, le point $c=(a+b)/2$. Alors </p>
+<div class=liste>
+<ul>
+<li>si $f(a)f(c)<0$, $f(a)$ et $f(c)$ sont de signes opposés, et donc il y a une solution à l'équation $f(x)=0$ dans l'intervalle $[a,c]$;
+<li>sinon, c'est $f(c)$ et $f(b)$ qui sont de signes opposés, et donc il y a une solution à l'équation $f(x)=0$ dans l'intervalle $[c,b]$.
+</ul>
+</div>                              
+<p class=untexte>Dans les deux cas, on a réduit l'intervalle $[a,b]$ de départ en un intervalle deux fois plus petit. On peut alors réitérer l'opération.
+Voici le fonctionnement de l'algorithme de dichotomie sur la fonction $f(x)=x^3-3x+1$.</p>
+<div class=equation>
+<iframe scrolling="no" title="Dichotomie" src="https://www.geogebra.org/material/iframe/id/N9vvcqbR/width/560/height/400/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="560px" height="400px" style="border:0px;"> </iframe>
+</div>
+<p class=utexte>L'algorithme implémentant la méthode de dichotomie sous Python, avec précision fixée, s'écrit simplement :</p>
+<div class=citation>
+def dichotomie(a,b,prec):<br>
+<div style='margin-left:2em'>while b-a>prec:</div>
+<div style='margin-left:4em'>        c = (a+b)/2</div>
+<div style='margin-left:4em'>       if f(a)*f(c) <= 0:</div>
+<div style='margin-left:6em'>            b = c</div>
+<div style='margin-left:4em'>        else:</div>
+<div style='margin-left:6em'>a = c</div>
+<div style='margin-left:2em'>return a,b</div>
+</div>
+
+<div class=titrepartie>Continuité, monotonie et injectivité</div>
+<div class=theo><span class=grastheo>Théorème  : </span>
+Soit $f:I\to\mathbb R$ continue.
+ Alors $f$ est injective si et seulement si $f$ est strictement monotone.
+ Dans ce cas, $f$ réalise une bijection de $I$ sur l'intervalle $J=f(I)$, $f^{-1}:J\to I$ est continue et $f^{-1}$
+ est monotone de même sens de monotonie que $f$.
+ <div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/VR_xOJmXvAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+ </div>
+ <p class=utexte>Rappelons que, dans un repère orthonormé, la courbe représentative de $f$
+ et la courbe représentative de $f^{-1}$ sont symétriques par rapport à la droite $y=x.$</p>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

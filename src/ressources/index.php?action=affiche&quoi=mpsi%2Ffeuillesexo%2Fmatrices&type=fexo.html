@@ -1,0 +1,1570 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices math sup : Calcul matriciel</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices math sup : Calcul matriciel</h1>
+<div class=titrepartie>Produit de matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3029"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3029"),	max:5, rating:1.3620689655172, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3029,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Identité remarquable <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3029.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3029,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3029','imageenonce3029');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3029"></a><div class=inner id="innerenonce3029">Soit $A,\ B\in M_{2}(\mathbb R)$ les matrices définies par
+\begin{equation*}
+	 A=\left(\begin{array}{cc} 3 & -1\\-2&0 \end{array} \right)
+	\quad \textrm{et} \quad B=\left(\begin{array}{cc} 0 & 1\\3&2 \end{array} \right).
+\end{equation*}
+Comparer les deux matrices $(A+B)^2$ et $A^2+2AB+B^2$. Puis comparer les deux matrices $(A+B)^2$ et $A^2+AB+BA+B^2$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3029','imagecorrige3029',3029);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3029"></a><div class=inner id="innercorrige3029" style="display:none;">On effectue les divers calculs, et on trouve 
+$$A^2=\begin{pmatrix}
+11&-3\\
+-6&2
+\end{pmatrix},\quad B^2=\begin{pmatrix}
+3&2\\
+6&7
+\end{pmatrix},
+$$
+$$AB=\begin{pmatrix}
+-3&1\\
+0&-2
+\end{pmatrix},\quad 
+BA=\begin{pmatrix}
+-2&0\\
+5&-3
+\end{pmatrix},$$
+$$(A+B)^2=A^2+AB+BA+B^2=\begin{pmatrix} 
+9&0\\
+5&4
+\end{pmatrix}$$
+et 
+$$A^2+2AB+B^2=\begin{pmatrix}
+8&1\\
+0&5
+\end{pmatrix}.$$
+Ainsi, l'identité remarquable $(A+B)^2=A^2+2AB+B^2$ est fausse pour les matrices. En revanche l'égalité $(A+B)^2=A^2+AB+BA+B^2$, qu'on prouve par double distributivité, est vraie pour toutes les matrices carrées $A$ et $B$.</div></div></div>	
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3030"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3030"),	max:5, rating:2.0338983050847, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3030,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Commutant d'une matrice fixée <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3030.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3030,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3030','imageenonce3030');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3030"></a><div class=inner id="innerenonce3030">Soit $A=\left( \begin{array}{cc} 1 & 1\\ 
+ 0 &1 \end{array} \right).$ Trouver toutes les matrices $B\in\mathcal M_2(\mathbb R)$ qui commutent avec $A$,
+c'est-à-dire telles que $AB=BA$.</div></div><div class=indication><a href="javascript:showAll('innerindication3030','imageindication3030');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3030"></a><div class=inner id="innerindication3030" style="display:none;">Prendre une matrice $B$ $2\times2$ quelconque, et calculer les produits $AB$ et $BA$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3030','imagecorrige3030',3030);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3030"></a><div class=inner id="innercorrige3030" style="display:none;">Soit $B=\left( \begin{array}{cc} c & d\\ 
+ e &f \end{array} \right)$ une telle matrice. On a :
+$$AB=\left(\begin{array}{cc}
+c+e&d+f\\
+e&f\\\end{array}\right),BA=\left(\begin{array}{cc}
+c&c+d\\
+e&e+f\\\end{array}\right).$$
+Puisque $AB=BA$, on obtient le système :
+$$\left\{\begin{array}{rcl}
+c+e&=&c\\
+d+f&=&c+d\\
+f&=&e+f\\\end{array}\right.$$
+On résout ce système pour trouver que $e=0$ et $c=f$. Toutes les matrices $B$ qui conviennent sont celles de la forme :
+$$\left(\begin{array}{cc}
+c&d\\
+0&c\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater911"></span><script>var myRating = raterJs( { element:document.querySelector("#rater911"),	max:5, rating:1.9268292682927, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(911,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Commutant <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=911.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(911,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce911','imageenonce911');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce911"></a><div class=inner id="innerenonce911">Soient $a$ et $b$ des réels non nuls, et $A=\left( \begin{array}{cc} a & b\\ 
+ 0 &a \end{array} \right).$ Trouver toutes les matrices $B\in\mathcal M_2(\mathbb R)$ qui commutent avec $A$,
+c'est-à-dire telles que $AB=BA$.</div></div><div class=indication><a href="javascript:showAll('innerindication911','imageindication911');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication911"></a><div class=inner id="innerindication911" style="display:none;">Prendre une matrice $B$ $2\times2$ quelconque, et calculer les produits $AB$ et $BA$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige911','imagecorrige911',911);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige911"></a><div class=inner id="innercorrige911" style="display:none;">Soit $B=\left( \begin{array}{cc} c & d\\ 
+ e &f \end{array} \right)$ une telle matrice. On a :
+$$AB=\left(\begin{array}{cc}
+ac+be&ad+bf\\
+ae&af\\\end{array}\right),BA=\left(\begin{array}{cc}
+ac&bc+ad\\
+ae&be+af\\\end{array}\right).$$
+On a donc $AB=BA$ si et seulement si
+$$\left\{\begin{array}{rcl}
+ac+be&=&ac\\
+ad+bf&=&bc+ad\\
+af&=&be+af\\\end{array}\right.$$
+On résout ce système (dont les inconnues sont $c$, $e$ et $f$). Il est équivalent à 
+$$\left\{\begin{array}{rcl}
+be&=&0\\
+b(f-c)&=&0\\
+be&=&0
+\end{array}\right.$$
+Comme $b\neq 0$, on trouve que le système est équivalent à $e=0$ et $c=f$. Toutes les matrices $B$ qui conviennent sont donc celles de la forme :
+$$\left(\begin{array}{cc}
+c&d\\
+0&c\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater913"></span><script>var myRating = raterJs( { element:document.querySelector("#rater913"),	max:5, rating:1.3928571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(913,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit non commutatif <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=913.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(913,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce913','imageenonce913');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce913"></a><div class=inner id="innerenonce913">Déterminer deux éléments $A$ et $B$ de
+$\mathcal M_2({\mathbb R})$ tels que : $AB=0$ et $BA\not = 0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige913','imagecorrige913',913);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige913"></a><div class=inner id="innercorrige913" style="display:none;">Les matrices $$ A =
+\begin{pmatrix}
+0&1\\
+0&0\\
+\end{pmatrix}, \qquad
+B =
+\begin{pmatrix}
+1&0\\
+0&0\\
+\end{pmatrix}
+$$ 
+conviennent.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater3031"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3031"),	max:5, rating:1.1153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3031,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit égal à l'identité <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3031.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(3031,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3031','imageenonce3031');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3031"></a><div class=inner id="innerenonce3031">Soit la matrice $A=\left(\begin{array}{cc} 0&1\\1&0\\1&1 \end{array} \right)$. 
+<ol class="enumeratechiffre">
+	<li>  Existe-t-il une matrice $B\in M_{2,3}(\mathbb R)$ telle que $AB=I_3$? Si oui, donner explicitement une telle matrice $B$.
+	<li>  Existe-t-il une matrice $C\in M_{2,3}(\mathbb R)$ telle que $CA=I_2$? Si oui, donner explicitement une telle matrice $C$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3031','imageindication3031');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3031"></a><div class=inner id="innerindication3031" style="display:none;">Supposer l'existence d'une telle matrice, lui donner des coefficients $a,b,c,\dots$ faire le produit et identifier.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3031','imagecorrige3031',3031);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3031"></a><div class=inner id="innercorrige3031" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $B\in M_{2,3}(\mathbb R)$ que l'on écrit 
+$$B=\begin{pmatrix} a&b&c\\d&e&f\end{pmatrix}.$$
+Le produit $AB$ vaut 
+$$AB=\begin{pmatrix}d&e&f\\a&b&c\\a+d&b+e&c+f\end{pmatrix}.$$
+Si on avait $AB=I_3$, on aurait en particulier $d=1$, $a=0$ et $a+d=0$. C'est impossible!
+<li> Soit $C\in M_{2,3}(\mathbb R)$ que l'on écrit 
+$$C=\begin{pmatrix} a&b&c\\d&e&f\end{pmatrix}.$$
+Alors le produit $CA$ vaut 
+$$CA=\begin{pmatrix}b+c&a+c\\e+f&d+f\end{pmatrix}.$$
+On a $CA=I_2$ si et seulement si 
+$$\left\{
+\begin{array}{rcl}
+b+c&=&1\\
+a+c&=&0\\
+e+f&=&0\\
+d+f&=&1
+\end{array}
+\right.$$
+On résout ce système qui est équivalent à 
+$$
+\left\{
+\begin{array}{rcl}
+a&=&-c\\
+b&=&1-c\\
+e&=&-f\\
+d&=&1-f
+\end{array}\right. .$$
+Ce système admet donc des solutions et on peut trouver des matrices $C$ qui conviennent, par exemple
+$$C=\begin{pmatrix}
+0&1&0\\ 1&0&0\end{pmatrix}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2372"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2372"),	max:5, rating:1.5277777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2372,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices stochastiques <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2372.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2372,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2372','imageenonce2372');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2372"></a><div class=inner id="innerenonce2372">Soit $A,B\in\mathcal M_n(\mathbb R)$ deux matrices telles que la somme des coefficients sur chaque colonne de $A$ et sur chaque colonne de $B$ vaut $1$
+(on dit qu'une telle matrice est une matrice stochastique).
+Montrer que la somme des coefficients sur chaque colonne de $AB$ vaut $1$.</div></div><div class=indication><a href="javascript:showAll('innerindication2372','imageindication2372');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2372"></a><div class=inner id="innerindication2372" style="display:none;">Poser $A=(a_{i,j})$, $B=(b_{i,j})$, $C=AB=(c_{i,j})$. Calculer $c_{i,j}$ en fonction des $a_{i,j}$ et des $b_{i,j}$, faire la somme.
+Il apparait deux sommes, les permuter.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2372','imagecorrige2372',2372);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2372"></a><div class=inner id="innercorrige2372" style="display:none;">Posons $A=(a_{i,j})$, $B=(b_{i,j})$, $C=AB=(c_{i,j})$. Alors, par définition, pour tous $i,j\in\{1,\dots,n\}$
+$$c_{i,j}=\sum_{k=1}^n a_{i,k}b_{k,j}.$$
+On veut démontrer que, pour tout $j=1,\dots,n$, on a 
+$$\sum_{i=1}^n c_{i,j}=1.$$
+Calculons cette somme : 
+\begin{eqnarray*}
+ \sum_{i=1}^n c_{i,j}&=&\sum_{i=1}^n \sum_{k=1}^n a_{i,k}b_{k,j}\\
+ &=&\sum_{k=1}^n \sum_{i=1}^n a_{i,k}b_{k,j}\\
+ &=&\sum_{k=1}^n b_{k,j}\left(\sum_{i=1}^n a_{i,k}\right).
+\end{eqnarray*}
+La somme à l'intérieur est égale à 1 puisque $A$ est stochastique. Il reste
+$$\sum_{i=1}^n c_{i,j}=\sum_{k=1}^n b_{k,j}=1$$
+où on utilise cette fois que $B$ est stochastique.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater917"></span><script>var myRating = raterJs( { element:document.querySelector("#rater917"),	max:5, rating:2.26, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(917,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Centre de $\mathcal M_n(\mathbb R)$. <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=917.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(917,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce917','imageenonce917');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce917"></a><div class=inner id="innerenonce917">Déterminer le centre de $\mathcal M_n(\mathbb R)$, c'est-à-dire l'ensemble des matrices $A\in\mathcal M_n(\mathbb R)$ telle que, pour tout $M\in\mathcal M_n(\mathbb R)$, on a $AM=MA$.</div></div><div class=indication><a href="javascript:showAll('innerindication917','imageindication917');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication917"></a><div class=inner id="innerindication917" style="display:none;">Multiplier par les matrices élémentaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige917','imagecorrige917',917);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige917"></a><div class=inner id="innercorrige917" style="display:none;">Remarquons d'abord que si $A=\lambda I_n$, alors $A$ commute avec toutes les matrices et donc $A$ est dans le centre de $\mathcal M_n(\mathbb R)$. Réciproquement, supposons que $A$ commute avec toutes les matrices, et étudions ce que donne $AE_{i,j}=E_{i,j}A$, où $E_{i,j}$ est la matrice élémentaire avec des 0 partout sauf le coefficient à la $i$-ème ligne et $j$-ième colonne qui est égal à 1. Alors, 
+$$AE_{i,j}=
+\left(\begin{array}{ccccc}
+0&\dots&0&a_{1,i}&0&\dots\\
+0&\dots&0&a_{2,i}&0&\dots\\
+\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+0&\dots&0&a_{n,i}&0&\dots
+\end{array}\right)
+$$ 
+où la seule colonne non-nulle est la $j$-ième colonne, et 
+$$E_{i,j}A=
+\left(\begin{array}{cccc}
+0&\dots&\dots&0&\\
+\vdots&\vdots&\vdots&\vdots\\
+0&\dots&\dots&0&\\
+a_{j,1}&a_{j,2}&\dots&a_{j,n}\\
+0&\dots&\dots&0&\\
+\end{array}\right)
+$$ 
+où la seule ligne non-nulle est la $i$-ème ligne. Le seul terme (éventuellement) non-nul que peuvent avoir en commun les deux matrices est situé sur la $i$-ème ligne et la $j$-ème colonne. Les coefficients correspondants doivent être égaux et donc on doit avoir 
+$$a_{i,i}=a_{j,j}.$$
+Les autres coefficients doivent être nuls, ce qui signifie en particulier, pour $k\neq i$, que $a_{k,i}=0$. 
+Ainsi, $A$ est une matrice diagonale dont tous les coefficients diagonaux doivent être égaux. On en déduit que $A=\lambda I_n$.</div></div></div>
+
+<div class=titrepartie>Puissance de matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1018"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1018"),	max:5, rating:1.6041666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1018,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissance $n$-ième, par récurrence <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1018.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1018,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1018','imageenonce1018');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1018"></a><div class=inner id="innerenonce1018">On considère les matrices suivantes : 
+$$A=\left(\begin{array}{cc}
+1&-1\\
+-1&1\\
+\end{array}\right),\ B=\left(\begin{array}{cc}
+1&1\\
+0&2\\
+\end{array}\right).$$
+Calculer $A^2$, $A^3$. En déduire la valeur de $A^n$ pour tout $n\geq 1$. Répondre aux mêmes questions pour $B$.</div></div><div class=indication><a href="javascript:showAll('innerindication1018','imageindication1018');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1018"></a><div class=inner id="innerindication1018" style="display:none;">Calculer les premières puissances pour deviner la formule donnant $A^n$ ou $B^n$. Démontrer cette formule par récurrence.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1018','imagecorrige1018',1018);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1018"></a><div class=inner id="innercorrige1018" style="display:none;">On va commencer par calculer les premiers termes de $A^n$ pour essayer de deviner la formule. On a
+$$A^2=\left(\begin{array}{cc}
+2&-2\\
+-2&2
+\end{array}\right),\ A^3=\left(\begin{array}{cc}
+4&-4\\
+-4&4
+\end{array}\right).$$
+On démontre alors par récurrence sur $n\geq 1$ que 
+$$A^n=\left(\begin{array}{cc}
+2^{n-1}&-2^{n-1}\\
+-2^{n-1}&2^{n-1}
+\end{array}\right).$$
+La preuve par récurrence est très simple, et repose simplement sur le fait que $2^{n-1}+2^{n-1}=2^n$.<br>
+On fait la même chose pour $B$ :
+$$B^2=\left(\begin{array}{cc}
+1&3\\
+0&4
+\end{array}\right),\ B^3=\left(\begin{array}{cc}
+1&7\\
+0&8
+\end{array}\right).$$
+On démontre alors, par récurrence sur $n$, que 
+$$B^n=\left(\begin{array}{cc}
+1&2^n-1\\
+0&2^n
+\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater914"></span><script>var myRating = raterJs( { element:document.querySelector("#rater914"),	max:5, rating:1.725, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(914,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissance $n$-ième - avec la formule du binôme <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=914.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(914,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce914','imageenonce914');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce914"></a><div class=inner id="innerenonce914">Soit $$A=\left(
+\begin{array}{ccc}
+1&1&0\\
+0&1&1\\
+0&0&1
+\end{array}\right),\quad
+I=\left(
+\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\right)\textrm{ et }
+B=A-I.$$
+Calculer $B^n$ pour tout $n\in\mathbb N$. En déduire $A^n$.</div></div><div class=indication><a href="javascript:showAll('innerindication914','imageindication914');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication914"></a><div class=inner id="innerindication914" style="display:none;">Commencer par calculer $B^2$, $B^3$, etc... Pour calculer $A^n$, on peut utiliser la formule du binôme de
+Newton car $B$ et $I$ commutent.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige914','imagecorrige914',914);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige914"></a><div class=inner id="innercorrige914" style="display:none;">On commence par calculer les premières valeurs de $B^n$. On a 
+$$
+B=\left(
+\begin{array}{ccc}
+0&1&0\\
+0&0&1\\
+0&0&0
+\end{array}\right),\quad 
+B^2=\left(
+\begin{array}{ccc}
+0&0&1\\
+0&0&0\\
+0&0&0
+\end{array}\right),\quad
+B^3=\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&0\\
+0&0&0
+\end{array}\right).$$
+On en déduit alors par récurrence que, pour tout $n\geq 3$, on a $B^n=0$.
+En effet, c'est vrai pour $n=3$. Si c'est vrai au rang $n\geq 3$, alors
+$$B^{n+1}=B^n\times B=0\times B=0.$$
+Pour obtenir $A$, on écrit $A=I+B$ et on remarque que 
+$I$ et $B$ commutent puisque $IB=BI=B$. On peut alors appliquer la formule du binôme
+de Newton, ce qui est très facile ici puisque $B^n=0$ dès que $n\geq 3$. On en déduit
+$$A^n=I^{n}+\binom{n}{1}I^{n-1}B+\binom{n}{2}I^{n-2}B^2$$
+ce qui se réécrit en 
+$$A^n=I+nB+\frac{n(n-1)}{2}B^2.$$
+On a donc
+$$A^n=\left(\begin{array}{ccc}
+1&n&\frac{n(n-1)}2\\
+0&1&n\\
+0&0&1
+\end{array}
+\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2387"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2387"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2387,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissance $k$-ième sans division euclidienne <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2387.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2387,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2387','imageenonce2387');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2387"></a><div class=inner id="innerenonce2387">Soit $U$ la matrice $$U=\left(\begin{array}{cccc}
+0&1&1&1\\
+1&0&1&1\\
+1&1&0&1\\
+1&1&1&0
+\end{array}\right).$$
+<ol class="enumeratechiffre">
+<li> Calculer $U^2$ et en déduire une relation simple liant $U^2$, $U$ et $I_4$.
+<li> Soit $(\alpha_k)$ et $(\beta_k)$ les suites définies par $\alpha_0=1$, $\beta_0=0$, $\alpha_{k+1}=3\beta_k$, $\beta_{k+1}=\alpha_k+2\beta_k$. Démontrer que, pour tout $k\in\mathbb N$, on a 
+$$U^k=\left(
+\begin{array}{cccc}
+\alpha_k&\beta_k&\beta_k&\beta_k\\
+\beta_k&\alpha_k&\beta_k&\beta_k\\
+\beta_k&\beta_k&\alpha_k&\beta_k\\
+\beta_k&\beta_k&\beta_k&\alpha_k
+\end{array}\right).$$
+<li> Démontrer que, pour tout $k\in\mathbb N$, on a $\beta_{k+2}=2\beta_{k+1}+3\beta_k$.
+<li> En déduire que, pour tout $k\in\mathbb N$, 
+$\beta_k=\frac{3^k-(-1)^k}{4}$ et $\alpha_k=\frac{3^k+3(-1)^k}{4}$. 
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication2387','imageindication2387');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2387"></a><div class=inner id="innerindication2387" style="display:none;"><ol class="enumeratechiffre">
+<li> $U^2=2U+3I_4$. 
+<li> Procéder par récurrence. On pourra remarquer qu'on nous demande de démontrer que $U^k=\beta_k U+\alpha_k I_4$.
+<li> 
+<li> Suite récurrente linéaire d'ordre deux : on doit introduire l'équation caractéristique...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2387','imagecorrige2387',2387);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2387"></a><div class=inner id="innercorrige2387" style="display:none;"><ol class="enumeratechiffre">
+<li> On vérifie facilement que
+$$U^2=\left(\begin{array}{cccc}
+3&2&2&2\\
+2&3&2&2\\
+2&2&3&2\\
+2&2&2&3
+\end{array}\right)$$
+et donc que $U^2=2U+3I_4$.
+<li> On va raisonner par récurrence. Elle n'est pas si simple, et on peut remarquer que ce que l'on nous demande de démontrer est que, pour tout $k\geq 0$, $U^k=\beta_k U+\alpha_k I_4$. Pour $k\geq 0$, notons donc $\mathcal P(k)$ la propriété
+$$\mathcal P(k)=''U^k=\alpha_k I_4+\beta_k U''.$$
+On va prouver que $\mathcal P(k)$ est vérifiée pour tout $k\geq 0$. En effet, 
+<ul class="rien">
+<li> $\mathcal P(0)$ et $\mathcal P(1)$ sont clairement vérifiées, avec $\alpha_1=0$ et  $\beta_1=1$. 
+<li> Soit $k\geq 1$ tel que $\mathcal P(k)$ est vérifiée et prouvons que $\mathcal P(k+1)$ est vraie. On a 
+$$U^{k+1}=U^k\times U=(\alpha_k I_4+\beta_k U)\times U=\alpha_k U+\beta_k U^2.$$
+Utilisant la reation $U^2=3I+2U$, on en déduit que 
+$$U^{k+1}=3\beta_k I_4+(\alpha_k+2\beta_k)U=\alpha_{k+1}I_4+\beta_{k+1}U.$$
+La propriété est bien démontrée au rang $k+1$.
+</ul>
+ Par le principe de récurrence, $\mathcal P(k)$ est vraie pour tout entier naturel $k$.
+<li> Il suffit d'écrire 
+$$\beta_{k+2}=\alpha_{k+1}+2\beta_{k+1}=3\beta_k+2\beta_{k+1}.$$
+<li> On a affaire à une suite récurrente linéaire d'ordre 2. Pour déterminer le terme général d'une telle suite, on introduit l'équation caractéristique $r^2=2r+3$, dont les racines sont $-1$ et $3$. On sait alors qu'il existe deux constantes $a$ et $b$ telles que, pour tout $k\geq 0$, on a $\beta_k=a(-1)^k+b 3^k$. On détermine $a$ et $b$ en sachant que $\beta_0=0$ et $\beta_1=1$, ce qui donne le système
+$$\left\{
+\begin{array}{rcl}
+0&=&a+b\\
+1&=&-a+3b\\
+\end{array}\right.$$
+La résolution de ce système donne le résultat souhaité, et on en déduit très aisément l'expression de $\alpha_k$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater915"></span><script>var myRating = raterJs( { element:document.querySelector("#rater915"),	max:5, rating:1.8684210526316, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(915,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissance $n$-ième - avec un polynôme annulateur <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=915.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(915,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce915','imageenonce915');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce915"></a><div class=inner id="innerenonce915"><ol class="enumeratechiffre">
+<li> Pour $n\geq 2$, déterminer le reste de la division euclidienne de $X^n$ par $X^2-3X+2$.
+<li> Soit  $A=\begin{pmatrix} 
+0&1&-1\\
+-1&2&-1\\
+1&-1&2
+\end{pmatrix}$. Déduire de la question précédente la valeur de $A^n$, pour $n\geq 2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication915','imageindication915');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication915"></a><div class=inner id="innerindication915" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire la formule donnée par la division euclidienne, et évaluer-la en les racines de $X^2-3X+2$.
+<li> Calculer $A^2-3A+2I_3$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige915','imagecorrige915',915);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige915"></a><div class=inner id="innercorrige915" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que 
+$$X^n=(X^2-3X+2)Q_n(X)+a_nX+b_n,$$
+où $a_n X+b_n$ est le reste dans la division euclidienne de $X^n$ par $X^2-3X+2$.
+Pour trouver la valeur de $a_n$ et $b_n$, on évalue l'égalité précédente en les racines de
+$X^2-3X+2$, c'est-à-dire en $1$ et $2$. On trouve le système :
+$$\left\{
+\begin{array}{rcl}
+a_n+b_n&=&1\\
+2a_n+b_n&=&2^n
+\end{array}\right.$$
+dont l'unique solution est $a_n=2^n-1$ et $b_n=2-2^n$.
+<li> Il suffit de remarquer que $A^2-3A+2I_3=0$. Remplaçant dans l'expression de la division euclidienne, on trouve
+$$A^n =(2^n-1)A+(2-2^n)I_3.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2388"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2388"),	max:5, rating:1.7027027027027, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2388,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissance $k$-ième, avec polynôme annulateur <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2388.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2388,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2388','imageenonce2388');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2388"></a><div class=inner id="innerenonce2388">Soit $U$ la matrice $$U=\left(\begin{array}{cccc}
+0&1&1&1\\
+1&0&1&1\\
+1&1&0&1\\
+1&1&1&0
+\end{array}\right).$$
+
+<ol class="enumeratechiffre">
+<li> Déterminer une relation simple liant $I_4,U$ et $U^2$.
+<li> En déduire, pour $k\geq 0$, la valeur de $U^k$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2388','imageindication2388');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2388"></a><div class=inner id="innerindication2388" style="display:none;"><ol class="enumeratechiffre">
+<li> $U^2=2U+3I_4$.
+<li> Effectuer la division euclidienne de $X^k$ par $X^2-2X-3$, puis évaluer en $U$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2388','imagecorrige2388',2388);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2388"></a><div class=inner id="innercorrige2388" style="display:none;"><ol class="enumeratechiffre">
+<li> On vérifie facilement que
+$$U^2=\left(\begin{array}{cccc}
+3&2&2&2\\
+2&3&2&2\\
+2&2&3&2\\
+2&2&2&3
+\end{array}\right)$$
+et donc que $U^2=2U+3I_4$.
+<li> Pour $k\geq 1$, effectuons la division euclidienne de $X^k$ par le polynôme $X^2-2X-3$ (qui est un polynôme annulateur de $U$). Alors il existe deux réels $\alpha_k$ et $\beta_k$ et un polynôme $Q_k$ tels que 
+$$X^k=(X^2-2X-3)Q_k(X)+\beta_k X+\alpha_k.$$
+On détermine $\alpha_k$ et $\beta_k$ en évaluant cette égalité en les racines de $X^2-2X-3$, c'est-à-dire en $-1$ et en $3$. On trouve les deux relations :
+$$\left\{
+\begin{array}{rcl}
+(-1)^k&=&-\beta_k+\alpha_k\\
+3^k&=&3\beta_k+\alpha_k.
+\end{array}\right.$$
+La résolution de ce système donne $\beta_k=\frac{3^k-(-1)^k}{4}$ et $\alpha_k=\frac{3^k+3(-1)^k}{4}$. 
+Maintenant, du fait que $U^2-2U-3I=0$, l'égalité $X^k=(X^2-2X-3)Q_k(X)+\beta_k X+\alpha_k$ donne $U^k=\beta_k U+\alpha_k I_4$. On a donc, pour tout $k\geq 0$, 
+$$U^k=\left(\begin{array}{cccc}
+\alpha_k&\beta_k&\beta_k&\beta_k \\
+\beta_k&\alpha_k&\beta_k&\beta_k \\
+\beta_k&\beta_k&\alpha_k&\beta_k \\
+\beta_k&\beta_k&\beta_k&\alpha_k \\
+\end{array}\right)$$
+où les suites $(\alpha_k)$ et $(\beta_k)$ ont été déterminées précédemment.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3117"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3117"),	max:5, rating:1.5675675675676, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3117,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit et somme de matrices nilpotentes <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3117.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3117,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3117','imageenonce3117');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3117"></a><div class=inner id="innerenonce3117">On dit qu'une matrice $A\in\mathcal M_n(\mathbb K)$ est nilpotente s'il existe $p\in\mathbb N$ tel que $A^p=0$. Démontrer que si $A,B\in\mathcal M_n(\mathbb K)$ sont deux matrices nilpotentes telles que $AB=BA$, alors $AB$ et $A+B$ sont nilpotentes.</div></div><div class=indication><a href="javascript:showAll('innerindication3117','imageindication3117');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3117"></a><div class=inner id="innerindication3117" style="display:none;">Pour $A+B$, appliquer la formule du binôme à l'ordre $p+q$, où $A^p=0$ et $B^q=0$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3117','imagecorrige3117',3117);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3117"></a><div class=inner id="innercorrige3117" style="display:none;">Soit $p,q\in\mathbb N$ tels que $A^p=0$ et $B^q=0$. Posons $r=\max(p,q)$. Alors, puisque $A$ et $B$ commutent, on a 
+$$(AB)^r=A^rB^r=A^p\cdot A^{r-p}\cdot B^q\cdot B^{r-q}=0$$
+(on pourrait même choisir $r=\min(p,q)$ comme ordre de nilpotence).<br>
+Pour démontrer que $A+B$ est nilpotente, appliquons la formule du binôme de Newton à l'ordre $p+q$. Il vient
+$$(A+B)^{p+q}=\sum_{k=0}^{p+q}\binom {p+q}k A^k B^{p+q-k}.$$
+Mais si $k\geq p$, on a $A^p=0$ et si $k&lt;p$, alors $-k&gt;-p$ et $p+q-k&gt;q$ donc $B^{p+q-k}=0$. Dans tous les cas, si $k\in \{0,\dots,p+q\}$, on a $A^k B^{p+q-k}=0$ et donc $(A+B)^{p+q}=0$.</div></div></div>
+
+<div class=titrepartie>Inverse de petites matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater912"></span><script>var myRating = raterJs( { element:document.querySelector("#rater912"),	max:5, rating:1.2058823529412, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(912,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Annulateur <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=912.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(912,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce912','imageenonce912');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce912"></a><div class=inner id="innerenonce912">On considère les matrices $A=\left(\begin{array}{ccc}
+1&0&0\\
+0&1&1\\
+3&1&1\end{array}\right)$, $B=\left(\begin{array}{ccc}
+1&1&1\\
+0&1&0\\
+1&0&0\end{array}\right)$ et $C=\left(\begin{array}{ccc}
+1&1&1\\
+1&2&1\\
+0&-1&-1\end{array}\right)$. Calculer $AB$, $AC$. Que constate-t-on? La matrice $A$ peut-elle être inversible? 
+Trouver toutes les matrices $F\in\mathcal M_3(\mathbb R)$ telles que $AF=0$ (où $0$ désigne la matrice nulle).</div></div><div class=indication><a href="javascript:showAll('innerindication912','imageindication912');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication912"></a><div class=inner id="innerindication912" style="display:none;">On doit trouver $AB=AC$. Supposer $A$ inversible, et multiplier par $A^{-1}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige912','imagecorrige912',912);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige912"></a><div class=inner id="innercorrige912" style="display:none;">On trouve :
+$$AB=AC=\left(\begin{array}{ccc}
+1&1&1\\
+1&1&0\\
+4&4&3\end{array}\right).$$
+La matrice $A$ n'est pas inversible : si tel était le cas, on multiplierait à gauche par $A^{-1}$ dans l'égalité $AB=AC$, et on trouverait $B=C$. Ce n'est pas le cas! Pour la seconde partie, on considère $F$ une matrice vérifiant les propriétés précitées :
+$$F=\left(\begin{array}{ccc}
+a&b&c\\
+d&e&f\\
+g&h&i\\
+\end{array}\right).$$
+Le calcul de $AF$ donne :
+$$AF=\left(\begin{array}{ccc}
+a&b&c\\
+d+g&e+h&f+i\\
+3a+d+g&3b+e+h&3c+f+i\\
+\end{array}\right).$$
+Puisque $AF=0$, on a le système suivant :
+$$\left\{\begin{array}{l}
+a=b=c=0\\
+d+g=e+h=f+i=0\\
+3a+d+g=3b+e+h=3c+f+i=0
+\end{array}\right.\iff \left\{
+\begin{array}{l}
+a=b=c=0\\
+d=-g\\
+e=-h\\
+f=-i\\
+\end{array}\right.$$
+Les matrices $F$ recherchées sont donc les matrices de la forme :
+$$F=\left(\begin{array}{ccc}
+0&0&0\\
+d&e&f\\
+-d&-e&-f\\
+\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater921"></span><script>var myRating = raterJs( { element:document.querySelector("#rater921"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(921,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverser une matrice à partir d'une égalité <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=921.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(921,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce921','imageenonce921');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce921"></a><div class=inner id="innerenonce921"><ol class="enumeratechiffre">
+<li> Soit $\dis A=\left(
+\begin{array}{ccc}
+-1&1&1\\
+1&-1&1\\
+1&1&-1
+\end{array}\right)$. Montrer que $A^2=2I_3-A$, en déduire que $A$ est inversible et calculer $A^{-1}$.
+<li>  Soit $ A=\begin{pmatrix} 1 & 0 & 2 \cr
+0 & -1 & 1 \cr
+1 & -2 & 0 \cr \end{pmatrix} .$ Calculer $
+A^3-A .$ En déduire
+que $ A $ est inversible puis déterminer $ A^{-1} .$ 
+<li> Soit $A=\begin{pmatrix} 
+0&1&-1\\
+-1&2&-1\\
+1&-1&2
+\end{pmatrix}$. Calculer $A^2-3A+2I_3$. En déduire que $A$ est inversible, et calculer $A^{-1}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication921','imageindication921');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication921"></a><div class=inner id="innerindication921" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $\frac{A^2+A}{2}=I_3$, et factoriser.
+<li> &Eacute;crire $A \times \frac 1 4 (A^2-I_3) =
+I_3$ et factoriser
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige921','imagecorrige921',921);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige921"></a><div class=inner id="innercorrige921" style="display:none;"><ol class="enumeratechiffre">
+<li> Le calcul ne pose pas de problèmes. Il mène à :
+$$
+\frac 12(A^2+A)=I_3\implies A\left(\frac 12(A+I_3)\right)=\left(\frac 12(A+I_3)\right)A=I_3.$$
+$A$ est inversible, et son inverse est :
+$$\frac 12(A+I_3).$$
+<li> Un calcul donne $A^3-A = 4 I_3$. Donc $A \times \frac 1 4 (A^2-I_3) =
+I_3$, ainsi $A$ est inversible et
+$$A^{-1} = \frac 1 4 (A^2-I_3) = \frac 1 4
+\begin{pmatrix}
+2&-4&2\\
+1&-2&-1\\
+1&2&-1\\
+\end{pmatrix}.
+$$ 
+<li> On vérifie facilement que $A^2-3A+2I_3=0$. On réécrit ceci en :
+$$A(A-3I_3)=-2I_3\iff A\left(\frac{-1}2(A-3I_3)\right)=I_3.$$
+Ainsi, $A$ est inversible et son inverse est $\frac{-1}2(A-3I_3)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater922"></span><script>var myRating = raterJs( { element:document.querySelector("#rater922"),	max:5, rating:1.1578947368421, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(922,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse avec calculs! <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=922.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(922,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce922','imageenonce922');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce922"></a><div class=inner id="innerenonce922">Dire si les matrices suivantes sont inversibles et, le
+cas échéant, calculer leur inverse :
+$$A=\left(
+\begin{array}{rcl}
+1&1&2\\
+1&2&1\\
+2&1&1
+\end{array}
+\right),\quad
+B=\left(
+\begin{array}{rcl}
+0&1&2\\
+1&1&2\\
+0&2&3
+\end{array}
+\right),\quad 
+C=\left(
+\begin{array}{rcl}
+1&4&7\\
+2&5&8\\
+3&6&9
+\end{array}\right),\quad
+I=\left(
+\begin{array}{rcl}
+i&-1&2i\\
+2&0&2\\
+-1&0&1
+\end{array}\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication922','imageindication922');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication922"></a><div class=inner id="innerindication922" style="display:none;">Utiliser la méthode du pivot de Gauss.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige922','imagecorrige922',922);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige922"></a><div class=inner id="innercorrige922" style="display:none;">On utilise la méthode du pivot de Gauss. Commençons par $A$.
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+1&2&1\\
+2&1&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2-L_1\to L_2\\
+L_3-2L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&-1&-3
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+-2&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_3+L_2\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&0&-4
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+-3&1&1
+\end{array}
+\right)\\
+\end{array}$$
+Après transformations élémentaires, la matrice qui apparait à gauche est triangulaire
+supérieure, et les coefficients sur la diagonale sont tous non nuls.
+On en déduit que $A$ est inversible. On trouve son inverse en poursuivant la méthode.
+$$\begin{array}{r|l}
+\dis \left. \begin{array}{c}
+\\
+\\
+\frac{-1}{4}L_3\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-2L_3\to L_1\\
+L_2+L_3\to L_2\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&1&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1/2&1/2&1/2\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-L_2\to L_1\\
+\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1/4&-1/4&3/4\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\end{array}
+$$
+La matrice inverse recherchée est donc :
+$$\left(
+\begin{array}{rcl}
+-1/4&-1/4&3/4\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right).$$
+On suit la même méthode pour $B$. On forme
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+0&1&2\\
+1&1&2\\
+0&2&3
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_2\to L_1\\
+L_1\to L_2\\
+L_3-2L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&2\\
+0&0&-1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&1&0\\
+1&0&0\\
+-2&0&1
+\end{array}
+\right)\\
+\end{array}$$
+Après transformations élémentaires, la matrice qui apparait à gauche est triangulaire
+supérieure, et les coefficients sur la diagonale sont tous non nuls.
+On en déduit que $B$ est inversible. On trouve son inverse en poursuivant la méthode.
+$$\begin{array}{r|l}
+\dis \left. \begin{array}{c}
+L_1+2L_3\to L_1\\
+L_2+2L_3\to L_2\\
+-L_3\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-4&1&2\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-L_2\to L_1\\
+\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1&1&0\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right)\\
+\end{array}
+$$
+La matrice inverse recherchée est donc :
+$$B^{-1}=\left(
+\begin{array}{rcl}
+-1&1&0\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right).$$
+Passons à $C$ :
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+2&5&8\\
+3&6&9
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1\\
+L_2-2L_1\to L_2\\
+L_3-3L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+0&-3&-6\\
+0&-6&-12
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-2&1&0\\
+-3&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1\\
+L_2\\
+L_3-2L_2\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+0&-3&-6\\
+0&0&0
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-2&1&0\\
+1&-2&1
+\end{array}
+\right)\\
+\end{array}$$
+La matrice $C$ n'est donc pas inversible.<br>
+&Eacute;tudions maintenant $I$ :
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+i&-1&2i\\
+2&0&2\\
+-1&0&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_3\to L_1\\
+L_1\to L_2\\
+L_2\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&1\\
+i&-1&2i\\
+2&0&2
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&0\\
+0&1&0
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2+iL_1\to L_2\\
+L_3+2L_1\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&1\\
+0&-1&3i\\
+0&0&4
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&i\\
+0&1&2
+\end{array}
+\right)\\
+\end{array}$$
+La matrice $I$ est donc inversible. Pour calculer son inverse, on poursuit la méthode :
+$$\begin{array}{r|l}
+\dis 
+\left .\begin{array}{c}
+\\
+\\
+L_3/4\to L_3
+\end{array}\right.
+\left(
+\begin{array}{rcl}
+-1&0&1\\
+0&-1&3i\\
+0&0&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&i\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1-L_3\to L_1\\
+L_2-3iL_3\to L_2\\
+\\
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&0\\
+0&-1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&-1/4&1/2\\
+1&-3i/4&-i/2\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+-L_1\to L_1\\
+-L_2\to L_2\\
+\\
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&1/4&-1/2\\
+-1&3i/4&i/2\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\end{array}$$
+L'inverse de $I$ est donc la matrice
+$$\left(
+\begin{array}{rcl}
+0&1/4&-1/2\\
+-1&3i/4&i/2\\
+0&1/4&1/2
+\end{array}
+\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater3036"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3036"),	max:5, rating:1.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3036,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une famille de matrices <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3036.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(3036,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3036','imageenonce3036');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3036"></a><div class=inner id="innerenonce3036">Pour tout couple $(a,b)$ de $\mathbb R^2$, on pose $A(a,b)=\begin{pmatrix}a&0&-b\\0&1&0\\b&0&a\end{pmatrix}\in M_{3,3}(\mathbb R)$.
+	<ol class="enumeratechiffre">
+		<li> Soit $c \in \mathbb{R}$. Calculer $A(ac,-bc)A(a,b)$. 
+		
+		<li> Pour quels couples $(a,b)$ la matrice $A$ est-elle inversible? Si elle l'est, donner son inverse.
+	</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3036','imageindication3036');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3036"></a><div class=inner id="innerindication3036" style="display:none;">On pourra discuter suivant que $a^2+b^2=0$ ou non (ce qui revient à $a=0$ et $b=0$).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3036','imagecorrige3036',3036);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3036"></a><div class=inner id="innercorrige3036" style="display:none;">Un rapide calcul donne 
+\[ A(ac,-bc)A(a,b)=\begin{pmatrix}
+(a^2+b^2)c&0&0\\
+0&1&0\\
+0&0&(a^2+b^2)c
+\end{pmatrix}. \]
+Ainsi, si $a^2+b^2\neq 0$, la matrice $A(a,b)$ est inversible, et son inverse est la matrice $A(ac,-bc)$ avec $c=1/(a^2+b^2)$. Réciproquement, si $a^2+b^2=0$, c'est-à-dire si $a=0$ et $b=0$ (la somme de deux carrés est nulle si et seulement si chaque terme de la somme est nul), alors la matrice $A(0,0)$ n'est pas inversible : elle est échelonnée, avec deux coefficients nuls sur la diagonale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater3037"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3037"),	max:5, rating:1.8275862068966, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3037,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inversible? <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3037.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(3037,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3037','imageenonce3037');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3037"></a><div class=inner id="innerenonce3037"> Pour quelles valeurs du paramètre $m$ la matrice $A=\begin{pmatrix} 1&1&m\\1&m&1\\m&1&1 \end{pmatrix}$ admet-elle un inverse? On ne demande pas de calculer l'inverse.</div></div><div class=indication><a href="javascript:showAll('innerindication3037','imageindication3037');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3037"></a><div class=inner id="innerindication3037" style="display:none;">Appliquer la méthode du pivot de Gauss. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3037','imagecorrige3037',3037);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3037"></a><div class=inner id="innercorrige3037" style="display:none;">On applique la méthode du pivot de Gauss, mais inutile d'utiliser la matrice augmentée puisqu'on ne demande pas de calculer l'inverse. On trouve successivement
+$$\left(\begin{array}{ccc}
+1&1&m\\
+0&m-1&1-m\\
+0&1-m&1-m^2
+\end{array}\right)\begin{array}l \\
+L_2\leftarrow L_2-L_1\\
+L_3\leftarrow L_3-mL_1\\
+\end{array} $$
+$$\left(\begin{array}{ccc}
+1&1&m\\
+0&m-1&1-m\\
+0&0&2-m-m^2\\
+\end{array}\right)
+\begin{array}l
+\\
+\\
+L_3\leftarrow L_3+L_2
+\end{array}
+$$
+La matrice est donc inversible si et seulement si $m-1\neq 0$ et $2-m-m^2\neq 0$. Les solutions des équations $m-1=0$ et $m^2+m-2=0$ étant les réels $1$ et $-2$, la matrice est inversible si et seulement si $m\notin \{-2,1\}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2871"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2871"),	max:5, rating:1.7083333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2871,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse à paramètres <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2871.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2871,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2871','imageenonce2871');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2871"></a><div class=inner id="innerenonce2871">Pour quelles valeurs du paramètre $t$ la matrice suivante est-elle inversible? Dans ce cas, déterminer son inverse.
+$$A=\left(
+\begin{array}{rcl}
+ 1&0&t\\
+ 2&1&0\\
+ 0&1&1
+\end{array}\right)
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication2871','imageindication2871');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2871"></a><div class=inner id="innerindication2871" style="display:none;">Appliquer l'algorithme du pivot de Gauss et discuter suivant la valeur de $t$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2871','imagecorrige2871',2871);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2871"></a><div class=inner id="innercorrige2871" style="display:none;">On utilise la matrice augmentée.
+\begin{align*}
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  2&1&0&0&1&0\\
+  0&1&1&0&0&1
+ \end{array}\right)\\
+ \begin{array}{l}
+  \\
+  L_2-2L_1\to L_2
+  \\
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&1&1&0&0&1
+ \end{array}\right)\\ 
+ \begin{array}{l}
+  \\
+  \\
+  L_3-L_2\to L_3
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&0&1+2t&2&-1&1
+ \end{array}\right)\\ 
+\end{align*}
+
+Si $t=-1/2$, alors la matrice à gauche est triangulaire, mais un de ses coefficients sur la diagonale est nulle : la matrice n'est pas inversible.
+Sinon, la matrice est inversible. On continue l'application de la méthode du pivot de Gauss pour déterminer son inverse.
+
+\begin{align*}
+  \begin{array}{l}
+  \\
+  \\
+  \frac{1}{1+2t}L_3\to L_3
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&0&1&\frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}
+ \end{array}\right)\\  
+  \begin{array}{l}
+L_1-tL_3\to L_1  \\
+L_2+2tL_3\to L_2  \\
+\\
+\end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&0&\frac{1}{1+2t}&\frac{t}{1+2t}&\frac{-t}{1+2t}\\
+  0&1&0&\frac{-2}{1+2t}&\frac{1}{1+2t}&\frac{2t}{1+2t}\\
+  0&0&1&\frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}
+ \end{array}\right)\\ 
+\end{align*}
+On a donc prouvé que 
+$$A^{-1}=
+\left(\begin{array}{ccc}
+       \frac{1}{1+2t}&\frac{t}{1+2t}&\frac{-t}{1+2t}\\
+  \frac{-2}{1+2t}&\frac{1}{1+2t}&\frac{2t}{1+2t}\\
+  \frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}.     
+      \end{array}
+\right).$$
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater3118"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3118"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3118,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse et résolution de système <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3118.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(3118,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3118','imageenonce3118');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3118"></a><div class=inner id="innerenonce3118"><ol class="enumeratechiffre">
+<li> Soit $M=\begin{pmatrix} 1&0&-1\\ -2&3&4\\ 0&1&1\end{pmatrix}$. Démontrer que $M$ est inversible et calculer $M^{-1}$.
+<li> En déduire les solutions du système 
+$$\left\{
+\begin{array}{rcl}
+x-z&=&m\\
+-2x+3y+4z&=&1\\
+y+z&=&2m
+\end{array}\right.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3118','imageindication3118');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3118"></a><div class=inner id="innerindication3118" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la méthode du pivot de Gauss.
+<li> Passer par l'écriture matricielle du système.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3118','imagecorrige3118',3118);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3118"></a><div class=inner id="innercorrige3118" style="display:none;"><ol class="enumeratechiffre">
+<li> On utilise la méthode du pivot de Gauss : 
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+-2&3&4\\
+0&1&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2+2L_1\to L_2\\
+\\
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&3&2\\
+0&1&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&1\\
+2&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_2\leftrightarrow L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&3&2
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+2&1&0
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_3-3L_2\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&0&-1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+2&1&-3
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+-L_3\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+-2&-1&3
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+L_1+L_3\to L_1\\
+L_2-L_3\to L_2\\
+\\
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1&-1&3\\
+2&1&-2\\
+-2&-1&3
+\end{array}
+\right)\\
+\end{array}
+$$
+On obtient donc que $M$ est inversible et $M^{-1}=\begin{pmatrix}
+-1&-1&3\\
+2&1&-2\\
+-2&-1&3
+\end{pmatrix}$. 
+<li> &Eacute;crivons $X=\begin{pmatrix}x\\y\\z\end{pmatrix}$ et $B=\begin{pmatrix}m\\1\\2m\end{pmatrix}$. Alors l'écriture matricielle du système est $MX=B$ qui admet une unique solution, $X=M^{-1}B=\begin{pmatrix}5m-1\\-2m+1\\4m-1\end{pmatrix}$.</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Inverse de grandes matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater923"></span><script>var myRating = raterJs( { element:document.querySelector("#rater923"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(923,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Grand inverse <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=923.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(923,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce923','imageenonce923');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce923"></a><div class=inner id="innerenonce923">Démontrer que la matrice suivante est inversible, et calculer son inverse.
+$$A=\left(
+\begin{array}{cccc}
+1&1&\dots&1\\
+0&1&1&\dots\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&\dots&1
+\end{array}
+\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication923','imageindication923');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication923"></a><div class=inner id="innerindication923" style="display:none;">Appliquer la méthode du pivot de Gauss.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige923','imagecorrige923',923);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige923"></a><div class=inner id="innercorrige923" style="display:none;">On remarque que la matrice est triangulaire supérieure et que tous ses coefficients sur la diagonale sont non nuls. Elle est donc inversible. Pour calculer son inverse, on utilise la méthode du pivot de Gauss, même si c'est un peu plus compliqué car on a une matrice de taille $n$. Cela dit, elle est déjà triangulaire supérieure. On commence par retirer la dernière ligne aux autres lignes, et on trouve :
+$$\begin{array}{r|l}
+\left(
+\begin{array}{ccccc}
+1&1&\dots&1&0\\
+0&1&1&\dots&0\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&&1&0\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+&
+\left(
+\begin{array}{ccccc}
+1&0&\dots&0&-1\\
+0&1&0&\dots&-1\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+\end{array}$$
+On retire ensuite l'avant-dernière ligne à toutes les lignes la précédent. On trouve
+$$\begin{array}{r|l}
+\left(
+\begin{array}{ccccc}
+1&1&\dots&0&0\\
+0&1&1&\dots&0\\
+\vdots&\ddots&1&\vdots&\vdots\\
+0&\dots&&1&0\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+&
+\left(
+\begin{array}{ccccc}
+1&0&\dots&-1&0\\
+0&1&\ddots&-1&0\\
+\vdots&\ddots&\vdots&\vdots\\
+0&\dots&&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+\end{array}$$
+On continue ainsi, et on fait apparaitre des $-1$ juste au dessus de la diagonale, et rien ailleurs. L'inverse de $A$ est donc 
+$$
+\left(
+\begin{array}{ccccc}
+1&-1&0&\dots&0\\
+0&1&-1&0&\dots\\
+\vdots&\vdots&\ddots&\ddots&\dots\\
+0&\dots&\dots&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+$$
+ce qu'on peut facilement vérifier en faisant le produit de $A$ et de cette matrice.
+
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1019"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1019"),	max:5, rating:2.4166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1019,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice nilpotente <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1019.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1019,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1019','imageenonce1019');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1019"></a><div class=inner id="innerenonce1019">Soit $A\in\mathcal M_n(\mathbb R)$ une matrice nilpotente, c'est-à-dire qu'il existe $p\geq 1$ tel que $A^p=0$. Démontrer que la matrice $I_n-A$ est inversible, et déterminer son inverse.</div></div><div class=indication><a href="javascript:showAll('innerindication1019','imageindication1019');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1019"></a><div class=inner id="innerindication1019" style="display:none;">Penser aux sommes de suites géométriques.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1019','imagecorrige1019',1019);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1019"></a><div class=inner id="innercorrige1019" style="display:none;">L'idée est que, si $-1&lt;x&lt;1$, on a 
+$$\frac1{1-x}=1+x+x^2+\dots$$
+La même chose va se produire pour les matrices grâce au fait que $A^p=0$. En effet, on a 
+\begin{eqnarray*}
+(I_n-A)(I_n+A+\dots+A^{p-1})&=&I_n-A+A-A^2+A^2+\dots+A^{p-1}-A^p\\
+&=&I_n-A^p\\
+&=&I_n.
+\end{eqnarray*}
+On en déduit que $I_n-A$ est inversible, d'inverse $I_n+A+\dots+A^{p-1}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater926"></span><script>var myRating = raterJs( { element:document.querySelector("#rater926"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(926,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices stochastiques <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=926.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(926,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce926','imageenonce926');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce926"></a><div class=inner id="innerenonce926">Pour $n\geq 1$, on note $\mathcal D$ l'ensemble des matrices $A$ de $\mathcal M_n(\mathbb R)$ telles que $a_{i,j}\geq 0$ pour tout $i,j$ et 
+$$\sum_{j=1}^n a_{i,j}=1$$
+pour tout $i=1,\dots,n$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\mathcal D$ est stable par produit.
+<li> Déterminer les matrices $A$ de $\mathcal D$ qui sont inversibles et telles
+que $A^{-1}\in\mathcal D$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication926','imageindication926');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication926"></a><div class=inner id="innerindication926" style="display:none;"><ol class="enumeratechiffre">
+<li> Permuter deux sommes!
+<li> Supposer que $A$ admet un inverse $B$, calculer le coefficient d'ordre $(i,j)$ de $BA$,
+et en déduire que chaque ligne de $A$ admet au plus un coefficient non nul.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige926','imagecorrige926',926);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige926"></a><div class=inner id="innercorrige926" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $A=(a_{i,j})$ et $B=(b_{i,j})$ deux éléments de $\mathcal D$ et soit $C=AB$ leur produit. Alors, clairement on a 
+$$c_{i,j}=\sum_{k=1}^n a_{i,k}b_{k,j}\geq 0$$ car tout est positif. De plus, pour tout $i$ dans $\{1,\dots,n\}$, on a 
+\begin{eqnarray*}
+\sum_{j=1}^n c_{i,j}&=&\sum_{k=1}^n a_{i,k}\sum_{j=1}^n b_{k,j}\\
+&=&\sum_{k=1}^n a_{i,k}\\
+&=&1
+\end{eqnarray*}
+<li> Supposons que $A\in\mathcal D$ est inversible d'inverse $B\in\mathcal D$. 
+Soient $i\neq j$ dans $\{1,\dots,n\}$. Alors le calcul du coefficient en $(i,j)$ de $BA$ donne
+$$\sum_{k=1}^n b_{i,k}a_{k,j}=0.$$
+Tous les termes étant positifs, ils sont tous nuls. On a donc, pour tout entier $k$ de $\{1,\dots,n\}$,
+$$b_{i,k}a_{k,j}=0.$$
+Fixons $k$ dans $\{1,\dots,n\}$. La matrice $B$ étant inversible, sa $k$-ième colonne n'est pas nulle, et il existe $i$ de $\{1,\dots,n\}$ tel que $b_{i,k}\neq 0$. Alors on a $a_{k,j}=0$ pour tout $j\neq i$. 
+Autrement dit, la matrice $A$ a au plus un coefficient non nul dans sa $k$-ième ligne. Mais la somme des éléments de chaque ligne de $A$ valant 1, ce coefficient vaut forcément 1. Ainsi, $A$ est une matrice
+n'ayant qu'un seul 1 sur chaque ligne. La matrice $A$ étant inversible, ces 1 sont sur chaque ligne dans une colonne différente. $A$ est ce que l'on appelle une matrice de permutation. Réciproquement, il est clair qu'une telle matrice est élément de $\mathcal D$, est inversible et que son inverse est élément de $\mathcal D$.
+</ol></div></div></div>
+
+<div class=titrepartie>Application des matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater3038"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3038"),	max:5, rating:2.0625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3038,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application à l'étude de suites récurrentes <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3038.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(3038,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3038','imageenonce3038');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3038"></a><div class=inner id="innerenonce3038">On considère les matrices 
+\[ A=\frac 12\begin{pmatrix} 0 & 1 & 1\\
+1&0&1\\
+1&1&0
+\end{pmatrix}\textrm{ et }P=\begin{pmatrix}
+1&-1&-1\\
+1&1&0\\
+1&0&1
+\end{pmatrix}. \]
+<ol class="enumeratechiffre">
+<li> Démontrer que $P$ est inversible, et déterminer son inverse.
+<li> On pose $D=P^{-1}AP$. Calculer $D$.
+<li> Calculer $D^n$ pour tout $n\geq 1$.
+<li> Démontrer que, pour tout $n\geq 1$, $A^n=PD^n P^{-1}$. On en déduit que pour tout entier $n$, 
+$$A^n=\begin{pmatrix}
+\frac 13+\frac 23\cdot \left(\frac{-1}2\right)^n &\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n &\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n  \\[0.1cm]
+\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n & \frac 13+\frac 23\cdot \left(\frac{-1}2\right)^n  &\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n \\[0.1cm]
+\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n &\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n &\frac 13+\frac 23\cdot \left(\frac{-1}2\right)^n 
+\end{pmatrix}$$
+(on ne demande pas de faire le calcul, mais vous pouvez vérifier vos résultats en calculant quelques coefficients). 
+<li> On considère les trois suites réelles $(u_n)$, $(v_n)$ et $(w_n)$ définies par récurrence, pour $u_0$, $v_0$ et $w_0$ des réels, par 
+\[ \left\{ \begin{array}{rcl}
+u_{n+1}&=&\displaystyle\frac{v_n+w_n}2\\[0.2cm]
+v_{n+1}&=&\displaystyle\frac{u_n+w_n}2\\[0.2cm]
+w_{n+1}&=&\displaystyle\frac{u_n+v_n}2.
+\end{array}\right.\]
+Pour $n\in\mathbb N$, on considère le vecteur $U_n=\begin{pmatrix}u_n\\v_n\\w_n\end{pmatrix}$. Quelle relation matricielle relie $U_{n+1}$, $U_n$ et $A$? En déduire l'expression de $U_n$ en fonction de $A^n$ et de $U_0$.
+<li> Démontrer que les trois suites $(u_n)$, $(v_n)$ et $(w_n)$ convergent, et en déduire leur limite.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3038','imagecorrige3038',3038);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3038"></a><div class=inner id="innercorrige3038" style="display:none;"><ol class="enumeratechiffre">
+<li> Par la méthode du pivot de Gauss, on prouve facilement que $P$ est inversible et que son inverse est donné par 
+$$P^{-1}=\begin{pmatrix}
+\frac 13&\frac 13&\frac 13\\[0.1cm]
+\frac{-1}3&\frac 23&\frac{-1}3\\[0.1cm]
+\frac{-1}3&\frac{-1}3&\frac 23
+\end{pmatrix}.$$
+<li> Après un petit calcul on trouve
+$$D=\begin{pmatrix}
+1&0&0\\
+0&\frac{-1}2&0\\
+0&0&\frac{-1}2
+\end{pmatrix}.$$
+<li> Par récurrence, ou parce que l'on connait la formule donnait la puissance $n$-ième d'une matrice diagonale, on trouve
+$$D^n=\begin{pmatrix}
+1&0&0\\
+0&\frac{(-1)^n}{2^n}&0\\
+0&0&\frac{(-1)^n}{2^n}
+\end{pmatrix}.$$
+<li> On remarque que $D=P^{-1}AP\iff PDP^{-1}=A$ en multipliant à gauche par $P$ et à droite par $P^{-1}$. Il vient ensuite par récurrence sur $n$ que $A^n=PD^nP^{-1}$.
+<li> On a $U_{n+1}=AU_n$ d'où l'on déduit, par une récurrence immédiate, que $U_n=A^n U_0$.
+<li> On a par exemple 
+$$u_n=\left(\frac 13+\frac 23\cdot \left(\frac{-1}2\right)^n \right)u_0+\left(\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n \right)v_0+
+\left(\frac{1}{3}-\frac13\cdot\left(\frac{-1}2\right)^n \right)w_0.$$
+Puisque la suite $((-1/2)^n)$ tend vers $0$, on déduit des règles habituelles concernant les limites de suites que $(u_n)$ converge vers $\frac{u_0+v_0+w_0}3$. Il en est de même de $(v_n)$ et $(w_n)$ (par exemple, par symétrie de l'expression de ces suites).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater930"></span><script>var myRating = raterJs( { element:document.querySelector("#rater930"),	max:5, rating:2.0434782608696, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(930,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices et suites <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=930.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(930,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce930','imageenonce930');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce930"></a><div class=inner id="innerenonce930">Soient $(a_n)$, $(b_n)$ et $(c_n)$ trois suites réelles telles que $a_0=1$, $b_0=2$, $c_0=7$, et vérifiant les relations de récurrence :
+$$
+\left\{
+\begin{array}{rcccc}
+a_{n+1}&=&3a_n+&b_n&\\
+b_{n+1}&=&&3b_n+&c_n\\
+c_{n+1}&=&&&3c_n
+\end{array}
+\right.$$
+On souhaite exprimer $a_n$, $b_n$, et $c_n$ uniquement en fonction de $n$.
+<ol class="enumeratechiffre">
+<li> On considère le vecteur colonne $X_n=\left(\begin{array}{c}a_n\\b_n\\c_n\end{array}\right)$. Trouver une matrice $A$ telle que $X_{n+1}=AX_n$. En déduire que $X_n=A^n X_0$.
+<li> Soit $N=\left(\begin{array}{ccc}0&1&0\\
+0&0&1\\
+0&0&0\end{array}\right)$. Calculer $N^2$, $N^3$, puis $N^p$ pour $p\geq 3$.
+<li> Montrer que :
+$$A^n=3^{n}I+3^{n-1}nN+3^{n-2}\frac{n(n-1)}{2}N^2.$$
+<li> En déduire $a_n$, $b_n$ et $c_n$ en fonction de $n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication930','imageindication930');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication930"></a><div class=inner id="innerindication930" style="display:none;"><ol class="enumeratechiffre">
+<li> S'inspirer de l'écriture matricielle d'un système.
+<li> Montrer que $N^p=0$ pour $p\geq 3$.
+<li> Ecrire $A=3I+N$, puis procéder par récurrence, ou bien appliquer la formule du binôme de Newton.
+<li> Utiliser 1. et 3.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige930','imagecorrige930',930);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige930"></a><div class=inner id="innercorrige930" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $$A=\left(
+\begin{array}{ccc}
+3&1&0\\
+0&3&1\\
+0&0&3\\
+\end{array}\right).$$
+Il est clair que $X_{n+1}=AX_n$, et par récurrence on en déduit que $X_n=A^n X_0$.
+<li> On a :
+$$N^2=\left(
+\begin{array}{ccc}
+0&0&1\\
+0&0&0\\
+0&0&0\\
+\end{array}\right),
+\ N^3=\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&0\\
+0&0&0\\
+\end{array}\right).$$
+Pour $p\geq 3$, on a alors $N^p=N^3\cdot N^{p-3}=0$.
+<li> Ecrivons que $A=3I+N$, et remarquons que les matrices $3I$ et $N$ commutent. Il est possible d'appliquer la formule du binôme, qui est très simple puisque $N^p=0$ dès que $p\geq 3$. On obtient exactement le résultat demandé (il était également possible de procéder par récurrence).
+<li> On a donc :
+$$A^n=\left(
+\begin{array}{rcl}
+3^n&3^{n-1}n&3^{n-2}\times \frac{n(n-1)}{2}\\
+0&3^n&3^{n-1}n\\
+0&0&3^n\\
+\end{array}\right).$$
+On obtient alors :
+$$\left\{
+\begin{array}{ccc}
+a_n&=&3^n+2\times 3^{n-1}n+7\times 3^{n-2}\times \frac{n(n-1)}{2}\\
+b_n&=&2\times 3^n+7\times 3^{n-1}n\\
+c_n&=&7\times 3^n.
+\end{array}\right.$$ 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater3039"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3039"),	max:5, rating:2.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3039,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Modèle proie-prédateur <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3039.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(3039,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3039','imageenonce3039');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3039"></a><div class=inner id="innerenonce3039"> Dans un étang se trouvent deux populations de poissons : des gardons et des brochets. 
+ Le brochet est un prédateur naturel du gardon. Sa population d'une année sur l'autre varie donc en fonction
+ <ul class="rien">
+  <li> du nombre de brochets déjà présents dans l'étang (reproduction)
+  <li> du nombre de gardons déjà présents dans l'étang (proies).
+ </ul>
+ De la même façon, la population du gardon évolue en fonction
+ <ul class="rien">
+  <li> du nombre de gardons déjà présents dans l'étang (reproduction)
+  <li> du nombre de brochets déjà présents dans l'étang (prédateurs).
+ </ul>
+Au premier janvier 2021, on relève 1000 gardons et 100 brochets dans l'étang. Pour $n\in\mathbb N$, on note
+$g_n$, respectivement $b_n$, le nombre de gardons, resp. de brochets, au 1er janvier de l'année 2021+$n$.
+<ol class="enumeratechiffre">
+ <li> Partie 1.<br>
+ Après une étude, des biologistes ont déterminé que les suites $(g_n)$ et $(b_n)$
+ vérifient les relations de récurrence croisées suivantes :
+ $$ \left\{ \begin{array}{ccccccccc}
+             g_{n+1}&=&1,\!1 g_n&-&0,\!2b_n\\
+             b_{n+1}&=&0,\!4 g_n&+&0,\!5 b_n.
+            \end{array}\right.$$
+Pour tout $n\in\mathbb N$, on note $U_n$ le vecteur $U_n=\begin{pmatrix} g_n\\b_n\end{pmatrix}$
+et on note $A$ la matrice $A=\begin{pmatrix} 1,\!1 & -0,\!2\\
+                              0,\!4&0,\!5
+                             \end{pmatrix}.$
+<ol class="enumeratechiffre">
+<li> Soit $n\in\mathbb N$. Quelle relation lie $U_n,\ U_{n+1}$ et $A$? En déduire une relation entre $U_n$, $A$ et $U_0$.
+<li> Soit $P$ la matrice $P=\begin{pmatrix} 1&1\\1&2\end{pmatrix}$. Justifier que $P$ est inversible et calculer $P^{-1}$.
+<li> On pose $D=P^{-1}AP$. Calculer $D$.
+<li> Calculer $D^n$ pour tout $n\geq 1$.
+<li> Démontrer que, pour tout $n\geq 1$, $A^n=PD^n P^{-1}$.
+<li> En déduire l'expression de $g_n$ et de $b_n$ pour tout $n\in\mathbb N$. Quelle est la limite des deux suites $(g_n)$ et $(b_n)$?
+Quelle interprétation en faites-vous?
+</ol>
+<li> Partie 2. <br>
+Pour enrayer l'extinction des espèces, on décide de relâcher chaque année 30 gardons dans l'étang. Dans cette deuxième modélisation, les
+deux suites $(g_n)$ et $(b_n)$ vérifient donc maintenant les relations
+$$ \left\{ \begin{array}{ccccccccc}
+             g_{n+1}&=&1,\!1 g_n&-&0,\!2b_n&+&30\\
+             b_{n+1}&=&0,\!4 g_n&+&0,\!5 b_n.
+            \end{array}\right.$$
+de sorte que, en gardant les mêmes notations, on a $U_{n+1}=AU_n+B$ avec $B=\begin{pmatrix} 30 \\ 0\end{pmatrix}$.
+<ol class="enumeratechiffre">
+<li> Démontrer que la matrice $(A-I_2)$ est inversible et calculer son inverse. 
+<li> On pose $C=(A-I_2)^{-1}B$. Calculer explicitement $C$.
+<li> Pour $n\in\mathbb N$, on pose $V_{n}=U_n+C$. Vérifier que $V_{n+1}=AV_n$.
+<li> Exprimer $V_n$ en fonction de $A^n$ et $V_0$. On note $(x_n)$ et $(y_n)$ les deux suites telles que $V_n=\begin{pmatrix}x_n\\y_n\end{pmatrix}$.
+Déterminer les limites des deux suites $(x_n)$ et $(y_n)$.
+<li> Quelles sont les limites des suites $(g_n)$ et $(b_n)$ dans ce cas? Interpréter...
+</ol>
+</ol>
+Cet exercice est inspiré de travaux réels réalisées à la fin du XIXè siècle par deux spécialistes de la dynamique des populations : l'italien Vito Volterra et de l'américain James Lotka.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3039','imagecorrige3039',3039);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3039"></a><div class=inner id="innercorrige3039" style="display:none;"> <ol class="enumeratechiffre">
+  <li> <ol class="enumeratechiffre">
+  <li> On a $U_{n+1}=AU_n$. Par une récurrence immédiate, on déduit que $U_n=A^n U_0$.
+  <li> Par un calcul facile, on vérifie que $P$ est inversible et que $P^{-1}=\begin{pmatrix} 2 & -1 \\ -1 & 1\end{pmatrix}$.
+  <li> On a $D=\begin{pmatrix} 0,\!9 & 0 \\ 0 & 0,\!7 \end{pmatrix}$.
+  <li> Par récurrence, ou parce qu'on connait la formule pour les puissances de matrices diagonales, on obtient 
+  \[ D^n=\begin{pmatrix} 0,\!9^n & 0 \\ 0 & 0,\!7^n \end{pmatrix}. \]
+<li> On part de la relation $D=P^{-1}AP$. En multipliant à gauche par $P$, et à droite par $P^{-1},$ on trouve que $A=PDP^{-1}$. On démontre alors la relation par récurrence. Pour $n\geq 1,$ notons $\mathcal P(n)$ la propriété $A^n=PD^nP^{-1}$. Alors 
+<ul class="rien">
+<li> Initialisation : la propriété est vraie pour $n=1.$
+<li> Hérédité : Soit $n\geq 1$ tel que $\mathcal P_n$ est vraie. Alors on a 
+$$A^{n+1}=A^n\cdot A=PD^n P^{-1}APD^{-1}=PD^n DP^{-1}=PD^{n+1}P^{-1}.$$
+Ainsi, $\mathcal P(n+1)$ est vraie.
+</ul>
+Par le principe de récurrence, la propriété est vraie pour tout $n\geq 1.$ 
+  <li> Par un calcul facile, on trouve 
+  \[ A^n=\begin{pmatrix} 2\cdot 0,\!9^n-0,\!7^n & -0,\!9^n +0,\!7^n\\
+          2\cdot 0,\!9^n -2\cdot 0,\!7^n & -0,\!9^n +2\cdot 0,\!7^n
+         \end{pmatrix}.\]
+On en déduit que 
+\[ \left\{
+ \begin{array}{rcl}
+  g_n&=&(2\cdot 0,\!9^n-0,\!7^n)\times 1000 +( -0,\!9^n +0,\!7^n)\times 100\\
+  b_n&=&( 2\cdot 0,\!9^n -2\cdot 0,\!7^n)\times 1000 + (- 0,\!9^n +2\cdot 0,\!7^n)\times 100.
+ \end{array}
+\right.
+\]
+
+Puisque les suites $(0,\!9^n)$ et $(0,\!7^n)$ tendent vers $0$, on en déduit que les suites $(g_n)$ et $(b_n)$ tendent toutes deux vers $0$.
+Les espèces vont s'éteindre!
+  </ol>
+   <li> <ol class="enumeratechiffre">
+  <li> Par un calcul facile, on vérifie que $A-I_2$ est inversible et que 
+  \[ (A-I_2)^{-1}=\begin{pmatrix} -\frac{50}3& \frac{20}3\\ -\frac{40}3& \frac{10}3\end{pmatrix}. \]
+  <li> On obtient $C=\begin{pmatrix} -500\\-400\end{pmatrix}$.
+  <li> Il suffit de faire le calcul! Par exemple, la première ligne de $V_{n+1}$ est 
+  \[ g_{n+1}-500=1,\!1 g_n -0,\!2b_n-470 \]
+  et la première ligne de $AV_n$ est 
+  \[ 1,\!1 g_n-1,\!1\cdot 500-0,\!2b_n+0,\!2\cdot 400=1,\!1 g_n -0,\!2b_n-470. \]
+  <li> Comme dans la partie 1, on a $V_n=A^n V_0$ et les suites $(x_n)$ et $(y_n)$ tendent vers $0$.
+  <li> Puisque $g_n=x_n+500$, la suite $(g_n)$ tend vers $500$. De même, la suite $(b_n)$ tend vers $400$.
+  Il suffit donc d'introduire 30 gardons chaque année pour arriver à des populations d'équilibre de $500$ gardons et $400$ brochets, 
+  ce qui est surprenant!
+  </ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater931"></span><script>var myRating = raterJs( { element:document.querySelector("#rater931"),	max:5, rating:2.9565217391304, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(931,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice et systèmes linéaires <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=931.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(931,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce931','imageenonce931');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce931"></a><div class=inner id="innerenonce931">Soit $I=[a,b]$ un intervalle, $\theta_1,\ \theta_2,\ \theta_3$ trois fonctions continues sur $I$, à valeurs réelles, et pour lesquelles on peut trouver des coefficients réels $a_1,\ a_2,\ a_3$ non tous nuls tels que la fonction $$\theta=a_1\theta_1+a_2\theta_2+a_3\theta_3$$
+admette au moins trois racines distinctes $x_1,\ x_2,\ x_3$. Prouver qu'il existe des réels $\lambda_1,\ \lambda_2,\ \lambda_3$ non tous nuls tels que :
+$$\lambda_1\theta_k(x_1)+\lambda_2\theta_k(x_2)+\lambda_3\theta_k(x_3)=0,$$
+pour $k=1,2$ ou 3.</div></div><div class=indication><a href="javascript:showAll('innerindication931','imageindication931');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication931"></a><div class=inner id="innerindication931" style="display:none;">&Eacute;crire la condition d'annulation de $\theta$ en $x_1,\ x_2,\ x_3$ sous la forme d'une matrice dont les colonnes sont liées. Que dire des lignes de cette matrice?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige931','imagecorrige931',931);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige931"></a><div class=inner id="innercorrige931" style="display:none;">Soit $M$ la matrice :
+$$M=\left(\begin{array}{ccc}
+\theta_1(x_1)&\theta_2(x_1)&\theta_3(x_1)\\
+\theta_1(x_2)&\theta_2(x_2)&\theta_3(x_2)\\
+\theta_1(x_3)&\theta_2(x_3)&\theta_3(x_3)\\
+\end{array}\right).$$
+Par hypothèse, les colonnes de cette matrice sont liées. Les lignes le sont donc aussi, et il existe des réels $\lambda_1,\ \lambda_2,\ \lambda_3$ non tous nuls tels que $\lambda_1L_1+\lambda_2L_2+\lambda_3L_3=0$.
+Ceci donne le résultat. La difficulté de cet exercice repose donc sur sa formulation un peu alambiquée, et aussi de sa position dans le problème (d'analyse) dont il est extrait.</div></div></div>
+
+
+<div class=cardcours>
+<div class="titrecours">Calcul matriciel</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcours%252Fmatrices.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Ffeuillesexo%252Fmatrices&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fmethodes%252Fmatrices.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcolles%252Fmatrices&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fvideos%252Fmatrices.html">Vidéos</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fquizz%252Fmatrices.html">Quizz</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

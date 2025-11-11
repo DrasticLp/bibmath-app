@@ -1,0 +1,478 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Espaces vectoriels : combinaisons linéaires, familles libres, génératrices</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrelineaire.html">Exercices d'algèbre linéaire</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Espaces vectoriels : combinaisons linéaires, familles libres, génératrices</h1>
+<div class=titrepartie>Combinaisons linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater810"></span><script>var myRating = raterJs( { element:document.querySelector("#rater810"),	max:5, rating:1.8604651162791, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(810,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Combinaisons linéaires? <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=810.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(810,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce810','imageenonce810');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce810"></a><div class=inner id="innerenonce810">Les vecteurs $u$ suivants sont-ils combinaison linéaire des vecteurs $u_i$?
+<ol class="enumeratechiffre">
+<li> $E=\mathbb R^2$, $u=(1,2)$, $u_1=(1,-2)$, $u_2=(2,3)$;
+<li> $E=\mathbb R^2$, $u=(1,2)$, $u_1=(1,-2)$, $u_2=(2,3)$, $u_3=(-4,5)$;
+<li> $E=\mathbb R^3$, $u=(2,5,3)$, $u_1=(1,3,2)$, $u_2=(1,-1,4)$;
+<li> $E=\mathbb R^3$, $u=(3,1,m)$, $u_1=(1,3,2)$, $u_2=(1,-1,4)$ (discuter suivant la valeur de $m$).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication810','imageindication810');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication810"></a><div class=inner id="innerindication810" style="display:none;">Il s'agit de résoudre $u=xu_1+yu_2$ et d'étudier si le système possède des solutions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige810','imagecorrige810',810);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige810"></a><div class=inner id="innercorrige810" style="display:none;"><ol class="enumeratechiffre">
+<li> On se demande s'il existe $x,y\in\mathbb R$ tel que $u=xu_1+yu_2$. On doit résoudre le système
+$$\left\{\begin{array}{rcl}
+1&=&x+2y\\
+2&=&-2x+3y
+\end{array}\right.$$
+Effectuant $L_2+2L_1\to L_2$, on trouve qu'il est équivalent à
+$$\left\{\begin{array}{rcl}
+1&=&x+2y\\
+4&=&7y
+\end{array}\right.$$
+On peut donc trouver $y$, puis $x$ : $u$ est bien combinaison linéaire de $u_1$ et $u_2$. Une façon plus abstraite de
+voir les choses est de remarquer que $u_2$ n'est pas proportionnel à $u_1$. Ainsi, $(u_1,u_2)$ est une famille libre à
+deux éléments dans $\mathbb R^2$, espace de dimension 2. C'est donc une base de $E$. En particulier, tout vecteur de
+$\mathbb R^2$ s'écrit comme combinaison linéaire de $u_1$ et $u_2$.
+<li> D'après la question précédente, $u$ est combinaison linéaire de $u_1$ et $u_2$. Il est a fortiori combinaison linéaire de $u_1$, $u_2$ et $u_3$.
+<li> On ne peut plus avoir de raisonnement abstrait car on travaille avec seulement deux vecteurs
+dans un espace de dimension 3. L'équation $u=xu_1+yu_2$ équivaut successivement à 
+$$\left\{\begin{array}{rcl}
+x+y&=&2\\
+3x-y&=&5\\
+2x+4y&=&3\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcll}
+x+y&=&2\\
+4x&=&7&(L_2+L_1\to L_2)\\
+-2x&=&-5&(L_3-4L_1\to L_3)
+\end{array}
+\right.$$
+Les deux dernières équations sont incompatibles, $u$ n'est donc pas combinaison linéaire de $u_1$ et $u_2$.
+<li> On reprend le même raisonnement. L'équation $u=xu_1+yu_2$ équivaut successivement à 
+$$\left\{\begin{array}{rcl}
+x+y&=&3\\
+3x-y&=&1\\
+2x+4y&=&m\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcll}
+x+y&=&3\\
+4x&=&4&(L_2+L_1\to L_2)\\
+-2x&=&m-12&(L_3-4L_1\to L_3)
+\end{array}
+\right.$$
+$$
+\iff
+\left\{
+\begin{array}{rcl}
+x&=&1\\
+y&=&2\\
+-2&=&m-12
+\end{array}
+\right.
+$$
+Le système admet donc une solution si et seulement si $m=10$. Par conséquent, $u$ est combinaison
+linéaire de $u_1$ et $u_2$ si et seulement si $m=10$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3584"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3584"),	max:5, rating:1.4090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3584,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une condition pour être combinaison linéaire <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3584.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3584,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3584','imageenonce3584');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3584"></a><div class=inner id="innerenonce3584">Dans $\mathbb R^3,$ on pose $u_1=\begin{pmatrix}1\\-1\\2\end{pmatrix}$ et 
+$u_2=\begin{pmatrix}1\\1\\-1\end{pmatrix}.$ 
+<ol class="enumeratechiffre">
+<li> Les vecteurs $v_1=\begin{pmatrix}3\\1\\0\end{pmatrix}$ et $v_2=\begin{pmatrix}1\\5\\-1\end{pmatrix}$ sont-ils combinaison linéaire de $u_1$ et $u_2$ ?
+<li> Soit $a,b,c\in\mathbb R$. Démontrer que $v=\begin{pmatrix}a\\b\\c\end{pmatrix}$ est combinaison linéaire de $u_1$ et $u_2$ si et seulement si $-a+3b+2c=0.$
+<li> En déduire un vecteur de $\mathbb R^3$ qui n'est pas combinaison linéaire de $u_1$ et de $u_2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3584','imageindication3584');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3584"></a><div class=inner id="innerindication3584" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> On cherche s'il existe deux réels $\lambda$ et $\mu$ tels que $v=\lambda u_1+\mu u_2$. Ceci revient à se demander si un système admet une solution. Résoudre ce système et trouver une condition de compatibilité pour qu'il admette une solution.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3584','imagecorrige3584',3584);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3584"></a><div class=inner id="innercorrige3584" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut déjà remarquer, sans faire de calculs, que $v_1=u_1+2u_2,$ ce qui signifie que $v_1$ est bien combinaison linéaire de $u_1$ et de $u_2$. 
+Pour $v_2,$ cela semble moins facile. On cherche donc deux réels $\lambda$ et $\mu$ tels que $v_2=\lambda u_1+\mu u_2.$ Ceci donne le système
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+\lambda+\mu&=&1\\
+-\lambda+\mu&=&5\\
+2\lambda-\mu&=&-7
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcll}
+\lambda+\mu&=&1\\
+2\mu&=&6&L_2+L_1\to L_2\\
+-3\mu&=&-9&L_3-2L_1\to L_3
+\end{array}
+\right.
+\\
+&\iff&
+\left\{
+\begin{array}{rcl}
+\lambda&=&-2\\
+\mu&=&3
+\end{array}\right.
+\end{eqnarray*}
+On a donc $v_2=-2u_1+3u_2$ et $v_2$ est aussi combinaison linéaire de $u_1$ et $u_2$.
+<li> $v$ est combinaison linéaire de $u_1$ et $u_2$ si et seulement s'il existe $\lambda$ et $\mu$ des réels tels que $v=\lambda u_1+\mu u_2,$ 
+c'est-à-dire si et seulement si le système
+$$\left\{
+\begin{array}{rcl}
+\lambda+\mu&=&a\\
+-\lambda+\mu&=&b\\
+2\lambda-\mu&=&c
+\end{array}\right.
+$$
+d'inconnues $\lambda$ et $\mu$ admet une solution. En effectuant les mêmes opérations que précédemment, on trouve qu'il est équivalent à 
+$$\left\{
+\begin{array}{rcll}
+\lambda+\mu&=&a\\
+2\mu&=&a+b&\\
+-3\mu&=&-2a+c&
+\end{array}
+\right.$$
+ou encore
+$$\left\{
+\begin{array}{rcll}
+\lambda+\mu&=&a\\
+2\mu&=&a+b&\\
+0&=&-a+3b+2c&2L_3+3L_2\to L_3
+\end{array}
+\right.$$
+Ainsi, ce système admet une solution si et seulement $-a+3b+2c=0$ et donc $v$ est combinaison linéaire de $u_1$ et de $u_2$ si et seulement si $-a+3b+2c=0.$
+<li> Par exemple, le vecteur $w=\begin{pmatrix}1\\1\\1\end{pmatrix}$ ne vérifie pas la condition précédente, et n'est donc pas combinaison linéaire de $u_1$ et 
+de $u_2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater811"></span><script>var myRating = raterJs( { element:document.querySelector("#rater811"),	max:5, rating:1.8157894736842, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(811,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Les bagues <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=811.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(811,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce811','imageenonce811');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce811"></a><div class=inner id="innerenonce811">&Eacute;mile achète pour sa maman une bague contenant 2g d'or, 5g de cuivre et 4g d'argent. Il la paie 6200 euros.<br>
+Paulin achète pour sa maman une bague contenant 3g d'or, 5g de cuivre et 1g d'argent. Il la paie 5300 euros.<br>
+Frédéric achète pour sa chérie une bague contenant 5g d'or, 12g de cuivre et 9g d'argent. Combien va-t-il la payer?</div></div><div class=indication><a href="javascript:showAll('innerindication811','imageindication811');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication811"></a><div class=inner id="innerindication811" style="display:none;">Le vecteur $(5,12,9)$.  est combinaison linéaire de $(2,5,4)$, $(3,5,1)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige811','imagecorrige811',811);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige811"></a><div class=inner id="innercorrige811" style="display:none;">Le vecteur $(5,12,9)$  est combinaison linéaire de $(2,5,4)$, $(3,5,1)$. Il s'écrit en effet
+$$(5,12,9)=\frac{11}5 (2,5,4)+\frac 15 (3,5,1).$$
+Autrement dit, la dernière bague peut être réalisée avec 11/5 de la première bague et 1/5 de la deuxième bague. Son coût est donc
+$$\frac{11}{5}\times 6200+\frac 15 5300=14700\textrm{ euros}.$$
+Très joli cadeau!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2621"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2621"),	max:5, rating:1.5853658536585, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2621,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Combinaisons linéaires? <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2621.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2621,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2621','imageenonce2621');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2621"></a><div class=inner id="innerenonce2621"><ol class="enumeratechiffre">
+<li> Dans l'espace vectoriel $\mathbb R[X]$, le polynôme $P(X)=16X^3-7X^2+21X-4$ est-il combinaison linéaire de $P_1(X)=8X^3-5X^2+1$ et $P_2(X)=X^2+7X-2$?
+<li> Dans l'espace vectoriel $\mathcal F(\mathbb R,\mathbb R)$ des fonctions de $\mathbb R$ dans $\mathbb R$, la fonction $x\mapsto \sin(2x)$ est-elle combinaison linéaire des fonctions $\sin$ et $\cos$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2621','imageindication2621');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2621"></a><div class=inner id="innerindication2621" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposer que c'est le cas, écrire $P=aP_1+bP_2$ et trouver des conditions que doivent vérifier $a$ et $b$.
+<li> Idem...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2621','imagecorrige2621',2621);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2621"></a><div class=inner id="innercorrige2621" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons que ce soit le cas, et écrivons $P=aP_1+bP_2$. Si on regarde les termes de degré 3, alors on voit qu'on a nécessairemement $a=2$. Si on regarde ensuite les termes de degré 2, alors on voit qu'on a nécessairement $-7=-10+b$ et donc $b=3$. Et alors, on vérifie qu'on a bien $P=2P_1+3P_2$, et donc $P$ est bien combinaison linéaire de $P_1$ et $P_2$.
+<li> Faisons d'abord attention! La formule bien connue $\sin(2x)=2\sin(x)\cos(x)$ ne dit pas que $x\mapsto \sin(2x)$ est combinaison linéaire de $\sin$ et $\cos$, puisqu'un produit de ces deux fonctions intervient. On procède comme à la question précédente et on suppose qu'il existe deux réels $a$ et $b$ tels que, pour tout $x\in\mathbb R$, $\sin(2x)=a\sin(x)+b\cos(x)$. Pour $x=0$, on trouve $b=0$. Pour $x=\pi/2$, on trouve $a=0$. Et comme $x\mapsto \sin(2x)$ n'est pas la fonction nulle, on obtient une contradiction : la fonction $x\mapsto \sin(2x)$ n'est pas une combinaison linéaire des fonctions $\sin$ et $\cos$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2939"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2939"),	max:5, rating:1.12, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2939,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dans un espace de fonctions <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2939.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2939,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2939','imageenonce2939');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2939"></a><div class=inner id="innerenonce2939">Dans $E=\mathcal F(\mathbb R,\mathbb R)$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$, est-ce que la fonction $\arctan$ est combinaison linéaire de $e^{x^2}$, $e^{-x}$ et $\sin$?</div></div><div class=indication><a href="javascript:showAll('innerindication2939','imageindication2939');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2939"></a><div class=inner id="innerindication2939" style="display:none;">Procéder par l'absurde et étudier les limites en $+\infty$ et $-\infty$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2939','imagecorrige2939',2939);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2939"></a><div class=inner id="innercorrige2939" style="display:none;">Supposons que $\arctan$ soit combinaison linéaire de $e^{x^2}$, $e^{-x}$ et $\sin$. Alors il existe $a,b,c\in\mathbb R$ tels que, pour tout $x\in\mathbb R$, 
+$$\arctan(x)=ae^{x^2}+be^{-x}+c\sin(x).$$
+Puisque $e^{-x}$ tend vers $0$ en $+\infty$ et $\sin$ est bornée, si $a\neq 0$, alors $ae^{x^2}+be^{-x}+c\sin(x)$ tend vers $\pm\infty$ lorsque $x\to+\infty$ (suivant le signe de $a$). Ce n'est pas le cas de $\arctan(x)$, et donc $a=0$.<br>
+Prouvons maintenant que $b=0$. Faisant $x=0$ dans l'égalité, et puisqu'on sait déjà que $a=0$, on trouve $b=0$.<br>
+On a donc prouvé que si  $\arctan$ est combinaison linéaire de $e^{x^2}$, $e^{-x}$ et $\sin(x)$, alors il existe $c\in\mathbb R$ tel que $\arctan(x)=c\sin(x)$. Ce n'est pas le cas, puisque par exemple la fonction $\arctan$ admet une limite en $+\infty$ et pas la fonction $\sin$.<br>
+En conclusion, $\arctan$ n'est pas combinaison linéaire de $e^{x^2}$, $e^{-x}$ et $\sin$.</div></div></div>
+
+<div class=titrepartie>Familles libres</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater812"></span><script>var myRating = raterJs( { element:document.querySelector("#rater812"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(812,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pour bien commencer... <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=812.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(812,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce812','imageenonce812');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce812"></a><div class=inner id="innerenonce812">Les familles suivantes sont-elles libres dans $\mathbb R^3$ (ou $\mathbb R^4$ pour la dernière famille)?
+<ol class="enumeratechiffre">
+<li> $(u,v)$ avec $u=(1,2,3)$ et $v=(-1,4,6)$;
+<li> $(u,v,w)$ avec $u=(1,2,-1)$, $v=(1,0,1)$ et $w=(0,0,1)$;
+<li> $(u,v,w)$ avec $u=(1,2,-1)$, $v=(1,0,1)$ et $w=(-1,2,-3)$;
+<li> $(u,v,w,z)$ avec $u=(1,2,3,4)$, $v=(5,6,7,8)$, $w=(9,10,11,12)$ et $z=(13,14,15,16)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication812','imageindication812');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication812"></a><div class=inner id="innerindication812" style="display:none;">&Eacute;crire une combinaison linéaire nulle, et résoudre le système pour voir si tous les coefficients
+de la combinaison linéaire sont nuls.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige812','imagecorrige812',812);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige812"></a><div class=inner id="innercorrige812" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $u$ et $v$ sont non-nuls et que $u$ n'est pas proportionnel à $v$, la famille de deux vecteurs $(u,v)$
+est libre.
+<li> Soit $a,b,c$ des réels tels que $au+bv+cw=0$. On a 
+$$au+bc+cw=(a+b,2a,-a+b+c)$$
+et donc $au+bv+cw=0$ si et seulement si 
+$$
+\left\{
+\begin{array}{rcl}
+a+b&=&0\\
+2a&=&0\\
+-a+b+c&=&0
+\end{array}
+\right.$$
+On en déduit, par la deuxième ligne, $a=0$, puis $b=0$ et $c=0$. La famille $(u,v,w)$ est une famille libre.
+<li> Soit $a,b,c$ des réels tels que $au+bv+cw=0$. Ceci se traduit en le système
+$$
+\left\{
+\begin{array}{rcl}
+a+b-c&=&0\\
+2a+2c&=&0\\
+-a+b-3c&=&0
+\end{array}
+\right.
+\iff \left\{
+\begin{array}{rcl}
+a+b-c&=&0\\
+-2b+4c&=&0\ \ L_2-2L_1\to L_2\\
+2b-4c&=&0\ \ L_3+L_1\to L_3
+\end{array}
+\right.$$
+Pour $c=1$, $b=2$ et $a=-1$, on obtient une solution non-nulle du système. Autrement dit, $-u+2v+w=0$ et donc la famille $(u,v,w)$ est liée.
+<li> On peut reprendre la même méthode que précédemment, en écrivant $au+bv+cw+dz=0$, et montrer qu'il existe une solution non nulle :
+$(u,v,w,z)$ est une famille liée. On peut aussi remarquer plus facilement que $v=u+(4,4,4,4)$ et que $w=v+(4,4,4,4)$. Ainsi, $v-u=w-v$, soit $u-2v+w=0$, et la famille est liée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater813"></span><script>var myRating = raterJs( { element:document.querySelector("#rater813"),	max:5, rating:2.1935483870968, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(813,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux par deux, et par trois? <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=813.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(813,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce813','imageenonce813');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce813"></a><div class=inner id="innerenonce813">On considère dans $\mathbb R^3$ les vecteurs 
+$v_1=(1,1,0)$, $v_2=(4,1,4)$ et $v_3=(2,-1,4)$.
+<ol class="enumeratechiffre">
+<li> Montrer que la famille $(v_1,v_2)$ est libre. Faire de même pour $(v_1,v_3)$, puis pour $(v_2,v_3)$.
+<li> La famille $(v_1,v_2,v_3)$ est-elle libre?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication813','imageindication813');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication813"></a><div class=inner id="innerindication813" style="display:none;">Pour la première question, les vecteurs sont non-nuls et non colinéaires. Pour la seconde, trouver une relation de liaison
+entre les trois vecteurs, au besoin en résolvant un système.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige813','imagecorrige813',813);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige813"></a><div class=inner id="innercorrige813" style="display:none;"><ol class="enumeratechiffre">
+<li> Les vecteurs $v_1$ et $v_2$ ne sont pas nuls et ne sont pas colinéaires.
+Ainsi, la famille de \emph{deux} vecteurs $(v_1,v_2)$ est libre. Il en est de même
+pour la famille $(v_1,v_3)$, ainsi que pour la famille $(v_2,v_3)$, par une preuve
+identique.
+<li> On remarque que $v_3=v_2-2v_1$ : il y a une combinaison linéaire des trois vecteurs
+avec des coefficients non tous nuls qui donne le vecteur nul. La famille n'est pas libre.
+Si on n'a pas la "chance" de remarquer que $v_3=v_2-2v_1$, on peut écrire
+une relation de liaison $av_1+bv_2+cv_3=0$, on obtient un système de trois équations
+dont les inconnues sont $a$, $b$ et $c$. La résolution de ce système montre qu'il admet
+une solution non-nulle.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater814"></span><script>var myRating = raterJs( { element:document.querySelector("#rater814"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(814,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Complétion de familles libres <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=814.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(814,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce814','imageenonce814');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce814"></a><div class=inner id="innerenonce814">On considère dans $\mathbb R^3$ les vecteurs 
+$$v_1=(1,-1,1),\ v_2=(2,-2,2),\ v_3=(2,-1,2).$$
+<ol class="enumeratechiffre">
+<li> Peut-on trouver un vecteur $w$ tel que $(v_1,v_2,w)$ soit libre?
+Si oui, construisez-en un.
+<li> Même question en remplaçant $v_2$ par $v_3$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication814','imageindication814');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication814"></a><div class=inner id="innerindication814" style="display:none;">La famille $(v_1,v_2)$ est déjà liée, pas la famille $(v_1,v_3)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige814','imagecorrige814',814);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige814"></a><div class=inner id="innercorrige814" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $v_2=2v_1$. La famille $(v_1,v_2)$ est donc liée. Quel que soit le vecteur $w$, la famille
+$(v_1,v_2,w)$ restera liée, puisqu'on aura toujours $2v_1-v_2+0w=0$, combinaison linéaire dont
+qui n'a pas tous ses coefficients nuls.
+<li> A contrario, la famille $(v_1,v_3)$ est libre. Pour $w=(1,0,0)$, il est facile de voir que
+la famille $(v_1,v_3,w)$ est libre. En effet, si $av_1+bv_3+c w=0$, on a
+$$\left\{
+\begin{array}{rcl}
+a+2b+c&=&0\\
+-a-b&=&0\\
+a+2b&=&0
+\end{array}
+\right.
+\iff\left\{
+\begin{array}{rcl}
+a+2b+c&=&0\\
+-a-b&=&0\\
+b&=&0
+\end{array}\right.
+$$
+d'où on tire $a=b=c=0$ et la famille est libre.<br>
+Quand on connait la théorie de la dimension, on sait que l'on peut compléter la famille libre $(v_1,v_3)$ grâce au théorème de la base incomplète, qui nous dit qu'on peut compléter
+la famille libre à deux vecteurs $(v_1,v_3)$ pour en faire une base (à trois vecteurs)
+de $\mathbb R^3$. De plus, on peut choisir le vecteur qui complète dans n'importe quel
+système générateur de $\mathbb R^3$. Le plus naturel est bien entendu la base canonique.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater815"></span><script>var myRating = raterJs( { element:document.querySelector("#rater815"),	max:5, rating:0.78571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(815,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynômes à degrés échelonnés <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=815.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(815,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce815','imageenonce815');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce815"></a><div class=inner id="innerenonce815">Soit $(P_1,\dots,P_n)$ une famille de polynômes de $\mathbb C[X]$ non nuls, à degrés échelonnés, c'est-à-dire
+$\deg(P_1)&lt;\deg(P_2)&lt;\dots&lt;\deg(P_n)$. Montrer que $(P_1,\dots,P_n)$ est une famille libre.</div></div><div class=indication><a href="javascript:showAll('innerindication815','imageindication815');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication815"></a><div class=inner id="innerindication815" style="display:none;">Si $\lambda_n\neq 0$, quel est le degré de $\lambda_1 P_1+\dots+\lambda_n P_n$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige815','imagecorrige815',815);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige815"></a><div class=inner id="innercorrige815" style="display:none;">Considérons une relation $\lambda_1 P_1+\dots+\lambda_n P_n=0$. Si $\lambda_n\neq 0$,
+le membre de gauche de l'égalité est un polynôme de degré $\deg(P_n)\neq -\infty$ puisque tous les polynômes sont supposés non nuls. Ce ne peut donc pas être
+le polynôme nul et on trouve que $\lambda_n=0$. En itérant le raisonnement (en faisant une récurrence), on trouve
+successivement $\lambda_{n-1}=\dots=\lambda_1=0$, c'est-à-dire que la famille $(P_1,\dots,P_n)$ est une famille libre.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater819"></span><script>var myRating = raterJs( { element:document.querySelector("#rater819"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(819,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des fonctions <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=819.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(819,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce819','imageenonce819');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce819"></a><div class=inner id="innerenonce819">Soit $E=\mathcal F(\mathbb R,\mathbb R)$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$. &Eacute;tudier l'indépendance linéaire des familles suivantes :
+<ol class="enumeratechiffre">
+<li> $(\sin x,\cos x)$;
+<li> $(\sin 2x,\sin x,\cos x)$;
+<li> $(\cos 2x,\sin^2 x,\cos^2 x)$;
+<li> $(x,e^x,\sin(x))$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication819','imageindication819');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication819"></a><div class=inner id="innerindication819" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;valuer une relation de liaison en $0$...
+<li> Idem, puis en $\pi/2$.
+<li> Utiliser une formule de trigonométrie.
+<li> Par croissance comparée.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige819','imagecorrige819',819);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige819"></a><div class=inner id="innercorrige819" style="display:none;"><ol class="enumeratechiffre">
+<li> Si on a une relation de liaison de la forme $a\cos x+b\sin x=0$, alors on l'évalue en $x=0$ et on trouve $a=0$. Puis en évaluant en $x=\pi/2$, on trouve $b=0$. La famille est libre.
+<li> Si on a une relation de liaison de la forme $a\cos x+b\sin x+c\sin(2x)=0$, alors
+on l'évalue en $x=0$ pour trouver $a=0$, puis en $x=\pi/2$ pour trouver $b=0$. On en déduit que $c=0$. La famille est donc libre. Il faut prendre garde ici à ce que la formule de trigonométrie
+$$\sin(2x)=2\sin x\cos x$$
+n'entraîne pas que $\sin(2x)$ est une combinaison linéaire de $\sin(x)$ et $\cos(x)$.
+<li> On a
+$$\cos(2x)=\cos^2x-\sin^2 x,$$
+qui prouve que $\cos(2x)$ est une combinaison linéaire de $\cos^2 x$ et de $\sin^2 x$. La famille
+est donc liée.
+<li> Si on a une relation de liaison du type 
+$$ax+be^x+c\sin(x)=0,$$ alors on met $e^x$ en facteur et on trouve :
+$$axe^{-x}+b+c\sin(x)e^{-x}=0.$$
+On fait tendre $x$ vers $+\infty$ et le membre de gauche tend vers $b$ qui doit donc être nul. On a alors
+$$ax+c\sin x=0.$$
+Si $a\neq 0$, le membre de gauche tend vers $\pm \infty$ quand $x$ tend vers $+\infty$. C'est donc que $a=0$. On en déduit $c=0$ et la famille est libre.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater816"></span><script>var myRating = raterJs( { element:document.querySelector("#rater816"),	max:5, rating:2.4594594594595, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(816,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Familles de fonctions <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=816.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(816,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce816','imageenonce816');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce816"></a><div class=inner id="innerenonce816">Démontrer que les familles suivantes sont libres dans $\mathcal F(\mathbb R,\mathbb R)$:
+<ol class="enumeratechiffre">
+<li> $(x\mapsto e^{ax})_{a\in\mathbb R}$;
+<li> $(x\mapsto |x-a|)_{a\in\mathbb R}$;
+<li> $(x\mapsto \cos(ax))_{a&gt;0}$;
+<li> $(x\mapsto (\sin x)^n)_{n\geq 1}$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication816','imageindication816');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication816"></a><div class=inner id="innerindication816" style="display:none;">Prendre une sous-famille finie, écrire une relation de liaison, 
+et trouver que tous les coefficients sont nuls. On pourra
+<ol class="enumeratechiffre">
+<li> Factoriser par le terme dominant;
+<li> Utiliser des propriétés de dérivabilité des fonctions;
+<li> Par récurrence...
+<li> Utiliser la limite de $(\sin x)^k/x$ en $0$. 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige816','imagecorrige816',816);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige816"></a><div class=inner id="innercorrige816" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $a_1&lt;a_2&lt;\dots&lt;a_p$, où $p$ est arbitraire. Il suffit de montrer que
+$(e^{a_1x},\dots, e^{a_px})$ est une famille libre.
+Considérons une relation de liaison $\lambda_1 e^{a_1 x}+\dots+\lambda_p e^{a_px}$.
+On factorise par le terme dominant, c'est-à-dire $e^{a_px}$. On obtient
+$$e^{a_p x}(\lambda_p+\lambda_{p-1}e^{(a_{p-1}-a_p)x}+\dots+\lambda_1e^{(a_1-a_p)x})=0,\ \forall x\in\mathbb R.$$
+On simplifie par $e^{a_p x}$, qui ne s'annule jamais, et on fait tendre $x$ vers $+\infty$.
+Puisque $e^{(a_j-a_p)x}$ tend vers $0$ pour $j&lt;p$, le membre de gauche
+converge vers $\lambda_p$ qui vaut donc 0. On répète le procédé en factorisant ensuite par 
+$e^{a_{p-1}x}$ pour prouver que $\lambda_{p-1}=0$, et on obtient successivement que
+$\lambda_p,\lambda_{p-1},\dots$ et finalement $\lambda_1$ sont nuls (on peut aussi 
+effectuer une récurrence). La famille est donc effectivement libre.
+Avec le même type de raisonnement (mais c'est plus dur d'ordonner les couples), on pourra prouver que la famille
+$(x^a(\ln x)^b)_{a,b\in\mathbb R}$ est libre.
+<li> Soient $a_1&lt;a_2&lt;\dots&lt;a_p$, où $p$ est arbitraire. Il suffit de montrer que
+$(x\mapsto |x-a_1|,\dots, x\mapsto |x-a_p|)$ est une famille libre. 
+Considérons une relation de liaison, c'est-à-dire supposons que
+$\lambda_1 |x-a_1|+\dots+\lambda_p |x-a_p|=0$ pour tout $x\in\mathbb R$. Soit $k$ 
+dans $\{1,\dots,p\}$ et réécrivons la relation sous la forme
+$$\lambda_k |x-a_k|=-\sum_{j\neq k}\lambda_j |x-a_j|:=g_k(x).$$
+Alors, la fonction $g_k$ est dérivable en $a_k$, car chaque fonction
+$x\mapsto |x-a_j|$, $j\neq k$ est dérivable en $a_k$ (au voisinage de $a_k$, 
+elle est égale à une fonction affine). Il en est donc de même de
+$x\mapsto \lambda_k |x-a_k|$. Ceci n'est possible que si $\lambda_k=0$.
+<li> On va démontrer par récurrence sur $N$ que toute famille
+$\big(\cos(a_1 x),\dots,\cos(a_N x)\big)$ avec $0&lt;a_1&lt;a_2&lt;\dots&lt;a_N$ est libre. C'est le cas
+pour $N=1$ ($\cos(ax)$ n'est jamais la fonction nulle). Supposons le résultat vrai au rang $N-1$, et
+prouvons-le au rang $N$ en écrivant une relation de liaison :
+$$\lambda_1\cos(a_1x)+\dots+\lambda_N\cos(a_Nx)=0.$$
+On dérive deux fois et on trouve 
+$$a_1^2\lambda_1\cos(a_1x)+\dots+a_N^2\lambda_N\cos(a_Nx)=0.$$
+En retranchant $a_N^2$ fois la première équation à la deuxième, on trouve
+$$(a_1^2-a_N^2)\lambda_1\cos(a_1x)+\dots+(a_{N-1}^2-a_{N}^2)\lambda_{N-1}\cos(a_{N-1}x)=0.$$
+Par hypothèse de récurrence, on a $(a_j^2-a_N^2)\lambda_j=0$ pour tout $j=1,\dots,N-1$, soit finalement
+$\lambda_j=0$ puisque $a_j^2\neq a_N^2$. De retour à l'équation initiale, on retrouve
+aussi $\lambda_N=0$, ce qui prouve bien que la famille est libre.
+<li> Soit $N\geq 1$. Il suffit de prouver que la famille $(x\mapsto (\sin x)^n)_{1\leq n\leq N}$ est
+libre. Considérons des scalaires $\lambda_1,\dots,\lambda_N$ tels que
+$$\lambda_1\sin x+\dots+\lambda_N (\sin x)^N=0.$$
+On rappelle que $\frac{\sin x}{x}\to 1$ si $x\to 0$, et par conséquent, si $k\geq 2$, on a 
+$(\sin x)^k/x\to 0$ si $x\to 0$. Reprenons l'équation précédente et divisons par $x$ pour $x\neq 0$. On a 
+$$\lambda_1\frac{\sin x}x+\lambda_2\frac{\sin^2 x}x+\dots+\lambda_N\frac{ (\sin x)^N}x=0.$$
+Faisons tendre $x$ vers $0$. Le membre de gauche tend vers $\lambda_1$, celui de droite vers $0$ et on obtient donc
+$$\lambda_1=0.$$
+Il suffit ensuite d'itérer le raisonnement en divisant successivement par $x^2,x^3,\dots$, ou bien de faire une récurrence en simplifiant par $\sin x$.<br>
+ Une autre méthode, peut-être plus simple, consiste à considérer le polynôme 
+$$P(X)=\lambda_1 X+\cdots+\lambda_N X^n$$
+et de remarquer que, pour tout $x\in \mathbb R$, $P(\sin x)=0$. Ainsi, $P$ admet une infinite de racines, et donc $P$ est le polynôme nul. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater818"></span><script>var myRating = raterJs( { element:document.querySelector("#rater818"),	max:5, rating:1.9428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(818,rating); this.setRating(rating);   this.disable();    done();     }});</script> - A partir d'une famille libre <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=818.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(818,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce818','imageenonce818');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce818"></a><div class=inner id="innerenonce818">Dans $\mathbb R^n$, on considère une famille de 4 vecteurs libres $(e_1,e_2,e_3,e_4)$. Les familles suivantes sont-elles libres?
+<ol class="enumeratechiffre">
+<li> $(e_1,2e_2,e_3)$;
+<li> $(e_1,e_3)$;
+<li> $(e_1,2e_1+e_4,e_3+e_4)$;
+<li> $(2e_1+e_2,e_1-2e_2,e_4,7e_1-4e_2)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication818','imageindication818');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication818"></a><div class=inner id="innerindication818" style="display:none;">&Eacute;crire pour chaque cas une relation de liaison, développer et se ramener à une écriture sous la forme $ae_1+be_2+ce_3+de_4=0$. Utiliser alors le fait que $(e_1,e_2,e_3,e_4)$ est une famille libre.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige818','imagecorrige818',818);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige818"></a><div class=inner id="innercorrige818" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit une relation de liaison 
+$$ae_1+b(2e_2)+ce_3=0\implies ae_1+(2b)e_2+ce_3+0e_4=0.$$
+Alors puisque la famille $(e_1,e_2,e_3,e_4)$ est libre, on en déduit que $a=2b=c=0$, soit $a=b=c=0$.
+La famille est donc libre.
+<li> C'est encore plus facile. Une famille extraite d'une famille libre est une famille libre!
+<li> Soit une relation de liaison 
+$$ae_1+b(2e_1+e_4)+c(e_3+e_4)=0\implies (a+2b)e_1+ce_3+(b+c)e_4=0.$$
+Puisque la famille $(e_1,e_2,e_3,e_4)$ est libre, ceci entraine que 
+$$\left\{
+\begin{array}{rcl}
+a+2b&=&0\\
+c&=&0\\
+b+c&=&0
+\end{array}\right.
+$$
+d'où on tire assez facilement que $a=b=c=0$. La famille $(e_1,2e_1+e_4,e_3+e_4)$ est donc libre.
+<li> On peut remarquer que 
+$$7e_1-4e_2=2(2e_1+e_2)+3(e_1-2e_2)$$
+et donc la famille n'est pas libre. On pouvait aussi prendre la même méthode que pour la question précédente, et obtenir cette fois que le système admet une solution non-triviale.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3100"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3100"),	max:5, rating:2.4444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3100,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opération <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3100.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3100,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3100','imageenonce3100');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3100"></a><div class=inner id="innerenonce3100">Soit $E$ un espace vectoriel et $u_1,\dots,u_n\in E$. Pour $k=1,\dots,n$, on pose $v_k=u_1+\cdots+u_k$. Démontrer que la famille $(u_1,\dots,u_n)$ est libre si et seulement si la famille $(v_1,\dots,v_n)$ est libre. </div></div><div class=indication><a href="javascript:showAll('innerindication3100','imageindication3100');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3100"></a><div class=inner id="innerindication3100" style="display:none;">Pour le sens direct, considérer $\lambda_1,\dots,\lambda_n$ tels que $\sum_{i=1}^n \lambda_i v_i=0$ et trouver une combinaison linéaire des $u_i$ égale au vecteur nul. Pour le sens réciproque, commencer par exprimer $u_k$ en fonction de $v_k$ et suivre le même raisonnement.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3100','imagecorrige3100',3100);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3100"></a><div class=inner id="innercorrige3100" style="display:none;">Commençons par supposer que $(u_1,\dots,u_n)$ est libre. Soit $\lambda_1,\dots,\lambda_n$ des scalaires tels que $\sum_{k=1}^n \lambda_k v_k=0$. Alors, en remplaçant $v_k$ par $u_1+\cdots+u_k$, puis en permutant les sommes, on trouve successivement 
+$$\sum_{k=1}^n \lambda_k\left(\sum_{j=1}^k u_j\right)=0\iff
+\sum_{j=1}^n \left(\sum_{k=j}^n \lambda_j \right) u_j=0.$$
+Puisque la famille $(u_1,\dots,u_n)$ est libre, on en déduit que, pour tout $j=1,\dots,n$, on a 
+$$\sum_{k=j}^n \lambda_j=0.$$
+Mais on trouve un système triangulaire en $\lambda_1,\dots,\lambda_n$ dont la seule solution est $\lambda_1=\cdots=\lambda_n=0$. La famille $(v_1,\dots,v_n)$ est bien une famille libre. <br>
+Réciproquement, on suppose que $(v_1,\dots,v_n)$ est libre et on remarque que $u_1=v_1$, puis, pour $k=2,\dots,n$, $u_k=v_k-v_{k-1}$. Soit $\lambda_1,\dots,\lambda_n$ des scalaires tels que $\sum_{k=1}^n \lambda_k u_k=0$. Alors on obtient
+$$\lambda_1 v_1+\sum_{k=2}^n \lambda_k (v_k-v_{k-1})=0\iff \lambda_n v_n+\sum_{k=1}^{n-1}(\lambda_k-\lambda_{k+1})v_k=0.$$
+Puisque la famille $(v_1,\dots,v_n)$ est libre, on obtient $\lambda_n=0$ et
+$\lambda_k=\lambda_{k+1}$ pour $k=1,\dots,n-1$, ce qui donne $\lambda_{n-1}=\cdots=\lambda_1=0$. La famille $(u_1,\dots,u_n)$ est libre.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater817"></span><script>var myRating = raterJs( { element:document.querySelector("#rater817"),	max:5, rating:2.3529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(817,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opération <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=817.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(817,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce817','imageenonce817');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce817"></a><div class=inner id="innerenonce817">Soit $(v_1,\dots,v_n)$ une famille libre d'un $\mathbb R$-espace vectoriel $E$.
+Pour $k=1,\dots,n-1$, on pose $w_k=v_k+v_{k+1}$ et $w_n=v_n+v_1$. Etudier 
+l'indépendance linéaire de la famille $(w_1,\dots,w_n)$.</div></div><div class=indication><a href="javascript:showAll('innerindication817','imageindication817');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication817"></a><div class=inner id="innerindication817" style="display:none;">&Eacute;crire une relation $\lambda_1w_1+\dots +\lambda_nw_n=0$
+en fonction des $v_i$ et trouver un système linéaire vérifié par les
+$\lambda_i$. Résoudre ce système. On pourra discuter suivant la parité de $n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige817','imagecorrige817',817);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige817"></a><div class=inner id="innercorrige817" style="display:none;">Supposons qu'il existe $n$ scalaires $\lambda_1,\dots,\lambda_n$ tels que
+$$\lambda_1w_1+\dots +\lambda_nw_n=0.$$
+Ceci se réécrit en 
+$$\sum_{k=1}^{n-1}\lambda_k(v_k+v_{k+1})+\lambda_n (v_n+v_1)=0$$
+soit encore, en regroupant les termes différemment,
+$$(\lambda_1+\lambda_n)v_1+\sum_{k=2}^n(\lambda_k+\lambda_{k-1})v_k=0.$$
+Puisque le système $(v_1,\dots,v_n)$ est linéairement indépendant, 
+on en déduit le système :
+$$\left\{
+\begin{array}{rcl}
+\lambda_n&=&-\lambda_1\\
+\lambda_k&=&-\lambda_{k-1}\textrm{ pour }2\leq k\leq n.
+\end{array}
+\right.$$
+La deuxième égalité donne facilement par récurrence, pour
+$2\leq k\leq n$, $\lambda_k=(-1)^{k-1}\lambda_1$.
+En particulier, on a $\lambda_n=(-1)^{n-1}\lambda_1$.
+On discute maintenant suivant la parité de $n$ :
+<ol class="enumeratechiffre">
+<li> Si $n$ est impair, alors on a à la fois
+$\lambda_n=\lambda_1$ et $\lambda_n=-\lambda_1$.
+Ceci impose $\lambda_1=0$, et par suite $\lambda_k=0$ 
+pour tout $k$. Le système est libre.
+<li> Si $n$ est pair, la dernière équation
+est $\lambda_n=-\lambda_1$, qui est la même que la première.
+Elle se simplifie donc. Pour $\lambda_k=(-1)^k$, on a alors
+$\lambda_1w_1+\dots+\lambda_nw_n=0$. Le système est lié.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

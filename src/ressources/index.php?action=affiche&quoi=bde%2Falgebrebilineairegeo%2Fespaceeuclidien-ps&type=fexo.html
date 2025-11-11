@@ -1,0 +1,434 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Espaces euclidiens : produit scalaire, norme, inégalité de Cauchy-Schwarz</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrebilineairegeo.html">Exercices d'algèbre bilinéaire et de géométrie</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Espaces euclidiens : produit scalaire, norme, inégalité de Cauchy-Schwarz</h1>
+<div class=titrepartie>Produit scalaire, orthogonalité</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2589"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2589"),	max:5, rating:1.4583333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2589,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produits scalaires sur $\mathbb R^2$ <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2589.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2589,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2589','imageenonce2589');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2589"></a><div class=inner id="innerenonce2589">Les applications suivantes définissent-elles un produit scalaire sur $\mathbb R^2$?
+<ol class="enumeratechiffre">
+ <li> $\varphi_1\big((x_1,x_2),(y_1,y_2)\big)=\sqrt{x_1^2+y_1^2+x_2^2+y_2^2}$;
+ <li> $\varphi_2\big((x_1,x_2),(y_1,y_2)\big)=4x_1y_1-x_2y_2$;
+ <li> $\varphi_3\big((x_1,x_2),(y_1,y_2)\big)=x_1y_1-3x_1y_2-3x_2y_1+10x_2y_2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2589','imageindication2589');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2589"></a><div class=inner id="innerindication2589" style="display:none;"><ol class="enumeratechiffre">
+ <li> $\varphi_1$ est-elle bilinéaire?
+ <li> $\varphi_2$ est-elle positive?
+ <li> &Eacute;crire $\varphi_3\big((x_1,x_2),(x_1,x_2)\big)$ comme une somme de deux carrés.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2589','imagecorrige2589',2589);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2589"></a><div class=inner id="innercorrige2589" style="display:none;"><ol class="enumeratechiffre">
+ <li> $\varphi_1$ n'est pas bilinéaire. Posons en effet $u=(1,1)$. Si $\varphi_1$ était bilinéaire, on devrait avoir
+ $\varphi_1(2u,u)=2\varphi_1(u,u)$. Mais $\varphi_1(2u,u)=\sqrt{2^2+1^2+2^2+1^2}=\sqrt{10}$ alors que $\varphi_1(u,u)=\sqrt{4}$. On n'a pas
+ $\sqrt{10}=2\sqrt{4}$.
+ <li> $\varphi_2$ n'est pas positive : en effet, si $u=(0,1)$, alors 
+ $\varphi_2(u,u)=-1&lt;0$.
+ Donc $\varphi_2$ n'est pas un produit scalaire.
+ <li> $\varphi_3$ est bilinéaire et symétrique. De plus, on a 
+ \begin{align*}
+  \varphi_3\big((x_1,x_2),(x_1,x_2)\big)&=x_1^2-3x_1x_2-3x_1x_2+10x_2^2\\
+  &=x_1^2-6x_1x_2+10x_2^2\\
+  &=(x_1-3x_2)^2+x_2^2.
+ \end{align*}
+Ceci est positif ou nul (somme de deux carrés), et si c'est nul, alors on a à la fois $x_2^2=0$ (et donc $x_2=0$) et $x_1-3x_2=0$, donc $x_1=3x_2=0$.
+Ainsi, $\varphi_3$ est définie positive. C'est donc bien un produit scalaire.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1032"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1032"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1032,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit scalaire et matrices <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1032.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1032,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1032','imageenonce1032');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1032"></a><div class=inner id="innerenonce1032">Pour $A,B\in\mathcal M_n(\mathbb R)$, on définit
+$$\langle A,B\rangle=\textrm{tr}(A^T B).$$
+<ol class="enumeratechiffre">
+<li> Démontrer que cette formule définit un produit scalaire sur $\mathcal M_n(\mathbb R)$.
+<li> En déduire que, pour tous $A,B\in\mathcal S_n(\mathbb R)$, on a
+$$\big(\textrm{tr}(AB))^2\leq \textrm{tr}(A^2)\textrm{tr}(B^2).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1032','imageindication1032');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1032"></a><div class=inner id="innerindication1032" style="display:none;"><ol class="enumeratechiffre">
+ <li> Calculer le terme général de $A^TA$.
+<li> Cauchy-Schwarz.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1032','imagecorrige1032',1032);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1032"></a><div class=inner id="innercorrige1032" style="display:none;"><ol class="enumeratechiffre">
+ <li> Il est très facile de vérifie que $\langle .,.\rangle$ définit une forme bilinéaire symétrique. Reste à démontrer qu'elle est définie positive.
+Soit $A\in\mathcal M_n(\mathbb R)$ et notons $(b_{i,j})=A^TA$. Alors 
+$$b_{i,i}=\sum_{k=1}^n a_{k,i}^2\geq 0.$$
+Ainsi, 
+$$\textrm{tr}(A^TA)=\sum_{i=1}^n\sum_{k=1}^n a_{k,i}^2\geq 0.$$
+On a bien affaire à une forme positive. De plus, si $\langle A,A\rangle=0$, alors pour tout $i=1,\dots,n$
+et tout $k=1,\dots,n$, on a $a_{k,i}=0$, et donc $A=0$ : la forme est définie.
+<li> On va appliquer l'inégalité de Cauchy-Schwarz. Pour $A,B$ symétriques, on a en effet
+$$\langle A,B\rangle=\textrm{tr}(AB)$$
+et donc 
+$$\big(\textrm{tr}(AB)\big)^2\leq \textrm{tr}(A^2)\textrm{tr}(B^2).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2591"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2591"),	max:5, rating:1.2083333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2591,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un produit scalaire sur les polynômes <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2591.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2591,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2591','imageenonce2591');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2591"></a><div class=inner id="innerenonce2591">Soit $n\geq 1$ et soit $a_0,\dots,a_n$ des réels distincts deux à deux. Montrer que l'application $\varphi:\mathbb R_n[X]\times\mathbb R_n[X]\to\mathbb R$
+définie par $\varphi(P,Q)=\sum_{i=0}^n P(a_i)Q(a_i)$ définit un produit scalaire sur $\mathbb R_n[X]$.</div></div><div class=indication><a href="javascript:showAll('innerindication2591','imageindication2591');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2591"></a><div class=inner id="innerindication2591" style="display:none;">Un polynôme de degré inférieur ou égal à $n$ admettant au moins $(n+1)$ racines est le polynôme nul.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2591','imagecorrige2591',2591);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2591"></a><div class=inner id="innercorrige2591" style="display:none;">Il est d'une part très facile (et laisser au lecteur) de vérifier que $\varphi$ est une forme bilinéaire symétrique
+(ie $\varphi(P_1+\lambda P_2,Q)=\varphi(P_1,Q)+\lambda\varphi(P_2,Q)$ et $\varphi(P,Q)=\varphi(Q,P)$). D'autre part,
+pour tout $P\in\mathbb R_n[X]$, on a $\varphi(P,P)=\sum_{i=0}^n (P(a_i))^2$. Cette quantité est positive ou nulle.
+De plus, si elle est nulle, c'est-à-dire si $\varphi(P,P)=0$, alors comme on considère la somme de $n+1$ quantités positives ou nulles, chacune de ces
+quantités doit être nulle, et donc, pour tout $i=0,\dots,n$, on a $P(a_i)=0$. Ainsi, $P$ est un polynôme de degré inférieur
+ou égal à $n$ admettant au moins $n+1$ racines. Ainsi, $P$ est le polynôme nul.
+On a donc démontré que $\varphi$ est une forme bilinéaire, symétrique, et définie positive : c'est un produit scalaire sur $\mathbb R_n[X]$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1033"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1033"),	max:5, rating:2.2333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1033,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des exemples de produit scalaire <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1033.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1033,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1033','imageenonce1033');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1033"></a><div class=inner id="innerenonce1033">Démontrer que les formules suivantes définissent des produits scalaires sur l'espace vectoriel associé :
+<ol class="enumeratechiffre">
+<li> $\langle f,g\rangle=f(0)g(0)+\int_0^1 f'(t)g'(t)dt$ sur $E=\mathcal C^1([0,1],\mathbb R)$;
+<li> $\langle f,g\rangle=\int_a^b f(t)g(t)w(t)dt$ sur $E=\mathcal C([a,b],\mathbb R)$ où $w\in E$ est telle que $w(x)&gt;0$ pour tout $x\in]a,b[.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1033','imageindication1033');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1033"></a><div class=inner id="innerindication1033" style="display:none;">Le point difficile est de démontrer que la forme est définie. Utiliser le fait que si $h$ est continue et positive, alors $\int_a^b h(t)dt=0\implies h\equiv 0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1033','imagecorrige1033',1033);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1033"></a><div class=inner id="innercorrige1033" style="display:none;">Dans les deux exemples, la difficulté est de démontrer qu'on a affaire à une forme définie.
+<ol class="enumeratechiffre">
+<li> Si $\langle f,f\rangle=0$, alors on a à la fois $(f(0))^2=0$, donc $f(0)=0$, et 
+$$\int_0^1 \big(f'(t)\big)^2dt=0.$$
+Or, $(f')^2$ est continue et positive sur $[0,1]$. Puisque son intégrale est nulle, c'est que $f'$ est nulle sur $[0,1]$. On en déduit que $f$ est constante sur $[0,1]$, puis, comme $f(0)=0$, que $f$ est identiquement nulle sur $[0,1]$.
+<li> Si $f\in E$ est tel que $\langle f,f\rangle=0$, le même raisonnement donne que $f^2w=0$ sur $[a,b]$, donc, puisque $w$ ne s'annule pas sur $]a,b[$, que $f=0$ sur $]a,b[$. Par continuité, on en déduit que $f=0$ sur $[a,b]$ et donc que $f\equiv 0$. La forme est bien définie positive.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2590"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2590"),	max:5, rating:1.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2590,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS pour avoir un produit scalaire <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2590.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2590,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2590','imageenonce2590');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2590"></a><div class=inner id="innerenonce2590">Soit $a$ et $b$ des réels et $\varphi:\mathbb R^2\times\mathbb R^2\to \mathbb R$ définie par 
+$$\varphi\big((x_1,x_2),(y_1,y_2)\big)=x_1y_1+4x_1y_2+bx_2y_1+ax_2y_2.$$
+Donner une condition nécessaire et suffisante portant sur les réels $a$ et $b$ pour que 
+$\varphi$ définisse un produit scalaire sur $\mathbb R^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication2590','imageindication2590');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2590"></a><div class=inner id="innerindication2590" style="display:none;">Trouver une condition portant sur $b$ pour que $\varphi$ soit symétrique. &Eacute;crire ensuite $\varphi\big((x_1,x_2),(x_1,x_2)\big)$ en reconnaissant le début d'un carré.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2590','imagecorrige2590',2590);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2590"></a><div class=inner id="innercorrige2590" style="display:none;">On remarque d'abord que $\varphi$ est une forme bilinéaire. Pour qu'elle soit symétrique, il est nécessaire que $b=4$. En effet, on doit avoir
+$$\varphi\big((1,0),(0,1)\big)=\varphi\big((0,1),(1,0)\big)\implies b=4.$$
+On vérifie facilement que cette condition est aussi suffisante pour que $\varphi$ soit symétrique.<br>
+On va ensuite trouver une condition portant sur $a$ pour que $\varphi$ soit définie positive. On a 
+$$\varphi\big((x_1,x_2),(x_1,x_2)\big)=x_1^2+8x_1x_2+ax_2^2=(x_1+4x_2)^2+(a-16)x_2^2.$$
+Si $a\leq 16$, alors $\varphi$ n'est pas définie positive. En effet, on a 
+$$\varphi\big((-4,1),(-4,1)\big)=(a-16)\leq 0.$$
+Réciproquement, si $a&gt;16$, alors $\varphi\big((x_1,x_2),(x_1,x_2)\big)\geq 0$ et si 
+$\varphi\big((x_1,x_2),(x_1,x_2)\big)=0$, alors on a 
+$$\left\{\begin{array}{rcl}
+          x_1+4x_2&=&0\\
+          x_2&=&0
+         \end{array}
+\right.$$
+ce qui donne facilement $x_1=x_2=0$.<br>
+En conclusion, $\varphi$ définit un produit scalaire sur $\mathbb R^2$ si et seulement si $b=4$ et $a&gt;16$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1034"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1034"),	max:5, rating:2.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1034,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS pour avoir un produit scalaire <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1034.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1034,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1034','imageenonce1034');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1034"></a><div class=inner id="innerenonce1034">Soient $E$ un espace préhilbertien réel, $a\in E$ un vecteur unitaire et $k\in\mathbb R$. 
+On définit $\phi:E\times E\to\mathbb R$ par 
+$$\phi(x,y)=\langle x,y\rangle+k\langle x,a\rangle\langle y,a\rangle.$$
+Déterminer une condition nécessaire et suffisante sur $k$ pour que $\phi$ soit un produit scalaire.</div></div><div class=indication><a href="javascript:showAll('innerindication1034','imageindication1034');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1034"></a><div class=inner id="innerindication1034" style="display:none;">Pour obtenir la condition nécessaire, calculer $\phi(a,a)$. Pour démontrer
+que la condition est suffisante, utiliser l'inégalité de Cauchy-Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1034','imagecorrige1034',1034);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1034"></a><div class=inner id="innercorrige1034" style="display:none;">$\phi$ définit clairement une forme bilinéaire symétrique. Reste à trouver
+une condition nécessaire et suffisante sur $k$ pour qu'elle soit définie positive. On commence
+par calculer $\phi(a,a)=\|a\|^2+k\|a\|^4=1+k$ puisque $a$ est un vecteur unitaire. Pour que ceci soit strictement positif, il est nécessaire
+que $1+k&gt;0$. La condition $k&gt;-1$ est donc nécessaire pour que $\phi$ soit un produit scalaire.<br>
+Réciproquement, on suppose que $k&gt;-1$ et on va prouver que $\phi$ définit bien un produit scalaire.
+Pour cela, on distingue deux cas. D'une part, si $k\geq 0$, alors pour tout $x\in E$, $x\neq 0$, on a
+$$\phi(x,x)\geq \|x\|^2&gt;0.$$
+D'autre part, si $k\in]-1,0[$, alors $k=-\alpha$ avec $\alpha\in]0,1[$. On a alors, pour $x\in E\backslash\{0\}$, 
+$$\phi(x,x)=\|x\|^2-\alpha \langle x,a\rangle^2.$$
+Par l'inégalité de Cauchy-Schwarz, et puisque $a$ est un vecteur unitaire,
+$$\langle x,a\rangle^2\leq \|x\|^2,$$
+et donc
+$$\phi(x,x)\geq (1-\alpha)\|x\|^2&gt;0.$$
+Dans tous les cas, on a prouvé que $\phi$ est définie positive, donc qu'il s'agit d'un produit scalaire sur $E$. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1035"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1035"),	max:5, rating:2.8695652173913, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1035,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS  pour avoir un produit scalaire <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1035.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1035,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1035','imageenonce1035');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1035"></a><div class=inner id="innerenonce1035">Soient $a,b,c,d\in\mathbb R$. Pour $u=(x,y)$ et $v=(x',y')$, on pose 
+$$\phi(u,v)=axx'+bxy'+cx'y+dyy'.$$
+Déterminer une condition nécessaire et suffisante portant sur $a,b,c,d$ pour que $\phi$ définisse un produit scalaire sur $\mathbb R^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication1035','imageindication1035');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1035"></a><div class=inner id="innerindication1035" style="display:none;">Une CNS pour que $\phi$ soit symétrique est que $b=c$. Pour que $\phi$ soit définie positive, prendre $u=(x,y)$ et essayer d'écrire $\phi(u,u)$ comme somme de deux carrés (on pourra essayer d'écrire le polynôme sous forme canonique).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1035','imagecorrige1035',1035);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1035"></a><div class=inner id="innercorrige1035" style="display:none;">Supposons que $\phi$ est un produit scalaire. D'abord, pour que $\phi$ soit symétrique, il est nécessaire que $\phi(u,v)=\phi(v,u)$ pour tous vecteurs $u,v\in\mathbb R^2$. Pour $u=(1,0)$ et $v=(0,1)$, on a 
+$$\phi(u,v)=b\textrm{ et }\phi(v,u)=c$$
+et donc il est nécessaire que $b=c$. D'autre part, $\phi$ est définie positive. De $\phi(u,u)&gt;0$ pour $u=(1,0)$, on trouve $a&gt;0$. Posons maintenant $u=(x,y)$ et calculons $\phi(u,u)$ :
+\begin{eqnarray*}
+\phi(u,u)&=&ax^2+2bxy+dy^2\\
+&=&a\left(x+\frac ba y \right)^2+\frac{ad-b^2}ay^2.
+\end{eqnarray*}
+Si $x=-b$ et $y=a$, alors on trouve
+$$\phi(u,u)=a(ad-b^2)$$
+et pour que ceci soit strictement positif, il est nécessaire que $ad-b^2&gt;0$.<br>
+Réciproquement, supposons que $a&gt;0$, que $b=c$ et que $ad-b^2&gt;0$. Alors il est facile de vérifier que $\phi$ est symétrique. De plus, l'écriture 
+$$\phi(u,u)=a\left(x+\frac ba y \right)^2+\frac{ad-b^2}ay^2$$
+prouve que $\phi$ est bien définie positive. En effet, si $\phi(u,u)=0$, alors $y=0$ et
+$x+\frac ba y=0$ ce qui donne bien $x=y=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1038"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1038"),	max:5, rating:2.5833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1038,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un produit scalaire sur les fonctions continues <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1038.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1038,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1038','imageenonce1038');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1038"></a><div class=inner id="innerenonce1038">Soit $E=\mathcal C([0,1])$ l'ensemble des fonctions continues de $[0,1]$ dans $\mathbb R$,
+et soit $a=(a_n)$ une suite de $[0,1]$. On pose, pour $f,g\in E$,
+$$\phi(f,g)=\sum_{n=0}^{+\infty}\frac1{2^n}f(a_n)g(a_n).$$
+Donner une condition nécessaire et suffisante sur $a$ pour que $\phi$ définisse un produit scalaire sur $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication1038','imageindication1038');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1038"></a><div class=inner id="innerindication1038" style="display:none;">Tout tourne autour de la densité de $a$ dans $[0,1]$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1038','imagecorrige1038',1038);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1038"></a><div class=inner id="innercorrige1038" style="display:none;">Remarquons d'abord que $\phi$ est bien définie. En effet, les fonctions $f$ et $g$ étant continues
+sur le segment $[0,1]$, elles y sont bornées par une constante $M&gt;0$, et donc on a 
+$$\left|\frac1{2^n}f(a_n)g(a_n)\right|\leq \frac{M^2}{2^n},$$
+et la série qui définit $\phi(f,g)$ converge absolument. De plus, il est très facile de vérifier que $\phi$
+est une forme bilinéaire, symétrique et positive. On doit donc trouver une condition nécessaire et suffisante sur $a$
+pour que ce soit une forme définie. D'abord, si $a$ est dense dans $[0,1]$, alors $\phi$ est définie. En effet, si 
+$$\phi(f,f)=\sum_{n=0}^{+\infty}\frac{f^2(a_n)}{2^n}=0,$$
+alors on a 
+$$\forall n\geq 0, f^2(a_n)=0\implies f(a_n)=0.$$
+Si $a$ est dense dans $[0,1]$, ceci entraine que $f=0$ et donc que $\phi$ est définie. Réciproquement, on suppose
+que $a$ n'est pas dense dans $[0,1]$, et on prouve que $\phi$ n'est pas définie. Mais si $a$ n'est pas dense dans $[0,1]$, 
+on peut trouver un intervalle $I\subset [0,1]$, non réduit à un point, et qui ne comprend aucun terme de la suite $(a_n)$. 
+Soit alors $f\in E$ une fonction (continue) nulle sur $[0,1]\backslash I$ et valant $1$ au milieu de $I$ (pensez à une fonction $f$
+dont la courbe représentative est une dent). Alors, $f(a_n)=0$ pour tout entier $n$ puisque $a_n$ n'est jamais élément de $I$, et
+donc $\phi(f,f)=0$, alors que $f\neq 0$.</div></div></div>
+
+<div class=titrepartie>Inégalité de Cauchy-Schwarz</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3259"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3259"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3259,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une première application de l'inégalité de Cauchy-Schwarz <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3259.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3259,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3259','imageenonce3259');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3259"></a><div class=inner id="innerenonce3259">Démontrer que pour tous $x_1,\dots,x_n\in\mathbb R,$
+$$\left(\sum_{k=1}^n \frac{x_k}{2^k}\right)^2\leq\frac 13\sum_{k=1}^n x_k^2.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3259','imageindication3259');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3259"></a><div class=inner id="innerindication3259" style="display:none;">Il suffit d'appliquer l'inégalité de Cauchy-Schwarz dans $\mathbb R^n$ muni de son produit scalaire canonique, avec $x=(x_1,\dots,x_n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3259','imagecorrige3259',3259);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3259"></a><div class=inner id="innercorrige3259" style="display:none;">Il suffit d'appliquer l'inégalité de Cauchy-Schwarz dans $\mathbb R^n$ muni de son produit scalaire canonique, avec $x=(x_1,\dots,x_n)$ et $y=(2^{-1},\cdots,2^{-n})$. Il vient
+\begin{align*}
+\left|
+\sum_{k=1}^n \frac{x_k}{2^k}\right|&\leq \left(\sum_{k=1}^n \frac{1}{2^{2k}}\right)^{1/2}\left(\sum_{k=1}^n x_k^2\right)^{1/2}
+\end{align*}
+Par croissance de la fonction carrée sur $\mathbb R_+$, et en utilisant la formule donnant la somme d'une suite géométrique, on trouve
+\begin{align*}
+\left(\sum_{k=1}^n \frac{x_k}{2^k}\right)^2
+&\leq \frac{\frac 14-\frac{1}{4^{n+1}}}{1-\frac 14}\left(\sum_{k=1}^n x_k^2\right)\\
+&\leq \frac{\frac 14}{\frac 34}\left(\sum_{k=1}^n x_k^2\right)\\
+&\leq \frac 13\left(\sum_{k=1}^n x_k^2\right).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1475"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1475"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1475,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand une inégalité en implique une autre... <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1475.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1475,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1475','imageenonce1475');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1475"></a><div class=inner id="innerenonce1475">Soit $x,y,z$ trois réels tels que $2x^2+y^2+5z^2\leq 1$. Démontrer que $(x+y+z)^2\leq\frac {17}{10}.$</div></div><div class=indication><a href="javascript:showAll('innerindication1475','imageindication1475');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1475"></a><div class=inner id="innerindication1475" style="display:none;">Appliquer astucieusement l'inégalité de Cauchy-Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1475','imagecorrige1475',1475);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1475"></a><div class=inner id="innercorrige1475" style="display:none;">Il suffit d'écrire :
+$$x+y+z=\frac{1}{\sqrt 2}\times \sqrt 2 x+1\times y+\frac{1}{\sqrt 5}\times \sqrt 5 z.$$
+D'après l'inégalité de Cauchy-Schwarz (pour le produit scalaire canonique sur $\mathbb R^3$), on a 
+$$(x+y+z)^2\leq \left(\left(\frac 1{\sqrt 2}\right)^2+1^2+\left(\frac 1{\sqrt 5}\right)^2\right)\times (2x^2+y^2+5z^2)\leq \frac{17}{10}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1036"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1036"),	max:5, rating:2.1333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1036,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications de l'inégalité de Cauchy-Schwarz <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1036.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1036,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1036','imageenonce1036');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1036"></a><div class=inner id="innerenonce1036">Soient $x_1,\dots,x_n\in\mathbb R$.
+<ol class="enumeratechiffre">
+<li> Démontrer que 
+$$\left(\sum_{k=1}^n x_k\right)^2\leq n\sum_{k=1}^n x_k^2$$
+et étudier les cas d'égalité.
+<li> On suppose en outre que $x_k&gt;0$ pour chaque $k\in\{1,\dots,n\}.$
+Démontrer que 
+$$\left(\sum_{k=1}^n x_k\right)\left(\sum_{k=1}^n \frac 1{x_k}\right)\geq n^2$$
+et étudier les cas d'égalité.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1036','imageindication1036');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1036"></a><div class=inner id="innerindication1036" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer l'inégalité de Cauchy-Schwarz au produit scalaire canonique de $\mathbb R^n$ avec les vecteurs $x=(x_1,\dots,x_n)$ et $y=(1,\dots,1)$.
+<li> Appliquer l'inégalité de Cauchy-Schwarz aux vecteurs $y=(\sqrt{x_1},\dots,\sqrt{x_n})$ et $z=\left(\frac 1{\sqrt{x_1}},\dots,\frac 1{\sqrt{x_n}}\right)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1036','imagecorrige1036',1036);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1036"></a><div class=inner id="innercorrige1036" style="display:none;"><ol class="enumeratechiffre">
+<li> On va appliquer l'inégalité de Cauchy-Schwarz au produit scalaire canonique de $\mathbb R^n$ avec les vecteurs $x=(x_1,\dots,x_n)$ et $y=(1,\dots,1)$. On trouve
+$$0\leq \left|\sum_{k=1}^n x_k\right|=\left|\sum_{k=1}^n x_k \times 1\right|\leq \left(\sum_{k=1}^n x_k^2\right)^{1/2}\left(\sum_{k=1}^n 1^2\right)^{1/2}.$$
+Il suffit de prendre le carré pour obtenir l'inégalité désirée, puisque la fonction $x\mapsto x^2$ est croissante
+sur $[0,+\infty[.$ 
+De plus, il y a égalité si et seulement s'il y a égalité dans l'application de l'inégalité de Cauchy-Schwarz, c'est-à-dire si et seulement si les vecteurs $(x_1,\dots,x_n)$ et $(1,\dots,1)$ sont liés; autrement dit, si et seulement si tous les $x_i$ sont égaux.
+<li> Appliquons l'inégalité de Cauchy-Schwarz aux vecteurs $y=(\sqrt{x_1},\dots,\sqrt{x_n})$ et $z=\left(\frac 1{\sqrt{x_1}},\dots,\frac 1{\sqrt{x_n}}\right)$. Alors on trouve
+$$n=\sum_{k=1}^n y_k z_k\leq \left(\sum_{k=1}^n x_k\right)^{1/2}\left(\sum_{k=1}^n \frac 1{x_k}\right)^{1/2}$$
+ce qui, mis au carré, donne l'inégalité demandé. Comme précédemment, on a égalité si et seulement si les vecteurs $y$ et $z$ sont liés. Puisqu'ils sont tous les deux à coordonnées strictement positives, c'est équivalent à dire qu'il existe $\lambda&gt;0$ tel que $x_k=\frac \lambda{x_k}$ pour tout $k=1,\dots,n$. Ainsi, il y a égalité si et seulement si tous les $x_k$ sont égaux.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2197"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2197"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2197,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nature d'une série <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2197.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2197,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2197','imageenonce2197');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2197"></a><div class=inner id="innerenonce2197"><ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\geq 0,$
+$$\sum_{k=0}^n \sqrt{\binom nk}\leq 2^{n/2}\sqrt{n+1}.$$
+<li> En déduire la nature de la série de terme général $u_n=\frac{1}{n^2(\sqrt 2)^n}\sum_{k=0}^n \sqrt{\binom nk}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2197','imageindication2197');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2197"></a><div class=inner id="innerindication2197" style="display:none;">Utiliser l'inégalité de Cauchy-Schwarz en écrivant $\sqrt{\binom nk}=1\times \sqrt{\binom nk}.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2197','imagecorrige2197',2197);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2197"></a><div class=inner id="innercorrige2197" style="display:none;"><ol class="enumeratechiffre">
+<li> On va utiliser l'inégalité de Cauchy-Schwarz en écrivant  $\sqrt{\binom nk}=1\times \sqrt{\binom nk}.$
+Il vient 
+\begin{eqnarray*}
+\sum_{k=0}^n \sqrt{\binom nk}&\leq& \left(\sum_{k=0}^n 1^2\right)^{1/2}\left(\sum_{k=0}^n \binom nk\right)^{1/2}\\
+&\leq&(n+1)^{1/2}2^{n/2}.
+\end{eqnarray*}
+<li> 
+On en déduit que 
+$$0\leq u_n\leq \frac{(n+1)^{1/2}}{n^{2}}\leq \frac{(2n)^{1/2}}{n^2}=\frac {\sqrt 2}{n^{3/2}}.$$
+Par majoration par une série de Riemann convergente, la série $\sum_n u_n$ est convergente.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3253"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3253"),	max:5, rating:2.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3253,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit scalaire et théorème fondamental du calcul intégral <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3253.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3253,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3253','imageenonce3253');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3253"></a><div class=inner id="innerenonce3253">Soit $f\in\mathcal C^1([a,b],\mathbb R)$ telle que $f(a)=0$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $t\in [a,b],$ on a
+$$f^2(t)\leq (t-a)\int_a^t f'^2(u)du.$$
+<li> En déduire que 
+$$\int_a^b f^2(t)dt\leq \frac{(b-a)^2}2\int_a^b f'^2(u)du.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3253','imageindication3253');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3253"></a><div class=inner id="innerindication3253" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $f(t)=\int_a^t f'(u)du$ puis appliquer l'inégalité de Cauchy-Schwarz.
+<li> Intégrer l'inégalité précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3253','imagecorrige3253',3253);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3253"></a><div class=inner id="innercorrige3253" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $f$ est de classe $\mathcal C^1$ et s'annule en $a$, on a par le théorème fondamental du calcul intégral 
+$$f(t)=\int_a^t f'(u)du=\int_a^t 1\times f'(u)du.$$
+On applique alors l'inégalité de Cauchy-Schwarz : 
+\begin{align*}
+f^2(t)&\leq\left(\int_a ^t 1du\right)\left(\int_a^t f'^2(u)du\right)\\
+&\leq(t-a)\int_a^t f'^2(u)du\\
+&\leq (t-a)\int_a^b f'^2(u)du
+\end{align*}
+puisque $f'^2\geq 0$ et que $t\in [a,b].$ On intègre ensuite cette inégalité pour $t\in [a,b],$ et on trouve
+\begin{align*}
+\int_a^b f^2(t)dt&\leq \left(\int_a^b (t-a)dt\right)\left(\int_a^b f'^2(u)du\right)\\
+&\leq\frac{(b-a)^2}2 \int_a^b f'^2(u)du.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1037"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1037"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1037,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de borne inférieure <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1037.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1037,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1037','imageenonce1037');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1037"></a><div class=inner id="innerenonce1037">Soit $E=\mathcal C([a,b],\mathbb R_+^*)$. Déterminer $\inf_{f\in E}\left(\int_a^b f\times \int_a^b \frac 1f\right)$. Cette borne inférieure est-elle atteinte?</div></div><div class=indication><a href="javascript:showAll('innerindication1037','imageindication1037');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1037"></a><div class=inner id="innerindication1037" style="display:none;">Appliquer l'inégalité de Cauchy-Schwarz au produit $\sqrt f\times\frac 1{\sqrt f}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1037','imagecorrige1037',1037);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1037"></a><div class=inner id="innercorrige1037" style="display:none;">Utilisons le produit scalaire canonique sur $F=\mathcal C([a,b],\mathbb R)$ défini par 
+$$\langle f,g\rangle=\int_a^b fg.$$
+D'après l'inégalité de Cauchy-Schwarz pour ce produit scalaire avec le produit $\sqrt f\times\frac 1{\sqrt f}$. On obtient
+$$b-a=\int_a^b \sqrt f\times \frac 1{\sqrt f}\leq \left(\int_a^b f\right)^{1/2}\times \left(\int_a^b \frac 1f\right)^{1/2}.$$
+Prenant le carré, on trouve que, pour tout $f\in E$, 
+$$(b-a)^{2}\leq \int_a^b f\times\int_a^b \frac 1f.$$
+De plus, pour $f=1$, qui est élément de $E$, on a clairement égalité. Ainsi, la borne inférieure recherchée vaut $(b-a)^2$ et est atteinte par la fonction identiquement égale à 1 (plus généralement, par les fonctions constantes).</div></div></div>
+
+<div class=titrepartie>Norme</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1039"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1039"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1039,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Stricte convexité de la boule <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1039.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1039,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1039','imageenonce1039');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1039"></a><div class=inner id="innerenonce1039">Soit $E$ un espace préhilbertien et soit $B=\{x\in E;\ \|x\|\leq 1\}$. Démontrer que $B$ est strictement convexe, c'est-à-dire que, pour tous $x,y\in B$, $x\neq y$ et tout $t\in ]0,1[$, $\|tx+(1-t)y\|&lt;1$.</div></div><div class=indication><a href="javascript:showAll('innerindication1039','imageindication1039');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1039"></a><div class=inner id="innerindication1039" style="display:none;">Montrer d'abord l'inégalité au sens large. Utiliser les cas d'égalité .</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1039','imagecorrige1039',1039);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1039"></a><div class=inner id="innercorrige1039" style="display:none;">Soient $x\neq y$ dans $B$, et $0&lt;t&lt;1$. Prouvons d'abord l'inégalité au sens large :
+$$\|tx+(1-t)y\|\leq t\|x\|+(1-t)\|y\|\leq t+(1-t)=1.$$
+Pour que l'on ait égalité, il faut que les deux inégalités soient des égalités, ce qui entraîne :
+<ul class="rien">
+<li> il existe $\lambda\in\mtr^+$ tel que $tx=\lambda(1-t)y$ (cas d'égalité dans l'inégalité triangulaire pour une norme issue d'un produit scalaire);
+<li> $\|x\|=\|y\|=1$.
+</ul>
+Ces deux conditions ensemble entrainent alors que $x=y$, ce qui est impossible par hypothèse.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3258"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3258"),	max:5, rating:2.1176470588235, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3258,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Approximation au sens des moindres carrés <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3258.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3258,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3258','imageenonce3258');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3258"></a><div class=inner id="innerenonce3258">Soit $E$ un espace préhilbertien et $x_1,\dots,x_p\in E$. Montrer que la fonction $f$ définie sur $E$ par $f(x)=\sum_{i=1}^p \|x-x_i\|^2$ atteint son minimum en $m=\frac 1p\sum_{i=1}^p x_i.$</div></div><div class=indication><a href="javascript:showAll('innerindication3258','imageindication3258');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3258"></a><div class=inner id="innerindication3258" style="display:none;">&Eacute;crire $x-x_i=x-m+m-x_i.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3258','imagecorrige3258',3258);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3258"></a><div class=inner id="innercorrige3258" style="display:none;">On va passer par $m$ : pour cela, on écrit $x-x_i=x-m+m-x_i$ de sorte que 
+$$\|x-x_i\|^2=\|x-m\|^2+2\langle x-m,m-x_i\rangle+\|m-x_i\|^2.$$
+Il vient, en faisant la somme
+\begin{align*}
+f(x)&=p\|x-m\|^2+2\sum_{i=1}^p \langle x-m,m-x_i\rangle+f(m)\\
+&=p\||x-m\|^2+2 \left\langle x-m,\sum_{i=1}^p (m-x_i)\right\rangle+f(m)\\
+&=p\|x-m\|^2+2\langle x-m,pm-pm\rangle+f(m)\\
+&=p\|x-m\|^2+f(m)\geq f(m).
+\end{align*}
+Ainsi, $f$ atteint son minimum en $m.$ </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1040"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1040"),	max:5, rating:2.8125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1040,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur l'identité du parallélogramme <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1040.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1040,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1040','imageenonce1040');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1040"></a><div class=inner id="innerenonce1040">Il est bien connu que si $E$ est un espace préhilbertien muni de la norme $\|.\|$, alors l'identité de la médiane
+(ou du parallélogramme) est vérifiée, à savoir : pour tous $x,y$ de $E$, on a :
+$$\|x+y\|^2+\|x-y\|^2=2\|x\|^2+2\|y\|^2.$$
+L'objectif de cet exercice est de montrer une sorte de réciproque à cette propriété, à savoir le résultat suivant : si $E$ est
+un espace vectoriel normé réel dont la norme vérifie l'identité de la médiane, alors $E$ est nécessairement un espace préhilbertien, c'est-à-dire qu'il existe un produit scalaire $(.,.)$ sur $E$ tel que pour tout $x$ de $E$, on a $(x,x)=\|x\|^2$.
+Il s'agit donc de construire un produit scalaire, et compte tenu des formules de polarisation, on pose :
+$$(x,y)=\frac{1}{4}\left(\|x+y\|^2-\|x-y\|^2\right).$$
+Il reste à vérifier que l'on a bien défini ainsi un produit scalaire.
+<ol class="enumeratechiffre">
+<li> Montrer que pour tout $x,y$ de $E$, on a $(x,y)=(y,x)$ et $(x,x)=\|x\|^2$.
+<li> Montrer que pour $x_1,\ x_2,\ y\in E$, on a $(x_1+x_2,y)-(x_1,y)-(x_2,y)=0$ (on utilisera l'identité de la médiane avec
+les paires $(x_1+y,x_2+y)$ et $(x_1-y,x_2-y)$).
+<li> Montrer, en utilisant la question précédente,que si $x,y\in E$ et $r\in\mtq$, on a $(rx,y)=r(x,y)$. En utilisant un argument de continuité,
+montrer que c'est encore vrai pour $r\in\mtr$.
+<li> Conclure!
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1040','imageindication1040');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1040"></a><div class=inner id="innerindication1040" style="display:none;"><ol class="enumeratechiffre">
+<li> Facile!
+<li> Utiliser l'indication donnée; il faudra utiliser une deuxième fois l'identité de la médiane avec $x_1+x_2+2y=(x_1+x_2+y)+y$.
+<li> Faire d'abord $r\in\mtn$ (immédiat d'après la question précédente), puis $r\in\mtz$ (application de la question précédente),
+et enfin $r=p/q\in\mtq$, en utilisant $x_1=\frac{1}{q}x$.
+<li> Faire le résumé des questions précédentes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1040','imagecorrige1040',1040);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1040"></a><div class=inner id="innercorrige1040" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est une vérification immédiate!
+<li> On utilise l'identité de la médiane comme elle est indiquée :
+$$\|x_1+x_2+2y\|^2+\|x_1-x_2\|^2=2\|x_1+y\|^2+2\|x_2+y\|^2,$$
+$$\|x_1+x_2-2y\|^2+\|x_1-x_2\|^2=2\|x_1-y\|^2+2\|x_2-y\|^2.$$
+D'autre part, par définition du produit scalaire 
+$$(x_1+x_2,y)=\frac{1}{4}\left(\|x_1+x_2+y\|^2-\|x_1+x_2-y\|^2\right),$$
+et 
+$$(x_1,y)+(x_2,y)=\frac{1}{4}\left(\|x_1+y\|^2+\|x_2+y\|^2-\|x_1-y\|^2-\|x_2-y\|^2\right)$$
+ce qui donne en utilisant l'identité de la médiane :
+$$(x_1,y)+(x_2,y)=\frac{1}{8}\left(\|x_1+x_2+2y\|^2-\|x_1+x_2-2y\|^2\right).$$
+Pour remonter à $(x_1+x_2,y)$, il faut encore transformer $\|x_1+x_2+2y\|^2$ et on utilise pour cela encore une fois
+l'identité de la médiane, en écrivant $(x_1+x_2+2y)=(x_1+x_2+y)+y$. Il vient :
+$$\|x_1+x_2+2y\|^2=2\|x_1+x_2+y\|^2+2\|y\|^2-\|x_1+x_2\|^2,$$
+$$\|x_1+x_2-2y\|^2=2\|x_1+x_2-y\|^2+2\|y\|^2-\|x_1+x_2\|^2.$$
+On obtient bien le résultat!
+<li> D'abord, par une récurrence immédiate, le résultat est vrai si $r\in\mtn$. Prouvons maintenant que $(-x,y)=-(x,y)$.
+On a en effet $(x-x,y)=(x,y)+(-x,y)=0$, ce qui prouve le résultat! Ceci donne le résultat pour $r\in\mtz$. Enfin, si $r=p/q$, on pose $x_1=\frac{x}{q}$.
+On obtient $(\frac{p}{q}x,y)=p\left(\frac{1}{q}x,y\right)$. D'autre part, en posant $x_1=\frac{1}{q}x$, on a $q(x_1,y)=(qx_1,y)=(x,y)$.
+Ceci donne 
+$$(\frac{p}{q}x,y)=\frac{p}{q}(x,y).$$
+Le résultat est donc vrai si $r\in\mtq$. Enfin, par composée d'applications continues, pour $x$ et $y$ fixés, les applications $\lambda\mapsto(\lambda x,y)$ et $\lambda\mapsto\lambda(x,y)$ sont continues,
+et sont égales sur une partie dense de $\mtr$. Elles sont donc partout égales.
+<li> D'après les questions précédentes, $(.,.)$ est un produit scalaire sur $E$, et on a bien $\|x\|^2=(x,x)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1041"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1041"),	max:5, rating:3.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1041,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme et moyenne <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1041.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1041,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1041','imageenonce1041');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1041"></a><div class=inner id="innerenonce1041">Soient $(E,\langle.\rangle)$ un espace préhilbertien réel, $\|.\|$ la norme associée au produit scalaire,
+$u_1,\dots,u_n$ des éléments de $E$ et $C&gt;0$. On suppose que :
+$$\forall (\veps_1,\dots,\veps_n)\in\{-1,1\}^n,\ \left\|\sum_{i=1}^n \veps_iu_i\right\|\leq C.$$
+Montrer que $\sum_{i=1}^n \|u_i\|^2\leq C^2.$</div></div><div class=indication><a href="javascript:showAll('innerindication1041','imageindication1041');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1041"></a><div class=inner id="innerindication1041" style="display:none;">Calculer $\left\|\sum_{i=1}^n \veps_i u_i\right\|^2$. Une quantité qui apparait est facile.
+Il suffit de montrer qu'on peut choisir les signes $\veps_i$ de sorte que l'autre quantité qui apparait soit positive.
+Regrouper astucieusement et choisir de proche en proche.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1041','imagecorrige1041',1041);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1041"></a><div class=inner id="innercorrige1041" style="display:none;">Soit $\veps_1,\dots,\veps_n\in\{-1,1\}$. Alors on a
+$$C^2\geq \left\|\sum_{i=1}^n \veps_i u_i\right\|^2=\sum_{i=1}^n \|u_i\|^2+2\sum_{i&lt;j}\veps_i\veps_j\langle
+u_i,u_j\rangle.$$
+Il suffit donc de prouver que l'on peut choisir les signes $\veps_i$ de sorte que
+$$\sum_{i&lt;j}\veps_i\veps_j\langle u_i,u_j\rangle\geq 0.$$
+On réécrit cette somme sous la forme suivante :
+$$\sum_{i=1}^{n-1}\langle \veps_i u_i,\sum_{j=i+1}^n \veps_j u_j\rangle.$$
+Fixons $\veps_n=1$. Alors on peut choisir $\veps_{n-1}\in\{-1,1\}$ de sorte
+que $\langle \veps_{n-1}u_{n-1},\veps_n u_n\rangle\geq 0$. Cette valeur de
+$\veps_{n-1}$ étant fixée, on peut choisir $\veps_{n-2}\in\{-1,1\}$ de sorte
+que
+$$\langle \veps_{n-2} u_{n-2},\veps_{n-1}u_{n-1}+\veps_n u_n\rangle\geq 0.$$
+De proche en proche, on peut trouver des valeurs de $\veps_i$ de sorte que,
+pour tout $i$, on a
+$$\langle \veps_i u_i,\sum_{j=i+1}^n \veps_j u_j\rangle\geq 0.$$
+De la sorte, on a
+$$\sum_{i=1}^{n-1} \langle \veps_i u_i,\sum_{j=i+1}^n \veps_j u_j\rangle\geq 0$$
+ce qui implique $\sum_{i=1}^n \|u_i\|^2\leq C^2.$</div></div></div>
+
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Géométrie</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1876"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1876"),	max:5, rating:2.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1876,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Les bissectrices sont concourantes <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1876.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1876,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1876','imageenonce1876');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1876"></a><div class=inner id="innerenonce1876">Le but de l'exercice est de démontrer que, dans un triangle $ABC$, les trois bissectrices intérieures sont concourantes et que le point d'intersection est le centre d'un cercle tangent aux trois côtés du triangle. Pour cela, on considère $E$ un espace vectoriel euclidien de dimension égale à $2$, $D$ et $D'$ deux droites distinctes de $E$, $u$ et $v$ des vecteurs directeurs unitaires de respectivement $D$ et $D'$. On pose $w_1=u+v$ et $w_2=u-v$, $D_1$ la droite dirigée par $w_1$ et $D_2$ la droite dirigée par $w_2$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\langle u,v\rangle\in ]-1,1[$.
+<li> Démontrer que $D_1=D_2^{\perp}$.
+<li> Soit $x=\alpha u+\beta v$ un vecteur de $E$. Calculer $d(x,D)^2$ et $d(x,D')^2$ en fonction de $\alpha,\beta,u$ et $v$.
+<li> Démontrer que $d(x,D)=d(x,D')\iff x\in D_1\cup D_2$.
+<li> On suppose que $x$ est non nul. Démontrer que $x\in D_1$ si et seulement si 
+$\cos\big(\widehat{(u,x)}\big)=\cos\big(\widehat{(v,x)}\big).$
+<li> En déduire le résultat annoncé au début de l'exercice.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1876','imageindication1876');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1876"></a><div class=inner id="innerindication1876" style="display:none;"><ol class="enumeratechiffre">
+<li> Cauchy-Schwarz.
+<li> Il suffit de démontrer que $w_1\perp w_2$.
+<li> Commencer par calculer le projeté orthogonal
+<li>
+<li> Utiliser la formule donnant le calcul du cosinus en fonction du produit scalaire.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1876','imagecorrige1876',1876);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1876"></a><div class=inner id="innercorrige1876" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après l'inégalité de Cauchy-Schwarz,
+$$|\langle u,v\rangle|\leq \|u\|\times\|v\|\leq 1$$
+avec égalité si et seulement si $u$ et $v$ sont colinéaires. Comme ce n'est pas le cas, on a 
+$$|\langle u,v\rangle|&lt;1$$
+ce qui est bien ce que l'on voulait prouver.
+<li> S'agissant de deux droites du plan, il suffit de démontrer que l'une est perpendiculaire à l'autre, ou encore que leurs deux vecteurs directeurs sont orthogonaux. Mais
+$$\langle w_1,w_2\rangle=\langle u+v,u-v\rangle=\|u\|^2-\|v\|^2=0.$$
+<li> On commence par calculer le projeté orthogonal de $x$ sur $D$. On a 
+$$p_D(x)=\langle x,u\rangle u=(\alpha +\beta\langle u,v\rangle)u.$$
+Mais, par le théorème de Pythagore,
+\begin{eqnarray*}
+d(x,D)^2&=&\|x-p_D(x)\|^2\\
+&=&\left\|\beta v-\beta \langle u,v\rangle u\right\|^2\\
+&=&\beta^2-2\beta^2\langle u,v\rangle\langle v,u\rangle+\beta^2\langle u,v\rangle^2\\
+&=&\beta^2(1-\langle u,v\rangle^2).
+\end{eqnarray*}
+Un raisonnement tout à fait similaire donne
+\begin{eqnarray*}
+d(x,D')^2&=&\alpha^2(1-\langle u,v\rangle^2).
+\end{eqnarray*}
+<li> On a 
+$$d(x,D)=d(x,D')\iff d(x,D)^2=d(x,D')^2\iff \alpha^2=\beta^2$$
+puisque $1-\langle u,v\rangle\neq 0$ d'après la première question. 
+D'où 
+$$d(x,D)=d(x,D')\iff \alpha=\pm \beta$$
+ce qui signifie encore que $x$ est colinéaire soit à $w_1$, soit à $w_2$, ou encore que $x\in D_1\cup D_2$.
+<li> On a par définition 
+$$\cos\big(\widehat{(u,x)}\big)=\frac{\langle u,x\rangle}{\|u\|\times\|x\|}=\frac{\langle u,x\rangle}{\|x\|}\textrm{ et }\cos\big(\widehat{(x,v)}\big)=\frac{\langle x,v\rangle}{\|x\|}.$$
+Ainsi,
+$$\cos\big(\widehat{(u,x)}\big)=\cos\big(\widehat{(v,x)}\big)\iff \langle u,x \rangle=\langle x,v\rangle\iff \langle u-v,x\rangle=0\iff \langle w_2,x\rangle=0.$$
+Puisque $D_1=D_2^\perp$, ceci est équivalent à dire que $x$ est élément de $D_1$.
+<li> On applique les résultats précédents à $u=\frac{\overrightarrow{AC}}{AC}$ et $v=\frac{\overrightarrow{AB}}{AB}$. La bissectrice intérieure issue de $A$ est la droite passant par $A$ dont les vecteurs directeurs $x$ vérifient $\widehat{(u,x)}=\widehat{(x,v)}$. D'après la question précédente, c'est la droite passant par $A$ et dirigée par le vecteur $u+v$. Les points sur cette droite sont équidistants des droites $(AB)$ et $(AC)$. Notons $J$ le point d'intersection des bissectrices intérieures issues de $A$ et de $B$. Alors on a $d(J,(AB))=d(J,(AC))=d(J,(BC))$. Ainsi, la deuxième égalité assure que $J$ appartient ou bien à la bissectrice intérieure issue de $C$, ou bien à sa bissectrice extérieure. Mais $J$ est à l'intérieur du triangle $ABC$ et donc $J$ est sur la bissectrice intérieure issue de $C$. Ainsi, les trois bissectrices intérieures sont concourantes en $J$. Si on note $J_1,J_2$ et $J_3$ les projections orthogonales respectives de $J$ sur $(AB)$, $(AC)$ et $(BC)$, alors on a $JJ_1=JJ_2=JJ_3$, ce qui prouve que le cercle de centre $J$ est de rayon $JJ_1$ est tangent aux trois côtés du triangle $ABC$. 
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

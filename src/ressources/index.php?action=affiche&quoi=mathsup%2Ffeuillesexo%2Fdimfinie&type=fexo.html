@@ -1,0 +1,1467 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math sup : Espaces vectoriels de dimension finie</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math sup : Espaces vectoriels de dimension finie</h1>
+<div class=titrepartie>Bases</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater857"></span><script>var myRating = raterJs( { element:document.querySelector("#rater857"),	max:5, rating:1.8387096774194, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(857,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bases? <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=857.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(857,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce857','imageenonce857');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce857"></a><div class=inner id="innerenonce857">Les systèmes suivants forment-ils des bases de $\mathbb R^3$?<br>
+$S_1=\{ (1,-1,0), (2,-1,2)\};$<br>
+$S_2=\{ (1,-1,0), (2,-1,2),(1,0,a)\}$ avec $a$ réel (on discutera suivant la valeur de $a$);<br>
+$S_3=\{(1,0,0), (a,b,0), (c,d,e)\}$ avec $a,b,c,d,e$ réels (on discutera suivant leur valeur);<br>
+$S_4=\{(1,1,3), (3,4,5), (-2,5,7), (8,-1,9)\}.$</div></div><div class=indication><a href="javascript:showAll('innerindication857','imageindication857');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication857"></a><div class=inner id="innerindication857" style="display:none;">On peut écarter facilement $S_1$ et $S_4$. Pour les deux autres familles qui comprennent trois
+éléments, il suffit de vérifier que la famille est libre. On fait comme d'habitude...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige857','imagecorrige857',857);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige857"></a><div class=inner id="innercorrige857" style="display:none;">$S_1$ est une famille à deux éléments dans un espace de dimension 3. Ce n'est pas une base de $\mathbb R^3$.
+De même, $S_4$ qui comporte quatre éléments ne peut pas être une base de $\mathbb R^3$. Pour $S_2$ et $S_3$, comme ce sont des familles à 3 éléments dans un espace de dimension 3, il suffit de savoir
+si ce sont des familles libres ou non. Résolvons d'abord l'équation
+$$\lambda_1(1,-1,0)+\lambda_2(2,-1,2)+\lambda_3(1,0,a)=0\iff\left\{
+\begin{array}{rcl}
+\lambda_1+2\lambda_2+\lambda_3&=&0\\
+-\lambda_1-\lambda_2&=&0\\
+2\lambda_2+a\lambda_3&=&0.
+\end{array}\right.$$
+Ce système est successivement équivalent à 
+\begin{eqnarray*}
+&&\left\{
+\begin{array}{rcll}
+\lambda_1+2\lambda_2+\lambda_3&=&0&\\
+\lambda_2+\lambda_3&=&0&\ L_2+L_1\to L_2\\
+2\lambda_2+a\lambda_3&=&0&
+\end{array}\right. \\
+&
+\iff&\left\{
+\begin{array}{rcll}
+\lambda_1+2\lambda_2+\lambda_3&=&0\\
+\lambda_2+\lambda_3&=&0\\
+(a-2)\lambda_3&=&0&L_3-2L_2\to L_3.
+\end{array}\right.
+\end{eqnarray*}
+Si $a\neq 2$, on obtient $\lambda_3=0$ et en remontant les calculs $\lambda_1=\lambda_2=0$.
+La famille est donc libre. Si $a=2$, alors le choix $\lambda_3=1,\lambda_2=-1$ et $\lambda_1=1$
+donne une solution au système. La famille n'est alors pas libre. On conclut que $S_2$
+est une base si et seulement si $a\neq 2$. <br>
+&Eacute;tudions maintenant $S_3$, en résolvant l'équation
+$$\lambda_1(1,0,0)+\lambda_2(a,b,0)+\lambda_3(c,d,e)=0$$
+qui est équivalente au système
+$$\left\{
+\begin{array}{rcl}
+\lambda_1+a\lambda_2+c\lambda_3&=&0\\
+b\lambda_2+d\lambda_3&=&0\\
+e\lambda_3&=&0.
+\end{array}
+\right.$$
+Si $e\neq 0$, on obtient $\lambda_3=0$. Si de plus $b\neq 0$, on obtient $\lambda_2=0$ puis
+$\lambda_1=0$ : la famille est libre. D'autre part, si $b=0$, le deuxième vecteur
+est proportionnel au premier et la famille est liée. Enfin, si $e=0$, toute combinaison
+linéaire des trois vecteurs est telle que la troisième coordonnée est nulle : la famille
+n'est pas génératrice. Ainsi, $(S_3)$ est une base si et seulement si $e\neq 0$ et $b\neq 0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater858"></span><script>var myRating = raterJs( { element:document.querySelector("#rater858"),	max:5, rating:2.1282051282051, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(858,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base+coordonnées <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=858.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(858,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce858','imageenonce858');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce858"></a><div class=inner id="innerenonce858">Montrer que les vecteurs $u_1=(0,1,1)$, $u_2=(1,0,1)$ et $u_3=(1,1,0)$ forment une base de $\mathbb R^3$. 
+Trouver dans cette base les coordonnées du vecteur $u=(1,1,1)$.</div></div><div class=indication><a href="javascript:showAll('innerindication858','imageindication858');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication858"></a><div class=inner id="innerindication858" style="display:none;">Prouver que la famille est libre. Puis résoudre $(1,1,1)=au_1+bu_2+cu_3$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige858','imagecorrige858',858);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige858"></a><div class=inner id="innercorrige858" style="display:none;">Puisque $(u_1,u_2,u_3)$ est une famille de trois vecteurs dans un espace de dimension 3,
+à savoir $\mathbb R^3$, il suffit de prouver qu'elle est libre. L'équation $au_1+bu_2+cu_3=0$
+est équivalente successivement aux systèmes :
+$$\left\{\begin{array}{rcl}
+b+c&=&0\\
+a+c&=&0\\
+a+b&=&0\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcl}
+b+c&=&0\\
+a+c&=&0\\
+a-c&=&0\ (L3)-(L1)\to(L3)
+\end{array}
+\right.$$
+$$\iff\left\{
+\begin{array}{rcl}
+b+c&=&0\\
+a+c&=&0\\
+2a&=&0\ (L3)+(L2)\to (L3)\\
+\end{array}\right.
+\iff a=b=c=0.$$
+La famille est libre. Pour trouver les coordonnées du vecteur $(1,1,1)$, on doit maintenant résoudre
+l'équation $(1,1,1)=au_1+bu_2+cu_3$, qui est successivement équivalente à 
+$$\left\{\begin{array}{rcl}
+b+c&=&1\\
+a+c&=&1\\
+a+b&=&1\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcl}
+b+c&=&1\\
+a+c&=&1\\
+a-c&=&0\ (L3)-(L1)\to(L3)
+\end{array}
+\right.$$
+$$\iff\left\{
+\begin{array}{rcl}
+b+c&=&1\\
+a+c&=&1\\
+2a&=&1\ (L3)+(L2)\to (L3)\\
+\end{array}\right.
+\iff a=b=c=1/2.$$
+On a donc $(1,1,1)=\frac 12 u_1+\frac 12 u_2+\frac 12 u_3$. On aurait pu aller un peu plus vite en remarquant que, par
+symétrie des trois coordonnées, on savait que $a=b=c$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater859"></span><script>var myRating = raterJs( { element:document.querySelector("#rater859"),	max:5, rating:1.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(859,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Complétion d'une base <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=859.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(859,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce859','imageenonce859');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce859"></a><div class=inner id="innerenonce859">Pour $E=\mathbb R^4$, dire si les familles de vecteurs suivantes
+peuvent être complétées en une base de $E$. Si oui, le faire.
+<ol class="enumeratechiffre">
+<li> $(u,v,w)$ avec $u=(1,2,-1,0)$, $v=(0,1,-4,1)$ et $w=(2,5,-6,1)$;
+<li> $(u,v,w)$ avec $u=(1,0,2,3)$, $v=(0,1,2,3)$ et $w=(1,2,0,3)$;
+<li> $(u,v)$ avec $u=(1,-1,1,-1)$ et $v=(1,1,1,1)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication859','imageindication859');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication859"></a><div class=inner id="innerindication859" style="display:none;">Par le théorème de la base incomplète, c'est possible si et seulement
+si la famille de vecteurs est libre, ce qu'on doit d'abord vérifier.
+Si c'est le cas, on peut la compléter avec des vecteurs de la base canonique.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige859','imagecorrige859',859);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige859"></a><div class=inner id="innercorrige859" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que $w=2u+v$. La famille $(u,v,w)$ est liée. On ne peut pas la compléter
+en une base de $E$.
+<li> On va d'abord vérifier que la famille $(u,v,w)$ est libre. Une équation du type
+$au+bv+cw=0$ est équivalente au système
+$$\left\{
+\begin{array}{rcl}
+a+c&=&0\\
+b+2c&=&0\\
+2a+2b&=&0\\
+a+b+c&=&0.\\
+\end{array}\right.$$
+La première et la dernière équation donnent immédiatement $b=0$, d'où on tire $a=0$ et $c=0$. La famille $(u,v,w)$ est
+libre. D'après le théorème de la base incomplète, on peut la compléter en une base de $\mathbb R^4$
+à l'aide de vecteurs de n'importe quelle famille génératrice de $\mathbb R^4$. Ici, il suffit d'un vecteur
+(la famille compte déjà 3 éléments, et on travaille dans un espace de dimension 4), et on va choisir la famille
+génératrice la plus simple, la base canonique notée $(e_1,\dots,e_4)$. Montrons que $(u,v,w,e_2)$ est libre.
+En effet, si $au+bv+cw+de_2=0$, on obtient le système
+$$\left\{
+\begin{array}{rcl}
+a+c&=&0\\
+b+2c+d&=&0\\
+2a+2b&=&0\\
+a+b+c&=&0.\\
+\end{array}\right.$$
+Comme précédemment, la première et la dernière équation donnent $b=0$, d'où $a=0$ d'après la deuxième, puis $c=0$ et $d=0$.
+La famille $(u,v,w,e_2)$ est donc une famille libre de 4 éléments dans un espace de dimension 4. C'est une base de $\mathbb R^4$. 
+Remarquons que le choix de $e_2$ n'est pas fait au hasard : on l'a choisi plutôt que $e_1$ afin de ne pas perturber la première et
+la dernière équation du système, et donc d'obtenir facilement $b=0$.
+<li> Les vecteurs $(u,v)$ sont non proportionnels. La famille $(u,v)$ est donc libre et comme ci-dessus on peut la compléter
+à l'aide de deux (cette fois) vecteurs de la base canonique. On vérifie d'abord que
+$(u,v,e_1)$ est libre. En effet, si $au+bv+ce_1=0$, on trouve le système
+$$\left\{\begin{array}{rcl}
+a+b+c&=&0\\
+-a+b&=&0\\
+a+b&=&0\\
+-a+b&=&0.\\
+\end{array}\right.$$
+De la première et la troisième équation, on trouve $c=0$, d'où l'on tire facilement $a=b=c=0$. Expliquons maintenant le choix du 
+deuxième vecteur pour compléter. La deuxième et la quatrième équation sont identiques. Elles apportent donc la même information.
+Pour obtenir vraiment un système de quatre équations différentes, il suffit de perturber l'une des deux, par exemple la deuxième.
+C'est pourquoi on va montrer que $(u,v,e_1,e_2)$ est une famille libre. En effet, si $au+bv+ce_1+de_2=0$, alors
+on trouve le système
+$$\left\{\begin{array}{rcl}
+a+b+c&=&0\\
+-a+b+d&=&0\\
+a+b&=&0\\
+-a+b&=&0.\\
+\end{array}\right.$$
+Comme précédemment, on a $c=0$, et les deuxième et quatrième équations montrent que $d=0$. On en déduit alors facilement que $a=b=c=d=0$.
+La famille $(u,v,e_1,e_2)$ est libre. Elle comporte 4 éléments dans un espace de dimension 4 : c'est une base de $\mathbb R^4$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater860"></span><script>var myRating = raterJs( { element:document.querySelector("#rater860"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(860,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base d'un sous-espace vectoriel de fonctions continues <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=860.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(860,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce860','imageenonce860');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce860"></a><div class=inner id="innerenonce860">Soit $E$ l'ensemble des fonctions continues sur $[-1,1]$ qui sont affines sur $[-1,0]$ et sur $[0,1]$.
+Démontrer que $E$ est un espace vectoriel et en donner une base.</div></div><div class=indication><a href="javascript:showAll('innerindication860','imageindication860');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication860"></a><div class=inner id="innerindication860" style="display:none;">Prendre $f$ dans $E$. Combien faut-il de paramètres pour exprimer $f$? En déduire une base.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige860','imagecorrige860',860);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige860"></a><div class=inner id="innercorrige860" style="display:none;">Il est facile de prouver que $E$ est un sous-espace vectoriel des fonctions continues sur $[-1,1]$.
+Pour trouver une base de $E$, partons de $f\in E$. Puisque $f$ est affine sur $[-1,0]$, il existe des constantes $a$ et
+$b$ telles que, pour tout $x\in[-1,0]$, on a $f(x)=ax+b$. Puisque $f$ est affine sur $[0,1]$, il existe des constantes
+$c$ et $d$ telles que, pour tout $x\in[0,1]$, on a $f(x)=cx+d$. La continuité de $f$ en 0 entraine que $b=d$.
+Finalement, on a prouvé que $f$ est élément de $E$ si et seulement s'il existe trois réels $a$, $b$ et $c$ tels que
+$$f(x)=\begin{cases}
+ax+b\textrm{ si }x\in[-1,0]\\
+cx+b\textrm{ si }x\in[0,1].
+\end{cases}$$
+Ceci suggère que la dimension de $E$ est 3. Encore faut-il trouver la base à partir de l'écriture précédente. 
+Posons pour cela 
+$$f_1(x)=\begin{cases}
+x\textrm{ si }x\in[-1,0]\\
+0\textrm{ si }x\in[0,1]
+\end{cases}\quad\quad
+f_2(x)=\begin{cases}
+0\textrm{ si }x\in[-1,0]\\
+x\textrm{ si }x\in[0,1]
+\end{cases}\textrm{ et }
+f_3(x)=1.$$
+$f_1,f_2$ et $f_3$ sont des éléments de $E$, et la discussion précédente montre que tout élément de $E$ s'écrit
+$af_1+cf_2+bf_3$. Autrement dit, $(f_1,f_2,f_3)$ est une famille génératrice de $E$. De plus, $(f_1,f_2,f_3)$ est une famille libre. En effet, si 
+$\lambda_1 f_1+\lambda_2f_2+\lambda_3f_3=0$, l'évaluation en $x=0$ donne $\lambda_3=0$, puis celle en $-1$ donne
+$\lambda_1=0$ et enfin celle en $1$ donne $\lambda_2=0$.
+On conclut finalement que $(f_1,f_2,f_3)$ est une base de $E$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater862"></span><script>var myRating = raterJs( { element:document.querySelector("#rater862"),	max:5, rating:2.84, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(862,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynômes de Lagrange <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=862.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(862,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce862','imageenonce862');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce862"></a><div class=inner id="innerenonce862">Soit $E=\mathbb C_{n-1}[X]$ et soit $\alpha_1,\dots,\alpha_n$ des nombres complexes deux à deux distincts. On pose, pour $k=1,\dots,n$,
+$$L_k=\frac{\prod_{\substack{i=1\\i\neq k}}^n (X-\alpha_i)}{\prod_{\substack{i=1\\i\neq k}}^n (\alpha_k-\alpha_i)}.$$
+Démontrer que $(L_k)_{k=1,\dots,n}$ est une base de $E$. Déterminer les coordonnées d'un élément $P\in E$ dans cette base.</div></div><div class=indication><a href="javascript:showAll('innerindication862','imageindication862');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication862"></a><div class=inner id="innerindication862" style="display:none;">Le point clé est de constater que $L_k(\alpha_i)=1$ si $i=k$, $0$ sinon.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige862','imagecorrige862',862);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige862"></a><div class=inner id="innercorrige862" style="display:none;">Le point clé est de constater que $L_k(\alpha_i)=1$ si $i=k$, $0$ sinon. Supposons alors que 
+$$a_1L_1+\dots+a_n L_n=0.$$
+Si on évalue cette égalité en $\alpha_k$, on trouve $a_k=0$. La famille est libre. C'est une famille de $n$ vecteurs dans un espace de dimension $n$, donc c'est une base de $E$.<br>
+De plus, prenons $P\in E$, et cherchons $a_1,\dots,a_n$ tels que 
+$$P=a_1L_1+\dots+a_n L_n.$$
+La méthode est identique : on évalue en $\alpha_k$ et on trouve
+$$P(\alpha_k)=a_k.$$
+Ainsi, on a prouvé que pour tout $P\in E$, on a 
+$$P(X)=\sum_{k=1}^n P(\alpha_k)L_k.$$</div></div></div>
+
+<div class=titrepartie>Bases et sous-espaces vectoriels</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater863"></span><script>var myRating = raterJs( { element:document.querySelector("#rater863"),	max:5, rating:1.4545454545455, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(863,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bases de sous-espaces vectoriels - 1 <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=863.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(863,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce863','imageenonce863');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce863"></a><div class=inner id="innerenonce863">Soient $F$ et $G$ les sous-espaces vectoriels de $\mathbb R^3$ définis par :
+\begin{eqnarray*}
+F&=&\{(x,y,z)\in\mathbb R^3;\ x-2y+z=0\}\\
+G&=&\{(x,y,z)\in\mathbb R^3;\ 2x-y+2z=0\}.
+\end{eqnarray*}
+<ol class="enumeratechiffre">
+<li> Donner une base de $F$, une base de $G$, en déduire leur dimension respective.
+<li> Donner une base de $F\cap G$, et donner sa dimension.
+<li> Montrer que la famille constituée des vecteurs de la base de $F$ et des vecteurs de la base de $G$ trouvées en 1 est une famille génératrice de $\mathbb R^3$.
+Est-elle libre?
+<li> Les espaces $F$ et $G$ sont-ils supplémentaires?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication863','imageindication863');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication863"></a><div class=inner id="innerindication863" style="display:none;"><ol class="enumeratechiffre">
+<li> Il faut d'abord trouver une famille génératrice de chaque espace par le procédé "habituel".
+On montrera ensuite que la famille est libre.
+<li> Idem.
+<li> Résoudre un système, ou démontrer que $F+G=\mathbb R^3$ à l'aide d'arguments de
+dimension.
+<li> Que vaut $F\cap G$?
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige863','imagecorrige863',863);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige863"></a><div class=inner id="innercorrige863" style="display:none;"><ol class="enumeratechiffre">
+<li> On trouve d'abord une famille génératrice de $F$. On a :
+$$(x,y,z)\in F\iff x-2y+z=0\iff
+\left\{
+\begin{array}{rcccc}
+x&=&y\times 2&+&z\times(-1)\\
+y&=&y\times 1&+&z\times 0\\
+z&=&y\times 0&+&z\times 1.
+\end{array}\right.$$
+Les vecteurs $(2,1,0)$ et $(-1,0,1)$ engendrent donc $F$. De plus, les deux vecteurs ne sont pas colinéaires,
+dont la famille est libre. C'est une base de $F$ qui est de dimension 2.<br>
+On procède de même pour $G$ :
+$$(x,y,z)\in G\iff 2x-y+2z=0\iff
+\left\{
+\begin{array}{rcccc}
+x&=&x\times 1&+&z\times0\\
+y&=&x\times 2&+&z\times 2\\
+z&=&x\times 0&+&z\times 1.
+\end{array}\right.$$
+On trouve cette fois que $\big( (1,2,0),(0,2,1)\big)$ est une base de $G$ qui est de dimension 2.
+<li> C'est la même chose, mais cette fois on a deux équations.
+$$(x,y,z)\in F\cap G\iff
+\left\{
+\begin{array}{rcl}
+x-2y+z&=&0\\
+2x-y+2z&=&0\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcl}
+x-2y+z&=&0\\
+3y&=&0\\
+z&=&z\\
+\end{array}\right.$$
+$$\iff
+\left\{\begin{array}{rcl}
+x&=&z\times(-1)\\
+y&=&z\times 0\\
+z&=&z\times 1
+\end{array}\right.$$
+Ainsi, le vecteur $(-1,0,1)$ engendre $F\cap G$. Comme une famille constituée d'un vecteur non-nul
+est libre, $(-1,0,1)$ est une base de $F\cap G$ qui est de dimension 1.
+<li> Notons $u=(2,1,0)$, $v=(-1,0,1)$, $w=(1,2,0)$ et $t=(0,2,1)$. Il s'agit de montrer que 
+$(u,v,w,t)$ est une famille génératrice de $\mathbb R^3$.<br>
+Méthode 1. Soit $(x,y,z)\in\mathbb R^3$ et essayons d'écrire
+$(x,y,z)=au+bv+cw+dt$. Alors on doit résoudre le système
+\begin{eqnarray*}\left\{
+\begin{array}{rcl}
+2a-b+c&=&x\\
+a+2c+2d&=&y\\
+b+d&=&z\\
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+2a-b+c&=&x\\
+b+3c+4d&=&2y-x\\
+b+d&=&z
+\end{array}\right.\\
+&\iff&
+\left\{\begin{array}{rcl}
+2a-b+c&=&x\\
+b+3c+4d&=&2y-x\\
+3c+3d&=&2y-x-z.
+\end{array}\right.
+\end{eqnarray*}
+On voit donc qu'on peut imposer une valeur quelconque à $d$, puis, le système étant triangulaire, obtenir les valeurs de $c$, $b$ et enfin $a$.<br>
+Méthode 2. L'espace vectoriel engendré par la réunion des deux bases est $F+G$. On doit démontrer que $F+G=\mathbb R^3$, et
+pour cela il suffit de démontrer que $\dim(F+G)=3$. Par le théorème des quatre dimensions, on a
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=2+2-1=3,$$
+ce qu'il fallait démontrer.<br>
+La famille $(u,v,w,t)$ n'est pas libre car une famille libre de $\mathbb R^3$ comporte au maximum trois éléments.
+<li> $F$ et $G$ ne sont pas supplémentaires car $F\cap G\neq \{0\}$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater864"></span><script>var myRating = raterJs( { element:document.querySelector("#rater864"),	max:5, rating:2.0454545454545, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(864,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base de sevs - 2 <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=864.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(864,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce864','imageenonce864');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce864"></a><div class=inner id="innerenonce864">Soient $F$ et $G$ les sous-espaces vectoriels de $\mathbb R^4$ définis par
+\begin{eqnarray*}
+F&=&\{(a,b,c,d)\in\mathbb R^4;\ b-2c+d=0\}\\
+G&=&\{(a,b,c,d)\in\mathbb R^4;\ a=d\textrm{ et }b=2c\}.
+\end{eqnarray*}
+Donner une base de $F$, de $G$ et de $F\cap G$. 
+En déduire que $F+G=\mathbb R^4$.</div></div><div class=indication><a href="javascript:showAll('innerindication864','imageindication864');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication864"></a><div class=inner id="innerindication864" style="display:none;">Pour le en déduire, utiliser la relation
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G).$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige864','imagecorrige864',864);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige864"></a><div class=inner id="innercorrige864" style="display:none;">$F$ est donné par une équation. Il faut d'abord en trouver un système générateur. On a
+$$(a,b,c,d)\in\mathbb F\iff b-2c+d=0\iff
+\left\{
+\begin{array}{rccccccccc}
+a&=&a\times 1\\
+b&=&&c\times 2&+d\times (-1)\\
+c&=&&c\times 1\\
+d&=&&&d\times 1.
+\end{array}\right.$$
+La famille constituée par les vecteurs $(1,0,0,0)$, $(0,2,1,0)$ et $(0,-1,0,1)$ est donc une famille génératrice 
+de $F$. On vérifie aisément qu'elle est libre. C'est donc une base de $F$.<br>
+Pour $G$, la situation est plus simple, car $G$ est déjà donné sous la forme d'un espace vectoriel engendré. En effet, 
+on a
+$$(a,b,c,d)\in G\iff \left\{
+\begin{array}{rcccccccc}
+a&=&&d\times 1\\
+b&=&c\times 2\\
+c&=&c\times 1\\
+d&=&&d\times 1
+\end{array}\right.
+$$
+La famille constituée par les vecteurs $(1,0,0,1)$ et $(0,2,1,0)$ est une famille génératrice de $G$.
+Comme ces deux vecteurs ne sont pas colinéaires, la famille est libre, et donc il s'agit d'une base de $G$.<br>
+Pour $F\cap G$, on écrit
+$$(a,b,c,d)\in F\cap G\iff
+\left\{
+\begin{array}{rccccc}
+a&=&d\\
+b&=&2c\\
+d&=&-b+2c=0\end{array}\right.
+\iff
+\left\{
+\begin{array}{rccccc}
+a&=&0c\\
+b&=&2c\\
+c&=&1c\\
+d&=&0c
+\end{array}\right.$$
+Le vecteur $(0,2,1,0)$ engendre $F\cap G$. C'est une base de $F\cap G$ puisqu'il est non-nul.<br>
+Enfin, par le théorème des quatre dimensions, on a
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=3+2-1=4.$$
+Ainsi, $F+G$ est un sous-espace vectoriel de dimension 4 contenu
+dans $\mathbb R^4$, qui est lui-même de dimension 4. $F+G=\mathbb R^4$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater865"></span><script>var myRating = raterJs( { element:document.querySelector("#rater865"),	max:5, rating:1.304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(865,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base de sevs - 3 <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=865.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(865,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce865','imageenonce865');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce865"></a><div class=inner id="innerenonce865">Soient $F$ et $G$ les sous-espaces vectoriels suivants de $\mathbb R^3$ :
+\begin{eqnarray*}
+F&=&\{(x,y,z)\in\mathbb R^3;\ x-y-2z=0\}\\
+G&=&\{(x,y,z)\in\mathbb R^3;\ x=2y=x+z\}.
+\end{eqnarray*}
+<ol class="enumeratechiffre">
+<li> Déterminer la dimension de $F$, puis la dimension de $G$.
+<li> Calculer $F\cap G$. En déduire que $F$ et $G$ sont supplémentaires.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication865','imageindication865');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication865"></a><div class=inner id="innerindication865" style="display:none;"><ol class="enumeratechiffre">
+<li> Trouver une base.
+<li> $F\cap G=\{0\}$, puis lien entre $\dim(F+G)$ et $\dim(F)$, $\dim(G)$ et $\dim(F\cap G)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige865','imagecorrige865',865);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige865"></a><div class=inner id="innercorrige865" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$(x,y,z)\in F\iff x-y-2z=0\iff
+\left\{
+\begin{array}{rcccc}
+x&=&y&+&2z\\
+y&=&y\\
+z&=&&&z
+\end{array}
+\right.$$
+La famille constituée par les vecteurs $(1,1,0)$ et $(2,0,1)$ est donc une famille génératrice de $F$.
+Comme elle est libre, c'est une base de $F$ qui est de dimension 2.<br>
+On cherche de même une base de $G$ :
+$$(x,y,z)\in G\iff x=2y=x+z\iff \left\{
+\begin{array}{rcl}
+x&=&2y\\
+y&=&1y\\
+z&=&0
+\end{array}
+\right.$$
+La famille constituée par le seul vecteur non-nul $(2,1,0)$ engendre $G$ et elle est évidemment libre.
+C'est une base de $G$ et donc $\dim(G)=1$.
+<li> On a 
+$$(x,y,z)\in F\cap G\iff 
+\left\{ 
+\begin{array}{rcl}
+x-y-2z&=&0\\
+x&=&2y\\
+z&=&0
+\end{array}\right.
+\iff x=y=z=0.$$
+Ainsi, $F\cap G=\{0\}$. On en déduit que $\dim(F\cap G)=0$. Il vient
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=2+1-0=3.$$
+$F+G$ est donc un sous-espace vectoriel de $\mathbb R^3$ de dimension 3. On en déduit que
+$F+G=\mathbb R^3$. Puisque de plus $F\cap G=\{0\}$, $F$ et $G$ sont supplémentaires.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater891"></span><script>var myRating = raterJs( { element:document.querySelector("#rater891"),	max:5, rating:0.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(891,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sont-ils supplémentaires? <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=891.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(891,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce891','imageenonce891');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce891"></a><div class=inner id="innerenonce891">Soient $F,G$ les sous-espaces vectoriels de $\mathbb R^3$ suivants :
+$$F=\{(a,a,a)\in\mathbb R^3:\ a\in\mathbb R\}\textrm{ et }G=\{(b+c,b,c)\in\mathbb R^3:\ b,c\in\mathbb R\}.$$
+Sont-ils supplémentaires?</div></div><div class=indication><a href="javascript:showAll('innerindication891','imageindication891');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication891"></a><div class=inner id="innerindication891" style="display:none;">La réunion d'une base de $F$ et d'une base de $G$ est-elle une base de $\mathbb R^3$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige891','imagecorrige891',891);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige891"></a><div class=inner id="innercorrige891" style="display:none;">Il suffit de vérifier que la réunion d'une base de $F$ et d'une base de $G$ est une base
+de $\mathbb R^3$. Il est ici très facile de déterminer des bases respectives de $F$ et $G$.
+Pour $F$, une base est donnée par $u_1=(1,1,1)$, pour $G$, une base est donnée par $u_2=(1,1,0)$ et $u_3=(1,0,1)$.
+Or, il est aisé de vérifier que la famille $(u_1,u_2,u_3)$ est libre, et comme c'est une famille de trois vecteurs en
+dimension 3, c'est une base. Donc $F$ et $G$ sont supplémentaires.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater866"></span><script>var myRating = raterJs( { element:document.querySelector("#rater866"),	max:5, rating:1.6111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(866,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Supplémentaire <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=866.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(866,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce866','imageenonce866');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce866"></a><div class=inner id="innerenonce866">Soient $F, G$ les sous-espaces vectoriels de $\mathbb R^4$ suivants : <br>
+$ F=\{ (x,y,z,t)\in \mathbb R^4 \ \vert \ x+y+z=0 \text{ et } 2x+y+z-t=0 \} $, <br>
+$ G = \textrm{vect}\{ (1,-2,1,1),(1,2,-3,1),(5,-3,-2,5)\}\subset \mathbb R^4 $.
+<ol class="enumeratechiffre">
+ <li> Calculer la dimension de $F$.
+ <li> Montrer que $G\subset F$ et conclure que $G=F$.
+ <li> Déterminer un supplémentaire de $F$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication866','imageindication866');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication866"></a><div class=inner id="innerindication866" style="display:none;"><ol class="enumeratechiffre">
+ <li> Chercher une base de $F$.
+ <li> Les vecteurs engendrant $G$ doivent être contenus dans $F$.
+ <li> Utiliser le théorème de la base incomplète.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige866','imagecorrige866',866);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige866"></a><div class=inner id="innercorrige866" style="display:none;"><ol class="enumeratechiffre">
+<li> On va déterminer une base de $F$. Pour cela, on écrit que 
+\begin{eqnarray*}
+(x,y,z,t)\in F&\iff& 
+\left\{\begin{array}{rcl}
+x+y+z&=&0\\
+2x+y+z-t&=&0\\
+\end{array}\right.
+\\
+&\iff& \left\{\begin{array}{rcl}
+x+y+z&=&0\\
+x-t&=&0\\
+\end{array}\right.
+\\
+&\iff& \left\{\begin{array}{rcl}
+x&=&x\\
+y&=&-x-z\\
+z&=&z\\
+t&=&x\\
+\end{array}\right.
+\end{eqnarray*}
+On en déduit qu'une base de $F$ est donnée par les vecteurs $u_1=(1,-1,0,1)$ et $u_2=(0,-1,1,0)$ et donc que $F$ est de dimension 2.
+<li> On commence par vérifier que les vecteurs qui engendrent $G$, à savoir $(1,-2,1,1),(1,2,-3,1)$ et $(5,-3,-2,5)$
+sont éléments de $F$, ce qui est très facile en utilisant les équations de $F$. Ceci prouve alors que $G\subset F$.
+Pour prouver que $G=F$, il suffit de prouver que $\dim F=\dim G$. Mais $F$ a pour dimension 2, et $G$ est de dimension
+supérieure ou égale à 2 car les deux vecteurs $(1,-2,1,1)$ et $(1,2,-3,1)$ ne sont pas colinéaires. Comme $G\subset F$,
+on sait que la dimension de $G$ est inférieure ou égale à la dimension de $F$. On trouve finalement que $\dim F=\dim
+G=2$, et puisque $G\subset F$, ceci entraine $F=G$.
+<li> En utilisant le théorème de la base incomplète, on va trouver deux vecteurs $u_3$ et $u_4$ de sorte
+que $(u_1,u_2,u_3,u_4)$ soit une base de $\mathbb R^4$. Alors, $H=\textrm{vect}(u_3,u_4)$ sera un supplémentaire de $F$ dans
+$\mathbb R^4$. D'après le théorème de la base incomplète, on sait qu'on peut choisir les vecteurs $u_3$ et $u_4$ parmi les
+vecteurs de la base canonique. On vérifie facilement ici que $u_3=e_1$ et $u_4=e_4$ conviennent. Donc
+$H=\textrm{vect}(e_1,e_4)$ est un supplémentaire de $F$ dans $\mathbb R^4$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater869"></span><script>var myRating = raterJs( { element:document.querySelector("#rater869"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(869,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exercice de synthèse <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=869.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(869,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce869','imageenonce869');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce869"></a><div class=inner id="innerenonce869">On considère la partie $F$ de $\mathbb R^4$ définie par
+$$F=\{(x,y,z,t)\in\mathbb R^4;\ x+y=0\textrm{ et }x+z=0\}.$$
+<ol class="enumeratechiffre">
+<li> Donner une base de $F$.
+<li> Compléter la base trouvée en une base de $\mathbb R^4$.
+<li> On pose $u_1=(1,1,1,1)$, $u_2=(1,2,3,4)$ et $u_3=(-1,0,-1,0)$.
+La famille $(u_1,u_2,u_3)$ est-elle libre?
+<li> On pose $G$ l'espace vectoriel engendré par les vecteurs $u_1$, $u_2$ et $u_3$.
+Quelle est la dimension de $G$?
+<li> Donner une base de $F\cap G$.
+<li> En déduire que $F+G=\mathbb R^4$.
+<li> Est-ce qu'un vecteur de $\mathbb R^4$ s'écrit de façon unique comme somme d'un vecteur de 
+$F$ et d'un vecteur de $G$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication869','imageindication869');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication869"></a><div class=inner id="innerindication869" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Utiliser des vecteurs de la base canonique.
+<li> 
+<li>
+<li> 
+<li> 
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige869','imagecorrige869',869);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige869"></a><div class=inner id="innercorrige869" style="display:none;"><ol class="enumeratechiffre">
+<li> On a :
+$$(x,y,z,t)\in F\iff \left\{\begin{array}{rcl}
+x+y&=&0\\
+x+z&=&0\\
+\end{array}\right.
+\iff \left\{\begin{array}{rcl}
+x+y&=&0\\
+y-z&=&0\\
+\end{array}\right.\iff\left\{\begin{array}{rcl}
+x&=&-y\\
+y&=&y\\
+z&=&y\\
+t&=&t
+\end{array}\right.$$
+Une base de $F$ est donc donnée par les deux vecteurs $v_1=(1,-1,-1,0)$ et $v_2=(0,0,0,1)$.
+<li> D'après le théorème de la base incomplète, on sait que l'on peut compléter la famille $(v_1,v_2)$ par
+deux vecteurs de la base canonique pour obtenir une base de $\mathbb R^4$. On vérifie facilement 
+que $(v_1,v_2,e_1,e_2)$ est une famille libre, donc une base de $\mathbb R^4$.
+<li> L'équation $au_1+bu_2+cu_3=0$ donne le système
+$$\left\{\begin{array}{rcl}
+a+b-c&=&0\\
+a+2b&=&0\\
+a+3b-c&=&0\\
+a+4b&=&0
+\end{array}\right.$$
+ce qui donne facilement $b=0$ (comparer la deuxième et la quatrième équation), puis $a=0$ et $c=0$. La famille est
+libre.
+<li> La famille $(u_1,u_2,u_3)$ est une famille génératrice de $G$. C'est aussi une famille libre d'après la question
+précédente. C'est donc une base de $G$ qui est de dimension 3. 
+<li> Soit $au_1+bu_2+cu_3$ un vecteur de $G$. On cherche les conditions sur $a,b,c$ pour qu'il soit élément de $F$. Il
+vient 
+$$\left\{\begin{array}{rcl}
+2a+3b-c&=&0\\
+2a+4b-2c&=&0\\
+\end{array}\right.
+\iff\left\{\begin{array}{rcl}
+2a&=&-3b+c\\
+b&=&c
+\end{array}\right.
+\iff\left\{\begin{array}{rcl}
+a&=&-c\\
+b&=&c\\
+c&=&c
+\end{array}\right.$$
+Ainsi, les vecteurs de $F$ et $G$ sont ceux qui s'écrivent $c(-u_1+u_2+u_3)=c(-1,1,1,3)$. Une base de $F\cap G$
+est donc donné par le seul vecteur $(-1,1,1,3)$.
+<li> D'après le théorème des quatre dimensions,
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=2+3-1=4.$$
+Ainsi, $F+G$ est un sous-espace vectoriel de $\mathbb R^4$ qui est de dimension 4, et donc $F+G=\mathbb R^4$.
+<li> Non, car $F\cap G$ n'est pas réduit à $\{0\}$, la somme n'est pas directe.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater861"></span><script>var myRating = raterJs( { element:document.querySelector("#rater861"),	max:5, rating:2.5238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(861,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base d'un sous-espace de polynômes <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=861.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(861,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce861','imageenonce861');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce861"></a><div class=inner id="innerenonce861">Soit $F=\{P\in\mathbb R_n[X];\ P(\alpha)=0\}$. Démontrer que $\mathcal B=\{(X-\alpha)X^k;\ 0\leq k\leq n-1\}$
+est une base de $F$. Quelle est la dimension de $F$? Donner les coordonnées de $(X-\alpha)^n$ dans cette base.</div></div><div class=indication><a href="javascript:showAll('innerindication861','imageindication861');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication861"></a><div class=inner id="innerindication861" style="display:none;">Factoriser un élément de $F$ par $X-\alpha$!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige861','imagecorrige861',861);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige861"></a><div class=inner id="innercorrige861" style="display:none;">Soit $P\in F$. Alors, puisque $P(\alpha)=0$, $P$ se factorise par $X-\alpha$. Autrement dit, il existe un polynôme $Q\in\mathbb R_{n-1}[X]$ tel que $P(X)=(X-\alpha)Q(X)$. Mais on peut écrire 
+$$Q(X)=\sum_{k=0}^{n-1}a_kX^k$$
+et donc
+$$P(X)=\sum_{k=0}^{n-1}a_k(X-\alpha)X^k,$$
+ce qui prouve que $\mathcal B$ est une famille génératrice de $F$. C'est aussi une famille libre, car si 
+$$\sum_{k=0}^{n-1}a_k(X-\alpha)X^k=0,$$
+alors 
+$$(X-\alpha)\left(\sum_{k=0}^{n-1}a_kX^k\right)=0$$
+et le polynôme $\sum_{k=0}^{n-1}a_kX^k$ doit être nul. Comme la famille $(1,X,\dots,X^{n-1})$ est libre, ceci entraîne que tous les $a_k$ sont nuls.<br>
+On en déduit bien sûr que la dimension de $F$ est $n$. Cette dernière propriété pouvait également être établi à l'aide du théorème du rang, car $F$ est le noyau de la forme linéaire $\mathbb R_n[X]\to R,\ P\mapsto P(\alpha)$. Enfin, pour déterminer les coordonnées de $(X-\alpha)^n$ dans la base précédente, on écrit 
+\begin{eqnarray*}
+(X-\alpha)^n &=&(X-\alpha)(X-\alpha)^{n-1}\\
+&=&(X-\alpha)\left(\sum_{k=0}^{n-1}\binom{n-1}k (-\alpha)^{n-1-k}X^k\right)\\
+&=&\sum_{k=0}^{n-1}\binom{n-1}k (-\alpha)^{n-1-k}(X-\alpha)X^k
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater896"></span><script>var myRating = raterJs( { element:document.querySelector("#rater896"),	max:5, rating:2.1904761904762, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(896,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites arithmétiques <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=896.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(896,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce896','imageenonce896');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce896"></a><div class=inner id="innerenonce896">Démontrer que l'ensemble des suites arithmétiques complexes est un espace vectoriel.
+Quelle est sa dimension?</div></div><div class=indication><a href="javascript:showAll('innerindication896','imageindication896');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication896"></a><div class=inner id="innerindication896" style="display:none;">Combien faut-il de paramètres pour connaitre parfaitement une suite arithmétique?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige896','imagecorrige896',896);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige896"></a><div class=inner id="innercorrige896" style="display:none;">Soit $E$ l'ensemble des suites arithmétiques complexes. On vérifie sans difficulté que c'est un 
+sous-espace vectoriel de l'ensemble des suites complexes, et donc que c'est un espace vectoriel.
+Pour calculer sa dimension, on remarque que l'on connait parfaitement une suite arithmétique si l'on connait
+son premier terme et sa raison. Ceci laisse à penser que la dimension de $E$ est égale à deux. Prouvons-le.
+Si $(u_n)$ est une suite arithmétique, alors son premier terme est $u_0$ et sa raison est égale à 
+$u_1-u_0$. Considérons donc
+\begin{eqnarray*}
+\phi:E&\to&\mathbb C^2\\
+(u_n)&\mapsto&(u_0,u_1-u_0)
+\end{eqnarray*}
+$\phi$ est clairement une application linéaire. Elle est
+injective : si $\phi((u_n))=0$, alors $(u_n)$ est une suite arithmétique
+de premier terme nul et de raison nulle, et donc $u_n=0$ pour tout entier n.
+Elle est aussi surjective : si $(a,b)\in\mathbb C^2$, alors la suite $(u_n)$ définie
+par $u_n=a+nb$ est élément de $E$ et vérifie $\phi((u_n))=(a,b)$. Autrement dit,
+$\phi$ est un isomorphisme d'espaces vectoriels entre $E$ et $\mathbb C^2$. Puisque $\mathbb C^2$
+est de dimension 2, $E$ est aussi de dimension 2.<br>
+Remarquons que l'on peut aussi trouver une base de $E$. Si $(a_n)$ est la suite
+définie par $a_n=1$ pour tout entier $n$, et $(b_n)$ est la suite définie
+par $b_n=n$ pour tout entier $n$, alors ces deux suites sont éléments de $E$
+et forment une famille libre. De plus, si $(u_n)$ est un élément de $E$, alors
+il existe $(c,d)\in\mathbb R^2$ tels que, pour tout $n\in\mathbb N$, $u_n=c+nd=ca_n+db_n$, et donc $(u_n)$ est combinaison linéaire
+de $(a_n)$ et $(b_n)$. Autrement dit, $\big((a_n),(b_n)\big)$ est une base de $E$ qui est de dimension $2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater870"></span><script>var myRating = raterJs( { element:document.querySelector("#rater870"),	max:5, rating:2.7058823529412, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(870,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des polynômes <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=870.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(870,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce870','imageenonce870');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce870"></a><div class=inner id="innerenonce870">Soit $E=\mathbb R_4[X]$ et $a$, $b$ deux réels distincts.
+On désigne par  $F$ l'ensemble des polynômes de $E$ dont $a$ et $b$ sont racines.
+Montrer que $F$ est un sous-espace vectoriel de $E$. En donner une base.</div></div><div class=indication><a href="javascript:showAll('innerindication870','imageindication870');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication870"></a><div class=inner id="innerindication870" style="display:none;">Tout polynôme de $F$ s'écrit $P=(X-a)(X-b)Q$ avec $\deg(Q)\leq 2$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige870','imagecorrige870',870);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige870"></a><div class=inner id="innercorrige870" style="display:none;">Il est d'abord très facile de vérifier que $F$ est un sous-espace vectoriel de $E$.
+De plus, prenons $P\in F$. Alors $P$ s'écrit $P(X)=(X-a)(X-b)Q(X)$.
+Puisque $P$ est de degré inférieur ou égal à 4, $Q$ est de degré inférieur ou égal à 2,
+et donc $Q(X)=uX^2+vX+w$. Développant, on trouve
+$$P(X)=u X^2(X-a)(X-b)+vX (X-a)(X-b)+w(X-a)(X-b).$$
+Autrement dit, la famille $\big( X^2(X-a)(X-b), X(X-a)(X-b), (X-a)(X-b)\big)$
+est une famille génératrice de $F$. De plus, elle est libre puisque les polynômes qui la constituent
+ont tous des degrés différents. C'est donc une base de $F$.</div></div></div>
+
+<div class=titrepartie>Applications linéaires sur $\mathbb R^n$</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater874"></span><script>var myRating = raterJs( { element:document.querySelector("#rater874"),	max:5, rating:1.5061728395062, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(874,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyau et image <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=874.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(874,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce874','imageenonce874');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce874"></a><div class=inner id="innerenonce874">On considère l'application linéaire $f$ de $\mathbb R^3$
+dans $\mathbb R^4$ définie par
+$$f(x,y,z)=(x+z,y-x,z+y,x+y+2z).$$
+<ol class="enumeratechiffre">
+<li> Déterminer  une base de $\textrm{Im}(f)$.
+<li> Déterminer une base de $\ker(f)$.
+<li> L'application $f$ est-elle injective? surjective?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication874','imageindication874');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication874"></a><div class=inner id="innerindication874" style="display:none;"><ol class="enumeratechiffre">
+<li> $(f(e_1),f(e_2),f(e_3))$ est une famille génératrice de $\textrm{Im}(f)$.
+De plus, $f(e_3)$ est combinaison linéaire de $f(e_1)$ et $f(e_2)$.
+<li> On peut vérifier la dimension de $\ker(f)$ en utilisant le théorème du rang.
+<li> Quelles sont les dimensions de $\ker(f)$? de $\textrm{Im}(f)$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige874','imagecorrige874',874);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige874"></a><div class=inner id="innercorrige874" style="display:none;"><ol class="enumeratechiffre">
+<li> Utilisant la définition de $f$, on a :
+\begin{eqnarray*}
+f(e_1)&=&(1,-1,0,1)\\
+f(e_2)&=&(0,1,1,1)\\
+f(e_3)&=&(1,0,1,2)\\
+\end{eqnarray*}
+On sait que la famille $(f(e_1),f(e_2),f(e_3))$ est une famille
+génératrice de $\textrm{Im}(f)$. Or, $f(e_3)=f(e_1)+f(e_2)$ 
+et donc $f(e_3)$ est combinaison linéaire de $(f(e_1),f(e_2))$.
+Ainsi, la famille $(f(e_1),f(e_2))$ est déjà génératrice
+de $\textrm{Im}(f)$. De plus, elle est libre car les deux vecteurs
+sont non-nuls et ne sont pas proportionnels. On en déduit que
+$(f(e_1),f(e_2))$ est une base de $\textrm{Im}(f)$.
+<li> On a :
+$$(x,y,z)\in\ker(f)\iff
+\left\{
+\begin{array}{rcl}
+x+z&=&0\\
+-x+y&=&0\\
+y+z&=&0\\
+x+y+2z&=&0\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcl}
+x+z&=&0\\
+y+z&=&0\\
+y+z&=&0\\
+y+z&=&0\\
+\end{array}\right.$$
+$$\iff
+\left\{
+\begin{array}{rcl}
+x&=&-z\\
+y&=&-z\\
+z&=&z
+\end{array}\right.
+$$
+On en déduit que le vecteur $(-1,-1,1)$ engendre $\ker(f)$. Comme il est non-nul,
+c'est une base de $\ker(f)$. En particulier, on trouve que $\ker(f)$ est
+de dimension 1, ce que l'on peut aussi obtenir en utilisant le théorème du rang.
+<li> $f$ n'est pas injective, car son noyau n'est pas réduit à $\{0\}$.
+$f$ n'est pas surjective, car son image n'est pas $\mathbb R^4$ tout entier.
+En effet, la dimension de $\textrm{Im}(f)$ est 2, et non 4.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater875"></span><script>var myRating = raterJs( { element:document.querySelector("#rater875"),	max:5, rating:1.3835616438356, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(875,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application linéaire donnée par l'image d'une base <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=875.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(875,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce875','imageenonce875');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce875"></a><div class=inner id="innerenonce875">Soit $E=\mathbb R^3$. On note ${\cal B}=\{e_1,e_2,e_3\}$ la base canonique de $E$ et $u$ l'endomorphisme de $\mathbb R^3$ défini par la donnée des images des vecteurs de la base : 
+$$u(e_1) = -2e_1 +2e_3 \; , u(e_2)=3e_2 \; , u(e_3)=-4e_1 + 4e_3.$$ 
+<ol class="enumeratechiffre">
+<li> Déterminer une base de $\ker~u$. 
+L'endomorphisme $u$ est-il injectif? peut-il être surjectif? Pourquoi?
+<li> Déterminer une base de $\textrm{Im}~u$. Quel est le rang de u ?
+<li> Montrer que $E=\ker~u\bigoplus \textrm{Im}~u$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication875','imageindication875');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication875"></a><div class=inner id="innerindication875" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par calculer $u(x,y,z)$. Puis utiliser la caractérisation des endomorphismes injectifs.
+<li> Quelle est la dimension de $\textrm{Im}(u)$? Commencer par donner une famille génératrice
+facile de $\textrm{Im}(u)$, et en extraire une base!
+<li> Montrer que la réunion d'une base de $\ker(u)$ et d'une base de $\textrm{Im}(u)$ est une base
+de $\mathbb R^3$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige875','imagecorrige875',875);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige875"></a><div class=inner id="innercorrige875" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par calculer $u(x,y,z)$. On a 
+$$u(x,y,z)=u(xe_1+ye_2+ze_3)=xu(e_1)+yu(e_2)+zu(e_3)$$
+soit 
+$$u(x,y,z)=(-2x-4z,3y,2x+4z).$$
+On a donc
+$$(x,y,z)\in\ker(u)\iff\left\{
+\begin{array}{rcl}
+-2x-4z&=&0\\
+3y&=&0\\
+2x+4z&=&0\\
+\end{array}
+\right.
+\iff
+\left\{
+\begin{array}{rcl}
+x&=&-2z\\
+y&=&0\\
+z&=&z
+\end{array}\right.$$
+On a donc $\ker(u)=\textrm{vect}(-2,0,1)$ et le vecteur $(-2,0,1)$ est une base de $\ker(u)$.
+$\ker(u)$ n'est pas réduit à $\{0\}$, et donc l'endomorphisme $u$ n'est pas injectif.
+Comme $u$ est un endomorphisme de l'espace vectoriel de dimension finie $\mathbb R^3$,
+il n'est pas non plus surjectif, car on a alors
+$$u\textrm{ injectif}\iff u\textrm{ surjectif}\iff u\textrm{ bijectif}.$$
+<li> On sait, d'après le théorème du rang, que $\textrm{Im}(u)$ est de dimension 2.
+On sait aussi que $\big(u(e_1),u(e_2),u(e_3)\big)$ est une famille
+génératrice de $\textrm{Im}u$. Il suffit donc d'en extraire une famille libre à deux éléments.
+Mais on vérifie immédiatement que $\big(u(e_1),u(e_2)\big)$ est une telle famille.
+C'est donc une base de $\textrm{Im}(u)$ qui est de rang 2.
+<li> Il suffit de montrer que la réunion d'une base de $\ker(u)$ et d'une base de
+$\textrm{Im}(u)$ est une base de $\mathbb R^3$. Autrement dit, avec les calculs réalisés précédemment,
+il suffit de voir que la famille $\big((-2,0,1),(-2,0,2),(0,3,0)\big)$ est une famille libre.
+C'est très facile et laissé au lecteur...
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater877"></span><script>var myRating = raterJs( { element:document.querySelector("#rater877"),	max:5, rating:1.5660377358491, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(877,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Définie par une base <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=877.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(877,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce877','imageenonce877');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce877"></a><div class=inner id="innerenonce877">On considère dans $\mathbb R^2$ les trois vecteurs $u=(1,1)$, $v=(2,-1)$ et $w=(1,4)$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $(u,v)$ est une base de $\mathbb R^2$.
+<li> Pour quelle(s) valeur(s) du réel $a$ existe-t-il une application linéaire $f:\mathbb R^2\to \mathbb R^2$
+telle que $f(u)=(2,1)$, $f(v)=(1,-1)$ et $f(w)=(5,a)$?
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication877','imageindication877');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication877"></a><div class=inner id="innerindication877" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Exprimer $w$ dans la base $(u,v)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige877','imagecorrige877',877);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige877"></a><div class=inner id="innercorrige877" style="display:none;"><ol class="enumeratechiffre">
+<li> $(u,v)$ sont deux vecteurs non-nuls de $\mathbb R^2$, non colinéaires. Ils forment une famille libre de $\mathbb R^2$
+de deux vecteurs. Or, $\mathbb R^2$ est de dimension 2. $(u,v)$ est donc une base de $\mathbb R^2$.
+<li> Exprimons $w$ dans la base $(u,v)$. On a $w=3u-v$. Pour que $f$ soit linéaire, on doit avoir
+$$f(w)=3f(u)-f(v)$$
+soit 
+$$(5,a)=3(2,1)-(1,-1)=(5,4).$$
+Pour que $f$ soit linéaire, il est donc nécessaire que $a=4$. Réciproquement, on définit ainsi bien une application linéaire, en définissant
+l'image d'une base.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater892"></span><script>var myRating = raterJs( { element:document.querySelector("#rater892"),	max:5, rating:1.2564102564103, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(892,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyau prescrit? <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=892.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(892,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce892','imageenonce892');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce892"></a><div class=inner id="innerenonce892">Soit $E=\mathbb R^4$ et $F=\mathbb R^2$. On considère
+$H=\{(x,y,z,t)\in\mathbb R^4;\ x=y=z=t\}$. Existe-t-il des applications linéaires de $E$ dans $F$
+dont le noyau est $H$?</div></div><div class=indication><a href="javascript:showAll('innerindication892','imageindication892');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication892"></a><div class=inner id="innerindication892" style="display:none;">Quelle est la dimension de $H$? Est-ce compatible avec le théorème du rang?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige892','imagecorrige892',892);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige892"></a><div class=inner id="innercorrige892" style="display:none;">On a $H=\textrm{vect}\big((1,1,1,1)\big)$. $H$ est donc un espace vectoriel de dimension 1.
+Si $H$ était le noyau d'une application linéaire $f$ de $E$ dans $F$, alors par le théorème du rang 
+on aurait
+$$4=\dim(E)=\dim(H)+\dim(\textrm{Im}(f))=1+\dim(\textrm{Im}(f)).$$
+Ainsi, on aurait $\dim(\textrm{Im}(f))=3$. Mais $\textrm{Im}(f)$ est un sous-espace vectoriel de
+$\mathbb R^2$, sa dimension est au plus 2. On a une contradiction. Donc $H$ n'est pas le noyau d'un élément de $\mathcal L(E,F)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater878"></span><script>var myRating = raterJs( { element:document.querySelector("#rater878"),	max:5, rating:2.0238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(878,rating); this.setRating(rating);   this.disable();    done();     }});</script> - A noyau fixé <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=878.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(878,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce878','imageenonce878');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce878"></a><div class=inner id="innerenonce878">Soit $E$ le sous-espace vectoriel de $\mathbb R^3$ engendré par les vecteurs
+$u=(1,0,0)$ et $v=(1,1,1)$. Trouver un endomorphisme $f$ de $\mathbb R^3$ dont le noyau est $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication878','imageindication878');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication878"></a><div class=inner id="innerindication878" style="display:none;">Compléter $(u,v)$ en une base $(u,v,w)$ de $\mathbb R^3$, et définir $f$ sur cette base.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige878','imagecorrige878',878);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige878"></a><div class=inner id="innercorrige878" style="display:none;">Première méthode : Une application linéaire de $\mathbb R^3$ dans lui-même est définie par 
+$$f(x,y,z)=(a_1x+b_1y+c_1z,a_2x+b_2y+c_2z,a_3x+b_3y+c_3 z)$$
+où les $a_i,b_i,c_i$ sont des réels. On va déterminer quelle(s) valeur(s)
+leur donner pour que $f(u)=0$ et $f(v)=0$. On a 
+$$f(u)=0\iff(a_1,a_2,a_3)=(0,0,0)$$
+et
+$$f(v)=0\iff (a_1+b_1+c_1,a_2+b_2+c_2,a_3+b_3+c_3 )=(0,0,0).$$
+On obtient $a_1=a_2=a_3=0$ et $b_1=-c_1$, $b_2=-c_2$, $b_3=-c_3$. Ainsi, l'application $f$
+suivante convient 
+$$(x,y,z)\mapsto(y-z,y-z,y-z).$$
+Puisque $u,v\in\ker(f)$, le sous-espace vectoriel $E$ engendré par $(u,v)$ est contenu dans $\ker(f)$.
+De plus, $f$ n'étant pas identiquement nulle, son noyau est de dimension au plus 2.
+On en déduit que $\ker(f)$ est de dimension exactement 2, et que $\ker(f)=E$.<br>
+Deuxième méthode : Une application linéaire de $\mathbb R^3$ dans lui-même est complètement définie
+par l'image d'une base. Complétons d'abord $(u,v)$ en une base (c'est possible, car c'est une famille
+libre). Posons $w=(0,0,1)$. Alors on vérifie facilement que la famille $(u,v,w)$ est
+une famille libre de $\mathbb R^3$ à trois éléments, donc une base de $\mathbb R^3$. On définit $f$
+par 
+$$f(u)=(0,0,0),\ f(v)=(0,0,0),\ f(w)=(1,0,0).$$
+Ceci définit parfaitement $f$ et, comme dans la première méthode, on prouve que le noyau de $f$
+est exactement $E$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater879"></span><script>var myRating = raterJs( { element:document.querySelector("#rater879"),	max:5, rating:1.6086956521739, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(879,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application linéaire à contraintes <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=879.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(879,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce879','imageenonce879');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce879"></a><div class=inner id="innerenonce879">Montrer qu'il existe un unique endomorphisme $f$ de $\mathbb R^4$ tel que, si 
+$(e_1,e_2,e_3,e_4)$ désigne la base canonique, alors on a
+<ol class="enumeratechiffre">
+<li> $f(e_1)=e_1-e_2+e_3$ et $f(2e_1+3e_4)=e_2$.
+<li> $\ker(f)=\{(x,y,z,t)\in\mathbb R^4,\ x+2y+z=0\textrm{ et }x+3y-t=0\}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication879','imageindication879');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication879"></a><div class=inner id="innerindication879" style="display:none;">Déterminer
+quelles doivent être les valeurs de $f(e_1)$, $f(e_2)$, $f(e_3)$, $f(e_4)$.
+On pourra trouver une base de $\ker(f)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige879','imagecorrige879',879);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige879"></a><div class=inner id="innercorrige879" style="display:none;">Un endomorphisme est uniquement défini par l'image d'une base. Il suffit donc
+de calculer quelles doivent être les valeurs de $f(e_1)$, $f(e_2)$, $f(e_3)$, $f(e_4)$.
+On sait déjà que :
+<ul class="rien">
+<li> $f(e_1)=e_1-e_2+e_3$.
+<li> $f(3e_4)=e_2-2f(e_1)$, soit $f(e_4)=\frac{1}{3}(-2e_1+3e_2-2e_3)$.
+</ul>
+Reste à définir $f(e_2)$ et $f(e_3)$. Pour cela, on va chercher
+une base de $F=\{(x,y,z,t)\in\mathbb R^4,\ x+2y+z=0\textrm{ et }x+3y-t=0\}.$
+On a aisément :
+$$(x,y,z,t)\in F\iff \left\{
+\begin{array}{rcl}
+x&=&x\\
+y&=&y\\
+z&=&-x-2y\\
+t&=&x+3y
+\end{array}\right.$$
+On en déduit que $\{(1,0,-1,1),(0,1,-2,3)\}$ est une base de $F$.
+Puisqu'on veut que $F=\ker(f)$, on doit donc avoir
+$$f(e_1)-f(e_3)+f(e_4)=0\implies f(e_3)=\frac{1}{3}e_1+\frac{1}{3}e_3$$
+et
+$$f(e_2-2e_3+3e_4)=0\implies f(e_2)=2f(e_3)-3f(e_4).$$
+Donc l'endomorphisme $f$, s'il existe, est unique. Réciproquement, soit $f$ l'endomorphisme
+défini par les formules précédentes. Alors le premier point est vérifié, et
+puisque l'image d'une base de $F$ est envoyée par $f$ sur $0$,
+on sait que $F\subset\ker(f)$. Pour démontrer l'égalité,
+il suffit, puisque $\dim(F)=2$, de prouver que $\dim(\ker(f))\leq 2$.
+Par le théorème du rang, il suffit de prouver que $\dim(\textrm{Im}(f))\geq 2$.
+Mais $f(e_1)$ et $f(e_4)$ sont deux vecteurs indépendants de $\textrm{Im}(f)$.
+Et donc $\dim(\textrm{Im}(f))\geq 2$, ce qui prouve le résultat. On peut remarquer qu'on a en réalité $\dim(\ker(f))=\dim(\textrm{Im}(f))=2.$</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Applications linéaires sur d'autres espaces de dimension finie</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater887"></span><script>var myRating = raterJs( { element:document.querySelector("#rater887"),	max:5, rating:1.9736842105263, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(887,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications linéaires dans un espace de polynômes <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=887.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(887,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce887','imageenonce887');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce887"></a><div class=inner id="innerenonce887">Soit $E=\mathbb R_3[X]$ l'espace vectoriel des polynômes à coefficients réels de degré inférieur ou égal à 3.
+On définit $u$ l'application de $E$ dans lui-même par
+$$u(P)=P+(1-X)P'.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $u$ est un endomorphisme de $E$.
+<li> Déterminer une base de $\textrm{Im}(u)$.
+<li> Déterminer une base de $\ker(u)$.
+<li> Montrer que $\ker(u)$ et $\textrm{Im}(u)$ sont deux sous-espaces
+vectoriels supplémentaires de $E$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication887','imageindication887');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication887"></a><div class=inner id="innerindication887" style="display:none;"><ol class="enumeratechiffre">
+<li> Il faut vérifier que $u$ est linéaire.
+<li> $u(1),u(X),u(X^2),u(X^3)$ est une famille génératrice de $\textrm{Im}(u)$.
+<li> Ecrire $P(X)=aX^3+bX^2+cX+d$, et calculer $u(P)$.
+<li> Montrer que la réunion des deux bases trouvées précédemment
+est une base de $E$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige887','imagecorrige887',887);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige887"></a><div class=inner id="innercorrige887" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons d'abord que si $P\in E$, $u(P)$ est bien un polynôme
+de degré inférieur ou égal à 3, et donc $u$ envoie bien $E$ dans $E$. Pour montrer
+qu'il s'agit d'un endomorphisme, on doit prouver que $u$ est linéaire.
+Mais, si $P,Q\in E$ et $\lambda\in\mathbb R$, on a :
+\begin{eqnarray*}
+u(P+\lambda Q)&=&(P+\lambda Q)+(1-X)(P+\lambda Q)'\\
+&=&P+\lambda Q+(1-X)(P'+\lambda Q')\\
+&=&P+(1-X)P'+\lambda(Q+(1-X)Q')\\
+&=&u(P)+\lambda u(Q).
+\end{eqnarray*}
+$u$ est donc bien linéaire.
+<li> Puisque $(1,X,X^2,X^3)$ est une base de $E$, on sait que 
+$u(1),u(X),u(X^2),u(X^3)$ est une famille génératrice de $\textrm{Im}(u)$. On va pouvoir en extraire une base.
+On a :
+$$u(1)=1,\ u(X)=1,\ u(X^2)=-X^2+2X,\ u(X^3)=-2X^3+3X^2.$$
+On en déduit que $(u(1),u(X^2),u(X^3))$ est une famille libre
+(ce sont des polynômes de degrés différents) et que $u(X)$ s'écrit comme combinaison
+linéaire de ceux-ci (on a même $u(X)=u(1)$). Ainsi, ceci prouve que
+$(u(1),u(X^2),u(X^3))$ est une base de $\textrm{Im}(u)$.
+<li> Ecrivons $P(X)=aX^3+bX^2+cX+d$, et calculons $u(P)$ :
+$$u(P)=-2aX^3+(3a-b)X^2+2bX+c+d.$$
+Ainsi, on obtient
+$$u(P)=0\iff \left\{
+\begin{array}{rcl}
+-2a&=&0\\
+3a-b&=&0\\
+2b&=&0\\
+c+d&=&0
+\end{array}\right.
+\iff \left\{
+\begin{array}{rcl}
+a&=&0\\
+b&=&0\\
+c&=&c\\
+d&=&-c
+\end{array}\right.$$
+Ainsi, $P\in\ker(u)\iff \exists c\in\mathbb R,\ P=c(X-1)$. Une base de $\ker(u)$ est donné
+par le polynôme $X-1$.
+<li> La réunion des bases de $\textrm{Im}(u)$ et $\ker(u)$ trouvées précédemment est
+$(1,-X^2+2X,-2X^3+3X^2,X-1)$. Ces polynômes sont tous de degrés différents. Ils forment
+une base de $E$. Ceci prouve que $\textrm{Im}(u)$ et $\ker(u)$ sont supplémentaires.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater889"></span><script>var myRating = raterJs( { element:document.querySelector("#rater889"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(889,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des polynômes <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=889.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(889,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce889','imageenonce889');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce889"></a><div class=inner id="innerenonce889">Soit $E=\mathbb R_n[X]$ et soit $f$ l'application définie sur $E$ par $f(P)=P(X+1)+P(X-1)-2P(X)$.
+<ol class="enumeratechiffre">
+<li> Vérifier que $f$ est un endomorphisme de $E$.
+<li> Pour $p=0,\dots,n$, déterminer le degré de $f(X^p)$? En déduire $\ker(f)$ et $\textrm{Im}(f)$.
+<li> Soit $Q$ un polynôme de $\textrm{Im} f$. Démontrer qu'il existe un unique polynôme $P$
+tel que $f(P)=Q$ et $P(0)=P'(0)=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication889','imageindication889');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication889"></a><div class=inner id="innerindication889" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser le théorème du rang pour déterminer $\textrm{Im}(f)$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige889','imagecorrige889',889);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige889"></a><div class=inner id="innercorrige889" style="display:none;"><ol class="enumeratechiffre">
+<li> $f$ est clairement une application linéaire. Puisque $\deg(P(X+1)+P(X-1)-2P(X))\leq \deg(P(X))$, elle est bien à
+image dans $E$.
+<li> On a 
+$$f(X^p)=\sum_{k=0}^p \binom{p}{k}\big(1+(-1)^k\big)X^{p-k}-2X^p.$$
+Le coefficient devant $X^p$ est nul (il vaut $1+1-2$), celui devant $X^{p-1}$ aussi (il vaut $p(1-1)$), et celui devant $X^{p-2}$ vaut
+$p(p-1)$.
+Ainsi, si $p\geq 2$, le degré de $f(X^p)$ est $p-2$. Sinon, $f(X^p)$ est le polynôme nul.
+On en déduit, par linéarité, que 
+$f(P)$ est de degré $\deg(P)-2$ si $\deg(P)\ge 2$, et est le polynôme nul sinon. Ainsi, $\ker(f)=\mathbb R_1[X]$.
+Par le théorème du rang, $\dim(\textrm{Im}(f))=n+1-2=n-1$. De plus, on a vu que $\textrm{Im}(f)\subset \mathbb R_{n-2}[X]$. C'est donc que $\textrm{Im}(f)=\mathbb R_{n-2}[X]$.
+<li> Soit $G=\{P\in\mathbb R_{n}[X];\ P(0)=P'(0)=0\}$. Alors $G$ est un sous-espace vectoriel de $\mathbb R_n[X]$. On
+vérifie facilement que, pour $P(X)=a_nX^n+\dots+a_0$, $P\in G\iff a_0=a_1=0$, et donc une base de $G$ est
+$(X^2,X^3,\dots,X^n)$. Ainsi, $G$ est de dimension $n-1$. Notons $g:G\to \textrm{Im}(f),\ P\mapsto f(P)$. 
+$g$ est injective, car $G\cap\ker(f)=\{0\}$. De plus, $\dim(G)=\dim(\textrm{Im}(f))$. Ainsi, $g$ est une bijection de 
+$G$ sur $\textrm{Im}(f)$. Ceci prouve le résultat.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater888"></span><script>var myRating = raterJs( { element:document.querySelector("#rater888"),	max:5, rating:1.6538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(888,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynôme somme de polynômes dérivés <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=888.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(888,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce888','imageenonce888');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce888"></a><div class=inner id="innerenonce888">Démontrer que, pour tout $n\geq 0$, pour tout $P\in\mathbb R_n[X]$, il existe un unique $Q\in\mathbb R_n[X]$ tel que $P=\sum_{k=0}^n Q^{(k)}$.</div></div><div class=indication><a href="javascript:showAll('innerindication888','imageindication888');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication888"></a><div class=inner id="innerindication888" style="display:none;">Traduire cet exercice par le fait qu'une application linéaire doit être un isomorphisme. Utiliser les outils d'algèbre linéaire pour prouver que c'est un isomorphisme.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige888','imagecorrige888',888);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige888"></a><div class=inner id="innercorrige888" style="display:none;">Considérons $E=\mathbb R_n[X]$ et $\phi\in\mathcal L(E)$ définie par $\phi(Q)=\sum_{k=0}^n Q^{(k)}$ (il est facile de vérifier que $\phi$ est linéaire). Le but de l'exercice est de démontrer que $\phi$ est bjective. Etant une application linéaire entre deux espaces de même dimension finie, il suffit de prouver que $\phi$ est injective, ou encore que son noyau est réduit au polynôme nul. Mais si $Q$ n'est pas le polynôme nul, il est clair que $\phi(Q)$ a même degré que $Q$, et le même coefficient dominant. On en déduit que $\phi(Q)=0\implies Q=0$. $\phi$ est bijective.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater893"></span><script>var myRating = raterJs( { element:document.querySelector("#rater893"),	max:5, rating:2.35, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(893,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Division euclidienne <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=893.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(893,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce893','imageenonce893');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce893"></a><div class=inner id="innerenonce893">Soit $E=\mathbb R_n[X]$ et soient $A,B$ deux polynômes de degré $n+1$. On définit l'application $\phi:E\to E$ qui à un polynôme $P$ associe le reste  de $AP$ dans la division euclidienne par $B$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\phi$ est linéaire;
+<li> Démontrer que $\phi$ est bijective si et seulement si $A$ et $B$ sont premiers entre eux. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication893','imageindication893');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication893"></a><div class=inner id="innerindication893" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Pour démontrer que $A$ et $B$ sont premiers entre eux, utiliser le théorème de Bézout. Pour la réciproque, il suffit de démontrer que $\phi$ est injective.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige893','imagecorrige893',893);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige893"></a><div class=inner id="innercorrige893" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $P_1,P_2$ dans $\mathbb R_n[X]$ et soit $\lambda\in\mathbb R$. Alors,
+$$AP_1=BQ_1+\phi(P_1),\ AP_2=BQ_2+\phi(P_2)$$
+ce qui donne
+$$A(P_1+\lambda P_2)=B(Q_1+\lambda Q_2)+\big(\phi(P_1)+\lambda \phi(P_2)\big).$$
+Mais $\phi(P_1)+\lambda \phi(P_2)$ est de degré inférieur ou égal à $n$, et donc c'est le reste de la division euclidienne de $A(P_1+\lambda P_2)$ par $B$. Autrement dit, 
+$$\phi(P_1)+\lambda \phi(P_2)=\phi(P_1+\lambda P_2)$$
+et $\phi$ est linéaire.
+<li> Supposons $\phi$ bijective. Alors $\phi$ est surjective, et il existe $P\in\mathbb R_n[X]$ tel que $\phi(P)=1$. Ainsi, on obtient deux polynômes $P$ et $Q$ tels que 
+$$AP-BQ=1.$$
+D'après le théorème de Bézout, on en déduit que $A$ et $B$ sont premiers entre eux.<br>
+Réciproquement, puisque $\phi$ est un endomorphisme d'un espace de dimension finie, il suffit de prouver que $\phi$ est injective sous l'hypothèse que $A$ et $B$ sont premiers entre eux. Mais si 
+$\phi(P)=0$, il existe un polynôme $Q$ tel que 
+$$AP=BQ.$$
+Par le théorème de Gauss, puisque $A\wedge B=1$, $B|P$. Mais comme le degré de $B$ est $n+1$ et que $P$ est de degré inférieur ou égal à $n$, $P=0$. Donc $\phi$ est injective, d'où bijective.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater890"></span><script>var myRating = raterJs( { element:document.querySelector("#rater890"),	max:5, rating:2.4137931034483, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(890,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application aux polynômes <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=890.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(890,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce890','imageenonce890');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce890"></a><div class=inner id="innerenonce890">Le but de cet exercice est l'étude de l'application $\Delta$ définie sur $\mtr[X]$ par $(\Delta P)(X)=P(X+1)-P(X)$.
+<ol class="enumeratechiffre">
+<li> Question préliminaire : Soit $(P_n)$ une famille de $\mtr[X]$ telle que pour chaque $n$, $\deg(P_n)=n$. Prouver
+que $(P_n)$ est une base de $\mtr[X]$.
+<li> Montrer que $\Delta$ est une application linéaire. Calculer son noyau et son image.
+<li> Montrer qu'il existe une unique famille $(H_n)_{n\in\mtn}$ de $\mtr[X]$ vérifiant, pour tout $n\geq 1$, $\Delta(H_n)=H_{n-1}$, $H_n(0)=0$ et telle que $H_0=1$. Montrer que $(H_n)$ est une base de $\mtr[X]$.
+<li> Soit $P\in\mtr_p[X]$. Montrer que $P$ peut s'écrire
+$$P=\sum_{n=0}^p (\Delta^nP)(0)H_n.$$
+<li> Montrer que l'on a $(\Delta^n P)(0)=\sum_{k=0}^n (-1)^{n-k}\binom nk P(k)$.
+<li> Montrer que pour tout $n\geq 1$, $H_n=\frac{X(X-1)\dots (X-n+1)}{n!}$.
+<li> En déduire que, pour tout polynôme $P$ de degré $p$, les assertions suivantes sont équivalentes :
+<ol class="enumeratechiffre">
+<li> $P$ prend des valeurs entières sur $\mtz$.
+<li> $P$ prend des valeurs entières sur $\{0,\dots,p\}$.
+<li> Les coordonnées de $P$ dans la base $(H_n)$ sont des entiers.
+<li> $P$ prend des valeurs entières sur $p+1$ entiers consécutifs.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication890','imageindication890');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication890"></a><div class=inner id="innerindication890" style="display:none;"><ol class="enumeratechiffre">
+<li> Montrer d'abord que c'est une famille libre. Pour prouver que c'est une famille génératrice, il faut prouver
+que tout polynôme de degré $p$ est combinaison linéaire de $P_0,\dots,P_p$. Simplifier le problème en prouvant
+que $(P_0,\dots,P_p)$ est une base de $\mtr_p[X]$, en utilisant un résultat spécifique à la dimension finie.
+<li> La linéarité ne pose pas de problèmes. Montrer que le noyau est l'ensemble des polynômes constants, en calculant
+par exemple le coefficient dominant de $\Delta P$,
+puis que l'image est $\mtr[X]$ tout entier, en construisant une famille de polynômes à degré étagés dans l'image.
+<li> En posant $E=\{P\in\mtr[X];\ P(0)=0\}$, montrer que $E$ est un supplémentaire de $\ker(\Delta)$.
+ L'existence et l'unicité viennent alors du résultat de la question précédente (on pourra procéder par
+ récurrence). Quel est le degré de $H_n$?
+<li> Utiliser d'abord le fait que $(H_n)$ est une base. Calculer ensuite $\Delta^nP$.
+<li> Calculer par récurrence, ou par la formule du binôme, $(\Delta^nP)(X)$, puis évaluer en 0.
+<li> Vérifier que la famille donnée satisfait aux conditions qui définissent de façon unique la suite $(H_n)$.
+<li> Prouver d'abord l'équivalence des 3 premiers points. Pour montrer l'équivalence avec le 4ième, utiliser un changement de variables
+pour ramener $iv.$ à $ii.$ pour un autre polynôme!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige890','imagecorrige890',890);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige890"></a><div class=inner id="innercorrige890" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour montrer que la famille est libre, il suffit de prouver que toute sous-famille finie est libre ou encore que,
+pour tout $p$, la famille $(P_0,\dots,P_p)$ est libre. Imaginons que l'on ait une relation de liaison $\alpha_0 P_0+\dots
++\alpha_p P_p=0$, où l'un au moins des $\alpha_i$ est non nul. Soit $q$ le plus grand des $i$ pour lequel $\alpha_i\neq 0$.
+Alors, le polynôme $\alpha_0P_0+\dots+\alpha_qP_q$ est de degré $q$, et en même temps il est nul : c'est bien sûr une contradiction.
+La famille $(P_n)$ est donc libre. D'autre part, fixons un $p\geq 0$ et $Q$ un polynôme de degré $p$. Puisque
+$(P_0,\dots,P_p)$ est une famille libre de $\mtr_p[X]$ qui est de dimension $p+1$, elle en est une base. Ainsi,
+$Q$ peut s'écrire $\alpha_0P_0+\dots+\alpha_pP_p$, ce qui prouve que la famille $(P_n)$ est génératrice :
+c'est donc une base de $\mtr[X]$.
+<li> La linéarité ne pose pas de problèmes. D'autre part, si le terme dominant de $P$ est $\alpha_n X^n$, le terme
+dominant de $\Delta(P)$ est $\alpha_n\times n X^{n-1}$. Ainsi, $\Delta P=0$ si et seulement $P\in\mtr_0[X]$ (ie si
+$P$ est un polynôme constant). D'autre part, posons pour $n\geq 0$ $P_n=\Delta(X^{n+1})$. La famille $(P_n)$ est une famille de
+polynômes à degrés étagés. En outre, cette famille est contenue dans $\imv(\Delta)$. On a donc, d'après le résultat
+de la question préliminaire, $\mtr[X]=\vect(P_n;\ n\geq 0)\subset\imv(\Delta)$. Ceci prouve que $\Delta$ est surjective.
+<li> On note $E=\{P\in \mtr[X];\ P(0)=0\}$. $E$ est un supplémentaire de $\mtr_0[X]$ dans $\mtr[X]$. Ainsi, $\Delta$
+induit un isomorphisme de $E$ sur $\mtr[X]$. On montre alors l'existence et l'unicité de $H_n$ par récurrence sur $n$,
+le cas $n=0$ étant donné par l'énoncé. Supposons $(H_0,\dots,H_{n-1})$ uniquement construits. Alors, la remarque précédente
+fait qu'il existe un unique $H_n$ de $E$ tel que $\Delta(H_n)=H_{n-1}$. On montre alors facilement par récurrence
+que pour chaque $n$, $\deg(H_n)=n$ (cela vient du fait que $\deg(\Delta(P))=\deg(P)-1$ si $P$ n'est pas un polynôme constant.
+D'après le résultat de la question préliminaire, $(H_n)$ forme une base de $\mtr[X]$.
+<li> Puisque $(H_n)$ est une base de $\mtr[X]$, il existe
+des réels $\alpha_0,\dots,\alpha_p$ tels que $P=\alpha_0 H_0+\dots+\alpha_p H_p$. Calculons $\Delta^n(P)$, sachant
+que $\Delta^n(H_k)=H_{k-n}$ si $n\leq k$, $\Delta^n(H_k)=0$ sinon. On obtient donc :
+$$\Delta^n P=\alpha_n H_0+\dots+\alpha_p H_{p-n}.$$ 
+On évalue ensuite ce polynôme en $0$, en utilisant le fait que $H_k(0)=0$ si $k\neq 0$, mais vaut $1$ si $k=0$. On obtient
+donc :
+$$\Delta^n P(0)=\alpha_n.$$
+<li> On va montrer que 
+$$(\Delta^nP)(X)=\sum_{k=0}^n (-1)^{n-k} \binom nk P(X+k),$$
+l'évaluation en $0$ faisant le reste.
+Notons $T(P)(X)=P(X+1)$; clairement, $T^k(P)(X)=P(X+k)$. Remarquons que $\Delta=T-I$. Puisque $T$ et $I$ commutent,
+il est légitime d'appliquer la formule du binôme, et on a :
+$$\Delta^n=\sum_{k=0}^n (-1)^{n-k} \binom nk T^k.$$
+Il suffit d'évaluer ceci en $P$ pour obtenir le résultat annoncé.
+<li> Posons $Q_n=\frac{X(X-1)\dots (X-n+1)}{n!}$ pour $n\geq 1$, avec $Q_0=1$. On remarque que pour tout $n\geq 1$, $Q_n(0)=0$, et un calcul quasi-immédiat
+montre que $\Delta Q_n=Q_{n-1}$. Ainsi, la famille $(Q_n)$ satisfait les conditions uniques qui définissent la famille $(H_n)$.
+C'est donc que $Q_n=H_n$ pour tout $n\geq 0$.
+<li> Il est d'abord clair que $i.\implies ii.$. Que $ii.$ entraîne $iii.$ résulte du calcul de $\Delta^n P(0)$ et de la
+décomposition de $P$ dans la base $H_n$. Remarquons d'autre part que si $a$ est dans $\{0,\dots,n-1\}$, $H_n(a)=0$, et si
+$a\geq n$, $H_n(a)=\binom an\in\mtn$. Si $a&lt;0$, $a$ s'écrit $-b$ avec $b&gt;0$, et on a $H_n(a)=(-1)^n \binom{b+n-1}n$. La décomposition de $P$ dans la base $H_n$ fait alors
+que $P(a)\in\mtz$ pour tout $a\in\mtz$, et on a prouvé l'équivalence des 3 premiers points.<br>
+Démontrons enfin que la dernière proposition est équivalente aux trois premières. Il est clair que $i.\implies iv.$ Réciproquement, 
+si $P$ prend des valeurs entières sur $\{a,\dots,a+p\}$, alors $Q(X)=P(X+a)$ prend des valeurs entières
+sur $\{0,\dots,p\}$, et par l'équivalence des 3 premiers points, $Q$ prend des valeurs entières sur $\mtz$ tout entier. Il en est de même pour $P$.
+</ol></div></div></div>
+
+<div class=titrepartie>Dimension finie et sous-espaces</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater894"></span><script>var myRating = raterJs( { element:document.querySelector("#rater894"),	max:5, rating:0.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(894,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pour bien démarrer... <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=894.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(894,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce894','imageenonce894');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce894"></a><div class=inner id="innerenonce894">Soient $F$ et $G$ deux sous-espaces vectoriels de $\mathbb R^5$ de dimension 3.
+Montrer que $F\cap G\neq\{0\}$.</div></div><div class=indication><a href="javascript:showAll('innerindication894','imageindication894');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication894"></a><div class=inner id="innerindication894" style="display:none;">Si c'était le cas, quelle serait la dimension de $F+G$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige894','imagecorrige894',894);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige894"></a><div class=inner id="innercorrige894" style="display:none;">Si c'était le cas, alors $F$ et $G$ seraient en somme directe, et on aurait
+$$\dim(F\oplus G)=\dim(F)+\dim(G)=3+3=6.$$
+Or, $F\oplus G$ est un sous-espace vectoriel de $\mathbb R^5$, il est de dimension au plus 5.
+C'est donc impossible!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater895"></span><script>var myRating = raterJs( { element:document.querySelector("#rater895"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(895,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Autour du théorème des quatre dimensions <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=895.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(895,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce895','imageenonce895');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce895"></a><div class=inner id="innerenonce895">Soit $E$ un espace vectoriel de dimension finie, $F$ et $G$ deux sevs
+de $E$. Montrer que deux quelconques des trois propriétés suivantes entraînent la troisième :
+<ol class="enumeratechiffre">
+<li> $F\cap G=\{0\}$;
+<li> $F+G=E$;
+<li> $\dim(F)+\dim(G)=\dim(E)$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication895','imageindication895');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication895"></a><div class=inner id="innerindication895" style="display:none;">Tout repose sur la formule
+$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige895','imagecorrige895',895);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige895"></a><div class=inner id="innercorrige895" style="display:none;">Tout repose sur la formule des quatre dimensions
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)$$
+et sur la propriété : si $H$ est un sev de $E$ tel que $\dim(H)=\dim(E)$, 
+alors $H=E$.
+<ul class="rien">
+<li> Si 1. et 2. sont vraies, alors 
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=\dim(F)+\dim(G)$$
+tandis que $E=F+G$ implique
+$$\dim(E)=\dim(F)+\dim(G).$$
+3. est donc vérifié.
+<li> Si 1. et 3. sont vraies, alors 
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=\dim(E)-0=\dim(E).$$
+Ainsi, $F+G$ est un sev de $E$ de même dimension que $E$ : $F+G=E$.
+<li> Si 2. et 3. sont vraies, alors
+$$\dim(E)=\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)=\dim(E)-\dim(F\cap G).$$
+On en déduit que $\dim(F\cap G)=0$ et donc que $F\cap G=\{0\}$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater897"></span><script>var myRating = raterJs( { element:document.querySelector("#rater897"),	max:5, rating:3.7727272727273, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(897,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une caractérisation de la dimension <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=897.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(897,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce897','imageenonce897');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce897"></a><div class=inner id="innerenonce897">Soit $E$ un $\mathbb K$-espace vectoriel de dimension $n\geq 1$ et soit $\mathcal S$ l'ensemble des sous-espaces
+vectoriels de $E$. Soit $d:\mathcal S\to\mathbb N$ vérifiant les propriétés suivantes :
+<ul class="rien">
+<li> Si $F,F'\in\mathcal S$ sont tels que $F\cap F'=\{0\}$, alors $d(F+F')=d(F)+d(F')$;
+<li> $d(E)=n$.
+</ul>
+<ol class="enumeratechiffre">
+<li> Soient $F,G\in\mathcal S$ avec $\dim(F)=\dim(G)=1$. Démontrer que $d(F)=d(G)$.
+<li> En déduire que, pour tout $F\in\mathcal S$, $d(F)=\dim(F)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication897','imageindication897');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication897"></a><div class=inner id="innerindication897" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $F=\mathbb Kf$ et $G=\mathbb Kg$. &Eacute;crire $F+G=\mathbb Kf+\mathbb K(f+g)=\mathbb Kg+\mathbb K(f+g)$.
+<li> Raisonner par récurrence sur $\dim(F)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige897','imagecorrige897',897);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige897"></a><div class=inner id="innercorrige897" style="display:none;"><ol class="enumeratechiffre">
+<li> Le résultat est évident si $F=G$ et on peut donc supposer que $F\neq G$, auquel cas $F\cap G=\{0\}$ puisque $F$ et $G$ sont de dimension $1$. Soient $f,g\in E$ tels que
+$F=\textrm{vect}(f)$ et $G=\textrm{vect}(g)$. Dans ce cas, on peut écrire $F+G$ sous les 3 formes
+suivantes :
+\begin{eqnarray*}
+F+G&=&\textrm{vect}(f)+\textrm{vect}(g)\\
+&=&\textrm{vect}(Kf)+\textrm{vect}(f+g)\\
+&=&\textrm{vect}(Kg)+\textrm{vect}(f+g).
+\end{eqnarray*}
+En effet, $f=f$ et $g=(f+g)-f$, ce qui prouve $\textrm{vect}(f)+\textrm{vect}(g)\subset \textrm{vect}(f)+\textrm{vect}(f+g)$
+tandis que l'inclusion réciproque est triviale. Il vient, d'après la propriété (i) de $d$ :
+$$d(F+G)=d(\textrm{vect}(f))+d(\textrm{vect}(f+g))=d(\textrm{vect}(g))+d(\textrm{vect}(f+g)).$$
+Ainsi, on en déduit $d(\textrm{vect}(g))=d(\textrm{vect}(f))$, ce qui est le résultat recherché.
+<li> Remarquons d'abord que $d(\{0\})=0$, puisque $d(\{0\})=d(\{0\}+\{0\})=d(\{0\})+d(\{0\})$.
+D'autre part, notons $a\in\mathbb N$ tel que $d(F)=a$ lorsque $\dim(F)=1$. L'existence d'un tel réel $a$
+est garanti par la question précédente. Prouvons alors par récurrence sur $p\leq n$ que si $F\in\mathcal S$,
+$\dim(F)=p$, alors $d(F)=ap$. C'est fait pour $p=1$, et si le résultat est prouvé au rang $p-1$, alors tout 
+$F\in\mathcal S$ avec $\dim(F)=p$ s'écrit $F=G\oplus H$, avec $\dim(G)=p-1$ et $\dim(H)=1$. Il vient :
+$$d(F)=d(G)+d(H)=(p-1)a+a.$$
+Pour conclure, il suffit de remarquer que $a=1$. Mais on sait que $n=d(E)=na$, ce qui entraîne bien que $a=1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater898"></span><script>var myRating = raterJs( { element:document.querySelector("#rater898"),	max:5, rating:2.6363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(898,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Supplémentaire commun <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=898.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(898,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce898','imageenonce898');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce898"></a><div class=inner id="innerenonce898">Soit $E$ un espace vectoriel de dimension finie $n$, et $F$, $G$ deux sous-espaces
+vectoriels de $E$ de même dimension $p&lt;n$. Montrer que $F$ et $G$ ont un supplémentaire commun,
+c'est-à-dire qu'il existe un sous-espace $H$ de $E$ tel que $F\oplus H=G\oplus H=E$.</div></div><div class=indication><a href="javascript:showAll('innerindication898','imageindication898');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication898"></a><div class=inner id="innerindication898" style="display:none;">Commencer par le cas où $p=n-1$, et considérer la droite vectorielle engendrée
+par un vecteur qui n'appartient ni à $F$, ni à $G$. Puis itérer.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige898','imagecorrige898',898);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige898"></a><div class=inner id="innercorrige898" style="display:none;">On raisonne par récurrence descendante sur $p\in\{0,\dots,n-1\}$. Traitons d'abord 
+le cas $p=n-1$. On sait que $F\cup G\neq E$. En effet, si $F=G$ ce n'est pas le cas, et si
+$F\neq G$, alors on n'a ni $F\subset G$, ni $G\subset F$ (les deux espaces ont même dimension,
+une inclusion entraînerait l'égalité), et donc $F\cup G$ n'est pas un espace vectoriel.
+En particulier, il n'est pas égal à $E$. On peut choisir $a$ tel que $a\notin F\cup G$.
+Alors $F\cap\textrm{vect}(a)=\{0\}$ et $G\cap\textrm{vect(a)}=\{0\}$. $F$ et
+$\textrm{vect}(a)$ (resp. $G$ et $\textrm{vect}(a)$) sont en somme directe, et
+puisque $\dim(F\oplus \textrm{vect}(a))=n$ (resp. $\dim(G\oplus \textrm{vect}(a))=n$),
+on a $F\oplus\textrm{vect}(a)=G\oplus\textrm{vect}(a)=E$. $\textrm{vect}(a)$ est le supplémentaire
+commun recherché.<br>
+Supposons maintenant le résultat prouvé pour $p+1$, et prouvons-le pour $p$. Comme précédemment, on
+peut trouver $a\notin F\cup G$ et comme précédemment,  $F$ et
+$\textrm{vect}(a)$ (resp. $G$ et $\textrm{vect}(a)$) sont en somme directe. Posons
+$F_1=F\oplus\textrm{vect}(a)$ et $G_1=G\oplus\textrm{vect}(a)$. Alors $F_1$ et $G_1$ ont même
+dimension, égale à $p+1$. D'après l'hypothèse de récurrence, ils possèdent un supplémentaire commun
+que l'on note $H_1$. Mais alors, $F$ et $\textrm{vect}(a)\oplus H_1$ sont en somme directe.
+En effet, si $x\in F\cap\textrm{vect}(a)\oplus H_1$, on a $x=f=\lambda a+h$, avec $f\in F$, $\lambda\in \mathbb K$
+et $h \in H_1$. On en déduit $h=f-\lambda a\in H_1\cap F_1=\{0\}$ et donc $h=0$. Puisque $F\cap\textrm{vect}(a)=\{0\}$,
+on obtient également $f=0$ et $\lambda=0$, et par suite $x=0$. Ainsi, si on pose $H=\textrm{vect}(a)\oplus H_1$,
+alors $H$ et $F$ sont en somme directe et $H+F=E$. De même, $H$ et $G$ sont en somme directe et $H+G=E$. On en déduit que $F$ et $G$ ont un
+supplémentaire commun.<br>
+Ceci achève la preuve par récurrence.</div></div></div>
+
+<div class=titrepartie>Dimension finie et applications linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater899"></span><script>var myRating = raterJs( { element:document.querySelector("#rater899"),	max:5, rating:1.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(899,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du local au global... <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=899.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(899,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce899','imageenonce899');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce899"></a><div class=inner id="innerenonce899">Soit $E$ un espace vectoriel de dimension finie et $f\in\mathcal L(E)$.
+On suppose que, pour tout $x\in E$, il existe un entier $n_x\in\mathbb N$ tel
+que $f^{n_x}(x)=0.$ Montrer qu'il existe un entier $n$ tel que $f^n=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication899','imageindication899');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication899"></a><div class=inner id="innerindication899" style="display:none;">Introduire une base de $E$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige899','imagecorrige899',899);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige899"></a><div class=inner id="innercorrige899" style="display:none;">Soit $(e_1,\dots,e_p)$ une base de $E$. Pour chaque $i$,
+il existe un entier $n_i$ tel que $f^{n_i}(e_i)=0$. Posons $n=\max(n_1,\dots,n_p)$ et
+remarquons que pour chaque $i\in\{1,\dots,p\}$,
+$$f^n(e_i)=f^{n-n_i}\big(f^{n_i}e_i\big)=f^{n-n_i}(0)=0.$$
+Considérons maintenant $x\in E$ et écrivons-le $x=x_1 e_1+\dots+x_p e_p$. On obtient
+$$f^n(x)=\sum_{i=1}^p x_i f^n(e_i)=\sum_{i=1}^p x_i 0_E=0_E.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater902"></span><script>var myRating = raterJs( { element:document.querySelector("#rater902"),	max:5, rating:1.76, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(902,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyau égal à l'image <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=902.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(902,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce902','imageenonce902');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce902"></a><div class=inner id="innerenonce902">Soit $E$ un espace vectoriel de dimension finie.
+Montrer qu'il existe $f\in\mathcal L(E)$ tel que $\ker(f)=\textrm{Im}(f)$
+si et seulement si $E$ est de dimension paire.</div></div><div class=indication><a href="javascript:showAll('innerindication902','imageindication902');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication902"></a><div class=inner id="innerindication902" style="display:none;">Pour un sens, utiliser le théorème du rang. Pour la réciproque, considérer
+$(e_1,\dots,e_{2p})$ une base de $E$ et définir $f$ sur cette base. On séparera
+$f(e_i)$, pour $i\leq p$, et $f(e_i)$, pour $i&gt;p$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige902','imagecorrige902',902);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige902"></a><div class=inner id="innercorrige902" style="display:none;">Supposons d'abord qu'une telle application existe. D'après le théorème du rang,
+on a :
+$$\dim(E)=\dim(\ker(f))+\dim(\textrm{Im}(f))=2\dim(\ker(f))$$
+et donc $\dim(E)$ est pair. Réciproquement, si $E$ est de dimension paire, alors 
+considérons $(e_1,\dots,e_{2p})$ une base de $E$. On définit un endomorphisme $f$ de
+$E$ en posant :
+$$f(e_i)=\left\{
+\begin{array}{ll}
+0&\textrm{si }i\leq p\\
+e_{i-p}&\textrm{si }i&gt;p.
+\end{array}\right.$$
+Ceci définit complètement un endomorphisme $f$. Montrons qu'il vérifie les propriétés demandées. D'une part,
+pour $u=\sum_{i=1}^{2p}u_i e_i$, on a
+$$f(u)=\sum_{i=p+1}^{2p}u_i e_{i-p}=\sum_{j=1}^p u_{j+p}e_j.$$
+On en déduit que $f(u)=0$ si et seulement $u\in F=\textrm{vect}(e_1,\dots,e_p)$.
+De plus, on a $\textrm{Im}(f)\subset F$, et par le théorème du rang, ces deux espaces
+ont la même dimension égale à $p$. Ils sont donc égaux.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater903"></span><script>var myRating = raterJs( { element:document.querySelector("#rater903"),	max:5, rating:2.2777777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(903,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyau et image choisis <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=903.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(903,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce903','imageenonce903');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce903"></a><div class=inner id="innerenonce903">Soit $E$ un espace vectoriel de dimension $n$, $F$ un sous-espace vectoriel de $E$ de dimension $p$,
+$G$ un sous-espace vectoriel de $E$ de dimension $q$. Donner une condition nécessaire
+et suffisante pour qu'il existe un endormorphisme $f$ de $E$ avec $\ker(f)=F$ et $\textrm{Im}(f)=G$.</div></div><div class=indication><a href="javascript:showAll('innerindication903','imageindication903');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication903"></a><div class=inner id="innerindication903" style="display:none;">La condition naturelle s'obtient en utilisant le théorème du rang.
+Pour la réciproque, une application linéaire peut être définie par l'image d'une base.
+On pourra considérer une base dont les premiers vecteurs constituent une base de $F$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige903','imagecorrige903',903);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige903"></a><div class=inner id="innercorrige903" style="display:none;">D'après le théorème du rang, si un tel endomorphisme existe, on a $p+q=n$.
+Réciproquement, supposons que $p+q=n$. On va définir $f$ sur une base bien choisie
+de $E$. Soit $(e_1,\dots,e_p)$ une base de $F$. On peut la compléter
+en une base $(e_1,\dots,e_p,e_{p+1},\dots,e_{p+q})$ de $E$. Soit également
+$(f_1,\dots,f_q)$ une base de $G$. On définit alors l'action de $f$ sur la base
+$(e_i)$ par 
+$$\left\{
+\begin{array}{rcll}
+f(e_i)&=&0&\textrm{ si }i\leq p\\
+f(e_i)&=&f_{i-p}&\textrm{ si }i\in\{p+1,\dots, p+q\}
+\end{array}\right.$$
+Il est alors à peu près clair que $f$ vérifie les conditions voulues.
+Pour obtenir une preuve complète, on peut remarque que $F\subset\ker(f)$
+et que $G\subset\textrm{Im}(f)$. De plus, en décomposant un vecteur dans
+la base $(e_1,\dots,e_{p+q})$, on trouve qu'on a exactement
+$F=\ker(f)$. Par le théorème du rang, on obtient $\dim(G)=\dim(\textrm{Im}(f))$
+d'où l'égalité puisqu'on a déjà une inclusion.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater904"></span><script>var myRating = raterJs( { element:document.querySelector("#rater904"),	max:5, rating:2.6111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(904,rating); this.setRating(rating);   this.disable();    done();     }});</script> - D'un sous-espace sur un autre <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=904.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(904,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce904','imageenonce904');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce904"></a><div class=inner id="innerenonce904">Soit $E$ un espace vectoriel de dimension $n$ et soient $F$, $G$ deux sous-espaces vectoriels de $E$.
+<ol class="enumeratechiffre">
+<li> A quelle condition sur $F$ et $G$ existe-t-il un endomorphisme $f$ de $E$ tel que $f(F)=G$?
+<li> Quelle(s) condition(s) supplémentaire(s) faut-il imposer pour qu'on puisse trouver un tel endomorphisme $f$
+qui soit de plus bijectif?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication904','imageindication904');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication904"></a><div class=inner id="innerindication904" style="display:none;"><ol class="enumeratechiffre">
+<li> Un endomorphisme ne peut que faire décroître la dimension.
+<li> Les dimensions doivent être égales!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige904','imagecorrige904',904);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige904"></a><div class=inner id="innercorrige904" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons d'abord qu'un tel endomorphisme existe, et notons $g$ la restriction de $f$ à $F$. Alors $g$ est une application linéaire de $F$ avec $\textrm{Im}(g)=G$. D'après le théorème du rang, 
+$$\dim(G)=\dim(\textrm{Im}(g))\leq \dim(\textrm{Im}(g))+\dim(\ker(g))=\dim(F).$$
+Une condition nécessaire est donc $\dim(G)\leq \dim(F)$. Réciproquement, supposons que $q=\dim(G)\leq \dim(F)=p$. On va construire un endomorphisme $f$ de $E$ en le définissant sur une base de $G$. Pour cela, on commence par considérer une base
+$(e_1,\dots,e_p)$ de $F$. Par le théorème de la base incomplète, on peut la compléter en une base $(e_1,\dots,e_n)$ de $E$. 
+De même, considérons une base $(g_1,\dots,g_q)$ de $G$. On définit $f$ sur la base $(e_1,\dots,e_n)$ en posant
+$f(e_i)=g_i$ si $i\leq q$, et $f(e_i)=0$ sinon. $f$ est un endomorphisme de $E$. De plus, si on étudie sa restriction
+à $F$, on voit qu'elle est à image dans $G$ (ce ne sont que des vecteurs de $G$ qui sont pris par les $f(e_i)$) et que cette image est en réalité $G$ tout entier : tous les vecteurs de la base $(g_1,\dots,g_q)$ de $G$ sont atteints (et par linéarité, tous les autres le sont aussi). 
+<li> Le raisonnement est très proche. D'une part, puisqu'un isomorphisme respecte la dimension, il est nécessaire que $\dim(F)=\dim(G)$ (on peut aussi réécrire le théorème du rang pour la restriction de $f$ à $F$ et utiliser le fait que le noyau est réduit à $\{0\}$). Réciproquement, si $\dim(F)=\dim(G)=p$, on note $(e_1,\dots,e_p)$ une base de $F$, qu'on complète en une base $(e_1,\dots,e_n)$ de $E$, et on note $(g_1,\dots,g_p)$ une base de $G$, qu'on complète également en une base
+$(g_1,\dots,g_n)$ de $E$. On définit alors $f$ par $f(e_i)=g_i$. Il est facile de vérifier que $f$ vérifie toutes les contraintes voulues.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater906"></span><script>var myRating = raterJs( { element:document.querySelector("#rater906"),	max:5, rating:3.1363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(906,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composée et somme <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=906.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(906,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce906','imageenonce906');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce906"></a><div class=inner id="innerenonce906">Soient $u$ et $v$ deux endomorphismes d'un espace vectoriel $E$
+de dimension finie $n$.
+<ol class="enumeratechiffre">
+<li> Montrer que
+$$|\textrm{rg}(u)-\textrm{rg}(v)|\leq \textrm{rg}(u+v)\leq \textrm{rg}(u)+\textrm{rg}(v).$$
+<li> On suppose que $u\circ v=0$ et que $u+v$ est
+inversible. Prouver que $\textrm{rg}(u)+\textrm{rg}(v)=n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication906','imageindication906');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication906"></a><div class=inner id="innerindication906" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquer que $\textrm{Im}(u+v)\subset \textrm{Im}(u)+\textrm{Im}(v)$.
+Pour la seconde partie, écrire $u=(u+v)+(-v)$.
+<li> Prouver que $u\circ v=0$ entraine
+$$n\geq \textrm{rg}(v)+\textrm{rg}(u).$$
+Prouver que $u+v$ inversible entraine
+$$n\leq \textrm{rg}(v)+\textrm{rg}(u).$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige906','imagecorrige906',906);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige906"></a><div class=inner id="innercorrige906" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $\textrm{Im}(u+v)\subset \textrm{Im}(u)+\textrm{Im}(v)$.
+En effet, si $y\in\textrm{Im}(u+v)$, alors $y=(u+v)(x)=u(x)+v(x)$
+est aussi élément de $\textrm{Im}(u)+\textrm{Im}(v)$.
+On en déduit que
+$$\textrm{rg}(u+v)\leq \textrm{dim}(\textrm{Im}(u)+\textrm{Im}(v))\leq \textrm{dim}(\textrm{Im}(u))+\textrm{dim}(\textrm{Im}(v))=\textrm{rg}(u)+\textrm{rg}(v).$$
+D'autre part, en écrivant $u=(u+v)+(-v)$, et en remarquant que $\textrm{Im}(v)=\textrm{Im}(-v)$, et donc
+que $\textrm{rg}(v)=\textrm{rg}(-v)$, on a, d'après ce qu'on vient de démontrer
+$$\textrm{rg}(u)\leq\textrm{rg}(u+v)+\textrm{rg}(v)\implies \textrm{rg}(u)-\textrm{rg}(v)\leq \textrm{rg}(u+v).$$
+De même, écrivant $v=(u+v)+(-u)$, on obtient aussi
+$$\textrm{rg}(v)-\textrm{rg}(u)\leq \textrm{rg}(u+v).$$
+Ceci donne l'autre inégalité.
+<li> Traduisons les deux hypothèses en termes d'inégalités sur le rang.
+<ul class="rien">
+<li> D'une part, puisque $u\circ v=0$, on a $\textrm{Im}(v)\subset\ker(u)$.
+On obtient donc $\textrm{rg}(v)\leq \dim(\ker(u))$ ce qui, combiné au théorème du rang, donne
+$$n=\dim(\ker(u))+\textrm{rg}(u)\geq \textrm{rg}(v)+\textrm{rg}(u).$$
+<li> D'autre part, puisque $u+v$ est inversible, on sait que $\textrm{rg}(u+v)=n$. De la question précédente,
+on déduit 
+$$n\leq  \textrm{rg}(u)+\textrm{rg}(v).$$
+</ul>
+En combinant les deux inégalités obtenues, on obtient le résultat désiré.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater908"></span><script>var myRating = raterJs( { element:document.querySelector("#rater908"),	max:5, rating:2.4210526315789, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(908,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite exacte <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=908.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(908,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce908','imageenonce908');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce908"></a><div class=inner id="innerenonce908">Soient $E_0,\dots,E_n$ des espaces vectoriels de dimensions finies respectivement égales à $a_0,\dots,a_n$. 
+On suppose qu'il existe $n$ applications linéaires $f_0,\dots,f_{n-1}$ telles que, pour chaque $k\in\{0,\dots,n-1\}$,
+$f_k$ est une application linéaire de $E_k$ dans $E_{k+1}$ et 
+<ol class="enumeratechiffre">
+<li> $f_0$ est injective;
+<li> $\ker(f_k)=\textrm{Im}(f_{k-1})$ pour tout $k=1,\dots,n-1$;
+<li> $f_{n-1}$ est surjective.
+</ol>
+Prouver que $\sum_{k=0}^n (-1)^k a_k=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication908','imageindication908');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication908"></a><div class=inner id="innerindication908" style="display:none;">Utiliser le théorème du rang et les hypothèses pour écrire
+$$a_k=\dim(\ker(f_k))+\textrm{rg}(f_k)=\textrm{rg}(f_{k-1})+\textrm{rg}(f_k),$$
+avec $1\leq k\leq n-1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige908','imagecorrige908',908);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige908"></a><div class=inner id="innercorrige908" style="display:none;">Pour $k=1,\dots, n-1$, le théorème du rang donne
+$$a_k=\dim(\ker(f_k))+\textrm{rg}(f_k)=\textrm{rg}(f_{k-1})+\textrm{rg}(f_k),$$
+où on a utilisé la propriété $(ii)$. On a donc
+\begin{eqnarray*}
+\sum_{k=1}^{n-1}(-1)^k a_k&=&-\textrm{rg}(f_0)-\textrm{rg}(f_1)+\textrm{rg}(f_1)+\textrm{rg}(f_2)-\dots+(-1)^{n-1}\textrm{rg}(f_{n-1})\\
+&=&-\textrm{rg}(f_0)+(-1)^{n-1}\textrm{rg}(f_{n-1}).
+\end{eqnarray*}
+Puisque $f_0$ est injective, on a $\textrm{rg}(f_0)=a_0$ et puisque $f_{n-1}$ est surjective,
+on a $\textrm{rg}(f_{n-1})=a_n$. Ceci donne
+$$\sum_{k=1}^{n-1}(-1)^k a_k=-a_0+(-1)^{n-1}a_{n},$$
+ce qui donne bien $\sum_{k=0}^n (-1)^k a_k=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>36</span> <span id="rater900"></span><script>var myRating = raterJs( { element:document.querySelector("#rater900"),	max:5, rating:2.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(900,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base donnée par un endomorphisme nilpotent <a id=heart36 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart36" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=900.html"> [Signaler une erreur]</a><a id=exo36 href="javascript:ajouteexo(900,36,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce900','imageenonce900');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce900"></a><div class=inner id="innerenonce900">Soit $E$ un espace vectoriel de dimension $n$, $f\in\mathcal L(E)$ un opérateur
+tel que $f^n=0$ et $f^{n-1}\neq 0$. 
+<ol class="enumeratechiffre">
+<li> Soit $x\in E$ tel que $f^{n-1}(x)\neq 0$.
+Montrer que la famille $(x,f(x),\dots,f^{n-1}(x))$ est une base de $E$.
+<li> Soit $g\in\mathcal L(E)$. Montrer que $g$ commute avec $f$ (ie $fg=gf$) si et seulement si 
+$g\in\textrm{vect}(Id,f,\dots,f^{n-1})$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication900','imageindication900');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication900"></a><div class=inner id="innerindication900" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire une relation de liaison, et composer par $f^{n-1}$.
+<li> La valeur de $g(x)$ fixe les coefficients de $g$ dans $\textrm{vect}(Id,f,\dots,f^{n-1})$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige900','imagecorrige900',900);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige900"></a><div class=inner id="innercorrige900" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $(x,f(x),\dots,f^{n-1}(x))$ est une famille de $n$ vecteurs
+dans un espace de dimension $n$, il suffit de prouver qu'elle est libre.
+Supposons le contraire, et soient $\lambda_0,\dots,\lambda_{n-1}$ des scalaires non tous nuls 
+tels que
+$\lambda_0 x+\dots+\lambda_{n-1}f^{n-1}(x)=0$. Soit $p$ le plus petit
+indice tel que $\lambda_p\neq 0$. On compose par $f^{n-1-p}$ :
+$$f^{n-1-p}\big(\lambda_p f^p(x)+\dots+\lambda_{n-1}f^{n-1}(x)\big)=\lambda_p f^{n-1}(x)=0,$$
+puisque $f^j=0$ pour $j\geq n$. Puisque $f^{n-1}(x)\neq 0$, on en déduit que $\lambda_p=0$,
+une contradiction.
+<li> Remarquons d'abord que si $g=f^k$, alors clairement $gf=fg$, et donc tout élément de $\textrm{vect}(Id,f,\dots,f^{n-1})$ commute avec $f$. Réciproquement, supposons que $gf=fg$. 
+Soient $a_0,\dots,a_{n-1}$ tels que 
+$$g(x)=a_0 x+a_1 f(x)+\dots+a_{n-1}f^{n-1}(x).$$
+On va prouver que $g=a_0 Id+\dots+a_{n_1}f^{n-1}.$
+Pour cela, il suffit de prouver que pour tout $k\in\{0,\dots,n-1\}$, on a 
+$$g(f^k(x))=a_0 f^k(x)+\dots+a_{n_1}f^{n-1}(f^k(x)),$$
+ceci puisque $(x,\dots,f^{n-1}(x))$ est une base de $E$. La propriété est vraie, par définition de $a_0,\dots,a_{n-1}$, si $k=0$. Pour $k\geq 1$, on a 
+$$gf^k=fgf^{k-1}=f^2gf^{k-2}=\dots=f^k g.$$
+En particulier, 
+\begin{eqnarray*}
+g(f^k(x))=f^kg(x)&=&f^k(a_0x+\dots+a_{n-1}f^{n-1}(x))\\
+&=&a_0f^k(x)+\dots+a_{n-1}f^{n-1}(f^k(x)).
+\end{eqnarray*}
+Ceci démontre le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>37</span> <span id="rater905"></span><script>var myRating = raterJs( { element:document.querySelector("#rater905"),	max:5, rating:3.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(905,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyaux itérés <a id=heart37 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart37" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=905.html"> [Signaler une erreur]</a><a id=exo37 href="javascript:ajouteexo(905,37,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce905','imageenonce905');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce905"></a><div class=inner id="innerenonce905">Soit $E$ un espace vectoriel de dimension finie $n$ et soit $f\in\mathcal L(E)$.
+<ol class="enumeratechiffre">
+<li> Soit $k\geq 1$. Démontrer que $\ker(f^{k})\subset \ker(f^{k+1})$ 
+et $\textrm{Im}(f^{k+1})\subset \textrm{Im}(f^k).$
+<li> <ol class="enumeratechiffre">
+<li> Démontrer que si $\ker(f^k)=\ker(f^{k+1})$, alors $\ker(f^{k+1})= \ker(f^{k+2})$.
+<li> Démontrer qu'il existe $p\in\mathbb N$ tel que
+<ul class="rien">
+<li> si $k&lt;p$, alors $\ker(f^k)\neq \ker(f^{k+1})$;
+<li> si $k\geq p$, alors $\ker(f^k)= \ker(f^{k+1})$.
+</ul>
+<li> Démontrer que $p\leq n$;
+</ol>
+<li> Démontrer que si $k&lt;p$, alors $\textrm{Im}(f^k)\neq \textrm{Im}(f^{k+1})$ et
+si $k\geq p$, alors $\textrm{Im}(f^k)=\textrm{Im}(f^{k+1})$.
+<li> Démontrer que $\ker(f^p)$ et $\textrm{Im}(f^p)$ sont supplémentaires.
+<li> Démontrer qu'il existe deux sous-espaces $F$ et $G$ de $E$ tels que $F$ et $G$ sont supplémentaires, $f_{|F}$ est nilpotent et $f_{|G}$ induit un automorphisme de $G$.
+<li> Soit $d_k=\dim\big(\textrm{Im}(f^k)\big)$. Montrer que la suite $(d_k-d_{k+1})$ est décroissante.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication905','imageindication905');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication905"></a><div class=inner id="innerindication905" style="display:none;"><ol class="enumeratechiffre">
+<li> Suivre les définitions.
+<li> <ol class="enumeratechiffre">
+<li> &Eacute;crire $f^{k+2}(x)=f^{k+1}(f(x)))$
+<li> Minorer la dimension de $\ker(f^k)$ si cet entier $p$ n'existe pas.
+<li> Même preuve.
+</ol>
+<li> Théorème du rang.
+<li> Théorème du rang + $\ker(f^{2p})=\ker(f^p)$. 
+<li> $F$ et $G$ sont donnés par la question précédente.
+<li> Prouver que $d_k-d_{k+1}=\dim\big(\ker(f)\cap \textrm{Im}(f^k)\big)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige905','imagecorrige905',905);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige905"></a><div class=inner id="innercorrige905" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $x\in \ker(f^k)$, alors $f^{k+1}(x)=f(f^k(x))=f(0)=0$ et donc $\ker(f^k)\subset \ker(f^{k+1})$.
+De même, si $y\in\textrm{Im}(f^{k+1})$, alors il existe $x\in E$ tel que $y=f^{k+1}(x)=f^k(f(x))$ et donc $y\in\textrm{Im}(f^k)$.
+<li> <ol class="enumeratechiffre">
+<li> Bien sûr, il suffit de prouver que $\ker(f^{k+2})\subset \ker(f^{k+1})$. Mais si $x\in\ker(f^{k+2})$, alors $0=f^{k+2}(x)=f^{k+1}(f(x))$. On a donc $f(x)\in\ker(f^{k+1})$ et donc $f(x)\in \ker(f^k)$. Ceci implique $f^{k+1}(x)=0$, c'est-à-dire $x\in\ker(f^{k+1})$.
+<li> Supposons qu'il n'existe pas d'entiers $k$ tel que $\ker(f^k)=\ker(f^{k+1})$. Ceci signifie que pour chaque entier $k$, l'inclusion $\ker(f^k)\subset\ker(f^{k+1})$ est stricte, et en particulier, on a
+$$\dim\big(\ker(f^{k+1})\big)\geq\dim\big(\ker(f^k)\big)+1.$$
+On en déduit que pour tout entier $k$, on a $\dim\big(\ker(f^k)\big)\geq k$. Mais ceci n'est pas
+possible, puisque la dimension de $\ker(f^k)$ est majorée par $n$. On définit alors $p$ comme le plus petit entier des entiers $k$ tels que $\ker(f^k)=\ker(f^{k+1})$. Grâce au résultat de la question précédente, on a bien $\ker(f^k)=\ker(f^{k+1})$ si $k\geq p$.
+<li> Le raisonnement de la question précédente donne en fait immédiatement que $p\leq n$. En effet, on a prouvé que pour tout $k\leq p$, on a $\dim(\ker f^k)\geq k$, et donc en particulier on a $n\geq \dim(\ker(f^p))\geq p$.
+</ol>
+<li> Ceci résulte immédiatement du théorème du rang et de la définition de $p$. En effet, si $k&lt;p$, alors $\dim(\ker(f^k))\neq \dim(\ker(f^{k+1}))$ et donc $\dim(\imv(f^k))\neq \dim(\imv(f^{k+1}))$. De même, si $k\geq p$, on a $\dim(\ker(f^k))=\dim(\ker(f^{k+1}))$ et donc $\dim(\imv(f^k))=\dim(\imv(f^{k+1}))$. Comme on sait déjà que $\textrm{Im}(f^{k+1})\subset \textrm{Im}(f^k)$, ces deux sous-espaces vectoriels sont égaux.
+<li> Par le théorème du rang, il suffit de prouver que $\ker(f^p)\cap \imv(f^p)=\{0\}$. Soit $y\in \ker(f^p)\cap \imv(f^p)$. Alors il existe $x\in E$ tel que $y=f^p(x)$. On sait aussi que $f^{p}(y)=f^{2p}(x)=0$, et donc $x\in \ker(f^{2p})$. Mais par définition de $p$, on a $\ker(f^{2p})=\ker(f^p)$ et donc 
+$x\in\ker(f^p)$. Ceci entraine $y=0$ et le résultat.
+<li> On va poser $F=\ker(f^p)$ et $G=\imv(f^p)$. On commence par remarquer que $F$ est stable par $f$. En effet, si $x\in F$, alors $f^p(f(x))=f(f^p(x))=0$ et donc $f(x)\in F$. Bien sûr, $f_{|F}$ est nilpotent puisque, pour tout $x\in F$, $f^p(x)=0$. Posons ensuite $g=f_{|G}$. Remarquons d'abord que $g$ est bien un endomorphisme de $G$, puisque $g(\textrm{Im}(f^p))=\imv(f^{p+1})\subset G$. De plus, $g$ est injective car $\ker(f)\cap \imv(f^p)\subset \ker(f^p)\cap \imv(f^p)=\{0\}$. AInsi, $g$ est un automorphisme de $G$ (qui est de dimension finie).
+<li> Soit $k$ un entier naturel et $g_k$ la restriction de $f$ à $\imv(f^k)$. Alors d'après le théorème du rang, on a 
+$$d_k=\dim(\imv(f^k))=\dim(\ker(g_k))+\dim(\imv(g_k)).$$
+Mais $\imv(g_k)=g_k(\imv(f^k))=f(\imv(f^k))=\imv(f^{k+1})$. Ainsi, on a :
+$$d_k-d_{k+1}=\dim(\ker(g_k)).$$
+Mais $g_k=f_{|\imv(f^k)}$ et donc $\ker(g_k)=\ker(f)\cap\imv(f^k)$. Puisque la suite $\imv(f^k)$ est décroissante (pour l'inclusion), on en conclut qu'il en est de même pour $\ker(g_k)$ et donc que la suite $(d_k-d_{k+1})$ est décroissante.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>38</span> <span id="rater907"></span><script>var myRating = raterJs( { element:document.querySelector("#rater907"),	max:5, rating:2.9333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(907,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand le rang est additif <a id=heart38 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart38" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=907.html"> [Signaler une erreur]</a><a id=exo38 href="javascript:ajouteexo(907,38,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce907','imageenonce907');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce907"></a><div class=inner id="innerenonce907">Soient $E$ un espace vectoriel de dimension finie et $f,g\in\mathcal L(E)$. Montrer que
+$$\textrm{rg}(f+g)=\textrm{rg}(f)+\textrm{rg}(g)\iff\left\{
+\begin{array}{l}
+\textrm{Im}(f)\cap\textrm{Im}(g)=\{0\}\\
+\ker(f)+\ker(g)=E
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication907','imageindication907');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication907"></a><div class=inner id="innerindication907" style="display:none;">Dans le sens direct, montrer d'abord que $\textrm{Im}(f)\cap\textrm{Im}(g)=\{0\}$
+puis que $\textrm{Im}(f+g)=\textrm{Im}(f)+\textrm{Im}(g)$. En déduire la deuxième partie.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige907','imagecorrige907',907);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige907"></a><div class=inner id="innercorrige907" style="display:none;">Remarquons d'abord que 
+$$\textrm{Im}(f+g)\subset\textrm{Im}(f)+\textrm{Im}(g).$$
+Ceci entraîne
+$$\textrm{rg}(f+g)\leq \textrm{rg}(f)+\textrm{rg}(g)-\dim(\textrm{Im}(f)\cap\textrm{Im(g)}).$$
+Supposons d'abord que $\textrm{rg}(f+g)=\textrm{rg}(f)+\textrm{rg}(g)$. Alors l'inégalité précédente
+implique immédiatement que $\dim(\textrm{Im}(f)\cap\textrm{Im(g)})=0$ ce qui prouve $\textrm{Im}(f)\cap\textrm{Im}(g)=\{0\}$.
+On a aussi $\textrm{Im}(f+g)=\textrm{Im}(f)+\textrm{Im}(g)$ (sinon l'inégalité précédente
+serait stricte). Ainsi, pour tout $x\in E$, comme 
+$\textrm{Im}(f)\subset \textrm{Im}(f+g)$, on a $f(x)=f(t)+g(t)$ pour un certain $t\in E$. 
+Alors $g(t)=f(x-t)\in\textrm{Im}(f)\cap\textrm{Im}(g)=\{0\}$, et donc $t\in \ker(g)$
+et $x-t\in\ker(f)$. Ecrivant $x=(x-t)+t$, on trouve que $\ker(f)+\ker(g)=E$.<br>
+Réciproquement, prouvons que les deux conditions impliquent $\textrm{Im}(f)\subset\textrm{Im}(f+g)$.
+En effet, on écrit $y\in\textrm{Im}(f)$ sous la forme $y=f(x)$, et on décompose
+$x$ en $x=u+v$ avec $u\in\ker(f)$ et $v\in\ker(g)$. Alors, $y=f(v)=f(v)+g(v)\in\textrm{Im}(f+g)$.
+Le rôle joué par $f$ et $g$ étant symétrique, on obtient aussi $\textrm{Im}(g)\subset\textrm{Im}(f+g)$.
+Ceci permet d'écrire
+$$\textrm{Im}(f)\oplus \textrm{Im}(g)\subset\textrm{Im}(f+g).$$
+L'autre inclusion étant toujours vraie, on a en fait égalité, ce qui donne bien
+$$\textrm{rg}(f+g)=\textrm{rg}(f)+\textrm{rg}(g).$$</div></div></div>
+
+<div class=titrepartie>Formes linéaires et hyperplans</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>39</span> <span id="rater983"></span><script>var myRating = raterJs( { element:document.querySelector("#rater983"),	max:5, rating:1.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(983,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quelques remarques sur les formes linéaires <a id=heart39 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart39" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=983.html"> [Signaler une erreur]</a><a id=exo39 href="javascript:ajouteexo(983,39,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce983','imageenonce983');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce983"></a><div class=inner id="innerenonce983">Soit $E$ un $\mathbb K$-espace vectoriel de dimension finie.
+<ol class="enumeratechiffre">
+<li> Soient $f,g\in E^*$ non-nulles. Démontrer qu'il existe $u\in E$ tel que $f(u)\neq 0$ et $g(u)\neq 0$.
+<li> On suppose qu'il existe $p$ formes linéaires non nulles $f_1,\dots,f_p\in E^*$ telles que :
+$$\forall x\in E,\ (f_1(x)=\dots=f_p(x)=0)\implies x=0.$$
+Démontrer que $\dim(E)\leq p$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication983','imageindication983');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication983"></a><div class=inner id="innerindication983" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Si $\dim(E)&gt;p$, quelle est la dimension minimale de $\ker(f_1)\cap\ker(f_2)\cap\dots\cap \ker(f_p)$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige983','imagecorrige983',983);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige983"></a><div class=inner id="innercorrige983" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $f$ et $g$ sont proportionnelles, alors il suffit de choisir $u$ tel que $f(u)\neq 0$. Sinon, 
+alors on n'a ni $\ker(f)\subset \ker(g)$ ni $\ker(g)\subset \ker(f)$. On peut donc choisir $x\in\ker(f)\backslash \ker(g)$ et $y\in\ker(g)\backslash \ker(f)$. Posons alors $u=x+y$. Alors on a 
+\begin{eqnarray*}
+f(u)&=&f(x+y)=f(y)\neq 0\\
+g(u)&=&g(x+y)=g(x)\neq 0.
+\end{eqnarray*}
+<li> L'hypothèse nous dit que $\ker(f_1)\cap\ker(f_2)\cap\dots\cap \ker(f_p)=\{0\}$. Si $E$ était de dimension $n&gt;p$, alors l'intersection de ces $p$ hyperplans serait de dimension au moins égale à $n-p&gt;0$, ce qui n'est pas le cas ici. Donc $n\leq p$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>40</span> <span id="rater984"></span><script>var myRating = raterJs( { element:document.querySelector("#rater984"),	max:5, rating:1.3703703703704, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(984,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une forme linéaire <a id=heart40 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart40" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=984.html"> [Signaler une erreur]</a><a id=exo40 href="javascript:ajouteexo(984,40,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce984','imageenonce984');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce984"></a><div class=inner id="innerenonce984">Déterminer la forme linéaire $f$ définie sur $\mathbb R^3$ telle que
+$$f(1,1,1)=0,\ f(2,0,1)=1\textrm{ et }f(1,2,3)=4.$$
+Donner une base du noyau de $f$.</div></div><div class=indication><a href="javascript:showAll('innerindication984','imageindication984');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication984"></a><div class=inner id="innerindication984" style="display:none;">$f$ est donné par $f(x,y,z)=\alpha x+\beta y+\gamma z$.
+Les trois vecteurs permettent d'obtenir un système d'équations pour
+calculer $\alpha$, $\beta$ et $\gamma$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige984','imagecorrige984',984);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige984"></a><div class=inner id="innercorrige984" style="display:none;">$f$ est donné par $f(x,y,z)=\alpha x+\beta y+\gamma z$.
+En calculant les valeurs de $f(1,1,1)=0$, etc... on obtient le système suivant :
+$$\left\{
+\begin{array}{rcl}
+\alpha+\beta+\gamma&=&0\\
+2\alpha+\gamma&=&1\\
+\alpha+2\beta+3\gamma&=&4
+\end{array}
+\right.
+$$
+On résoud ce système et on trouve $\alpha=-1$, $\beta=-2$ et $\gamma=3$.
+Ainsi, on a $f(x,y,z)=-x-2y+3z$. On en déduit
+$$f(x,y,z)=0\iff \left\{
+\begin{array}{rcl}
+x&=&-2y+3z\\
+y&=&y\\
+z&=&z
+\end{array}\right.$$
+Une base de $\ker(f)$ est donc donnée par la famille des deux vecteurs
+$(-2,1,0)$ et $(3,0,1)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>41</span> <span id="rater985"></span><script>var myRating = raterJs( { element:document.querySelector("#rater985"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(985,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une base en dimension 2 <a id=heart41 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart41" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=985.html"> [Signaler une erreur]</a><a id=exo41 href="javascript:ajouteexo(985,41,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce985','imageenonce985');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce985"></a><div class=inner id="innerenonce985">Soient $f_1,f_2$ les deux éléments de $\mathcal L(\mathbb R^2,\mathbb R)$
+définis par
+$$f_1(x,y)=x+y\textrm{ et }f_2(x,y)=x-y.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $(f_1,f_2)$ forme une base de $(\mathbb R^2)^*$.
+<li> Exprimer les formes linéaires suivantes dans la base $(f_1,f_2)$ :
+$$g(x,y)=x,\ h(x,y)=2x-6y.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication985','imageindication985');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication985"></a><div class=inner id="innerindication985" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de montrer que c'est une famille libre. Tester une relation
+$\lambda f_1+\mu f_2=0$ pour des $(x,y)$ particuliers.
+<li> Ecrire $h=\lambda f_1+\mu f_2$, et identifier les coefficients
+devant $x$ et $y$ pour trouver les valeurs de $\lambda$ et $\mu$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige985','imagecorrige985',985);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige985"></a><div class=inner id="innercorrige985" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $(\mathbb R^2)^*$ est de dimension 2, il suffit de montrer que la famille
+$(f_1,f_2)$ est libre. Supposons qu'on a une relation
+$$\lambda f_1+\mu f_2=0.$$
+On la teste pour des valeurs de $(x,y)$ particulières :
+pour $(x,y)=(1,0)$, puis $(x,y)=(0,1)$, on trouve successivement :
+$$
+\left\{
+\begin{array}{rcl}
+\lambda f_1(1,0)+\mu f_2(1,0)&=&0\\
+\lambda f_1(0,1)+\mu f_2(0,1)&=&0\\
+\end{array}
+\right.
+\iff
+\left\{
+\begin{array}{rcl}
+\lambda +\mu&=&0\\
+\lambda -\mu&=&0\\
+\end{array}\right.
+$$
+On prouve facilement que ceci implique $\lambda=\mu=0$, et donc
+que la famille $(f_1,f_2)$ est libre, a fortiori une base de $(\mathbb R^2)^*$.
+<li> Il est facile de voir que $(f_1+f_2)(x,y)=2x$, et donc $g=\frac12f_1+\frac 12f_2$.
+Pour $h$, c'est un petit plus difficile. Il faut trouver $\lambda$ et $\mu$
+tels que, pour tous $(x,y)$ de $\mathbb R^2$, on a
+$$2x-6y=\lambda(x+y)+\mu(x-y)=(\lambda+\mu)x+(\lambda-\mu)y.$$
+Par identification, on doit résoudre le système
+$$\left\{
+\begin{array}{rcl}
+\lambda+\mu&=&2\\
+\lambda-\mu&=&-6
+\end{array}
+\right.\iff
+\left\{
+\begin{array}{rcl}
+\lambda&=&-2\\
+\mu&=&4.
+\end{array}\right.$$
+Autrement dit, on a $h=-2f_1+4f_2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>42</span> <span id="rater986"></span><script>var myRating = raterJs( { element:document.querySelector("#rater986"),	max:5, rating:2.0232558139535, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(986,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires proportionnelles <a id=heart42 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart42" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=986.html"> [Signaler une erreur]</a><a id=exo42 href="javascript:ajouteexo(986,42,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce986','imageenonce986');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce986"></a><div class=inner id="innerenonce986">Soit $E=\mathbb K_n[X]$, soit $a\in\mathbb K$ et soit $\varphi\in E^*$ telle que, pour tout $P\in\mathbb K_{n-1}[X]$, on a
+$\varphi\big((X-a)P\big)=0.$ Démontrer qu'il existe $\lambda\in\mathbb K$ tel que, pour tout $P\in E$, 
+$\varphi(P)=\lambda P(a)$.</div></div><div class=indication><a href="javascript:showAll('innerindication986','imageindication986');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication986"></a><div class=inner id="innerindication986" style="display:none;">A quelle condition deux formes linéaires sont proportionnelles?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige986','imagecorrige986',986);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige986"></a><div class=inner id="innercorrige986" style="display:none;">La forme linéaire identiquement nulle vérifie les hypothèses et la conclusion. On suppose désormais $\varphi\neq 0$. Notons $\phi\in E^*$ défini par $\phi(P)=P(a)$. Il s'agit de prouver que les formes linéaires 
+$\varphi$ et $\phi$ sont proportionnelles, c'est-à-dire que leurs noyaux sont égaux. 
+Pour cela, on pose $F=\{(X-a)P;\ P\in \mathbb K_{n-1}[X]\}$. Par hypothèse, 
+$F\subset \ker\varphi$. De plus, si $\phi(Q)=0$, alors $(X-a)|Q$ et donc $Q\in F$. Ainsi, on a $\ker\phi\subset F$. On a donc
+$$\ker\phi\subset F\subset \ker\varphi.$$
+Puisque les deux sous-espaces situés aux extrémités de cette chaine d'inclusion ont la même dimension,
+tous ces sous-espaces sont égaux. En particulier, $\ker\phi=\ker\varphi$ et les deux formes linéaires sont proportionnelles.<br>
+Un autre raisonnement, plus élémentaire, consiste à remarquer que pour tout $P$ de $E$, $P(X)-P(a)$ se factorise en $(X-a)Q(X)$ avec $Q\in\mathbb K_{n-1}[X]$. Ainsi, par hypothèse sur $\phi$ on a $\varphi(P)=\varphi(1) P(a)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>43</span> <span id="rater991"></span><script>var myRating = raterJs( { element:document.querySelector("#rater991"),	max:5, rating:1.6222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(991,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires sur un espace de polynômes <a id=heart43 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart43" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=991.html"> [Signaler une erreur]</a><a id=exo43 href="javascript:ajouteexo(991,43,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce991','imageenonce991');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce991"></a><div class=inner id="innerenonce991">Soit $E=\mathbb R_n[X]$, et $x_0,\dots,x_{n}$ des nombres réels distincts.
+On pose, pour tout $P\in E$, $\phi(P)=\int_{-1}^1\frac{P(t)}{1+\cos^2(t)}dt.$
+Montrer qu'il existe $\lambda_0,\dots,\lambda_n\in \mathbb R$ tels que, pour tout 
+$P\in E$, $\phi(P)=\lambda_0 P(x_0)+\dots+\lambda_n P(x_n)$.</div></div><div class=indication><a href="javascript:showAll('innerindication991','imageindication991');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication991"></a><div class=inner id="innerindication991" style="display:none;">En posant $\phi_i(P)=P(x_i)$, prouver que $(\phi_0,\dots,\phi_n)$ est une base
+de $E^*$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige991','imagecorrige991',991);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige991"></a><div class=inner id="innercorrige991" style="display:none;">On pose $\phi_i(P)=P(x_i)$. Puisque $\phi$ et les $\phi_i$ sont des formes linéaires sur $E$,
+on demande de prouver que $\phi$ est dans l'espace vectoriel engendré par $\phi_0,\dots,\phi_n$.
+Il suffit de prouver que $(\phi_0,\dots,\phi_n)$ est une famille génératrice de $E^*$.
+Puisque $\dim(E^*)=\dim(E)=n+1$ et que la famille comporte $(n+1)$ éléments, cela revient
+à démontrer que $(\phi_0,\dots,\phi_n)$ est une famille libre de $E^*$. Mais si 
+$\lambda_0\phi_0+\dots+\lambda_p \phi_p=0$, alors on évalue le membre de gauche pour le polynôme
+$$P_j(X)=\prod_{k\neq j}(X-x_k).$$
+Clairement, on a $\phi_i(P_j)=0$ si $i\neq j$, et $\phi_j(P_j)=\prod_{k\neq j}(x_j-x_k)\neq 0$
+sinon. Donc, 
+$$(\lambda_0\phi_0+\dots+\lambda_p \phi_p)(P_j)=\lambda_j \prod_{k\neq j}(x_j-x_k)=0,$$
+ce qui entraîne $\lambda_j=0$. La famille est donc libre, ce qui achève la preuve.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>44</span> <span id="rater993"></span><script>var myRating = raterJs( { element:document.querySelector("#rater993"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(993,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Séparation <a id=heart44 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart44" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=993.html"> [Signaler une erreur]</a><a id=exo44 href="javascript:ajouteexo(993,44,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce993','imageenonce993');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce993"></a><div class=inner id="innerenonce993">Soit $E$ un espace vectoriel et $x,y\in E$. Démontrer que $x=y$ si et seulement si,
+pour tout $\phi\in E^*$, $\phi(x)=\phi(y)$.</div></div><div class=indication><a href="javascript:showAll('innerindication993','imageindication993');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication993"></a><div class=inner id="innerindication993" style="display:none;">Séparer les cas $(x,y)$ libre et $(x,y)$ liée. Dans chaque cas, définir une forme linéaire
+sur $\vect(x,y)$ puis la prolonger à $E$. Si $E$ est de dimension finie, on peut aussi considérer une base de $E$ et sa base duale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige993','imagecorrige993',993);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige993"></a><div class=inner id="innercorrige993" style="display:none;">L'implication directe est évidente. Prouvons ensuite l'implication réciproque. On suppose donc que pour tout $\phi\in E^*$, on a $\phi(x)=\phi(y)$ et on doit prouver que $x=y$. Procédons par contraposée, et prouvons que si $x\neq y$,
+alors on peut construire $\phi\in E^*$ avec $\phi(x)\neq \phi(y)$. Supposons d'abord que la famille $(x,y)$ est libre.
+Soit $F$ un supplémentaire de $\vect(x,y)$. Alors on définit une forme linéaire sur $E$ en la définissant sur $\vect(x,y)$ 
+par $\phi(ax+by)=a$ et sur $F$ par $\phi(z)=0$ pour tout $z\in F$. Alors, $\phi(x)=1$ et $\phi(y)=0$ et donc $\phi(x)\neq\phi(y)$.
+Si maintenant $(x,y)$ est liée, on peut supposer $x\neq 0$ et $y=\lambda x$, $\lambda\neq 1$. Soit alors $F$ un supplémentaire 
+de $\vect(x)$. Alors on peut définir $\phi$ sur $E$ par $\phi(x)=1$ et $\phi(z)=0$ si $z\in F$. On a alors $\phi(x)=1$
+et $\phi(y)=\lambda$ et donc $\phi(x)\neq\phi(y)$.<br>
+Une autre possibilité, dans le cas où $E$ est de dimension finie, est de considérer le vecteur non-nul $e_1=x-y$. On le complète en une base $\mathcal B=(e_1,e_2,\dots,e_n)$ de $E$ et on considère la base duale associée $(e_1^*,\dots,e_n^*)$. Alors $e_1^*(x-y)=1\neq 0$.</div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

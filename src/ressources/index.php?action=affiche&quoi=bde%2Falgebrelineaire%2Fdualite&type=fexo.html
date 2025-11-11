@@ -1,0 +1,535 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Formes linéaires, hyperplans, dualité</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrelineaire.html">Exercices d'algèbre linéaire</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Formes linéaires, hyperplans, dualité</h1>
+<div class=titrepartie>Formes linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater983"></span><script>var myRating = raterJs( { element:document.querySelector("#rater983"),	max:5, rating:1.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(983,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quelques remarques sur les formes linéaires <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=983.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(983,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce983','imageenonce983');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce983"></a><div class=inner id="innerenonce983">Soit $E$ un $\mathbb K$-espace vectoriel de dimension finie.
+<ol class="enumeratechiffre">
+<li> Soient $f,g\in E^*$ non-nulles. Démontrer qu'il existe $u\in E$ tel que $f(u)\neq 0$ et $g(u)\neq 0$.
+<li> On suppose qu'il existe $p$ formes linéaires non nulles $f_1,\dots,f_p\in E^*$ telles que :
+$$\forall x\in E,\ (f_1(x)=\dots=f_p(x)=0)\implies x=0.$$
+Démontrer que $\dim(E)\leq p$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication983','imageindication983');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication983"></a><div class=inner id="innerindication983" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Si $\dim(E)&gt;p$, quelle est la dimension minimale de $\ker(f_1)\cap\ker(f_2)\cap\dots\cap \ker(f_p)$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige983','imagecorrige983',983);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige983"></a><div class=inner id="innercorrige983" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $f$ et $g$ sont proportionnelles, alors il suffit de choisir $u$ tel que $f(u)\neq 0$. Sinon, 
+alors on n'a ni $\ker(f)\subset \ker(g)$ ni $\ker(g)\subset \ker(f)$. On peut donc choisir $x\in\ker(f)\backslash \ker(g)$ et $y\in\ker(g)\backslash \ker(f)$. Posons alors $u=x+y$. Alors on a 
+\begin{eqnarray*}
+f(u)&=&f(x+y)=f(y)\neq 0\\
+g(u)&=&g(x+y)=g(x)\neq 0.
+\end{eqnarray*}
+<li> L'hypothèse nous dit que $\ker(f_1)\cap\ker(f_2)\cap\dots\cap \ker(f_p)=\{0\}$. Si $E$ était de dimension $n&gt;p$, alors l'intersection de ces $p$ hyperplans serait de dimension au moins égale à $n-p&gt;0$, ce qui n'est pas le cas ici. Donc $n\leq p$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater984"></span><script>var myRating = raterJs( { element:document.querySelector("#rater984"),	max:5, rating:1.3703703703704, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(984,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une forme linéaire <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=984.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(984,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce984','imageenonce984');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce984"></a><div class=inner id="innerenonce984">Déterminer la forme linéaire $f$ définie sur $\mathbb R^3$ telle que
+$$f(1,1,1)=0,\ f(2,0,1)=1\textrm{ et }f(1,2,3)=4.$$
+Donner une base du noyau de $f$.</div></div><div class=indication><a href="javascript:showAll('innerindication984','imageindication984');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication984"></a><div class=inner id="innerindication984" style="display:none;">$f$ est donné par $f(x,y,z)=\alpha x+\beta y+\gamma z$.
+Les trois vecteurs permettent d'obtenir un système d'équations pour
+calculer $\alpha$, $\beta$ et $\gamma$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige984','imagecorrige984',984);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige984"></a><div class=inner id="innercorrige984" style="display:none;">$f$ est donné par $f(x,y,z)=\alpha x+\beta y+\gamma z$.
+En calculant les valeurs de $f(1,1,1)=0$, etc... on obtient le système suivant :
+$$\left\{
+\begin{array}{rcl}
+\alpha+\beta+\gamma&=&0\\
+2\alpha+\gamma&=&1\\
+\alpha+2\beta+3\gamma&=&4
+\end{array}
+\right.
+$$
+On résoud ce système et on trouve $\alpha=-1$, $\beta=-2$ et $\gamma=3$.
+Ainsi, on a $f(x,y,z)=-x-2y+3z$. On en déduit
+$$f(x,y,z)=0\iff \left\{
+\begin{array}{rcl}
+x&=&-2y+3z\\
+y&=&y\\
+z&=&z
+\end{array}\right.$$
+Une base de $\ker(f)$ est donc donnée par la famille des deux vecteurs
+$(-2,1,0)$ et $(3,0,1)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater985"></span><script>var myRating = raterJs( { element:document.querySelector("#rater985"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(985,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une base en dimension 2 <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=985.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(985,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce985','imageenonce985');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce985"></a><div class=inner id="innerenonce985">Soient $f_1,f_2$ les deux éléments de $\mathcal L(\mathbb R^2,\mathbb R)$
+définis par
+$$f_1(x,y)=x+y\textrm{ et }f_2(x,y)=x-y.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $(f_1,f_2)$ forme une base de $(\mathbb R^2)^*$.
+<li> Exprimer les formes linéaires suivantes dans la base $(f_1,f_2)$ :
+$$g(x,y)=x,\ h(x,y)=2x-6y.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication985','imageindication985');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication985"></a><div class=inner id="innerindication985" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de montrer que c'est une famille libre. Tester une relation
+$\lambda f_1+\mu f_2=0$ pour des $(x,y)$ particuliers.
+<li> Ecrire $h=\lambda f_1+\mu f_2$, et identifier les coefficients
+devant $x$ et $y$ pour trouver les valeurs de $\lambda$ et $\mu$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige985','imagecorrige985',985);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige985"></a><div class=inner id="innercorrige985" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $(\mathbb R^2)^*$ est de dimension 2, il suffit de montrer que la famille
+$(f_1,f_2)$ est libre. Supposons qu'on a une relation
+$$\lambda f_1+\mu f_2=0.$$
+On la teste pour des valeurs de $(x,y)$ particulières :
+pour $(x,y)=(1,0)$, puis $(x,y)=(0,1)$, on trouve successivement :
+$$
+\left\{
+\begin{array}{rcl}
+\lambda f_1(1,0)+\mu f_2(1,0)&=&0\\
+\lambda f_1(0,1)+\mu f_2(0,1)&=&0\\
+\end{array}
+\right.
+\iff
+\left\{
+\begin{array}{rcl}
+\lambda +\mu&=&0\\
+\lambda -\mu&=&0\\
+\end{array}\right.
+$$
+On prouve facilement que ceci implique $\lambda=\mu=0$, et donc
+que la famille $(f_1,f_2)$ est libre, a fortiori une base de $(\mathbb R^2)^*$.
+<li> Il est facile de voir que $(f_1+f_2)(x,y)=2x$, et donc $g=\frac12f_1+\frac 12f_2$.
+Pour $h$, c'est un petit plus difficile. Il faut trouver $\lambda$ et $\mu$
+tels que, pour tous $(x,y)$ de $\mathbb R^2$, on a
+$$2x-6y=\lambda(x+y)+\mu(x-y)=(\lambda+\mu)x+(\lambda-\mu)y.$$
+Par identification, on doit résoudre le système
+$$\left\{
+\begin{array}{rcl}
+\lambda+\mu&=&2\\
+\lambda-\mu&=&-6
+\end{array}
+\right.\iff
+\left\{
+\begin{array}{rcl}
+\lambda&=&-2\\
+\mu&=&4.
+\end{array}\right.$$
+Autrement dit, on a $h=-2f_1+4f_2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater986"></span><script>var myRating = raterJs( { element:document.querySelector("#rater986"),	max:5, rating:2.0232558139535, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(986,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires proportionnelles <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=986.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(986,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce986','imageenonce986');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce986"></a><div class=inner id="innerenonce986">Soit $E=\mathbb K_n[X]$, soit $a\in\mathbb K$ et soit $\varphi\in E^*$ telle que, pour tout $P\in\mathbb K_{n-1}[X]$, on a
+$\varphi\big((X-a)P\big)=0.$ Démontrer qu'il existe $\lambda\in\mathbb K$ tel que, pour tout $P\in E$, 
+$\varphi(P)=\lambda P(a)$.</div></div><div class=indication><a href="javascript:showAll('innerindication986','imageindication986');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication986"></a><div class=inner id="innerindication986" style="display:none;">A quelle condition deux formes linéaires sont proportionnelles?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige986','imagecorrige986',986);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige986"></a><div class=inner id="innercorrige986" style="display:none;">La forme linéaire identiquement nulle vérifie les hypothèses et la conclusion. On suppose désormais $\varphi\neq 0$. Notons $\phi\in E^*$ défini par $\phi(P)=P(a)$. Il s'agit de prouver que les formes linéaires 
+$\varphi$ et $\phi$ sont proportionnelles, c'est-à-dire que leurs noyaux sont égaux. 
+Pour cela, on pose $F=\{(X-a)P;\ P\in \mathbb K_{n-1}[X]\}$. Par hypothèse, 
+$F\subset \ker\varphi$. De plus, si $\phi(Q)=0$, alors $(X-a)|Q$ et donc $Q\in F$. Ainsi, on a $\ker\phi\subset F$. On a donc
+$$\ker\phi\subset F\subset \ker\varphi.$$
+Puisque les deux sous-espaces situés aux extrémités de cette chaine d'inclusion ont la même dimension,
+tous ces sous-espaces sont égaux. En particulier, $\ker\phi=\ker\varphi$ et les deux formes linéaires sont proportionnelles.<br>
+Un autre raisonnement, plus élémentaire, consiste à remarquer que pour tout $P$ de $E$, $P(X)-P(a)$ se factorise en $(X-a)Q(X)$ avec $Q\in\mathbb K_{n-1}[X]$. Ainsi, par hypothèse sur $\phi$ on a $\varphi(P)=\varphi(1) P(a)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater991"></span><script>var myRating = raterJs( { element:document.querySelector("#rater991"),	max:5, rating:1.6222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(991,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires sur un espace de polynômes <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=991.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(991,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce991','imageenonce991');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce991"></a><div class=inner id="innerenonce991">Soit $E=\mathbb R_n[X]$, et $x_0,\dots,x_{n}$ des nombres réels distincts.
+On pose, pour tout $P\in E$, $\phi(P)=\int_{-1}^1\frac{P(t)}{1+\cos^2(t)}dt.$
+Montrer qu'il existe $\lambda_0,\dots,\lambda_n\in \mathbb R$ tels que, pour tout 
+$P\in E$, $\phi(P)=\lambda_0 P(x_0)+\dots+\lambda_n P(x_n)$.</div></div><div class=indication><a href="javascript:showAll('innerindication991','imageindication991');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication991"></a><div class=inner id="innerindication991" style="display:none;">En posant $\phi_i(P)=P(x_i)$, prouver que $(\phi_0,\dots,\phi_n)$ est une base
+de $E^*$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige991','imagecorrige991',991);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige991"></a><div class=inner id="innercorrige991" style="display:none;">On pose $\phi_i(P)=P(x_i)$. Puisque $\phi$ et les $\phi_i$ sont des formes linéaires sur $E$,
+on demande de prouver que $\phi$ est dans l'espace vectoriel engendré par $\phi_0,\dots,\phi_n$.
+Il suffit de prouver que $(\phi_0,\dots,\phi_n)$ est une famille génératrice de $E^*$.
+Puisque $\dim(E^*)=\dim(E)=n+1$ et que la famille comporte $(n+1)$ éléments, cela revient
+à démontrer que $(\phi_0,\dots,\phi_n)$ est une famille libre de $E^*$. Mais si 
+$\lambda_0\phi_0+\dots+\lambda_p \phi_p=0$, alors on évalue le membre de gauche pour le polynôme
+$$P_j(X)=\prod_{k\neq j}(X-x_k).$$
+Clairement, on a $\phi_i(P_j)=0$ si $i\neq j$, et $\phi_j(P_j)=\prod_{k\neq j}(x_j-x_k)\neq 0$
+sinon. Donc, 
+$$(\lambda_0\phi_0+\dots+\lambda_p \phi_p)(P_j)=\lambda_j \prod_{k\neq j}(x_j-x_k)=0,$$
+ce qui entraîne $\lambda_j=0$. La famille est donc libre, ce qui achève la preuve.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater993"></span><script>var myRating = raterJs( { element:document.querySelector("#rater993"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(993,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Séparation <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=993.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(993,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce993','imageenonce993');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce993"></a><div class=inner id="innerenonce993">Soit $E$ un espace vectoriel et $x,y\in E$. Démontrer que $x=y$ si et seulement si,
+pour tout $\phi\in E^*$, $\phi(x)=\phi(y)$.</div></div><div class=indication><a href="javascript:showAll('innerindication993','imageindication993');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication993"></a><div class=inner id="innerindication993" style="display:none;">Séparer les cas $(x,y)$ libre et $(x,y)$ liée. Dans chaque cas, définir une forme linéaire
+sur $\vect(x,y)$ puis la prolonger à $E$. Si $E$ est de dimension finie, on peut aussi considérer une base de $E$ et sa base duale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige993','imagecorrige993',993);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige993"></a><div class=inner id="innercorrige993" style="display:none;">L'implication directe est évidente. Prouvons ensuite l'implication réciproque. On suppose donc que pour tout $\phi\in E^*$, on a $\phi(x)=\phi(y)$ et on doit prouver que $x=y$. Procédons par contraposée, et prouvons que si $x\neq y$,
+alors on peut construire $\phi\in E^*$ avec $\phi(x)\neq \phi(y)$. Supposons d'abord que la famille $(x,y)$ est libre.
+Soit $F$ un supplémentaire de $\vect(x,y)$. Alors on définit une forme linéaire sur $E$ en la définissant sur $\vect(x,y)$ 
+par $\phi(ax+by)=a$ et sur $F$ par $\phi(z)=0$ pour tout $z\in F$. Alors, $\phi(x)=1$ et $\phi(y)=0$ et donc $\phi(x)\neq\phi(y)$.
+Si maintenant $(x,y)$ est liée, on peut supposer $x\neq 0$ et $y=\lambda x$, $\lambda\neq 1$. Soit alors $F$ un supplémentaire 
+de $\vect(x)$. Alors on peut définir $\phi$ sur $E$ par $\phi(x)=1$ et $\phi(z)=0$ si $z\in F$. On a alors $\phi(x)=1$
+et $\phi(y)=\lambda$ et donc $\phi(x)\neq\phi(y)$.<br>
+Une autre possibilité, dans le cas où $E$ est de dimension finie, est de considérer le vecteur non-nul $e_1=x-y$. On le complète en une base $\mathcal B=(e_1,e_2,\dots,e_n)$ de $E$ et on considère la base duale associée $(e_1^*,\dots,e_n^*)$. Alors $e_1^*(x-y)=1\neq 0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater992"></span><script>var myRating = raterJs( { element:document.querySelector("#rater992"),	max:5, rating:1.531914893617, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(992,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires multiplicatives sur les matrices <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=992.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(992,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce992','imageenonce992');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce992"></a><div class=inner id="innerenonce992">Soit $\phi$ une forme linéaire sur $M_n(\mathbb R)$
+vérifiant $\phi(AB)=\phi(BA)$ pour toutes matrices $A,B\in M_n(\mathbb R)$.
+Montrer qu'il existe $\lambda\in\mathbb R$ tel que $\phi(M)=\lambda\textrm{Tr}(M)$.</div></div><div class=indication><a href="javascript:showAll('innerindication992','imageindication992');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication992"></a><div class=inner id="innerindication992" style="display:none;">Appliquer à $A=E_{i,j}$ et $B=E_{k,l}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige992','imagecorrige992',992);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige992"></a><div class=inner id="innercorrige992" style="display:none;">Soit $i,j,k,l$ dans $\{1,\dots,n\}$. On pose $A=E_{i,j}$ 
+et $B=E_{k,l}$, de sorte que 
+$$AB=\delta_{j,k}E_{i,l}\textrm{ et }BA=\delta_{l,i}E_{k,j}.$$
+On a donc
+$$\delta_{j,k}\phi(E_{i,l})=\delta_{l,i}\phi(E_{k,j}).$$
+<ul class="rien">
+<li> pour $j=k$ et $i\neq l$, on a $\phi(E_{i,l})=0$;
+<li> pour $j=k$ et $i=l$, on a $\phi(E_{i,i})=\phi(E_{k,k})$.
+</ul>
+Si on pose $\lambda=\phi(E_{1,1})$, on a donc $\phi(M)=\lambda\textrm{Tr}(M)$.</div></div></div>  
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2422"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2422"),	max:5, rating:2.2258064516129, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2422,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dualité dans $\mathbb R_3[X]$ <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2422.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2422,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2422','imageenonce2422');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2422"></a><div class=inner id="innerenonce2422">Pour $t\in\mathbb R$, on considère la forme linéaire $f_t$ sur $E=\mathbb R_3[X]$ définie par $f_t(P)=P(t)$.
+<ol class="enumeratechiffre">
+ <li> Démontrer que, si $a,b,c,d$ sont des réels distincts, alors $(f_a,f_b,f_c,f_d)$ est une famille libre.
+ <li> On considère $a,b$ des réels distincts, et on pose $\phi(P)=\int_a^b P(x)dx$, qui est une forme linéaire sur $E$.
+ Démontrer que 
+ $$\phi=\frac{(b-a)}6\left(f_a+4f_{\frac{a+b}2}+f_b\right).$$
+ <li> Soit $c$ un réel différent de $a,b$ et $(a+b)/2$. Déduire des questions précédentes que la famille $f_a,f_b,f_c,\phi$ est libre.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2422','imageindication2422');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2422"></a><div class=inner id="innerindication2422" style="display:none;"><ol class="enumeratechiffre">
+ <li> Partir d'une égalité $\lambda f_a+\mu f_b+\gamma f_c+\theta f_d=0$, et évaluer cette égalité en des polynômes bien choisis.
+ <li> Vérifier que la formule est vraie pour tous les éléments d'une base de $E$.
+ <li> Procéder par l'absurde.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2422','imagecorrige2422',2422);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2422"></a><div class=inner id="innercorrige2422" style="display:none;"><ol class="enumeratechiffre">
+ <li> Soit $\lambda,\mu,\gamma,\theta$ des réels tels que $\lambda f_a+\mu f_b+\gamma f_c+\theta f_d=0$. On doit prouver que
+ $\lambda=\mu=\gamma=\theta=0$. Pour cela, évaluons l'égalité en des polynômes bien choisis. Pour $P(X)=(X-a)(X-b)(X-c)\in E$, on a 
+ $$\lambda f_a(P)+\mu f_b(P)+\gamma f_c(P)+\theta f_d(P)=\theta(d-a)(d-b)(d-c)=0.$$
+ On en déduit, puisque $a,b,c,d$ sont deux à deux distincts, que $\theta=0$. On prouverait de même, en prenant $P(X)=(X-b)(X-c)(X-d)$, etc...,
+ que $\lambda=\gamma=\mu=0$. La famille est bien libre.
+ <li> Il suffit de vérifier que, pour tout polynôme $P$ de $E$, 
+ $$\int_a^b P(x)dx=\frac{(b-a)}6\left(P(a)+4P\left(\frac{a+b}2\right)+P(b)\right).$$
+ Par linéarité, il suffit de tester cette égalité sur une base de $E$, par exemple sur la base $(1,X,X^2,X^3)$. C'est un calcul très facile. Par exemple, on a
+ $$\int_a^b x^3dx=\frac{b^4}4-\frac{a^4}4$$
+ tandis que 
+ \begin{eqnarray*}
+  \frac{b-a}6\left(a^3+4\frac{(a+b)^3}8+b^3\right)&=&\frac{b-a}{12}\left(3a^3+3a^2b+3ab^2+3b^3\right)\\
+  &=&\frac{b^4}4-\frac{a^4}4.
+ \end{eqnarray*}
+<li> Supposons que la famille $(f_a,f_b,f_c,\phi)$ est liée. Alors 
+<ul class="rien">
+ <li> $f_c$ s'écrit comme combinaison linéaire de $f_a,f_b,\phi$. 
+<li> $\phi$ s'écrit comme combinaison linéaire de $f_a,f_b,f_{(a+b)/2}$ (question 2).
+<li> Donc, $f_c$ s'écrit comme combinaison linéaire de $f_a,f_b,f_{(a+b)/2}$, ce qui est une contradiction avec le résultat de la question 1.
+</ul>
+Remarquons que le premier point ci-dessus suppose que la famille $(f_a,f_b,\phi)$ est libre. Si elle était liée, on obtiendrait avec un raisonnement similaire que 
+$(f_a,f_b,f_{(a+b)/2})$ est liée, une contradiction.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Bases duales</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3103"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3103"),	max:5, rating:1.3461538461538, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3103,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base duale des polynômes de Lagrange <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3103.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3103,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3103','imageenonce3103');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3103"></a><div class=inner id="innerenonce3103">Soit $n\geq 1$, $a_0,\dots,a_n$ des nombres réels deux à deux distincts. Pour tout $i=0,\dots,n$, on pose 
+$$L_i(X)=\prod_{j\neq i}\frac{X-a_j}{a_i-a_j}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $(L_0,\dots,L_n)$ est une base de $\mathbb R_n[X]$.
+<li> Déterminer sa base duale. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3103','imageindication3103');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3103"></a><div class=inner id="innerindication3103" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser $L_i(a_j)=\delta_{i,j}$.
+<li> Utiliser $L_i(a_j)=\delta_{i,j}$...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3103','imagecorrige3103',3103);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3103"></a><div class=inner id="innercorrige3103" style="display:none;"><ol class="enumeratechiffre">
+<li> La famille comportant $(n+1)$ éléments, et l'espace étant de dimension $(n+1)$, il suffit de démontrer qu'elle est libre. Soit $\lambda_0,\dots,\lambda_n$ des réels tels que $\lambda_0L_0+\cdots+\lambda_n L_n=0$. 
+Appliquons cette égalité en $a_i$, pour $i=0,\dots,n$. On trouve
+$$(\lambda_0L_0+\cdots+\lambda_n L_n)(a_i)=\lambda_i=0$$
+puisque $L_j(a_i)=\delta_{i,j}$. La famille est bien libre. 
+<li> On utilise à nouveau que $L_j(a_i)=\delta_{i,j}$. Ceci incite à poser, pour $i=0,\dots,n$, $\phi_i(P)=P(a_i)$. Alors, pour tous $i,j=1,\dots,n$, $\phi_i(L_j)=\delta_{i,j}$, ce qui prouve que $(\phi_0,\dots,\phi_n)$ est la base duale de $(L_0,\dots,L_n)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater987"></span><script>var myRating = raterJs( { element:document.querySelector("#rater987"),	max:5, rating:1.9714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(987,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Coordonnées <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=987.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(987,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce987','imageenonce987');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce987"></a><div class=inner id="innerenonce987">Soit $E=\mathbb R_n[X]$ muni de la base $\mathcal B=\{1,X,\dots,X^n\}$. Pour tout $i$ de $\{0,\dots,n\}$, 
+on définit une forme linéaire $f_i$ sur $E$ par 
+$$\forall j\in\{0,\dots,n\},\ f_i(X^j)=
+\begin{cases}
+1&\textrm{ si }i=j\\
+0&\textrm{ si }i\neq j.
+\end{cases}
+$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $(f_0,\dots,f_n)$ est une base de $E^*$. 
+<li> On considère les deux éléments $\phi$ et $\psi$ de $E^*$ définis par, pour tout $P\in E$, 
+$\phi(P)=P(1)$ et $\psi(P)=P'(0)$. Déterminer les coordonnées de chacune des formes $\phi$
+et $\psi$ dans la base $(f_0,\dots,f_n)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication987','imageindication987');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication987"></a><div class=inner id="innerindication987" style="display:none;"><ol class="enumeratechiffre">
+<li> Base duale! 
+<li> Calculer, en fonction des $a_i$, $\phi(\sum_j a_jX^k)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige987','imagecorrige987',987);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige987"></a><div class=inner id="innercorrige987" style="display:none;"><ol class="enumeratechiffre">
+<li> Il y a plusieurs façons de répondre. La plus simple est de remarquer que, par définition, 
+$(f_0,\dots,f_n)$ est la base duale de $\mathcal B$.
+<li> Les $f_i$ étant les formes linéaires coordonnées dans la base $\mathcal B$, on va exprimer $\phi$ et $\psi$ en fonction
+des coordonnées du polynôme dans la base $\mathcal B$. Considérons donc $P=\sum_{j=0}^n a_j X^j$. On a
+$$\phi(P)=P(1)=\sum_{j=0}^n a_j=\sum_{j=0}^n f_j(P).$$
+De même,
+$$\psi(P)=P'(0)=a_1=f_1(P).$$
+Ainsi, $\phi=\sum_{j=0}^n f_j$ et $\psi=f_1$.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater988"></span><script>var myRating = raterJs( { element:document.querySelector("#rater988"),	max:5, rating:2.2592592592593, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(988,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base duale <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=988.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(988,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce988','imageenonce988');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce988"></a><div class=inner id="innerenonce988">Soit $E$ un $\mathbb R$-espace vectoriel de dimension 3,
+$(e_1,e_2,e_3)$ une base de $E$. Soient $f_1^*$, $f_2^*$ et $f_3^*$ les
+formes linéaires sur $E$ définies par 
+$$f_1^*=2e_1^*+e_2^*+e_3^*,\ f_2^*=-e_1^*+2e_3^*,\ f_3^*=e_1^*+3e_2^*.$$
+Montrer que $(f_1^*,f_2^*,f_3^*)$ est une base de $E^*$ et déterminer
+la base $(f_1,f_2,f_3)$ de $E$ dont elle est la base duale.</div></div><div class=indication><a href="javascript:showAll('innerindication988','imageindication988');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication988"></a><div class=inner id="innerindication988" style="display:none;">Pour démontrer que c'est une base, on n'est pas obligé de savoir que
+l'on travaille dans le dual. Il suffit d'écrire la matrice de $(f_1^*,f_2^*,f_3^*)$
+dans la base $(e_1^*,e_2^*,e_3^*)$ et de prouver qu'elle est inversible.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige988','imagecorrige988',988);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige988"></a><div class=inner id="innercorrige988" style="display:none;">Soit $M$ la matrice dont les vecteurs colonnes sont les coordonnées de $(f_1^*,f_2^*,f_3^*)$
+dans la base $(e_1^*,e_2^*,e_3^*)$. Il suffit de prouver que le rang de la matrice $M$
+est égal à 3. Par des opérations élémentaires sur les lignes et les colonnes, on trouve que
+\begin{align*}\textrm{rg}(M)&=\textrm{rg}\left(\begin{array}{ccc}
+2&-1&1\\
+1&0&3\\
+1&2&0\\
+\end{array}
+\right)\\
+&=
+\textrm{rg}\left(\begin{array}{ccc}
+2&-1&-1/2\\
+1&2&0\\
+1&0&3\\
+\end{array}
+\right)\\
+&=
+\textrm{rg}\left(\begin{array}{ccc}
+2&-1&1\\
+1&2&0\\
+1&0&0\\
+\end{array}
+\right)=3.
+\end{align*}
+$(f_1^*,f_2^*,f_3^*)$ est donc une base de $E^*$.
+Soit $(f_1,f_2,f_3)$ la base dont elle est duale. &Eacute;crivons
+$f_1=ae_1+be_2+ce_3$. Alors, on a le système :
+$$\left\{
+\begin{array}{rrcl}
+f_1^*(f_1)=2a+b+c=1\\
+f_2^*(f_1)=-a+0b+2c=0\\
+f_3^*(f_1)=a+3b+0c=0.
+\end{array}\right.$$
+Autrement dit, si on note $C$ la matrice
+$$C=\left(\begin{array}{ccc}
+2&1&1\\
+-1&0&2\\
+1&3&0
+\end{array}\right),$$
+alors $f_1=C^{-1}\left(\begin{array}{c}1\\0\\0\end{array}\right).$
+On obtient bien sûr la même chose pour $f_2$, $f_3$, et on trouve
+finalement que les coordonnées des $f_i$, exprimées dans la
+base $e_1,e_2,e_3$, sont les vecteurs colonnes de la matrice
+$$C^{-1}=\frac{1}{13}\left(
+\begin{array}{ccc}
+6&-3&-2\\
+-2&1&5\\
+3&5&-1
+\end{array}
+\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater989"></span><script>var myRating = raterJs( { element:document.querySelector("#rater989"),	max:5, rating:1.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(989,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bases duales et polynômes <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=989.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(989,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce989','imageenonce989');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce989"></a><div class=inner id="innerenonce989">Soit $E=\mathbb R_3[X]$. On considère la famille $\mathcal F=\{f_0,f_1,f_2,f_3\}$ d'éléments de $E^*$ 
+définis, pour $j=0,\dots,3$, par 
+$$\forall P\in E,\ f_j(P)=P(j).$$
+<ol class="enumeratechiffre">
+<li> Montrer que la famille $\mathcal F$ est une base de $E^*$.
+<li> Déterminer la base $\mathcal B$ de $E$ dont $\mathcal F$ est la base duale.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication989','imageindication989');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication989"></a><div class=inner id="innerindication989" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de tester l'indépendance en évaluant une relation de liaison pour des polynômes bien choisis.
+<li> Ecrire les conditions que doivent satisfaire chaque vecteur de $\mathcal B$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige989','imagecorrige989',989);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige989"></a><div class=inner id="innercorrige989" style="display:none;"><ol class="enumeratechiffre">
+<li> On a une famille de 4 éléments dans un espace de dimension 4, il suffit de démontrer que la famille
+est libre. Soient $a_0,a_1,a_2$ et $a_3$ des réels tels que
+$$a_0 f_0+a_1f_1+a_2f_2+a_3f_3=0.$$
+On va évaluer cette relation en des polynômes bien choisis. Prenons par exemple $P_0$ de sorte
+que $f_1(P_0)=f_2(P_0)=f_3(P_0)=0$ soit $P_0(1)=P_0(2)=P_0(3)=0$.On peut donc choisir par exemple
+$$P_0(X)=(X-1)(X-2)(X-3).$$
+Mais alors 
+$$a_0 f_0(P_0)+a_1f_1(P_0)+a_2f_2(P_0)+a_3f_3(P_0)=-6a_0=0.$$
+On a donc $a_0=0$. En utilisant ensuite $P_1(X)=X(X-2)(X-3)$,
+$P_2(X)=X(X-1)(X-3)$ et $P_3(X)=X(X-1)(X-2)$, on trouve que l'on a aussi
+$a_1=a_2=a_3=0$. 
+<li> On cherche $(Q_0,Q_1,Q_2,Q_3)$ avec $f_i(Q_j)=\delta_{i,j}$. Mais en réalité, on a déjà presque déterminé
+ces polynômes à la question précédente : en effet, on a par exemple
+$f_1(P_0)=f_2(P_0)=f_3(P_0)=0$; la seule chose qui ne convient pas est que l'on a 
+$f_0(P_0)=-6$. Mais il suffit de renormaliser $P_0$ en posant 
+$$Q_0(X)=-\frac16 (X-1)(X-2)(X-3).$$
+Les autres polynômes que l'on obtient sont :
+\begin{eqnarray*}
+Q_1(X)&=&\frac12 X(X-2)(X-3)\\
+Q_2(X)&=&-\frac12 X(X-1)(X-3)\\
+Q_3(X)&=&\frac16 X(X-1)(X-2).
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater990"></span><script>var myRating = raterJs( { element:document.querySelector("#rater990"),	max:5, rating:1.56, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(990,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformations et base duale <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=990.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(990,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce990','imageenonce990');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce990"></a><div class=inner id="innerenonce990">Soit $E$ un espace vectoriel de dimension finie $n$ et soit $\mathcal B=(e_1,\dots,e_n)$ une base de $E$. On note $\mathcal B'=(f_1,\dots,f_n)$ une base déduite de $\mathcal B$ par une transformation élémentaire (échange de deux vecteurs, multiplication d'un vecteur par un scalaire non-nul, ajout à un vecteur d'un multiple d'un autre vecteur). Exprimer la base duale $(f_1^*,\dots,f_n^*)$ en fonction de la base duale $(e_1^*,\dots,e_n^*)$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige990','imagecorrige990',990);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige990"></a><div class=inner id="innercorrige990" style="display:none;">On distingue  les 3 cas :
+<ul class="rien">
+<li> Si on échange $e_1$ et $e_2$ par exemple, ie si $f_1=e_2$ et $f_2=e_1$, alors il est facile de vérifier que la base duale sera $(f_1^*,\dots,f_n^*)=(e_2^*, e_1^*, e_3^*,\dots,e_n^*)$, simplement en vérifiant bien
+que $f_i^*(f_j)=\delta_{i,j}$.
+<li> Si on multiplie $e_1$ par une constante $\lambda\neq 0$, c'est-à-dire si $f_1=\lambda e_1$, alors pour que $f_1^*(f_1)=1$, il est naturel de poser $f_1^*=\frac 1\lambda e_1^*$, puis de laisser les autres vecteurs inchangés : $f_k^*=e_k^*$ pour $k\geq 2$. On vérifie là aussi qu'on obtient bien la base duale.
+<li> Si $f_1=e_1+\lambda e_2$, il est d'abord clair que $f_k^*=e_k^*$ pour $k\geq 3$. On remarque ensuite que $e_1^*(f_1)=1$ et $e_1^*(f_k)=0$ pour $k\geq 2$, et donc $f_1^*=e_1^*$. Ensuite, on cherche $f_2^*$ sous la forme $ae_1^*+be_2^*$. La condition $f_2^*(f_2)=1$ donne $b=1$. La condition $f_2^*(f_1)=0$ donne $a+b\lambda=0$, soit $a=-\lambda$. On a donc $f_2^*=-\lambda e_1^*+e_2^*$.
+</ul></div></div></div>
+
+<div class=titrepartie>Hyperplans</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3106"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3106"),	max:5, rating:1.4545454545455, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3106,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intersection de deux hyperplans <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3106.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3106,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3106','imageenonce3106');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3106"></a><div class=inner id="innerenonce3106">Soit $E$ un espace vectoriel de dimension finie $n$ et soit $H_1$, $H_2$ deux hyperplans distincts de $E$. Quelle est la dimension de $H_1\cap H_2$?</div></div><div class=indication><a href="javascript:showAll('innerindication3106','imageindication3106');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3106"></a><div class=inner id="innerindication3106" style="display:none;">Appliquer la formule de Grassmann.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3106','imagecorrige3106',3106);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3106"></a><div class=inner id="innercorrige3106" style="display:none;">On remarque que $H_1+H_2$ est un sous-espace vectoriel de $E$ qui contient strictement $H_1$. Ainsi, $\dim(H_1+H_2)&gt;n-1$. Puisque $\dim(H_1+H_2)\leq n$, on a $\dim(H_1+H_2)=n$. Par la formule de Grassmann, 
+$$\dim(H_1\cap H_2)=\dim(H_1)+\dim(H_2)-\dim(H_1+H_2)=2(n-1)-n=n-2.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2436"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2436"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2436,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intersection d'hyperplans et forme linéaire engendrée <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2436.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2436,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2436','imageenonce2436');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2436"></a><div class=inner id="innerenonce2436">Soit $E$ un espace vectoriel de dimension finie.
+<ol class="enumeratechiffre">
+<li> Soit $(f_1,\dots,f_p)$ des formes linéaires indépendantes sur $E$, et $f$ une forme linéaire sur $E$. Démontrer que 
+$$\bigcap_{i=1}^p\ker(f_i)\subset \ker (f)\iff f\in\textrm{vect}(f_1,\dots,f_p).$$
+<li> Le résultat subsiste-t-il si les formes linéaires ne sont plus supposées indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2436','imageindication2436');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2436"></a><div class=inner id="innerindication2436" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour le sens direct, compléter $(f_1,\dots,f_p)$ en une base du duale, écrire $f$ dans cette base, et montrer que les coordonnées en dehors de $f_1,\dots,f_p$ sont nulles en utilisant la base antéduale.
+<li> Oui! Par exemple, si $f_1$ est combinaison linéaire des autres, alors $\ker(f_1)\supset\bigcap_{i=2}^p \ker(f_i)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2436','imagecorrige2436',2436);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2436"></a><div class=inner id="innercorrige2436" style="display:none;"><ol class="enumeratechiffre">
+<li> Le sens réciproque est facile : si $f=a_1 f_1+\dots+a_p f_p$, et si $x\in\bigcap_{i=1}^p \ker(f_i)$, alors $f_i(x)=0$ pour tout $i=1,\dots,p$ et donc $f(x)=0$ également. Ainsi, $x\in\ker(f)$.<br>
+Réciproquement, supposons $\bigcap_{i=1}^p \ker(f_i)\subset\ker (f)$, complétons $(f_1,\dots,f_p)$ en une base $(f_1,\dots,f_n)$ du dual de $E$. Alors, $f$ s'écrit $f=a_1f_1+\dots+a_n f_n$. Soit $(e_1,\dots,e_n)$ la base antéduale de $(f_1,\dots,f_n)$. Pour $k\in\{p+1,\dots,n\}$, on a $f_j(e_k)=0$ si $j\neq k$. En particulier, puisque $k&gt;p$, on a aussi $f(e_k)=0$. Mais, dans l'écriture $f=a_1f_1+\dots+a_n f_n$, l'évaluation en $e_k$ donne $f(e_k)=a_k=0$. Ainsi, on a prouvé que $a_k=0$ pour $k=p+1,\dots,n$ et donc $f=a_1f_1+\dots+a_p f_p\in \textrm{vect}(f_1,\dots,f_p)$.
+<li> Oui! Extrayons de $(f_1,\dots,f_p)$ une famille libre maximale. Sans perte de généralité, on suppose qu'il s'agit de la famille $(f_1,\dots,f_q)$. Mais alors, d'après la question précédente, pour $j=q+1,\dots,p$, puisque $f_j\in\textrm{vect}(f_1,\dots,f_q)$, on a $\bigcap_{i=1}^q \ker(f_i)\subset \ker(f_j)$. Ceci prouve en particulier que
+$$\bigcap_{j=1}^q \ker(f_j)=\bigcap_{i=1}^p \ker(f_i)\subset \ker(f).$$
+On peut alors appliquer le résultat de la question précédente à la famille libre $(f_1,\dots,f_q)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater994"></span><script>var myRating = raterJs( { element:document.querySelector("#rater994"),	max:5, rating:3.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(994,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intersection d'hyperplans <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=994.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(994,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce994','imageenonce994');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce994"></a><div class=inner id="innerenonce994">Soit $E$ un espace vectoriel de dimension $q$ et $(f_i)_{1\leq i\leq p}$ une famille
+de $p$ formes linéaires. On rappelle que $f\in\textrm{vect}(f_1,\dots,f_p)$
+si et seulement si 
+$$\bigcap_{i=1}^p \ker(f_i)\subset \ker(f).$$
+<ol class="enumeratechiffre">
+<li> On note $F=\bigcap_{i=1}^p \ker(f_i)$. Montrer que $F$ est de dimension supérieure ou égale à $q-p$, avec égalité
+si et seulement si les formes linéaires sont indépendantes.
+<li> En déduire la dimension de $F$, l'espace vectoriel des matrices carrées de taille $n$ dont la somme
+de chaque ligne est nulle.
+<li> En appliquant le résultat de la première question à $F$ et aux formes linéaires
+$g_j(M)=\sum_{i=1}^n m_{i,j}$, pour $j=1,\dots,n-1$, en déduire la dimension de l'espace vectoriel
+des matrices carrées de taille $n$ dont la somme de chaque ligne et la somme de chaque
+colonne est nulle. Pourquoi ne  considère-t-on pas $(g_j)$ pour $j=1,\dots,n$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication994','imageindication994');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication994"></a><div class=inner id="innerindication994" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par récurrence sur $p$.
+<li> Appliquer à $E=\mathcal M_n(\mathbb K)$ et $f_i(M)=\sum_{j=1}^n m_{i,j}$.
+<li> L'indication est dans l'énoncé!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige994','imagecorrige994',994);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige994"></a><div class=inner id="innercorrige994" style="display:none;"><ol class="enumeratechiffre">
+<li> On raisonne par récurrence sur $p$. Si $p=1$, le résultat est connu : le noyau d'une forme linéaire non-nulle
+est un hyperplan de $E$. Supposons le résultat prouvé au rang $p$ et prouvons-le au rang $p+1$. 
+On note 
+$$F=\bigcap_{i=1}^{p+1} \ker(f_i),\ E'=\bigcap_{i=1}^p \ker(f_i)$$ et $g_{p+1}$ la restriction de $f_{p+1}$ à $E'$.<br> Par hypothèse de récurrence, 
+on sait que $\dim(E')\geq q-p$. D'autre part, $F=\bigcap_{i=1}^{p+1}\ker(f_i)=\ker(g_{p+1})$. Or, la dimension de $\ker(g_{p+1})$ est
+égale à celle de $E'$ moins 1 si $g_{p+1}$ est non-nulle, égale à celle de $E'$ si $g_{p+1}$ est nulle.
+Dans tous les cas, $\dim(F)\geq q-p-1=q-(p+1)$. <br>
+Supposons que les formes linéaires sont indépendantes. L'hypothèse de récurrence nous dit que
+$\dim(E')=q-p$. De plus, puisque les formes linéaires sont indépendantes, on n'a pas d'après le rappel
+$$\bigcap_{i=1}^p\ker(f_i)\subset\ker(f_{p+1}).$$
+Ceci signifie que $g_{p+1}$ n'est pas nulle, et donc que $\dim(\ker(g_{p+1}))=\dim(E')-1=q-p-1$.<br>
+Enfin, si on sait que $\dim(F)=q-(p+1)$, notre argument montre que
+$\dim(E')=q-p$ et donc que les formes linéaires $f_1,\dots,f_p$ sont indépendantes.
+Si $f_{p+1}$ était combinaison linéaire de $(f_1,\dots,f_p)$, alors
+$g_{p+1}$ serait nulle et on aurait $\dim(F)=q-p$ ce qui n'est pas le cas.
+Donc $f_{p+1}$ n'est pas combinaison linéaire
+de $(f_1,\dots,f_p)$ et la famille $(f_1,\dots,f_{p+1})$ est libre.
+<li> On applique le résultat de la question précédente
+à $E=\mathcal M_n(\mathbb K)$ et aux formes linéaires $f_i(M)=\sum_{j=1}^n m_{i,j}$,
+où $M=(m_{i,j})$. Ces formes linéaires sont indépendantes. En effet, si 
+$$\lambda_1 f_1+\dots+\lambda_n f_n=0,$$
+on applique cette égalité à la matrice élémentaire $E_{i,1}$, dont tous les coefficients sont nuls
+sauf celui de la $i$-ème ligne et $1$-ère colonne, égal à 1. On a $f_i(E_{i,1})=1$ et
+$f_k(E_{i,1})=0$ si $k\neq i$. Ainsi, on obtient $\lambda_i=0$ et la famille est libre.
+D'où $\dim(F)=n^2-n$.
+<li> On démontre d'abord que les formes linéaires $(g_j)_{j=1,\dots,n-1}$
+forment une famille libre. En effet, considérons une relation de liaison
+$$\mu_1 g_1+\dots+\mu_{n-1}g_{n-1}=0.$$
+On l'applique à des matrices particulières, mais il faut prendre garde désormais à ce qu'elles doivent 
+appartenir à $F$. Considérons ici $M=E_{1,j}-E_{1,n}$. Alors $M\in F$ et 
+$g_j(M)=1$ et $g_k(M)=0$ pour $k\neq j$. On obtient donc $\lambda_j=0$,
+et la famille $(g_1,\dots,g_{n-1})$ est libre. D'après le résultat de la première question :
+$$\dim\left(\bigcap_{i=1}^n \ker(f_i)\cap\bigcap_{j=1}^{n-1}\ker(g_j)\right)=n^2-n-(n-1)=(n-1)^2.$$
+Reste à montrer que l'espace vectoriel considére est bien celui des matrices dont la somme de chaque colonne et la somme de chaque 
+ligne sont nulles. Le point important est de vérifier que si $f_1(M)=\dots=f_n(M)=g_1(M)=\dots=g_{n-1}(M)=0$,
+alors $g_n(M)=0$. Mais il est facile de vérifier que 
+$$f_1+\dots+f_n-g_1-\dots-g_{n-1}=g_n$$
+ce qui prouve le résultat d'après le rappel.<br>
+On ne pouvait pas appliquer le résultat de la première question directement à la famille $(g_j)_{j=1,\dots,n}$ 
+car la famille $(f_1,\dots,f_n,g_1,\dots,g_n)$ est liée.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater995"></span><script>var myRating = raterJs( { element:document.querySelector("#rater995"),	max:5, rating:3.0322580645161, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(995,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Hyperplans de $\mathcal M_n(\mathbb K)$ <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=995.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(995,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce995','imageenonce995');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce995"></a><div class=inner id="innerenonce995">Soit $n\geq 2.$
+<ol class="enumeratechiffre">
+<li> Soit $\varphi$ une forme linéaire sur $\mathcal M_n(\mathbb K)$. 
+Montrer qu'il existe une matrice $A\in\mathcal M_n(\mathbb K)$ tel que,
+pour tout $M$ de $\mathcal M_n(\mathbb K)$, 
+$\varphi(M)=\textrm{Tr}(AM)$.
+<li> En déduire que tout hyperplan de $\mathcal M_n(\mathbb K)$ contient
+une matrice inversible.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication995','imageindication995');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication995"></a><div class=inner id="innerindication995" style="display:none;"><ol class="enumeratechiffre">
+<li> Poser $T_{i,j}(M)=\textrm{Tr}(E_{i,j}M)$, où $E_{i,j}$ est la matrice
+élémentaire avec 1 en $(i,j)$ et 0 ailleurs. Montrer que la famille des $(T_{i,j})_{1\leq i\leq n,1\leq j\leq n}$
+est une base de $\mathcal M_n(\mathbb K)^*$.
+<li> Utiliser que la matrice $A$ donnée par la question précédente
+est équivalente à une matrice de rang $r$ simple, et résoudre le problème pour cette matrice simple.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige995','imagecorrige995',995);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige995"></a><div class=inner id="innercorrige995" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $T_{i,j}(M)=\textrm{Tr}(E_{i,j}M)$, où $E_{i,j}$ est la matrice
+élémentaire avec 1 en $(i,j)$ et 0 ailleurs. On va prouver que la famille des $(T_{i,j})_{1\leq i\leq n,1\leq j\leq n}$
+est une base de $\mathcal M_n(\mathbb K)^*$. Puisque la famille
+comprend $n^2$ éléments, qui est aussi la dimension de $\mathcal M_n(\mathbb K)^*$,
+il suffit de prouver qu'il s'agit d'une famille libre. Mais si on a
+une combinaison linéaire $\sum_{i,j}\lambda_{i,j}T_{i,j}=0$, on évalue en $E_{j_0,i_0}$. 
+Mais :
+$$T_{i,j}(E_{j_0,i_0})=\textrm{Tr}(\delta_{j,j_0}E_{i,i_0})=\left\{
+\begin{array}{cc}
+1&\textrm{si }i=i_0\textrm{ et }j=j_0\\
+0&\textrm{sinon}.
+\end{array}\right.
+$$
+On obtient donc $\lambda_{j_0,i_0}=0$, et donc la famille est libre.<br>
+Considérons maintenant $\varphi\in\mathcal M_n(\mathbb K)^*$. $\varphi$ s'écrit
+$\sum_{i,j}\lambda_{i,j}T_{i,j}$. En particulier, pour tout $M\in\mathcal M_n(\mathbb K)$:
+$$\varphi(M)=\sum_{i,j}\lambda_{i,j}T_{i,j}(M)=\textrm{Tr}\big((\sum_{i,j}\lambda_{i,j}E_{i,j})M\big)=\textrm{Tr}(AM)$$
+où $A=\sum_{i,j}\lambda_{i,j}E_{i,j}$.  
+<li> Soit $H$ un hyperplan de $\mathcal M_n(\mathbb K)$. Il existe une matrice $A$ non-nulle
+telle que $H=\ker T_A$, où $T_A$ est défini par $T_A(M)=\textrm{Tr}(AM)$.
+Soit $r$ le rang de $A$. Alors $A$ est équivalente à $J_r$, ie $A=PJ_rQ$ où
+$$J_r=\left(\begin{array}{cccccc}
+1&0&\dots\\
+0&\ddots&0&\dots\\
+&&1\\
+&&&0\\
+&&&&\ddots\\
+&&&&&0
+\end{array}
+\right).$$
+On pose 
+$$N=\left(
+\begin{array}{cccc}
+0&\dots&0&1\\
+1&\ddots&&0\\
+&\ddots&\ddots&0\\
+&&1&0
+\end{array}\right)$$
+(remarquons que $N$ est bien défini puisque $n\geq 2$).
+$N$ est inversible, et on a
+$$\textrm{Tr}(J_rN)=0.$$
+Pour $M=Q^{-1}NP^{-1}$, on a 
+\begin{eqnarray*}
+T_A(M)&=&\textrm{Tr}(PJ_rQQ^{-1}NP^{-1})\\
+&=&\textrm{Tr}(J_rNP^{-1}P)\\
+&=&\textrm{Tr}(J_rN)\\
+&=&0.
+\end{eqnarray*}
+D'où $M$ est inversible, et $M\in H$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater2421"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2421"),	max:5, rating:2.2916666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2421,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Espace quotient et hyperplan <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2421.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(2421,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2421','imageenonce2421');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2421"></a><div class=inner id="innerenonce2421">Soit $E$ un espace vectoriel et $H$ un sous-espace de $E$. Démontrer que si $\dim(E/H)=1$, alors $H$ est un hyperplan de $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication2421','imageindication2421');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2421"></a><div class=inner id="innerindication2421" style="display:none;">Prendre $u\in E$ tel que $\textrm{vect}(\bar u)=E/H$, et prouver que $E=H\oplus\textrm{vect}(u)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2421','imagecorrige2421',2421);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2421"></a><div class=inner id="innercorrige2421" style="display:none;">Notons $\bar x$ la classe de $x\in E$ dans $E/H$. Puisque $\dim(E/H)=1$, on sait qu'il existe $u\in E$ tel que 
+$E/H=\textrm{vect}(\bar u)$. Prouvons alors que $E=H\oplus\textrm{vect}(u)$. Considérons tout d'abord $x\in H\cap\textrm{vect}(u)$.
+Alors $x$ s'écrit $x=\lambda u$. De plus, $\bar x=0$ puisque $x\in H$. Comme $\bar x=\lambda\bar u$ et que $\bar u\neq 0$, on a $\lambda=0$
+et donc $x=0$. D'autre part, soit $y\in E$. Alors il existe $\lambda\in \mathbb K$ tel que $\bar y=\lambda \bar u$. Ceci
+implique que $\overline{y-\lambda u}=0$, et donc que $y-\lambda u\in H$. Notons $x=y-\lambda u\in H$. L'écriture $y=x+\lambda u$
+prouve que $y\in H+\textrm{vect}(u)$.</div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

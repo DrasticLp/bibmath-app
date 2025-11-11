@@ -1,0 +1,737 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Dictionnaire de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Formulaire et méthodes- Séries numériques</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="../css/formulaire.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script src="../common/spoiler.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="itemselectionne"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="../ressources/moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:flex" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitemselectionne"><a href="index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="../ressources/moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Formulaire de mathématiques</a> &gt; </div><h1>Formulaire et méthodes- Séries numériques</h1>
+
+<P>
+Etudier la série de terme général (STG) <IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img1.gif"
+ ALT="$ (u_n)$">, c'est étudier la limite des
+sommes partielles 
+<!-- MATH
+ $\displaystyle S_n=\sum_{k=1}^nu_k$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img2.gif"
+ ALT="$ \displaystyle S_n=\sum_{k=1}^nu_k$">. On dit que la
+série converge si <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img3.gif"
+ ALT="$ S_n$"> admet une limite.
+
+<P>
+ 
+<div class=titrepartie> Séries de référence</div>
+<P>
+Soit 
+<!-- MATH
+ $\displaystyle u_n=\frac{1}{n^\alpha}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img4.gif"
+ ALT="$ \displaystyle u_n=\frac{1}{n^\alpha}$">. Alors <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img5.gif"
+ ALT="$ \sum u_n$"> converge
+si, et seulement si, <IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img6.gif"
+ ALT="$ \alpha&gt;1$">. Cette série s'appelle série de Riemann.
+
+<P>
+ 
+<div class=titrepartie> La GROSSE erreur à ne pas faire!!!</div>
+
+<P>
+Si la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge, alors <IMG
+ WIDTH="55" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img8.gif"
+ ALT="$ u_n\to 0$">. En
+revanche, ce n'est pas parce que <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> tend vers 0 que la série de
+terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge. Le cas de 
+<!-- MATH
+ $\displaystyle u_n=\frac{1}{n}$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img9.gif"
+ ALT="$ \displaystyle u_n=\frac{1}{n}$"> est frappant!
+
+<P>
+ 
+<div class=titrepartie> Séries à termes positifs</div>
+
+<P>
+Quels sont les critères de convergence quand <IMG
+ WIDTH="51" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img10.gif"
+ ALT="$ u_n\geq 0$">?? On remarque que la suite des sommes partielles est croissante. Donc, elle converge si, et seulement si, elle est majorée. Ainsi :
+
+<!-- MATH
+ \begin{displaymath}
+\textrm{Si }0\leq u_n\leq v_n,\left\{
+\begin{array}{l}
+\textrm{si la STG $v_n$ converge, alors la STG $u_n$ converge.}\\
+\textrm{si la STG $u_n$ diverge, alors la STG $v_n$ diverge.}\\
+\end{array}
+\right.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="474" HEIGHT="45" BORDER="0"
+ src="serienum/img11.gif"
+ ALT="\begin{displaymath}\textrm{Si }0\leq u_n\leq v_n,\left\{
+\begin{array}{l}
+\textr...
+...n$ diverge, alors la STG $v_n$ diverge.}\\
+\end{array}\right.\end{displaymath}">
+</DIV><P></P>
+
+<UL>
+<LI><B> Emploi des équivalents :</B>
+<BR>
+Si 
+<!-- MATH
+ $u_n\sim v_n$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img12.gif"
+ ALT="$ u_n\sim v_n$"> et <IMG
+ WIDTH="51" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img10.gif"
+ ALT="$ u_n\geq 0$">, alors les séries de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$">
+et <IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img13.gif"
+ ALT="$ v_n$"> sont de m&#234;me nature.
+<BR>
+Ce crit&#232;re s'emploie généralement quand on a des séries assez
+compliquées, on cherche un équivalent simple à l'aide de
+développements limités : 
+<!-- MATH
+ $\displaystyle
+\frac{1}{n^\alpha}\left((n+1)^{1+1/n}-(n-1)^{1-1/n}\right)$
+ -->
+<IMG
+ WIDTH="242" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img14.gif"
+ ALT="$ \displaystyle
+\frac{1}{n^\alpha}\left((n+1)^{1+1/n}-(n-1)^{1-1/n}\right)$">.</LI>
+<LI><B> Autres relations de comparaison :</B>
+
+<!-- MATH
+ \begin{displaymath}
+\textrm{Si $u_n=o(v_n)$ ou $u_n=O(v_n)$, alors }\left\{
+\begin{array}{l}
+\textrm{si la STG $v_n$ converge, alors la STG $u_n$ converge.}\\
+\textrm{si la STG $u_n$ diverge, alors la STG $v_n$ diverge.}\\
+\end{array}
+\right.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="616" HEIGHT="45" BORDER="0"
+ src="serienum/img15.gif"
+ ALT="\begin{displaymath}\textrm{Si $u_n=o(v_n)$ ou $u_n=O(v_n)$, alors }\left\{
+\begi...
+...n$ diverge, alors la STG $v_n$ diverge.}\\
+\end{array}\right.\end{displaymath}">
+</DIV><P></P></LI>
+<LI><B> R&#232;gle de Cauchy :</B>
+<BR>
+On suppose que <IMG
+ WIDTH="51" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img10.gif"
+ ALT="$ u_n\geq 0$">, et que 
+<!-- MATH
+ $\displaystyle\sqrt[n]{u_n}\to
+l\in[0,+\infty]$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img16.gif"
+ ALT="$ \displaystyle\sqrt[n]{u_n}\to
+l\in[0,+\infty]$">. Alors :
+
+<OL>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img17.gif"
+ ALT="$ l&lt;1$">, la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge.</LI>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img18.gif"
+ ALT="$ l&gt;1$">, la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> diverge.</LI>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ src="serienum/img19.gif"
+ ALT="$ l=1$">, on ne peut pas conclure.</LI>
+</OL>
+Ce crit&#232;re s'emploie essentiellement quand <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> s'écrit avec
+des racines ou des puissances n-i&#232;mes : 
+<!-- MATH
+ $\displaystyle
+u_n=\left(\frac{n-1}{2n+1}\right)^{n}$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img20.gif"
+ ALT="$ \displaystyle
+u_n=\left(\frac{n-1}{2n+1}\right)^{n}$">.</LI>
+<LI><B> R&#232;gle de D'Alembert</B> :
+<BR>
+On suppose que $u_n>0$, et que 
+<!-- MATH
+ $\displaystyle\frac{u_{n+1}}{u_n}\to
+l\in[0,+\infty]$
+ -->
+<IMG
+ WIDTH="148" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img21.gif"
+ ALT="$ \displaystyle\frac{u_{n+1}}{u_n}\to
+l\in[0,+\infty]$">. Alors :
+
+<OL>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img17.gif"
+ ALT="$ l&lt;1$">, la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge.</LI>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img18.gif"
+ ALT="$ l&gt;1$">, la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> diverge.</LI>
+<LI>Si <IMG
+ WIDTH="38" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ src="serienum/img19.gif"
+ ALT="$ l=1$">, on ne peut pas conclure.</LI>
+</OL>
+Ce crit&#232;re s'emploie essentiellement quand <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> s'écrit avec des
+factorielles, des puissances... : 
+<!-- MATH
+ $\displaystyle\frac{x^n}{n!}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img22.gif"
+ ALT="$ \displaystyle\frac{x^n}{n!}$">.</LI>
+<LI><B> Comparaison avec une intégrale : </B> Si <IMG
+ WIDTH="14" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img23.gif"
+ ALT="$ f$"> est continue par morceaux, positive, décroissante sur 
+<!-- MATH
+ $[a,+\infty[$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img24.gif"
+ ALT="$ [a,+\infty[$">, et si on définit <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> par <IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img25.gif"
+ ALT="$ u_n=f(n)$">, alors la STG <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> et 
+<!-- MATH
+ $\displaystyle \int_a^{+\infty}f(t)dt$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img26.gif"
+ ALT="$ \displaystyle \int_a^{+\infty}f(t)dt$"> sont de même nature. Il est bon de savoir redémontrer ce résultat, qu'on doit pouvoir retrouver à partir d'un petit dessin, et d'un encadrement de l'intégrale. C'est par exemple ainsi
+que l'on prouve facilement la convergence ou la divergence des séries
+de Riemann, ou celle des séries de Bertrand : 
+<!-- MATH
+ $\sum\frac{1}{n^\alpha(\ln n)^\beta}$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img27.gif"
+ ALT="$ \sum\frac{1}{n^\alpha(\ln n)^\beta}$"> converge ssi <IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img6.gif"
+ ALT="$ \alpha&gt;1$"> ou <IMG
+ WIDTH="44" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ src="serienum/img28.gif"
+ ALT="$ \alpha=1$"> et <IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img29.gif"
+ ALT="$ \beta&gt;1$">.
+
+<P>
+En outre, la comparaison à une intégrale fournit un encadrement du reste, ou des sommes partielles, qui peut être utile dans le cas où on s'intéresse à la vitesse de convergence, et à une valeur approchée de la limite :
+
+<!-- MATH
+ \begin{displaymath}
+\int_{n+1}^{+\infty}f(t)dt\leq R_n=\sum_{k=n+1}^{+\infty}u_k\leq\int_n^{+\infty}f(t)dt.
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="320" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img30.gif"
+ ALT="$\displaystyle \int_{n+1}^{+\infty}f(t)dt\leq R_n=\sum_{k=n+1}^{+\infty}u_k\leq\int_n^{+\infty}f(t)dt.$">
+</DIV><P></P></LI>
+</UL>
+
+<P>
+ 
+<div class=titrepartie> Autres séries</div>
+
+<UL>
+<LI><B> Convergence absolue : </B>A tester avant toute chose.</LI>
+<LI><B> R&#232;gle 
+<!-- MATH
+ $n^\alpha u_n$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img31.gif"
+ ALT="$ n^\alpha u_n$"> :</B>
+
+<OL>
+<LI>S'il existe <IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img6.gif"
+ ALT="$ \alpha&gt;1$"> tel que 
+<!-- MATH
+ $n^\alpha u_n\to 0$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img32.gif"
+ ALT="$ n^\alpha u_n\to 0$"> quand 
+<!-- MATH
+ $n\to
++\infty$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img33.gif"
+ ALT="$ n\to
++\infty$">, alors la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge absolument.</LI>
+<LI>S'il existe 
+<!-- MATH
+ $\alpha\leq 1$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img34.gif"
+ ALT="$ \alpha\leq 1$"> tel que 
+<!-- MATH
+ $n^\alpha u_n\to+\infty$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img35.gif"
+ ALT="$ n^\alpha u_n\to+\infty$">
+quand 
+<!-- MATH
+ $n\to+\infty$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img33.gif"
+ ALT="$ n\to
++\infty$">, alors la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> diverge.</LI>
+</OL>
+Ce crit&#232;re peut par exemple être employé pour les séries de Bertrand
+: 
+<!-- MATH
+ $u_n=\frac{1}{n^\alpha(\log n)^\beta}$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img36.gif"
+ ALT="$ u_n=\frac{1}{n^\alpha(\log n)^\beta}$">.</LI>
+<LI><B> Crit&#232;re des séries alternées :</B>
+<BR>
+On consid&#232;re une série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> telle que :
+
+<OL>
+<LI><IMG
+ WIDTH="38" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img37.gif"
+ ALT="$ u_{n+1}$"> est de signe opposé à <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$">.</LI>
+<LI><IMG
+ WIDTH="31" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img38.gif"
+ ALT="$ \vert u_n\vert$"> décroît, et est de limite nulle en <IMG
+ WIDTH="32" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img39.gif"
+ ALT="$ +\infty$">.</LI>
+</OL>
+Alors la série de terme général <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img7.gif"
+ ALT="$ u_n$"> converge, et
+
+<!-- MATH
+ $\displaystyle|R_n|=|\sum_{k=n+1}^{+\infty}u_k|\leq |u_{n+1}|$
+ -->
+<IMG
+ WIDTH="191" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img40.gif"
+ ALT="$ \displaystyle\vert R_n\vert=\vert\sum_{k=n+1}^{+\infty}u_k\vert\leq \vert u_{n+1}\vert$">.</LI>
+<LI><B> Décomposition :</B> Par des développements limités, essayer de
+décomposer une série en séries plus simples, et regarder la
+convergence de ces séries.</LI>
+<LI><B> Transformation d'Abel :</B> C'est l'analogue de l'intégration par parties pour les intégrales impropres, et elle s'emploie pour les séries du type 
+<!-- MATH
+ $\frac{\sin n}{n},\frac{e^{in\theta}}{n},\dots$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img41.gif"
+ ALT="$ \frac{\sin n}{n},\frac{e^{in\theta}}{n},\dots$">. 
+
+<P>
+Si 
+<!-- MATH
+ $u_k=a_kb_k$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img42.gif"
+ ALT="$ u_k=a_kb_k$">, on écrit 
+<!-- MATH
+ $A_n=\sum_{k=0}^na_k$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img43.gif"
+ ALT="$ A_n=\sum_{k=0}^na_k$">, ce qui donne 
+<!-- MATH
+ $a_k=A_k-A_{k-1}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img44.gif"
+ ALT="$ a_k=A_k-A_{k-1}$">. Alors :
+
+<!-- MATH
+ \begin{displaymath}
+\sum_{k=0}^na_kb_k=a_0b_0+\sum_{k=1}^n(A_k-A_{k-1})b_k=a_0b_0-A_0b_1+A_nb_n+\sum_{k=1}^{n-1}A_k(b_k-b_{k-1}).
+\end{displaymath}
+ -->
+
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="561" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img45.gif"
+ ALT="$\displaystyle \sum_{k=0}^na_kb_k=a_0b_0+\sum_{k=1}^n(A_k-A_{k-1})b_k=a_0b_0-A_0b_1+A_nb_n+\sum_{k=1}^{n-1}A_k(b_k-b_{k-1}).$">
+</DIV><P></P>
+On conclut le plus souvent quand :
+
+<UL>
+<LI>
+<!-- MATH
+ $A_n=\sum_{k=0}^n a_k$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img43.gif"
+ ALT="$ A_n=\sum_{k=0}^na_k$"> est borné.</LI>
+<LI>
+<!-- MATH
+ $\sum_{k=0}^{+\infty}|b_k-b_{k+1}|$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img46.gif"
+ ALT="$ \sum_{k=0}^{+\infty}\vert b_k-b_{k+1}\vert$"> est absolument convergente, et 
+<!-- MATH
+ $|b_n|\to 0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img47.gif"
+ ALT="$ \vert b_n\vert\to 0$">.</LI>
+</UL></LI>
+</UL>
+<div class=titrepartie> Sommation des relations de comparaison</div>
+
+<P>
+Bien souvent, on cherche à obtenir une valeur approchée de la limite d'une série convergente. Il faut pouvoir savoir à quelle vitesse on s'approche de la limite. Soit <IMG
+ WIDTH="48" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img48.gif"
+ ALT="$ u_n,\ v_n$"> des suites à termes positifs. On note :
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+S_n=\sum_{k=1}^nu_k,\quad S'_n=\sum_{k=1}^nv_k\quad\textrm{ les sommes partielles}\\
+R_n=\sum_{k=n+1}^{+\infty}u_k,\quad R'_n=\sum_{k=n+1}^{+\infty}v_k\quad\textrm{ les restes (s'ils existent)}
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="354" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img49.gif"
+ ALT="$\displaystyle S_n=\sum_{k=1}^nu_k,\quad S'_n=\sum_{k=1}^nv_k\quad\textrm{ les sommes partielles}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="414" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img50.gif"
+ ALT="$\displaystyle R_n=\sum_{k=n+1}^{+\infty}u_k,\quad R'_n=\sum_{k=n+1}^{+\infty}v_k\quad\textrm{ les restes (s'ils existent)}$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<UL>
+<LI>Cas de la convergence : on compare les restes. On suppose que 
+<!-- MATH
+ $\displaystyle \sum_{k=1}^{+\infty}u_k$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img51.gif"
+ ALT="$ \displaystyle \sum_{k=1}^{+\infty}u_k$"> converge :
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+\textrm{si }v_n\sim u_n&\textrm{alors}&R'n\sim R_n\\
+\textrm{si }v_n=o( u_n)&\textrm{alors}&R'n=o(R_n)\\
+\textrm{si }v_n=O(u_n)&\textrm{alors}&R'n=O(R_n)\\
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="76" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img52.gif"
+ ALT="$\displaystyle \textrm{si }v_n\sim u_n$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="72" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img54.gif"
+ ALT="$\displaystyle R'n\sim R_n$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img55.gif"
+ ALT="$\displaystyle \textrm{si }v_n=o( u_n)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img56.gif"
+ ALT="$\displaystyle R'n=o(R_n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="100" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img57.gif"
+ ALT="$\displaystyle \textrm{si }v_n=O(u_n)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="97" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img58.gif"
+ ALT="$\displaystyle R'n=O(R_n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></LI>
+<LI>Cas de la divergence : on compare les sommes partielles. On suppose que 
+<!-- MATH
+ $\displaystyle \sum_{k=1}^{+\infty}u_k$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img51.gif"
+ ALT="$ \displaystyle \sum_{k=1}^{+\infty}u_k$"> diverge :
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray*}
+\textrm{si }v_n\sim u_n&\textrm{alors}&S'n\sim S_n\\
+\textrm{si }v_n=o( u_n)&\textrm{alors}&S'n=o(S_n)\\
+\textrm{si }v_n=O(u_n)&\textrm{alors}&S'n=O(S_n)\\
+\end{eqnarray*}
+ -->
+
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="76" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img52.gif"
+ ALT="$\displaystyle \textrm{si }v_n\sim u_n$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="68" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img59.gif"
+ ALT="$\displaystyle S'n\sim S_n$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img55.gif"
+ ALT="$\displaystyle \textrm{si }v_n=o( u_n)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="89" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img60.gif"
+ ALT="$\displaystyle S'n=o(S_n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="100" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img57.gif"
+ ALT="$\displaystyle \textrm{si }v_n=O(u_n)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="37" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img53.gif"
+ ALT="$\displaystyle \textrm{alors}$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="93" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ src="serienum/img61.gif"
+ ALT="$\displaystyle S'n=O(S_n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></LI>
+</UL>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>   

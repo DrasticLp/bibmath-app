@@ -1,0 +1,1511 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Suites de nombres réels ou complexes - suites récurrentes</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Suites de nombres réels ou complexes - suites récurrentes</h1>
+<div class=titrepartie>Suites arithmétiques, géométriques, arithmético-géométriques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2964"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2964"),	max:5, rating:0.62337662337662, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2964,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Raison et suite arithmétique ou géométrique <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2964.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2964,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2964','imageenonce2964');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2964"></a><div class=inner id="innerenonce2964">Soit $(v_n)_{n\geq 0}$ une suite arithmétique telle que $v_3=3$ et $v_6=24$.
+<ol class="enumeratechiffre">
+<li> Calculer le premier terme $v_0$ et la raison de cette suite.
+<li> Même question si on suppose que la suite est géométrique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2964','imagecorrige2964',2964);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2964"></a><div class=inner id="innercorrige2964" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $r$ la raison de la suite arithmétique $(v_n)_{n\ge0}$. On a 
+\[
+v_3 = v_0 + 3r\quad\text{et}\quad v_6 = v_0 + 6r.
+\]
+Ainsi, il vient $v_0 = 2v_3 - v_6 = 6 - 24 = -18$, puis $r = (v_3 - v_0)/3 = 21/3 = 7$.  
+<li> Notons $r$ la raison de la suite géométrique $(v_n)_{n\ge0}$. On a 
+\[
+v_3 = v_0\times r^3\quad\text{et}\quad v_6 = v_0\times r^6.
+\]
+Ainsi, il vient $v_0 = \frac{v_3^2}{v_6} = \frac{3}{8}$, puis $r^3 = \frac{v_3}{v_0} = 3\times\frac{8}{3} = 8$ et donc $r = 2$.  
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2965"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2965"),	max:5, rating:1.2830188679245, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2965,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Placement <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2965.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2965,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2965','imageenonce2965');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2965"></a><div class=inner id="innerenonce2965">On place un capital $w_0=1500$ euros avec un taux d'intérêt égal à $4,5\%$ par an et on note $w_n$ le capital obtenu au bout de $n$ années.
+<ol class="enumeratechiffre">
+<li> Donner la nature de la suite $w$ et exprimer $w_n$ en fonction de $n$.
+<li> Calculer la valeur du capital au bout de $10$ ans.
+<li> Au bout de combien d'années le capital initial aura-t-il doublé ?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2965','imagecorrige2965',2965);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2965"></a><div class=inner id="innercorrige2965" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $w_0 = 1500$ et pour tout entier $n\ge0$,
+\[
+w_{n + 1} = w_n + \frac{4,5}{100}w_n = \frac{104,5}{100}w_n.
+\]
+La suite $(w_n)_{n\ge0}$ est géométrique de premier terme $w_0 = 1500$ et de raison $r = \frac{104,5}{100}$. D'après le cours, on a
+\[
+w_n = w_0r^n = 1500\left(\frac{104,5}{100}\right)^n,\quad\text{quel que soit $n\ge0$}.
+\]
+<li> On a $w_{10} \approx 2329,45$ euros.
+<li> On résout $w_n\ge3000$.
+\begin{align*}
+w_n\geq 3000&\iff \left(\frac{104,5}{100}\right)^n\geq 2\\
+&\iff n \ln \left(\frac{104,5}{100}\right) \geq \ln 2\\
+&\iff n\geq \frac{\ln 2}{\ln\left(\frac{104,5}{100}\right)}.
+\end{align*}
+Puisque 
+$$\frac{\ln 2}{\ln\left(\frac{104,5}{100}\right)}\approx 15,\!74$$
+et que $n$ doit être un entier, on trouve que le capital initial aura doublé au bout de $16$ années.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2956"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2956"),	max:5, rating:1.1724137931034, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2956,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Abonnements <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2956.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2956,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2956','imageenonce2956');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2956"></a><div class=inner id="innerenonce2956">Fin 2020, un club de rugby comptait 7000 abonnés. A la fin de chaque année, le club constate que $20\%$ des abonnés ne se réabonnent pas et que 4000 nouveaux abonnés arrivent. Le stade comporte 19000 places, et le club voudrait savoir s'il sera nécessaire de l'agrandir pour pouvoir accueillir tous les abonnés.
+On note $a_n$ le nombre d'abonnés à la fin de l'année $2020+n$.
+<ol class="enumeratechiffre">
+<li> Préciser $a_0$ et expliquer pourquoi, pour tout entier naturel $n$, $a_{n+1}=0,\!8 a_n+4000$. On va ensuite, par deux méthodes différentes, déterminer la limite de $(a_n)$.
+<li> Méthode 1 :
+<ol class="enumeratechiffre">
+<li> On pose, pour $n\geq 0$,  $b_n=a_n-20000$. Justifier que $(b_n)$ est une suite géométrique, et préciser sa raison.
+<li> Quelle est la limite de la suite $(b_n)$?
+<li> Quelle est la limite de la suite $(a_n)$?
+</ol>
+<li> Méthode 2 :
+<ol class="enumeratechiffre">
+<li> Démontrer que la suite $(a_n)$ est majorée par 20000.
+<li> Démontrer que la suite $(a_n)$ est croissante.
+<li> En déduire que la suite $(a_n)$ est convergente. Quelle est sa limite?
+</ol>
+<li> Le club devra-t-il agrandir son stade? Si oui, écrire un algorithme sous Python précisant quand devra être finie l'agrandissement.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2956','imageindication2956');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2956"></a><div class=inner id="innerindication2956" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> <ol class="enumeratechiffre">
+<li> Exprimer $b_{n+1}$ en fonction de $b_n$. On pourra aussi remarquer que $16000=0,\!8\times 20000$.
+<li> Cours!
+<li> Exprimer $a_n$ en fonction de $b_n$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Procéder par récurrence sur $n$.
+<li> Calculer $a_1$ puis prouver par récurrence sur $n$ que, pour tout $n\in\mathbb N$, on a $a_{n+1}\geq a_n$.
+<li> L'existence de la limite vient d'un théorème du cours. On peut ensuite passer à la limite dans l'égalité.
+</ol>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2956','imagecorrige2956',2956);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2956"></a><div class=inner id="innercorrige2956" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $a_0=7000$. De plus, une diminution de $20\%$ du nombre d'abonnés correspond à une multiplication par $0,\!8$, et un apport de 4000 nouveaux abonnés correspond à une addition de 4000.
+<li> <ol class="enumeratechiffre">
+<li> On a 
+\begin{align*}
+b_{n+1}&=a_{n+1}-20000\\
+&=0,\!8 a_n-16000\\
+&=0,\!8 (a_n-20000)\\
+&=0,\!8 b_n.
+\end{align*}
+La suite $(b_n)$ est donc une suite géométrique de raison $0,\!8$.
+<li> Puisque $(b_n)$ est une suite géométrique de raison $0&lt;0,\!8&lt;1$, la suite $(b_n)$ tend vers $0$.
+<li> Puisque $a_n=b_n+20000$, la suite $(a_n)$ tend vers $20000$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Pour $n\in\mathbb N$, on note $P(n)$ la propriété 
+$$P(n):"a_n\leq 20000".$$
+Démontrons par récurrence que $P(n)$ est vraie pour tout entier $n$.<br> 
+Initialisation : On a $a_0\leq 4000$ et donc $P(0)$ est vraie.<br>
+Hérédité : Soit $n\in\mathbb N$ tel que $P(n)$ est vraie, et prouvons que $P(n+1)$ est vraie. On a
+$$a_{n+1}=0,\!8 a_n+4000=0,\!8\times 20000+4000=16000+4000=20000.$$
+Ainsi, $P(n+1)$ est vraie.<br>
+Conclusion : Par le principe de récurrence, $P(n)$ est vraie pour tout entier $n$.
+<li> Pour $n\in\mathbb N$, on note $P(n)$ la propriété 
+$$P(n): "a_{n+1}\geq a_n".$$
+Démontrons par récurrence que $P(n)$ est vraie pour tout entier $n$.<br>
+Initialisation : On a $a_0=7000$ et $a_1=9600$ donc $P(1)$ est vraie.<br>
+Hérédité : Soit $n\in\mathbb N$ tel que $P(n)$ est vraie. Démontrons que $P(n+1)$ est vraie. On sait que 
+$$a_{n+1}\geq a_n.$$
+On multiplie par $0,\!8&gt;0$ puis on ajoute $4000$ et on trouve
+$$0,\!8 a_{n+1}+4000\geq 0,\!8 a_n+4000.$$
+Ceci donne 
+$$a_{n+2}\geq a_{n+1}$$
+et donc $P(n+1)$ est vraie.<br>
+Conclusion : Par le principe de récurrence, $P(n)$ est vraie pour tout entier $n$.
+<li> La suite $(a_n)$ est croissante et majorée, donc elle converge. Notons $\ell$ sa limite. En passant à la limite dans la relation $a_{n+1}=0,\!8 a_n+4000$, on voit que $\ell$ est solutionde $\ell=0,\!8 \ell+4000$, ce qui nous donne $\ell=20000$.
+</ol>
+<li> Puisque la suite $(a_n)$ tend vers $20000$, à partir d'un certain moment, elle dépassera toujours 19000 et donc le club devra effectivement construire un nouveau stade. L'algorithme suivant permet de déterminer la première année où le nombre d'abonnés dépassera la capacité du stade : 
+<pre><code class="language-python">def rugby():
+  a=7000
+  n=0
+  while (a&lt;19000):
+    a=0.8*a+4000
+    n=n+1
+  return n
+</code></pre>
+On trouve $n=12$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater90"></span><script>var myRating = raterJs( { element:document.querySelector("#rater90"),	max:5, rating:1.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(90,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite arithmético-géométrique <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=90.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(90,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce90','imageenonce90');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce90"></a><div class=inner id="innerenonce90">Soient $a,b\in\mathbb R$ avec $a\neq 1$ et $(u_n)$ la suite définie par $u_{n+1}=au_n+b$.
+<ol class="enumeratechiffre">
+<li> Quelle est la seule limite possible $l$ de la suite $(u_n)$?
+<li> Soit $v_n=u_n-l$. Montrer que $(v_n)$ est une suite géométrique, et en déduire la nature de la suite $(u_n)$.
+<li> Application : on considère un carré de côté 1. On le partage en 9 carrés égaux, et on colorie le carré central.
+Puis, pour chaque carré non-colorié, on réitère le procédé. On note $u_n$ l'aire coloriée après l'étape $n$. Quelle est 
+la limite de $(u_n)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication90','imageindication90');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication90"></a><div class=inner id="innerindication90" style="display:none;"><ol class="enumeratechiffre">
+<li> $l$ est la solution de $l=al+b$.
+<li> Exprimer $v_{n+1}$ en fonction de $v_n$, puis discuter suivant $|a|$.
+<li> $(u_n)$ vérifie la relation de récurrence $u_{n+1}=\frac89u_n+\frac{1}9$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige90','imagecorrige90',90);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige90"></a><div class=inner id="innercorrige90" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $(u_n)$ converge vers $l$, alors $l$ est solution de $al+b=l$, et donc
+$l=\frac{b}{1-a}$.
+<li> On a 
+$$v_{n+1}=u_{n+1}-l=au_n+b-\frac{b}{1-a}=a\left(v_n+\frac b{1-a}\right)-\frac{ab}{1-a}=av_n.$$
+La suite $(v_n)$ est donc une suite géométrique de raison $a$. Si $|a|&gt;1$, $|v_n|\to +\infty$ et il en est de même
+de $(|u_n|)$ (sauf si $u_0=l$ auquel cas la suite est constante égale à $l$). Si $|a|&lt;1$, alors $(v_n)$ converge vers 0 et $(u_n)$ converge vers $l$. Enfin, si $a=-1$, $(v_n)$ oscille entre deux valeurs
+suivant que $n$ est pair ou impair,
+et $(u_n)$ aussi.
+<li> La partie coloriée à la $n+1$-ième étape correspond à la partie coloriée à la $n$-ième étape +1/9 ème de la partie non coloriée
+à la $n$-ième étape. Autrement dit,
+$$u_{n+1}=u_n+(1-u_n)/9=\frac{8u_n}{9}+\frac{1}9.$$
+Par le résultat de la question précédente, $(u_n)$ converge vers $l=\frac{1/9}{1-8/9}=1$. A la fin, l'aire de la surface coloriée converge vers l'aire
+du carré initial.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2960"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2960"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2960,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite homographique <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2960.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2960,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2960','imageenonce2960');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2960"></a><div class=inner id="innerenonce2960">Soit la suite réelle $(u_n)$ définie par 
+$$u_0=3\quad\textrm{ et }\quad u_{n+1}=\frac{4u_n-2}{u_n+1}.$$
+Pour $x\neq -1$, on pose $f(x)=\frac{4x-2}{x+1}$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier les variations de $f$ sur $[1,+\infty[$.
+<li> Démontrer que, pour tout $n\geq 0$, on a $u_n &gt; 1$.
+<li> On définit une suite $(v_n)$ à partir de $(u_n)$ en posant, pour tout $n\in\mathbb N$,
+$$v_n=\frac{u_n-2}{u_n-1}.$$
+Démontrer que $(v_n)$ est une suite géométrique, et donner l'expression de son terme général.
+<li> En déduire la valeur de $u_n$ en fonction de $n$. 
+<li> Justifier enfin que $(u_n)$ converge et déterminer sa limite.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2960','imageindication2960');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2960"></a><div class=inner id="innerindication2960" style="display:none;"><ol class="enumeratechiffre">
+<li> Dériver $f$.
+<li> L'intervalle $]1,+\infty[$ est stable par $f$.
+<li> Exprimer $v_{n+1}$ en fonction de $v_n$ en remplaçant $u_{n+1}$ par sa valeur en fonction de $u_n$.
+<li> Exprimer $u_n$ en fonction de $v_n$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2960','imagecorrige2960',2960);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2960"></a><div class=inner id="innercorrige2960" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $f$ est dérivable sur $[1,+\infty[$. Sa dérivée vérifie 
+$$f'(x)=\frac{6}{(x+1)^2}&gt;0.$$
+La fonction $f$ est donc strictement croissante sur $[1,+\infty[$. Remarquons aussi que $f(1)=1$.
+<li> L'intervalle $]1,+\infty[$ est stable par $f$, c'est-à-dire que $f(]1,+\infty[)\subset ]1,+\infty[$.
+Puisque $u_0=3$ est élément de $]1,+\infty[$, on en déduit que $u_n$ est élément
+de $]1,+\infty[$ pour tout $n\in\mathbb N$.
+<li> On a
+\begin{align*}
+v_{n+1}&=\frac{\frac{4u_n-2}{u_n+1}-2}{\frac{4u_n-2}{u_n+1}-1}\\
+&=\frac{4u_n-2-2u_n-2}{4u_n-2-u_n-1}\\
+&=\frac{2u_n-4}{3u_n-2}\\
+&=\frac 23\left(\frac{u_n-2}{u_n-1}\right)\\
+&=\frac 23 v_n.
+\end{align*}
+On en déduit que, pour tout $n\in\mathbb N^*$, 
+$$v_n=\left(\frac 23\right)^n v_0=\frac 12\left(\frac23\right)^n.$$
+<li> On a 
+\begin{align*}
+\frac{u_n-2}{u_n-1}=v_n&\iff u_n-2=u_nv_n-v_n\\
+&\iff u_n(1-v_n)=2-v_n\\
+&\iff u_n=\frac{2-v_n}{1-v_n}
+\end{align*}
+ce qui nous donne 
+$$u_n=\frac{2-\frac 12\left(\frac23\right)^n}{1-\frac 12\left(\frac23\right)^n}.$$
+Puisque $(2/3)^n$ tend vers $0$, on conclut que $(u_n)$ converge vers $2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2967"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2967"),	max:5, rating:2.4090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2967,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le flocon de Von Koch <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2967.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2967,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2967','imageenonce2967');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2967"></a><div class=inner id="innerenonce2967">On considère un triangle équilatéral $P_1$ de côté $1$. Chaque côté est ensuite divisé en trois parties égales et on construit à partir du segment situé au milieu de chaque côté un nouveau triangle équilatéral à l'extérieur de $P_1$. On obtient ainsi un polygone $P_2$. En procédant de la même façon à partir de $P_2$, on trouve un polygone $P_3$, puis en itérant le processus, on construit une suite de polygones $P_n$.
+<div class=equation><img src="bde_images/vonkoch.png" width="75%" /></div>
+ On note, pour tout entier \(n\) :
+<ul class="rien">
+<li> \(c_n\) le nombre de côtés de \(P_n\) ;
+<li> \(l_n\) la longueur d’un côté de \(P_n\) ;
+<li> \(p_n\) le périmètre de \(P_n\) ;
+<li> \(A_n\) l’aire de \(P_n\).
+</ul>
+<ol class="enumeratechiffre">
+<li> Montrer que la suite $(c_n)$ est une suite géométrique et en déduire sa valeur en fonction de $n$ pour tout entier naturel $n$ non nul.
+<li> Exprimer $(l_n)$ en fonction de $n$. En déduire que $(p_n)$ tend vers $+\infty$.
+<li>  Démontrer que \(A_1=\dfrac{\sqrt{3}}{4}\).
+<li> En remarquant que l’on construit \(P_{n+1}\) en ajoutant sur chaque côté de \(P_n\) un triangle équilatéral de côté \(l_{n+1}\) , démontrer l’égalité pour tout entier \(n\geqslant 1\) : \[A_{n+1}=A_n+\frac{3\sqrt{3}}{16}\times\left(\frac{4}{9}\right)^n.\]
+<li> En déduire l’égalité pour tout entier \(n\geqslant 1\) : \[A_n=\frac{\sqrt{3}}{4}+\frac{3\sqrt{3}}{20}\left(1-\left(\frac{4}{9} \right)^{n-1} \right).\]
+<li> Quelle est la limite de \((A_n)\), lorsque \(n\) tend vers \(+\infty\) ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2967','imageindication2967');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2967"></a><div class=inner id="innerindication2967" style="display:none;"><ol class="enumeratechiffre">
+<li> $(c_n)$ est une suite géométrique de raison 4.
+<li> $(l_n)$ est également une suite géométrique de raison $1/3$.
+<li> Calculer la hauteur de $P_1$.
+<li>
+<li> Par récurrence.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2967','imagecorrige2967',2967);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2967"></a><div class=inner id="innercorrige2967" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour passer de $P_n$ à $P_{n+1}$, on remplace un côté par $4$ côtés. On a donc $c_{n+1}=4c_n$. Puisque $c_1=3$, on obtient finalement $c_n=3\cdot 4^{n-1}$.
+<li> Par construction, on a $l_{n+1}=\frac 13 l_n$ et puisque $l_1=1$, on a finalement $l_{n}=\frac1{3^{n-1}}$. On en déduit que 
+$$p_n=c_n\times l_n= 3 \left(\frac 43\right)^{n-1}.$$
+Puisque $4/3&gt;1$, la suite $(p_n)$ tend vers $+\infty$.
+<li> La hauteur de $P_1$ est 
+$$h_1^2=1-\frac 1{2^2}=\frac 34\implies h_1=\frac{\sqrt 3}2.$$
+Donc l'aire de $P_1$ est $h_1/2$ soit $\sqrt 3/4$.
+<li> Notons $T_n$ l'aire du triangle équilatéral de côté $l_n$. Alors on a 
+$$A_{n+1}=A_n+c_n\times T_{n+1}.$$
+Or, avec le même raisonnement qu'à la question précédente, on trouve que 
+$$T_{n+1}=\frac{\sqrt 3}4 \times l_{n+1}^2=\frac{\sqrt 3}{4\cdot 9^{n}}.$$
+On en déduit
+\begin{align*}
+A_{n+1}&=A_n+\frac{3\sqrt 3}{4}\times \frac{4^{n-1}}{9^{n}}\\
+&=A_n+\frac{3\sqrt 3}{16} \times \left(\frac 49\right)^n.
+\end{align*}
+<li> On va démontrer le résultat par récurrence sur $n$. On note $\mathcal P(n)$ la propriété 
+$$"A_n=\frac{\sqrt{3}}{4}+\frac{3\sqrt{3}}{20}\left(1-\left(\frac{4}{9} \right)^{n-1} \right)".$$
+Initialisation : Puisque $A_1+\frac{\sqrt 3}4$, la propriété est vraie au rang $1$.<br>
+Hérédité : Soit $n\geq 1$ tel que $\mathcal P(n)$ est vraie, et prouvons $\mathcal P(n+1)$. Alors on a
+\begin{align*}
+A_{n+1}&=A_n+\frac{3\sqrt 3}{16} \times \left(\frac 49\right)^n\\
+&=\frac{\sqrt{3}}{4}+\frac{3\sqrt{3}}{20}\left(1-\left(\frac{4}{9} \right)^{n-1} \right)+\frac{3\sqrt 3}{16} \times \left(\frac 49\right)^n\\
+&=\frac{\sqrt{3}}{4}+\frac{3\sqrt{3}}{20}\left(1-\left(\frac{4}{9} \right)^{n-1} +\frac 54\left(\frac 49\right)^n\right).
+\end{align*}
+Or,
+\begin{align*}
+-\left(\frac{4}{9} \right)^{n-1} +\frac 54\left(\frac 49\right)^n&=
+\left(\frac{-9}{4}+\frac 54\right)\left(\frac 49\right)^n\\
+&=-\left(\frac 49\right)^n.
+\end{align*}
+Ainsi, on a bien prouvé que 
+$$A_{n+1}=\frac{\sqrt{3}}{4}+\frac{3\sqrt{3}}{20}\left(1-\left(\frac{4}{9} \right)^{n} \right)$$
+et on a prouvé que la propriété est vraie au rang $n+1$.<br>
+Conclusion : Par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$.<br>
+On pouvait aussi poser $u_n=A_{n+1}-A_n$. Alors $u_n$ est une suite géométrique de raison $4/9$. On en déduit alors la valeur de $\sum_{k=1}^{n-1}u_k$ d'où l'on tire la valeur de $A_n$ car la somme est télescopique.
+<li> Puisque $(4/9)^n$ tend vers $0$ puisque $0&lt;4/9&lt;1$, on en déduit que la suite $(A_n)$ converge vers 
+$$\frac{\sqrt 3}4+\frac{3\sqrt 3}{20}=\frac{8\sqrt 3}{20}=\frac{2\sqrt 3}5.$$
+</ol></div></div></div>
+
+<div class=titrepartie>Suites récurrentes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2938"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2938"),	max:5, rating:1.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2938,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite récurrente <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2938.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2938,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2938','imageenonce2938');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2938"></a><div class=inner id="innerenonce2938">Soit $u$ la suite définie par $u_0\in ]0,1]$ et par la relation de récurrence
+$$u_{n+1} = \frac{u_n}{2} + \frac{u_n^2}{4}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que pour tout $n\in \mathbb N$ on a $0&lt;u_n\leq 1$.
+<li> Démontrer que la suite est monotone.
+<li> En déduire qu'elle est convergente et déterminer sa limite.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2938','imageindication2938');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2938"></a><div class=inner id="innerindication2938" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2938','imagecorrige2938',2938);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2938"></a><div class=inner id="innercorrige2938" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $n\ge 0$ un entier naturel. On définit la proposition de récurrence
+\[
+H(n) \colon \text{" on a $0&lt;u_n\leq 1$"}.
+\]
+La proposition $H(0)$ est vraie car, par hypothèse, on a $u_0\in]0,1]$. Soit $n\ge0$ un entier. On suppose que $H(n)$ est vraie. Alors, on a
+\[
+u_{n + 1} = \frac{u_n}{2} + \frac{u_n^2}{4}&gt;0\quad\text{et}\quad u_{n + 1} = \frac{u_n}{2} + \frac{u_n^2}{4} &lt;\frac{1}{2} + \frac{1}{4} = \frac{3}{4}
+\]
+par hypothèse de récurrence $H(n)$. Ainsi, on a $0&lt;u_{n + 1} \le 1$ et $H(n + 1)$ est vérifiée. On a donc montré que $H(0)$ est vraie et que pour tout entier $n\ge0$, si $H(n)$ est vraie, alors $H(n + 1)$ l'est aussi. Par récurrence, on en déduit que pour tout entier $n\ge 0$, on a $u_n\in]0,1]$.
+<li> Soit $n$ un entier naturel. On a
+\[
+u_{n + 1} - u_n = \frac{u_n^2}{4} - \frac{u_n}{2} = \frac{u_n}{4}\left(u_n - 2\right)
+\]
+Or, d'après la question précédente, on a $u_n&gt;0$ et $u_n - 2 \leq -1 &lt;0$. Ainsi, on a $u_{n + 1} - u_n &lt; 0$. La suite $(u_n)_{n\ge0}$ est donc (strictement) décroissante.
+<li> D'après ce qui précède, la suite $(u_n)_{n\ge0}$ est décroissante et minorée (par exemple par $0$). Par un résultat de cours, elle est donc convergente. Notons $\ell$ sa limite : c'est un élément de $[0,1]$. Pour tout entier $n\ge0$, on a 
+\begin{equation}
+u_{n + 1} = f(u_n),\quad \text{où $f(x) = \frac{x}{2} + \frac{x^2}{4}$.}
+\end{equation}
+La fonction $f$ est continue, donc par passage à la limite $n\rightarrow+\infty$ dans l'égalité précédente, il vient
+\[
+\ell = f(\ell)\text{ c'est-à-dire }\ell = \frac{\ell}{2} + \frac{\ell^2}{4}.
+\]
+Les solutions de cette équation du second degré sont $\ell=0$ et $\ell=2$. Puisqu'on savait déjà que $\ell\in[0,1]$, on conclut $\ell=0$.
+Ainsi, la suite $(u_n)_{n\ge0}$ converge vers $0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2963"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2963"),	max:5, rating:1.2222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2963,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une racine carrée <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2963.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2963,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2963','imageenonce2963');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2963"></a><div class=inner id="innerenonce2963">Soit $(u_n)$ la suite définie par $u_0=-1$ et pour tout entier naturel $n$, $u_{n+1}=f(u_n)$ où $f$ est la fonction définie sur $[-2,+\infty[$ par $f(x)=2\sqrt{x+3}$. 
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier les variations de $f$ sur $[-2,+\infty[$.
+<li> Démontrer par récurrence que la suite $(u_n)$ est croissante, minorée par $-1$ et majorée par $6$.
+<li> Justifier que $(u_n)$ converge vers un réel $\ell$, puis déterminer $\ell$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2963','imageindication2963');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2963"></a><div class=inner id="innerindication2963" style="display:none;"><ol class="enumeratechiffre">
+<li> Dériver $f$.
+<li> Utiliser l'hypothèse de récurrence $\mathcal P(n)$ suivante :
+$$"-1\leq u_n\leq u_{n+1}\leq 6".$$
+<li> La convergence vient du caractère croissant et majoré. Ensuite, on pourra résoudre l'équation $x=2\sqrt {x+3}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2963','imagecorrige2963',2963);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2963"></a><div class=inner id="innercorrige2963" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $f$ est dérivable sur $[-2,+\infty[$ et sur cet intervalle, on a
+$$f'(x)=\frac{1}{\sqrt{x+3}}.$$
+Ainsi, $f'(x)&gt;0$ et $f$ est croissante sur $[-2,+\infty[$.
+<li> Pour $n\geq 0$, on note $\mathcal P(n)$ la propriété suivante : 
+$$"-1\leq u_n\leq u_{n+1}\leq 6".$$
+On va prouver par récurrence que $\mathcal P(n)$ est vraie pour tout entier $n\geq 0$.<br>
+Initialisation : on a $u_0=-1$ et $u_1=4$ donc $-2\leq u_0\leq u_1\leq 6$ : $\mathcal P(0)$ est vraie.<br>
+Hérédité : soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie; on va prouver que $\mathcal P(n+1)$ est vraie. On sait que 
+$$-1\leq u_n\leq u_{n+1}\leq 6.$$
+Puisque la fonction $f$ est croissante sur l'intervalle $[-2,6]$, on en déduit que
+$$f(-1)\leq f(u_n)\leq f(u_{n+1})\leq f(6).$$
+Ceci donne encore
+$$2\sqrt 2\leq u_{n+1}\leq u_{n+2}\leq 6.$$
+Puisque $-1\leq 2\sqrt 2$, la propriété est vraie au rang $n+1$. <br>
+Conclusion : par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$.
+<li> La suite $(u_n)$ est croissante et majorée par $6$. Elle converge donc vers un réel $\ell$. Remarquons que l'on sait déjà que $\ell \in [-1,6]$.
+De plus, puisque $f$ est continue sur $[-1,6]$, $\ell$ est solution de l'équation $f(\ell)=\ell$, soit $2\sqrt{\ell+3}=\ell$. Mettant au carré, ceci implique que $\ell$ est solution de $4(\ell+3)=\ell^2$, donc les solutions sont $\ell=-2$ et $\ell=6$. Puisque l'on savait déjà que $\ell\in [-1,6]$, on en déduit que $\ell=6$ : la suite $(u_n)$ converge vers $6$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3061"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3061"),	max:5, rating:1.3870967741935, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3061,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction croissante <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3061.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3061,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3061','imageenonce3061');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3061"></a><div class=inner id="innerenonce3061">Soit $f$ la fonction définie sur $[0,+\infty[$ par $f(x)=\frac x2+\sqrt{x}$ et $(u_n)$ une suite définie par $u_0\geq 0$ et $u_{n+1}=f(u_n)$.
+<ol class="enumeratechiffre">
+<li> Quelles sont les limites possibles de la suite $(u_n)$? 
+<li> Vérifier que l'intervalle $[0,4]$ est stable par $f$. 
+<li> On suppose que $u_0=1$. Démontrer que $(u_n)$ est convergente, et déterminer sa limite.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3061','imageindication3061');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3061"></a><div class=inner id="innerindication3061" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3061','imagecorrige3061',3061);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3061"></a><div class=inner id="innercorrige3061" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $f$ est continue, les limites possibles de la suite $(u_n)$ sont les solutions de l'équation $f(x)=x$. Cette équation implique, en prenant le carré, $x=x^2/4$ dont les solutions sont $0$ et $4$. On vérifie que ces solutions sont bien des solutions de l'équation initiale. 
+<li> Puisque $f$ est continue, croissante, et vérifie $f(0)=0$ et $f(4)=4$, on a $f([0,4])=[0,4]$. 
+<li> On commence par remarquer que la suite $(u_n)$ est à valeurs dans l'intervalle stable $[0,4]$. Puisque $f$ est croissante, la suite $(u_n)$ est monotone. Comme $u_1=f(u_0)=3/2&gt;u_0$, la suite $(u_n)$ est croissante. Elle est majorée et donc est convergente. Sa limite $\ell$ vérifie à la fois $\ell\geq u_0=1$ (car $(u_n)$ est croissante) et $\ell\in\{0,4\}$. Ainsi, $(u_n)$ converge vers $4$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2937"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2937"),	max:5, rating:1.8518518518519, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2937,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limite infinie <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2937.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2937,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2937','imageenonce2937');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2937"></a><div class=inner id="innerenonce2937">Soit $(u_n)$ la suite définie par $u_0=3$ et $u_{n+1}=(u_n^2+2)/3$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $u_n\geq 3$ pour tout $n\in\mathbb N$.
+<li> Démontrer que la suite $(u_n)$ est croissante.
+<li> On suppose que la suite $(u_n)$ converge. Quelles peuvent être les limites possibles de $(u_n)$?
+<li> En déduire que la suite $(u_n)$ tend vers $+\infty$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2937','imageindication2937');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2937"></a><div class=inner id="innerindication2937" style="display:none;"><ol class="enumeratechiffre">
+<li> Par récurrence.
+<li> Par récurrence.
+<li>
+<li> Une suite croissante ou bien est convergente, ou bien tend vers $+\infty$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2937','imagecorrige2937',2937);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2937"></a><div class=inner id="innercorrige2937" style="display:none;"><ol class="enumeratechiffre">
+<li> On démontre ce résultat par récurrence sur $n$. Pour $n\in\mathbb N$, on note $\mathcal P(n)$ la propriété $"u_n\geq 3"$. <br>
+Initialisation : $\mathcal P(0)$ est vraie puisque $u_0\geq 3$.<br>
+Hérédité : soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie, c'est-à-dire $u_n\geq 3$. Alors, on a $u_n^2\geq 9$ et donc 
+$$u_{n+1}=\frac{u_n^2+2}{3}\geq \frac{9+2}{3}=\frac{11}3\geq 3.$$
+Donc $\mathcal P(n+1)$ est vraie. <br>
+Conclusion : par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$.<br>
+On peut aussi proposer une rédaction sans récurrence. En effet, pour $n\in\mathbb N,$ on a 
+$$u_{n+1}-u_n=\frac{u_n^2-3u_n+2}{3}=\frac{(u_n-1)(u_n-2)}{3}.$$
+Comme on sait d'après la question précédente que $u_n\geq 3,$ on obtient $u_{n+1}-u_n\geq 0$.
+<li> Pour $n\geq 0$, on note $\mathcal P(n)$ la propriété $"u_{n+1}\geq u_n"$ et on démontre par récurrence sur $n$ que cette propriété est vraie pour tout entier $n$. <br>
+Initialisation : on a déjà vu que $u_1=11/3\geq u_0=3$, et donc $\mathcal P(0)$ est vraie.<br>
+Hérédité : soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie, et prouvons $\mathcal P(n+1)$. On a donc $u_{n+1}\geq u_n$. De plus $u_n\geq 0$ (et même $u_n\geq 3$). Puisque la fonction $x\mapsto x^2$ est croissante sur $[0,+\infty[$, on en déduit que 
+$$u_{n+1}^2\geq u_n^2\implies \frac{u_{n+1}^2+2}3\geq \frac{u_n^2+2}3.$$
+Autrement dit, on a prouvé que $u_{n+2}\geq u_{n+1}$ et donc que $\mathcal P(n+1)$ est vraie.<br>
+Conclusion : par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$. Autrement dit, $u_{n+1}\geq u_n$ pour tout entier $n$ et la suite $(u_n)$ est croissante.
+<li> Si la suite $(u_n)$ est convergente de limite $\ell$, alors la suite $(u_{n+1})$ converge aussi vers $\ell$ et en passant à la limite dans la relation de récurrence $u_{n+1}=\frac{u_n^2+2}3$, on trouve
+$$\ell=\frac{\ell^2+2}3.$$
+La résolution de cette équation donne $\ell=1$ ou $\ell=2$.
+<li> Supposons que la suite $(u_n)$ converge vers $\ell$. Alors, d'après la question précédente, on a $\ell\in\{1,2\}$. Or, puisque $u_n\geq 3$ pour tout $n\in\mathbb N$, on a aussi $\ell\geq 3$. C'est une contradiction et donc la suite $(u_n)$ ne converge pas. Comme il s'agit d'une suite croissante, elle tend vers $+\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater86"></span><script>var myRating = raterJs( { element:document.querySelector("#rater86"),	max:5, rating:1.2380952380952, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(86,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction croissante - avec indications <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=86.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(86,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce86','imageenonce86');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce86"></a><div class=inner id="innerenonce86">On considère la suite récurrente $u_{n+1}=f(u_n)$ avec $f(x)=x^2+\frac{3}{16}$ et $u_0\geq 0$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier $f$ et le signe de $f(x)-x$. Quelles sont les limites possible de $(u_n)$?
+<li> On suppose $u_0\in[0,1/4]$. Montrer que $u_n\in[0,1/4]$ pour tout $n$,
+puis que $(u_n)$ est croissante.
+Quelle est la nature de $(u_n)$ (si elle est convergente, préciser sa limite)?
+<li> On suppose $u_0\in[1/4;3/4]$. Montrer que $(u_n)$ est décroissante et minorée.
+Quelle est la nature de $(u_n)$ (si elle est convergente, préciser sa limite)?
+<li> On suppose $u_0&gt;3/4$. Montrer que $(u_n)$ est croissante.
+Quelle est la nature de $(u_n)$ (si elle est convergente, préciser sa limite)?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication86','imageindication86');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication86"></a><div class=inner id="innerindication86" style="display:none;"><ol class="enumeratechiffre">
+<li> Les limites possible sont les solutions de $f(l)=l$.
+<li> Remarquer que $f([0,1/4])\subset [0,1/4]$, puis prouver que $0\leq u_n\leq 1/4$  par récurrence.
+Le fait que $(u_n)$ est croissante peut se démontrer par récurrence ou plus facilement en utilisant
+le signe de $f(x)-x$.
+<li> Raisonnement très analogue au précédent en remplaçant $[0,1/4]$ par $[1/4,3/4]$. On prendra
+garde à la valeur de départ $u_0=3/4$.
+<li> Si la suite $(u_n)$ était convergente vers le réel $l$, quelle inégalité devrait vérifier $l$?
+Conclure.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige86','imagecorrige86',86);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige86"></a><div class=inner id="innercorrige86" style="display:none;"><ol class="enumeratechiffre">
+<li> Clairement, $f$ est croissante sur $[0,+\infty[$, elle vaut $3/16$ en 0 et a pour limite $+\infty$
+en $+\infty$. En calculant le discriminant du polynôme de degré 2 $f(x)-x$, on obtient qu'il admet deux racines qui sont
+$1/4$ et $3/4$. Autrement dit, on a 
+$f(x)-x=(x-1/4)(x-3/4)$
+ce qui implique $f(x)\geq x$ si $x\leq 1/4$ ou $x\geq 3/4$, et $f(x)\leq x$ si $x\in[1/4,3/4]$. Enfin, puisque $f$ est continue,
+les limites possibles de $(u_n)$ vérifient l'équation $f(l)=l$. Ce sont donc $1/4$ et $3/4$.
+<li> D'après le tableau de variations de $f$, l'intervalle $[0,1/4]$ est stable par $f$. On en déduit par une récurrence
+immédiate que $u_n\in[0,1/4]$ pour tout entier $n$. De plus, on sait que $f(x)\geq x$ pour $x\in[0,1/4]$. Appliquant
+cette inégalité à $x=u_n$, on trouve que $u_{n+1}\geq u_n$ pour tout $n$. La suite $(u_n)$ est croissante, majorée.
+Elle converge, et sa limite est élément de $\{1/4,3/4\}$. De plus, puisque $u_n\in[0,1/4]$ pour tout $n$, la limite est aussi 
+élément de $[0,1/4]$. La suite $(u_n)$ converge donc vers 1/4.
+<li> On raisonne de façon analogue. L'intervalle $[1/4,3/4]$ est stable par $f$, et donc $u_n\in[1/4,3/4]$ pour tout $n$.
+Puisque $f(x)\leq x$ sur $[1/4,3/4]$, on sait que $u_{n+1}=f(u_n)\leq u_n$ pour tout $n$. La suite $(u_n)$ est donc décroissante
+et minorée, donc elle converge. Pour déterminer sa limite, il faut être un peu plus prudent. D'une part, si $u_0=3/4$, alors
+la suite est constante égale à $3/4$. D'autre part, si $u_0&lt;3/4$, alors pour tout $n$ on a 
+$$u_n\leq u_0.$$
+Si on note $l$ la limite de $(u_n)$, le passage à la limite dans l'inégalité précédente donne 
+$$l\leq u_0&lt;3/4.$$
+Puisque $l=1/4$ ou $l=3/4$, on en déduit que $(u_n)$ converge vers 1/4 si $u_0\in[1/4,3/4[$. 
+<li> De même, l'intervalle $]3/4,+\infty[$ est stable par $f$. Ainsi, on prouve que $u_n\in]3/4,+\infty[$
+pour tout entier $n$. De plus, puisque $f(x)\geq x$ sur $]3/4,+\infty[$, on en déduit que $(u_n)$ est croissante.
+Si elle était majorée, elle serait convergente vers un certain réel $l$. Or, ce réel $l$ devrait vérifier
+$$3/4&lt;u_0\leq l.$$
+C'est impossible puisque $l=1/4$ ou $l=3/4$. Ainsi, $(u_n)$ est croissante, non majorée, et donc $(u_n)$ diverge vers $+\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2594"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2594"),	max:5, rating:1.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2594,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite récurrente et fonction logarithme <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2594.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2594,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2594','imageenonce2594');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2594"></a><div class=inner id="innerenonce2594">On note $f$ la fonction définie sur $]0,+\infty[$ par $f(x)=1+\ln x$. Soit $u$ la suite définie par son premier terme $u_0\geq 1$ et par la relation de récurrence $u_{n+1}=f(u_n)$.
+<ol class="enumeratechiffre">
+<li> Démontrer que la suite est bien définie et qu'elle est minorée par 1.
+<li> &Eacute;tudier le signe de $f(x)-x$ sur $[1,+\infty[$.
+<li> &Eacute;tudier la monotonie de $u$.
+<li> En déduire que $(u_n)$ est convergente, et donner sa limite.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2594','imageindication2594');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2594"></a><div class=inner id="innerindication2594" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> &Eacute;tude de fonction.
+<li> Conséquence de la question précédente.
+<li> Une suite décroissante et minorée...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2594','imagecorrige2594',2594);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2594"></a><div class=inner id="innercorrige2594" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrons par récurrence sur $n\in\mathbb N$ la propriété $\mathcal P(n)$ suivante : "$u_n\geq 1$".<br>
+Initialisation : on a bien $u_0\geq 1$ et donc la propriété est vraie pour $n=0$.<br>
+Hérédité : soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie, c'est-à-dire tel que $u_n\geq 1$. On a alors, puisque la fonction logarithme est croissante, $\ln(u_n)\geq \ln(1)=0$, puis $u_{n+1}=1+\ln(u_n)\geq 1+0=1$. Ainsi, $\mathcal P(n+1)$ est vraie.<br>
+Conclusion : par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$.
+<li> Posons $g(x)=f(x)-x=1+\ln(x)-x$. La fonction $g$ est dérivable sur $[1,+\infty[$, et sa dérivée est donnée par $g'(x)=\frac 1x-1$. Pour $x\geq 1$, on a $\frac1x\leq 1$ et donc $g'(x)\leq 0$, et même on a $g'(x)&lt;0$ pour $x&gt;1$. Ainsi, $g$ est strictement décroissante sur l'intervalle $[1,+\infty[$. Puisque $g(1)=1+\ln(1)-1=0$, on en déduit que $g(x)&lt;0$ pour tout $x&gt;1$. Ainsi, on a $f(x)\leq x$ pour tout $x\geq 1$, et même $f(x)&lt;x$ pour tout $x&gt;1$.
+<li> Soit $n\in\mathbb N$. Alors, puisque $u_n\geq 1$, on a d'après la question précédente $u_{n+1}=f(u_n)\leq u_n$ : la suite $(u_n)$ est décroissante.
+<li> La suite est décroissante et minorée par $1.$ Elle est donc convergente. Soit $\ell$ sa limite. Alors $\ell\geq 1$ puisque $u_n\geq 1$ pour tout entier naturel $n.$ De plus, la fonction $f$ est continue en $\ell$ et donc $\ell$ doit vérifier l'équation $\ell=f(\ell).$ Or, on sait que $x&lt;f(x)$ pour $x&gt;1$. On en déduit que $\ell=1$ : la suite converge vers $1.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater87"></span><script>var myRating = raterJs( { element:document.querySelector("#rater87"),	max:5, rating:1.7017543859649, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(87,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction décroissante - avec indications <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=87.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(87,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce87','imageenonce87');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce87"></a><div class=inner id="innerenonce87">Soit $f:]0,+\infty[\to]0,+\infty[$ définie par $f(x)=1+\frac{2}{x}$. On considère la suite récurrente
+$(u_n)$ vérifiant $u_{n+1}=f(u_n)$ et $u_0=1$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier le sens de variation de $f$ sur $[1,3]$ et montrer que l'intervalle $[1,3]$ est stable par $f$. Que peut-on en déduire sur $(u_n)$? 
+<li> Soit $(v_n)$ et $(w_n)$ les suites définies par $v_{n}=u_{2n}$ et $w_n=u_{2n+1}$.
+Montrer que $(v_n)$ est croissante.
+<li> Démontrer que $(w_n)$ est décroissante. 
+<li> En déduire que $(v_n)$ et $(w_n)$ sont convergentes
+et déterminer leur limite respective.
+<li> Quelle est la nature de la suite $(u_n)$?
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication87','imageindication87');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication87"></a><div class=inner id="innerindication87" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Poser $g=f\circ f$. Remarquer que $g$ est croissante et que $v_{n+1}=g(v_n)$.
+<li> $w_n=f(v_n)$.
+<li> Que peut-on dire d'une suite croissante majorée? Etudier l'équation aux limites possibles.
+<li> $(u_{2n})$ et $(u_{2n+1})$ convergent vers la même limite.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige87','imagecorrige87',87);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige87"></a><div class=inner id="innercorrige87" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $x\mapsto 2/x$ est décroissante, la fonction $f$ est décroissante sur $[1,3]$.
+De plus, $f(1)=3$ et $f(3)=5/3&gt;1$. L'intervalle $[1,3]$ est bien stable par $f$, ce qui entraîne
+en particulier que la suite $(u_n)$ est bien définie et que $u_n\in[1,3]$ pour tout entier $n$.
+<li> Puisque $v_{n+1}=u_{2n+2}=f\circ f(u_{2n})$, on pose $g=f\circ f$ qui laisse bien sûr stable
+l'intervalle $[1,3]$. Puisque la composée de deux fonctions décroissantes est une fonction croissante,
+$g$ est croissante sur $[1,3]$. De plus, on a 
+$$u_1=3,\quad u_2=5/3&gt;u_0$$
+et donc $v_1\geq v_0$. On prouve alors par récurrence sur $n$ que la suite $(v_n)$ est croissante,
+ie que pour tout $n$ on a $v_{n+1}\geq v_n$. C'est vrai pour $n=0$ et si c'est vrai au rang $n$, il suffit d'utiliser
+la croissance de $g$ sur $[1,3]$ pour démontrer que
+$$1\leq v_n\leq v_{n+1}\leq 3\implies v_{n+1}=g(v_n)\leq g(v_{n+1})=v_{n+2}.$$
+<li> Remarquons ensuite que $w_n=f(v_n)$. Ainsi, de la décroissance de $f$ sur $[1,3]$ et de l'inégalité
+$v_n\leq v_{n+1}$, on déduit l'inégalité
+$$w_{n}=f(v_n)\geq f(v_{n+1})=w_{n+1}.$$
+Autrement dit, $(w_n)$ est décroissante.
+<li> Puisque $(v_n)$ est croissante et majorée et que $(w_n)$ est décroissante et minorée, on en déduit
+que ces deux suites sont convergentes. Leur limite respective est un élément de $[1,3]$ vérifiant l'équation
+$g(x)=x$. Or, 
+$$g(x)=1+\frac{2}{1+\frac 2x}=\frac{3x+2}{x+2}.$$
+L'équation $g(x)=x$ est donc équivalente à
+$$x^2-x-2=0\iff x=2\textrm{ ou }x=-1.$$
+La seule solution dans $[1,3]$ est 2, donc les deux suites convergent vers la même limite, à savoir 2.
+<li> Puisque $(u_{2n})$ et $(u_{2n+1})$ convergent toutes deux vers 2, on en déduit que $(u_n)$ est elle aussi
+convergente vers 2.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3062"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3062"),	max:5, rating:1.4772727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3062,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction décroissante et deux suites extraites qui ne convergent pas vers la même limite <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3062.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3062,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3062','imageenonce3062');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3062"></a><div class=inner id="innerenonce3062">Soit $f(x)=(1-x)^2$ et la suite $(u_n)$ définie par $u_0=1/2$ et $u_{n+1}=f(u_n)$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $[0,1]$ est stable par $f$. Quel est le sens de variation de $f$ sur $[0,1]$?
+<li> On pose $g=f\circ f$. Quel est le sens de variation de $g$ sur $[0,1]$?
+<li> Résoudre l'équation $g(x)=x$.
+<li> Pour $n\geq 0$, on pose $v_n=u_{2n}$ et $w_n=u_{2n+1}$, de sorte que $v_{n+1}=g(v_n)$ et $w_{n+1}=g(w_n)$. Démontrer que $(v_n)$ est croissante, et déterminer sa limite. Démontrer que $(w_n)$ est décroissante, et déterminer sa limite.
+<li> Que peut-on en déduire sur la suite $(u_n)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3062','imageindication3062');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3062"></a><div class=inner id="innerindication3062" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3062','imagecorrige3062',3062);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3062"></a><div class=inner id="innercorrige3062" style="display:none;"><ol class="enumeratechiffre">
+<li> On vérifie facilement que $f$ est décroissante sur $[0,1]$. Puisque $f(1)=0$ et que $f(0)=1$, on a $f([0,1])\subset [0,1]$ et $[0,1]$ est un intervalle stable par $f$. 
+<li> On commence par remarquer que $[0,1]$ est lui aussi stable par $g=f\circ f$. La composée de deux fonctions décroissantes étant une fonction croissante, $g$ est croissante.
+<li> On commence par calculer $g$ : pour tout $x\in\mathbb R$, on a
+$$g(x)=(1-(1-x)^2)^2=x^4-4x^3+4x^2.$$
+L'équation $g(x)=x$ est donc équivalente à 
+$$x^4-4x^3+4x^2-x=0.$$
+$0$ et $1$ sont des solutions évidentes de cette équation. On peut donc factoriser par $x(x-1)$ et on trouve
+$$x(x-1)(x^2-3x+1)=0.$$
+En calculant le discriminant de $x^2-3x+1$, on trouve que l'équation $g(x)=x$ admet 4 solutions qui sont 
+$$x_0=0,\ x_1=1,\ x_2=\frac{3+\sqrt 5}2&gt;1,\ x_3=\frac{3-\sqrt 5}2\simeq 0,\!38.$$
+<li> La fonction $g$ est croissante sur $[0,1],$ $[0,1]$ est stable par $g$ et $v_0\in[0,1]$ donc $(v_n)$ est monotone. De plus, on a $v_1=g(v_0)=9/16&gt;1/2$. La suite $(v_n)$ est croissante. Elle est majorée par $1$. Elle est donc convergente, et sa limite $\ell$ appartient à $\{x_0,x_1,x_2,x_3\}$ et à $[1/2,1]$. La seule possibilité est $\ell=1$ et donc $(v_n)$ converge vers $1$. Puisque $w_n=f(v_n)$ la suite $(w_n)$ converge vers $f(1)=0$. 
+<li> Les suites extraites $(u_{2n})$ et $(u_{2n+1})$ convergent vers deux limites différentes : la suite $(u_n)$ diverge.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater88"></span><script>var myRating = raterJs( { element:document.querySelector("#rater88"),	max:5, rating:1.4736842105263, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(88,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction croissante - sans indication <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=88.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(88,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce88','imageenonce88');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce88"></a><div class=inner id="innerenonce88">&Eacute;tudier les suites récurrentes suivantes :
+<ol class="enumeratechiffre">
+<li> $u_0&gt;0$ et $u_{n+1}=u_n+\frac{1}{u_n}$;
+<li>  $u_0=1$ et $u_{n+1}=\sqrt{1+u_n}$. Que se passe-t-il si on choisit $u_0=2$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication88','imageindication88');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication88"></a><div class=inner id="innerindication88" style="display:none;"><ol class="enumeratechiffre">
+<li> Montrer que $u_1\geq 2$, puis que la suite $(u_n)$ est croissante. Peut-elle être majorée?
+<li> Introduire la fonction $f(x)=\sqrt{1+x}$, etudier ses variations, chercher
+les solutions de $f(x)=x$, en déduire un intervalle stable pour $f$. Appliquer cela à l'étude de $(u_n)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige88','imagecorrige88',88);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige88"></a><div class=inner id="innercorrige88" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $f(x)=x+\frac{1}{x}$. Il est facile de voir que $f$ est décroissante sur $]0,1[$, puis croissante sur $[1,+\infty[$, avec
+$f([1,+\infty[)=[2,+\infty[$. D'autre part, $f(]0,1[)=([2,+\infty[)$. Autrement dit, quelle que soit la valeur de départ $u_0&gt;0$, on a
+toujours $u_1\geq 2$, et comme cet intervalle est stable par $f$, $u_n\geq 2$ pour tout $n\geq 1$. Maintenant, $f(x)\geq x$
+pour $x\geq 1$, ce qui prouve que $u_{n+1}\geq u_n$ pour $n\geq 1$, donc que la suite $(u_n)$ est croissante. Elle ne peut pas être majorée 
+car sinon elle serait convergente, et sa limite devrait vérifier $\ell=\ell+\frac1{\ell}$, équation qui n'a pas de solutions dans $[0,+\infty[$.
+On en déduit que $(u_n)$ diverge vers $+\infty$.
+<li> On pose, pour $x\geq 0$, $f(x)=\sqrt{1+x}$. $f$ est une fonction croissante sur $\mathbb R_+$, qui
+vérifie $f([0,+\infty[)=[1,+\infty[$. De plus, l'équation $$f(x)=x\implies x+1=x^2$$ admet une unique racine
+dans $[1,+\infty[$ qui est $\alpha:=\frac{1+\sqrt 5}{2}$. L'étude du signe de $f(x)-x$ montre que $f(x)\geq x$
+si $x\in[0,\alpha]$ et $f(x)\leq x$ si $x\geq \alpha$. Ainsi, l'intervalle $[0,\alpha]$ est stable par $f$.
+Puisque $u_0\in[0,\alpha]$, ceci implique que $(u_n)$ est bien définie et que $u_n\in[0,\alpha]$ pour tout $n$. De plus, puisque $f(x)\geq x$
+dans l'intervalle $[0,\alpha]$, $u_{n+1}=f(u_n)\geq u_n$ et donc la suite $(u_n)$ est croissante. Elle est majorée,
+donc convergente. Sa limite doit vérifier l'équation $f(x)=x$ et appartenir à $[0,\alpha]$. $(u_n)$ converge
+donc vers $\alpha=\frac{1+\sqrt 5}{2}$.<br>
+Dans le cas $u_0=2$, on peut refaire la même étude en remplaçant l'intervalle $[0,\alpha]$ par l'intervalle $[\alpha,+\infty[$.
+Puisque $f(x)\leq x$ sur cet intervalle, on obtient que $(u_n)$ est cette fois décroissante. Elle va donc converger (car elle 
+est aussi minorée), toujours vers $\alpha$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater89"></span><script>var myRating = raterJs( { element:document.querySelector("#rater89"),	max:5, rating:2.1590909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(89,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions décroissantes - sans indications <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=89.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(89,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce89','imageenonce89');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce89"></a><div class=inner id="innerenonce89">&Eacute;tudier les suites récurrentes suivantes :
+<ol class="enumeratechiffre">
+<li> $u_0=1/2$ et $u_{n+1}=(1-u_n)^2$.
+<li> $u_0=1/2$ et $u_{n+1}=\sqrt{1-u_n}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication89','imageindication89');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication89"></a><div class=inner id="innerindication89" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquer que $[0,1]$ est un intervalle stable par $f(x)=(1-x)^2$
+sur lequel la fonction est décroissante. Etudier les suites $v_n=u_{2n}$ 
+et $w_n=u_{2n+1}$.
+<li> Remarquer que $[0,1]$ est un intervalle stable par $f(x)=\sqrt{1-x}$
+sur lequel la fonction est décroissante. Etudier les suites $v_n=u_{2n}$ 
+et $w_n=u_{2n+1}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige89','imagecorrige89',89);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige89"></a><div class=inner id="innercorrige89" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $f(x)=(1-x)^2$. Une étude rapide de la fonction $f$ montre qu'elle est 
+décroissante sur $[0,1]$, avec $f(1)=0$ et $f(0)=1$. En particulier, $[0,1]$
+est un intervalle stable par $f$, et $u_0\in[0,1]$. Par récurrence immédiate,
+$u_n\in[0,1]$ pour tout $n$.<br>
+La décroissance de $f$ nous invite à étudier les suites $(v_n)$ et $(w_n)$
+définies par $v_n=u_{2n}$ et $w_n=u_{2n+1}$. En posant $g=f\circ f$, on a
+$v_{n+1}=g(v_n)$ et $w_{n+1}=g(w_n)$. De plus, la fonction $g$, définie
+comme composée de deux fonctions décroissantes, est une fonction croissante.<br>
+Calculons les premiers termes de $(u_n)$ :
+$$u_0=1/2,\ u_1=1/4,\ u_2=9/16,\dots$$
+En particulier, $v_0=1/2\leq v_1=9/16$. Puisque $g$ est croissante,
+on prouve par une récurrence immédiate que la suite $(v_n)$ est croissante.
+De plus, elle est majorée par 1, donc elle est convergente.<br>
+Puisque $g$ est continue, les limites possible de $(v_n)$ vérifient
+l'équation
+$$l=g(l)\iff l=(1-(1-l)^2)^2\iff l^4-4l^3+4l^2-l=0.$$
+0 et $1$ sont racines évidentes, on peut factoriser par $l(l-1)$ et on trouve :
+$$l(l-1)(l^2-3l+1)=0.$$
+On calcule le discriminant du polynôme de second degré :
+$$\Delta=9-4=5.$$
+Les solutions de l'équation $g(l)=l$ sont donc
+\begin{eqnarray*}
+l_0&=&0\\
+l_1&=&1\\
+l_2&=&\frac{3+\sqrt{5}}{2}&gt;1\\
+l_3&=&\frac{3-\sqrt{5}}{2}\simeq 0,38.
+\end{eqnarray*}
+Maintenant, puisque $v_0\leq v_n\leq 1$, la limite $l$ de la suite
+$(v_n)$ vérifie $1/2\leq l\leq 1$. Parmi les solutions trouvées précédemment,
+seule $l_1=1$ convient : $(v_n)$ converge vers 1.<br>
+De même, on étudie $(w_n)$ en remarquant que $w_1\leq w_0$ (par exemple, 
+en appliquant $f$ à l'inégalité $v_1\geq v_0$). On prouve de la même façon
+que $(w_n)$ est décroissante et que sa limite $l'$ vérifie $0\leq l'\leq 1/4$.
+Comme $l'$ est aussi un des $l_i$, $(w_n)$ converge vers 0.
+Ainsi, on a prouvé que $(u_n)$ n'était pas convergente, et que (en langage plus
+sophistiqué), elle admettait exactement deux valeurs d'adhérence qui sont $0$ et $1$.
+<li> Posons $f(x)=\sqrt{1-x}$. $f$ est décroissante sur $]0,1[$, avec
+$f(1)=0$ et $f(0)=1$. Ainsi, l'intervalle $[0,1]$ est stable par $f$, donc
+$(u_n)$ est bien définie avec $u_n\in[0,1]$ pour tout $n\geq 0$. De plus,
+l'étude du signe de $f(x)-x$ conduit, en utilisant la quantité conjuguée, à
+$$f(x)-x=\frac{1-x-x^2}{\sqrt{1-x}+x}.$$
+Or, $1-x-x^2=-(x-\alpha)(x-\beta)$ avec
+$$\alpha=-\frac{1+\sqrt 5}{2}&lt;0\textrm{ et }\beta=\frac{\sqrt 5-1}{2}\in[0,1].$$
+Puisque
+$f$ est décroissante, on est invité à poser $v_n=u_{2n}$ et $w_n=u_{2n+1}$,
+et $g=f\circ f$, de sorte que $g$ est croissante et $v_{n+1}=g(v_n)$,
+$w_{n+1}=g(w_n)$. Puisque $g$ est croissante, il est facile de prouver que les suites
+$(v_n)$ et $(w_n)$ vont être monotones. Comme $v_1\simeq 0,53&gt;v_0$, on voit que $(v_n)$ est
+croissante. En outre, puisque $v_0\leq\beta$ et que $g(\beta)=\beta$, on prouve par
+récurrence sur $n$ que $v_n\in[v_0,\beta]$. La suite $(v_n)$ est donc convergente, 
+de limite $a$ appartenant à $[1/2,\beta]$. <br>
+Pour la suite $(w_n)$, on sait immédiatement qu'elle est décroissante, car $w_n=f(v_n)$,
+$(v_n)$ est croissante et $f$ est décroissante. De plus, $w_0\simeq 0,7&gt;\beta$. Comme pour la suite
+$(v_n)$ on prouve par récurrence que $w_n\in[\beta,w_0]$. Ainsi, la suite $(w_n)$ converge vers une limite $b$
+appartenant à $[\beta,w_0]$.<br>
+On va maintenant prouver que $a=b=\beta$. Pour cela, on résout l'équation $g(x)=x$. Elle entraîne, en mettant au carré,
+$$1-\sqrt{1-x}=x^2\implies (1-x^2)^2=(1-x).$$
+Cette dernière équation a pour solution $1$, ou alors les réels $x$ tels que 
+$$(1-x)(1+x)^2=1\iff x-x^2-x^3=0.$$
+Les solutions de cette dernière équation sont $0,\alpha,\beta$ et donc les points fixes de $g$ sont parmi $0,\alpha,\beta$ et $1$. Or, seul $\beta$ convient puisque
+c'est le seul à appartenir aux intervalles $[1/2,\beta]$ et $[\beta,w_0]$. Donc $a=b=\beta$ et
+la suite $(u_n)$ converge vers $\beta$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2689"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2689"),	max:5, rating:2.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2689,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suivant la valeur initiale <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2689.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2689,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2689','imageenonce2689');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2689"></a><div class=inner id="innerenonce2689">Le but de l'exercice est d'étudier, pour certaines valeurs de $u_0$, le comportement de la suite récurrente $(u_n)$ vérifiant la relation $u_{n+1}=f(u_n)$, avec $f(x)=x^2-1$. 
+<ol class="enumeratechiffre">
+<li> Quelles sont les limites possibles de la suite $(u_n)$? 
+<li> On suppose pour commencer que $u_0&gt;(1+\sqrt 5)/2$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\in\mathbb N$, on a $u_n&gt;(1+\sqrt 5)/2$. 
+<li> Démontrer que la suite $(u_n)$ est croissante.
+<li> Quelle est la nature de la suite $(u_n)$?
+<li> &Eacute;crire une fonction Python $\verb+depasse(M,u0)+$ qui donne le premier entier $n$ tel que $u_n\geq M$ pour une valeur de $u_0$ donnée.
+</ol>
+<li> On suppose désormais que $u_0\in [-1,0]$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\in\mathbb N$, $u_n\in [-1,0]$.
+<li> On suppose plus particulièrement que $u_0\in \left [ -1,\frac{1-\sqrt 5}2\right[$ et on pose, pour tout $n\in\mathbb N$, $v_n=u_{2n}$ et $w_n=u_{2n+1}$. On définit aussi la fonction $g(x)=f\circ f(x)$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $g$ est croissante sur $[-1,0]$. 
+<li> &Eacute;tudier le signe de $g(x)-x$.
+<li> En déduire que la suite $(v_n)$ est décroissante. En déduire que $(v_n)$ est convergente, et déterminer sa limite. 
+<li> Démontrer que $(w_n)$ est convergente, et déterminer sa limite.
+<li> Que dire de la suite $(u_n)$?
+</ol>
+<li> On suppose que  $u_0\in \left ] \frac{1-\sqrt 5}2,0\right[$. Quelle est la nature de la suite $(u_n)$? (on pourra déterminer un intervalle contenant $u_1$).
+</ol>
+<li> On suppose que $u_0\in ]0,1[$. Quelle est la nature de la suite $(u_n)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2689','imageindication2689');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2689"></a><div class=inner id="innerindication2689" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> 
+<ol class="enumeratechiffre">
+<li> 
+<li> Résoudre l'inéquation $f(x)\geq x$.
+<li> Elle tend vers $+\infty$.
+<li> 
+</ol>
+<li>
+<ol class="enumeratechiffre">
+<li> 
+<li> 
+<ol class="enumeratechiffre">
+<li> Composée de deux fonctions décroissantes.
+<li> Il y a des racines évidentes, et aussi les racines de $f(x)-x=0$.
+<li> 
+<li> 
+<li> 
+</ol>
+<li> 
+</ol>
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2689','imagecorrige2689',2689);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2689"></a><div class=inner id="innercorrige2689" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $f$ est continue sur $\mathbb R$. Si $(u_n)$ converge vers $\ell$, alors $l=f(\ell)$. Or, l'équation $f(\ell)=\ell$ est équivalente à l'équation $\ell^2-\ell-1=0$, dont les solutions sont $\frac{1\pm\sqrt 5}2$.
+<li> 
+<ol class="enumeratechiffre">
+<li> La fonction $f$ est strictement croissante sur $[0,+\infty[$ (même sens de variation que $x\mapsto x^2$). Puisque $f\left(\frac{1+\sqrt 5}2\right)=\frac{1+\sqrt 5}2$, l'intervalle $I=\left]\frac{1+\sqrt 5}2,+\infty\right[$ est stable par $f$. Si $u_0\in I$, alors $u_n\in I$ pour tout $n\geq 1$.
+<li> Rappelons que $f(x)-x$ se factorise en 
+$$f(x)-x=\left(x-\frac{1-\sqrt 5}2\right)\left(x-\frac{1+\sqrt 5}2\right).$$
+Ainsi, sur l'intervalle $I$ précédent, $f(x)&gt;x$. Puisque $u_n\in I$ pour tout entier $n$, on a $u_{n+1}=f(u_n)&gt;u_n$ et la suite $(u_n)$ est (strictement) croissante.
+<li> La suite $(u_n)$ est croissante. Donc, ou bien elle converge vers un réel $\ell$, ou bien elle tend vers $+\infty$. Si elle tend vers $\ell$, alors puisque $(u_n)$ est croissante, on a $\ell\geq u_0$. Or $u_0$ est strictement plus grand que les limites possibles de la suite $(u_n)$ identifiées à la première question. Donc $(u_n)$ ne peut avoir une limite finie, et $(u_n)$ tend vers $+\infty$.
+<li> 
+<pre><code class="language-python">def depasse(M,u0):
+  while (u0&lt;M):
+    u0=u0*u0-1
+  return u0
+</code></pre>
+</ol>
+<li> 
+<ol class="enumeratechiffre">
+<li> $f$ est décroissante sur l'intervalle $[-1,0]$. Puisqu'en outre $f$ est continue, on a $f([-1,0])=[f(0),f(-1)]=[-1,0]$. Ainsi, l'intervalle $[-1,0]$ est stable par $f$ et si $u_0\in [-1,0]$, alors $u_n\in[-1,0]$ pour tout $n\geq 1$.
+<li> 
+<ol class="enumeratechiffre">
+<li> La fonction $f$ est décroissante sur $[-1,0]$ et $f([-1,0])=[-1,0]$. La fonction $g$ est alors croissante, comme composée de deux fonctions décroissantes.
+<li> Clairement, $g(x)-x$ est un polynôme unitaire de degré 4. De plus, $g(0)=f\circ f(0)=f(-1)=0$, $g(-1)=f\circ f(-1)=f(0)=-1$, $g\left(\frac{1+\sqrt 5}2\right)=f\circ f\left(\frac{1+\sqrt 5}2\right)=f\left(\frac{1+\sqrt 5}2\right)=\frac{1+\sqrt 5}2$ et $g\left(\frac{1-\sqrt 5}2\right)=f\circ f\left(\frac{1-\sqrt 5}2\right)=f\left(\frac{1-\sqrt 5}2\right)=\frac{1-\sqrt 5}2$. On vient donc de trouver quatre solutions à l'équation $g(x)-x=0$. Autrement dit, on vient de prouver que $g(x)-x$ se factorise en 
+$$g(x)-x=x(x+1)\left(x-\frac{1-\sqrt 5}2\right)\left(x-\frac{1+\sqrt 5}2\right).$$
+Ainsi, $g(x)-x$ est 
+<ul class="rien">
+<li> positif sur $]-\infty,-1[$;
+<li> négatif sur $\left]-1,\frac{1-\sqrt 5}2\right[$;
+<li> positif sur $\left]\frac{1-\sqrt 5}2,0\right[$;
+<li> négatif sur $\left]0,\frac{1+\sqrt 5}2\right[$;
+<li> positif sur $\left]\frac{1+\sqrt 5}2,+\infty\right[$.
+</ul>
+<li> Puisque $g$ est croissante sur $J=\left[-1,\frac{1-\sqrt 5}2\right[$,
+on a 
+$$g(J)=\left[g(-1),g\left(\frac{1-\sqrt 5}2\right)\right[=J.$$
+Ainsi, la suite $(v_n)$ qui vérifie $v_{n+1}=g(v_n)$ vérifie $v_n\in J$ pour tout $n\geq 0$ puisque $v_0\in J$. De plus, puisque $g(x)\leq x$ pour tout $x\in J$, $(v_n)$ est décroissante. Elle est minorée par $-1$. Elle est donc convergente. Sa limite est dans $\left[-1,v_0\right[$. C'est aussi une solution de l'équation $g(x)=x$. La seule solution vivant dans l'intervalle donné est $-1$. La suite $(v_n)$ converge donc vers $-1$.
+<li> On a $w_n=f(v_n)$. Puisque $(v_n)$ converge vers $-1$ et que $f$ est continue, $(w_n)$ converge vers $f(-1)=0$. 
+<li> La suite $(u_n)$ admet deux suites extraites, à savoir $(u_{2n})$ et $(u_{2n+1})$, convergeant vers des limites différentes : elle est donc divergente.
+</ol>
+<li> Si $u_0\in \left]\frac{1-\sqrt 5}2,0\right[$, alors $u_1\in f\left(\left]\frac{1-\sqrt 5}2,0\right[\right)=\left]-1,\frac{1-\sqrt 5}2\right[$. On est donc ramené au cas précédent, avec décalage d'un rang. La suite $(u_n)$ est divergente.
+</ol>
+<li> Si $u_0\in ]0,1[$, alors $u_1\in ]-1,0[$ et on est ramené là aussi au cas précédent : la suite $(u_n)$ est divergente.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater3536"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3536"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3536,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites récurrentes et équation fonctionnelle <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3536.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(3536,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3536','imageenonce3536');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3536"></a><div class=inner id="innerenonce3536">Dans cet exercice, on se propose de déterminer les fonctions $f:\mathbb R_+^*\to\mathbb R,$ continues sur $\mathbb R_+^*$ telles que
+$$\forall x\in\mathbb R_+^*,\ f(x)=f\left(\frac{x^2+16}{2x}\right).$$
+<ol class="enumeratechiffre">
+<li> On considère les fonctions $g$ et $h$ définies sur $\mathbb R_+^*$ par les formules 
+$$g(x)=\frac{x^2+16}{2x}\textrm{ et }h(x)=g(x)-x.$$
+<ol class="enumeratechiffre">
+<li> Dresser le tableau de variations de $g$, déterminer $g(4)$ et préciser les limites de $g$ en $0^+$ et en $+\infty.$
+<li> &Eacute;tudier le signe de $h$ sur $\mathbb R_+^*$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Soit $x\in[4,+\infty[$ et soit la suite $(u_n)$ définie par $u_0=x$ et 
+$\displaystyle u_{n+1}=\frac{u_n^2+16}{2u_n}$. Justifier que $(u_n)$ est ben définie.
+<li> Démontrer que la suite $(u_n)$ est convergente et déterminer sa limite.
+<li> En déduire que, pour tout $x\in [4,+\infty[$, $f(x)=f(4)$.
+</ol>
+<li> En procédant de manière analogue à la question précédente, démontrer que, pour tout $x\in]0,4[$, on a $f(x)=f(4)$.
+<li> Conclure.
+ </ol></div></div><div class=indication><a href="javascript:showAll('innerindication3536','imageindication3536');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3536"></a><div class=inner id="innerindication3536" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<ol class="enumeratechiffre">
+<li> 
+<li>
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Calculer $g([4,+\infty[)$.
+<li> Démontrer que la suite $(u_n)$ est décroissante et minorée.
+<li> Utiliser que, pour tout entier naturel $n$, $f(u_n)=f(u_0)$.
+</ol>
+<li> Si $u_0\in ]0,4]$, à quel intervalle appartient $u_1$ ?
+<li> 
+ </ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3536','imagecorrige3536',3536);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3536"></a><div class=inner id="innercorrige3536" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<ol class="enumeratechiffre">
+<li> &Eacute;crivons, pour $x&gt;0,$ 
+$$g(x)=\frac x2+\frac{8}{x}.$$
+$g$ est dérivable sur $\mathbb R_+^*$ et sa dérivée vérifie, pour tout $x&gt;0,$
+$$g'(x)=\frac 12-\frac{8}{x^2}=\frac{x^2-16}{2x^2}=\frac{(x-4)(x+4)}{2x^2}.$$
+Ainsi, sur $]0,4[,$ $g'\leq 0$ et $g$ est décroissante sur cet intervalle, tandis que sur $]4,+\infty[,$ $g'\geq 0$ et $g$ est croissante sur cet intervalle. On vérifie facilement que $g(4)=4$ et que 
+$$\lim_{x\to 0^+}g(x)=+\infty,\ \lim_{x\to+\infty}g(x)=+\infty.$$
+<li> On remarque que 
+$$h(x)=\frac{x^2+16}{2x}-x=\frac{16-x^2}{2x}=\frac{(4-x)(4+x)}{2x}.$$
+Ainsi, $h\geq 0$ sur $]0,4[$ et $h\leq 0$ sur $]4,+\infty[$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Puisque $g$ est continue et croissante sur l'intervalle $[4,+\infty[,$ on a 
+$$g([4,+\infty[)=[g(4),\lim_{x\to+\infty}g(x)[=[4,+\infty[.$$
+Ainsi, l'intervalle $[4,+\infty[$ est stable par $g$. Puisque $u_0\in[4,+\infty[$ et que la suite $(u_n)$ est définie par $u_{n+1}=g(u_n),$ la suite $(u_n)$ est bien définie et de plus, pour tout $n\in\mathbb N,$ $u_n\in[4,+\infty[$. 
+<li> On a déjà démontré que la suite $(u_n)$ est minorée par $4.$ De plus, pour  tout $n\in\mathbb N,$ 
+$$u_{n+1}-u_n=g(u_n)-u_n=h(u_n)\leq 0$$
+puisque $u_n\geq 4.$ Ainsi, $(u_n)$ est décroissante. Elle est donc convergente.
+Notons $\ell$ sa limite qui nécessairement appartient à $[4,+\infty[.$ Puisque $g$ est continue sur $[4,+\infty[,$ $\ell$ vérifie l'équation 
+$$g(\ell)=\ell\iff h(\ell)=0\iff \ell=4$$
+puisque $\ell\geq 4.$ Ainsi, la suite $(u_n)$ converge vers $4.$
+<li> D'après la relation vérifiée par $n,$ on sait que, pour tout $n\in\mathbb N,$ on a $f(u_n)=f(u_{n+1})$. En particulier, on a $f(u_n)=f(u_0)=f(x).$ Puisque $(u_n)$ converge vers $4,$ et que $f$ est continue en $4,$ on en déduit, par passage à la limite, que $f(x)=4.$ 
+</ol>
+<li> En reprenant la même suite, on remarque que $u_1=g(u_0)\geq 4$ puisque 
+$$g(]0,4])=[4,+\infty[.$$
+Ainsi, la suite $(u_n)$ va à nouveau converger vers $4$ et le même raisonnement prouve que $f(x)=f(4).$
+<li> Les questions précédentes établissent que si $f$ est solution de l'équation, alors $f$ est constante. Réciproquement, il est clair que toutes les fonctions constantes sont solutions de l'équation. Donc les solutions de l'équation sont les fonctions constantes.
+ </ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater3395"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3395"),	max:5, rating:1.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3395,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un petit problème sur les suites récurrentes <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3395.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(3395,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3395','imageenonce3395');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3395"></a><div class=inner id="innerenonce3395">Dans cet exercice, $f$ désigne la fonction définie sur $\mathbb R$ par 
+$$f(x)=x^2+x.$$
+On note $\mathcal C_f$ la courbe représentative de $f$ dans un repère orthonormé $(O,\vec i,\vec j)$.  
+On considère également la suite récurrente $(u_n)_{n\geq 1}$ définie par $u_1\in\mathbb R$ et $u_{n+1}=f(u_n)$.
+<ol class="enumeratechiffre">
+ <li> Dresser le tableau de variations de $f$, dessiner rapidement $\mathcal C_f$ en précisant la tangente à l'origine.
+ <li> On suppose dans cette question que $u_1\in [-1/2,0]$. Justifier que $[-1/2,0]$ est stable par $f,$ puis démontrer que la suite $(u_n)$ converge en précisant sa limite.
+ <li> On suppose dans cette question que $u_1&gt;0.$ Démontrer que $(u_n)$ tend vers $+\infty.$
+ <li> &Eacute;tudier la suite lorsque $u_1&lt;-1/2$.
+ <li> Question indépendante : Soit $(t_n)$ une suite de réels telle qu'il existe $a&gt;0$ et $N\in\mathbb N^*$ vérifiant : 
+ $$\forall n\geq N,\ t_{n+1}-t_n\geq \frac an&gt;0.$$
+ <ol class="enumeratechiffre">
+ <li> Démontrer que, pour tout $n\geq N,$ on a $t_{2n}-t_n\geq \frac a2.$
+ <li> En déduire que $(t_n)$ tend vers $+\infty.$
+ </ol>
+ <li> Pour la fin de l'exercice, on suppose que $u_1\in [-1/2,0[.$ 
+ <ol class="enumeratechiffre">
+  <li> Démontrer que, pour tout $n\in\mathbb N^*,$
+  $$\frac{n}{(n+1)^2}\leq \frac{1}{n+2}.$$
+  <li> Démontrer que, pour tout $n\in\mathbb N^*,$ 
+ $$\frac{-1}{n+1}\leq u_n&lt; 0.$$
+ </ol>
+ <li> On considère la suite $(v_n)$ définie par $v_n=nu_n$  pour tout $n\in\mathbb N^*.$ Démontrer que $(v_n)$ est décroissante.
+ <li> Démontrer qu'il existe $\lambda\in [-1,0[$ tel que $(v_n)$ converge vers $\lambda.$
+ <li> On suppose que $\lambda\neq -1.$
+ <ol class="enumeratechiffre">
+ <li> Calculer $\lim_{n\to+\infty}nu_n(nu_n+u_n+1)$ puis justifier qu'il existe un réel $a&gt;0$ et un entier $N\in\mathbb N^*$ tel que, pour tout $n\geq N,$ 
+ $$-nu_n(nu_n+u_n+1)\geq a.$$
+ <li> En déduire que la suite $(t_n)$ définie par $t_n=-v_n$ pour $n\in\mathbb N^*$ vérifie les conditions de la question 5.
+ <li> Conclure que $\lambda=-1.$
+ </ol>
+ </ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3395','imagecorrige3395',3395);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3395"></a><div class=inner id="innercorrige3395" style="display:none;"><ol class="enumeratechiffre">
+ <li> On vérifie facilement que $f$ est décroissante sur $]-\infty,-1/2]$ et croissante sur $[-1/2,+\infty[$. La tangente en l'origine a pour équation $y=x$.
+ <li> Puisque $f$ est croissante sur $[-1/2,0]$, on a $f([-1/2,0])\subset [f(-1/2),f(0)]=[-1/4,0]\subset [-1/2,0]$.
+ Ainsi, l'intervalle $[-1/2,0]$ est bien stable par $f$. De plus, puisque $f(x)\geq x$ pour tout $x\in\mathbb R,$
+ la suite $(u_n)$ est croissante - ceci indépendamment de la valeur de $u_1.$ Elle est à valeurs dans $[-1/4,0]$, en particulier elle est majorée, donc elle converge. 
+ Notons $\ell$ sa limite. Puisque $f$ est continue sur $\mathbb R,$
+$\ell$ est solution de l'équation $f(x)=x.$ Cette équation admet pour seule solution $0,$ et donc $(u_n)$ converge vers $0.$
+ <li> La suite $(u_n)$ est croissante. Il y a donc deux possibilités : ou bien elle converge, ou bien elle tend vers $+\infty.$
+ Si elle converge, alors notons $\ell$ sa limite. On doit avoir $\ell\geq u_1&gt;0$ puisque $(u_n)$ est croissante et $\ell=0$
+ d'après le raisonnement de la question précédente. C'est absurde et donc $(u_n)$ tend vers $+\infty.$
+ <li> Si $u_0&lt;-1$, alors $u_2&gt;0$ et on se ramène à la question précédente : la suite $(u_n)$ tend vers $+\infty.$
+ Si $u_0\in [-1,-1/2[$, alors $u_2\in [-1/4,0]$ et on se ramène à la question 2 : la suite $(u_n)$ converge vers $0.$
+ <li> 
+ <ol class="enumeratechiffre">
+ <li> On écrit 
+ \begin{align*}
+  t_{2n}-t_n&=t_{2n}-t_{2n-1}+t_{2n-1}+t_{2n-2}+\cdots+t_{n+1}-t_n \\
+  &\geq \frac{a}{2n-1}+\cdots+\frac{a}n.
+  \end{align*}
+  Il y a $n$ termes dans la somme et chaque terme est supérieur ou égal à $a/2n.$ Donc
+  $$t_{2n}-t_n\geq n\times\frac a{2n}=\frac a2$$
+ ce qui est le résultat demandé.
+ <li> Remarquons que la suite $(t_n)$ est croissante. Comme précédemment, il n'y a que deux possibilités : 
+ ou bien elle tend vers $+\infty$ ou bien elle admet une limite finie $\ell.$ Ce dernier cas est impossible : en effet,
+ la suite $(t_{2n})$ convergerait aussi vers $\ell$, et le passage à la limite dans l'inégalité
+ $t_{2n}-t_n \geq a/2$ donnerait $0\geq a/2,$ ce qui est faux. Donc $(t_n)$ tend vers $+\infty.$
+ </ol>
+ <li> 
+ <ol class="enumeratechiffre">
+  <li> En effet, 
+  $$\frac1{n+2}-\frac{n}{(n+1)^2}=\frac1{(n+1)^2 (n+2)}&gt;0.$$
+  <li> Notons, pour $n\in\mathbb N^*,$ $\mathcal P(n)$ la propriété $$\mathcal P(n) : \frac{-1}{n+1}\leq u_n&lt; 0$$
+  et prouvons par récurrence sur $n\in\mathbb N^*$ que $\mathcal P(n)$ est vraie. <br>
+  Initialisation : on a d'une part $0&gt;u_1\geq -1/2$ et d'autre par $-1/(1+1)=1/2$ donc $\mathcal P(1)$ est vraie.<br>
+  Hérédité : soit $n\geq 1$ tel que $\mathcal P(n)$ est vraie. Alors, puisque $f$ est strictement croissante sur $[-1/(n+1),+\infty[$
+  qui est contenu dans $[-1/2,0[$, on a 
+  $$f\left(\frac{-1}{n+1}\right)\leq f(u_n)&lt;f(0).$$
+  Or,
+  $$f\left(\frac{-1}{n+1}\right)=-\frac{n}{(n+1)^2}&gt;\frac{-1}{n+2}$$
+  d'après la question précédente, et $f(u_{n})=u_{n+1},$ $f(0)=0.$ Ainsi,
+  $$ \frac{-1}{n+2}\leq u_{n+1}&lt; 0$$
+et   $\mathcal P(n+1)$ est vérifiée.<br>
+  Conclusion : pour tout entier $n\geq 1,$ $\mathcal P(n)$ est vérifié.
+ </ol>
+ <li> Pour $n\in\mathbb N^*$, on a 
+ $$v_{n+1}-v_n=(n+1)u_{n+1}-nu_n=(n+1)(u_n^2+u_n)-nu_n=u_n\big((n+1)u_n+1\big).$$
+ D'après la question précédente, on obtient $v_{n+1}-v_n\leq 0$ et donc $(v_n)$ est décroissante.
+ <li> La suite $(v_n)$ est décroissante, et on a 
+ $$v_n=nu_n\geq \frac{-n}{n+1}\geq -1.$$
+ Ainsi, la suite $(v_n)$ converge et sa limite appartient à l'intervalle $[-1,v_0]\subset [-1,0[.$
+ <li> 
+ <ol class="enumeratechiffre">
+ <li> On a
+ $\lim_{n\to+\infty}nu_n(nu_n+u_n+1)=\lambda(\lambda+1)$.
+ Or, puisque $\lambda\in]-1,0[,$ $\lambda(\lambda+1)&lt;0$. Posons $a=-\lambda(\lambda+1)/2$.
+ Par définition de la limite, il existe un entier $N\in\mathbb N^*$ tel que, pour tout $n\geq N,$ 
+ $$nu_n(nu_n+u_n+1)\leq -a.$$
+ Prenant l'opposé, on trouve le résultat demandé.
+ <li> D'après un calcul précédent, 
+ $$t_{n+1}-t_n=-u_n\big((n+1)u_n+1\big)\geq \frac{a}n$$
+ si $n\in\mathbb N^*.$
+ <li> Si $\lambda\neq -1,$ alors d'une part la suite $(v_n)$ converge (vers une limite finie) et d'autre part $(-v_n)$ tend vers $+\infty$
+ donc $(v_n)$ tend vers $-\infty.$ Il y a contradiction et donc $\lambda=-1.$
+ </ol>
+ </ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater665"></span><script>var myRating = raterJs( { element:document.querySelector("#rater665"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(665,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Approximation du nombre d'or <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=665.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(665,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce665','imageenonce665');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce665"></a><div class=inner id="innerenonce665">On appelle nombre d'or et on note $\phi$ la solution positive réelle de l'équation d'inconnue réelle $x$ :
+$$x^2-x-1=0.$$
+En particulier, on  a $\phi=\sqrt{1+\phi}$.
+<ol class="enumeratechiffre">
+<li> Justifier, sans calculatrice, que $1&lt;\phi&lt;2$. 
+<li> On considère la suite $(u_n)$ définie sur $\mathbb N^*$ par 
+$$u_1=\sqrt 1,\ u_2=\sqrt{1+\sqrt{1}},\ u_3=\sqrt{1+\sqrt{1+\sqrt 1}}$$
+et ainsi de suite, 
+$$u_n=\sqrt{1+\dots+\sqrt{1+\sqrt 1}}$$
+avec $n$ radicaux.<br>
+Exprimer, pour tout entier $n$ supérieur ou égal à $1$, $u_{n+1}$ en fonction de $u_n$.
+<li> Montrer que, pour tout $n\geq 1$,
+$$1\leq u_n\leq\phi.$$
+<li> Montrer que la suite $(u_n)$ est croissante.
+<li> Démontrer que $(u_n)$ converge vers $\phi$.
+<li> Montrer que, pour tout entier $n\geq 1$, 
+$$|u_{n+1}-\phi|\leq \frac 12 |u_n-\phi|.$$
+<li> En déduire que, pour tout $n\geq 1$,
+$$|u_n–\phi|\leq\frac 1{2^{n-1}}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication665','imageindication665');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication665"></a><div class=inner id="innerindication665" style="display:none;"><ol class="enumeratechiffre">
+<li> Encadrer $\sqrt 5$.
+<li>
+<li> Procéder par récurrence.
+<li> Comparer $u_1$ et $u_2$.
+<li> Suite croissante majorée.
+<li> Utiliser la quantité conjuguée.
+<li> Récurrence.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige665','imagecorrige665',665);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige665"></a><div class=inner id="innercorrige665" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$\phi=\frac{1+\sqrt 5}2.$$
+On encadre $\sqrt 5$ entre $2$ et $3$ (strictement), et on en déduit que 
+$$1&lt;\frac{1+2}2&lt;\phi&lt;\frac{1+3}2=2.$$
+<li> On a $u_{n+1}=\sqrt{1+u_n}$.
+<li> Montrons par récurrence sur $n\geq 0$ la propriété $\mathcal P(n)$ : $"1\leq u_n\leq \phi"$. $\mathcal P(0)$ est vraie car $1=u_0\leq \phi$. Soit $n\geq 0$ tel que $\mathcal P(n)$ est vrai, et prouvons que $\mathcal P(n+1)$ est vraie. Alors, puisque la fonction $x\mapsto \sqrt{1+x}$ est croissante, 
+$$1\leq \sqrt{1+1}\leq \sqrt{1+u_n}\leq \sqrt{1+\phi}=\phi.$$
+On en déduit que $\mathcal P(n+1)$ est vraie et, par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n\geq 0$. 
+<li> On remarque que $u_1\leq u_2$. Puisque la fonction $x\mapsto \sqrt{1+x}$ est croissante, on en déduit facilement (par exemple, par récurrence) que la suite $(u_n)$ est croissante.
+<li> $(u_n)$ est une suite croissante, majorée : elle converge vers une limite $\ell$ qui est solution de $\ell=\sqrt{l+1}$. En particulier, $\ell^2=l+1$. De plus, $\ell\geq 1&gt;0$. Par définition du nombre d'or, $\ell=\phi$. 
+<li> On a, d'après la relation de récurrence, et en utilisant la quantité conjuguée,
+$$u_{n+1}-\phi=\sqrt{1+u_n}-\sqrt{1+\phi}=\frac{(1+u_n)-(1+\phi)}{\sqrt{1+u_n}+\sqrt{1+\phi}}.$$
+Maintenant, 
+$$\sqrt{1+u_n}\geq 1,\ \sqrt{1+\phi}\geq 1\implies \sqrt{1+u_n}+\sqrt{1+\phi}\geq 2,$$
+ce qui donne le résultat. 
+<li> Le résultat de la question précédente incite à faire une démonstration par récurrence. La seule difficulté est alors de vérifier le cas $n=1$. Mais l'encadrement $1&lt;\phi&lt;2$ donne $|u_1-\phi|\leq 1.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater68"></span><script>var myRating = raterJs( { element:document.querySelector("#rater68"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(68,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des complexes <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=68.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(68,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce68','imageenonce68');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce68"></a><div class=inner id="innerenonce68">&Eacute;tudier la suite définie par $u_0\in\mathbb C$ et $u_{n+1}=\frac{1}5(3u_n-2\overline{u_n})$</div></div><div class=indication><a href="javascript:showAll('innerindication68','imageindication68');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication68"></a><div class=inner id="innerindication68" style="display:none;">Introduire les parties réelles et imaginaires de $u_n$ et regarder les relations de récurrence vérifiées par ces suites.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige68','imagecorrige68',68);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige68"></a><div class=inner id="innercorrige68" style="display:none;">On pose $u_n=x_n+iy_n$ avec $x_n,y_n\in\mathbb R$. On a alors 
+$$x_{n+1}=\frac{3x_n-2x_n}{5}=\frac{x_n}{5}\textrm{ et }y_{n+1}=\frac{3y_n+2y_n}{5}=y_n.$$
+On en déduit que $x_n\to 0$ tandis que $y_n=y_0$. Autrement dit, la suite $(u_n)$ converge vers $iy_0=i\Im m(u_0)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater92"></span><script>var myRating = raterJs( { element:document.querySelector("#rater92"),	max:5, rating:2.3421052631579, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(92,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites homographiques <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=92.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(92,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce92','imageenonce92');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce92"></a><div class=inner id="innerenonce92">Soit $(z_n)$ une suite définie par $z_0\in\mathbb C$ et la relation
+$$z_{n+1}=\frac{az_n+b}{cz_n+d},$$
+où $a,b,c,d$ sont des complexes tels que $ad-bc\neq 0$ et $c\neq 0$. On suppose dans toute la suite que
+$z_0$ est choisi de sorte que la suite $(z_n)$ soit bien définie.
+<ol class="enumeratechiffre">
+<li> Montrer que la fonction $f(z)=\frac{az+b}{cz+d}$ admet un ou deux points fixes dans $\mathbb C$.
+<li> On suppose que $f$ admet deux points fixes $\alpha$ et $\beta$ et on pose $$w_n=\frac{z_n-\alpha}{z_n-\beta}$$
+(on suppose donc aussi que $z_n\neq\alpha$ et $z_n\neq\beta$ pour tout entier $n$).
+Montrer que la suite $(w_n)$ est géométrique. En déduire la nature de la suite définie par $z_0=i$ et 
+$z_{n+1}=\frac{1}{1-z_n}$.
+<li> On suppose que $f$ admet un unique point fixe $\alpha$ et on pose
+$$w_n=\frac{1}{z_n-\alpha}.$$
+Calculer la valeur de $\alpha$ et prouver que 
+$$f(z)=z-\frac{c(z-\alpha)^2}{cz+d}.$$
+Montrer ensuite que la suite $(w_n)$ est arithmétique. En déduire la nature de la suite définie par $z_0=i$
+et $z_{n+1}=\frac{3z_n-1}{z_n+1}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication92','imageindication92');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication92"></a><div class=inner id="innerindication92" style="display:none;"><ol class="enumeratechiffre">
+<li> L'équation est équivalente à chercher les racines d'un polynôme de degré 2.
+<li> &Eacute;crire
+$$\frac{z_{n+1}-\alpha}{z_{n+1}-\beta}=\frac{f(z_n)-f(\alpha)}{f(z_n)-f(\beta)}$$
+et tout développer.
+<li> $\alpha=\frac{a-d}{2c}$ car le discriminant est nul.
+Calculer $f(z)-\alpha$ en utilisant la formule indiquée pour $f$. Factoriser par $(z-\alpha)$,
+puis exprimer $cz+d$ en fonction de $z-\alpha$ et d'une constante.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige92','imagecorrige92',92);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige92"></a><div class=inner id="innercorrige92" style="display:none;"><ol class="enumeratechiffre">
+<li> L'équation $f(z)=z$ est équivalente à $cz^2+dz=az+b$, donc à chercher les racines complexes d'un polynôme de degré 2.
+Il y en a une ou deux, suivant que le discriminant est nul ou non.
+<li> Remarquons d'abord que la condition $ad-bc\neq 0$ empêche $f$ d'être constante. En effet, on a 
+$$f(z)=\frac{b}d\left(\frac{adz+bd}{bcz+bd}\right)$$
+et si $ad=bc$, alors $f(z)=b/d$ pour tout $z\in\mathbb C$. Cette condition prise en compte, on a 
+\begin{eqnarray*}
+w_{n+1}&=&\frac{z_{n+1}-\alpha}{z_{n+1}-\beta}\\
+&=&\frac{f(z_n)-f(\alpha)}{f(z_n)-f(\beta)}\\
+&=&\frac{c\beta+d}{c\alpha+d}\times\frac{(az_n+b)(c\alpha+d)-(cz_n+d)(a\alpha+b)}{(az_n+b)(c\beta+d)-(cz_n+d)(a\beta+b)}\\
+&=&\lambda\frac{z_n-\alpha}{z_n-\beta}=\lambda w_n
+\end{eqnarray*}
+avec $\lambda=\frac{c\beta+d}{c\alpha+d}$. Dans le cas particulier $z_{n+1}=\frac{1}{1-z_n}$, les points fixes
+de $f$ sont $(1+i\sqrt 3)/2=-j^2$ et $(1-i\sqrt 3)/2=-j$. $(w_n)$ est donc une suite géométrique de raison $\lambda=j$.
+En particulier, elle est périodique de période 3. Or, 
+$$w_n=\frac{z_n+j^2}{z_n+j}\iff z_n=\frac{jw_n-j^2}{1-w_n}$$
+et donc $z_n$ est aussi périodique de période 3. Puisque $z_1=\frac{1}{1-i}\neq i$, on en déduit que $(z_n)$ 
+ne peut pas être convergente.
+<li> Puisqu'on sait que le discriminant est nul, on obtient que $\alpha=\frac{a-d}{2c}$.
+De plus, $(cz+d)(z-f(z))$ admet $\alpha$ comme racine double, et son coefficient dominant est $c$.
+On a donc
+$$(cz+d)(z-f(z))=c(z-\alpha)^2.$$ On en déduit que
+$$f(z)-\alpha=(z-\alpha)\left(1-\frac{c(z-\alpha)}{cz+d}\right)=\frac{(z-\alpha)(d+c\alpha)}{cz+d}.$$
+Reste à exprimer $cz+d$ en fonction de $z-\alpha$. Il vient
+$$cz+d=c(z-\alpha)+(d+c\alpha).$$
+On en déduit que
+$$\frac{1}{f(z)-\alpha}=\frac{1}{z-\alpha}+\frac{c}{d+c\alpha}.$$
+Ainsi, la suite $(w_n)$ est bien une suite arithmétique de raison $\frac{c}{d+c\alpha}=\frac{2c}{a+d}$.
+Pour l'application, on a bien que $1$ est l'unique point fixe de $f$, et que $\frac{2c}{a+d}=1/2$.
+La suite $(w_n)$ définie par $w_n=\frac{1}{z_n-1}$ est donc arithmétique de raison $1/2$, et on a 
+$$w_n=\frac{n}2+w_0.$$ 
+Ainsi, $(|w_n|)$ tend vers $+\infty$. 
+Maintenant, on peut retrouver $z_n$ à partir de $w_n$ car
+$$w_n=\frac{1}{z_n-1}\iff z_n=1+\frac1{w_n}.$$
+On en conclut que $(z_n)$ converge vers 1.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater93"></span><script>var myRating = raterJs( { element:document.querySelector("#rater93"),	max:5, rating:1.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(93,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite quadratique <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=93.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(93,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce93','imageenonce93');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce93"></a><div class=inner id="innerenonce93">Soit $a\in\mathbb C$. A quelle condition la suite $u_{n+1}=a u_n^2$, avec $u_0\in\mathbb C$, converge-t-elle
+vers zéro?</div></div><div class=indication><a href="javascript:showAll('innerindication93','imageindication93');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication93"></a><div class=inner id="innerindication93" style="display:none;">&Eacute;tudier quand on a $|u_1|&lt;|u_0|$, puis faire une récurrence.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige93','imagecorrige93',93);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige93"></a><div class=inner id="innercorrige93" style="display:none;">&Eacute;crivons $u_1=au_0^2=au_0 u_0$. Ainsi, 
+$$\frac{|u_1|}{|u_0|}=|au_0|.$$
+On pose alors $k=|au_0|$ et on distingue  deux cas :
+<ol class="enumeratechiffre">
+<li> Si $k&lt;1$, on commence par prouver par récurrence sur $n$ que $|u_n|\leq |u_0|$. Ceci est vrai lorsque $n=1$. De plus, on a 
+$$\frac{|u_{n+1}|}{|u_n|}=|au_n|\leq k$$ 
+par hypothèse de récurrence, ce qui entraine que $|u_{n+1}|\leq |u_n|\leq |u_0|$.<br>
+Mais alors, revenant au quotient précédent, on a pour tout entier $n$
+$$\frac{|u_{n+1}|}{|u_n|}=|au_n|\leq k$$ 
+ce qui entraîne facilement par récurrence que $|u_n|\leq k^n|u_0|$ pour tout entier $n$. Ainsi, la suite converge vers 0.
+<li> Si $k\geq 1$, alors la même preuve, mais en inversant le sens des inégalites, montre que $|u_{n+1}|\geq |u_n|$, et donc la suite $(|u_n|)$
+est croissante, et $(u_n)$ ne peut pas converger vers zéro.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater2584"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2584"),	max:5, rating:2.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2584,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vitesse de convergence des suites récurrentes <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2584.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(2584,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2584','imageenonce2584');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2584"></a><div class=inner id="innerenonce2584">Soit $(u_n)$ une suite de réels convergente vers $\ell$ et telle que, pour tout $n\in\mathbb N$, on a $u_n\neq \ell$.
+On associe la suite $(v_n)$ définie par, pour $n\in\mathbb N$, 
+$$v_{n}=\left|\frac{u_{n+1}-\ell}{u_n-\ell}\right|.$$
+On suppose que la suite $(v_n)$ converge vers $a$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $a\in [0,1]$. <br>
+On dit que la vitesse de convergence de la suite $(u_n)$ est 
+<ul class="rien">
+ <li> lente si $a=1$;
+ <li> géométrique si $a\in ]0,1[$;
+ <li> rapide si $a=0$.
+</ul>
+<li> Donner un exemple (simple!) de suite avec convergence lente; avec convergence géométrique; avec convergence rapide.
+<li> On suppose dans cette question que la suite $(u_n)$ est donnée par la relation de récurrence $u_{n+1}=f(u_n)$, où
+$f:\mathbb R\to\mathbb R$ est de classe $\mathcal C^1$. On suppose que $(u_n)$ converge vers $\ell$. Déterminer, suivant la valeur de $f'(\ell)$, la vitesse de convergence de la suite $(u_n)$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2584','imageindication2584');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2584"></a><div class=inner id="innerindication2584" style="display:none;"><ol class="enumeratechiffre">
+<li> Si une suite $(x_n)$ de réels strictement positifs vérifie que $x_{n+1}/x_n$ tend vers $a&gt;1$, alors $(x_n)$ tend vers $+\infty$.
+<li> 
+<li> Utiliser que $f(\ell)=\ell$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2584','imagecorrige2584',2584);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2584"></a><div class=inner id="innercorrige2584" style="display:none;"><ol class="enumeratechiffre">
+<li> Rappelons le fait suivant : si $(x_n)$ est une suite de réels strictement positifs telle que $x_{n+1}/x_n$ converge vers $a&gt;1$, alors $(x_n)$ tend vers $+\infty$. Appliquons ce résultat à la suite $(x_n)$ définie par $x_n=|u_n-\ell|$ pour $n\geq 0$. Avec cette définition, on a aussi que $v_n=x_{n+1}/x_n$ pour tout $n\geq 0$. Puisque $(x_n)$ tend vers $0$, on ne peut pas avoir $a&gt;1$, et il est clair que $a\in [0,1]$.
+<li> Les exemples $u_n=1/(n+1)$, $u_n=1/2^n$ et $u_n=\frac{1}{n!}$ donnent des exemples simples de convergence qui sont respectivement lente, géométrique et rapide.
+<li> Rappelons que, puisque $f$ est continue en $\ell$, on a $f(\ell)=\ell$. On en déduit que 
+$$v_n=\left|\frac{f(u_n)-f(\ell)}{u_n-\ell}\right|.$$
+On reconnait le taux d'accroissement de la fonction $f$ entre $u_n$ et $\ell$. Puisque $(u_n)$ converge vers $\ell$ et que $f$ est dérivable en $\ell$, ce taux d'accroissement converge vers $f'(\ell)$ et donc $(v_n)$ converge vers $|f'(\ell)|$. Ainsi, on a prouvé que la convergence est lente si $|f'(\ell)|=1$, géométrique si $|f'(\ell)|\in ]0,1[$ et rapide si $f'(\ell)=0$. 
+</ol></div></div></div>
+
+<div class=titrepartie>Suites récurrentes d'ordre deux</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater91"></span><script>var myRating = raterJs( { element:document.querySelector("#rater91"),	max:5, rating:1.5172413793103, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(91,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites récurrentes linéaires d'ordre 2 <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=91.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(91,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce91','imageenonce91');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce91"></a><div class=inner id="innerenonce91">Donner l'expression du terme général des suites récurrentes $(u_n)$ suivantes :
+<ol class="enumeratechiffre">
+<li> $u_{n+2}=3u_{n+1}-2u_n$, $u_0=3$, $u_1=5$.
+<li> $u_{n+2}=4u_{n+1}-4u_n$, $u_0=1$, $u_1=0$.
+<li> $u_{n+2}=u_{n+1}-u_n$, $u_0=1$ et $u_1=2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication91','imageindication91');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication91"></a><div class=inner id="innerindication91" style="display:none;">Utiliser le théorème!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige91','imagecorrige91',91);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige91"></a><div class=inner id="innercorrige91" style="display:none;"><ol class="enumeratechiffre">
+<li> L'équation caractéristique est $r^2-3r+2=0$, de racines 1 et 2. La solution générale est donc de la forme
+$$u_n=a+b2^n.$$ En introduisant la valeur de $u_0$ et $u_1$, on trouve $a=1$ et $b=2$, soit
+$u_n=1+ 2^{n+1}$.
+<li> L'équation caractéristique est $r^2-4r+4=0$, dont 2 est racine double. La solution générale est donc de la forme
+$$u_n=(a+bn)2^n.$$
+$u_0$ donne $a=1$ et $u_1$ donne $b=-1$. Ainsi, $u_n=(1-n)2^n$.
+<li> L'équation caractéristique est $r^2-r+1=0$. Son discriminant est -3, donc ses racines sont
+$(1-i\sqrt 3)/2=e^{-i\pi/3}$ et $(1+i\sqrt 3)/2=e^{i\pi/3}$. La solution générale est donc de la forme 
+$$u_n=a\cos(n\pi/3)+b\sin(n\pi/3).$$
+$u_0$ donne $a=1$ et $u_1$ donne $b=\sqrt 3$. Finalement, on trouve
+$$u_n=\cos(n\pi/3)+\sqrt 3\sin(n\pi/3)=2\cos\big((n-1)\pi/3\big).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater3569"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3569"),	max:5, rating:1.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3569,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Récurrence croisée -&gt; Récurrence double <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3569.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(3569,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3569','imageenonce3569');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3569"></a><div class=inner id="innerenonce3569">On considère deux suites $(x_n)_{n\in\mathbb N}$ et $(y_n)_{n\in\mathbb N}$ telles que, pour tout $n\in\mathbb N,$ 
+$$\left\{
+\begin{array}{rcl}
+x_{n+1}&=&\frac 52x_n-y_n\\
+y_{n+1}&=&\frac 34x_n+\frac 12y_n.
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Déterminer deux réels $a$ et $b$ tels que, pour tout $n\in\mathbb N,$
+$$x_{n+2}=ax_{n+1}+bx_n.$$
+<li> Déterminer alors l'expression du terme général $x_n$ en fonction de $x_0$ et de $y_0$.
+<li> Quelle relation $x_0$ et $y_0$ doivent-ils satisfaire afin que la suite $(x_n)$ soit constante ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3569','imageindication3569');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3569"></a><div class=inner id="innerindication3569" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser deux fois les relations de récurrence. On remarquera qu'on peut aussi exprimer $y_n$ en fonction de $x_{n+1}$ et $x_n$.
+<li> C'est du cours ! Pour exprimer les constantes en fonction de $x_0$ et de $y_0$, on n'oubliera pas que $x_1$ s'exprime lui-même en fonction de $x_0$ et $y_0$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3569','imagecorrige3569',3569);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3569"></a><div class=inner id="innercorrige3569" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $n\in\mathbb N.$ Alors
+\begin{align*}
+x_{n+2}&=\frac 52 x_{n+1}-y_{n+1}\\
+&=\frac52 x_{n+1}-\frac 34 x_n-\frac 12 y_n\\
+&=\frac52 x_{n+1}-\frac 34 x_n-\frac 12\left(\frac 52 x_n-x_{n+1}\right)\\
+&=3x_{n+1}-2x_n.
+\end{align*}
+<li> L'équation caractéristique associée est $r^2=3r-2$ donc les racines sont $r=1$ et $r=2$. On sait donc qu'il existe $\lambda$ et $\mu\in\mathbb R$ tels que, pour tout $n\in\mathbb N,$
+$$x_n =\lambda 2^n+\mu.$$
+Exprimons $\lambda$ et $\mu$ en fonction de $x_0$ et $y_0$. On a
+$$x_0=\lambda +\mu$$
+et 
+$$\frac 52x_0-y_0=x_1=2\lambda+\mu.$$
+On résout alors le système et on trouve facilement 
+$$\lambda=\frac{-1}2x_0+y_0\textrm{ et }\mu=\frac 32 x_0-y_0.$$
+Finalement, on a prouvé que, pour tout $n\in\mathbb N,$ on a
+$$x_n=\left(\frac{-1}2x_0+y_0\right)+\left(\frac 32 x_0-y_0\right)2^n.$$
+<li> La suite $(x_n)$ est constante si et seulement si 
+$$\frac 32 x_0-y_0=0\iff y_0=\frac 32 x_0.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater69"></span><script>var myRating = raterJs( { element:document.querySelector("#rater69"),	max:5, rating:2.1304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(69,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Récurrence double <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=69.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(69,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce69','imageenonce69');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce69"></a><div class=inner id="innerenonce69">Soit $(u_n)$ la suite de nombres réels définie par $u_0=-1,\ u_1=-1$ et $u_{n+2}=(n+1)u_{n+1}-(n+2)u_n$.
+<ol class="enumeratechiffre">
+<li> Calculer les quinze premiers termes de la suite.
+<li> Que peut-on conjecturer pour $u_{n+1}-u_n$?
+<li> En déduire une conjecture sur la suite $(u_n)$.
+<li> Démontrer cette dernière conjecture.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication69','imageindication69');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication69"></a><div class=inner id="innerindication69" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser un tableur.
+<li>
+<li> Suite arithmétique.
+<li> Procéder par récurrence. Attention, il s'agit d'une récurrence double.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige69','imagecorrige69',69);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige69"></a><div class=inner id="innercorrige69" style="display:none;"><ol class="enumeratechiffre">
+<li> A l'aide d'un tableur, on obtient les quinze premiers termes : -1,-1, 1, 5, 11, 19, 29, 41, 55, 71, 89, 109, 131, 155, 181.
+<li> Il semble bien que $u_{n+1}-u_n=2n$.
+<li> Si la conjecture précédente est vraie, alors on reconnait la suite d'une somme arithmétique car
+$$u_n=2(n-1)+2(n-2)+\dots+2\times 0+u_0=-1+n(n-1).$$
+<li> On va démontrer cette propriété par récurrence. Cela dit, il convient d'être prudent : la récurrence portant sur deux termes
+de la suite, il faut faire une récurrence double. On pose donc $\mathcal P(n)$ la propriété définie pour $n\geq 0$ par : 
+"$u_n=-1+n(n-1)$ et $u_{n+1}=-1+n(n+1)$." $\mathcal P(0)$ est vraie car $u_0=u_1=-1$. Soit maintenant $n$ un entier tel que $\mathcal P(n)$
+est vraie et prouvons $\mathcal P(n+1)$. Alors on a bien $u_{n+1}=-1+n(n+1)$. D'autre part, en utilisant l'hypothèse de récurrence et la définition de la suite, il vient 
+$$u_{n+2}=(n+1)(-1+n(n+1))-(n+2)(-1+n(n-1)).$$
+En développant et simplifiant, on trouve 
+$$u_{n+2}=n^2+3n+1=-1+(n+1)(n+2).$$
+On a donc bien prouvé que $\mathcal P(n+1)$ est vraie.
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Suites croisées</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater2602"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2602"),	max:5, rating:2.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2602,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode de Théon de Smyrne <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2602.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(2602,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2602','imageenonce2602');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2602"></a><div class=inner id="innerenonce2602">On définit deux suites $(x_n)$ et $(y_n)$ par leur premier terme $x_0=y_0=1$ et par les relations de récurrence :
+$$\left\{
+\begin{array}{rcl}
+x_{n+1}&=&x_n+2y_n\\
+y_{n+1}&=&x_n+y_n.
+\end{array}
+\right.
+$$
+<ol class="enumeratechiffre">
+<li> Justifier que les suites $(x_n)$ et $(y_n)$ sont à termes strictement positifs.
+<li> Démontrer que, pour tout $n\geq 0$, $\frac{x_n}{y_n}\geq 1$.
+<li> Démontrer que, pout tout $n\geq 0$, 
+$$\frac{x_{n+1}}{y_{n+1}}-\sqrt 2=\frac{\sqrt 2-1}{\frac{x_n}{y_n}+1}\left(\sqrt 2-\frac{x_n}{y_n}\right).$$
+<li> Démontrer que, pour tout $n\geq 0$, on a 
+$$\left|\frac{x_{n+1}}{y_{n+1}}-\sqrt 2\right|\leq \frac12\left|\sqrt 2-\frac{x_n}{y_n}\right|.$$
+<li> En déduire que $$\left|\frac{x_n}{y_n}-\sqrt 2\right|\leq\left(\frac 12\right)^n (\sqrt 2-1).$$
+<li> En déduire un algorithme donnant une approximation de $\sqrt 2$ à $10^{-10}$ près.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication2602','imageindication2602');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2602"></a><div class=inner id="innerindication2602" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> &Eacute;crire $x_n$ et $y_n$ en fonction de $x_{n-1}$ et de $y_{n-1}$.
+<li> &Eacute;crire $x_{n+1}$ et $y_{n+1}$ en fonction de $x_{n}$ et de $y_{n}$, puis simplifier le membre de droite de l'égalité.
+<li> Utiliser la question précédente, et remarquer que $\left|\frac{x_n}{y_n}+1\right|\geq 2$.
+<li> Procéder par récurrence
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2602','imagecorrige2602',2602);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2602"></a><div class=inner id="innercorrige2602" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour $n\in\mathbb N$, notons $\mathcal P(n)$ la propriété : "$x_n&gt;0$ et $y_n&gt;0$". Démontrons par récurrence que pour tout $n\geq 0$, la propriété $\mathcal P(n)$ est vraie.<br>
+Initialisation : $\mathcal P(0)$ est vraie puisque $x_0=y_0&gt;1$.<br>
+Hérédité : soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie. On a alors $x_{n+1}=x_n+2y_n&gt;0$ et $y_{n+1}=x_n+y_n&gt;0$ puisque la somme de deux réels strictement positifs est strictement positive. Ainsi, $\mathcal P(n+1)$ est vraie.<br>
+Conclusion : Par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n$.
+<li> Le résultat est vraie pour $n=0$. Pour $n\geq 1$, on écrit 
+$$\frac{x_n}{y_n}=\frac{x_{n-1}+2y_{n-1}}{x_{n-1}+y_{n-1}}.$$
+Comme $x_{n-1}+2y_{n-1}\geq x_{n-1}+y_{n-1}$ et que $x_{n-1}+y_{n-1}$ est strictement positif, on en déduit que 
+$$\frac{x_{n-1}+2y_{n-1}}{x_{n-1}+y_{n-1}}\geq 1.$$
+<li> En vertu de la formule de récurrence, on commence par écrire 
+$$\frac{x_{n+1}}{y_{n+1}}-\sqrt 2=\frac{x_n+2y_n}{x_n+y_n}-\sqrt 2.$$
+D'autre part, 
+\begin{align*}
+\frac{\sqrt 2-1}{\frac{x_n}{y_n}+1}\left(\sqrt 2-\frac{x_n}{y_n}\right)&
+=\frac{\sqrt 2-1}{x_n+y_n}\left(\sqrt 2y_n-x_n\right)\\
+&=\frac{\sqrt2(\sqrt 2-1)y_n-(\sqrt 2-1)x_n}{x_n+y_n}\\
+&=\frac{2y_n-\sqrt 2y_n-\sqrt 2 x_n+x_n}{x_n+y_n}\\
+&=\frac{x_n+2y_n}{x_n+y_n}-\sqrt 2\frac{x_n+y_n}{x_n+y_n}\\
+&=\frac{x_n+2y_n}{x_n+y_n}-\sqrt 2
+\end{align*}
+d'où l'égalité recherchée.
+<li> On prend la valeur absolue de l'inégalité précédente. Il vient 
+$$\left|\frac{x_{n+1}}{y_{n+1}}-\sqrt 2\right|=\frac{|\sqrt 2-1|}{\left|\frac{x_n}{y_n}+1\right|}\left|\sqrt 2-\frac{x_n}{y_n}\right|.$$
+Mais $|\sqrt 2-1|\leq 2-1=1$ et 
+$$\left|\frac{x_n}{y_n}+1\right|\geq \frac{x_n}{y_n}+1\geq 2$$
+d'où
+$$\frac{|\sqrt 2-1|}{\left|\frac{x_n}{y_n}+1\right|}\leq \frac 12.$$
+Avec l'aide de la question précédente, ceci donne le résultat souhaité.
+<li> Pour $n\geq 0$, notons $\mathcal P(n)$ la propriété
+$$\mathcal P(n)="\left|\frac{x_n}{y_n}-\sqrt 2\right|\leq\left(\frac 12\right)^n (\sqrt 2-1)".$$
+Initialisation : Puisque $\left|\frac{x_0}{y_0}-\sqrt 2\right|=|\sqrt 2-1|$, la propriété $\mathcal P(0)$ est vraie.<br>
+Hérédité : Soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vraie. Alors on a
+$$\left|\frac{x_{n+1}}{y_{n+1}}-\sqrt 2\right|\leq \frac12\left|\sqrt 2-\frac{x_n}{y_n}\right|\leq \frac12\times \left(\frac 12\right)^n (\sqrt 2-1)=
+\left(\frac 12\right)^{n+1}(\sqrt 2-1).$$
+La propriété $\mathcal P(n+1)$ est donc vraie.<br>
+Par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout $n\in\mathbb N$.
+<li> Par le théorème des gendarmes, la suite $(x_n/y_n)$ converge vers $\sqrt 2$. De plus, puisque $(\sqrt 2-1)\leq 1$, on sait que $x_n/y_n$ sera une approximation de $\sqrt 2$ à $10^{-10}$ près dès que $1/2^n\leq 10^{-10}$, c'est-à-dire dès que $2^n\geq 10^{10}$. On calcule donc les termes successifs de ces deux suites jusqu'à ce que cette condition soit remplie. On obtient la fonction suivante, sous Python.
+<pre><code class="language-python">def racinedeux():
+    x,y=1,1
+    n=0
+    while (2**n&lt;10**10):
+        x,y=x+2*y,x+y
+        n=n+1
+    return x/y
+</code></pre>
+Si on connait le logarithme, bien sûr, on sait que la condition est remplie dès que $n\ln 2\geq 10\ln 10$, c'est-à-dire dès que $n\geq 10\ln(10)/\ln(2)$. On peut alors utiliser simplement une boucle "pour", qui évite de faire un test à chaque fois. Il faut faire attention à ce qu'on va jusque l'entier qui suit $10\ln(10)/\ln(2)$. On obtient alors :
+<pre><code class="language-python">import math    
+    
+def racinedeux():
+    x,y=1,1
+    for n in range(math.floor(10*math.log(10)/math.log(2)+1)):
+        x,y=x+2*y,x+y
+    return x/y
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater94"></span><script>var myRating = raterJs( { element:document.querySelector("#rater94"),	max:5, rating:1.1153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(94,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Croisées <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=94.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(94,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce94','imageenonce94');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce94"></a><div class=inner id="innerenonce94">Soient $(x_n)$ et $(y_n)$ deux suites de nombres réels définies par $0&lt;x_0&lt;y_0$ et 
+$$\left\{
+\begin{array}{rcl}
+x_{n+1}&=&\displaystyle \frac{x_n^2}{x_n+y_n}\\
+y_{n+1}&=&\displaystyle \frac{y_n^2}{x_n+y_n}
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $(y_n-x_n)$ est une suite constante.
+<li> En déduire que $(x_n)$ est décroissante.
+<li> Montrer que les deux suites sont convergentes, et calculer leur limite respective.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication94','imageindication94');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication94"></a><div class=inner id="innerindication94" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de calculer $x_{n+1}-y_{n+1}$.
+<li> Utiliser le résultat de la question précédente sous la forme $y_n\geq x_n$.
+<li>
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige94','imagecorrige94',94);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige94"></a><div class=inner id="innercorrige94" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$x_{n+1}-y_{n+1}=\frac{x_n^2-y_n^2}{x_n+y_n}=x_n-y_n$$
+et donc la suite $(x_n-y_n)$ est bien constante.
+<li> Le résultat de la question précédente entraîne en particulier que $y_n-x_n=y_0-x_0$ et donc que
+$y_n\geq x_n$. Il est alors facile de démontrer que $(x_n)$ est décroissante : en effet, on a
+$$x_{n+1}\leq\frac{x_n^2}{2x_n}\leq \frac{x_n}{2}.$$
+Ainsi, $(x_n)$ est décroissante.
+<li> $(x_n)$ est décroissante et minorée par 0, donc elle converge. De plus, l'inégalité
+$0\leq x_{n+1}\leq x_n/2$ prouve que $0\leq x_n\leq x_0/2^n$. Ainsi, $(x_n)$ converge vers 0.
+On en déduit que $(y_n)$ converge vers $y_0-x_0$.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater95"></span><script>var myRating = raterJs( { element:document.querySelector("#rater95"),	max:5, rating:2.1724137931034, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(95,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une moyenne... <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=95.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(95,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce95','imageenonce95');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce95"></a><div class=inner id="innerenonce95">Soient $x$ et $y$ deux nombres réels strictement positifs.
+On définit :
+<ul class="rien">
+<li> leur moyenne arithmétique, notée $m$, par la relation $m=\frac{x+y}{2}$;
+<li> leur moyenne géométrique, notée $g$, par la relation $g=\sqrt{xy}$;
+<li> leur moyenne harmonique, notée $h$, par la relation $\frac 1h=\frac12\left(\frac 1x+\frac 1y\right)$.
+</ul>
+<ol class="enumeratechiffre">
+<li> Montrer que $h\leq g\leq m$ et vérifier que $\sqrt{mh}=g$.
+<li> On définit deux suites $u$ et $v$ par récurrence par la donnée de $u_0$ et $v_0$,
+avec $0&lt;v_0\leq u_0$, et par les relations de récurrence suivante :
+<ul class="rien">
+<li> $u_{n+1}$ est la moyenne arithmétique de $u_n$ et $v_n$;
+<li> $v_{n+1}$ est la moyenne harmonique de $u_n$ et $v_n$.
+</ul>
+<ol class="enumeratechiffre">
+<li> Montrer que pour tout $n\in\mathbb N$, on a $0&lt;v_n\leq u_n$.
+<li> Montrer que la suite $u$ est décroissante et que la suite $v$ est croissante.
+<li> Montrer que les deux suites $u$ et $v$ convergent vers la même limite notée $l$.
+<li> Montrer que $l$ est la moyenne géométrique de $u_0$ et $v_0$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication95','imageindication95');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication95"></a><div class=inner id="innerindication95" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $g\leq m\iff g^2\leq m^2$ et développer. Procéder de même pour l'autre inégalité.
+<li> <ol class="enumeratechiffre">
+<li> Récurrence.
+<li> Utiliser que $v_n\leq u_n$ pour en déduire que $u_{n+1}\leq u_n$.
+<li> Que doit vérifier une suite croissante pour être convergente? Passer à la limite dans la définition.
+<li> Que vous dit l'égalité $\sqrt{mh}=g$ sur les suites $(u_n)$ et $(v_n)$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige95','imagecorrige95',95);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige95"></a><div class=inner id="innercorrige95" style="display:none;"><ol class="enumeratechiffre">
+<li> On a
+$$g\leq m\iff g^2\leq m^2\iff xy\leq \frac{x^2+y^2}{4}+xy\iff x^2+y^2\geq 0.$$
+Comme la dernière inégalité est toujours vérifiée, on a bien $g\leq m$.
+De même, on a
+\begin{eqnarray*}
+h\leq g&\iff&\frac{g^2}{h^2}\geq 1\\
+&\iff&\frac{xy}{4}\left(\frac{1}{x^2}+\frac{2}{xy}+\frac{1}{y^2}\right)\geq 1\\
+&\iff&\frac{xy}{4x^2y^2}(y^2+2xy+y^2)\geq 1\\
+&\iff&x^2+2xy+y^2\geq 4xy\\
+&\iff&(x-y)^2\geq 0.
+\end{eqnarray*}
+Cette dernière inégalité étant toujours satisfaite, on a bien $h\leq g$ pour tous $x,y$ positifs. De plus
+\begin{align*}
+\frac{g^2}h&=xy\times\frac12\left(\frac 1x+\frac 1y\right)\\
+&=\frac{x+y}2\\
+&=m
+\end{align*}
+ce qui donne immédiatement $\sqrt{mh}=g.$
+<li> <ol class="enumeratechiffre">
+<li> Prouvons par récurrence sur $n$ que les suites $u$ et $v$ sont bien définies jusqu'à l'ordre $n$
+et que $0&lt;v_n\leq u_n$. C'est vrai au rang 0. Si c'est vrai au rang $n$, alors on en déduit que $v_{n+1}$ et $u_{n+1}$
+sont bien définis, sont strictement positifs, et par la question précédente, que $v_{n+1}\leq u_{n+1}$.
+<li> Puisque $v_n\leq u_n$, on sait que
+$$u_{n+1}\leq\frac{u_n+u_n}{2}\leq u_n.$$
+De même, on a
+$$\frac{1}{v_{n+1}}\leq \frac{1}2\left(\frac1{v_n}+\frac1{v_n}\right)\leq \frac{1}{v_n}$$
+soit $v_{n+1}\geq v_n$. La suite $(v_n)$ est donc croissante et la suite $(u_n)$ est décroissante.
+<li> On sait que $(v_n)$ est croissante. De plus, on a pour chaque $n$, $v_n\leq u_n\leq u_0$. La suite $(v_n)$ est
+donc majorée. Elle converge vers une limite notée $l_1$. De même, la suite $(u_n)$ est décroissante, et minorée
+par $v_0$. Elle est donc convergente vers une limite notée $l_2$. On passe ensuite à la limite
+dans la définition de la suite $(u_n)$ :
+$$l_2=\frac{l_1+l_2}{2}.$$
+Ceci prouve que $l_1=l_2$ et que les suites $(u_n)$ et $(v_n)$ ont la même limite, notée désormais $l$.
+<li> On va utiliser, en utilisant les notations de la première question de l'exercice, que
+$\sqrt{mh}=g$. Notons $G$ la moyenne géométrique de $u_0$ et $v_0$. La remarque précédente nous dit que, pour chaque
+$n$, on a $\sqrt{u_nv_n}=G$. C'est en effet vrai au rang $n=0$, et si c'est vrai au rang $n$, la propriété précédente
+nous dit que c'est vrai au rang $n+1$. Passant à la limite, on trouve $\sqrt{l^2}=G$, ce qui est bien le résultat
+souhaité.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater96"></span><script>var myRating = raterJs( { element:document.querySelector("#rater96"),	max:5, rating:2.9333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(96,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Moyenne arithmético-géométrique <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=96.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(96,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce96','imageenonce96');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce96"></a><div class=inner id="innerenonce96">Soient $a,b\geq 0$ et $(u_n)$, $(v_n)$ les deux suites définies par 
+$$u_0=a,\ v_0=b,\ u_{n+1}=\frac{u_n+v_n}{2},\ v_{n+1}=\sqrt{u_nv_n}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que pour tous réels positifs $x$ et $y$, on a
+$$\sqrt{xy}\leq \frac{x+y}2.$$
+<li> Démontrer que, pour tout $n\geq 1$, $u_n\geq v_n$, $u_n\geq u_{n+1}$ et $v_{n+1}\geq v_n$.
+<li> Démontrer que $(u_n)$ et $(v_n)$ convergent vers la même limite. Cette limite est appelée moyenne arithmético-géométrique
+de $a$ et $b$ et est notée $M(a,b)$.
+<li> Calculer $M(a,a)$ et $M(a,0)$.
+<li> Démontrer que, pour tout $\lambda&gt;0$, $M(\lambda a,\lambda b)= \lambda M(a,b)$.
+<li> &Eacute;crire une fonction Python $\verb+moyenne(a,b,ecart)+$ qui donne un encadrement de $M(a,b)$, avec une amplitude inférieure ou égale à $\verb=ecart=$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication96','imageindication96');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication96"></a><div class=inner id="innerindication96" style="display:none;"><ol class="enumeratechiffre">
+<li> $(\sqrt x-\sqrt y)^2\geq 0$. 
+<li> Appliquer la question précédente. 
+<li> Une suite croissante et majorée converge. Pour démontrer l'égalité des limites, passer à la limite dans une des deux équations.
+<li> 
+<li> Comparer les suites obtenues avec $u_0=a$, $v_0=b$ et celles obtenues avec $u'_0=a$ et $v'_0=b$.
+<li> Il suffit de calculer les termes successifs jusqu'à ce que $u_n-v_n\leq \veps$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige96','imagecorrige96',96);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige96"></a><div class=inner id="innercorrige96" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de remarquer que $(\sqrt x-\sqrt y)^2\geq 0$ et de développer cette inégalité.
+<li> On remarque d'abord que les suites sont bien définies (en particulier, elles sont toujours positives).
+L'inégalité $u_n\geq v_n$ est une conséquence immédiate de la question précédente, avec $x=u_{n-1}$ 
+et $y=v_{n-1}$. De plus, on a :
+$$u_{n+1}=\frac{u_n+v_n}2\leq \frac{u_n+u_n}2\leq u_n.$$
+De même, 
+$${v_{n+1}}=\sqrt{u_nv_n}\geq \sqrt{v_nv_n}=v_n.$$
+<li> La suite $(u_n)$ est décroissante et minorée par 0. Elle est donc convergente vers un réel $l_1$.
+La suite $(v_n)$ est croissante, et, pour tout entier $n$,
+$$v_n\leq u_n\leq u_1.$$
+Elle est donc majorée par $u_1$. Ainsi, $(v_n)$ est convergente vers $l_2$. En passant à la limite dans la relation $u_{n+1}=\frac{u_n+v_n}2$, on trouve que $l_1$ et $l_2$ vérifient l'équation 
+$$\frac{l_1+l_2}2=l_1\implies l_1=l_2.$$
+<li> Si $b=0$, alors on constate facilement que $(v_n)$ est la suite identiquement nulle, et donc 
+$M(a,0)=0$.
+<li> On considère les suites $(u'_n)$ et $(v'_n)$ vérifiant les mêmes relations de récurrence que
+$(u_n)$ et $(v_n)$, mais avec pour conditions initiales $u'_0=\lambda a$ et $v'_0=\lambda b$. Il est facile de prouver
+par récurrence sur $n\in\mathbb N$ que $u'_n=\lambda u_n$ et $v'_n=\lambda v_n$. Ainsi, on en déduit par passage à la limite que 
+$M(\lambda a,\lambda b)=\lambda M(a,b)$.
+<li> L'algorithme calcule les termes successifs des suites $(u_n)$ et $(v_n)$ jusqu'à ce que $u_n-v_n&lt;ecart$. Par rapport à la définition des suites de l'exercice, on prend juste garde à ce qu'on est toujours $u_n\geq v_n$, même au premier rang. On doit faire intervenir une variable supplémentaire pour le calcul successif des termes des suites (car on a une récurrence croisée).
+Codé sous Python, ceci donne : 
+<pre><code class="language-python">import math
+def moyenne(a,b,ecart):
+  if (a&gt;b) :
+      u=a
+      v=b
+  else:
+      u=b
+      v=a
+  while ((u-v)&gt;ecart) :
+      w=u
+      u=(u+v)/2
+      v=math.sqrt(w*v)
+  return u,v
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater2494"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2494"),	max:5, rating:2.2631578947368, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2494,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode d'Archimède <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2494.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(2494,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2494','imageenonce2494');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2494"></a><div class=inner id="innerenonce2494">On définit deux suites $(p_n)$ et $(q_n)$ par les formules suivantes :
+$$\left\{
+\begin{array}{rcl}
+ p_0&=&\displaystyle \frac{3\sqrt 3}2\\
+ q_0&=&3\sqrt 3\\
+ q_{n+1}&=&\displaystyle \frac{2p_nq_n}{p_n+q_n}\\
+ p_{n+1}&=&\displaystyle \sqrt{p_n q_{n+1}}
+\end{array}
+\right.
+$$
+On admettra que les suites $(p_n)$ et $(q_n)$ sont bien définies et vérifient, pour tout $n\in\mathbb N$, $p_n&gt;0$ et $q_n&gt;0$.
+Pour les quatre premières questions, on fera très attention à la nécessité, ou non, d'utiliser un raisonnement par récurrence.
+<ol class="enumeratechiffre">
+ <li> Montrer que, pour tout $n\in\mathbb N$, on a $p_n\leq q_n$.
+ <li> En déduire que la suite $(q_n)$ est décroissante.
+ <li> Montrer que, pour tout $n\in\mathbb N$, on a $p_n\leq q_{n+1}$. 
+ <li> En déduire que la suite $(p_n)$ est croissante. 
+ <li> <ol class="enumeratechiffre">
+ <li> Vérifier que, si $x,y$ sont des réels strictement positifs, alors $\frac{2xy}{x+y}\leq\frac 12(x+y)$.
+ <li> En déduire que, pour tout entier naturel $n$, on a 
+ $$q_{n+1}-p_{n+1}\leq \frac 12\left(q_n-p_n\right).$$
+ </ol>
+ <li> Démontrer que les suites $(p_n)$ et $(q_n)$ sont adjacentes. On note $\ell$ leur limite.
+ <li> &Eacute;crire un algorithme donnant un encadrement de $\ell$ à $10^{-10}$ près.
+ <li> Dans la suite, on souhaite déterminer la valeur de $\ell$ (et donner une explication géométrique à la construction de ces deux suites).
+ On se place dans le plan muni d'un repère orthonormé. Soit $\theta\in [0,\pi]$ et $A(\theta)$ le point d'affixe $e^{i\theta}$. Démontrer que
+ la distance $A(0)A(\theta)$ vaut $2\sin(\theta/2)$.
+ <li> Pour $n\in\mathbb N$, on note $u_n$ la moitié du périmètre d'un polygone régulier inscrit dans le cercle unité à $3\times 2^n$ côtés. Démontrer que 
+ $$u_n=3\times 2^n\times\sin(a_n)$$
+ où $a_n=\frac{\pi}{3\times 2^n}$.
+ <li> On définit de même la suite $(v_n)$ pour $n\in\mathbb N$ par 
+ $$v_n=3\times 2^n\times\tan(a_n).$$
+ On démontre que, pour $n\in\mathbb N$, $v_n$ est la moitié du périmètre d'un polygone régulier à $3\times 2^n$ côtés dont le cercle inscrit est le cercle unité.<br>
+ Vérifier que, pour tout $n\in\mathbb N$, 
+ $$u_{n+1}=\sqrt{u_n v_{n+1}}\textrm{ et }v_{n+1}=\frac{2u_nv_n}{u_n+v_n}.$$
+ <li> Que peut-on en déduire sur les suites $(u_n)$, $(v_n)$, $(p_n)$ et $(q_n)$?
+ <li> Quelle est la limite commune des suites $(p_n)$ et $(q_n)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2494','imageindication2494');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2494"></a><div class=inner id="innerindication2494" style="display:none;"><ol class="enumeratechiffre">
+ <li> Procéder par récurrence et utiliser le quotient $p_{n+1}/q_{n+1}$.
+ <li> Utiliser l'expression de $q_{n+1}$ en fonction de $q_n$.
+ <li> Utiliser l'expression de $q_{n+1}$ en fonction de $p_n$.
+ <li> En déduire que la suite $(p_n)$ est croissante. 
+ <li> <ol class="enumeratechiffre">
+ <li> Partir de $(x-y)^2\geq 0$.
+ <li> Ne remplacer que $q_{n+1}$ par son expression et utiliser la question précédente. Utiliser aussi la croissance de la suite $(p_n)$.
+ </ol>
+ <li> Majorer (par récurrence) $q_n-p_n$.
+ <li> &Eacute;crire un algorithme donnant un encadrement de $\ell$ à $10^{-10}$ près.
+ <li> Utiliser des coordonnées.
+ <li> 
+ <li> Remarquer que $a_{n+1}=a_n/2$ et utiliser des formules de trigonométrie.
+ <li> Que peut-on en déduire sur les suites $(u_n)$, $(v_n)$, $(p_n)$ et $(q_n)$?
+ <li> Quelle est la limite commune des suites $(p_n)$ et $(q_n)$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2494','imagecorrige2494',2494);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2494"></a><div class=inner id="innercorrige2494" style="display:none;"><ol class="enumeratechiffre">
+ <li> Notons, pour $n\in\mathbb N$, $\mathcal P(n)$ la propriété ``$p_n\leq q_n$''. Démontrons
+ par récurrence sur $n$ que la propriété $\mathcal P(n)$ est vérifiée.<br>
+ Initialisation : On a $p_0=q_0/2$ et donc $p_0\leq q_0$. La propriété $\mathcal P(0)$ est vérifiée.<br>
+ Hérédité : Soit $n\in\mathbb N$ tel que $\mathcal P(n)$ est vérifiée. Alors on a
+ $$\frac{p_{n+1}}{q_{n+1}}=\frac{\sqrt{p_n q_{n+1}}}{q_{n+1}}=\frac{\sqrt p_n}{\sqrt {q_{n+1}}}=\frac{\sqrt{p_n+q_n}}{\sqrt{2q_n}}.$$
+ Or, par hypothèse de récurrence, on a $0\leq p_n+q_n\leq 2q_n$. Puisque la fonction racine carrée est croissante, on a 
+ $0\leq\sqrt{p_n+q_n}\leq \sqrt{2q_n}$ et donc $p_{n+1}\leq q_{n+1}$. La propriété $\mathcal P(n+1)$ est vraie.<br>
+ Conclusion : Par le principe de récurrence, pour tout $n\in\mathbb N$, on a $p_n\leq q_n$. 
+ <li> Soit $n\in\mathbb N$. Par la question précédente, on a 
+ $$0&lt;2p_n\leq p_n+q_n\implies \frac{2p_n}{p_n+q_n}\leq 1$$
+ et donc $q_{n+1} \leq q_n$. La suite $(q_n)$ est décroissante.
+ <li> Soit $n\in\mathbb N$. On a 
+ $$\frac{q_{n+1}}{p_n}=\frac{2q_n}{p_n+q_n}$$
+ et en utilisant que $p_n\leq q_n$, on démontre de la même façon que précédemment que $\frac{2q_n}{p_n+q_n}\geq 1$. Ceci prouve
+ que $q_{n+1}\geq p_n$.
+ <li> Soit $n\in\mathbb N$. On a 
+ $$\frac{p_{n+1}}{p_n}=\sqrt{\frac{q_{n+1}}{p_n}}.$$
+ On conclut que $p_{n+1}\leq p_n$ en utilisant le résultat de la question précédente et la croissance de la fonction racine carrée.
+ <li> <ol class="enumeratechiffre">
+ <li> On sait que $(x-y)^2\geq 0$. Développant cette inégalité, on a $x^2+y^2-2xy\geq 0$. Ajoutons $4xy$. On trouve
+ $(x+y)^2=x^2+y^2+2xy\geq 4xy$. Il suffit ensuite de diviser par $x+y&gt;0$ pour obtenir le résultat voulu.
+ <li> Remplaçant $q_{n+1}$ par sa valeur et utilisant le résultat de la question précédente, on a
+ $$q_{n+1}-p_{n+1}=\frac{2p_nq_n}{p_n+q_n}-p_{n+1}\leq \frac 12\left(p_n+q_n-2p_{n+1}\right).$$
+ Ensuite, par croissance de la suite $(p_n)$, on a $p_n\leq p_{n+1}$ et donc 
+ $$p_n+q_n-2p_{n+1}\leq p_n+q_n-2p_n=q_n-p_n.$$
+ Le résultat en découle. 
+ </ol>
+ <li> On a $q_0-p_0=\frac{3\sqrt 3}2$, et on sait que pour tout $n\in\mathbb N$, 
+ $$q_{n+1}-p_{n+1}\leq \frac 12\left(q_n-p_n\right).$$
+ Par une récurrence facile dont la rédaction est laissée au lecteur, on a pour tout $n\in\mathbb N$, 
+ $$q_n-p_n\leq \frac{3\sqrt 3}2\left(\frac 12\right)^n.$$
+ Puisque de plus $q_n-p_n\geq 0$, on déduit du théorème des gendarmes que $(q_n-p_n)$ tend vers 0.
+ Comme on savait déjà que $(p_n)$ est croissante et que $(q_n)$ est décroissante, on obtient bien que les deux suites 
+ $(p_n)$ et $(q_n)$ sont adjacentes.
+ <li> Il y a deux points un peu subtils dans l'algorithme. D'abord, du fait que les $(p_n)$ et $(q_n)$ sont adjacentes, on a pour tout $n\in\mathbb N$, 
+ $p_n\leq \ell\leq q_n$. Il suffit que $q_n-p_n\leq 10^{-10}$ pour avoir un encadrement de $\ell$ à $10^{-10}$ près. D'autre part, pour le calcul successif
+ des termes de la suite à l'intérieur d'une boucle Tant que, il est préférable de calculer d'abord $q_{n+1}$ (qui utilise les "anciennes valeurs"
+ $p_n$ et $q_n$), puis $p_{n+1}$ (qui utilise l'ancien $p_n$, mais le nouveau $q_n$). Ceci donne en Python :
+<pre><code class="language-python">from math import *
+
+p=3*sqrt(3)/2
+q=3*sqrt(3)
+
+while (q-p)&gt;10**(-10):
+    q=(2*p*q)/(p+q)
+    p=sqrt(p*q)
+
+print p,q
+</code></pre>
+ <li> En utilisant (par exemple) les coordonnées de $A(0)$ et de $A(\theta)$, et la formule de trigonométrie $1-\cos u=2\sin^2(u/2)$, on a
+ \begin{eqnarray*}
+  A(0)A(\theta)&=&\sqrt{(1-\cos\theta)^2+\sin^2\theta}\\
+  &=&\sqrt{1-2\cos\theta+\cos^2\theta+\sin^2\theta}\\
+  &=&\sqrt{2-2\cos\theta}\\
+  &=&2\sqrt{\sin^2(\theta/2)}\\
+  &=&2\sin(\theta/2)
+ \end{eqnarray*}
+ puisque $\sin(\theta/2)\geq 0$ lorsque $\theta\in [0,\pi]$.
+ <li> Les points $A(e^{\frac{ik2\pi}{3\cdot 2^n}})$, pour $k=0,\dots,n-1$, sont les sommets d'un polygone régulier à $3\times 2^n$ côtés inscrit dans le cercle unité.
+ Son périmètre vaut $3\times 2^n A(0)A(e^{\frac{i2\pi}{3\times 2^n}})$. La question précédente donne alors le résultat.
+ <li> Remarquons que $a_{n+1}=a_n/2$. On en déduit que 
+ $$\sqrt{\sin(a_n)\tan(a_{n+1})}=\sqrt{2\sin(a_{n+1})\cos(a_{n+1})\tan(a_{n+1})}=\sqrt 2 \sin(a_{n+1)}$$
+ (car $\sin(a_{n+1})\geq 0$). Ceci donne facilement $u_{n+1}=\sqrt{u_n v_{n+1}}$. De la même façon, on écrit que 
+ \begin{eqnarray*}
+ \frac{2\sin(a_n)\tan(a_n)}{\sin(a_n)+\tan(a_n)}&=&\frac{2\sin(a_n)\sin(a_n)}{\sin(a_n)\cos(a_n)+\sin(a_n)}\\
+ &=&\frac{2\sin(a_n)}{1+\cos(a_n)}\\
+ &=&\frac{4\sin^2(a_n/2)\cos(a_n/2)}{2\cos^2(a_n/2)}\\
+ &=&2\tan(a_n/2).
+ \end{eqnarray*}
+ Ceci donne la relation $v_{n+1}=\frac{2u_n v_n}{u_n+v_n}$.
+ <li> On remarque que $u_0=p_0$ et que $v_0=q_0$. De plus, les relations de récurrence liant $u_{n+1}$ et $v_{n+1}$ à $u_n$ et $v_n$
+ sont les mêmes que les relations de récurrence liant $p_{n+1}$ et $q_{n+1}$ à $p_n$ et $q_n$. Ainsi, on déduit (par récurrence laissée au lecteur...)
+ que pour tout $n\in\mathbb N$, on a $u_n=p_n$ et $v_n=q_n$.
+ <li> Puisque $\sin x\sim_0 x$, on a 
+ $$u_n=3\times 2^n\times\sin(a_n)\sim_{+\infty} 3\times 2^n\times \frac{\pi}{3\times 2^n}=\pi.$$
+ Ainsi, la suite $(u_n)$ converge vers $\pi$. Il en est de même des suites $(p_n)$ et $(q_n)$.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

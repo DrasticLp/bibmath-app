@@ -1,0 +1,964 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices math sup : variables aléatoires finies</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices math sup : variables aléatoires finies</h1>
+<div class=titrepartie>Calculs de lois, d'espérances, de variances</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1253"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1253"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1253,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi d'un dé truqué <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1253.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1253,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1253','imageenonce1253');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1253"></a><div class=inner id="innerenonce1253">On considère un dé cubique truqué dont les faces sont numérotés de 1 à 6 et on note $X$ la variable aléatoire donnée par le numéro de la face du dessus. On suppose que le dé est truqué de sorte que la probabilité d'obtenir une face est proportionnelle au numéro inscrit sur cette face. 
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $X$, calculer son espérance.
+<li> On pose $Y=1/X$. Déterminer la loi de $Y$, et son espérance.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1253','imageindication1253');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1253"></a><div class=inner id="innerindication1253" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser que $\sum_{k=1}^6 P(X=k)=1$, pour déterminer la loi de $X$.
+<li> $P(Y=1/k)=P(X=k)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1253','imagecorrige1253',1253);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1253"></a><div class=inner id="innercorrige1253" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ prend ses valeurs dans $\{1,\dots,6\}$. Par hypothèse, il existe un réel $a$ tel que $P(X=k)=ka$. Maintenant,
+puisque $P_X$ est une loi de probabilité, on a : 
+$$\sum_{k=1}^6 P(X=k)=1\iff a\frac{6\times 7}{2}=1\implies a=1/21.$$
+On a donc :
+$$\begin{array}{c|c|c|c|c|c|c}
+k&1&2&3&4&5&6\\
+\hline
+P(X=k)&\frac{1}{21}&\frac{2}{21}&\frac{3}{21}&\frac{4}{21}&\frac{5}{21}&\frac{6}{21}
+\end{array}$$
+On vérifie aisément en appliquant la formule $E(X)=\sum_{k=1}^6 kP(X=k)$ que $E(X)=\frac{13}{3}.$
+<li> On a $X=k\iff Y=1/k$. $Y$ prend donc ses valeurs dans $\{1,1/2,1/3,1/4,1/5,1/6\}$, et la loi est donnée par :
+$$\begin{array}{c|c|c|c|c|c|c}
+1/k&1/1&1/2&1/3&1/4&1/5&1/6\\
+\hline
+P(Y=1/k)&\frac{1}{21}&\frac{2}{21}&\frac{3}{21}&\frac{4}{21}&\frac{5}{21}&\frac{6}{21}
+\end{array}$$
+Le calcul de l'espérance n'est pas plus difficile, et donne :
+$$E(Y)=\frac{2}{7}.$$
+Attention à l'erreur suivante : ce n'est pas parce que $Y=1/X$ que $E(Y)=1/E(X)!!!$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2257"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2257"),	max:5, rating:0.94642857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2257,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En plein dans le mille! <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2257.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2257,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2257','imageenonce2257');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2257"></a><div class=inner id="innerenonce2257">Un joueur tire sur une cible de 10cm de rayon, constituée de couronnes concentriques,
+délimitées par des cercles de rayons 1,2, ..., 10 cm, et numérotées respectivement de 10 à 1. La
+probabilité d’atteindre la couronne $k$ est proportionnelle à l’aire de cette couronne, et on suppose que
+le joueur atteint sa cible à chaque lancer. Soit $X$ la variable aléatoire qui à chaque lancer associe le numéro de la cible.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de probabilité de X ?
+<li> Le joueur gagne $k$ euros s’il atteint la couronne numérotée $k$ pour $k$ compris entre 6 et 10, tandis qu’il perd 2 euros s’il atteint l’une des couronnes périphériques numérotées de 1 à 5. Le jeu est-il
+favorable au joueur ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2257','imageindication2257');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2257"></a><div class=inner id="innerindication2257" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer l'aire de chaque couronne.
+<li> Introduire la variable aléatoire égale au gain algébrique du joueur, puis calculer l'espérance de cette variable aléatoire.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2257','imagecorrige2257',2257);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2257"></a><div class=inner id="innercorrige2257" style="display:none;"><ol class="enumeratechiffre">
+<li> On note $A_k$ l'aire de la couronne $k$, et $A$ l'aire totale. Par les hypothèses d'équiprobabilité faites dans l'énoncé, on a 
+$$P(X=k)=\frac{A_k}{A}$$
+pour $k$ compris entre $1$ et $10$. Pour la couronne $k$, le cercle extérieur est de rayon $11-k$ et le cercle intérieur de rayon $10-k$ (un petit dessin pourra aider pour faire attention à l'inversion entre l'ordre des cercles et les rayons,  et il faut aussi bien faire attention à ce que pour $k=1$, c'est $11-k=10$ qui donne le rayon de la cible). On a donc, en $cm^2$, $A_k=\pi\big((11-k)^2-(10-k)^2)=\pi(21-2k)$. On en déduit que
+$$P(X=k)=\frac{21-2k}{100}.$$
+<li> Notons $Y$ la variable aléatoire correspondant au gain algébrique du joueur. $Y$ prend ses valeurs dans $-2,6,7,8,9,10$. L'événement $"Y=-2"$ est égal à l'événement $"X\leq 5"$, et donc 
+$$P(Y=-2)=P(X=1)+P(X=2)+P(X=3)+P(X=4)+P(X=5)=\frac{75}{100}$$
+d'après le résultat de la question précédente. 
+D'autre part, pour $k=6,\dots,10$, on a 
+$$P(Y=k)=P(X=k).$$
+On en déduit le calcul de l'espérance de $Y$ :
+$$E(Y)=-2\times\frac{75}{100}+\frac{6\times 9+7\times 7+8\times 5+9\times 3+10\times 1}{100}=\frac{3}{10}.$$
+L'espérance est positive. Le jeu est favorable au joueur. En moyenne, il peut espérer gagne 0,3 euros par partie.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2253"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2253"),	max:5, rating:1.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2253,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Plus grand nombre tiré <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2253.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2253,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2253','imageenonce2253');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2253"></a><div class=inner id="innerenonce2253">On lance deux dés parfaitement équilibrés. On note $X$ le plus grand des numéros obtenus. Déterminer la loi de la variable aléatoire $X$.</div></div><div class=indication><a href="javascript:showAll('innerindication2253','imageindication2253');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2253"></a><div class=inner id="innerindication2253" style="display:none;">Définir un univers adapté à l'expérience aléatoire, et écrire les événements $X=k$ en fonction des événements élémentaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2253','imagecorrige2253',2253);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2253"></a><div class=inner id="innercorrige2253" style="display:none;">On choisit pour univers $\Omega=\{1,\dots,6\}^2$ que l'on munit de la probabilité uniforme puisque les deux dés sont équilibrés. Remarquons que le cardinal de $\Omega$ vaut $36$. $X$ prend ses valeurs dans $\{1,\dots,6\}$. L'événement $X=1$ est égal à $\{(1,1)\}$ et donc 
+$$P(X=1)=\frac{1}{36}.$$
+De même, on a
+\begin{eqnarray*}
+P(X=2)&=&P\big(\{(1,2);(2,1);(2,2)\}\big)=\frac 1{12}\\
+P(X=3)&=&P\big(\{(1,3);(2,3);(3,3);(3,1);(3,2)\}\big)=\frac 5{36}\\
+P(X=4)&=&P\big(\{(1,4);(2,4);(3,4);(4,4);(4,3);(4,2);(4,1)\}\big)=\frac7{36}\\
+P(X=5)&=&P\big(\{(1,5);(2,5);(3,5);(4,5);(5,5);(5,4);(5,3);(5,2);(5,1)\}\big)=\frac 14\\
+P(X=6)&=&P\big(\{(1,6);(2,6);(3,6);(4,6);(5,6);(6,6);(6,5);(6,4);(6,3);(6,2);(6,1)\}\big)=\frac{11}{36}.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1255"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1255"),	max:5, rating:2.36, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1255,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vaches laitières <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1255.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1255,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1255','imageenonce1255');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1255"></a><div class=inner id="innerenonce1255">Les vaches laitières sont atteintes par une maladie $M$ avec la probabilité $p=0,15$. Pour dépister la maladie $M$ dans une étable de $n$ vaches, on fait procéder à une analyse de lait. Deux méthodes sont possibles :
+<ul class="rien">
+<li> Première méthode : On fait une analyse sur un échantillon de lait de chaque vache.
+<li> Deuxième méthode : On effectue d'abord une analyse sur un échantillon de lait provenant du mélange des $n$ vaches. Si le résultat est positif, on effectue une nouvelle analyse, cette fois pour chaque vache.
+</ul>
+On voudrait connaître la méthode la plus économique (=celle qui nécessite en moyenne le moins d'analyse). Pour cela, on note $X_n$ la variable aléatoire du nombre 
+d'analyses réalisées dans la deuxième méthode. On pose $Y_n=\frac{X_n}{n}.$
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $Y_n$, et montrer que son espérance vaut : $1+\frac{1}{n}-(0.85)^n$.
+<li> Etudier la fonction $f(x)=ax+\ln x$, pour $a=\ln(0,85)$. Donner la liste des entiers $n$ tels que $f(n)&gt;0$.
+<li> Montrer que $f(n)&gt;0$ équivaut à $E(Y_n)&lt;1$. En déduire la réponse (en fonction de $n$) à la question posée.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1255','imageindication1255');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1255"></a><div class=inner id="innerindication1255" style="display:none;"><ol class="enumeratechiffre">
+<li> $Y_n$ ne prend que deux valeurs. Calculer la probabilité de chacune.
+<li> Montrer que $f$ admet un maximum en $-1/a$.
+<li> Pour la première méthode, on fait constamment $n$ prélèvements. Donc, il faut choisir la deuxième méthode si, et seulement si, $E(Y_n)&lt;1$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1255','imagecorrige1255',1255);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1255"></a><div class=inner id="innercorrige1255" style="display:none;"><ol class="enumeratechiffre">
+<li> $Y_n$ ne prend que deux valeurs, $1/n$ et $1+1/n$. On a en outre :
+$$(Y_n=1/n)\iff\textrm{ aucune vache n'est malade}$$
+d'où $P(Y_n=1/n)=0,85^n.$
+On en déduit que $P(Y_n=1+1/n)=1-(0,85)^n$. Le calcul de l'espérance donne :
+$$E(Y_n)=\frac{0,85^n}{n}+\frac{n+1}{n}(1-0,85^n)=1+\frac{1}{n}-0,85^n.$$
+<li> $f$ est dérivable sur $]0,+\infty[$, et $f'(x)=\frac{1+ax}{x}$. $f'(x)$ est donc du signe de $1+ax$, ce qui permet de dire que 
+$f$ est croissante sur $]0,-1/a[$, et décroissante ensuite. La limite de $f$ en $+\infty$ est $-\infty$, il en est de même en 0. En calculant les valeurs
+successives de $f(n)$, on a $f(17)&gt;0,07$ et $f(18)&lt;-0,03$. $17$ est donc la plus grande valeur entière pour laquelle $f(n)$ est positive. En outre, $f(1)&lt;0$ alors que $f(2)&gt;0$. L'ensemble d'entiers recherché est donc $\{2,\dots,17\}$.
+<li> On a :
+\begin{eqnarray*}
+E(Y_n)&lt;1&\iff&1+\frac{1}{n}-0,85^n&lt;1\\
+&\iff&0,85^n&gt;\frac{1}{n}\\
+&\iff&n\ln(0,85)&gt;-\ln n.
+\end{eqnarray*}
+Par suite, $E(Y_n)&lt;1\iff f(n)&gt;0$. L'étude précédente montre que les entiers $n$ pour lesquels $f(n)&gt;0$ est $\{2,\dots,17\}$. On a intérêt à choisir la deuxième méthode si, et seulement si,
+il y a de 2 à 17 vaches dans l'étable!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1256"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1256"),	max:5, rating:1.952380952381, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1256,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Recrutement <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1256.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1256,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1256','imageenonce1256');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1256"></a><div class=inner id="innerenonce1256">Une entreprise souhaite recruter un cadre. $n$ personnes se présentent pour le poste. Chacun d'entre eux passe à tour de rôle un test, et le premier qui réussit le test est engagé. La probabilité de réussir le test est $p\in ]0,1[$. On pose également $q=1-p$. On définit la variable aléatoire $X$ par $X=k$ si le $k$-ième candidat qui passe le test est engagé, et $X=n+1$ si personne n'est engagé.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $X$.
+<li> En dérivant la formule donnant $\sum_{k=0}^n x^k$, calculer $\sum_{k=1}^n kx^{k-1}$ pour $x\neq 1$.
+<li> En déduire l'espérance de $X$.
+<li> Quelle est la valeur minimale de $p$ pour avoir plus d'une chance sur deux de recruter l'un des candidats?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1256','imageindication1256');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1256"></a><div class=inner id="innerindication1256" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la formule des probabilités composées.
+<li> Utiliser la formule de la somme d'une série géométrique.
+<li> Combiner les questions précédentes.
+<li> On recrute un candidat si l'événément $X\leq n$ est réalisé.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1256','imagecorrige1256',1256);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1256"></a><div class=inner id="innercorrige1256" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $\Omega$ l'univers associé à l'expérience. On a bien sûr $X(\Omega)=\{1,\dots,n+1\}$.
+Pour $i=1,\dots,n$, on note $A_i$ l'événement : le i-ème candidat réussit le test. Pour $k\leq n$, on a 
+$$(X=k)=\overline{A_1}\cap\overline{A_2}\cap\dots\cap \overline{A_{k-1}}\cap A_k.$$
+Par la formule des probabilités composées, on trouve
+$$P(X=k)=P(\overline{A_1})P_{\overline{A_1}}(\overline{A_2})\dots P_{\overline{A_1}\cap\dots\cap \overline{A_{k-1}}}( A_k).$$
+Mais pour tout $j$, $P_{\overline{A_1}\cap\dots\cap \overline{A_{j-1}}}(\overline{A_j})$ est juste la probabilité que le candidat échoue au test (qu'il ne passe que si les candidats précédents ont tous échoué). Cette probabilité vaut donc $q=1-p$. Finalement, on trouve donc
+$$P(X=k)=q^{k-1}p.$$
+D'autre part, $P(X=n+1)$ est la probabilité que tous les candidats échouent au test. On a donc
+$$P(X=n+1)=q^{n}.$$
+<li> Posons $f(x)=\sum_{k=0}^n x^k=\frac{1-x^{n+1}}{1-x}.$ La fonction est dérivable sur $\mathbb R\backslash\{1\}$. En dérivant des deux côtés de l'égalité, on obtient 
+$$\sum_{k=1}^n kx^{k-1}=\frac{nx^{n+1}-(n+1)x^n+1}{(1-x)^2}.$$
+<li> L'espérance de $X$ vaut donc 
+$$E(X)=\sum_{k=1}^n kq^{k-1}p+(n+1)q^n.$$
+En tenant compte du résultat de la question précédente, et après simplifications, on trouve
+$$E(X)=\frac{1-q^{n+1}}{1-q}.$$
+<li> Un des candidats est recruté si et seulement si l'événement $X\leq n$ est réalisé. Il vient
+$$P(X\leq n)=1-P(X=n+1)=1-q^n.$$
+On a $$P(X\leq n)\geq 1/2\iff q^n\leq \frac 12\iff p\geq 1-\frac 1{\sqrt[n]2}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1260"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1260"),	max:5, rating:2.3076923076923, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1260,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Génotype <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1260.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1260,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1260','imageenonce1260');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1260"></a><div class=inner id="innerenonce1260">On s'intéresse à une maladie génétique. Elle est portée par un gène particulier qui existe en deux formes : l'allèle A (sain), et l'allèle B (malade). Il existe donc par chaque individu trois génotypes possibles : 1 (A A), 2 (A B) et 3 (B B). Un individu est malade lorsqu'il porte le génotype (B B). Le but de l'exercice est de démontrer que la proportion de malades est constante au cours du temps.<br>
+Pour cela, on s'intéresse à une population dont la proportion du génotype $i$, à la génération $n$, est noté $u_i(n)$. On rappelle que chaque enfant reçoit un des deux allèles de chacun de ses parents (et ce de façon complètement aléatoire). On suppose aussi que les procréations dans la population se font complètement aléatoirement.<br>
+On fixe $n\geq 0$ et on note $E$ le génotype d'un enfant de la $n+1$-ième génération, $P$ et $M$ les génotypes respectifs du père et de la mère.
+<ol class="enumeratechiffre">
+<li> Calculer les probabilités conditionnelles $P(E=1| (P,M)=(i,j) )$.
+<li> En déduire la loi de $E$ en fonction de $u_i(n)$. 
+<li> On pose $\theta(n)=u_1(n)+\frac 12 u_2(n)$. Exprimer $u_{i}(n+1)$ en fonction de $\theta(n)$.
+<li> Démontrer que la proportion de malades ne varie plus à partir de la génération $2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1260','imageindication1260');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1260"></a><div class=inner id="innerindication1260" style="display:none;"><ol class="enumeratechiffre">
+<li> Interpréter les données de l'énoncé sur la transmission des gènes.
+<li> $P(E=1)$ s'obtient par la formule des probabilités totales, et $P(E=3)$ est facile à calculer par symétrie.
+<li> Utiliser le résultat de la question précédente, et le fait que $u_1(n)+u_2(n)+u_3(n)=1$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1260','imagecorrige1260',1260);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1260"></a><div class=inner id="innercorrige1260" style="display:none;"><ol class="enumeratechiffre">
+<li> En utilisant les informations de l'énoncé sur l'héritage des gènes, on trouve 
+\begin{eqnarray*}
+ P\big (E=1| (P,M)=(1,1)\big)&=&1\\
+ P\big (E=1| (P,M)=(1,2)\big) =P\big (E=1| (P,M)=(2,1)\big) &=&\frac 12\\
+ P\big (E=1| (P,M)=(1,3)\big) =P\big (E=1| (P,M)=(3,1)\big) &=&0\\
+ P\big (E=1| (P,M)=(2,2)\big)&=&\frac 14\\
+ P\big (E=1| (P,M)=(2,3)\big) =P\big (E=1| (P,M)=(3,2)\big) &=&0\\
+ P\big (E=1| (P,M)=(3,3)\big)&=&0.
+\end{eqnarray*}
+On vérifie que l'on a bien écrit les 9 cas possibles pour $(P,M)$.
+<li> On calcule $P(E=1)$ par la formule des probabilités totales :
+$$P(E=1)=\sum_{i=1}^3 \sum_{j=1}^3 P\big (E=1 | (P,M)=(i,j) \big)\times P\big( (P,M)=(i,j)\big).$$
+Les procréations étant supposées aléatoires, on a aussi 
+$$P\big( (P,M)=(i,j)\big) =u_i(n)u_j(n).$$
+On en déduit 
+$$P(E=1)=u_1(n)^2+\frac 12 u_1(n)u_2(n)+\frac 12 u_2(n)u_1(n)+\frac 14 u_2(n)^2=\left(u_1(n)+\frac 12 u_2(n)\right)^2.$$
+Il est facile de calculer $P(E=3)$. Par symétrie des rôles de $A$ et $B$, on a en effet 
+$$P(E=3)=\left(u_3(n)+\frac 12 u_2(n)\right)^2.$$
+Enfin, 
+$$P(E=2)=1-P(E=1)-P(E=3)=1-\left(u_1(n)+\frac 12 u_2(n)\right)^2-\left(u_3(n)+\frac 12 u_2(n)\right)^2.$$
+<li> On a 
+$$u_1(n+1)=P(E=1)=\theta(n)^2.$$
+De plus, $u_1(n)+u_2(n)+u_3(n)=1$, ce qui fait que 
+$$u_3(n)+\frac {u_2(n)}2=1-\theta(n).$$
+Ainsi, 
+$$u_3(n+1)=\big(1-\theta(n)\big)^2$$
+et 
+$$u_2(n+1)=1-\theta(n)^2-\big(1-\theta(n)\big)^2.$$
+<li> Calculons $\theta_{n+1}$ en fonction de $\theta(n)$, pour $n\geq 1$. On a 
+\begin{eqnarray*}
+\theta(n+1)&=&u_1(n+1)+\frac{u_2(n+1)}2\\
+&=&\theta(n)^2+\frac 12-\frac {\theta(n)^2}2-\frac{\big(1-\theta(n)\big)^2}2\\
+&=&\theta(n).
+\end{eqnarray*}
+Ainsi, pour $n\geq 1$, on a $\theta(n+1)=\theta(n)$ et donc d'après la question précédente, $u_i(n+2)=u_i(n+1)$. La proportion de malades dans la population ne varie plus à partir de la génération $2$.
+</ol></div></div></div>
+
+<div class=titrepartie>Loi uniforme</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2262"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2262"),	max:5, rating:1.3888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2262,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver le paramètre d'une loi uniforme connaissant son espérance <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2262.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2262,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2262','imageenonce2262');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2262"></a><div class=inner id="innerenonce2262">Soit $X$ une variable aléatoire suivant une loi uniforme sur $\{0,1,\dots,a\}$, où $a\in\mathbb N$. On suppose que $E(X)=6$. Déterminer $a$.</div></div><div class=indication><a href="javascript:showAll('innerindication2262','imageindication2262');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2262"></a><div class=inner id="innerindication2262" style="display:none;">Calculer $E(X)$ en fonction de $a$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2262','imagecorrige2262',2262);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2262"></a><div class=inner id="innercorrige2262" style="display:none;">On a $E(X)=\frac1{a+1}\big(0+1+\dots+a\big)=\frac a2$. On en déduit donc que $a=12$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1263"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1263"),	max:5, rating:1.7222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1263,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Uniformément uniforme <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1263.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1263,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1263','imageenonce1263');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1263"></a><div class=inner id="innerenonce1263">On dispose de $n$ urnes numérotées de $1$ à $n$, l'urne numérotée $k$
+comprenant $k$ boules numérotées de $1$ à $k$ indiscernables au toucher. On réalise l'expérience aléatoire suivante. On choisit d'abord au hasard et sans préférence une urne, puis on prélève une boule dans cette urne. On note $X$ le numéro de l'urne choisie et on note $Y$ le numéro de la boule tirée.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de la variable aléatoire $X$?
+<li> Pour $(i,k)\in\{1,\dots,n\}^2$, déterminer $P(Y=k|X=i)$.
+<li> Déterminer la loi de $Y$.
+<li> Quelle est l'espérance de $Y$? Comment l'interprétez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1263','imageindication1263');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1263"></a><div class=inner id="innerindication1263" style="display:none;">Calculer $P(Y=k)$ en utilisant la formule des probabilités totales. Pour calculer l'espérance, on applique la définition et on permute les sommes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1263','imagecorrige1263',1263);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1263"></a><div class=inner id="innercorrige1263" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ suit une loi uniforme sur $\{1,\dots,n\}$.
+<li> On a  $P(Y=k|X=i)$ vaut $1/i$ si $k\leq i$ et $0$ si $k&gt;i$, puisqu'on tire uniformément une boule numérotée de $1$ à $i$. 
+<li> D'après la formule des probabilités totales, les événements $(X=1)$, $(X=2),\dots,(X=n)$ formant une partition de l'univers et étant de probabilité non nulle,
+$$P(Y=k)=\sum_{i=1}^n P(Y=k|X=i)P(X=i)=\sum_{i=1}^n P(Y=k|X=i)\frac 1n.$$
+Or $P(Y=k|X=i)$ vaut $1/i$ si $k\leq i$ et $0$ si $k&gt;i$. On en déduit que 
+$$P(Y=k)=\sum_{i=k}^n \frac1{ni}.$$
+<li> 
+Pour calculer l'espérance, on applique la définition et on permute les sommes.
+\begin{eqnarray*}
+E(Y)&=&\frac 1n\sum_{k=1}^n \sum_{i=k}^n\frac ki\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\sum_{k=1}^i k\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\times \frac {i(i+1)}2\\
+&=&\frac 1n\sum_{i=1}^n \frac{i+1}2\\
+&=&\frac 1{2n}\times \left(\frac{(n+1)(n+2)}2-1\right)\\
+&=&\frac{n+3}4.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3141"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3141"),	max:5, rating:2.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3141,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Urne de Polya <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3141.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3141,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3141','imageenonce3141');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3141"></a><div class=inner id="innerenonce3141">Une urne contient initialement une boule blanche et une boule noire. On repète $n$ fois l'expérience suivante : on tire une boule de l'urne, on la remet et on ajoute une boule de la même couleur. Soit $k\in\{1,\dots,n\}$.
+<ol class="enumeratechiffre">
+<li> Quel est le nombre de boules dans l'urne après la $k$-ième expérience?
+<li> On note $N_k$ le nombre de boules blanches dans l'urne après la $k$-ième expérience. Montrer que $N_k$ suit une loi uniforme sur $\{1,\dots,k+1\}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3141','imageindication3141');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3141"></a><div class=inner id="innerindication3141" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Procéder par récurrence sur $k$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3141','imagecorrige3141',3141);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3141"></a><div class=inner id="innercorrige3141" style="display:none;"><ol class="enumeratechiffre">
+<li> Après $k$ expériences, le nombre de boules dans l'urne vaut $k+2$.
+<li> On va procéder par récurrence sur $k$. Pour $k=0,\dots,n$, on note $\mathcal P(k)$ la propriété : "$N_k$ suit une loi uniforme sur $\{1,\dots,k+1\}$", avec pour convention que $N_0$ désigne le nombre initial de boules blanches. <br>
+Initialisation : $\mathcal P(0)$ est vraie puisque $N_0=1$.<br>
+Hérédité : soit $k\in\{0,\dots,n-1\}$ tel que $\mathcal P(k)$ est vraie. Après la $k+1$-ème expérience, il y a $2+(k+1)=k+3$ boules dans l'urne, dont au moins une boule noire et au moins une boule blanche. Donc $N_{k+1}$ est à valeurs dans $\{1,\dots,k+2\}$. De plus, pour $j=2,\dots,k+1$, comme on ajoute au plus une boule blanche lors de la $k+1$-ème expérience, on a 
+\begin{align*}
+P(N_{k+1}=j)&=P(N_{k+1}=j|N_k=j)P(N_k=j)+P(N_{k+1}=j|N_k=j-1)P(N_k=j-1)\\
+&=\frac{1}{k+1}\big(P(N_{k+1}=j|N_k=j)+P(N_{k+1}=j|N_k=j-1)\big),
+\end{align*}
+d'après l'hypothèse de récurrence.
+Maintenant, on passe de $N_k=j$ à $N_{k+1}=j$ en tirant une boule noire dans l'urne. A ce stade, il y a $k+2-j$ boules noires et $k+2$ boules au total, et donc
+$$P(N_{k+1}=j|N_k=j)=\frac{k+2-j}{k+2}.$$
+De même, on passe de $N_k=j-1$ à $N_k=j$ en tirant une boule blanche dans l'urne, et sous l'hypothèse $N_k=j-1$, il y a $j-1$ boules blanches dans l'urne pour $k+2$ boules au total. On en déduit 
+$$ P(N_{k+1}=j|N_k=j-1)=\frac{j-1}{k+2}.$$
+Finalement, on trouve
+$$P(N_{k+1}=j)=\frac{1}{(k+1)(k+2)}\times(k+2-j+j-1)=\frac{1}{k+2}.$$
+Ce calcul s'étend sans difficultés au cas $j=1$ - mais dans ce cas seul le premier terme existe - et au cas $j=k+2$ - mais dans ce cas seul le deuxième terme existe. On a bien prouvé que $\mathcal P(k+1)$ est vraie et donc, par le principe de récurrence, que $\mathcal P(k)$ est vrai pour tout $k=1,\dots,n$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1258"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1258"),	max:5, rating:2.08, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1258,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum et maximum de deux dés <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1258.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1258,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1258','imageenonce1258');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1258"></a><div class=inner id="innerenonce1258">On lance deux dés équilibrés, on note $U_1$ et $U_2$ les variables aléatoires correspondant aux résultats obtenus.
+On appelle $X=\min(U_1,U_2)$ et $Y=\max(U_1,U_2)$. 
+<ol class="enumeratechiffre">
+ <li> Donner la loi de $X$. En déduire $E(X)$.
+<li> Exprimer $X+Y$ en fonction de $U_1$ et $U_2$. En déduire $E(Y)$.
+<li> Exprimer $XY$ en fonction de $U_1$ et $U_2$. En déduire $\textrm{Cov}(X,Y)$. $X$ et $Y$ sont-elles indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1258','imageindication1258');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1258"></a><div class=inner id="innerindication1258" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire l'événement $X=i$ comme réunion de trois événements disjoints.
+<li> $(X,Y)$ est une permutation de $(U_1,U_2)$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1258','imagecorrige1258',1258);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1258"></a><div class=inner id="innercorrige1258" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour $i=1,\dots,6$, l'événement $X=i$ est réunion disjointe des trois événements suivants :
+<ul class="rien">
+ <li> $A$ : $U_1=i$ et $U_2=i$;
+<li> $B$ : $U_1=i$ et $U_2&gt;i$;
+<li> $C$ : $U_1&gt;i$ et $U_2=i$.
+</ul>
+Par indépendance des variables aléatoires $U_1$ et $U_2$, on en déduit que 
+$$P(A)=\frac1{36},\ P(B)=\frac{6-i}{36}\textrm{ et }P(C)=\frac{6-i}{36}.$$
+Il vient $P(X=1)=11/36$, $P(X=2)=9/36$, $P(X=3)=7/36$, $P(X=4)=5/36$, $P(X=5)=3/36$, $P(X=6)=1/36$.
+On en déduit $E(X)=91/36$.
+<li> On a $X+Y=U_1+U_2$ car $(U_1,U_2)$ est une permutation de $(X,Y)$. Il vient $E(X+Y)=E(X)+E(Y)=E(U_1)+E(U_2)=7$, puisque chaque $U_i$ suit une loi uniforme
+sur $\{1,\dots,6\}$, son espérance vaut $(6+1)/2=7/2$. On en déduit $E(Y)=161/36$.
+<li> On a $XY=U_1U_2$. On en déduit
+$$E(XY)=E(U_1U_2)=E(U_1)E(U_2)$$
+par indépendance de ces deux variables aléatoires. D'où
+$$\textrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=\frac{1225}{1296}.$$
+Les deux variables ne sont pas indépendantes puisque leur covariance n'est pas nulle.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1815"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1815"),	max:5, rating:1.68, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1815,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux variables aléatoires suivant une loi uniforme <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1815.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1815,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1815','imageenonce1815');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1815"></a><div class=inner id="innerenonce1815">Soit $X,Y$ deux variables aléatoires indépendantes suivant la loi uniforme sur $\{1,\dots,n\}$. 
+<ol class="enumeratechiffre">
+<li> Déterminer $P(X=Y)$.
+<li> Déterminer $P(X\geq Y)$.
+<li> Déterminer la loi de $X+Y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1815','imageindication1815');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1815"></a><div class=inner id="innerindication1815" style="display:none;">1<ol class="enumeratechiffre">
+<li> $X=Y\iff \exists k\in\{1,\dots,n\},\ X=k$ et $Y=k$.
+<li> Utiliser $P(X&gt;Y)$.
+<li> $X+Y=k\iff \exists i\in \{1,\dots, k-1\},\ X=i$ et $Y=k-i$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1815','imagecorrige1815',1815);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1815"></a><div class=inner id="innercorrige1815" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que 
+$$X=Y\iff \exists k\in\{1,\dots,n\},\ X=k\textrm{ et }Y=k.$$
+On a donc 
+$$P(X=Y)=\sum_{k=1}^n P(X=k\cap Y=k)=\sum_{k=1}^n P(X=k)P(Y=k)$$
+puisque les variables aléatoires sont indépendantes. On en déduit
+$$P(X=Y)=\sum_{k=1}^n \frac 1n\times\frac 1n=\frac 1n.$$
+<li> On peut suivre une méthode similaire en étudiant tous les cas pour lesquels $X\geq Y$. Il y a plus simple. Il suffit de remarquer que, par symétrie du rôle joué par $X$ et $Y$, on a 
+$$P(X\geq Y)=P(Y\geq X).$$
+Or, 
+\begin{eqnarray*}
+P\big((X\geq Y)\cup (Y\geq X)\big)&=&P(X\geq Y)+P(Y\geq X)-P\big((X\geq Y)\cap (Y\geq X)\big)\\
+&=&2P(X\geq Y)-P(X=Y).
+\end{eqnarray*}
+En utilisant le résultat de la question précédente, on trouve
+$$1=2P(X\geq Y)-\frac1n\implies P(X\geq Y)=\frac 12+\frac 1{2n}.$$
+<li> Remarquons que 
+$$X+Y=k\iff \exists i\in \{1,\dots, k-1\},\ X=i\textrm{ et }Y=k-i.$$
+Il vient, pour tout $k=2,\dots 2n$ (valeurs possibles prises par $X+Y$), que 
+$$P(X+Y=k)=\sum_{i=1}^{k-1}P\big( (X=i)\cap (Y=k-i)\big)=\sum_{i=1}^{k-1}P(X=i)P(Y=k-i)$$
+par indépendance de $X$ et $Y$. En réalité, on peut sommer sur un ensemble d'indices plus petit. En effet, $P(X=i)\neq 0$ implique que $1\leq i\leq n$ et $P(Y=k-i)\neq 0$ implique que $1\leq k-i\leq n$, soit $k-n\leq i\leq k-1$. On distingue alors deux cas :
+<ul class="rien">
+<li> Si $k\leq n$, alors $k-n\leq 0$ et on effectue une somme de $1$ à $k-1$ de termes tous égaux à $1/n^2$. On en déduit que dans ce cas
+$$P(X+Y=k)=\frac{k-1}{n^2}.$$
+<li> Si $k&gt;n$, alors $n\leq k-1$ et on effectue une somme de $k-n$ à $n$ de termes tous égaux à $1/n^2$. Dans ce cas,
+$$P(X+Y=k)=\frac{2n+1-k}{n^2}.$$
+</ul>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3147"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3147"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3147,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum de variables aléatoires uniformes <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3147.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3147,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3147','imageenonce3147');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3147"></a><div class=inner id="innerenonce3147">Soit $X_1,\dots,X_n$ des variables aléatoires définies sur un même espace probabilisé fini, indépendantes, et suivant une loi uniforme sur $\{1,\dots,n\}$.
+On note $M=\min(X_1,\dots,X_n)$.
+<ol class="enumeratechiffre">
+<li> Pour $k\in\{1,\dots,n\}$, déterminer $P(M\geq k)$.
+<li> En déduire la loi de $M$.
+<li> Soit $A$ l'événement : "il existe $i\in\{1,\dots,n\}$ tel que $X_i=1$". Démontrer que $P(A)\geq 1-\frac 1e$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3147','imageindication3147');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3147"></a><div class=inner id="innerindication3147" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $M\geq k$ si et seulement si, pour tout $i\in\{1,\dots,n\}$, $X_i\geq k$. Utiliser ensuite l'indépendance. 
+<li> $(M\geq k)=(M= k)\cup (M\geq k+1)$.
+<li> $A=(M=1)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3147','imagecorrige3147',3147);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3147"></a><div class=inner id="innercorrige3147" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que l'on a $M\geq k$ si et seulement si, pour tout $i\in\{1,\dots,n\}$, $X_i\geq k$. Par indépendance de $X_1,\dots,X_n$, on en déduit que 
+\begin{align*}
+P(M\geq k)&=\prod_{i=1}^n P(X_i\geq k)\\
+&=\left(\frac{n+1-k}{n}\right)^n
+\end{align*}
+où la dernière égalité vient du fait que $X_i$ suit une loi uniforme sur $\{1,\dots,n\}$.
+<li> On a $(M\geq k)=(M= k)\cup (M\geq k+1)$. Les deux événements à droite de l'égalité étant disjoints, on en déduit que 
+$$P(M\geq k)=P(M=k)+P(M\geq k+1).$$
+D'après le résultat de la question précédente, on tire 
+$$P(M=k)=\left(\frac{n+1-k}{n}\right)^n-\left(\frac{n-k}{n}\right)^n.$$
+<li> On remarque que $A=(M=1)$. On en déduit que 
+$$P(A)=P(M=1)=1-\left(\frac{n-1}n\right)^n=1-\left(1-\frac 1n\right)^n.$$
+On conclut en utilisant l'inégalité classique $\ln(1+x)\leq x$ pour tout $x&gt;-1$, qui entraîne successivement
+$$\ln\left(1-\frac 1n\right)\leq \frac{-1}n\implies n\ln\left(1-\frac 1n\right)\leq -1$$
+qui finalement donne 
+$$\left(1-\frac 1n\right)^n \leq e^{-1}=\frac 1e.$$
+</ol></div></div></div>
+
+<div class=titrepartie>Loi binomiale</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1257"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1257"),	max:5, rating:1.05, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1257,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avion <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1257.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1257,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1257','imageenonce1257');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1257"></a><div class=inner id="innerenonce1257">$A$ et $B$ sont deux avions ayant respectivement 4 et 2 moteurs. Les moteurs sont supposés indépendants les uns des autres, et ils ont une probabilité $p$ de tomber en panne.
+Chaque avion arrive à destination si strictement moins de la moitié de ses moteurs tombe en panne. Quel avion choisissez-vous? (on discutera en fonction de $p$).</div></div><div class=indication><a href="javascript:showAll('innerindication1257','imageindication1257');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1257"></a><div class=inner id="innerindication1257" style="display:none;">Noter $X$ la variable aléatoire du nombre de moteurs de $A$ qui tombent en panne, et $Y$ la variable aléatoire du nombre de moteurs de $B$ qui tombent en panne.
+On arrive à destination si $X=0,1$ ou si $Y=0$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1257','imagecorrige1257',1257);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1257"></a><div class=inner id="innercorrige1257" style="display:none;">On note $X$ la variable aléatoire du nombre de moteurs de $A$ qui tombent en panne, et $Y$ la variable aléatoire du nombre de moteurs de $B$ qui tombent en panne.
+$X$ suit une loi binomiale $\mathcal{B}(4,p)$. En particulier, on a :
+$$P(X=0)+P(X=1)=\binom 4 0p^0(1-p)^{4-0}+\binom 4 1p^1(1-p)^{4-1}=(1-p)^4+4p(1-p)^3.$$
+D'autre part, $Y$ suit une loi binomiale $\mathcal{B}(2,p)$. En particulier, 
+$$P(Y=0)=(1-p)^2.$$
+On a intérêt à prendre l'avion $A$ si $P(X=0)+P(X=1)\geq P(Y=0)$. Ceci donne :
+$$p(1-p)^2(2-3p)\geq 0.$$
+Donc, si $0\leq p&lt;2/3$ (cas que l'on espère être celui du monde réel), il est préférable de choisir $A$. Si $p=2/3$, le choix est indifférent,
+et si $p&gt;2/3$, il vaut mieux choisir $B$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2569"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2569"),	max:5, rating:0.78571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2569,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le restaurateur <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2569.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2569,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2569','imageenonce2569');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2569"></a><div class=inner id="innerenonce2569">Un restaurateur accueille chaque soir 70 clients. Il sait qu'en moyenne, deux clients sur cinq prennent une crème brûlée. Il pense que s'il prépare 30 crèmes brûlées, dans plus de 70\% des cas, la demande sera satisfaite.
+<ol class="enumeratechiffre">
+<li> A-t-il raison?
+<li> Combien de crèmes brûlées doit-il fabriquer au minimum pour que la demande soit satisfaite dans au moins 90\% des cas.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2569','imageindication2569');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2569"></a><div class=inner id="innerindication2569" style="display:none;">Introduire la variable aléatoire égale au nombre de crèmes brûlées commandées chaque soir.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2569','imagecorrige2569',2569);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2569"></a><div class=inner id="innercorrige2569" style="display:none;">Soit $X$ la variable aléatoire comptant le nombre de crèmes brûlées commandées chaque soir. $X$ compte le nombre de succès (=crème brûlée commandée) dans la répétition indépendante de 70 épreuves de Bernoulli dont chacune a une probabilité de succès égale à $0.4$. Ainsi, $X$ suit une loi binomiale de paramètre $70$ et $0.4$.
+<ol class="enumeratechiffre">
+<li> La demande est satisfaite si $X\leq 30$. On doit donc déterminer si $P(X\leq 30)\geq 0.7$. A l'aide d'une calculatrice ou d'un tableur, on trouve facilement que $P(X\leq 30)\simeq 0,73$ : le restaurateur a raison.
+<li> On cherche le plus petit entier $k$ tel que $P(X\leq k)\geq 0,9$. Toujours à l'aide d'un tableur, on constate que $P(X\leq 32)\simeq 0,86$ et que $P(X\leq 33)\simeq 0,91$. Il suffit de préparer 33 crèmes brûlées pour satisfaire la clientèle dans 90\% des cas. Ca vaut peut-être le coup de fabriquer 3 crèmes supplémentaires!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1262"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1262"),	max:5, rating:2.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1262,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lancer de pièces <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1262.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1262,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1262','imageenonce1262');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1262"></a><div class=inner id="innerenonce1262">On lance $n$ fois une pièce parfaitement équilibrée. Quelle est la probabilité d'obtenir strictement plus de piles que de faces.</div></div><div class=indication><a href="javascript:showAll('innerindication1262','imageindication1262');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1262"></a><div class=inner id="innerindication1262" style="display:none;">Utiliser la symétrie entre les piles et les faces! On pourra distinguer les cas où $n$ est pair et $n$ est impair.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1262','imagecorrige1262',1262);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1262"></a><div class=inner id="innercorrige1262" style="display:none;">Notons $A$ l'événément "obtenir strictement plus de piles que de faces" et $B$ l'événément "obtenir strictement plus de faces que de piles". La pièce étant parfaitement équilibrée, par symétrie, $P(A)=P(B)$. 
+On distingue alors deux cas :
+<ul class="rien">
+<li> $n$ est impair. Dans ce cas, le couple $(A,B)$ est un système complet d'événements et $P(A)=\frac 12$.
+<li> $n=2r$ est pair. Notons $X$ la variable aléatoire du nombre de piles obtenues. $X$ suit une loi binomiale $\mathcal B(n,1/2)$. On a 
+$$A=(X&gt;r)\textrm{ et }B=(X&lt;r).$$
+On a donc 
+$$P(A)+P(B)+P(X=r)=1\implies P(A)=\frac 12-\frac 12P(X=r)=\frac 12-\binom {2r} r \left(\frac 12\right)^{2r+1}.$$
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2160"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2160"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2160,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Code de la route! <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2160.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2160,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2160','imageenonce2160');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2160"></a><div class=inner id="innerenonce2160">L'examen du code de la route se compose de 40 questions. Pour chaque question, on a le choix entre 4 réponses possibles. Une seule de ces réponses est correcte. Un candidat se présente à l'examen. Il arrive qu’il connaisse la réponse
+à certaines questions. Il répond alors à coup sûr. S’il ignore la réponse, il
+choisit au hasard entre les 4 réponses proposées. On suppose toutes les questions
+indépendantes et que pour chacune de ces questions, la probabilité que
+le candidat connaisse la vraie réponse est $p$. On note, pour $1\leq i\leq 40$, $A_i$ l'événement : "le candidat donne la bonne réponse à la $i$-ème 
+question". On note $S$ la variable aléatoire égale au nombre total de bonnes réponses.
+<ol class="enumeratechiffre">
+<li> Calculer $P(A_i)$.
+<li> Quelle est la loi de $S$ (justifier!)?
+<li> A quelle condition sur $p$ le candidat donnera en moyenne au moins 36 bonnes réponses?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2160','imageindication2160');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2160"></a><div class=inner id="innerindication2160" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la formule des probabilités totales.
+<li> Reconnaitre une loi classique.
+<li> C'est une question d'espérance...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2160','imagecorrige2160',2160);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2160"></a><div class=inner id="innercorrige2160" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $C_i$ l'évènement ``le candidat connait la réponse à la $i$-ème question.''. D'après la formule des probabilités totales, puisque $(C_i,\overline{C_i})$ forme une partition de l'univers, 
+$$P(A_i)=P_{C_i}(A_i)P(C_i)+P_{\bar{C_i}}(A_i)P(\bar{C_i})=1\times p+\frac14\times (1-p)=\frac{1+3p}4\ .$$
+<li> 
+Les questions étant toutes indépendantes, on est en présence d'un schéma de Bernoulli et la variable $S$ qui compte le nombre de bonnes réponses suit une loi binomiale de paramètres 40 et $\frac{1+3p}4$.
+<li> L'espérance de $S$ vaut $E(S)=40\frac{1+3p}4=10(1+3p)$. On a donc $E(S)\ge 36$ si et seulement si $10(1+3p)\ge 36$, ce qui revient à dire $p\ge\frac{13}{15}$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2254"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2254"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2254,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode du maximum de vraisemblance <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2254.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2254,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2254','imageenonce2254');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2254"></a><div class=inner id="innerenonce2254">Un étang contient des brochets et des truites. On note $p$ la proportion de truites dans l'étang. On souhaite évaluer $p$. On prélève 20 poissons au hasard. On suppose que le nombre de poissons est suffisamment grand pour que ce prélèvement s'apparente à 20 tirages indépendants avec remise. On note $X$ le nombre de truites obtenues.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $X$?
+<li> Le prélèvement a donné $8$ truites. Pour quelle valeur de $p$ la quantité $P(X=8)$ est-elle maximale?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2254','imageindication2254');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2254"></a><div class=inner id="innerindication2254" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Etudier la fonction $p\mapsto P(X=8)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2254','imagecorrige2254',2254);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2254"></a><div class=inner id="innercorrige2254" style="display:none;"><ol class="enumeratechiffre">
+<li> On reconnait le principe d'un schéma de Bernoulli, avec 20 épreuves indépendantes et une probabilité $p$ de succès. $X$ suit donc une loi binomiale $\mathcal B(20,p)$.
+<li> On a $P(X=8)=\binom {20}8 p^8(1-p)^{12}$. On va étudier cette fonction de $p$ de sorte de trouver son maximum. Il suffit en réalité d'étudier, sur $[0,1]$, la fonction $g(p)=p^8(1-p)^{12}$. $g$ est dérivable et sa dérivée est
+\begin{eqnarray*}
+g'(p)&=&8p^7(1-p)^{12}-12p^8(1-p)^{11}\\
+&=&\big(8(1-p)-12p)p^7(1-p)^{11}\\
+&=&\big(8-20p\big)p^7(1-p)^{11}.
+\end{eqnarray*}
+On en déduit que $g'(p)\geq 0$ sur $[0,2/5]$ et $g'(p)\leq 0$ sur $[2/5,1]$. La probabilité $P(X=8)$ est maximale pour $p=2/5$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1259"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1259"),	max:5, rating:2.7647058823529, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1259,rating); this.setRating(rating);   this.disable();    done();     }});</script> - QCM <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1259.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1259,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1259','imageenonce1259');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1259"></a><div class=inner id="innerenonce1259">Un examen consiste en un QCM de 15 questions. Pour chaque question, 3 réponses sont possibles. Les étudiants répondent à chaque question indépendamment. L'enseignant estime que les étudiants ayant préparé l'examen sont $70\%$ et répondent à une question correctement avec probabilité 0,8. Les autres étudiants choisissent les réponses au hasard. Il faut au moins 8 bonnes réponses pour réussir l'examen.
+<ol class="enumeratechiffre">
+<li> Quelle est la probabilité qu'un étudiant, choisi au hasard, réussisse l'examen?
+<li> Si un étudiant échoue, quelle est la probabilité qu'il ait préparé l'examen?
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication1259','imageindication1259');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1259"></a><div class=inner id="innerindication1259" style="display:none;"><ol class="enumeratechiffre">
+<li> Noter $A$ l'événement "l'étudiant a préparé l'examen", $R$ l'événement "l'étudiant a réussi l'examen" et $X$ la variable aléatoire du nombre de questions ayant eu une bonne réponse. On peut donner la loi des variables aléatoires conditionnées $X|A$ et $X|\bar A$. En déduire $P(R|A)$ et $P(R|\bar A)$.
+<li> Formule de Bayes.
+</ol> </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1259','imagecorrige1259',1259);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1259"></a><div class=inner id="innercorrige1259" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $A$ l'événement "l'étudiant a préparé l'examen", $R$ l'événement "l'étudiant a réussi l'examen" et $X$ la variable aléatoire du nombre de questions ayant eu une bonne réponse. On ne connait pas directement la loi de $X$, mais il est facile de donner la loi des variables aléatoires "conditionnées" $X|A$ et $X|\bar A$. Elles suivent des lois binomiales de paramètre 15 et, respectivement, 0,8 et 1/3. Plus précisément, pour tout $k$ dans $\{0,\dots,15\}$, on a 
+$$P(X=k|A)=\binom{15}k (0,8)^k (0,2)^{15-k}$$
+$$P(X=k|\bar A)=\binom{15}k \left(\frac 13\right)^k \left(\frac 23\right)^{15-k}.$$
+On en déduit que 
+$$P(R|A)=\sum_{k=8}^{15}P(X=k|A)\simeq 0,996$$
+tandis que 
+$$P(R|\bar A)=\sum_{k=8}^{15}P(X=k|\bar A)\simeq 0,088.$$
+On en déduit, par la formule des probabilités totales :
+$$P(R)=P(A)P(R|A)+P(\bar A)P(R|\bar A)\simeq 0,724.$$
+<li> D'après la formule de Bayes,
+$$P(A|\bar R)=\frac{P(\bar R|A)P(A)}{P(\bar R)}=\frac{(1-P(R|A))P(A)}{1-P(R)}\simeq 0,011.$$
+Les résultats des deux questions sont finalement très réconfortants sur la pertinence de cet examen.
+</ol> </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1261"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1261"),	max:5, rating:2.3181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1261,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Maximum d'une loi binomiale <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1261.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1261,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1261','imageenonce1261');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1261"></a><div class=inner id="innerenonce1261">Soit $X$ une variable aléatoire suivant une loi binomiale de paramètres $n\in\mathbb N^*$ et $p\in ]0,1[$. Pour quelle(s) valeur(s) de $k$ la probabilité $p_k=P(X=k)$ est maximale?</div></div><div class=indication><a href="javascript:showAll('innerindication1261','imageindication1261');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1261"></a><div class=inner id="innerindication1261" style="display:none;">Calculer $p_k/p_{k-1}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1261','imagecorrige1261',1261);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1261"></a><div class=inner id="innercorrige1261" style="display:none;">Soit $k\geq 1$. On a
+$$p_k=\binom nk p^k (1-p)^{n-k}=\frac{n!}{k! (n-k)!}p^k (1-p)^{n-k}.$$
+La présence de factorielles et de puissances nous incite à étudier la monotonie de la suite $(p_k)$ par l'étude du quotient $p_k/p_{k-1}$ :
+$$\frac{p_k}{p_{k-1}}=\frac{p}{1-p}\times \frac{n-k+1}k.$$
+On en déduit
+$$\frac{p_k}{p_{k-1}}\geq 1\iff k(1-p)\leq (n-k+1)p\iff k\leq np+p.$$
+Notons $k_0$ la partie entière de $(n+1)p$. La suite $(p_k)$ est donc croissante jusqu'en $k_0$ et décroissante ensuite. La valeur maximale est donc atteinte en $k_0$. Remarquons que si $(n+1)p$
+est un entier, alors on a également $p_{k_0-1}=p_{k_0}$ et le maximum est atteint en deux valeurs (c'est le seul cas possible).</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2255"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2255"),	max:5, rating:2.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2255,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La grenouille <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2255.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2255,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2255','imageenonce2255');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2255"></a><div class=inner id="innerenonce2255">Une grenouille monte les marches d'un escalier (supposé infini) en partant du sol et en sautant 
+<ul class="rien">
+<li> ou bien une seule marche, avec probabilité $p$;
+<li> ou bien deux marches, avec la probabilité $1-p$.
+</ul>
+On suppose que les sauts sont indépendants les uns des autres. 
+<ol class="enumeratechiffre">
+<li> Dans cette question, on observe $n$ sauts de la grenouille, et on note $X_n$ le nombre de fois où la grenouille a sauté une marche, et $Y_n$ le nombre de marches franchies. Quelle est la loi de $X_n$? Exprimer $Y_n$ en fonction de $X_n$. En déduire l'espérance et la variance de $Y_n$.
+<li> Pour $k\geq 1$, on note $p_k$ la probabilité que la grenouille passe par la marche $k$. Que vaut $p_1$? Que vaut $p_2$? &Eacute;tablir une formule de récurrence liant $p_k$ et $p_{k-1}$. En déduire la valeur de $p_k$ pour $k\geq 1$.
+<li> On note désormais $Z_n$ le nombre de sauts nécessaires pour atteindre ou dépasser la $n$-ième marche. &Eacute;crire un algorithme qui simule la variable aléatoire $Z_n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2255','imageindication2255');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2255"></a><div class=inner id="innerindication2255" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaitre une loi classique pour $X_n$. 
+<li> La grenouille ne passe pas par la marche $k$ si et seulement si elle passe par la marche $k-1$ et si elle fait un saut de deux marches.
+<li> Une boucle Tant Que s'impose...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2255','imagecorrige2255',2255);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2255"></a><div class=inner id="innercorrige2255" style="display:none;"><ol class="enumeratechiffre">
+<li> On a affaire ici à un schéma de Bernoulli : $X_n$ compte le nombre de fois où $n$ expériences indépendantes (les $n$ premiers sauts) donnent un résultat ayant probabilité $p$. La variable aléatoire $X_n$ suit donc une loi binomiale de paramètres $n$ et $p$. Le nombre de marches franchies est alors 
+$$Y_n=X_n+2(n-X_n)=2n-X_n.$$
+Par linéarité de l'espérance, on trouve
+$$E(Y_n)=2n-E(X_n)=2n-np=(2-p)n.$$
+De plus, on a 
+$$V(Y_n)=V(X_n)=np(1-p).$$
+<li> On a $p_1=p$ : il faut que le premier saut de la grenouille soit un saut d'une marche. Pour déterminer $p_2$, on remarque que la grenouille passe par la marche 2 si le premier saut est un saut de deux marches ou si les deux premiers sauts sont des sauts de une marche. On a donc $p_2=1-p+p^2$. <br>
+On observe que la grenouille ne passe pas par la marche $k$ si elle passe par la marche $k-1$ et si elle fait un saut de deux marches. On a donc :
+$$1-p_k=(1-p)p_{k-1}\iff p_k=1-(1-p)p_{k-1}.$$
+On reconnait une suite arithmético-géométrique : la suite $u_k=p_k-\frac{1}{2-p}$ est une suite géométrique de raison $p-1$, et donc on a $u_k=(p-1)^{k-1}u_1$, ce qui signifie que $p_k=\frac{1}{2-p}+(1-p)^{k-1}u_1$. Puisque $u_1=p-\frac{1}{2-p}=\frac{2p-p^2-1}{2-p}$, on a finalement :
+$$p_k=\frac{1}{2-p}+(p-1)^{k-1}\frac{2p-p^2-1}{2-p}.$$
+<li> Voici un algorithme possible :
+<pre><code class="language-python">Variables : 
+  n entier
+  hauteur entier
+  saut entier
+Traitement :
+  Lire n
+  hauteur=0
+  saut=0
+  Tant que (hauteur&lt;n) faire
+      Si (alea()&lt;p) faire hauteur=hauteur+1 
+      Sinon faire hauteur=hauteur+2
+      Fin si.
+      saut=saut+1;
+  Fin Tant que.
+  Afficher saut
+</code></pre>   
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Exercices théoriques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater1265"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1265"),	max:5, rating:1.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1265,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une autre expression de l'espérance <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1265.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(1265,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1265','imageenonce1265');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1265"></a><div class=inner id="innerenonce1265">Soit $X$ une variable aléatoire prenant ses valeurs dans $\{0,1,\dots,N\}$. Démontrer que 
+$$E(X)=\sum_{n=0}^{N-1}P(X&gt;n).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1265','imageindication1265');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1265"></a><div class=inner id="innerindication1265" style="display:none;">&Eacute;crire $P(X=n)=P(X&gt;n-1)-P(X&gt;n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1265','imagecorrige1265',1265);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1265"></a><div class=inner id="innercorrige1265" style="display:none;">La clé est d'écrire $P(X=n)=P(X&gt;n-1)-P(X&gt;n)$. D'après la définition de l'espérance, on a 
+$$E(X)=\sum_{n=1}^N nP(X&gt;n-1)-\sum_{n=1}^N nP(X&gt;n).$$
+On effectue un décalage d'indice dans la première somme :
+$$E(X)=\sum_{n=0}^{N-1}(n+1)P(X&gt;n)-\sum_{n=1}^N nP(X&gt;n).$$
+Dans la deuxième somme, le terme d'indice $N$ est nul, et on peut aussi ajouter un terme d'indice 0 qui sera nul lui aussi. Il vient donc
+$$E(X)=\sum_{n=0}^{N-1}\big( (n+1)-n\big) P(X&gt;n)=\sum_{n=0}^{N-1}P(X&gt;n).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1266"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1266"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1266,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Au carré <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1266.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1266,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1266','imageenonce1266');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1266"></a><div class=inner id="innerenonce1266">Soit $X$ une variable aléatoire réelle définie sur un espace probabilisé fini. Démontrer que $E(X)^2\leq E(X^2)$.</div></div><div class=indication><a href="javascript:showAll('innerindication1266','imageindication1266');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1266"></a><div class=inner id="innerindication1266" style="display:none;">Inégalité de Cauchy-Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1266','imagecorrige1266',1266);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1266"></a><div class=inner id="innercorrige1266" style="display:none;">Soit $x_1,\dots,x_n$ les valeurs prises par $X$, avec probabilités respectives $p_k$. On a 
+$$E(X)=\sum_{k=1}^n x_k p_k=\sum_{k=1}^n (x_k\sqrt{p_k})\sqrt{p_k}.$$
+On applique l'inégalité de Cauchy-Schwarz avec $a_k=x_k\sqrt{p_k}$ et $b_k=\sqrt{p_k}$. On en déduit que
+$$E(X)^2\leq \left(\sum_{k=1}^n x_k^2p_k\right)\left(\sum_{k=1}^n p_k\right)=E(X^2).$$
+On peut aussi (plus simplement sans doute) utiliser que 
+$V(X)=E(X^2)-(E(X))^2$$
+et que la variance est toujours positive ou nulle.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater1267"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1267"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1267,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Maximiser l'espérance <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1267.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(1267,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1267','imageenonce1267');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1267"></a><div class=inner id="innerenonce1267">Soit $n\geq 2$. On considère deux variables aléatoires indépendantes $X_1$ et $X_2$, définies sur le même espace probabilisé $(\Omega,\mathcal{B},P)$, et suivant la loi uniforme discrète sur $\{1,2,\dots,n\}$.
+On considère $a$ un entier de $\{1,2,\dots,n\}$, et $Y$ la variable aléatoire définie par :
+$$\forall \omega\in\Omega,\ Y(\omega)=
+\left\{\begin{array}{ll}
+X_1(\omega)&\textrm{ si }X_2(\omega)\leq a\\
+X_2(\omega)&\textrm{ si }X_2(\omega)&gt;a.
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $Y$ (vérifier que l'on obtient bien une loi de probabilité).
+<li> Calculer l'espérance de $Y$ et la comparer à l'espérance de $X_1$.
+<li> Pour quelles valeurs de $a$ cette espérance est-elle maximale?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1267','imageindication1267');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1267"></a><div class=inner id="innerindication1267" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par disjonction de cas, suivant que $X_2&gt;a$ ou non.
+<li> Calcul facile!
+<li> Exprimer $E(Y)$ sous la forme d'une somme de termes positifs ne dépendant pas de $a$, et d'un terme négatif dépendant de $a$. Il faut rendre ce terme le plus petit possible!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1267','imagecorrige1267',1267);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1267"></a><div class=inner id="innercorrige1267" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $Y(\Omega)=\{1,\dots,n\}$, et par indépendance des variables aléatoires $X_1$ et $X_2$ :
+<ul class="rien">
+<li> si $k\leq a$, $P(Y=k)=P\left((X_1=k)\cap (X_2\leq a)\right)=\frac{1}{n}\times\frac{a}{n}.$
+<li> si $k&gt;a$, $P(Y=k)=P\left( (X_1=k)\cap (X_2\leq a)\right)+P\left( (X_2=k)\cap (X_2&gt;a)\right)=\frac{a}{n^2}+\frac{1}{n}.$
+</ul>
+On a bien $a\times \frac{a}{n^2}+(n-a)\times\left(\frac{a}{n^2}+\frac{1}{n}\right)=1.$
+<li> Le calcul de l'espérance est facile :
+\begin{eqnarray*}
+E(Y)&=&\sum_{k=1}^a k\frac{a}{n^2}+\sum_{k=a+1}^n k\frac{a}{n^2}+\sum_{k=a+1}^n \frac{k}{n}\\
+&=&\frac{a(n+1)}{2n}+\frac{(a+n+1)(n-a)}{2n}\\
+&=&E(X_1)+\frac{a}{2n}(n-a)\geq E(X_1).
+\end{eqnarray*}
+<li> On vérifie que :
+$$E(Y)=\frac{1}{2n}\left(\frac{5}{4}n^2+n-(a-n/2)^2\right).$$
+Ainsi, $E(Y)$ est maximale pour $|a-n/2|$ le plus petit possible :
+<ul class="rien">
+<li> si $n$ est pair, c'est pour $a=n/2$.
+<li> si $n$ est impair, c'est pour $a=(n-1)/2$ ou $a=(n+1)/2$.
+</ul>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater1268"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1268"),	max:5, rating:2.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1268,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Entropie d'une variable aléatoire <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1268.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(1268,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1268','imageenonce1268');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1268"></a><div class=inner id="innerenonce1268">Soit $X$ une variable aléatoire discrète finie prenant la valeur $x_i$ avec probabilité $p_i$,
+pour $i=1,\dots,n$. On définit l'entropie de $X$ par :
+$$H(X)=-\sum_{i=1}^n p_i\ln(p_i)$$
+avec la convention $x\ln x=0$ si $x=0$ (ce qui correspond au prolongement par continuité en $0$ de la fonction $x\mapsto x\ln x$).
+<ol class="enumeratechiffre">
+<li> Démontrer que $H(X)\geq 0$. 
+<li> Démontrer que $H(X)=0$ si et seulement si $X$ est presque sûrement constante, c'est-à-dire s'il existe $i\in \{1,\dots, n\}$ tel que $p_i=1$.
+<li> Vérifier que, pour tout $k=1,\dots,n$, on a 
+$$(-np_k)\ln (np_k)\leq 1-np_k$$
+avec égalité si et seulement si $np_k=1$.
+<li> En déduire que $H(X)\leq \ln n$.
+<li> Démontrer que $H(X)=\ln n$ si et seulement si $X$ est équidistribuée, ie si $p_i=1/n$ pour tout $i=1,\dots,n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1268','imageindication1268');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1268"></a><div class=inner id="innerindication1268" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+ <li> Pour un calcul, c'est très simple...
+ <li> Idem!
+ <li> On pourra utiliser la concavité de la fonction $x\mapsto -x\ln x$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1268','imagecorrige1268',1268);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1268"></a><div class=inner id="innercorrige1268" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que $x\ln(x)\leq 0$ si $x\in [0,1[$ ce qui assure que $H(X)\geq 0$. 
+ <li> Si $X$ est presque sûrement constante, on a $p_i=1$ pour un $i$ et $p_j=0$ pour $j \neq i$.
+ On en déduit que $H(X)=-1\times\ln(1)=0$.<br>
+Réciproquement, si $H(X)=0$, alors la preuve de la question précédente implique que, pour tout $i=1,\dots,n$, on doit avoir $p_i\ln(p_i)=0$. Ceci implique $p_i=0$ ou $p_i=1$. Puisque la somme des $p_i$ doit être égale à $1$, un des $p_i$ est donc égal à 1, et tous les autres $p_j$ sont nuls : $X$ est presque sûrement constante.
+<li> Posons pour $x\in ]0,+\infty[$, $g(x)=-x\ln x-(1-x)$. $g$ est dérivable sur $]0,+\infty[$, de dérivée
+$g'(x)=-\ln x-1+1=-\ln x$. Ainsi, $g$ est strictement croissante sur $]0,1[$ et strictement décroissante sur $]1,+\infty[$. Puisque $g(1)=0$, on en déduit que $g(x)\leq 0$ si $x&gt;0$ avec égalité si et seulement si $x=1$, et donc $-x\ln x\leq 1-x$, avec égalité si et seulement si $x=1$.
+On en déduit que, pour tout $k=1,\dots,n$,
+$$(-np_k)\ln (np_k)=-np_k\ln(n)-np_k\ln(p_k)\leq 1-np_k$$
+avec égalité si et seulement si $np_k=1$.
+<li> On somme les inégalités précédentes, pour $k$ allant de $1$ à $n$ :
+$$-n\ln n+nH(X)\leq n-n=0.$$
+Ceci prouve le résultat voulu.
+<li> Si $H(X)=\ln n$, toutes les inégalités précédentes doivent être des égalités. On en déduit que $(-np_k)\ln (np_k)=1-np_k$ pour tout $k=1,\dots,n$, c'est-à-dire, $p_k=1/n$. Ainsi, si $H(X)=\ln n$, $X$ est équirépartie.<br>
+Réciproquement, si $X$ est équirépartie, on a $p_i=1/n$ pour tout $i$. On en déduit
+ $$H(X)=\sum_{i=1}^n -\frac{\ln (1/n)}{n}=-\ln(1/n)=\ln (n).$$
+ $H(X)$ mesure le désordre engendré par $X$. Lorsque $X$ est presque sûrement constante,
+ son entropie est nulle (pas de désordre). Lorsque la variable est équidistribuée, le désordre
+ est maximal et l'entropie aussi.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater1272"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1272"),	max:5, rating:3.6875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1272,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction génératrice <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1272.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(1272,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1272','imageenonce1272');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1272"></a><div class=inner id="innerenonce1272">Pour $X$ une variable aléatoire à valeurs dans $\{0,\dots,n\}$, on appelle fonction génératrice la fonction de $\mathbb R$ dans $\mathbb R$ définie par 
+$$G_X(x)=\sum_{k=0}^n p_k x^k$$
+où $p_k=P(X=k)$. 
+<ol class="enumeratechiffre">
+<li> Déterminer la fonction génératrice d'une variable aléatoire suivant une loi de Bernoulli de paramètre $p$; une loi binomiale de paramètres $n$ et $p$.
+<li> Démontrer que deux variables aléatoires discrètes finies $X$ et $Y$ ont même loi si et seulement si $G_X=G_Y$.
+<li> Montrer que $E(X)=G_X'(1)$ et $V(X)=G_X''(1)+G_X'(1)-\big( G_X'(1)\big)^2.$ Retrouver l'espérance et la variance d'une variable aléatoire suivant une loi binomiale.
+<li> Montrer que si $X$ et $Y$ sont deux variables aléatoires discrètes finies indépendantes, alors 
+$G_{X+Y}=G_XG_Y$. Retrouver alors la fonction génératrice d'une variable aléatoire suivant une loi binomiale.
+<li> Soient $X$ et $Y$ deux variables aléatoires indépendantes suivant des lois binomiales respectives $\mathcal B(n,p)$ et $\mathcal B(m,p)$. Quelle est la loi de $Z=X+Y$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1272','imageindication1272');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1272"></a><div class=inner id="innerindication1272" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour la loi binomiale, appliquer la formule du binome pour obtenir une expression simple.
+<li> Une fonction polynomiale nulle sur $\mathbb R$ a tous ses coefficients nuls.
+<li> Calculer $G_X'(1)$ puis $G_X''(1)$...
+<li> Noter $Z=X+Y$ et remarquer que $P(Z=k)=\sum_{i+j=k}P(X=i)P(Y=j).$$
+<li> Utiliser la question précédente et la question 2.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1272','imagecorrige1272',1272);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1272"></a><div class=inner id="innercorrige1272" style="display:none;"><ol class="enumeratechiffre">
+<li> Dans le cas d'une loi de Bernoulli, on a simplement :
+$$G_X(x)=(1-p)+px.$$
+Pour le cas d'une loi binomiale, on a 
+$$G_X(x)=\sum_{k=0}^n \binom nk p^k(1-p)^{n-k}x^k=(1-p+px)^n.$$
+<li> Il est d'abord clair que si $X$ et $Y$ ont la même loi, alors elles ont même fonction génératrice. Réciproquement, si $G_X=G_Y$, alors $G_X-G_Y$ est un polynôme qui s'annule sur $\mathbb R$. Tous ses coefficients sont nuls. Or le coefficient devant $x^k$ est précisément $P(X=k)-P(Y=k)$. Ainsi, on a pour tout $k$, $P(X=k)=P(Y=k)$ et donc $X$ et $Y$ ont même loi.
+<li> On a $G_X'(x)=\sum_{k=1}^n kp_kx^{k-1}$ et $G_X''(x)=\sum_{k=1}^n k(k-1)p_kx^{k-2}$.
+On en déduit que 
+$$G_X'(1)=\sum_{k=1}^n kp_k=E(X)$$
+puis que
+$$G_X''(1)=\sum_{k=1}^n k^2p_k-\sum_{k=1}^n kp_k=E(X^2)-E(X).$$
+On en déduit finalement que
+$$G_X''(1)+G_X'(1)-\big (G_X'(1)\big)^2=E(X^2)-E(X)+E(X)-\big(E(X)\big)^2=V(X).$$
+Pour la loi binomiale, on a 
+$$G_X'(x)=np(1-p+px)^{n-1}\textrm{ et }G_X''(x)=n(n-1)p^2(1-p+px)^{n-2}.$$
+Il vient
+$$E(X)=np$$
+et 
+$$V(X)=n(n-1)p^2+np-n^2p^2=np(1-p).$$
+<li> Supposons $X$ à valeurs dans $\{0,\dots,n\}$ et $Y$ à valeurs dans $\{0,\dots,m\}$ et notons $Z=X+Y$. Pour $k$ entre $0$ et $n+m$, n a $(Z=k)=\bigcup_{i+j=k}(X=i,Y=j)$ et donc
+$$P(Z=k)=\sum_{i+j=k} P\big( (X=i)\cap (Y=j)\big)=\sum_{i+j=k}P(X=i)P(Y=j)$$
+puisque $X$ et $Y$ sont indépendantes. Notons $a_k=P(X=k)$, $b_k=P(Y=k)$ et $c_k=P(Z=k)$. La relation précédente s'écrit 
+$$c_k=\sum_{i+j=k}a_i b_j.$$
+C'est bien que
+$$\sum_{k=0}^{n+m}c_k x^k=\left(\sum_{i=0}^n a_i x^i\right)\left(\sum_{j=0}^m b_j x^j\right)$$
+c'est-à-dire 
+$$G_Z(x)=G_X(x)G_Y(x).$$
+Par une récurrence immédiate, si $X_1,\dots,X_n$ sont $n$ variables aléatoires indépendantes et si $Z=X_1+\dots+X_n$, alors
+$$G_Z(x)=\prod_{i=1}^n G_{X_i}(x).$$
+Une variable aléatoire suivant une loi binomiale de paramètres $n$ et $p$ étant la somme de $n$ variables aléatoires indépendantes suivant toutes une loi de Bernoulli de paramètre $p$, on retrouve facilement la formule donnant la fonction génératrice d'une loi binomiale à partir de la fonction génératrice d'une loi de Bernoulli.
+<li> On a $G_X(x)=(1-p+px)^n$, $G_Y(x)=(1-p+px)^m$ et donc $G_Z(x)=(1-p+px)^{n+m}$.
+La fonction génératrice caractérisant la loi, on voit d'après la première question que $Z$ suit une loi binomiale $\mathcal B(n+m,p)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater1269"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1269"),	max:5, rating:4.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1269,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme de variables aléatoires ayant une répartition uniforme <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1269.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(1269,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1269','imageenonce1269');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1269"></a><div class=inner id="innerenonce1269"><ol class="enumeratechiffre">
+<li> Soient $a,b,c,d,\lambda$ 5 réels strictement positifs. Montrer qu'il est impossible que 
+$$\left\{
+\begin{array}{rcl}
+ab&=&\lambda\\
+cd&=&\lambda\\
+ac+bd&\leq&\lambda
+\end{array}\right.
+$$
+<li> Soit $n\geq 1$. Existe-t-il deux variables aléatoires indépendantes à valeurs dans $\{0,\dots,n\}$ dont la somme suit une loi uniforme sur $\{0,\dots,2n\}$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1269','imageindication1269');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1269"></a><div class=inner id="innerindication1269" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer $abcd$.
+<li> Raisonner par l'absurde en supposant l'existence de deux variables aléatoires $X$ et $Y$ dont la somme $Z$ est uniformément distribuée sur $\{0,\dots,2n\}$. Appliquer la question précédente en calculant $P(Z=0)$, $P(Z=2n)$ et $P(Z=n)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1269','imagecorrige1269',1269);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1269"></a><div class=inner id="innercorrige1269" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $abcd=\lambda^2$ d'après les deux premières équations. D'autre part, puisque tout est positif, on a $ac&lt;\lambda$ et $bd&lt;\lambda$ et donc $abcd&lt;\lambda^2$, une contradiction.
+<li> Supposons que ces deux variables aléatoires existent, et notons les $X$ et $Y$. Posons $Z=X+Y$, 
+$a_k=P(X=k)$, $b_k=P(Y=k)$ et $c_k=P(Z=k)$. Pour chaque $k$, on a
+$$c_k= P(Z=k)=\sum_{i+j=k}P\big((X=i,Y=j)\big)=\sum_{i+j=k}a_ib_j$$
+puisque les variables aléatoires $X$ et $Y$ sont indépendantes. Pour $k=0$, $k=2n$ et $k=n$, on obtient alors 
+\begin{eqnarray*}
+\frac{1}{2n+1}&=&a_0b_0\\
+\frac 1{2n+1}&=&a_nb_n\\
+\frac1{2n+1}&\geq&a_0b_n+a_nb_0
+\end{eqnarray*}
+Il suffit alors d'appliquer le résultat de la question précédente avec $a=a_0$, $b=b_0$, $c=a_n$, $d=b_n$ et $\lambda=\frac{1}{2n+1}$ pour obtenir une contradiction.
+</ol></div></div></div>
+
+<div class=titrepartie>Inégalités de Markov et de Bienaymé-Tchebychev</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater2026"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2026"),	max:5, rating:1.5454545454545, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2026,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lancer de dé <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2026.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(2026,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2026','imageenonce2026');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2026"></a><div class=inner id="innerenonce2026">On jette $3600$ fois un dé équilibré à $6$ faces. Minorer la probabilité que le nombre d'apparitions du numéro $1$ soit compris entre $480$ et $720.$</div></div><div class=indication><a href="javascript:showAll('innerindication2026','imageindication2026');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2026"></a><div class=inner id="innerindication2026" style="display:none;">Appliquer l'inégalité de Bienaymé-Tchebychev à une variable aléatoire suivant une loi binomiale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2026','imagecorrige2026',2026);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2026"></a><div class=inner id="innercorrige2026" style="display:none;">Soit $S$ la variable aléatoire comptant le nombre d'apparitions du chiffre 1 au cours de ces lancers. $S$ suit une loi binomiale de paramètres 3600 et 1/6. On sait donc que $E(S)=600$ et $V(S)=500$. Remarquons en outre que
+$$480&lt;S&lt;720\iff -120&lt;S-600&lt;120\iff |S-600|&lt;120.$$
+Par l'inégalité de Bienaymé-Tchebychev,
+$$P(|S-600|\geq 120)\leq \frac{500}{120^2}\leq 0,035.$$
+On en déduit que
+$$P(480&lt;S&lt;720)\geq 1-0,035=0,965.$$
+En particulier, la probabilité que le numéro 1 apparaisse entre 480 et 720 fois au cours de ces $3600$ lancers est supérieur à 0,96.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater1271"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1271"),	max:5, rating:2.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1271,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi faible pour des sommes de Bernoulli qui n'ont pas la même loi <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1271.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(1271,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1271','imageenonce1271');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1271"></a><div class=inner id="innerenonce1271">Soit $(X_n)$ une suite de variables aléatoires définies sur un même espace probabilisé fini $\Omega$. On suppose que, pour chaque $n\geq 1$, $X_i$ suit une loi de Bernoulli de paramètre $p_i$. On suppose en outre que les variables aléatoires sont deux à deux indépendantes. On pose
+$$S_n=\frac{X_1+\dots+X_n}n\textrm{ et }m_n=\frac{p_1+\dots+p_n}n.$$
+Démontrer que, pour tout $\veps&gt;0$, $P(|S_n-m_n|\geq\veps)\to 0$.</div></div><div class=indication><a href="javascript:showAll('innerindication1271','imageindication1271');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1271"></a><div class=inner id="innerindication1271" style="display:none;">Utiliser l'inégalité de Bienaymé-Tchebychev.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1271','imagecorrige1271',1271);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1271"></a><div class=inner id="innercorrige1271" style="display:none;">On a $E(S_n)=m_n$ et puisque les variables aléatoires sont indépendantes, 
+$$V(S_n)=\frac{1}{n^2}\sum_{k=1}^n V(X_k).$$
+On a $V(X_k)=p_k(1-p_k)\leq 1$ et donc $V(S_n)\leq \frac 1n$. D'après l'inégalité de Bienaymé-Tchebychev, on en déduit que 
+$$0\leq P(|S_n-m_n|\geq\veps)\leq \frac{1}{n\veps^2}$$
+et donc le terme au milieu tend bien vers 0 d'après le théorème des gendarmes.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater2040"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2040"),	max:5, rating:2.1052631578947, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2040,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pièces défectueuses <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2040.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(2040,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2040','imageenonce2040');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2040"></a><div class=inner id="innerenonce2040">Une usine fabrique des pièces dont une proportion inconnue $p$ est défectueuse, et on souhaite trouver une valeur approchée de $p$. On effectue un prélèvement de $n$ pièces. On suppose que le prélèvement se fait sur une population très grande, et donc qu'il peut s'apparenter à une suite de $n$  tirages indépendants avec remise. On note $X_n$ la variable aléatoire égale au nombre de pièces défectueuses et on souhaite quantifier le fait que $X_n/n$ approche $p$.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $X_n$? Sa moyenne? Sa variance?
+<li> Démontrer que, pour tout $\veps&gt;0$, $P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac 1{4n\veps^2}.$
+<li> En déduire une condition sur $n$ pour que $X_n/n$ soit une valeur approchée de $p$ à $10^{-2}$ près avec une probabilité supérieure ou égale à $95\%$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2040','imageindication2040');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2040"></a><div class=inner id="innerindication2040" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev à $X_n$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2040','imagecorrige2040',2040);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2040"></a><div class=inner id="innercorrige2040" style="display:none;"><ol class="enumeratechiffre">
+<li> $X_n$ est la somme de $n$ variables aléatoires de Bernoulli indépendantes de paramètre $p$. Ainsi, $X_n$ suit une loi binomiale $\mathcal B(n,p)$. On en déduit que 
+$$E(X_n)=np\textrm{ et }V(X_n)=np(1-p).$$
+<li> Appliquons l'inégalité de Bienaymé-Tchebychev à $X_n$. On a donc
+$$P(|X_n-E(X_n)|\geq a)\leq \frac{V(X_n)}{a^2}.$$
+Or, 
+$$\left|\frac{X_n}n-p\right|\geq\veps\iff |X_n-np|\geq n\veps\iff |X_n-E(X_n)|\geq n\veps.$$
+On applique donc l'inégalité de Bienaymé-Tchebychev avec $a=n\veps$ et on trouve que
+$$P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac {p(1-p)}{n\veps^2}.$$
+Mais sur $[0,1]$, la fonction $x\mapsto x(1-x)$ admet un maximum égal à $1/4$ (et atteint en $1/2$). On en déduit le résultat voulu. On pouvait aussi remarquer que c'est directement le résultat qui conduit à la loi faible des grands nombres.
+<li> On cherche $n$ tel que $P\left(\left|\frac{X_n}n-p\right|&lt;10^{-2}\right)\geq 0,95$ soit encore, en passant à l'événement contraire $P\left(\left|\frac{X_n}n-p\right|\geq 10^{-2}\right)\leq 0,05$. Il suffit donc de choisir $n$ tel que $\frac{1}{4n10^{-4}}\leq 0,05$ soit $n\geq 5\cdot 10^4$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater3145"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3145"),	max:5, rating:1.625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3145,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une variante de l'inégalité de Markov <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3145.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(3145,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3145','imageenonce3145');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3145"></a><div class=inner id="innerenonce3145">Soit $X$ une variable aléatoire réelle finie à valeurs dans $\mathbb R_+$, $f:\mathbb R_+\to\mathbb R_+^*$ une fonction croissante. Démontrer que
+$$P(X\geq a)\leq \frac{E(f(X))}{f(a)}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3145','imageindication3145');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3145"></a><div class=inner id="innerindication3145" style="display:none;">Appliquer l'inégalité de Markov à $Y=f(X)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3145','imagecorrige3145',3145);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3145"></a><div class=inner id="innercorrige3145" style="display:none;">Soit $\Omega$ l'univers où est défini $X$. Par croissance de la fonction $f$, pour tout $\omega\in\Omega$, on a
+$$X(\omega)\geq a\implies f(X(\omega))\geq f(a).$$
+Posons $Y=f(X)$ et appliquons l'inégalité de Markov à $Y$. On a donc
+\begin{align*}
+P(X\geq a)&\leq P(f(X)\geq f(a))\\
+&\leq \frac{E(f(X))}{f(a)}.
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater3089"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3089"),	max:5, rating:2.7857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3089,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Surréservation et inégalité de Tchebychev <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3089.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(3089,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3089','imageenonce3089');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3089"></a><div class=inner id="innerenonce3089">Une compagnie aérienne exploite un avion Paris-Montréal d'une capacité de 150 places.
+Pour ce vol, une analyse statistique a montré qu'un passager ayant réservé son billet
+se présentait à l'embarquement avec une probabilité de $p=0,\!75$. La compagnie souhaite
+optimiser le remplissage de l'avion et souhaite vendre $n$ billets, avec $n&gt;150$,
+mais en limitant le risque que plus de 150 personnes se rendent à l'embarquement
+à moins de $5\%$. On supposera dans la suite que $np&lt; 150$.<br>
+On définit la variable aléatoire $S_n$ comme le nombre de personnes, parmi les $n$
+ayant réservé un billet, se présentant à l'embarquement.
+<ol class="enumeratechiffre">
+ <li> Quelle est la loi de $S_n$?
+ <li> En remarquant que $(S_n\geq 150)\subset (|S_n-np|\geq 150-np)$, démontrer que 
+ $$P(S_n\geq 150)\leq \frac{np(1-p)}{(150-np)^2}.$$
+ <li> Résoudre sur $]0,150[$ l'inéquation $\frac{x(1-p)}{(150-x)^2}\leq 0,\!05$.
+ <li> Combien la compagnie peut-elle vendre de billets tout en s'assurant que la probabilité que plus de 150 clients se présentent à l'embarquement est inférieure ou égale à $5\%$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3089','imageindication3089');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3089"></a><div class=inner id="innerindication3089" style="display:none;"><ol class="enumeratechiffre">
+ <li> On est dans le cadre d'une répétition d'épreuves de Bernoulli indépendantes.
+ <li> Utiliser l'inégalité de Bienaymé-Tchebychev.
+ <li> 
+ <li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3089','imagecorrige3089',3089);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3089"></a><div class=inner id="innercorrige3089" style="display:none;"><ol class="enumeratechiffre">
+ <li> $S_n$ compte le nombre de succès (se présenter à l'embarquement) lors de la réalisation  
+ de $n$ épreuves de Bernoulli indépendantes de même paramètre $p=0,\!75$. $S_n$ suit donc une loi binomiale $\mathcal B(n,p)$.
+ <li> Remarquons que 
+ $$S_n\geq 150\implies S_n-np\geq 150-np\implies |S_n-np|\geq |150-np|$$
+ puisque $150-np\geq 0$. On peut alors appliquer l'inégalité de Tchebychev qui donne immédiatement le résultat, 
+ puisque $E(S_n)=np$ et $V(S_n)=np(1-p)$.
+ <li> La résolution de cette inéquation du second degré donne $x\in [0;125]$.
+ <li> Si $np\leq 125$, en particulier si $n\leq 166$, alors on sait que $P(S_n\geq 150)\leq 0,\!05$.
+ Si la compagnie vend 166 billets, la probabilité que plus de 150 clients se présentent à l'embarquement est inférieure à $0,\!05$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater3090"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3090"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3090,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode de Monte-Carlo <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3090.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(3090,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3090','imageenonce3090');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3090"></a><div class=inner id="innerenonce3090">On munit le plan d'un repère orthonormé $(O,\vec i,\vec j)$. On choisit au hasard, et uniformément, un point $M$
+dans le carré unité, c'est-à-dire le carré dont les sommets sont les points de coordonnées $(0,0)$, $(0,1)$, 
+$(1,0)$ et $(1,1)$. On note $X$ la variable aléatoire qui vaut 1 si le point est dans le quart de disque unité,
+et $0$ sinon.
+<ol class="enumeratechiffre">
+ <li> Justifier que $X$ suit une loi de Bernoulli dont on précisera le paramètre $p$.
+ <li> &Eacute;crire une fonction Python $\verb+simulX()+$ qui simule cette variable aléatoire $X$.
+ <li> On répète $n$ fois et de façon indépendante cette expérience et on note $X_n$ le résultat obtenu lors
+ de la $n$-ième expérience. On pose $S_n$ la variable aléatoire $S_n=X_1+\cdots+X_n$. Quelle est la loi de $S_n$?
+ <li> On pose $P_n=\frac{4S_n}n$ et on considère $\veps&gt;0$. Justifier que 
+ $$P(|P_n-\pi|\geq \veps)\leq\frac{\pi(4-\pi)}{\veps^2 n}.$$
+ <li> Combien suffit-il de tirer de points pour que $P_n$ constitue une approximation de $\pi$ à $10^{-2}$ près, avec une probabilité supérieure ou 
+ égale à $95\%$?
+ <li> &Eacute;crire une fonction Python $\verb+approxpi()+$ utilisant la fonction $\verb+simulX()+$ qui renvoie une approximation de $\pi$ à $10^{-2}$ près, avec une probabilité supérieure ou 
+ égale à $95\%$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3090','imageindication3090');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3090"></a><div class=inner id="innerindication3090" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li> On pourra utiliser que $\sup_{p\in[0,1]}p(1-p)1/4$.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev à $P_n$.
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3090','imagecorrige3090',3090);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3090"></a><div class=inner id="innercorrige3090" style="display:none;"><ol class="enumeratechiffre">
+ <li> $X$ prend les deux valeurs $1$ et $0$. De plus, puisque le point est tiré uniformément sur le carré unité, on a 
+ $$P(X=1)=\frac{\textrm{aire(disque unité)}}{\textrm{aire(carré unité)}}=\frac\pi4.$$
+ <li> 
+<pre><code class="language-python">import numpy as np;
+
+def simulX():
+    x=np.random.rand()
+    y=np.random.rand()
+    if ( (x*x+y*y)&lt;=1):
+        return 1
+    else:
+        return 0
+</code></pre>
+ <li> $S_n$ suit une loi binomiale de paramètres $n$ et $p$.
+ <li> On observe que $E(P_n)=\frac{4}n E(S_n)=\pi$ et que
+$$V(P_n)=\frac{16}{n^2}V(S_n)=\frac{16}{n^2}\times n\times \frac \pi 4\times\left(1-\frac\pi 4\right)=\frac{\pi(4-\pi)}{n}.$$
+L'inégalité de Bienaymé-Tchebychev appliquée à $P_n$  donne 
+ $$P\left(\left|P_n-\pi \right|\geq\veps\right)\leq \frac{\pi(4-\pi)}{n\veps^2}.$$
+ <li> On remarque que 
+ $$P(|P_n-\pi|&lt; 10^{-2})=1-P(|P_n-\pi|\geq 10^{-2})$$ 
+ et donc que l'inégalité $P(|P_n-\pi|&lt;10^{-2})\geq 0,\!95$ est équivalente à 
+ $$P(|P_n-\pi|\geq 10^{-2})\leq 0,\!05.$$
+ On applique l'inégalité précédente avec $\veps=10^{-2}$. Il suffit donc de choisir $n$ tel que 
+ $$\frac{\pi(4-\pi)}{n10^{-4}}\leq 0,\!05\iff n\geq \frac{10^4 \pi(4-\pi)}{0,\!05}.$$
+Le choix de $n=539354$ convient.
+ On peut remarquer que c'est beaucoup pour une approximation assez médiocre!
+ <li> 
+<pre><code class="language-python">def approxpi():
+    p=0
+    for i in range(539354):
+        p=p+simulX()
+    return 4*p/539354;
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater3144"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3144"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3144,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Cantelli <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3144.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(3144,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3144','imageenonce3144');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3144"></a><div class=inner id="innerenonce3144">Soit $X$ une variable aléatoire réelle et $a&gt;0$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $t\geq 0$, $P\big(X-E(X)\geq a\big)\leq \frac{t^2+V(X)}{(a+t)^2}$.
+<li> En déduire que $P\big(X-E(X)\geq a\big)\leq \frac{V(X)}{V(X)+a^2}.$
+<li> Démontrer l'inégalité de Cantelli : $P\big(|X-E(X)|\geq a\big)\leq \frac{2V(X)}{V(X)+a^2}$. Comparer avec l'inégalité de Tchebychev.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3144','imageindication3144');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3144"></a><div class=inner id="innerindication3144" style="display:none;"><ol class="enumeratechiffre">
+<li> S'inspirer de la preuve de l'inégalité de Tchebychev en utilisant la variable aléatoire $Y=X-E(X)+t$.
+<li> Optimiser en $t$.
+<li> Appliquer l'inégalité précédente à $Z=-X$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3144','imagecorrige3144',3144);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3144"></a><div class=inner id="innercorrige3144" style="display:none;"><ol class="enumeratechiffre">
+<li> Considérons la variable aléatoire $Y=X-E(X)+t$. On a
+$$X-E(X)\geq a\iff X-E(X)+t\geq a+t$$
+et ceci entraîne, puisque $a+t\geq 0$, 
+$$\big(X-E(X)+t\big)^2\geq (a+t)^2.$$
+L'événement $X-E(X)\geq a$ est donc inclus dans l'événement $\big(X-E(X)+t\big)^2\geq (a+t)^2$. On en déduit
+\begin{align*}
+P\big(X-E(X)\geq a\big)&\leq P\Big(\big(X-E(X)+t\big)^2\geq (a+t)^2\Big)\\
+&\leq \frac{E\Big(\big(X-E(X)+t\big)^2\Big)}{(a+t)^2}
+\end{align*}
+d'après l'inégalité de Markov. De plus, 
+\begin{align*}
+E\Big(\big(X-E(X)+t\big)^2\Big)&=E\Big(\big(X-E(X)\big)^2\Big)+2tE\Big(X-E(X)\Big)+t^2\\
+&=V(X)+0+t^2\\
+&=V(X)+t^2.
+\end{align*}
+On a donc démontré que 
+$$P\big(X-E(X)\geq a\big)\leq \frac{t^2+V(X)}{(a+t)^2}.$$
+<li> On va chercher la valeur de $t$ pour laquelle le membre de droite de l'inégalité précédente est le plus petit possible. Pour cela, on pose, pour $t\geq 0$, $f(t)=\frac{t^2+V(X)}{(a+t)^2}$. La fonction $f$ est dérivable sur $[0,+\infty[$ et, sur cet intervalle,
+\begin{align*}
+f'(t)&=\frac{2t(a+t)^2-2(a+t)(t^2+V(X))}{(a+t)^4}\\
+&=\frac{2(at-V(X))}{(a+t)^3}.
+\end{align*}
+La fonction $f$ atteint donc son minimum en $t=V(X)/a$, et en ce point elle vaut 
+$$f(V(X)/a)=\frac{\frac{V(X)^2}{a^2}+V(X)}{\left(\frac{V(X)}a+a\right)^2}=\frac{\frac{V(X)}a\left(\frac{V(X)}a+a\right)}{\left(\frac{V(X)}a+a\right)^2}=
+\frac{V(X)}{V(X)+a^2}.$$
+Ceci démontre le resultat demandé.
+<li> Si on applique l'inégalité précédente à $Z=-X$, qui a la même variance que $X$, alors on obtient 
+$$P\Big(-\big(X-E(X)\big)\geq a\Big)\leq \frac{V(X)}{V(X)+a^2}.$$
+Puisque 
+$$|X-E(X)|\geq a=\Big(\big(X-E(X)\big)\geq a\Big)\cup \Big(-\big(X-E(X)\big)\geq a\Big),$$
+on a bien 
+$$P\big(|X-E(X)|\geq a\big)\leq \frac{2V(X)}{V(X)+a^2}.$$
+Cette inégalité est meilleure que l'inégalité de Tchebychev si et seulement si 
+$$\frac{2V(X)}{V(X)+a^2}\leq \frac{V(X)}{a^2}$$
+c'est-à-dire si et seulement si $V(X)\geq a^2$ (ou $V(X)=0$).
+</ol></div></div></div>
+
+
+<div class=titrepartie>Vecteurs aléatoires discrets finis</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater3148"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3148"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3148,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tirage simultané dans une urne <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3148.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(3148,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3148','imageenonce3148');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3148"></a><div class=inner id="innerenonce3148">On tire simultanément deux boules dans une urne contenant 4 boules indiscernables au toucher et numérotées de $1$ à $4$. On note $U$ le numéro de la plus petite boule, et $V$ le numéro de la plus grande boule. Déterminer la loi conjointe de $(U,V)$, puis les lois de $U$ et de $V$.</div></div><div class=indication><a href="javascript:showAll('innerindication3148','imageindication3148');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3148"></a><div class=inner id="innerindication3148" style="display:none;">Déterminer toutes les valeurs possibles, puis remplir un tableau...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3148','imagecorrige3148',3148);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3148"></a><div class=inner id="innercorrige3148" style="display:none;">L'univers $\Omega$ est $\Omega=\big\{\{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}\big\}$ et on considère que tous les événements sont équiprobables. On peut résumer la loi conjointe de $U$ et $V$ et les lois marginales grâce au tableau suivant :
+$$
+\begin{array}{c||c|c|c||c}
+U\backslash V&2&3&4& P(U=u)\\  \hline
+1&1/6&1/6&1/6&1/2 \\ \hline
+2&0&1/6&1/6&1/3 \\ \hline
+3&0&0&1/6&1/6 \\ \hline \hline
+P(V=v)&1/6&1/3&1/2 
+\end{array}
+$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater3096"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3096"),	max:5, rating:1.3589743589744, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3096,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Couple de variables aléatoires uniformes <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3096.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(3096,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3096','imageenonce3096');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3096"></a><div class=inner id="innerenonce3096">Soit $(\Omega,P)$ un espace probabilisé fini et soit $X:\Omega\to E$ et $Y:\Omega\to F$ deux variables aléatoires. Démontrer que les deux assertions suivantes sont équivalentes :
+<ol class="enumerateroman">
+<li> $(X,Y)\sim \mathcal U(E\times F)$;
+<li> $X\sim \mathcal U(E)$, $Y\sim\mathcal U(F)$ et $X$ et $Y$ sont indépendantes.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3096','imageindication3096');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3096"></a><div class=inner id="innerindication3096" style="display:none;">Il s'agit essentiellement d'appliquer les définitions, et la formule permettant de retrouver les lois marginales connaissant la loi conjointe. On utilisera aussi $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3096','imagecorrige3096',3096);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3096"></a><div class=inner id="innercorrige3096" style="display:none;">Commençons par prouver $ii.\implies i.$, qui est le sens le plus facile. Soit $(x,y)\in E\times F$. Puisque $X$ et $Y$ sont indépendantes, on a 
+$$P\big((X,Y)=(x,y)\big)=P(X=x)P(Y=y)=\frac{1}{\textrm{card}(E)}\times\frac 1{\textrm{card}(F)}=\frac{1}{\textrm{card}(E\times F)}$$
+où on a utilisé que $X\sim \mathcal U(E)$, $Y\sim\mathcal U(F)$, et que $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.<br>
+Réciproquement, on suppose $i.$. On retrouve facilement les lois marginales de $X$ et de $Y$. Par exemple, pour $x\in E$, on a
+$$P(X=x)=\sum_{y\in F}P\big((X,Y)=(x,y)\big)=\sum_{y\in F}\frac{1}{\card(E\times F)}=\frac{\textrm{card}(F)}{\textrm{card}(E\times F)}=\frac{1}{\textrm{card}(E)}.$$
+Ainsi, on a bien $X\sim\mathcal U(E)$ et de même $Y\sim\mathcal U(F)$. Enfin, $X$ et $Y$ sont bien indépendantes puisque 
+$$P\big((X,Y)=(x,y))=P(X=x)\times P(Y=y)$$
+d'après la formule $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>36</span> <span id="rater1273"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1273"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1273,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi marginale <a id=heart36 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart36" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1273.html"> [Signaler une erreur]</a><a id=exo36 href="javascript:ajouteexo(1273,36,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1273','imageenonce1273');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1273"></a><div class=inner id="innerenonce1273">On dispose de $n$ boites numérotées de $1$ à $n$.  La boite $k$ contient $k$ boules numérotées de $1$ à $k$. On choisit au hasard de façon équiprobable une boite, puis une boule dans cette boite. On note $X$ le numéro de la boite et $Y$ le numéro de la boule.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi conjointe du couple $(X,Y)$.
+<li> En déduire la loi de $Y$.
+<li> Calculer l'espérance de $Y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1273','imageindication1273');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1273"></a><div class=inner id="innerindication1273" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser des probabilités conditionnelles.
+<li>
+<li> On applique la définition et on permute les sommes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1273','imagecorrige1273',1273);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1273"></a><div class=inner id="innercorrige1273" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour tout $(i,j)$ dans $\{1,\dots,n\}^2$, on a 
+$$P\big ( (X,Y)=(i,j)\big) = P(X=i) P(Y=j|X=i).$$
+On en déduit que si $j&gt;i$, alors $P\big ( (X,Y)=(i,j)\big) =0$ alors que si $j\leq i$, 
+$$P\big ( (X,Y)=(i,j)\big) =\frac{1}{n}\times\frac{1}i.$$
+<li> $Y$ prend ses valeurs dans $\{1,\dots,n\}$ et on a 
+$$P(Y=k)=\sum_{i=1}^n P\big((X=i,Y=k)\big)=\sum_{i=k}^n P\big((X=i,Y=k)\big)=\sum_{i=k}^n \frac1{ni}.$$
+<li> Pour calculer l'espérance, on applique la définition et on permute les sommes.
+\begin{eqnarray*}
+E(Y)&=&\frac 1n\sum_{k=1}^n \sum_{i=k}^n\frac ki\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\sum_{k=1}^i k\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\times \frac {i(i+1)}2\\
+&=&\frac 1n\sum_{i=1}^n \frac{i+1}2\\
+&=&\frac 1{2n}\times \left(\frac{(n+1)(n+2)}2-1\right)\\
+&=&\frac{n+3}4.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>37</span> <span id="rater1277"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1277"),	max:5, rating:1.2631578947368, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1277,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi jointe uniforme <a id=heart37 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart37" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1277.html"> [Signaler une erreur]</a><a id=exo37 href="javascript:ajouteexo(1277,37,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1277','imageenonce1277');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1277"></a><div class=inner id="innerenonce1277">Soit $(X,Y)$ un couple de variables aléatoires suivant une loi uniforme sur $\{0,\dots,n\}^2$.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $X$, la loi de $Y$, la loi de $X+Y$.
+<li> $X$ et $Y$ sont-elles indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1277','imageindication1277');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1277"></a><div class=inner id="innerindication1277" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser les méthodes classiques. Pour la loi de $X+Y$, on pourra séparer les cas $X+Y\leq n$ et $X+Y\geq n$.
+<li> Utiliser la définition.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1277','imagecorrige1277',1277);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1277"></a><div class=inner id="innercorrige1277" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ est à valeurs dans $\{0,\dots,n\}$. On a, pour tout $k$ de $\{0,\dots,n\}$,
+$$P(X=k)=\sum_{i=0}^n P\big ( (X,Y)=(k,i)\big) =\sum_{i=0}^n \frac{1}{(n+1)^2}=\frac 1{n+1}.$$
+$X$ suit donc une loi uniforme sur $\{0,\dots,n\}$. Par symétrie, il en est de même de $Y$.<br>
+La variable aléatoire $X+Y$ est à valeurs dans $\{0,\dots,2n\}$ et pour tout $k$ dans cet intervalle d'entiers, on a 
+$$P(X+Y=k)=\sum_{i=0}^k P\big( (X=i,Y=k-i)\big).$$
+Si $k\leq n$, ceci devient égal à 
+$$P(X+Y=k)=\sum_{i=0}^k \frac{1}{(n+1)^2}=\frac{k+1}{(n+1)^2}.$$
+Si $k&gt;n$, la somme ne peut aller que jusque $n$ (car $i\leq n$) et ne peut commencer qu'en $k-n$ (car $k-i\leq n$) et donc
+$$P(X+Y=k)=\sum_{i=k-n}^n \frac{1}{(n+1)^2}=\frac{2n-k+1}{(n+1)^2}.$$
+<li> Les variables $X$ et $Y$ sont indépendantes, car pour tout couple $(i,j)$ de $\{0,\dots,n\}$, on a bien
+$$P\big( (X=i),(Y=j)\big)=P(X=i)P(Y=j)=\frac{1}{(n+1)^2}.$$
+</ol></div></div></div>
+
+
+<div class=cardcours>
+<div class="titrecours">Variables aléatoires finies</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcours%252Fva.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Ffeuillesexo%252Fva&amp;type=fexo.html">Exercices</a>
+        <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fmethodes%252Fva.html">Méthodes</a>
+            <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcolles%252Fva&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fvideos%252Fva.html">Vidéos</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Foraux%252Fva&amp;type=fexo.html">Oraux de concours</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

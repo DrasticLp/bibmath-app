@@ -1,0 +1,998 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Extrema des fonctions de plusieurs variables</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Extrema des fonctions de plusieurs variables</h1><div class=titrepartie>Extrema libres - points critiques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2064"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2064"),	max:5, rating:2.3181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2064,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2064.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2064,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2064','imageenonce2064');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2064"></a><div class=inner id="innerenonce2064">On pose $f(x,y)=x^2+y^2+xy+1$ et $g(x,y)=x^2+y^2+4xy-2$.
+<ol class="enumeratechiffre">
+<li> Déterminer les points critiques de $f$, de $g$.
+<li> En reconnaissant le début du développement d'un carré, étudier les extrema locaux de $f$.
+<li> En étudiant les valeurs de $g$ sur deux droites vectorielles bien choisies, étudier les extrema locaux de $g$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2064','imagecorrige2064',2064);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2064"></a><div class=inner id="innercorrige2064" style="display:none;"><ol class="enumeratechiffre">
+<li> On calcule les dérivées partielles de $f$ :
+$$\frac{\partial f}{\partial x}(x,y)=2x+y,\ \frac{\partial f}{\partial y}(x,y)=x+2y.$$
+Si $(x,y)$ est un point critique de $f$, il vérifie donc le système
+$$\left\{
+\begin{array}{rcl}
+2x+y&=&0\\
+x+2y&=&0
+\end{array}\right.$$
+$(0,0)$ est donc le seul point critique de $f$. Un raisonnement tout à fait similaire montre que $(0,0)$ est aussi le seul point critique de $g$.
+<li> Les extrema locaux d'une fonction différentiable ne pouvant être atteints qu'en un point critique, il suffit d'étudier si $(0,0)$ est un extrémum local.
+$$f(x,y)=\left(x+\frac y2\right)^2+\frac{3y^2}4+1\geq 1=f(0,0).$$
+Ainsi, $(0,0)$ est un extrémum local, et même global, de $f$.
+<li> Ici aussi, il suffit de déterminer la nature de $(0,0)$. On a $g(0,0)=-2$. On a également, pour $x\neq 0$,
+$g(x,0)=x^2-2&gt; g(0,0)$ et $g(x,-x)=-2x^2-2&lt; g(0,0)$. Ainsi, aussi près de $(0,0)$ qu'on veut, $g$ prend des valeurs (strictement) supérieures et (strictement) inférieures à $g(0,0)$. Ainsi, $(0,0)$ n'est pas un extrémum local de $g$. Comme $(0,0)$ est le seul point critique de $g$, $g$ n'admet pas d'extrémum local.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2065"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2065"),	max:5, rating:1.551724137931, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2065,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema locaux <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2065.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2065,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2065','imageenonce2065');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2065"></a><div class=inner id="innerenonce2065">Déterminer les extrema locaux des fonctions $f:\mathbb{R}^2  \to \mathbb{R}$ suivantes :
+<ol class="enumeratechiffre">
+<li> $f(x,y) = x^2  + xy + y^2  - 3x - 6y$
+<li> $f(x,y) = x^2  + 2y^2  - 2xy - 2y + 1$
+<li> $f(x,y) = x^3  + y^3 $
+<li> $f(x,y) = (x - y)^2  + (x + y)^3 $
+</ol>
+		
+
+</div></div><div class=indication><a href="javascript:showAll('innerindication2065','imageindication2065');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2065"></a><div class=inner id="innerindication2065" style="display:none;">On doit commencer par rechercher les points critiques. Ensuite, pour chaque cas, on doit adopter une méthode particulière : changement de variables, étude sur des droites proches, début du développement d'un carré.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2065','imagecorrige2065',2065);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2065"></a><div class=inner id="innercorrige2065" style="display:none;"><ol class="enumeratechiffre">
+<li> On calcule les dérivées partielles
+$$\frac{\partial f}{\partial x}(x,y)=2x+y-3,\ \frac{\partial f}{\partial y}(x,y)=x+2y-6.$$
+L'annulation simultanée de ces dérivées partielles donnent les points critiques. On trouve après résolution du système que seul $(0,3)$ est un point critique de $f$. Posons $u=x$ et $v=y-3$ pour se ramener en $(0,0)$. Alors
+$$f(x,y)=u^2+uv+v^2-9=(u+v/2)^2+3v^2/4-9\geq f(0,3).$$
+Ainsi, $(0,3)$ est un minimum local, et même global, de $f$.
+<li> On trouve cette fois $(1,1)$ comme unique point critique de $f$. En posant $u=x-1$ et $v=y-1$ (toujours dans l'idée de se ramener en $(0,0)$), on a 
+$$f(x,y)=u^2+2v^2-2uv=(u-v)^2+v^2\geq f(1,1).$$
+Ainsi, $(1,1)$ est un minimum local, et même global, de $f$.
+<li> Le seul point critique est $(0,0)$. On a $f(x,0)&gt;0=f(0,0)$ si $x&gt;0$ et $f(x,0)&lt;0=f(0,0)$ si $x&lt;0$. Ainsi, $(0,0)$ n'est pas un extrémum local de $f$.
+<li> Posons $u=x-y$, $v=x+y$ et $g(u,v)=u^2+v^3$. &Eacute;tudier les extrema locaux de $g$ revient, modulo le changement de variables, à étudier les extrema locaux de $f$. $(0,0)$ est le seul point critique de $g$, et puisque $g(0,y)&gt;0$ si $y&gt;0$ et $g(0,y)&lt;0$ si $y&lt;0$, $(0,0)$ n'est pas un extrémum de $g$. Donc $f$ n'admet pas d'extrémum local.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2220"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2220"),	max:5, rating:1.7096774193548, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2220,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Point de Torricelli/Fermat <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2220.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2220,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2220','imageenonce2220');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2220"></a><div class=inner id="innerenonce2220">Soit $A,B,C$ trois points non alignés d'un espace euclidien. On pose, pour tout point $M$, $f(M)=AM+BM+CM$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier la différentiabilité de $g(M)=AM$ et calculer sa différentielle.
+<li> Démontrer que $f$ atteint son minimum en au moins un point, et que tout point où $f$ atteint son minimum est situé dans le plan affine $(ABC)$.
+<li> Démontrer que $f$ est strictement convexe, et en déduire que $f$ atteint un unique minimum.
+<li> Soit $F$ le point où $f$ atteint son minimum. On suppose que $F$ est distinct de $A,B$ et $C$. Démontrer que 
+$$\frac{1}{AF}\overrightarrow{AF}+\frac 1{BF}\overrightarrow{BF}+\frac 1{CF}\overrightarrow{CF}=\vec 0.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2220','imageindication2220');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2220"></a><div class=inner id="innerindication2220" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire apparaitre $g$ comme composée de fonctions différentiables.
+<li> Argument de compacité, puis de projection.
+<li> Soient $M_1,M_2$ deux points distincts, $t\in ]0,1[$ et $M=tM_1+(1-t)M_2$. Il s'agit de démontrer que 
+$f(M)&lt;tf(M_1)+(1-t)f(M_2)$. Partir de la relation 
+$$\overrightarrow{AM}=t\overrightarrow{AM_1}+(1-t)\overrightarrow{AM_2}.$$
+<li> En un minimum, la différentielle est nulle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2220','imagecorrige2220',2220);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2220"></a><div class=inner id="innercorrige2220" style="display:none;"><ol class="enumeratechiffre">
+<li> Introduisons d'abord $h(M)=\overrightarrow{AM}$ et $k(M)=\langle \overrightarrow{AM},\overrightarrow{AM}\rangle$. $h$ est une application affine. Elle est différentiable partout et sa différentielle satisfait $dh_M(H)=\overrightarrow{OH}$. D'après le théorème de différentiabilité des formes bilinéaires, $k$ est différentiable partout et sa différentielle satisfait :
+$$dk_M(H)=2\langle \overrightarrow{OH},\overrightarrow{AM}\rangle.$$
+Enfin, $g=\sqrt k$ est différentiable en tout point $M$ où $k(M)\neq 0$, c'est-à-dire en tout point $M$ différent de $A$. Par théorème de différentiabilité d'une composée, on a 
+$$dg_M(H)=\frac{2\langle \overrightarrow{OH},\overrightarrow{AM}\rangle}{2AM}=\frac{\langle \overrightarrow{OH},\overrightarrow{AM}\rangle}{AM}.$$
+<li> C'est un argument classique de compacité. Remarquons que $\lim_{OM\to+\infty}f(M)=+\infty$. En particulier, il existe une boule fermée $B$ telle que, si $M\notin B$, alors $f(M)&gt;f(O)$. D'autre part, $f$ est continue sur la boule fermée $B$ d'un espace euclidien, donc de dimension finie. $B$ est une partie compacte et $f$ atteint son minimum sur $B$. Le minimum sur $B$ est aussi le minimum sur l'espace tout entier, car $O\in B$ et en dehors de $B$, $f(M)&gt;f(O)$.<br>
+D'autre part, soit $M$ un point qui n'est pas dans le plan $(ABC)$ et soit $H$ sa projection orthogonale sur $(ABC)$. Alors, d'après le théorème de Pythagore, on a $AH&lt;AM$, $BH&lt;BM$ et $CH&lt;CM$. Ceci implique que $f(H)&lt;f(M)$ et donc que $f$ n'atteint pas son minimum en $M$.
+<li> Soient $M_1,M_2$ deux points distincts, $t\in ]0,1[$ et $M=tM_1+(1-t)M_2$. Il s'agit de démontrer que 
+$f(M)&lt;tf(M_1)+(1-t)f(M_2)$. Partons de la relation 
+$$\overrightarrow{AM}=t\overrightarrow{AM_1}+(1-t)\overrightarrow{AM_2}$$
+qui exprime que $M$ est le barycentre de $(M_1,t)$ et de $(M_2,1-t)$. Alors
+\begin{eqnarray*}
+AM^2&=&t^2AM_1^2+(1-t)^2AM_2^2+2t(1-t)\langle \overrightarrow{AM_1},\overrightarrow{AM_2}\rangle\\
+&\leq&t^2AM_1^2+(1-t)^2AM_2^2+2t(1-t) AM_1AM_2\\
+&=&(tAM_1+(1-t)AM_2)^2
+\end{eqnarray*}
+et pour avoir égalité dans l'inégalité apparaissant ci-dessus, il est nécessaire que $A$ soit sur la droite $(M_1M_2)$. En conclusion, on a donc
+$$AM\leq tAM_1+(1-t)AM_2$$
+et s'il y a égalité, alors $A\in (M_1M_2)$. La même propriété est vraie pour $B$ et pour $C$. De plus, comme les points $A,B$ et $C$ ne sont pas alignés, l'une des inégalités au moins est stricte. On en déduit donc que
+$f(M)&lt;tf(M_1)+(1-t)f(M_2)$.<br>
+Prouvons maintenant l'existence d'un unique point où $f$ atteint son minimum. S'il existait deux points distincts $M_1$ et $M_2$ où $f$ atteint son minimum, en notant $M$ le milieu de $[M_1M_2]$, on aurait
+$$f(M)&lt;\frac 12f(M_1)+\frac 12f(M_2)=\min f$$
+une contradiction.
+<li> D'après la première question, $f$ est différentiable en $F$ et on sait que $df_F=0$. D'après la première question, 
+\begin{eqnarray*}
+df_F(H)&=&\frac{1}{AF}\langle \overrightarrow{AF},\overrightarrow{OH}\rangle+\frac{1}{BF}\langle \overrightarrow{BF},\overrightarrow{OH}\rangle+\frac{1}{CF}\langle \overrightarrow{CF},\overrightarrow{OH}\rangle\\
+&=&\left\langle\overrightarrow{OH},\frac1{AF}\overrightarrow{AF}+\frac1{BF}\overrightarrow{BF}+\frac1{CF}\overrightarrow{CF}\right\rangle.
+\end{eqnarray*}
+On en déduit bien le résultat voulu.
+</ol></div></div></div>
+
+<div class=titrepartie>Extrema libres - avec dérivées du second ordre</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater3601"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3601"),	max:5, rating:1.625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3601,rating); this.setRating(rating);   this.disable();    done();     }});</script> - DL à l'ordre deux <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3601.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(3601,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3601','imageenonce3601');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3601"></a><div class=inner id="innerenonce3601">&Eacute;crire le développement limité à l'ordre $2$ en $a=(-1,2)$ de $f:\mathbb R^2\to\mathbb R,$ $(x,y)\mapsto x^2y^3.$</div></div><div class=indication><a href="javascript:showAll('innerindication3601','imageindication3601');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3601"></a><div class=inner id="innerindication3601" style="display:none;">Utiliser la formule de Taylor-Young</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3601','imagecorrige3601',3601);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3601"></a><div class=inner id="innercorrige3601" style="display:none;">On va utiliser la formule de Taylor-Young. Pour cela, on commence par calculer les dérivées partielles : 
+$$\frac{\partial f}{\partial x}(x,y)=2xy^3,\ \frac{\partial f}{\partial y}(x,y)=3x^2y^2$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=2y^3,\ \frac{\partial f}{\partial x\partial y}(x,y)=6xy^2,\ \frac{\partial^2 f}{\partial y^2}(x,y)=6x^2y.$$
+On évalue ces dérivées partielles en $a$ : 
+$$\frac{\partial f}{\partial x}(x,y)=-16,\ \frac{\partial f}{\partial y}(x,y)=12$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=16,\ \frac{\partial f}{\partial x\partial y}(x,y)=-24,\ \frac{\partial^2 f}{\partial y^2}(x,y)=12.$$
+D'après la formule de Taylor-Young, on a donc 
+\begin{align*}
+f(x,y)&=8-16(x+1)+12(y-2)+\\
+&\quad \quad 8(x+1)^2-24(x+1)(y-2)+6(y-2)^2+o((x+1)^2+(y-2)^2)
+\end{align*}
+ce qu'on peut aussi écrire
+$$f(a+h)=8-16h_1+12h_2+8h_1^2-24h_1h_2+6h_2^2+o(h_1^2+h_2^2).$$
+Remarquez bien que les coefficients devant $h_1^2$ et $h_2^2$ sont la moitié des dérivées partielles respectives, mais pas celui devant $h_1h_2.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater140"></span><script>var myRating = raterJs( { element:document.querySelector("#rater140"),	max:5, rating:2.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(140,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema locaux <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=140.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(140,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce140','imageenonce140');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce140"></a><div class=inner id="innerenonce140">Déterminer les extrema locaux des fonctions suivantes :
+<ol class="enumeratechiffre">
+<li> $f(x,y)=y^2-x^2+\frac{x^4}2$;
+<li> $f(x,y)=x^3+y^3-3xy$;
+<li> $f(x,y)=x^4+y^4-4(x-y)^2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication140','imageindication140');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication140"></a><div class=inner id="innerindication140" style="display:none;">Il s'agit d'une application assez immédiate des résultats du cours.
+On cherche les points critiques, puis on étudie la nature de ces points critiques.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige140','imagecorrige140',140);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige140"></a><div class=inner id="innercorrige140" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par chercher les points critiques de $f$. Pour cela, on calcule les dérivées partielles
+par rapport à $x$ et à $y$ :
+$$\frac{\partial f}{\partial x}(x,y)=-2x+2x^3\textrm{ et }\frac{\partial f}{\partial y}(x,y)=2y.$$
+Un point $(x,y)$ est critique si et seulement s'il est solution du système 
+$$\left\{
+\begin{array}{rcl}
+-2x+2x^3&=&0\\
+2y&=&0.
+\end{array}\right.
+$$
+Les seules solutions de ce système sont $(0,0)$, $(1,0)$ et $(-1,0)$. On a donc 3 points critiques 
+et on va étudier la nature de chacun. Pour cela, on calcule les dérivées partielles d'ordre 2 : 
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=-2+6x^2\quad\frac{\partial^2 f}{\partial y^2}(x,y)=2\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=0.$$
+En $(0,0)$, on obtient donc, avec les notations usuelles, $r=-2$, $t=2$ et $s=0$, soit $rt-s^2=-4&lt;0$. Le point $(0,0)$ est un point
+col, ce n'est pas un extrémum local de $f$. En $(1,0)$, on  a $r=4$, $t=2$ et $s=0$, soit $rt-s^2=8&gt;0$. Le point $(1,0)$
+est un extrémum local, c'est même un minimum local puisque $r&gt;0$. L'étude en $(-1,0)$ donne exactement le même résultat.
+<li> On procède exactement de la même façon. Cette fois, 
+$$\frac{\partial f}{\partial x}(x,y)=3x^2-3y\textrm{ et }\frac{\partial f}{\partial y}(x,y)=3y^2-3x.$$
+Un point $(x,y)$ est un point critique si et seulement s'il est solution du système
+$$\left\{
+\begin{array}{rcl}
+x^2-y&=&0\\
+y^2-x&=&0.
+\end{array}\right.
+$$
+Ce système implique $x^4=x$, soit $x=0$ ou $x=1$. On en déduit facilement que les seuls points critiques de $f$
+sont $(0,0)$ et $(1,1)$. Les dérivées partielles du second ordre sont égales à 
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=6x\quad\frac{\partial^2 f}{\partial y^2}(x,y)=6y\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=-3.$$
+En $(0,0)$, on a $r=0$, $t=0$ et $s=-3$, soit $rt-s^2=-9&lt;0$. Le point $(0,0)$ est un point col, ce n'est pas un extrémum local de $f$.
+En $(1,1)$, on a $r=6$, $t=6$ et $s=-3$, soit $rt-s^2=27&gt;0$. Puisque de plus $r&gt;0$, le point $(1,1)$ est un minimum local de $f$. 
+<li> Les dérivées partielles du premier ordre de $f$ sont 
+$$\frac{\partial f}{\partial x}(x,y)=4x^3-8(x-y)\textrm{ et }\frac{\partial f}{\partial y}(x,y)=4y^3+8(x-y).$$
+Les points critiques sont solutions du système 
+$$\left\{
+\begin{array}{rcl}
+4x^3=8(x-y)\\
+-4y^3=8(x-y).
+\end{array}\right.$$
+On en déduit que $x^3=-y^3=(-y)^3$. La fonction cube étant injective, ceci donne encore
+$x=-y$. Si on reporte ceci dans la première équation, on trouve $4x^3=16x$, soit
+$$x^3-4x=0\iff x(x^2-4)=0\iff x(x-2)(x+2)=0.$$
+On en déduit que les points critiques de $f$ sont $(0,0)$, $(2,-2)$ et $(-2,2)$. Etudions maintenant la nature de
+ces points critiques. Les dérivées partielles du second ordre sont
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=12x^2-8,\ \frac{\partial^2 f}{\partial y^2}(x,y)=12y^2-8\textrm{ et }\frac{\partial^2 f}{\partial x\partial y}(x,y)=8.$$
+En $(2,-2)$, avec les notations usuelles, on a $r=40$, $t=40$ et $s=-8$. Cette fois, $rt-s^2&gt;0$ et $r&gt;0$, donc le point $(2,-2)$ est un 
+minimum local pour $f$. La conclusion est identique en $(-2,2)$. 
+En $(0,0)$, on a $r=-8$, $t=-8$ et $s=8$, soit $rt-s^2=0$. On ne peut donc pas conclure directement. Mais, on remarque que $f(x,0)=x^4-4x^2$ est négatif si $x$ est petit, alors que $f(x,x)=2x^4$ est toujours positif. Ainsi, $(0,0)$ n'est ni un maximum, ni un minimum puisque aussi près qu'on veut de $(0,0)$, on a des points $(x,y)$ avec $f(x,y)&gt;f(0,0)$ et d'autres points $(x,y)$ avec $f(x,y)&lt;f(0,0)$.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3610"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3610"),	max:5, rating:1.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3610,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema locaux d'une fonction de 3 variables <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3610.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3610,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3610','imageenonce3610');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3610"></a><div class=inner id="innerenonce3610">Déterminer les extrema locaux de $f:\mathbb R^3\to\mathbb R,$ $(x,y,z)\mapsto x^2+y^2+z^2+xy+xz+yz-4(x+y+z)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3610','imageindication3610');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3610"></a><div class=inner id="innerindication3610" style="display:none;">Chercher les points critiques (il y en a un seul), puis déterminer la matrice hessienne. Chercher les valeurs propres de la matrice hessienne.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3610','imagecorrige3610',3610);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3610"></a><div class=inner id="innercorrige3610" style="display:none;">On commence par rechercher les points critiques de $f.$ Pour cela, on calcule les dérivées partielles et on trouve, pour tout $(x,y,z)\in\mathbb R^3,$
+$$\frac{\partial f}{\partial x}(x,y,z)=2x+y+z-4,\ \frac{\partial f}{\partial y}(x,y,z)=2y+x+z-4, \frac{\partial f}{\partial z}(x,y,z)=2z+x+y-4.$$
+On résout le système
+$$\left\{\begin{array}{rcl}
+2x+y+z-4&=&0\\
+x+2y+z-4&=&0\\
+x+y+2z-4&=&0.
+\end{array}\right.
+$$
+En faisant $(L1)-(L2)$ puis $(L2)-(L3),$ on trouve $x=y=z,$ et finalement le seul point critique est $(1,1,1)$. Pour déterminer la nature de $(1,1,1)$, on va étudier la matrice hessienne de $f$. Pour cela, on observe que, pour tout $(x,y,z)\in\mathbb R^3,$
+$$\frac{\partial^2 f}{\partial x^2}=\frac{\partial^2 f}{\partial y^2}=\frac{\partial^2 f}{\partial z^2}=2$$
+$$\frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial x\partial z}=\frac{\partial^2 f}{\partial y\partial z}=1.$$
+La matrice hessienne de $f$ en $(1,1,1)$ est donc
+$$M=\begin{pmatrix}
+2&1&1\\
+1&2&1\\
+1&1&2
+\end{pmatrix}.$$
+On cherche les valeurs propres de $M.$ Un calcul simple donne 
+$$\chi_M(\lambda)=(\lambda-4)(\lambda-1)^2.$$
+Les valeurs propres de $M$ sont strictement positives, donc $M$ est définie positive, et $f$ admet un minimum local strict en $(1,1,1)$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater141"></span><script>var myRating = raterJs( { element:document.querySelector("#rater141"),	max:5, rating:2.7647058823529, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(141,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema locaux et globaux <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=141.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(141,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce141','imageenonce141');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce141"></a><div class=inner id="innerenonce141">Déterminer les extrema locaux et globaux des fonctions suivantes :
+<ol class="enumeratechiffre">
+<li> $f(x,y)=2x^3+6xy-3y^2+2$;
+<li> $f(x,y)=y\big(x^2+(\ln y)^2\big)$ sur $\mathbb R\times ]0,+\infty[$;
+<li> $f(x,y)=x^4+y^4-4xy$;
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication141','imageindication141');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication141"></a><div class=inner id="innerindication141" style="display:none;">La recherche des extrema locaux se fait suivant la méthode habituelle.
+Pour étudier l'existence d'un extremum global, on pourra étudier $f(x,y)-f(x_0,y_0)$
+et démontrer que ceci garde un signe constant, ou bien étudier le comportement de $f$ aux bord
+de l'ensemble de définition.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige141','imagecorrige141',141);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige141"></a><div class=inner id="innercorrige141" style="display:none;"><ol class="enumeratechiffre">
+<li> On calcule les dérivées partielles de $f$ au premier ordre :
+$$\frac{\partial f}{\partial x}(x,y)=6x^2+6y\textrm{ et }\frac{\partial f}{\partial y}(x,y)=6x-6y.$$
+Un point critique $(x,y)$ vérifie donc $x=y$ et $y=-x^2$, soit $x^2+x=0$. On vérifie donc facilement que
+les seuls points critiques sont $(0,0)$ et $(-1,-1)$. On calcule ensuite les dérivées au second ordre :
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=12x\quad\frac{\partial^2 f}{\partial y^2}(x,y)=-6\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=6.$$
+En $(0,0)$, avec les notations usuelles, $r=0$, $t=-6$ et $s=6$, soit $rt-s^2&lt;0$ : $(0,0)$ n'est pas un extrémum local pour $f$.
+En $(-1,-1)$, on a $r=-12$, $t=-6$ et $s=6$, soit $rt-s^2&gt;0$ et $r&lt;0$ : $f$ admet un maximum local en $(-1,-1)$. Ce
+maximum ne peut pas être un maximum global. En effet, $f(x,0)=2x^3$ tend vers $+\infty$ si $x$ tend vers $+\infty$,
+et donc la fonction n'est pas majorée. Par conséquent, elle n'admet pas de maximum global.
+<li> On calcule les dérivées partielles de $f$ au premier ordre :
+$$\frac{\partial f}{\partial x}(x,y)=2xy\textrm{ et }\frac{\partial f}{\partial y}(x,y)=x^2+(\ln y)^2+2\ln y.$$
+Un point critique $(x,y)$ est solution du système
+$$\left\{
+\begin{array}{rcl}
+xy&=&0\\
+x^2+(\ln y)^2+2\ln y&=&0.
+\end{array}\right.$$
+La première équation impose $x=0$ (puisqu'on sait que $y&gt;0$), la deuxième équation donne $(\ln y)^2+2\ln y=0$.
+Posant $X=\ln y$, on obtient $X^2+2X=0$ donc les solutions sont $X=0$ et $X=-2$. Revenant à $y$, 
+on trouve $y=1$ et $y=e^{-2}$. $f$ admet donc deux points critiques qui sont $(0,1)$ et $(0,e^{-2})$. &Eacute;tudions maintenant la nature de
+ces points critiques. Pour $(0,1)$, on peut remarquer que $f(0,1)=0$ alors que $f(x,y)\geq 0$ pour tout $(x,y)\in\mathbb R\times ]0,+\infty[$.
+Ainsi, on a prouvé que $(0,1)$ est un minimum global de $f$. Pour $(0,e^{-2})$, on calcule les dérivées partielles du second ordre :
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=2y\quad\frac{\partial^2 f}{\partial y^2}(x,y)=\frac 2y+2\frac{\ln y}y\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=2x.$$
+Avec les notations usuelles, en $(0,e^{-2})$, on trouve $rt-s^2=-4$ et donc $(0,e^{-2})$ n'est pas un extrémum local pour $f$.
+<li> On calcule les dérivées partielles de $f$ au premier ordre :
+$$\frac{\partial f}{\partial x}(x,y)=4x^3-4y\textrm{ et }\frac{\partial f}{\partial y}(x,y)=4y^3-4x.$$
+Un point critique $(x,y)$ est solution du système
+$$\left\{
+\begin{array}{rcl}
+x^3&=&y\\
+y^3&=&x.
+\end{array}\right.$$
+On en déduit $x=x^9$ soit $x=0$ ou $x^8=1$. On en déduit que les points critiques sont $(0,0)$, $(1,1)$ et $(-1,-1)$. On calcule ensuite les dérivées partielles
+du second ordre :
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=12x^2\quad\frac{\partial^2 f}{\partial y^2}(x,y)=12y^2\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=-4.$$
+Avec les notations usuelles, en $(0,0)$, on a $r=0$, $t=0$ et $s=-4$ soit $rt-s^2=-16$. (0,0) n'est pas un extremum local.
+En $(1,1)$, on a $r=12$, $t=12$ et $s=-4$, dont $rt-s^2&gt;0$ et $r&gt;0$ : $(1,1)$ est un minimum local, et il en est de même de $(-1,-1).$ Pour déterminer
+si ce sont des minima globaux, on calcule
+$$f(x,y)-f(1,1)=x^4+y^4-4xy+2=(x^2-1)^2+(y^2-1)^2+2(x-y)^2\geq 0,$$
+et donc $(1,1)$ est un minimum global. Il en est de même de $(-1,-1)$. On peut aussi utiliser une autre méthode plus abstraite pour démontrer que 
+$f$ admet au moins un minimum global. En effet, $\lim_{\|(x,y)\|\to+\infty} f(x,y)=+\infty$ (car $|xy|\leq x^2+y^2$ par exemple). 
+Ainsi, il existe $M&gt;0$ tel que $\|(x,y)\|\geq M\implies f(x,y)\geq 0$. Sur la boule fermée $K=\bar B(0,M)$, qui est un compact, la fonction $f$ est continue,
+donc elle admet un minimum sur $K$ en $(x_0,y_0)\in K$. Ceci signifie que pour tout $(x,y)\in K$, on a $f(x,y)\geq f(x_0,y_0)$. Puisque $f(1,1)=-2$ et que $f(x,y)\geq 0$ si $(x,y)\notin K$, on sait que $f(x_0,y_0)&lt;0$. Mais du fait que $f$ est positive
+sur le complémentaire de $K$, on en déduit que, pour tout $(x,y)\in\mathbb R^2$, on a $f(x,y)\geq f(x_0,y_0)$. Ainsi, $f$ admet au moins un minimum global.
+Maintenant, un minimum global est un minimum local, donc $(x_0,y_0)$ doit être égal à $(1,1)$ ou à $(-1,-1)$. On conclut en remarquant que $f(1,1)=f(-1,-1)$,
+et donc que ces deux points sont un minimum global pour $f$. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater142"></span><script>var myRating = raterJs( { element:document.querySelector("#rater142"),	max:5, rating:2.3076923076923, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(142,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema dégénérés... <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=142.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(142,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce142','imageenonce142');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce142"></a><div class=inner id="innerenonce142">Déterminer les extrema locaux des fonctions suivantes. Est-ce que ce sont des extrema globaux?
+<ol class="enumeratechiffre">
+<li> $f(x,y)=x^2+y^3$;
+<li> $f(x,y)=x^4+y^3-3y-2$;
+<li> $f(x,y)=x^3+xy^2-x^2y-y^3$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication142','imageindication142');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication142"></a><div class=inner id="innerindication142" style="display:none;">Pour toutes ces fonctions, on a affaire à des points critiques dégénérés. Il faut donc faire un développement limité
+autour du point pour savoir si on a affaire, ou non, à un extrémum. Pour vérifier que ce ne sont pas des extrema globaux,
+on pourra s'intéresser au comportement en l'infini de la fonction, suivant certaines directions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige142','imagecorrige142',142);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige142"></a><div class=inner id="innercorrige142" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par chercher les points critiques de $f$. On a
+$$\frac{\partial f}{\partial x}(x,y)=2x\textrm{ et }\frac{\partial f}{\partial y}(x,y)=3y^2.$$
+La fonction $f$ admet donc un seul point critique qui est $(0,0)$. Or, $f(0,y)=y^3$ et cette quantité
+est tantôt positive, tantôt négative suivant le signe de $y$, même si $y$ est très proche de 0.
+Ainsi, $(0,0)$ n'est pas un extrémum, et $f$ n'admet pas d'extrémum sur $\mathbb R^2$.
+<li> Commençons par calculer les dérivées partielles au premier ordre et au second ordre de $f$ :
+$$\frac{\partial f}{\partial x}(x,y)=4x^3,\ \ \frac{\partial f}{\partial y}(x,y)=3y^2-3$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=12x^2,\ \ \frac{\partial^2 f}{\partial x\partial y}(x,y)=0,\ \ \frac{\partial^2 f}{\partial y^2}(x,y)=6y.$$
+Un point $(x,y)$ est critique si et seulement si $x=0$ et $y^2=1$. Les deux points critiques de $f$
+sont donc $A(0,1)$ et $B(0,-1)$. En ces deux points, avec les notations habituelles, $rt-s^2=0$. On a donc affaire à des points dégénérés.
+&Eacute;tudions plus précisément ce qui se passe en $A(0,1)$. Pour cela, on va faire un développement limité en posant $y=1+h$, $h$ proche de 0.
+On a alors
+$$f(x,1+h)=x^4+(1+h)^3-3(1+h)-2=x^4+h^3+3h^2-4.$$
+Or, pour $x$ et $h$ proches de 0, $x^4\geq 0$ et $3h^2+h^3\geq 0$ (au voisinage de 0, c'est le terme
+$h^2$ qui est prédominant). Ainsi, si $x$ et $h$ sont proches de 0, on a 
+$$f(x,1+h)\geq -4=f(0,1).$$
+Ainsi, $(0,1)$ est un minimum local pour $f$.<br>
+L'étude en $(0,-1)$ est similaire, mais cette fois on doit poser $y=-1+h$. On a alors 
+$$f(x,-1+h)=x^4-3h^2+h^3.$$
+Cette fois, on remarque que $f(x,-1)=x^4\geq 0=f(0,-1)$ tandis que $f(0,-1+h)=-3h^2+h^3&lt;0$ si $h$ est assez petit. Ainsi, $(0,-1)$ est un point selle.<br>
+Par ailleurs, $(0,1)$ n'est pas un minimum global. En effet, dans le cas contraire, la fonction $f$ serait minorée. Mais $f(0,y)=y^3-3y-2$ tend vers
+$-\infty$ si $y$ tend vers $-\infty$, et donc la fonction $f$ n'est pas minorée.
+<li> On fait le même travail pour $f$ : 
+$$\frac{\partial f}{\partial x}(x,y)=3x^2+y^2-2xy,\ \ \frac{\partial f}{\partial y}(x,y)=-3y^2+2yx-x^2$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=6x+2y,\ \ \frac{\partial^2 f}{\partial x\partial y}(x,y)=2y-2x,\ \ \frac{\partial^2 f}{\partial y^2}(x,y)=-6y+2x.$$
+Si $(x,y)$ est un point critique de $f$, on a nécessairement
+$$3x^2+y^2-2xy=0.$$
+Or, 
+$$3x^2+y^2-2xy=2x^2+(x-y)^2,$$
+et donc on a nécessairement $x=0$ et $y=0$ qui est effectivement un point critique. En ce point critique, on a $rt-s^2=0$, on ne peut
+donc pas conclure directement avec les théorèmes. L'étude ici est un peu plus difficile, car les coordonnées $x$ et $y$ sont mélangées.
+On va regarder ce qui se passe sur une droite en remarquant que 
+$$f(2t,t)=5t^3.$$
+Ceci est négatif si $t&lt;0$ et positif si $t&gt;0$, alors que $f(0,0)=0$. Ainsi, $(0,0)$ n'est pas un extrémum local de $g$, qui n'admet donc aucun extrémum local, et
+a fortiori aucun extrémum global.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3611"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3611"),	max:5, rating:2.48, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3611,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema des fonctions de $n$ variables <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3611.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3611,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3611','imageenonce3611');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3611"></a><div class=inner id="innerenonce3611">Soit $n\in\mathbb N,$ $n\geq 2.$ On considère $f:\mathbb R^n\to\mathbb R$ définie par 
+$$f(x_1,\dots,x_n)=\sum_{k=1}^n x_k^2+\left(\sum_{k=1}^n x_k\right)^2-\sum_{k=1}^n x_k.$$
+Déterminer les extrema locaux de $f.$ </div></div><div class=indication><a href="javascript:showAll('innerindication3611','imageindication3611');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3611"></a><div class=inner id="innerindication3611" style="display:none;">Il faut appliquer la méthode usuelle : recherche des points critiques, étude des valeurs propres de la matrice hessienne. &Eacute;videmment, c'est plus compliqué parce qu'on est en dimension $n$ !</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3611','imagecorrige3611',3611);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3611"></a><div class=inner id="innercorrige3611" style="display:none;">On commence par rechercher les points critiques de $f$. Soit $i\in\{1,\dots,n\}$. Alors, pour tout $x\in\mathbb R^n,$
+$$\frac{\partial f}{\partial x_i}(x)=2x_i+2\sum_{k=1}^n x_k-1.$$
+Ainsi, $x$ est un point critique de $f$ si et seulement si, pour tout $i\in\{1,\dots,n\}$, 
+$$2x_i+2\sum_{k=1}^n x_k-1=0.$$
+En faisant la différence de deux telles équations, on trouve que, pour $i\neq j,$ on doit avoir $x_i=x_j.$ Reportant dans chaque équation, on trouve
+$$x_i=\frac 1{2(n+1)}$$
+et il est facile de vérifier que le point $(1/2(n+1),\dots,1/2(n+1))$ est
+un point critique de $f.$ On va maintenant étudier la matrice hessienne de $f$ en ce point. Pour $i\in\{1,\dots,n\},$ on a 
+$$\frac{\partial^2 f}{\partial x_i^2}(x)=4$$
+et pour $i,j\in\{1,\dots,n\}$ avec $i\neq j,$ on a 
+$$\frac{\partial^2 f}{\partial x_i\partial x_j}(x)=2.$$
+La matrice hessienne de $f$ en $(1/2(n+1),\dots,1/2(n+1))$ est donc 
+$$M=\begin{pmatrix}
+4&2&\dots&2\\
+2&\ddots&\ddots&\vdots\\
+\vdots&\ddots&\ddots&2\\
+2&\dots&2&4
+\end{pmatrix}.$$
+On va étudier les valeurs propres de $M$ pour prouver qu'elle est définie positive. Pour cela, on remarque que 
+\begin{align*}
+\chi_M(\lambda)&=
+\left|
+\begin{array}{cccc}
+\lambda-4&-2&\dots&-2\\
+-2&\ddots&\ddots&\vdots\\
+\vdots&\ddots&\ddots&-2\\
+-2&\dots&2&\lambda-4
+\end{array}
+\right|\\
+&=
+\left|
+\begin{array}{cccc}
+\lambda-4-2(n-1)&-2&\dots&-2\\
+\lambda-4-2(n-1)&\lambda-4&\ddots&\vdots\\
+\vdots&\ddots&\ddots&-2\\
+\lambda-4-2(n-1)&\dots&2&\lambda-4
+\end{array}
+\right|\ C_1+\cdots+C_n\to C_1\\
+&=\big(\lambda-4-2(n-1)\big)
+\left|
+\begin{array}{cccc}
+1&-2&\dots&-2\\
+1&\lambda-4&\ddots&\vdots\\
+\vdots&\ddots&\ddots&-2\\
+1&\dots&2&\lambda-4
+\end{array}
+\right|
+\\
+&=\big(\lambda-4-2(n-1)\big)
+\left|
+\begin{array}{cccc}
+1&0&\dots&0\\
+1&\lambda-2&\ddots&\vdots\\
+\vdots&0&\ddots&0\\
+1&\dots&0&\lambda-2
+\end{array}
+\right|\\
+&=\big(\lambda-4-2(n-1)\big)(\lambda-2)^{n-1}.
+\end{align*}
+Ainsi, les valeurs propres de $M$ sont strictement positives, la matrice $M$ est définie positive, et le point $(1/2(n+1),\dots,1/2(n+1))$ est un minimum local de $f.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater143"></span><script>var myRating = raterJs( { element:document.querySelector("#rater143"),	max:5, rating:3.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(143,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Beaucoup d'extrema <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=143.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(143,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce143','imageenonce143');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce143"></a><div class=inner id="innerenonce143">&Eacute;tudier les extrema locaux et globaux dans $\mathbb R^2$ de la fonction $f(x,y)=x^2y^2(1+x+2y)$.</div></div><div class=indication><a href="javascript:showAll('innerindication143','imageindication143');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication143"></a><div class=inner id="innerindication143" style="display:none;">Suivre la méthode classique. Il y a beaucoup de points critiques. Il faut distinguer les cas!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige143','imagecorrige143',143);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige143"></a><div class=inner id="innercorrige143" style="display:none;">Remarquons déjà que $f$ est de classe $C^\infty$, puis que $f(x,1)=x^3+3x$. En particulier $f(x,1)\to +\infty$ si 
+$x\to\infty$ et $f(x,1)\to-\infty$ si $x\to-\infty$. Ainsi, la fonction $f$ n'est ni majorée, ni minorée, donc elle ne peut pas admettre d'extrémum global.
+&Eacute;tudions maintenant ses extrema locaux. On sait que 
+$$\frac{\partial f}{\partial x}(x,y)=xy^2(2+3x+4y)\textrm{ et }\frac{\partial f}{\partial y}(x,y)=2x^2y(1+x+3y).$$
+On en déduit facilement que les points critiques de $f$ sont les points du type $(a,0)$, $(0,b)$, avec $a,b\in\mathbb R$
+et $(-2/5,-1/5)$. D'autre part, les dérivées partielles du second ordre de $f$ sont :
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=2y^2+6xy^2+4y^3,\ \ \frac{\partial^2 f}{\partial^2 y}(x,y)=2x^2+2x^3+12x^2y,\ \ \frac{\partial^2 f}{\partial x\partial y}(x,y)=4xy+6x^2y+12xy^2.$$
+En $(-2/5,-1/5)$, on trouve assez facilement que $r=-6/125$, $s=-8/125$ et $t=-24/125$. Ainsi, on a $rt-s^2&gt;0$ avec $r&lt;0$, et donc $f$ présente en $(-2/5,-1/5)$ un maximum local. Malheureusement, en les points
+du type $(a,0)$ et $(0,b)$, on a $rt-s^2=0$, et on ne peut conclure directement en appliquant le théorème. Il faut faire une étude cas par cas. Commençons par les points du type $(a,0)$. Dans ce cas, on a 
+$$f(a+h,k)=k^2a^2(1+a)+k^2a(3ah+2ak+2h)+k^2 o(\|(h,k)\|^2).$$
+Si $k=0$, $f(a+h,k)=f(a,0)=0$. D'autre part, si $k\neq 0$, alors, si $1+a&gt;0$, ie $a&gt;-1$, $f(a+h,k)\geq f(a,0)$ si $h,k$ sont petits, et $f$ présente en $(a,0)$ un minimum local. Si $1+a&lt;0$, c'est le contraire, et $f$ présente un maximum local en $(a,0)$. Enfin, si $a=-1$, le signe de $3ah+2ak+2h$ pouvant être positif ou négatif avec $h,k$ petits, la fonction présente un point col en $(a,0)$. L'étude en les points du type $(0,b)$ est similaire. On écrit cette fois
+$$f(h,b+k)=h^2b^2(1+2b)+h^2b(bh+6bk+2k)+h^2o(\|(h,k)\|^2).$$
+Si $b&gt;-1/2$, $f$ présente en $(0,b)$ un minimum local. Si $b&lt;-1/2$, $f$ présente en $(0,b)$ un maximum local. Le point $(0,-1/2)$ est un point col.</div></div></div>
+
+
+<div class=titrepartie>Extrema sur un compact</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater144"></span><script>var myRating = raterJs( { element:document.querySelector("#rater144"),	max:5, rating:2.08, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(144,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En détails <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=144.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(144,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce144','imageenonce144');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce144"></a><div class=inner id="innerenonce144">Soit $f(x,y)=y^2-x^2y+x^2$ et $D=\{(x,y)\in\mathbb R^2;\ x^2-1\leq y\leq 1-x^2\}$. 
+<ol class="enumeratechiffre">
+<li> Représenter $D$ et trouver une paramétrisation de $\Gamma$, le bord de $D$.
+<li> Justifier que $f$ admet un maximum et un minimum sur $D$.
+<li> Déterminer les points critiques de $f$.
+<li> Déterminer le minimum et le maximum de $f$ sur $\Gamma$.
+<li> En déduire le minimum et le maximum de $f$ sur $D$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication144','imageindication144');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication144"></a><div class=inner id="innerindication144" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Compacité.
+<li> 
+<li> Utiliser la paramétrisation du bord de $\Gamma$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige144','imagecorrige144',144);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige144"></a><div class=inner id="innercorrige144" style="display:none;"><ol class="enumeratechiffre">
+<li> Le domaine $D$ est délimité par les deux paraboles d'équation $y=1-x^2$ et $y=x^2-1$. Son bord $\Gamma$ comporte deux parties : 
+la partie "haute", paramétrée par $y=1-x^2$, $-1\leq x\leq 1$, et la partie basse, paramétrée par $y=x^2-1$, $-1\leq x\leq 1$. 
+<div class=equation><img src="bde_images/extremacompact.png"></div>
+<li> Le domaine $D$ est borné; c'est très clair si on se réfère au dessin. Pour une preuve complète, on peut remarquer que si 
+$(x,y)\in D$, alors on doit avoir $x^2-1\leq 1-x^2$, et donc $x^2\leq 1\iff x\in[-1,1]$. Cela impose ensuite $y\in[-1,1]$. 
+$D$ est de plus clairement fermé. C'est une partie compacte de $\mathbb R^2$ et $f$ est une fonction continue sur $D$. $f$ admet
+donc un minimum et un maximum sur $D$.
+<li> Pour déterminer les points critiques de $f$, on calcule d'abord les dérivées partielles du premier ordre. On trouve :
+$$\frac{\partial f}{\partial x}(x,y)=-2xy+2x=2x(1-y)\textrm{ et }\frac{\partial f}{\partial y}(x,y)=2y-x^2.$$
+Un point $(x,y)$ est un point critique si $(x,y)=(0,0)$ ou si $(x,y)$ est solution du système
+$$\left\{\begin{array}{rcl}
+1-y&=&0\\
+2y&=&x^2.
+\end{array}\right.$$
+On en déduit assez facilement que $f$ admet trois points critiques qui sont $(0,0)$, $(-\sqrt 2,1)$ et $(\sqrt 2,1)$. Remarquons que seul $(0,0)$ est dans $D$.
+<li> On va étudier la paramétrisation du bord de $D$ obtenue précédemment. Précisément, posons $g(x)=f(x,1-x^2)$, pour $x\in[-1,1]$ et 
+$h(x)=f(x,x^2-1)$ pour $x\in [-1,1]$. Les études de $g$ et $h$ vont nous permettre de déterminer les extrema de $f$ sur $\Gamma$. On a, après simplifications,
+\begin{eqnarray*}
+g(x)&=&1-2x^2+2x^4\\
+h(x)&=&1.
+\end{eqnarray*}
+Il suffit donc d'étudier $g$, et par parité, on peut se restreindre à l'étudier sur $[0,1]$. En calculant la dérivée, on voit facilement que $g$ est décroissante sur
+$[0,1/\sqrt 2]$ et est croissante sur $[1/\sqrt 2,1]$. De plus, $g(0)=g(1)=1$ et $g(1/\sqrt 2)=1/2$. On en déduit que le minimum de $f$ sur $\Gamma$ est $1/2$, et son maximum est $1$. 
+<li> Les extrema de $f$ sur $D$ sont ou bien atteints sur le bord, ou bien atteints en un extrémum local de $f$ situé dans $D$, donc en un point critique de $f$ dans $D$. Puisque $f(0,0)=0$, on en déduit que $f$ admet 0 comme minimum sur $D$, et $1$ comme maximum.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3619"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3619"),	max:5, rating:1.8947368421053, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3619,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum local, global et sur un compact (d'après oral CCINP) <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3619.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3619,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3619','imageenonce3619');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3619"></a><div class=inner id="innerenonce3619">Soit $f$ la fonction définie sur $\mathbb R^2$ par $f(x,y)=2x^3+6xy-3y^2+2.$
+<ol class="enumeratechiffre">
+<li> $f$ admet-elle des extrema locaux sur $\mathbb R^2$ ? Si oui, les déterminer.
+<li> $f$ admet-elle des extrema globaux sur $\mathbb R^2$ ?
+<li> On pose $K=[0,1]^2.$ Justifier que $f$ admet un maximum global sur $K$ et le déterminer.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3619','imageindication3619');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3619"></a><div class=inner id="innerindication3619" style="display:none;"><ol class="enumeratechiffre">
+<li> Suivre la méthode usuelle. Chercher les points critiques en utilisant les dérivées partielles du premier ordre, puis étudier la nature de ces points critiques en étudiant les dérivées partielles du second ordre.
+<li> &Eacute;tudier $f(x,0)$.
+<li> Utiliser la compacité de $K.$ Justifier que le maximum ne peut pas être atteint à l'intérieure de $K$. &Eacute;tudier alors $f$ sur le bord de $K$ qui se décompose en quatre segments.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3619','imagecorrige3619',3619);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3619"></a><div class=inner id="innercorrige3619" style="display:none;"><ol class="enumeratechiffre">
+<li> Déterminons les points critiques de $f$ sur $\mathbb R^2.$ On commence par calculer les dérivées partielles de $f$. On a 
+$$\frac{\partial f}{\partial x}(x,y)=6x^2+6y\textrm{ et }\frac{\partial f}{\partial y}(x,y)=6x-6y.$$
+Le point $(x,y)$ est un point critique de $f$ si et seulement si 
+$$\left\{
+\begin{array}{rcl}
+6x^2+6y&=&0\\
+6x-6y&=&0
+\end{array}\right.
+\iff
+\left\{
+\begin{array}{rcl}
+6x^2+6x&=&0\\
+x&=&y
+\end{array}\right.
+\iff 
+(x,y)=(0,0)\textrm{ ou }(x,y)=(-1,-1).
+$$
+&Eacute;tudions la nature de ces points critiques. On calcule les dérivées partielles d'ordre $2$ :
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=12x,\ \frac{\partial^2 f}{\partial x\partial y}(x,y)=6,\ \frac{\partial^2 f}{\partial y^2}(x,y)=-6.$$
+La matrice hessienne de $f$ en $(0,0)$ est donc 
+$$\begin{pmatrix}
+0&6\\
+6&-6
+\end{pmatrix}.$$
+Son déterminant est négatif, et $f$ n'admet pas d'extrémum local en $(0,0)$. La matrice hessienne de $f$ en $(-1,-1)$ est
+$$\begin{pmatrix}
+-12&6\\
+6&-6
+\end{pmatrix}
+$$
+Son déterminant est $72-36=36&gt;0,$ qui est positif. De plus, $-12&lt;0$ et $f$ admet un maximum local en $(-1,-1)$ qui vaut $3.$ C'est le seul extremum local de $f.$
+<li> On a $f(x,0)=2x^3+2$ et donc $\lim_{x\to+\infty}f(x,0)=+\infty$ alors que $\lim_{x\to-\infty}f(x,0)=-\infty.$ Ainsi, $f$ n'admet pas de maximum local ou de maximum global sur $\mathbb R^2$.
+<li> On observe que $K,$ qui est une partie fermée et bornée de $\mathbb R^2$ est un compact de $\mathbb R^2.$ Puisque $f$ est continue, elle est bornée et atteint son minimum et son maximum sur $K.$ Soit $a\in K$ tel que $f$ atteint son maximum sur $K$ en $a.$ Alors si $a$ est dans l'intérieur de $K,$ 
+$f$ admet un maximum local (sur $\mathbb R^2$) en $a$. Mais le seul point où $f$ admet un extrémum local, $(-1,-1)$, n'est pas dans $K$. Donc le maximum est atteint sur le bord de $K$. On partage le bord de $K$ en quatre parties :
+<ul class="rien">
+<li> sur le segment $[0,1]\times\{0\}$, on étudie $f(x,0)=2x^3+2$ dont le maximum sur $[0,1]$ est atteint en $1$ et vaut $4.$
+<li> sur le segment $[0,1]\times \{1\},$ on étudie $f(x,1)=2x^3+6x-1$ dont le maximum sur $[0,1]$ est atteint en $1$ et vaut $7.$
+<li> sur le segment $\{0\}\times [0,1]$, on étudie $f(0,y)=-3y^2+2$ dont le maximum sur $[0,1]$ est atteint en $0$ et vaut $2.$
+<li> sur le segment $\{1\}\times[0,1]$, on étudie $f(1,y)=4+6y-3y^2$ dont le maximum sur $[0,1]$ est atteint en $1$ et vaut $7.$
+</ul>
+En conclusion $f$ atteint son maximum sur $K$ en $(1,1)$ et ce maximum vaut $7.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater145"></span><script>var myRating = raterJs( { element:document.querySelector("#rater145"),	max:5, rating:1.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(145,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema sur un compact <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=145.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(145,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce145','imageenonce145');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce145"></a><div class=inner id="innerenonce145">Pour chacun des exemples suivants, démontrer que $f$ admet un maximum sur $K$, et déterminer ce maximum.
+<ol class="enumeratechiffre">
+<li> $f(x,y)=xy(1-x-y)$ et $K=\{(x,y)\in\mathbb R^2;\ x,y\geq 0,\ x+y\leq 1\};$
+<li> $f(x,y)=x-y+x^3+y^3$ et $K=[0,1]\times [0,1]$;
+<li> $f(x,y)=\sin x\sin y\sin(x+y)$ et $K=[0,\pi/2]^2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication145','imageindication145');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication145"></a><div class=inner id="innerindication145" style="display:none;">Dans chaque cas, l'existence vient du fait que l'on recherche le maximum d'une fonction continue sur un compact. Ce maximum peut être
+atteint ou bien sur le bord du compact, ou bien à l'intérieur. Dans ce cas, cela ne peut être qu'en un point critique...
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige145','imagecorrige145',145);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige145"></a><div class=inner id="innercorrige145" style="display:none;"><ol class="enumeratechiffre">
+<li> $K$ est un ensemble fermé et borné (c'est un triangle). C'est donc une partie compacte de $\mathbb R^2$. De plus, la fonction $f$ étant polynomiale,
+elle est continue sur ce compact, donc elle y est majorée et elle atteint sa borne supérieure. Le maximum peut être atteint : 
+<ul class="rien">
+<li> ou bien en un point du bord de $K$;
+<li> ou bien  en un maximum local de $f$ situé à l'intérieur de $K$.
+</ul>
+Ici, on remarque que si $(x,y)$ appartient à la frontière de $K$, alors ou bien $x=0$, ou bien $y=0$, ou bien $x+y=1$. Dans tous les cas,
+on a $f(x,y)=0$ alors que $f(1/4,1/4)&gt;0$. Ainsi, le maximum ne peut être atteint qu'en un point à l'intérieur de $K$. On cherche donc les points critiques
+de $f$. Pour cela, on calcule
+$$\frac{\partial f}{\partial x}(x,y)=y(1-2x-y)\textrm{ et }\frac{\partial f}{\partial y}(x,y)=x(1-x-2y).$$
+Un point critique situé à l'intérieur de $K$ vérifie 
+$$\left\{
+\begin{array}{rcl}
+1-2x-y&=&0\\
+1-x-2y&=&0.
+\end{array}\right.$$
+Le seul point critique situé à l'intérieur de $K$ est donc $(1/3,1/3)$. Comme un maximum local ne peut être atteint qu'en un point critique, c'est donc
+que $f$ admet son maximum sur $K$ en $(1/3,1/3)$. Ce maximum est égal à $1/27$.
+<li> Le début du raisonnement est tout à fait similaire. Ensuite, on remarque que 
+$$\frac{\partial f}{\partial x}(x,y)=1+3x^2&gt;0.$$
+Ainsi, $f$ ne peut pas admettre de point critique, et donc le maximum de $f$ sur $K$ ne peut être atteint qu'en un point du bord de $K$. Il suffit ensuite d'étudier le comportement de $f$ sur le bord de $K$. On a d'une part $f(x,0)=x+x^3$ qui atteint son maximum en $(1,0)$, maximum valant $2$. On a ensuite $f(x,1)=x+x^3$, qui atteint son maximum valant 2 en $(1,1)$. On a ensuite $f(0,y)=-y+y^3\leq 2$ si $y\in[0,1]$, et $f(1,y)=2-y+y^3\leq 2$. Ainsi, le maximum de $f$ sur $K$ est égal à 2.
+<li> Le début du raisonnement est identique. On cherche ensuite les points critiques appartenant à l'intérieur de $K$, l'ouvert $U=]0,\pi/2[^2$ en remarquant que 
+$$\frac{\partial f}{\partial x}(x,y)=\sin y \sin(2x+y)\textrm{ et }\frac{\partial f}{\partial y}(x,y)=\sin x\sin(x+2y)$$
+(on a utilisé la célèbre formule $\sin(a+b)=\sin a \cos b+\sin b\cos a$). Un point $(x,y)$ de $U$ est un point critique si et seulement si on a 
+$$\left\{\begin{array}{rcl}
+\sin(2x+y)&=&0\\
+\sin(x+2y)&=&0.
+\end{array}\right.$$
+Puisque $x+2y\in ]0,3\pi/2[$, on a nécessairement
+$$\left\{\begin{array}{rcl}
+2x+y&=&\pi\\
+x+2y&=&\pi.
+\end{array}\right.$$
+Ainsi, le point $(\pi/3,\pi/3)$ est le seul point critique de $f$ dans $U$. On a $f(\pi/3,\pi/3)=\frac{3\sqrt 3}{8}$. On étudie maintenant $f$ sur le bord de $K$, ie on étudie $f(0,t)$, $f(t,0)$, $f(\pi/2,t)$ et $f(t,\pi/2)$ pour $t\in [0,\pi/2]$. On remarque que $f(0,t)=f(t,0)=0$ et par symétrie du rôle joué par $x$ et $y$, on peut se
+restreindre à l'étude de $f(\pi/2,t)$. Mais, 
+$$f(\pi/2,t)=\sin t\sin(t+\pi/2)=\sin t\cos t=\frac 12\sin(2t),$$
+dont le maximum pour $t\in[0,\pi/2]$ vaut $1/2$. Comme $\frac 12\leq \frac{3\sqrt 3}8$, on en déduit que $f$ admet pour maximum sur $K$ la valeur
+$\frac{3\sqrt 3}8$.
+</ol>
+</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Optimisation sous contrainte</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3618"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3618"),	max:5, rating:2.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3618,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum sous contrainte et application aux probabilités <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3618.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3618,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3618','imageenonce3618');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3618"></a><div class=inner id="innerenonce3618">Pour $p,n\geq 2,$ on note 
+\begin{align*}
+K_p&=\{x\in[0,1]^p:\ x_1+\cdots+x_p=1\}\\
+L_p&=\{x\in]0,1[^p:\ x_1+\cdots+x_p=1\}\\
+f_p(x)&=x_1^n+\cdots+x_p^n,\ x\in K_p.
+\end{align*}
+<ol class="enumeratechiffre">
+<li> Justifier que $f_p$ admet un minimum sur $K_p.$ Dans la suite, on notera 
+$$m_p=\min\{f_p(x):\ x\in K_p\}.$$
+<li> Soit $y\in K_p$ tel que $f(y)=m_p.$ 
+Justifier que si $y\in L_p$, alors $y_1=\dots=y_p=1/p.$
+<li> On se place dans le cas $p=2.$ Démontrer que $m_2=(1/2)^{n-1}.$
+<li> Démontrer par récurrence que pour tout $p\geq 2,$ $m_p=(1/p)^{n-1}.$
+<li> Application : soit $X_1,\dots,X_n$ des variables aléatoires indépendantes, de même loi, à valeurs dans $\{1,\dots,p\}$. Démontrer que 
+$$P(X_1=\cdots=X_n)\geq (1/p)^{n-1}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3618','imageindication3618');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3618"></a><div class=inner id="innerindication3618" style="display:none;"><ol class="enumeratechiffre">
+<li> Argument de compacité.
+<li> Utiliser le théorème d'optimisation sous contrainte.
+<li> Considérer $y\in K_2$ tel que $f_2(y)=m_2.$ Séparer le cas $y\in L_2$ et $y\notin L_2.$
+<li> Raisonner comme à la question précédente. Le cas $y\notin L_p$ se ramène à $m_{p-1}$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3618','imagecorrige3618',3618);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3618"></a><div class=inner id="innercorrige3618" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par remarquer que $[0,1]^p$ est une partie fermée de $\mathbb R^p$. De plus, $G_p=\{x\in[0,1]^p:\ x_1+\cdots+x_p=1\}=g_p^{-1}(\{1\}),$ avec $g_p(x)=x_1+\dots+x_p,$ est aussi fermé, comme image réciproque d'un fermé par une application continue. Puisque $K_p=[0,1]^p \cap G_p$ est l'intersection de deux fermés, c'est un fermé. D'autre part, $K_p$ est borné dans l'espace vectoriel de dimension finie $\mathbb R^p$ : ainsi, $K_p$ est une partie compacte. Comme $f_p$ est continue sur $K_p,$ à valeurs dans $\mathbb R,$ elle est minorée et atteint son minimum.
+<li> Si $y\in L_p,$ alors la restriction de $f_p$ à $L_p$ admet un minimum local en $y.$ De plus,  pour tout $x\in]0,1[^p,$ on a $\nabla g_p(x)=(1,\dots,1)\neq 0$. Par le théorème d'optimisation sous contraintes, il existe $\lambda\in\mathbb R$ tel que, pour $i=1,\dots,p,$ 
+$$\frac{\partial f}{\partial x_i}(y)=\lambda\frac{\partial g_p}{\partial x_i}(y)\implies n y_i^{n-1}=\lambda.$$
+La fonction $t\mapsto n t^{n-1}$ étant injective (car strictement croissante) sur $]0,1[,$ toutes les coordonnées de $y$ sont égales et puisque $y_1+\cdots+y_p=1,$
+on doit avoir $y_i=1/p$ pour $i=1,\dots,p.$
+<li> Soit $y\in K_2$ tel que $f_2(y)=m_2.$ Si $y\in L_2,$ on a $y_1=y_2=1/2$ et donc
+$$f(y)=2\times\frac 1{2^n}=\frac 1{2^{n-1}}.$$
+Si $y\notin L_2$, alors on a $y_1=0$ et $y_2=1$ ou $y_1=1$ et $y_2=0$. Dans les deux cas, $f_2(y)=1&gt;1/2^{n-1}.$ On a donc bien prouvé que $f_2$
+atteint son minimum en $(1/2,1/2)$ et que $m_2=1/2^{n-1}.$
+<li> Soit $p\geq 3.$ Supposons le résultat démontré au rang $p-1$ (il est vrai au rang $2$) et prouvons-le au rang $p.$ Soit $y\in K_p$ tel que $f_p(y)=m_p.$
+Si $y\in L_p,$ alors $y_1=\dots=y_p=1/p$ et $f_p(y_p)=(1/p)^{n-1}$. Si 
+$y\notin L_p,$ alors un des $y_i$, disons $y_p,$ est égal à $0$ ou $1.$ 
+Mais si $y_p=1,$ alors $y_1=\dots=y_{p-1}=0$ et $f_p(y)=1&gt;(1/p)^{n-1}$. Si $y_p=0,$ alors 
+$$f_p(y_1,\dots,y_p)=f_{p-1}(y_1,\dots,y_{p-1})\geq m_{p-1}&gt;(1/p)^{n-1}$$
+puisque $(y_1,\dots,y_{p-1})\in K_{p-1}.$ Ainsi, $f_p$ ne peut pas
+atteindre son minimum sur le bord de $K_p$ et on a bien $m_p=(1/p)^{n-1}.$
+<li> Notons, pour $i=1,\dots,p,$ $x_i=P(X_j=i)$ (ceci ne dépend pas de $j\in\{1,\dots,n\}$. Alors on a 
+\begin{align*}
+P(X_1=\cdots=X_n)&=\sum_{i=1}^p P(X_1=\cdots=X_n=i)\\
+&=\sum_{i=1}^p P((X_1=i)\cap\cdots\cap (X_n=i))\\
+&=\sum_{i=1}^p P(X_1=i)\times\cdots\times P(X_n=i)\textrm{ (par indépendance)}\\
+&=\sum_{i=1}^p x_i^n\\
+&=f_p(x)
+\end{align*}
+avec $x=(x_1,\dots,x_n)\in K_p$. D'après les résultats précédents,
+$$P(X_1=\cdots=X_n)\geq (1/p)^{n-1}.$$
+Remarquons que l'on a égalité dans le cas où les variables aléatoires $X_i$ suivent une loi uniforme sur $\{1,\dots,p\}.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2219"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2219"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2219,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polygone convexe de périmètre maximal inscrit dans le cercle unité <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2219.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2219,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2219','imageenonce2219');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2219"></a><div class=inner id="innerenonce2219">On considère un polygone convexe à $n$ côtés inscrit dans le cercle unité du plan euclidien. On note $P$ son périmètre, et $e^{ia_1}$, $e^{ia_2},\dots,e^{ia_n}$ les affixes de ses sommets, avec $0\leq a_1&lt;a_2&lt;\dots&lt;a_n&lt;2\pi$. 
+<ol class="enumeratechiffre">
+<li> On pose, pour $k\in\{1,\dots,n-1\}$, $t_k=\frac 12\left(a_{k+1}-a_k\right)$ et $t_n=\frac12\left(a_1+2\pi-a_n\right)$. Montrer que $P=2\sum_{k=1}^n \sin(t_k)$.
+<li> Montrer que $P$ est maximal lorsque le polygone est régulier.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2219','imageindication2219');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2219"></a><div class=inner id="innerindication2219" style="display:none;"><ol class="enumeratechiffre">
+<li> Calcul de distance dans un triangle équilatéral? Ou calcul d'un module d'un nombre complexe?
+<li> Que vaut $t_1+\dots+t_n$? Il s'agit ensuite d'appliquer le théorème des extrema liés.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2219','imagecorrige2219',2219);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2219"></a><div class=inner id="innercorrige2219" style="display:none;"><ol class="enumeratechiffre">
+<li> A rotation près, il s'agit de calculer la longueur $AB$ si $A=1$ et $B$ est le point d'affixe $e^{i\theta}$, avec $\theta\in ]0,2\pi[$. Il suffit de montrer que $AB=2\sin(\theta/2)$. On peut le faire simplement en calculant 
+$$AB^2=|e^{i\theta}-1|^2=4|\sin(\theta/2)|^2.$$
+Puisque $\theta/2\in ]0,\pi[$ et donc $\sin(\theta/2)&gt;0$, on en déduit le résultat demandé en prenant la racine carrée.
+<li> Remarquons que $t_1+\dots+t_n=\pi$. On doit donc maximiser $P(t)$ sous la contrainte $t_1+\dots+t_n=\pi$ et $(t_1,\dots,t_n)\in]0,\pi[^n.$ Notons $g(t)=t_1+\dots+t_n$. D'après le théorème sur les extrema liés, il existe $\lambda\in\mathbb R$ tel que, pour tout $i=1,\dots,n$, 
+$$2\cos(t_i)=\frac{\partial P}{\partial t_i}=\lambda\frac{\partial g}{\partial t_i}=\lambda.$$ 
+Puisque $t_i\in [0,\pi]$ et que la fonction $\cos$ est injective sur cet intervalle, tous les $t_i$ sont égaux, ce qui revient à dire que le polygone est régulier.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater146"></span><script>var myRating = raterJs( { element:document.querySelector("#rater146"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(146,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Volume et surface d'une boite <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=146.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(146,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce146','imageenonce146');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce146"></a><div class=inner id="innerenonce146">On désire fabriquer une boite ayant la forme d'un parallélépipède rectangle, sans couvercle sur le dessus.
+Le volume de cette boite doit être égal à $0,5m^3$ et pour optimiser la quantité de mâtière utilisée, on désire
+que la somme des aires des faces soit aussi petite que possible. Quelles dimensions doit-on choisir pour fabriquer la boite?</div></div><div class=indication><a href="javascript:showAll('innerindication146','imageindication146');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication146"></a><div class=inner id="innerindication146" style="display:none;">Notons $x,y,z$ les trois dimensions. On doit minimiser une fonction de trois variables en $x,y$ et $z$, sous la contrainte
+de $xyz=0,5$. On peut donc remplacer $z$ par son expression en fonction de $x$ et de $y$, et rechercher le minimum d'une fonction de deux variables.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige146','imagecorrige146',146);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige146"></a><div class=inner id="innercorrige146" style="display:none;">Notons $x,y$ et $z$ les trois dimensions de la boite. Son volume est donc $xyz=0,5$. On désire minimiser la fonction
+$$f(x,y,z)=xy+2xz+2yz$$
+(on a enlevé la face du dessus). Remplaçant $z$ par $1/2xy$, on doit donc chercher le minimum de la fonction de deux variables 
+$$g(x,y)=xy+\frac 1x+\frac 1y$$
+sur l'ouvert $U=]0,+\infty[\times ]0,+\infty [$. Les dérivées partielles de $g$ sont 
+$$\frac{\partial g}{\partial x}=y-\frac 1{x^2}\textrm{ et }\frac{\partial g}{\partial y}=x-\frac 1{y^2}.$$
+On vérifie alors sans peine que le seul point critique de $g$ sur l'ouvert $U$ est $(1,1)$. Reste maintenant à prouver
+que $g$ admet bien un minimum global en $(1,1)$ sur $U$. Pour cela, on peut remarquer que $g(1,1)=3$. De plus, 
+si $x&lt;1/3$ ou $y&lt;1/3$, alors $g(x,y)&gt;3=g(1,1)$. On en déduit que 
+$$\inf\{g(x,y);\ (x,y)\in U\}=\inf\{g(x,y);\ (x,y)\in A\}$$
+où $A=\{(x,y)\in\mathbb R^2;\ x\geq 1/3\textrm{ et }y\geq 1/3\}.$
+Mais de plus, si $(x,y)\in A$ vérifie $x&gt; 3$ ou $y&gt; 3$, alors $g(x,y)\geq 3=g(1,1)$. On en déduit que
+$$\inf\{g(x,y);\ (x,y)\in U\}=\inf\{g(x,y);\ (x,y)\in K\}$$
+où $K=[1/3,3]\times [1/3,3].$ Or $K$ est compact et $g$ est continue sur $K$, donc on sait que $g$ admet un minimum sur $K$. Ce
+minimum sur $K$ est aussi le minimum de $g$ sur $U$. Or, $g$ ne peut admettre qu'un minimum en un point critique.
+Donc $g$ admet un minimum en $(1,1)$. Ceci signifie que les trois dimensions sont $x=1$, $y=1$ et $z=1/2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater147"></span><script>var myRating = raterJs( { element:document.querySelector("#rater147"),	max:5, rating:2.4210526315789, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(147,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Extrema liés <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=147.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(147,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce147','imageenonce147');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce147"></a><div class=inner id="innerenonce147">&Eacute;tudier les extrema de la fonction $f:\mathbb R^2\to\mathbb R,\ (x,y)\mapsto \exp(axy)$, $a&gt;0$
+sous la contrainte $x^3+y^3+x+y-4=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication147','imageindication147');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication147"></a><div class=inner id="innerindication147" style="display:none;">Appliquer le théorème des multiplicateurs de Lagrange, et démontrer que s'il y a un extremum
+lié, c'est forcément en (1,1). &Eacute;tudier précisément ce qui se passe en (1,1).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige147','imagecorrige147',147);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige147"></a><div class=inner id="innercorrige147" style="display:none;">Notons $g(x,y)=x^3+y^3+x+y-4$ et $G=\{(x,y)\in\mathbb R^2;\ g(x,y)=0\}$.
+On commence par calculer
+les diverses dérivées partielles :
+$$\frac{\partial f}{\partial x}=ay\exp(axy),\ \frac{\partial f}{\partial y}=ax\exp(axy),\ \frac{\partial g}{\partial x}=3x^2+1\textrm{ et }
+\frac{\partial g}{\partial y}=3y^2+1.$$
+En un point $(x,y)$ de $G$ où $f$ atteint un extrémum (sur $G$), les différentielles sont proportionnelles. On en déduit que
+$$\frac{ay\exp(axy)}{3x^2+1}=\frac{ax\exp(axy)}{3y^2+1}$$
+ce qui entraîne $3y^3+y=3x^3+x$. La fonction $t\mapsto 3t^3+t$ étant strictement croissante, on en déduit que l'on a nécessairement  $x=y$.
+Il vient $x^3+x-2=0$, dont la seule racine réelle est $x=1$.<br>
+Il faut maintenant étudier ce qui se passe en (1,1). Y-a-t-il un extrémum? Est-ce un minimum? Un maximum?
+En fait, il suffit de remarquer qu'en les points de $x^3+y^3+x+y-4=0$ pour lesquels $|x|$ est grand, alors
+$|y|$ est grand lui aussi, mais $x$ et $y$ sont de signe opposés. Autrement dit,
+$$\lim_{\|(x,y)\|\to +\infty, (x,y)\in G}f(x,y)=0.$$
+Ainsi, par compacité, la fonction admet forcément un maximum qui est atteint en $(1,1)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater148"></span><script>var myRating = raterJs( { element:document.querySelector("#rater148"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(148,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité arithmético-géométrique <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=148.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(148,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce148','imageenonce148');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce148"></a><div class=inner id="innerenonce148">Soit $n\geq 2$ et $f:\mathbb R^n\to\mathbb R$, $(x_1,\dots,x_n)\mapsto x_1\cdots x_n$. On note
+$\Gamma=\{(x_1,\dots,x_n)\in\mathbb R_+^n;\ x_1+\dots+x_n=1\}$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $f$ admet un maximum global sur $\Gamma$
+et le déterminer.
+<li> En déduire l'inégalité arithmético-géométrique : pour tout $(x_1,\dots,x_n)\in\mathbb R_+^n$, on a 
+$$\prod_{i=1}^n x_i^{1/n}\leq \frac{\sum_{i=1}^n x_i}n.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication148','imageindication148');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication148"></a><div class=inner id="innerindication148" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par prouver que $\Gamma$ est compact, puis appliquer le théorème des extrema liés (ou d'optimisation sous contrainte).
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige148','imagecorrige148',148);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige148"></a><div class=inner id="innercorrige148" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par remarquer que $\Gamma$ est compact. En effet, $\Gamma$ est clairement fermé. De plus, pour $(x_1,\dots,x_n)\in\mathbb R_+^n$, on 
+a $\|(x_1,\dots,x_n)\|_1=x_1+\dots+x_n\leq 1$, et donc $\Gamma$ est borné. C'est une partie compacte de $\mathbb R^n$ et $f$, qui est continue sur 
+$\Gamma$, admet un maximum global sur $\Gamma$, atteint en $a$.  De plus, puisque $f(x_1,\dots,x_n)$ s'annule si un des $x_i$ est nul, il est clair que 
+$a\in ]0,+\infty[^n$. Posons $g(x)=x_1+\dots+x_n$. Par le théorème des extrema liés (ou d'optimisation sous contraintes), il existe $\lambda\in\mathbb R$ tel que, pour 
+tout $i\in\{1,\dots,n\}$, on a 
+$$\frac{\partial f}{\partial x_i}(a)=\lambda \frac{\partial g}{\partial x_i}(a)=\lambda.$$
+Or,
+$$\frac{\partial f}{\partial x_i}(a)=\frac{f(a)}{a_i}.$$
+Puisque $f(a)\neq 0$, on a $\lambda\neq 0$ et tous les $a_i$ sont égaux (à $f(a)/\lambda$). Mais, puisque $a_1+\dots+a_n=1$, on en déduit
+que $f$ atteint son maximum sur $\Gamma$ en le point $(1/n,\dots,1/n)$. Ce maximum vaut $1/n^n$.
+<li> La question précédente prouve que, si $(x_1,\dots,x_n)\in [0,+\infty[^n$ satisfait $x_1+\dots+x_n=1$, alors 
+$$\prod_{i=1}^n x_i^{1/n}\leq \frac 1n=\frac{\sum_{i=1}^n x_i}n.$$
+Dans le cas général, on se ramène à ceci en posant 
+$$x'_i=\frac{x_i}{\sum_{i=1}^n x_i},$$
+qui vérifie $x_1'+\dots+x'_n=1$. De $\prod_{i=1}^n x_i'^{1/n}\leq \frac 1n$, on déduit l'inégalité demandée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater3595"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3595"),	max:5, rating:3.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3595,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi de probabilité d'entropie maximale <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3595.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(3595,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3595','imageenonce3595');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3595"></a><div class=inner id="innerenonce3595">Soit $n\geq 1$. On définit $f_n:[0,1]^n\to \mathbb R$ par 
+$$f_n(x_1,\dots,x_n)=-\sum_{k=1}^n x_k\ln(x_k)$$
+(où on a prolongé par continuité la fonction $x\mapsto x\ln(x)$, définie initialement sur $]0,+\infty[$, à $[0,+\infty[$, en la posant égale à $0$ en $0$).
+On pose également 
+$$X_n=\{(x_1,\dots,x_n)\in[0,1]^n:\ x_1+\cdots+x_n=1\}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que ${f_n}$ admet un maximum sur $X_n.$
+<li> Démontrer que $\max({f_n}(x):\ x\in{X_n})\leq \max\big(\ln(n),\max_{p\leq n-1}(\max({f_p}(y):\ y\in {X_p}))\big).$
+<li> En déduire que $\max({f_n}(x):\ x\in{X_n})=\ln(n)$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication3595','imageindication3595');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3595"></a><div class=inner id="innerindication3595" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser un argument de compacité.
+<li> Discuter suivant la valeur d'un point où un maximum est atteint. Utiliser le théorème d'optimisation sous contraintes (ou théorème des extrema liés).
+<li> Procéder par récurrence.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3595','imagecorrige3595',3595);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3595"></a><div class=inner id="innercorrige3595" style="display:none;"><ol class="enumeratechiffre">
+<li> L'ensemble $X_n$ est une partie fermée de $[0,1]^n$, puisque l'image réciproque du fermé $\{1\}$ par la fonction continue $g(x_1,\dots,x_n)=x_1+\cdots+x_n.$ Puisque $[0,1]^n$ est compact, $X_n$ est compact et comme $f_n$ est une fonction continue sur $[0,1]^n,$ $f_n$ admet un maximum sur $X_n$. 
+<li> Soit $x=(x_1,\dots,x_n)$ un point où le maximum est atteint. On distingue trois cas : 
+<ul class="rien">
+<li> Soit tous les $x_i$ sont dans $]0,1[$. Posons alors 
+$$Y_n=\{(y_1,\dots,y_n)\in]0,1[^n:\ y_1+\cdots+y_n=1\}.$$
+Alors ${f_n}_{|Y_n}$ admet un maximum en $x.$ Or, la fonction $f$ est différentiable sur $]0,1[^n,$ et son gradient en $x=(x_1,\dots,x_n)$ vaut 
+$$\nabla f(x)=-(\ln(x_1)+1,\dots,\ln(x_n)+1)$$
+(on a utilisé que la dérivée de $x\ln(x)$ est $\ln(x)+1$).
+De plus, 
+$$Y_n=\{y\in]0,1[^n:\ g(y)=1\}.$$
+La fonction $g$ est différentiable sur $]0,1[^n$ et son gradient en $x=(x_1,\dots,x_n)$ vaut
+$$\nabla g(x)=(1,\dots,1).$$
+D'après le théorème d'optimisation à contraintes, il existe $\lambda\in\mathbb R$ tel que $\nabla f(y)=\lambda \nabla g(y).$ 
+Ceci entraîne en particulier que, pour tout $i=1,\dots,n$, on a $-\ln(x_i)-1=\lambda$ et donc, par injectivité de la fonction logarithme, que tous les $x_i$ sont égaux. Puisque leur somme fait $1,$ on a $x_i=1/n$ pour tout $i=1,\dots,n$ et $f(x_1,\dots,x_n)=-n\times\frac 1n\ln(1/n)=\ln(n).$
+<li> Soit un des $x_i$ au moins est nul. Mais alors, quitte à permuter l'ordre des variables, il existe $p\in[1,n-1]$ tel que $x_i\neq 0$ si $1\leq i\leq p$ et $x_{p+1}=\dots=x_n=0.$ Mais alors 
+$$f_n(x_1,\dots,x_n)=f_p(x_1,\dots,x_p)\leq \max_{y\in X_p} f_p(y).$$
+<li> Soit un des $x_i$ vaut $1$. Mais alors tous les autres $x_j$ sont égaux à $0$ et on est ramené au cas précédent.
+</ul>
+<li> On va démontrer ce résultat par récurrence forte sur $n.$ Le résultat est clairement vrai pour $n=1.$ Soit $n\geq 2$ et supposons que le résultat est vrai pour tout $p=1,\dots,n-1$. Alors on a 
+\begin{align*}
+\max({f_n}(x):\ x\in{X_n})&\leq \max\big(\ln(n),\max_{p\leq n-1}(\max({f_p}(y):\ y\in {X_p}))\big)\\
+&\leq \max\big(\ln(n),\max_{p\leq n-1}\ln(p)\big)\\
+&\leq \ln(n).
+\end{align*}
+De plus, $f_n(1/n,\dots,1/n)=\ln(n)$ et donc on a bien $\max({f_n}(x):\ x\in{X_n})=\ln(n)$. En élaborant un peu plus la démonstration, on peut vérifier que le maximum n'est atteint qu'en le point $(1/n,\dots,1/n)$.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Exercices théoriques sur les extrema</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater149"></span><script>var myRating = raterJs( { element:document.querySelector("#rater149"),	max:5, rating:2.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(149,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convexité et minimum <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=149.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(149,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce149','imageenonce149');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce149"></a><div class=inner id="innerenonce149">Soit $f$ une fonction convexe différentiable de $\mathbb R^n$ dans $\mathbb R$.
+Montrer que tout point critique de $f$ est un minimum global.</div></div><div class=indication><a href="javascript:showAll('innerindication149','imageindication149');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication149"></a><div class=inner id="innerindication149" style="display:none;">Prendre $x$ un point critique et $y$ tel que $f(y)&lt;f(x)$.
+En étudiant le comportement de $f$ sur le segment $[x,y]$, au voisinage de $x$,
+trouver une contradiction.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige149','imagecorrige149',149);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige149"></a><div class=inner id="innercorrige149" style="display:none;">On va procéder par contraposée, ie on va prendre un point $x$ de $\mathbb R^n$
+qui n'est pas un minimum global, et on va prouver que $df_x\neq 0$. Soit $y\in\mathbb R^n$
+tel que $f(y)&lt;f(x)$. Alors, pour $t\in]0,1[$, $f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)$.
+On écrit le développement limité de $f$ en $x$ :
+\begin{eqnarray*}
+f\big(tx+(1-t)y\big)&=&f(x)+df_x\big(tx+(1-t)y-x)+o((1-t))\\
+&=&f(x)+df_x\big( (1-t)(y-x)\big)+o(1-t)
+\end{eqnarray*}
+De l'inégalité de convexité, on déduit
+$$(1-t)df_x(y-x)+o(1-t)\leq (1-t) \big(f(y)-f(x)\big)\implies df_x(y-x)+o_{t\to 1}(1)\leq f(y)-f(x).$$
+Faisant tendre $t$ vers 1, on en déduit
+$$df_x(y-x)\leq f(y)-f(x)&lt;0.$$
+La différentielle de $f$ en $x$ ne peut donc pas être nulle.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater150"></span><script>var myRating = raterJs( { element:document.querySelector("#rater150"),	max:5, rating:2.7333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(150,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le théorème de Rolle en plusieurs variables <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=150.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(150,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce150','imageenonce150');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce150"></a><div class=inner id="innerenonce150">Soit $f:\mathbb R^n\to\mathbb R$ différentiable. On note $S$ la sphère unité de $\mathbb R^n$ et
+$B$ la boule unité ouverte. On suppose que $f$ est constante sur $S$. Démontrer l'existence de $x_0\in B$ tel que 
+$df_{x_0}=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication150','imageindication150');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication150"></a><div class=inner id="innerindication150" style="display:none;">Utiliser l'existence d'un maximum et d'un minimum sur la boule unité fermée.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige150','imagecorrige150',150);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige150"></a><div class=inner id="innercorrige150" style="display:none;">On copie la preuve en dimension 1. Soit $K$ la boule unité fermée de $\mathbb R^n$. $K$ étant compacte,
+$f$, qui est continue, admet un minimum atteint en $a$ et un maximum atteint en $b$ sur $K$. Si $f(a)=f(b)$, alors $f$ est constante sur 
+$K$ et $x_0=0$ convient. Sinon, l'une des valeurs prises est différente de la valeur prise par $f$ sur $S$, disons $f(a)$, et donc
+$a\notin S$. Ainsi, $f$ admet un extrémum local en $a$, et donc $df_a=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2629"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2629"),	max:5, rating:2.5263157894737, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2629,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynôme de degré 2, en plusieurs variables <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2629.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2629,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2629','imageenonce2629');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2629"></a><div class=inner id="innerenonce2629">Soit $n\geq 1$, $E=\mathbb R^n$ muni de sa structure euclidienne canonique, $u$ un vecteur fixé de $E$, $A$ une matrice symétrique réelle
+et $\phi$ l'endomorphisme de $E$ de matrice $A$ dans la base canonique. On suppose de plus que $\langle x,\phi (x)\rangle&gt;0$ pour tout $x\in E$ non nul
+et on pose
+$$f(x)=\langle x,\phi(x)\rangle-2\langle x,u\rangle.$$
+<ol class="enumeratechiffre">
+ <li> Démontrer que les valeurs propres de $\phi$ sont strictement positives.
+ <li> Soit $(V_1,\dots,V_n)$ une base orthonormale de vecteurs propres de $\phi$, associés aux valeurs propres $\lambda_1,\dots,\lambda_n$.
+ Exprimer $f(x)$ en fonction des coordonnées $(x_1,\dots,x_n)$ de $x$ dans $(V_1,\dots,V_n)$. En déduire que $f$
+ admet un unique point critique en un certain $y\in E$ que l'on déterminera.
+ <li> Quelle est la nature de $y$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2629','imageindication2629');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2629"></a><div class=inner id="innerindication2629" style="display:none;"><ol class="enumeratechiffre">
+ <li> Calculer $\langle \phi(v),v\rangle$ pour $v$ un vecteur propre.
+ <li> Développer les produits scalaires.
+ <li> Calculer $f(x_0+h)-f(x_0)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2629','imagecorrige2629',2629);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2629"></a><div class=inner id="innercorrige2629" style="display:none;"><ol class="enumeratechiffre">
+ <li> Si $\lambda$ est une valeur propre de $\phi$ associée au vecteur propre $v$, alors $\langle \phi(v),v\rangle=\lambda \|v\|^2&gt;0$.
+ Puisque $\|v\|&gt;0$, c'est que $\lambda&gt;0$.
+ <li> On écrit $x=\sum_{i=1}^n x_i V_i$ et $u=\sum_{i=1}^n u_i V_i$. Il vient
+ $$\langle x,\phi(x)\rangle=\langle \sum_{i=1}^n x_i V_i,\sum_{i=1}^n \lambda_i x_i V_i\rangle=\sum_{i=1}^n \lambda_i x_i^2$$
+ et 
+ $$\langle x,u\rangle=\sum_{i=1}^n u_ix_i.$$
+ Finalement, on a
+ $$f(x)=\sum_{i=1}^n \left(\lambda_i x_i^2-2 u_i x_i\right).$$
+ Le point $x$ est un point critique de $f$ si et seulement si $\frac{\partial f}{\partial x_i}(x)=0$ pour tout $i=1,\dots,n$ 
+ (on calcule les dérivées partielles non dans la base canonique, mais dans la base $(V_1,\dots,V_n)$). Or, 
+ $$\frac{\partial f}{\partial x_i}(x)=2\lambda_i x_i-2u_i.$$
+ Il y a donc un seul point critique :
+ $$y=\sum_{i=1}^n \frac{u_i}{\lambda_i}V_i$$
+ (on comprend mieux pourquoi à la première question on nous a fait démontrer que $\lambda_i$ ne s'annule pas).
+ <li> Soit $h=\sum_{i=1}^n h_i V_i\in E$. Calculons $f(y+h)-f(y)$ :
+ \begin{align*}
+  f(x_0+h)-f(x_0)&=\sum_{i=1}^n \left(\frac{u_i}{\lambda_i}+h_i\right)^2\lambda_i -2\sum_{i=1}^n \left(\frac{u_i}{\lambda_i}+h_i\right)u_i\\
+  &\quad \quad \quad -\sum_{i=1}^n \frac{u_i^2}{\lambda_i^2}\lambda_i+2\sum_{i=1}^n \frac{u_i}{\lambda_i}u_i\\
+  &=\sum_{i=1}^n \left(2\frac{u_ih_i}{\lambda_i}\lambda_i+h_i^2\lambda_i\right)-2\sum_{i=1}^n h_iu_i\\
+  &=\sum_{i=1}^n h_i^2 \lambda_i.
+ \end{align*}
+Cette dernière quantité est positive, et ne s'annule que si $h=0$. Ainsi, $f$ admet un minimum absolu en $y$. 
+Cet exercice généralise les résultats pour les polynômes du second degré à coefficient dominant
+strictement positif.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater2976"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2976"),	max:5, rating:4.0909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2976,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Principe du maximum pour les fonctions sous-harmoniques <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2976.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(2976,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2976','imageenonce2976');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2976"></a><div class=inner id="innerenonce2976">Soit $f:\mathbb R^2\to\mathbb R$ une fonction de classe $\mathcal C^2$. On notera $\Delta f=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}$. On fixe $D$ un disque ouvert de $\mathbb R^2$ et on suppose que $\Delta f\geq 0$. Le but est de démontrer qu'il existe $m_0\in\partial D$ tel que
+$$\sup_{m\in \overline{D}} f(m)\leq f(m_0).$$ 
+Pour $p\in\mathbb N^*$, on pose
+$$g_p(m)=f(m)+\frac{\|m\|^2}p.$$
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe un point $m_p\in\overline D$ tel que 
+$$\sup_{m\in \overline D}g_p(m)=g_p(m_p).$$
+<li> On suppose que $m_p\in D$. Démontrer que $\frac{\partial^2 g_p}{\partial x^2}(m_p)\leq 0$ et $\frac{\partial^2 g_p}{\partial y^2}(m_p)\leq 0$. 
+<li> En déduire que $m_p\in\partial D$. 
+<li> Démontrer que 
+$$\sup_{m\in\overline D}f(m)\leq \sup_{m'\in\partial D}f(m').$$
+<li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2976','imageindication2976');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2976"></a><div class=inner id="innerindication2976" style="display:none;"><ol class="enumeratechiffre">
+<li> Compacité.
+<li> &Eacute;tudier localement les fonctions $g_p(x,y_p)$ et $g_p(x_p,y)$ si $m_p=(x_p,y_p)$.
+<li> Que faut $\Delta g_p$?
+<li> Utiliser que $f(m)$ et $g_p(m)$ sont proches...
+<li> Compacité. 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2976','imagecorrige2976',2976);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2976"></a><div class=inner id="innercorrige2976" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $g_p$ est continue sur le compact $\overline D$ donc est majorée et atteint son maximum sur $\overline D$.
+<li> Notons $m_p=(x_p,y_p)$. Si $m_p\in D$, alors la fonction $g_p$ atteint un maximum local en $m_p$, et donc $$\frac{\partial g_p}{\partial x}(m_p)=\frac{\partial g_p}{\partial y}(m_p)=0.$$
+On étudie ensuite la fonction (d'une seule variable) $h(x)=g_p(x,y_p)$. Alors on sait d'une part que $h$ admet un maximum local en $x_p$ et d'autre part que $h$ admet un développement limité à l'ordre $2$ donné par 
+\begin{align*}
+h(x)&=h(x_p)+\frac{\partial g_p}{\partial x}(m_p) (x-x_p)+\frac 12\frac{\partial^2 g_p}{\partial x^2}(m_p)(x-x_p)^2+o((x-x_p)^2)\\
+&=h(x_p)+\frac 12\frac{\partial^2 g_p}{\partial x^2}(m_p)(x-x_p)^2+o((x-x_p)^2).
+\end{align*}
+Puisque $h(x)\leq h(x_p)$ pour $x$ proche de $x_p$, il est nécessaire que $\frac{\partial^2 g_p}{\partial x^2}(m_p)\leq 0$. De la même façon, on prouve que $\frac{\partial^2 g_p}{\partial y^2}(m_p)\leq 0$.
+<li> Un calcul facile, utilisant que $\|(x,y)\|^2=x^2+y^2$, nous dit que 
+$$\Delta g_p(x,y)=\Delta f(x,y)+\frac4p&gt;0.$$
+Ceci contredit, en $(x_p,y_p)$, le résultat de la question précédente, et on en déduit que $m_p\in\partial D$. 
+<li> Soit $m\in \overline D$. Alors on a 
+$$f(m)\leq g_p(m)\leq g_p(m_p)\leq f(m_p)-\frac{M}p\leq \sup_{m'\in \partial D}f(m')-\frac Mp$$
+où $M$ est tel que $\|m\|\leq M$ pour tout $m\in D$. Passant à la limite quand $p$ tend vers l'infini dans cette inégalité, on obtient le résultat demandé.
+<li> C'est un dernier raisonnement par compacité...
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater151"></span><script>var myRating = raterJs( { element:document.querySelector("#rater151"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(151,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La méthode des moindres carrés <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=151.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(151,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce151','imageenonce151');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce151"></a><div class=inner id="innerenonce151">&Eacute;tant donné un nuage de points $(x_i,y_i)_{i=1}^n$, la droite des moindres carrés (ou droite de régression
+linéaire) est la droite d'équation $y=mx+p$ qui minimise la quantité
+$$F(m,p)=\sum_{k=1}^n (y_k-mx_k-p)^2.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que si $(m,p)$ est un couple où ce minimum est atteint, alors $(m,p)$ est solution du système
+$$\left\{
+\begin{array}{rcl}
+\sum_{k=1}^n (y_k-mx_k-p)&=&0\\
+\sum_{k=1}^n x_k(y_k-mx_k-p)&=&0.
+\end{array}\right.$$
+<li> On note $\bar x$ et $\bar y$ les valeurs moyennes respectives de $(x_i)_{i=1,\dots,n}$ et $(y_i)_{i=1,\dots,n}$.
+Démontrer que si $\sum_{k=1}^n (x_k-\bar x)^2\neq 0$, alors il existe au plus une droite des moindres carrés, avec
+$$m=\frac{\sum_{k=1}^n (x_k-\bar x)(y_k-\bar y)}{\sum_{k=1}^n (x_k-\bar x)^2}.$$
+<li> On veut désormais prouver l'existence d'une droite des moindres carrés, toujours sous la condition
+$\sum_{k=1}^n (x_k-\bar x)^2\neq 0$.
+<ol class="enumeratechiffre">
+<li> Pourquoi suffit-il de prouver que $\lim_{\|(m,p)\|\to+\infty}F(m,p)=+\infty$?
+<li> Démontrer que
+$$F(m,p)=\sum_{i=1}^n u_i^2(m,p)+v(m,p)+c,$$
+où $u_1,\dots,u_n,v$ sont des formes linéaires sur $\mathbb R^2$ et $c\in\mathbb R$.
+<li> Démontrer que le rang de $(u_1,\dots,u_n)$ est 2.
+<li> On suppose que $(u_1,u_2)$ sont indépendantes. Justifier que l'on peut écrire 
+$$F(m,p)=u_1^2(m,p)+au_1(m,p)+u_2^2(m,p)+bu_2(m,p)+c+R(m,p),$$
+où $a,b,c\in\mathbb R$ et $R(m,p)\geq 0$.
+<li> Justifier que $\|(m,p)\|\to+\infty\implies |u_1(m,p)|+|u_2(m,p)|\to+\infty$.
+<li> Conclure.
+</ol>
+<li> Application numérique : Une réaction lente conduit à une concentration $y$ de produit, donnée en fonction du
+temps par la relation théorique 
+$$y=0,01-\frac{1}{\alpha t+\beta}.$$
+L'expérience conduit au tableau de valeurs suivant : 
+$$\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+t\quad (sec)&0&180&360&480&600&900&1200\\
+\hline
+y\quad (10^{-3} mole/l)&0&2,6&4,11&4,81&5,36&6,37&6,99\\
+\hline
+\end{array}.$$
+Déterminer par la méthode des moindres carrés des valeurs possibles pour $\alpha$ et $\beta$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige151','imagecorrige151',151);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige151"></a><div class=inner id="innercorrige151" style="display:none;"><ol class="enumeratechiffre">
+<li> En un point $(m,p)$ où la fonction $F$ admet un minimum, les dérivées partielles $\frac{\partial F}{\partial
+m}(m,p)$ et $\frac{\partial F}{\partial p}(m,p)$ sont nulles. On trouve
+$$\frac{\partial F}{\partial m}=2\sum_{k=1}^n x_k(y_k-mx_k-p)=0\textrm{ et }
+\frac{\partial F}{\partial p}=2\sum_{k=1}^n (y_k-mx_k-p)=0.$$
+<li> En un point où le maximum est atteint, les équations précédentes donnent immédiatement
+$$p=\bar y-m\bar x$$
+et
+$$m\left(\sum_{k=1}^n x_k^2-x_k\bar x\right)=\sum_{k=1}^n x_k(y_k-\bar y).$$
+Pour conclure,  il suffit de remarquer que 
+\begin{eqnarray*}
+\sum_{k=1}^n (x_k^2-x_k\bar x)&=&\sum_{k=1}^n x_k^2-n\bar x^2
+\end{eqnarray*}
+et
+\begin{eqnarray*}
+\sum_{k=1}^n (x_k-\bar x)^2&=&\sum_{k=1}^n x_k^2-2\bar x \sum_{k=1}^n x_k+n\bar x^2\\
+&=&\sum_{k=1}^n x_k^2-2n\bar x^2+n\bar x^2\\
+&=&\sum_{k=1}^n x_k^2-n\bar x^2.
+\end{eqnarray*}
+Ainsi, si $\sum_{k=1}^n (x_k-\bar x)^2\neq 0$, il existe au plus un minimum, atteint pour 
+$$m=\frac{\sum_{k=1}^n x_k(y_k-\bar y)}{\sum_{k=1}^n (x_k-\bar x)^2}=m=\frac{\sum_{k=1}^n (x_k-\bar x)(y_k-\bar y)}{\sum_{k=1}^n (x_k-\bar x)^2}.$$
+Reste à prouver maintenant que $F$ admet effectivement un minimum. 
+<li> <ol class="enumeratechiffre">
+<li> C'est un argument de compacité qui va nous permettre de conclure. Posons $A=F(0,0)$. Par hypothèse, il existe $C&gt;0$ tel que, pour $\|(m,p)\|\geq C$, on a 
+$\|F(m,p)\|\geq A$. Posons $U$ la boule (ouverte) de centre $O$ et de rayon $C$, et soit $K$ la boule fermée.
+$K$ est une partie compacte de $\mathbb R^2$, et $F$ y est continue. Elle y admet donc un minimum, en $(m_1,p_1)$. 
+Mais ce minimum est aussi le minimum de la fonction sur $\mathbb R^2$, puisque si $(m,p)\notin K$, on a 
+$$F(m,p)\geq A=F(0,0)\geq F(m_1,p_1).$$
+Ainsi, $F$ admet un minimum sur $\mathbb R^2$ et donc une droite des moindres carrés existe.
+<li> Il suffit, pour chaque $i$, d'écrire 
+$$(y_i-mx_i-p)^2=(x_i m+p)^2-2x_iy_im-2y_ip+y_i^2:=u_i^2(m,p)+v_i(m,p)+y_i^2,$$
+avec $u_i$ et $v_i$ des formes linéaires.
+<li> La condition entraîne en particuler qu'au moins deux des $x_i$ sont différents (sinon, ils seraient tous égaux à
+leur moyenne). Supposons donc $x_i\neq x_j$ et prouvons que $(u_i,u_j)$ est libre. Si on a une relation
+$au_i+b u_j=0,$ alors en évaluant en $m=1,p=0$ puis en $m=0,p=1$, on trouve le système
+$$\left\{
+\begin{array}{rcl}
+ax_i+bx_j&=&0\\
+a+b&=&0
+\end{array}\right.$$
+dont la seule solution est $a=b=0$. Le système est donc libre, et le rang de la famille est supérieur ou égal à 2.
+Puisque l'espace vectoriel des formes linéaires sur $\mathbb R^2$ est de dimension 2, le rang est au plus de 2. Il vaut
+donc exactement 2.
+<li> Il suffit de poser $R(m,p)=\sum_{i=3}^{n}u_i^2(m,p)$ et $v(m,p)=au_1(m,p)+bu_2(m,p)$. 
+<li> Définissons 
+$$N(m,p)=|u_1(m,p)|+|u_2(m,p)|.$$
+$N$ est une norme sur $\mathbb R^2$. La seule chose non triviale est de vérifier que si $N(m,p)=0$, alors $(m,p)=0$.
+Mais $(m,p)\mapsto m$ est une forme linéaire sur $\mathbb R^2$, elle s'écrit donc $m=eu_1(m,p)+fu_2(m,p)$, et donc
+si $N(m,p)=0$, alors $m=0$. De même, on prouve que $p=0$. Maintenant, on sait que sur $\mathbb R^2$, toutes les normes
+sont équivalentes. La condition $\|(m,p)\|\to+\infty$ entraîne donc $N(m,p)\to+\infty$.
+<li> On va donc prouver que $\lim_{\|(m,p)\|\to+\infty}F(m,p)=+\infty$. Fixons $A&gt;0$. Il existe $K\in\mathbb R$ tel que, pour tout $x\in\mathbb R$, 
+$$x^2+a|x|\geq K\textrm{ et }x^2+b|x|\geq K.$$
+On sait ensuite qu'il existe $M&gt;0$ tel que, pour tout $x\geq M$, 
+$$x^2+a|x|\geq A-K$$
+et 
+$$x^2+b|x|\geq A-K.$$
+D'après le résultat de la question précédente, il existe $B&gt;0$ tel que $\|(m,p)\|\geq B$ entraîne $|u_1(m,p)|+|u_2(m,p)|\geq 2M$. En particulier, pour ces $(m,p)$, on a ou bien $|u_1(m,p)|\geq M$ ou bien $|u_2(m,p)|\geq M$.
+Dans un cas comme dans l'autre, 
+$$F(m,p)\geq (A-K)+K=A.$$
+Ceci prouve bien le résultat annoncé.
+</ol>
+<li> Il faut retransformer l'équation théorique en équation linéaire. Pour cela, on pose
+$$z=\frac{1}{0,01-y}=\alpha t+\beta.$$
+Le tableau des valeurs de $z$, arrondies à l'unité, en fonction du temps est :
+$$\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+t (sec)&0&180&360&480&600&900&1200\\
+\hline
+z&100&135&170&193&216&275&332\\
+\hline
+\end{array}.$$
+L'application des formules précédentes donne alors 
+$$\alpha\simeq 0,194\textrm{ et }\beta\simeq 100,143.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater152"></span><script>var myRating = raterJs( { element:document.querySelector("#rater152"),	max:5, rating:1.2727272727273, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(152,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sans les théorèmes <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=152.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(152,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce152','imageenonce152');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce152"></a><div class=inner id="innerenonce152">Soit $f$ une fonction définie sur une partie $A$ de $\mtr^2$, et $a\in\mtr^2$. On dit qu'une fonction $f$ présente en $a$
+<ul class="rien">
+<li> un maximum local s'il existe un réel $r&gt;0$ tel que
+$$\forall u\in A,\ \|u-a\|\leq r\implies f(u)\leq f(a).$$
+<li> un minimum local s'il existe un réel $r&gt;0$ tel que :
+$$\forall u\in A,\ \|u-a\|\leq r\implies f(u)\geq f(a).$$
+<li> un extrémum local si elle présente en $a$ un maximum local ou un minimum local.
+</ul>
+On suppose dans la suite que $f$ est une fonction de classe $C^1$ sur un ouvert $U$ de $\mtr^2$, et soit $a\in U$.
+<ol class="enumeratechiffre">
+<li> Montrer que si $f$ présente un extremum en a, alors les dérivées partielles de $f$ en $a$ sont nulles. Un tel point (où les dérivées partielles
+s'annulent) est appelé point critique de $f$.
+<li> Soit $f$ la fonction définie sur $\mtr^2$ par $f(x,y)=x^2+y^2-2x-4y$. Montrer que $f$ admet $(1,2)$ pour seul point critique.
+En effectuant le changement d'origine $x=1+X$ et $y=2+Y$ et en calculant $f(1+X,2+Y)$, prouver que $f$ admet un minimum local en $(1,2)$.
+<li> Soit $f$ la fonction définie sur $\mtr^2$ par $f(x,y)=x^3+y^3-6(x^2-y^2).$
+<ol class="enumeratechiffre">
+<li> Montrer que $f$ possède 4 points critiques.
+<li> En calculant $f(t,0)$ et $f(0,t)$, prouver que $f$ n'admet pas d'extrémum en $(0,0)$, bien que ce point soit un point critique.
+<li> Ecrire la formule de Taylor à l'ordre 2 en $(4,0)$. En déduire que $f$ admet un minimum local en $(4,0)$.
+<li> En s'aidant des questions précédentes, faire l'étude locale aux autres points critiques.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication152','imageindication152');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication152"></a><div class=inner id="innerindication152" style="display:none;"><ol class="enumeratechiffre">
+<li> Etudier les fonctions d'une variable $g(t)=f(a+te_1)$, et $h(t)=f(a+te_2)$.
+<li> Calculer les dérivees partielles, chercher le seul point où elles s'annulent simultanément. Puis faire le calcul comme proposé, et repérer une
+quantité toujours positive.
+<li> <ol class="enumeratechiffre">
+<li> Calculer les dérivées partielles et chercher les points où elles s'annulent simultanément.
+<li> L'indication est déjà dans l'énoncé!
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige152','imagecorrige152',152);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige152"></a><div class=inner id="innercorrige152" style="display:none;"><ol class="enumeratechiffre">
+<li> On étudier les fonctions d'une variable $g(t)=f(a+te_1)$, et $h(t)=f(a+te_2)$. Ces fonctions admettent un extrémum en 0,
+et d'après la théorie classique des fonctions d'une variable réelle, on a $g'(0)=h'(0)=0$. Maintenant, il est clair que 
+$$g'(0)=\frac{\partial f}{\partial x}(a),$$
+et de même pour $h'(0)$.
+<li> Les dérivées partielles de $f$ sont 
+$$\frac{\partial f}{\partial x}=2x-2\textrm{ et }\frac{\partial f}{\partial y}=2y-4.$$
+Le seul point où elles s'annulent est $(1,2)$. En prenant ce point comme nouvelle origine, on est amené à étudier 
+$$f(1+X,2+Y)=-5+X^2+Y^2$$
+qui reste toujours supérieure à $-5=f(1,2)$. $f$ présente un minimum local, et même global, en $(1,2)$.
+<li>
+<ol class="enumeratechiffre">
+<li> Les dérivées partielles de $f$ sont 
+$$\frac{\partial f}{\partial x}=3x^2-12x\textrm{ et }\frac{\partial f}{\partial y}=3y^2+12y.$$
+Ces dérivées partielles ne s'annulent simultanément qu'en $(0,0)$, $(4,0)$, $(0,-4)$ et $(4,-4)$ qui sont les points critiques de $f$.
+<li> On a $f(t,0)\sim-6t^2&lt; f(0)$ pour $t\neq 0$, et $f(0,t)\sim 6t^2&gt;f(0)$ pour $t\neq 0$ : $f$ ne peut pas présenter d'extrémum local en $(0,0)$.
+<li> Il est plus facile d'écrire la formule de Taylor avec les nouvelles coordonnées $x=4+X$, $y=Y$. D'autre part, le calcul des dérivées partielles secondes donne :
+$$\frac{\partial^2 f}{\partial x^2}=6x-12,\ \frac{\partial^2 f}{\partial x\partial y}=0,\ \frac{\partial^2}{\partial y^2}=6y+12.$$
+La formule de Taylor est donc :
+$$f(4+X,Y)=-32+6X^2+6Y^2+\|(X,Y)\|^2\veps(\|(X,Y)\|).$$
+Maintenant, la quantité $6X^2+6Y^2$ est toujours positive, ce qui prouve que $f$ admet un minimum local en $(4,0)$.
+<li> De même, on démontre qu'en $(0,-4)$, la fonction $f$ présente un maximum local, mais qu'en $(4,-4)$, elle n'a pas d'extremum local.
+</ol>
+</ol></div></div></div>
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

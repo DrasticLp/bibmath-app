@@ -1,0 +1,331 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Résumé de cours : &Eacute;quations différentielles linéaires</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Résumé de cours : &Eacute;quations différentielles linéaires</h1><div class=cours>
+<p class=utexte>
+Dans la suite, $I$ désigne un intervalle de $\mathbb R$, $E$ un espace vectoriel normé de dimension finie $n$
+et $\mathbb K$ désigne $\mathbb R$ ou $\mathbb C.$
+</p>
+
+
+<div class=titrepartie>Généralités</div>
+<p class=utexte>
+On appelle <span class=rougedico>équation différentielle linéaire du premier ordre</span> une équation de la forme 
+$$x'(t)+a(t)\big(x(t)\big)=b(t)$$
+où $a:I\to\mathcal L(E)$ et $b:I\to E$ sont deux fonctions continues. Résoudre l'équation différentielle, c'est déterminer
+les fonctions $x:I\to E$ dérivables qui satisfont l'équation précédente. Une telle fonction s'appelle
+une <span class=rougedico>solution</span> de l'équation.</p>
+<p class=utexte>L'<span class=rougedico>équation différentielle homogène</span> associée à l'équation différentielle précédente est l'équation
+$$x'(t)+a(t)\big(x(t)\big)=0.$$
+<p class=utexte>Si $x_1$ est une solution de 
+$$x'(t)+a(t)\big(x(t)\big)=b_1(t)$$
+et $x_2$ est une solution de 
+$$x'(t)+a(t)\big(x(t)\big)=b_2(t),$$
+alors $x_1+x_2$ est une solution de 
+$$x'(t)+a(t)\big(x(t)\big)=b_1(t)+b_2(t).$$
+C'est le <span class=rougedico>principe de superposition</span> des solutions.</p>
+<p class=utexte>Si on introduit une base $\mathcal B=(e_1,\dots,e_n)$ de $E$ et en posant $A(t)$, $B(t)$ et $X(t)$ les matrices
+respectives de $a(t)$, $b(t)$ et $x(t)$ dans $\mathcal B$, alors l'équation différentielle $x'(t)+a(t)\big(x(t)\big)=b(t)$ se réécrit sous la forme
+d'un système différentiel :
+$$X'(t)+A(t)X(t)=B(t).$$
+</p>
+
+<div class=titrepartie>Résolution des problèmes de Cauchy</div>
+<p class=utexte>Soit $(t_0,x_0)\in I\times E$ et $x'(t)+a(t)\big(x(t)\big)=b(t)$ une équation différentielle linéaire.
+ On appelle 
+<span class=rougedico>problème de Cauchy</span> associé la détermination des solutions de l'équation différentielle 
+vérifiant de plus $x(t_0)=x_0$.</p>
+<div class=theo><span class=grastheo>Proposition (mise sous forme intégrale du problème de Cauchy) :</span> Soit $a:I\to\mathcal L(E)$
+et $b:I\to E$ deux fonctions continues, $x:I\to E$ dérivable et $(t_0,x_0)\in I\times E$. Alors les assertions suivantes sont équivalentes :
+<ol>
+<li>$x$ est solution du problème de Cauchy 
+$$\left\{\begin{array}{rcl}
+x'(t)+a(t)\big(x(t)\big)&=&b(t)\\
+x(t_0)&=&x_0.
+\end{array}\right.$$
+<li>$x$ vérifie&nbsp;: pour tout $t\in I$, 
+$$x(t)=x_0+\int_{t_0}^t \Big(-a(u)\big(x(u)\big)+b(u)\Big)du.$$
+</ol>
+</div>
+<div class=theo><span class=grastheo>Théorème de Cauchy linéaire : </span> Soit $a:I\to\mathcal L(E)$, $b:I\to E$ deux fonctions continues et $(t_0,x_0)\in I\times E$.
+Alors le problème de Cauchy 
+$$\left\{\begin{array}{rcl}
+x'(t)+a(t)\big(x(t)\big)&=&b(t)\\
+x(t_0)&=&x_0
+\end{array}\right.$$
+admet une solution unique définie sur $I$.
+</div>
+<div class=theo><span class=grastheo>Théorème (structure de l'ensemble des solutions) : </span> Soit $a:I\to\mathcal L(E)$, $b:I\to E$ deux fonctions continues. L'ensemble des solutions $\mathcal S$ de l'équation différentielle linéaire homogène
+$$x'(t)+a(t)\big(x(t)\big)=0$$
+est un sous-espace vectoriel de $\mathcal C^1(I,E)$ de dimension $n=\dim(E)$. De plus, l'application $x\mapsto x(t_0)$ est un isomorphisme
+de $\mathcal S$ sur $E$.<br>
+L'ensemble des solutions de l'équation complète
+$$x'(t)+a(t)\big(x(t))=b(t)$$
+est un sous-espace affine de dimension $n=\dim(E)$.
+</div>
+<div class=theo><span class=grastheo>Corollaire : </span> Soit $a:I\to\mathcal L(E)$ une application continue
+et $\mathcal S$ l'ensemble des solutions de l'équation homogène 
+$$x'(t)+a(t)\big(x(t)\big)=0.$$
+Si $x_1,\dots,x_n$ sont des éléments de $\mathcal S,$ alors les assertions suivantes sont équivalentes :
+<div class=liste>
+<ul>
+<li>la famille $(x_1,\dots,x_n)$ est une base de $\mathcal S$&nbsp;;
+<li>il existe $t_0\in I$ tel que $(x_1(t_0),\dots,x_n(t_0))$ est une base de $E$&nbsp;;
+<li>pour tout $t\in I,$ $(x_1(t),\dots,x_n(t))$ est une base de $E.$
+</ul>
+</div>
+</div>
+
+<div class=titrepartie>Exponentielle de matrice</div>
+<p class=utexte>
+Soit $u\in\mathcal L(E)$. Alors la série $\sum_{n\geq 0}\frac{u^n}{n!}$ converge absolument. Sa somme s'appelle l'<span class=rougedico>exponentielle</span>
+de $u$ et est notée $\exp(u)$ ou $e^u$.
+De même, si $A\in\mathcal M_n(\mathbb K)$, la série $\sum_{n\geq 0}\frac{A^n}{n!}$
+converge absolument et sa somme est appellée <span class=rougedico>exponentielle de $A$</span>
+et est notée $\exp(A)$ ou $e^A.$ </p>
+<p class=utexte>
+Ces deux notions sont liées par le résultat suivant&nbsp;: si $\mathcal B$ est une base de $E$ et $A$ est la matrice
+de $a$ dans $\mathcal B,$ alors $\exp(A)$ est la matrice de $\exp(a)$ dans $\mathcal B.$</p>
+<div class=exemple><span class=grastheo>Exemple : </span>
+Si $A$ est la matrice diagonale $\textrm{diag}(\lambda_1,\dots,\lambda_n)$, alors $\exp(A)$
+est la matrice diagonale $\textrm{diag}(e^{\lambda_1},\dots,e^{\lambda_n})$.
+</div>
+<div class=theo><span class=grastheo>Théorème :</span> L'application exponentielle vérifie les propriétés suivantes :
+<div class=liste>
+<ul>
+<li>$A\mapsto \exp(A)$ est une application continue de $\mathcal M_n(\mathbb K)$ dans $\mathcal M_n(\mathbb K)$.
+<li>Si $A,B\in\mathcal M_n(\mathbb K)$ sont tels que $AB=BA$, alors $\exp(A+B)=\exp(A)\exp(B)$.
+<li>Pour tout $A\in\mathcal M_n(K),\ $, $\exp(A)$ est inversible et $(\exp(A))^{-1}=\exp(-A).$
+<li>Pour tout $A\in\mathcal M_n(\mathbb K)$, l'application $t\mapsto \exp(tA)$ est dérivable, de
+dérivée $t\mapsto A\exp(tA)=\exp(tA)A$.
+</ul>
+</div>
+</div>
+<p class=utexte>On a un résultat similaire pour les exponentielles d'endomorphismes.</p>
+<div class=theo><span class=grastheo>Proposition :</span> Soit $A\in\mathcal M_n(\mathbb C)$. 
+Si les valeurs propres de $A,$ comptées avec leur ordre de multiplicité, sont $\lambda_1,\dots,\lambda_n,$
+alors les valeurs propres de $\exp(A)$ sont $\exp(\lambda_1),\dots,\exp(\lambda_n)$.
+</div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Systèmes différentiels homogènes à coefficients constants</div>
+<div class=theo><span class=grastheo>Théorème :</span> Soit $a\in\mathcal L(E)$, $t_0\in\mathbb R$ et $x_0\in E$. L'unique solution au problème de Cauchy
+$$\left\{
+\begin{array}{rcl}
+x'(t)&=&a\big(x(t)\big)\\
+x(t_0)&=&x_0
+\end{array}\right.$$
+est la fonction $t\mapsto \exp\big((t-t_0)a\big)(x_0)$.
+</div>
+<div class=theo><span class=grastheo>Corollaire :</span> Soit $a\in\mathcal L(E)$ diagonalisable, $(x_1,\dots,x_n)$ une base de vecteurs propres
+de $a$ associés respectivement à $\lambda_1,\dots,\lambda_n$. Notons $\varphi_i(t)=e^{\lambda_i t}x_i$. Alors $(\varphi_1,\dots,\varphi_n)$ est une base
+de l'espace vectoriel des solutions de l'équation homogène $x'=ax$.</div>
+
+
+<div class=titrepartie>Cas des équations différentielles scalaires d'ordre $n$</div>
+<p class=utexte>
+On appelle <span class=rougedico>équation différentielle linéaire scalaire d'ordre $n$</span> définie sur $I$ toute équation
+de la forme 
+$$x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)+b(t)$$
+avec $a_0,\dots,a_{n-1}$ et $b:I\to \mathbb K$ des fonctions continues et $x:I\to\mathbb K$ une fonction inconnue
+$n$ fois dérivable sur $I$.</p>
+<p class=untexte><span class=grastheo>Traduction matricielle :</span> Notons $X$ le vecteur $$X(t)=\left(\begin{array}c x(t)\\ x'(t) \\ \vdots \\ x^{(n-1)}(t)\end{array}\right)$$
+et $A$, $B$ les matrices 
+$$A(t)=\left(
+\begin{array}{ccccc}
+0&1&0&\dots&\dots\\
+0&0&1&\ddots&\vdots\\
+\vdots&\vdots&\ddots&\ddots&\vdots\\
+0&0&\dots&\dots&1\\
+a_0(t)&a_1(t)&\dots&\dots&a_{n-1}(t)
+\end{array}\right),\quad 
+B(t)=\left(
+\begin{array}{c}
+0\\
+0\\
+\vdots\\
+\vdots\\
+0\\
+b(t)
+\end{array}\right),$$
+l'équation différentielle scalaire d'ordre $n$
+$$x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)+b(t)$$
+est "équivalente" au système $X'(t)=A(t)X(t)+B(t)$ au sens où $x$ est solution de l'équation scalaire si et seulement si 
+c'est la première coordonnée de $X$ solution de l'équation vectorielle.
+</p>
+<p class=utexte>
+Soit une équation différentielle linéaire scalaire d'ordre $n$
+$$x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)+b(t).$$
+Soit également $(t_0,x_0,\dots,x_{n-1})\in I\times \mathbb K^n$. On appelle 
+<span class=rougedico>problème de Cauchy</span> associé la détermination des solutions de l'équation différentielle 
+vérifiant de plus $x(t_0)=x_0,\ x'(t_0)=x_1,\dots,\ x^{(n-1)}(t_0)=x_{n-1}$.</p>
+<div class=theo><span class=grastheo>Théorème :</span> Si $a_0,\dots,a_{n-1}$ et $b:I\to \mathbb K$ sont des fonctions continues, le problème de Cauchy
+$$\left\{
+	\begin{array}{l}
+	x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)+b(t)\\
+	x(t_0)=x_0,\ x'(t_0)=x_1,\dots,\ x^{(n-1)}(t_0)=x_{n-1}
+	\end{array}
+	\right.$$
+admet une solution unique.
+</div>
+<div class=theo><span class=grastheo>Corollaire :</span> Si $a_0,\dots,a_{n-1}$ et $b:I\to \mathbb K$ sont des fonctions 
+continues, l'ensemble $\mathcal S_0$ des
+solutions de l'équation différentielle linéaire scalaire homogène d'ordre $n$ 
+$$x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)$$
+est un sous-espace vectoriel de dimension $n$. De plus, pour tout $t_0\in I,$ 
+l'application 
+$$\begin{array}{rcl}
+\mathcal S_0&\to&\mathbb K^n\\
+x&\mapsto&(x(t_0),\dots,x^{(n-1)}(t_0))
+\end{array}
+$$
+est un isomorphisme d'espace vectoriel.</p>
+L'ensemble des solutions de l'équation avec second membre
+$$x^{(n)}(t)=a_{n-1}(t)x^{(n-1)}(t)+a_{n-2}(t)x^{(n-2)}(t)+\dots+a_0(t)x(t)+b(t)$$
+est un sous-espace affine de dimension $n$.
+</div>
+
+
+<div class=titrepartie>Cas particulier des équations différentielles scalaires d'ordre 2</div>
+<p class=utexte>On considère une équation différentielle linéaire scalaire d'ordre $2$
+$$x''(t)=a(t)x'(t)+b(t)x(t)+c(t)$$
+où $a,b,c:I\to\mathbb K$ sont continues.
+</p>
+<p class=utexte>Soit $f,g$ deux solutions de l'équation homogène. On appelle <span class=rougedico>wronskien</span> de ces deux solutions l'application
+$$W:t\in I\mapsto \left|
+\begin{array}{cc}
+f(t)&g(t)\\
+f'(t)&g'(t)\\
+\end{array}\right|.$$
+<div class=theo><span class=grastheo>Théorème :</span> Soit $(f,g)$ deux solutions de l'équation homogène. Les assertions suivantes sont équivalentes :
+<div class=liste>
+<ul>
+<li>$(f,g)$ est une base de l'espace vectoriel des solutions de l'équation homogène&nbsp;;
+<li>Pour tout $t\in I$, $W(t)\neq 0$&nbsp;;
+<li>Il existe $t\in I$ tel que $W(t)\neq 0$.
+</ul>
+</div>
+</div>
+
+<div class=theo><span class=grastheo>Théorème (méthode de variation des constantes) :</span> 
+Soit $(f,g)$ une base de l'espace vectoriel des solutions de l'équation homogène. 
+Les solutions de l'équation avec second membre sont les fonctions qui s'écrivent $\lambda f+\mu g$
+où $\lambda,\mu:I\to\mathbb K$ sont les fonctions dérivables vérifiant
+$$\left\{
+	\begin{array}{rcl}
+	\lambda'(t) f(t)+\mu'(t)g(t)&=&0\\
+	\lambda'(t) f'(t)+\mu'(t)g'(t)&=&c(t).	
+	\end{array}
+	\right.
+$$
+</div>
+
+
+<p class=untexte><span class=grastheo>Cas des équations à coefficients constants :</span> on suppose qu'on a une équation homogène
+$$x''=ax'+bx$$
+à coefficients constants avec $a,b\in\mathbb K.$ On introduit l'équation caractéristique
+$$r^2=ar+b.$$
+<div class=liste>
+<ul>
+<li>Résolution sur $\mathbb C$ (on recherche les solutions à valeurs dans $\mathbb C$) :
+<div class=liste>
+<ul>
+<li>si l'équation caractéristique admet deux racines $r_1$ et $r_2$, alors les solutions de l'équation homogène $y''+ay'+by=0$ sont les fonctions
+$$x\mapsto \lambda e^{r_1 x}+\mu e^{r_2 x}\quad\textrm{ avec }\lambda,\mu\in\mathbb C.$$
+<li>si l'équation caractéristique admet une racine double $r$, alors les solutions de l'équation homogène $y''+ay'+by=0$ sont les fonctions
+$$x\mapsto (\lambda x+\mu)e^{rx}\quad\textrm{ avec }\lambda,\mu\in\mathbb C.$$
+</ul>
+</div>
+<li>Résolution sur $\mathbb R$ ($a,b\in\mathbb R$ et on recherche les solutions à valeurs dans $\mathbb R$) :
+<div class=liste>
+<ul>
+<li>si l'équation caractéristique admet deux racines réelles $r_1$ et $r_2$, alors les solutions de l'équation homogène $y''+ay'+by=0$ sont les fonctions
+$$x\mapsto \lambda e^{r_1 x}+\mu e^{r_2 x}\quad\textrm{ avec }\lambda,\mu\in\mathbb R.$$
+<li>si l'équation caractéristique admet une racine double $r$, alors les solutions de l'équation homogène $y''+ay'+by=0$ sont les fonctions
+$$x\mapsto (\lambda x+\mu)e^{rx}\quad\textrm{ avec }\lambda,\mu\in\mathbb R.$$
+<li>si l'équation caractéristique admet deux racines complexes conjuguées, $\alpha\pm i\beta$, alors les solutions de l'équation homogène sont les fonctions
+$$x\mapsto \lambda e^{\alpha x}\cos(\beta x)+\mu e^{\alpha x}\sin(\beta x)\quad\textrm{ avec }\lambda,\mu\in\mathbb R.$$
+</ul>
+</div>
+</ul>
+</div>
+</p>
+
+
+</div>
+
+<div class=cardcours>
+<div class="titrecours">&Eacute;quations différentielles</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcours%252Fequadiffs.html">Cours</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Ffeuillesexo%252Fequadiffs&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fmethodes%252Fequadiffs.html">Méthodes</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcolles%252Fequadiffs&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fvideos%252Fequadiffs.html">Vidéos</a> 
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Foraux%252Fequadiffs&amp;type=fexo.html">Oraux de concours</a>
+</ul>
+</div>
+</div>
+</div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

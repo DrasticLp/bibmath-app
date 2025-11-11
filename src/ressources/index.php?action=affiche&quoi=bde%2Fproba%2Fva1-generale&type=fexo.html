@@ -1,0 +1,495 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Variables aléatoires : moments, fonctions de répartition, génératrice, caractéristique</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fproba.html">Exercices de dénombrement - probabilités - statistiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Variables aléatoires : moments, fonctions de répartition, génératrice, caractéristique</h1>
+<div class=titrepartie>Moments, fonctions de répartition</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2035"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2035"),	max:5, rating:0.93333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2035,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur la variance <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2035.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2035,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2035','imageenonce2035');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2035"></a><div class=inner id="innerenonce2035">Soit $X$ une variable aléatoire admettant un moment d'ordre 2. Démontrer que $E\big((X-a)^2\big)$ est minimal
+pour $a=E(X)$.</div></div><div class=indication><a href="javascript:showAll('innerindication2035','imageindication2035');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2035"></a><div class=inner id="innerindication2035" style="display:none;">Dériver la fonction!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2035','imagecorrige2035',2035);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2035"></a><div class=inner id="innercorrige2035" style="display:none;">Posons $f(a)=E((X-a)^2)=E(X^2)-2aE(X)+a^2$. Cette fonction est un polynôme du second degré, à coefficient dominant positif.
+Elle admet donc un minimum lorsque $f'(a)=0$, c'est-à-dire pour $a=E(X)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2033"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2033"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2033,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Variable aléatoire quasi-certaine <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2033.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2033,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2033','imageenonce2033');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2033"></a><div class=inner id="innerenonce2033">On dit qu'une variable aléatoire réelle $X$ est quasi-certaine lorsqu'il existe un réel $a$ tel que $P(X=a)=1$. Soit $X$ une variable aléatoire réelle telle que $X(\Omega)$ soit fini ou dénombrable. Démontrer que $X$ est quasi-certaine si et seulement si $V(X)=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication2033','imageindication2033');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2033"></a><div class=inner id="innerindication2033" style="display:none;">Pour qu'une somme de réels tous positifs soit nulle, il faut que chacun de ces réels soit nul.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2033','imagecorrige2033',2033);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2033"></a><div class=inner id="innercorrige2033" style="display:none;">Remarquons d'abord que si $X$ est quasi-certaine, $X^2$ est aussi quasi-certaine et $P(X^2=a^2)=1$. En particulier, $E(X^2)=a^2$ ce qui justifie l'existence de la variance. De plus, 
+$$V(X)=E(X^2)-E(X)^2=a^2-a^2=0.$$
+Réciproquement, supposons que $V(X)=0$. Notons $m$ l'espérance de $X$, $(x_n)$ l'ensemble des valeurs distinctes prises par $X$ et $p_n=P(X=n)$. Alors,
+$$V(X)=\sum_{n=0}^{+\infty}p_n(x_n-m)^2.$$
+Puisque $V(X)=0$, tous les termes de cette somme, qui sont positifs ou nuls, doivent être nuls. Ceci implique que pour tout entier $n$, ou bien $x_n=m$, ou bien $p_n=0$. De plus, tous les $p_n$ ne peuvent pas être nuls (leur somme vaut 1), et comme tous les $x_n$ sont différents, un seul de ces $x_n$ peut être égal à $m$. Il existe donc un unique $x_{n_0}$ égal à $m$. Les autres sont différents de $m$ et donc $p_n=0$ pour $n\neq n_0$. On en déduit que $p_{n_0}=1$ et donc que $P(X=x_{n_0})=1$ : $X$ est presque sûre.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2034"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2034"),	max:5, rating:1.8666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2034,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Variable discrète <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2034.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2034,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2034','imageenonce2034');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2034"></a><div class=inner id="innerenonce2034">Soit $X$ une variable aléatoire réelle et soit $M\subset\mathbb R$ tel que,
+tout $x\in M$, $P(X=x)&gt;0$. Démontrer que $M$ est fini ou dénombrable.</div></div><div class=indication><a href="javascript:showAll('innerindication2034','imageindication2034');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2034"></a><div class=inner id="innerindication2034" style="display:none;">Considérer, pour $n\geq 1$, $M_n=\{x\in M;\ P(X=x)\geq 1/n\}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2034','imagecorrige2034',2034);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2034"></a><div class=inner id="innercorrige2034" style="display:none;">Soit $n\geq 1$. Posons 
+$$M_n=\{x\in M;\ P(X=x)\geq 1/n\}.$$
+Alors $M_n$ est fini de cardinal inférieur ou égal à $n$ (car $P(M_n)\leq 1$). De plus,
+$M=\bigcup_{n\geq 1}M_n$. Ainsi, $M$ est fini ou dénombrable, comme réunion d'ensembles finis ou dénombrables.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2036"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2036"),	max:5, rating:3.8461538461538, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2036,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une variable aléatoire de fonction de répartition donnée <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2036.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2036,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2036','imageenonce2036');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2036"></a><div class=inner id="innerenonce2036">Soit $F:\mathbb R\to\mathbb R$ une fonction croissante, continue à droite,
+vérifiant $\lim_{-\infty}F=0$ et $\lim_{+\infty}F=1$. On veut démontrer qu'il existe une variable
+aléatoire $X$ dont $F$ est la fonction de répartition. Pour $u\in]0,1[$, on pose
+$$G(u)=\inf\{x\in\mathbb R;\ F(x)\geq u\}.$$
+<ol class="enumeratechiffre">
+ <li> Vérifier que $G$ est bien définie.
+<li> Démontrer que, pour tout $x\in\mathbb R$ et tout $u\in]0,1[$, $F(x)\geq u\iff x\geq G(u)$.
+<li> Soit $U$ une variable aléatoire suivant une loi uniforme sur $[0,1]$. Quelle est la fonction de
+répartition de $G(U)$?
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication2036','imageindication2036');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2036"></a><div class=inner id="innerindication2036" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Le sens direct n'utilise que la définition de la borne inférieure. Pour le sens réciproque, on pourra
+commencer par prouver, en utilisant la continuité à droite de $F$, que $F(G(u))\geq u$.
+<li> Utiliser la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2036','imagecorrige2036',2036);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2036"></a><div class=inner id="innercorrige2036" style="display:none;"><ol class="enumeratechiffre">
+<li> Fixons $u\in]0,1[$. L'ensemble $\{x\in\mathbb R;\ F(x)\geq u\}$
+est non-vide (car $\lim_{+\infty}F=1$, tous les $x$ assez grands sont dans cet ensemble),
+minorée (car $\lim_{-\infty} F=0$, tous les $x$ assez petits ne sont pas dans cet ensemble),
+et donc la borne inférieure existe.
+<li> Soient $x$ et $u$ tels que $F(x)\geq u$. Alors,
+$$x\geq \inf\{y\in\mathbb R;\ F(y)\geq u\}=G(u).$$
+Réciproquement, on suppose que $x\geq G(u)$. Par croissance de $F$, on a 
+$$F(x)\geq F(G(u)).$$
+On va donc prouver que $F(G(u))\geq u$, et pour cela on va utiliser la continuité à droite de $F$ en $G(u)$.
+Fixons $\veps&gt;0$. Il existe $\eta&gt;0$ tel que, pour tout $y\in[G(u),G(u)+\eta]$, on a
+$$F(y)\leq F(G(u))+\veps.$$
+D'autre part, par définition de $G(u)$, on peut trouver $y_0\in[G(u),G(u)+\eta]$ tel que 
+$$F(y_0)\geq u.$$
+Pour ce $y_0$, on a donc
+$$u\leq F(y_0)\leq F(G(u))+\veps.$$
+$\veps$ étant arbitraire, on en déduit $F(G(u))\geq u$, comme annoncé.
+<li> On a, pour tout $x\in [0,1]$,
+$$P\big(G(U)\leq x\big)=P\big(U\leq F(x)\big)=F(x),$$
+d'après la définition de la loi uniforme. La fonction de répartition de $G(U)$ est bien $F$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater3149"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3149"),	max:5, rating:1.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3149,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Covariance et variables aléatoires de Bernoulli <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3149.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(3149,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3149','imageenonce3149');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3149"></a><div class=inner id="innerenonce3149">Soit $X$ et $Y$ deux variables aléatoires définies sur le même univers $\Omega$ et suivant toutes deux une loi de Bernoulli. Démontrer que $X$ et $Y$ sont indépendantes si et seulement si leur covariance est nulle. </div></div><div class=indication><a href="javascript:showAll('innerindication3149','imageindication3149');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3149"></a><div class=inner id="innerindication3149" style="display:none;">Commencer par remarquer que $XY$ suit aussi une loi de Bernoulli, puis que 
+$$P((X,Y)=(1,1))=P(XY=1)=p\times q=P(X=1)P(Y=1).$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3149','imagecorrige3149',3149);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3149"></a><div class=inner id="innercorrige3149" style="display:none;">D'abord, on sait que si $X$ et $Y$ sont indépendantes, alors leur covariance est nulle (et ceci n'utilise pas le fait que $X$ et $Y$ suivent une loi de Bernoulli). Réciproquement, on suppose que la covariance de $X$ et de $Y$ est nulle. Notons $p$ le paramètre de $X$ et $q$ le paramètre de $Y$, de sorte que $E(X)=p$ et $E(Y)=q$. Remarquons que $XY$ ne prend que les valeurs $0$ et $1$, de sorte que $XY$ suit aussi une loi de Bernoulli. De plus, puisque $E(XY)=E(X)E(Y)$, $XY$ a pour paramètre $pq$. Autrement dit, on a prouvé que 
+$$P((X,Y)=(1,1))=P(XY=1)=p\times q=P(X=1)P(Y=1).$$
+On en déduit alors les trois autres résultats voulus. En effet, on a 
+\begin{align*}
+P((X,Y)=(1,0))&=P_{X=1}(Y=0)P(X=1)\\
+&=(1-P_{X=1}(Y=1))P(X=1)\\
+&=(1-q)p\\
+&=P(X=1)P(Y=0)
+\end{align*}
+et par un raisonnement symétrique,
+$$P((X,Y)=(0,1))=P(X=0)P(Y=1).$$
+Finalement, on a aussi
+\begin{align*}
+P((X,Y)=(0,0))&=1-P((X,Y)=(1,0))-P((X,Y)=(0,1))-P((X,Y)=(1,1))\\
+&=1-(1-q)p-(1-p)q-pq\\
+&=1-p-q+pq\\
+&=(1-p)(1-q)\\
+&=P(X=0)P(Y=0).
+\end{align*}
+Ainsi, $X$ et $Y$ sont bien deux variables aléatoires indépendantes.</div></div></div>
+
+<div class=titrepartie>Fonction génératrice</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2029"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2029"),	max:5, rating:1.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2029,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand a-t-on une loi discrète infinie? <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2029.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2029,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2029','imageenonce2029');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2029"></a><div class=inner id="innerenonce2029">Déterminer une condition nécessaire et suffisante pour que les réels $a$ et $k$ sont tels que la suite $(p_n)$ définie, pour $n\geq 0$, par $p_n=\left(\frac a{a+1}\right)^n k$ soit la loi de probabilité d'une variable aléatoire à valeurs dans $\mathbb N$. Donner alors la fonction génératrice d'une telle variable aléatoire.</div></div><div class=indication><a href="javascript:showAll('innerindication2029','imageindication2029');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2029"></a><div class=inner id="innerindication2029" style="display:none;">Que doit valoir $\sum_{n=0}^{+\infty}p_n$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2029','imagecorrige2029',2029);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2029"></a><div class=inner id="innercorrige2029" style="display:none;">Il faut et il suffit que $p_n\geq 0$ pour tout entier $n$ et que $\sum_{n=0}^{+\infty}p_n=1$. Implicitement, on remarque qu'il faut avoir $a\neq -1$, sinon la suite $(p_n)$ n'est pas définie. 
+On remarque d'abord que l'on ne peut pas avoir $k=0$, sinon $p_n=0$ pour tout $n\geq 0$ et la deuxième condition ne peut pas être satisfaite. Le cas $a=0$ entraîne $k=1$ (dans ce cas, seul $p_0$ est non nul, avec la convention $0^0=1$). Si $a\neq 0$, la première condition appliquée pour $n=2$ impose $k&gt;0$.
+De plus, pour que la série $\sum_n p_n$ converge, on doit avoir 
+\begin{align*}
+\left|\frac{a}{a+1}\right|&lt;1&\iff \left|\frac1{a+1}-1\right|&lt;1\\
+&\iff -1&lt;\frac1{a+1}-1&lt;1\\
+&\iff 0&lt;\frac{1}{a+1}&lt;2\\
+&\iff a+1&gt;\frac 12\\
+&\iff a&gt;-\frac 12.
+\end{align*}
+Mais alors, comme la série converge, on sait que 
+$$\sum_{n=0}^{+\infty}p_n=\frac{k}{1-\frac a{a+1}}=k(a+1)$$
+et donc on a $k=\frac1{a+1}$. Finalement, puisque $k&gt;0$ et $p_1&gt;0$, on doit donc avoir $\frac{a}{a+1}&gt;0$ ce qui implique $a&gt;0$ puisqu'on sait déjà que $a+1&gt;0$.<br>
+
+Réciproquement, si $a=0$ et $k=1$, ou $a&gt;0$ et $k=\frac{1}{a+1}$, on vérifie facilement que les deux propriétés précédents sont vérifiées et donc que $(p_n)$ est une distribution de probabilité. La fonction génératrice est alors donnée par
+$$G(t)=\sum_{n\geq 0}p_n t^n=\frac{k}{1-\frac{at}{a+1}}=\frac1{a+1-at}.$$
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2030"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2030"),	max:5, rating:2.3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2030,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme de deux lois de Poisson <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2030.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2030,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2030','imageenonce2030');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2030"></a><div class=inner id="innerenonce2030">Soit $X$ et $Y$ deux variables aléatoires indépendantes suivant des lois de Poisson de paramètre respectif $\lambda$ et $\mu$. Démontrer, à l'aide des fonctions génératrices, que $Z=X+Y$, suit une loi de Poisson de paramètre $\lambda+\mu$.</div></div><div class=indication><a href="javascript:showAll('innerindication2030','imageindication2030');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2030"></a><div class=inner id="innerindication2030" style="display:none;">Faire le produit de Cauchy des deux séries.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2030','imagecorrige2030',2030);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2030"></a><div class=inner id="innercorrige2030" style="display:none;">Notons $\sum_{n\geq 0}a_n t^n$, $\sum_{n\geq 0}b_n t^n$ et $\sum_{n\geq 0}c_n t^n$ les fonctions génératrices respectives de $X$, $Y$ et $Z$. On a donc 
+$$a_n=\frac{e^{-\lambda}\lambda^n}{n!}\textrm{ et }b_n=\frac{e^{-\mu}\mu^n}{n!}.$$
+La série génératrice de $Z$ est obtenue en effectuant le produit de Cauchy de ces deux séries. On a donc
+\begin{eqnarray*}
+c_n&=&\sum_{k=0}^n a_k b_{n-k}\\
+&=&e^{-(\lambda+\mu)}\sum_{k=0}^n \frac{\lambda^k \mu^{n-k}}{k! (n-k)!}\\
+&=&\frac{e^{-(\lambda+\mu)}}{n!}\sum_{k=0}^n \binom nk \lambda^k \mu^{n-k}\\
+&=&\frac{e^{-(\lambda+\mu)}(\lambda+\mu)^n}{n!}.
+\end{eqnarray*}
+On reconnait bien la fonction génératrice d'une loi de Poisson de paramètre $\lambda+\mu$. Comme la fonction génératrice caractérise la loi d'une variable aléatoire, $Z$ suit bien une loi de Poisson de paramètre $\lambda+\mu$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3499"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3499"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3499,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi d'une somme par la fonction génératrice (d'après INP) <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3499.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3499,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3499','imageenonce3499');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3499"></a><div class=inner id="innerenonce3499">Un sac contient quatre boules indiscernables au toucher : une boule numérotée 0, deux boules numérotées 1 et une boule numérotée 2. Soit $n\in\mathbb N^*.$ On effectue $n$ tirages successifs, avec remise, d’une boule dans ce sac.
+On note $S_n$ la somme des numéros tirés. Déterminer la fonction génératrice $G_{S_n}$ de $S_n$, puis en déduire la loi de $S_n.$</div></div><div class=indication><a href="javascript:showAll('innerindication3499','imageindication3499');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3499"></a><div class=inner id="innerindication3499" style="display:none;">Introduire $X_k$ la variable aléatoire égale au numéro tiré lors du $k$-ème tirage. Déterminer la loi de $X_k$, sa fonction génératrice, puis en déduire la fonction génératrice de $X_n.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3499','imagecorrige3499',3499);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3499"></a><div class=inner id="innercorrige3499" style="display:none;">Pour $k\in\{1,\dots,n\},$ notons $X_k$ la variable aléatoire égale au numéro tiré lors du $k$-ème tirage. Alors $X_k$ prend ses valeurs dans $\{0,1,2\}$ et 
+\begin{align*}
+P(X_k=0)&=1/4\\
+P(X_k=1)&=1/2\\
+P(X_k=2)&=1/4.
+\end{align*}
+On en déduit que la fonction génératrice de $X_k$ est définie, pour $t\in]-1,1[,$ par 
+$$G_{X_k}(t)=\frac 14+\frac 12t+\frac14t^2=\frac{1}4(1+t)^2.$$
+De plus, on sait que $S_n=X_1+\cdots+X_n$ et que les variables aléatoires $X_k,$ $k=1,\dots,n$ sont indépendantes. On en déduit que 
+\begin{align*}
+G_{S_n}(t)&=\prod_{k=1}^n G_{X_k}(t)\\
+&=\prod_{k=1}^n \frac 14 (1+t)^2\\
+&=\frac{1}{4^n}(1+t)^{2n}\\
+&=\sum_{k=0}^{2n}\frac 1{4^n}\binom{2n}k t^k
+\end{align*}
+D'autre part, on sait que 
+$$G_{S_n}(t)=\sum_{k=0}^{+\infty}P(S_n=k)t^k.$$
+Par unicité du développement en série entière, on trouve que, pour $k\in\{0,\dots,2n\},$ 
+$$P(S_n=k)=\binom{2n}k \frac1{4^{n}}=\binom{2n}k \frac1{2^k}\frac{1}{2^{2n-k}}.$$
+Puisque $S_n$ est en outre à valeurs dans $\{0,\dots,2n\},$ on vient de démontrer que $S_n$ suit une loi binomiale de paramètres $2n$ et $1/2$.
+On aurait en réalité pu conclure avec un théorème du cours si on avait remarqué dès le départ que chaque $X_k$ suit une loi binomiale de paramètre $2$ et $1/2$.
+ </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3560"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3560"),	max:5, rating:3.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3560,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre de séries <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3560.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3560,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3560','imageenonce3560');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3560"></a><div class=inner id="innerenonce3560">On considère un espace probabilisé $(\Omega, \mathcal A, P)$ modélisant une succession infinie de lancers indépendants d’une pièce équilibrée (c’est-à-dire donnant pile avec la probabilité $1/2$ et face avec la probabilité $1/2$). Pour tout entier $k\in\mathbb N^* ,$ on désigne par  $P_k$ l’évènement ``le $k$-ième lancer de la pièce donne pile''
+et par $F_k$ l’évènement ``le $k$-ième lancer de la pièce donne face''.
+On appelle série une succession de lancers amenant le même côté de la pièce. La série n°1 commence au premier lancer et se poursuit jusqu’à ce qu’un des lancers suivants donne un résultat différent du premier lancer. De même, la série n°2 commence au lancer suivant la fin la série n°1 et se termine au lancer précédant un changement de côté. On définit de même les séries suivantes. Par exemple :
+$$\underbrace{P_1\cap P_2}_{\textrm{série 1}}\cap \underbrace{F_3}_{\textrm{série 2}}\cap \underbrace{P_4\cap P_5\cap P_6\cap P_7}_{\textrm{série 3}}\cap F_8\cap \cdots.$$
+Pour tout entier $n\in\mathbb N^*,$ on note $N_n$ le nombre de séries apparues lors des $n$ premiers lancers. Dans l'exemple précédent, on a 
+$$N_1=N_2=1,\ N_3=2,\ N_4=N_5=N_6=N_7=3,\ N_8=4,\dots.$$
+Jusqu'à la fin de l'exercice, on fixe un entier $n\in\mathbb N^*.$
+<ol class="enumeratechiffre">
+<li> Déterminer les lois de $N_1$ et de $N_2.$
+<li> Quel est l'ensemble des valeurs prises par la variable aléatoire $N_n$ ?
+<li> Soit $k\in\{1,\dots,n+1\}$. Justifier que l'on a l'égalité d'événements 
+$$(N_{n+1}=k)\cap P_n\cap P_{n+1}=(N_n=k)\cap P_n\cap P_{n+1},$$
+puis en déduire que 
+$$P\big((N_{n+1}=k)\cap P_n\cap P_{n+1}\big)=\frac 12 P\big((N_n=k)\cap P_n\big).$$
+Dans la suite, on admet que 
+\begin{align*}
+P\big((N_{n+1}=k)\cap P_n\cap F_{n+1}\big)&=\frac 12 P\big((N_ {n}=k-1)\cap P_n\big)\\
+P\big((N_{n+1}=k)\cap F_n\cap P_{n+1}\big)&=\frac 12 P\big((N_{n}=k-1)\cap F_n\big)\\
+P\big((N_{n+1}=k)\cap F_n\cap F_{n+1}\big)&=\frac 12 P\big((N_n=k)\cap F_n\big).
+\end{align*}
+<li> En utilisant la formule des probabilités totales avec le système complet d'événements 
+$$(P_n\cap P_{n+1},F_n\cap F_{n+1},F_n\cap P_{n+1},P_n\cap F_{n+1}),$$
+démontrer que l'on a 
+$$P(N_{n+1}=k)=\frac 12 P(N_n=k)+\frac 12 P(N_n=k-1).$$
+<li> Pour tout $m\in\mathbb N^*,$ on note $G_m:\mathbb R\to\mathbb R$ la fonction génératrice de $N_m,$ définie pour $x\in\mathbb R$ par 
+$$G_m(x)=\sum_{k=1}^m P(N_m=k)x^k.$$
+En particulier, on vérifie que, pour tout $x\in\mathbb R,$ $G_1(x)=x.$ Déduire de la question précédente que, pour tout $x\in\mathbb R,$ on a la relation
+$$G_{n+1}(x)=\frac{1+x}2 G_n(x).$$
+<li> Déterminer une expression explicite de $G_n(x)$ pour tout $n\in\mathbb N^*$ et tout $x\in\mathbb R.$
+<li> Quelle est la loi de $N_n$ ?
+<li> Quelle est l'espérance de $N_n$ ?
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3560','imageindication3560');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3560"></a><div class=inner id="innerindication3560" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li> A quelle condition on a $N_{n+1}=N_n$ si le $n$-ème tirage est un pile ?
+<li>
+<li> Faire un changement d'indices dans la somme.
+<li>
+<li>
+<li> Quel est le lien entre $E(N_n)$ et $G_n$ ? Utiliser la formule factorisée pour $G_n$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3560','imagecorrige3560',3560);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3560"></a><div class=inner id="innercorrige3560" style="display:none;"><ol class="enumeratechiffre">
+<li> $N_1$ est toujours égal à $1,$ et donc $P(N_1=1)=1.$ La variable aléatoire $N_2$ prend les valeurs $1$ et $2$. On a 
+$$(N_2=1)=(P_1\cap P_2)\cup(F_1\cap F_2)$$
+et 
+$$(N_2=2)=(P_1\cap F_2)\cup(F_1\cap P_2).$$
+Par indépendance des lancers et parce que, dans chaque cas, les événements dont on fait la réunion sont disjoints, on a 
+$$P(N_2=1)=P(N_2=2)=\frac 12.$$
+<li> La variable aléatoire $N_n$ prend ses valeurs dans $\{1,\dots,n\}$.
+<li> Si l'événement $(N_n=k)\cap P_n$ est réalisé, cela signifie que les $n$ premiers tirages ont amené $k$ séries et que le dernier des $n$ tirages est un pile. L'événement $N_{n+1}=k$ est alors réalisé si et seulement le $n+1$-ème tirage est un pile, c'est-à-dire si et seulement $P_{n+1}$ est réalisé.
+Ceci prouve que 
+$$(N_{n+1}=k)\cap P_n\cap P_{n+1}=(N_n=k)\cap P_n\cap P_{n+1}.$$
+D'autre part, l'événement $P_{n+1},$ qui ne fait intervenir que le résultat du $n+1$-ème tirage, est indépendant de l'événement $(N_n=k)\cap P_n,$ qui ne fait intervenir que les résultats des $n$ premiers tirages. On en déduit que 
+$$P\big((N_n=k)\cap P_n\cap P_{n+1}\big)=P\big((N_n=k)\cap P_n\big)\times P(P_{n+1})=\frac 12 P\big((N_n=k)\cap P_n\big).$$
+<li> En utilisant la formule des probabilités totales avec le système complet d'événements donné par l'énoncé, et d'après le résultat de la question précédente, on a 
+\begin{align*}
+P(N_{n+1}=k)&=\frac 12 P\big((N_n=k)\cap P_n\big)+\frac12 P\big((N_ {n}=k-1)\cap P_n\big)+\frac 12 P\big((N_{n}=k-1)\cap F_n\big)\\
+&\quad\quad +\frac 12 P\big((N_n=k)\cap F_n\big).
+\end{align*}
+Or, $(F_n,P_n)$ est lui aussi un système complet d'événements, et on a 
+\begin{align*}
+P(N_n=k)&=P\big((N_n=k)\cap P_n\big)+P\big((N_n=k)\cap F_n\big)\\
+P(N_{n-1}=k)&=P\big((N_{n-1}=k)\cap P_n\big)+P\big((N_{n-1}=k)\cap F_n\big)
+\end{align*}
+ce qui donne le résultat demandé.
+<li> On a
+\begin{align*}
+G_{n+1}(x)&=\sum_{k=1}^{n+1} P(N_{n+1}=k)x^k\\
+&=\frac 12\sum_{k=1}^{n+1}P(N_n=k)x^k+\frac12 \sum_{k=1}^{n+1}P(N_n=k-1)x^k\\
+&=\frac 12\sum_{k=1}^n P(N_n=k)x^k+\frac 12\sum_{k=1}^n P(N_n=k)x^{k+1}\\
+&=\frac{1+x}2G_n(x).
+\end{align*}
+<li> Par une récurrence immédiate, on trouve que 
+$$G_n(x)=x\left(\frac{1+x}2\right)^{n-1}.$$
+En développant par la formule du binôme, on trouve 
+\begin{align*}
+G_n&=\sum_{k=0}^{n-1} \frac1{2^{n-1}}\binom{n-1}k x^k\\
+&=\sum_{k=1}^n \frac1{2^{n-1}}\binom{n-1}{k-1}x^k.
+\end{align*}
+<li> La fonction génératrice caractérisant la loi, on en déduit que, 
+pour tout $k\in\{1,\dots,n\},$ on a 
+$$P(N_n=k)=\frac 1{2^{n-1}}\binom{n-1}{k-1}.$$
+<li> La fonction génératrice étant un polynôme, elle est dérivable sur $\mathbb R.$ Par les propriétés des fonctions génératrices, on sait que 
+$$E(X)=G_n'(1).$$
+Bien sûr, on calcule $G_n'(1)$ en utilisant la formule factorisée pour $G_n,$ et on trouve 
+$$G_n'(x)=\left(\frac{1+x}2\right)^{n-1}+\frac{n-1}2\times x\left(\frac{1+x}2\right)^{n-2},$$
+soit 
+$$E(G_n)=G_n'(1)=1+\frac{n-1}2=\frac{n+1}2$$
+(remarquons que cette valeur est compatible avec les lois de $G_1$ et de $G_2$ données plus haut).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3493"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3493"),	max:5, rating:3.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3493,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme aléatoire de variables aléatoires <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3493.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3493,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3493','imageenonce3493');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3493"></a><div class=inner id="innerenonce3493">Soit $(X_n)_{n\geq 1}$ une suite de variables aléatoires discrètes à valeurs dans $\mathbb N,$ définies sur le même espace probabilisé $(\Omega,\mathcal T,P),$ de même loi, et soit $N$ une variable aléatoire définie sur $(\Omega,\mathcal T,P)$ à valeurs dans $\mathbb N$. On considère que la suite $(Y_n)_{n\geq 0}$ définie par $Y_0=N$ et $Y_n=X_n$ si $n\geq 1$ est une suite de variables aléatoires indépendantes. On suppose que la variable aléatoire $S$ définie sur $\Omega$ par 
+$$S(\omega)=\sum_{k=1}^{N(\omega)}X_k(\omega).$$
+<ol class="enumeratechiffre">
+<li> Montrer que $G_S=G_N\circ G_{X_1}$ sur $[0,1].$
+<li> En déduire que si $N$ et $X_1$ sont d'espérance finie, alors $S$ est d'espérance finie et $E(S)=E(N)E(X_1).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3493','imageindication3493');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3493"></a><div class=inner id="innerindication3493" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3493','imagecorrige3493',3493);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3493"></a><div class=inner id="innercorrige3493" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $t\in[0,1]$. Alors par définition de la fonction génératrice,
+$$G_S(t)=\sum_{k=0}^{+\infty}P(S=k)t^k.$$
+Or, d'après la formule des probabilités totales, 
+la suite d'événements $(N=n)_{n\in\mathbb N}$ formant un système complet d'événements, on a 
+$$G_S(t)=\sum_{k=0}^{+\infty}\sum_{n=0}^{+\infty}P(S=k\cap N=n)t^k.$$
+Le terme général étant positif, on peut permuter les sommes et on obtient, en utilisant de plus l'indépendance entre la suite $(X_n)$ et $N$ : 
+\begin{align*}
+G_S(t)&=\sum_{n=0}^{+\infty}\sum_{k=0}^{+\infty}P(X_1+\cdots+X_n=k\cap N=n)t^k\\
+&=\sum_{n=0}^{+\infty}\left(\sum_{k=0}^{+\infty}P(X_1+\cdots+X_n=k)t^k\right)P(N=n).
+\end{align*}
+Puisque la fonction génératrice d'une somme de variables aléatoires indépendantes est le produit des fonctions génératrices, et puisque les 
+$X_n$ ont la même loi, on trouve
+$$\sum_{k=0}^{+\infty}P(X_1+\cdots+X_n=k)t^k=(G_{X_1}(t))^n.$$
+On obtient finalement 
+$$G_S(t)=\sum_{n=0}^{+\infty}P(N=n)(G_{X_1}(t))^n = G_N(G_{X_1}(t)).$$
+<li> Si $N$ et $X_1$ sont d'espérance finie, alors $G_N$ et $G_{X_1}$ sont dérivables en $1.$ Comme $G_{X_1}(1)=1,$ la composée $G_S$ est dérivable en $1$ et
+$$G_S'(1)=G_{X_1}'(1)G_N'(G_X(1))=E(X_1)G_N'(1)=E(X_1)E(N).$$
+On en déduit que $S$ admet une espérance donnée par 
+$$E(S)=E(X_1)E(N).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2025"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2025"),	max:5, rating:3.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2025,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La somme de deux dés truqués ne suit jamais la loi uniforme <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2025.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2025,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2025','imageenonce2025');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2025"></a><div class=inner id="innerenonce2025"><ol class="enumeratechiffre">
+<li> Démontrer que toutes les racines (complexes) non-nulles du polynôme $P(X)=X^2+X^3+\dots+X^{12}$ sont simples.
+<li> Peut-on truquer un dé de sorte que, en le lançant deux fois de suite, la somme des numéros obtenus suive la loi uniforme sur $\{2,\dots,12\}$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2025','imageindication2025');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2025"></a><div class=inner id="innerindication2025" style="display:none;"><ol class="enumeratechiffre">
+<li> Factoriser par $X^2$....
+<li> Calculer la fonction génératrice de la somme et utiliser la première question.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2025','imagecorrige2025',2025);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2025"></a><div class=inner id="innercorrige2025" style="display:none;"><ol class="enumeratechiffre">
+<li> Factorisons $P$ par $X^2$. On trouve
+$$P(X)=X^2\times(1+X+\dots+X^{10}).$$
+Les racines de $1+X+\dots+X^{10}$ sont les racines $11$-ièmes de l'unité, excepté $1$. Elles sont donc toutes simples.
+<li> Notons $p_i$ la probabilité que le lancer de dé donne le numéro $i$, $i=1,\dots 6$. Notons $X_1$ le résultat du premier lancer, et $X_2$ le résultat du second lancer. Les fonctions génératrices de $X_1$ et $X_2$ sont égales et valent 
+$$f(x)=\sum_{i=1}^6 p_i x^i.$$
+Puisque $X_1$ et $X_2$ sont indépendantes, la fonction génératrice de leur somme est 
+$$G_S(x)=\big( f(x)\big)^2.$$
+Ainsi, $G_S$ est un polynôme dont toutes les racines (sur $\mathbb C$) sont de multiplicité paire (donc au moins égale à 2). Or, si $S$ suivait la loi uniforme sur $\{2,\dots,12\}$, sa fonction génératrice serait 
+$$G_U(x)=\frac{1}{11}(x^2+\dots+x^{12}).$$
+Les racines de $G_U$, autres que $0$, sont de multiplicité au plus égales à $1$. On a donc une contradiction.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2038"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2038"),	max:5, rating:2.9411764705882, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2038,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction génératrice <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2038.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2038,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2038','imageenonce2038');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2038"></a><div class=inner id="innerenonce2038">Soit $X,Y$ deux variables aléatoires à valeurs dans $\mathbb N$. On appelle fonction génératrice de $X$
+la série entière 
+$$G_X(t)=\sum_{n=0}^{+\infty}P(X=n) t^n.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que le rayon de convergence de $G_X$ est supérieur ou égal à $1$.
+<li> Démontrer que $G_X$ définit une fonction continue sur $[-1,1]$ et $C^\infty$ sur $]-1,1[$.
+<li> Démontrer que si $G_X=G_Y$ sur $]-1,1[$,
+alors $X$ et $Y$ ont même loi.
+<li> Calculer $G_X$ lorsque $X$ suit une loi de Bernoulli de paramètre $p$, puis lorsque $X$ suit une loi binomiale de paramètres
+$(n,p)$.
+<li> On suppose que $X$ et $Y$ sont indépendantes. Démontrer que, pour tout $t\in]-1,1[$, on a 
+$$G_{X+Y}(t)=G_X(t)G_Y(t).$$
+<li> Soit $X$ une variable aléatoire suivant une loi binomiale de paramètres $(n,p)$, et $Y$ une variable aléatoire suivant
+une loi binomiale de paramètres $(m,p)$. On suppose que $X$ et $Y$ sont indépendantes. Quelle est la loi de $X+Y$? Retrouver ce résultat autrement que par les fonctions génératrices.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2038','imageindication2038');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2038"></a><div class=inner id="innerindication2038" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer la convergence de la série si $|t|&lt;1$.
+<li> Un des résultats est du cours. Pour l'autre, il suffit de démontrer la convergence normale de la série sur $[-1,1]$.
+<li> Deux séries entières qui sont égales au voisinage de 0 ont tous leurs coefficients égaux.
+alors $X$ et $Y$ ont même loi.
+<li> Pour la loi binomiale, pensez à la formule du binôme.
+<li> $P(X+Y=n)=\sum_{k=0}^n P(X=k)P(Y=n-k)$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2038','imagecorrige2038',2038);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2038"></a><div class=inner id="innercorrige2038" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de démontrer que la série $G_X(t)$ converge pour tout $t\in ]-1,1[$. Mais, pour tout $n\in\mathbb N$, 
+$$|P(X=n)t^n|\leq |t|^n$$
+et la série $\sum_{n\geq 0}|t|^n$ converge. Par majoration, la série $\sum_{n\geq 0}P(X=n) t^n$ converge absolument, donc converge.
+<li> $G_X$ définit une fonction  $C^\infty$ sur $]-1,1[$ car c'est la somme d'une série entière de rayon de convergence supérieur ou égal à $1$. Pour démontrer que $G_X$ définit une fonction continue sur $[-1,1]$, il suffit de démontrer que la série $\sum_{n\geq 0}P(X=n)t^n$ converge normalement sur $[-1,1]$, puisque $t\mapsto P(X=n)t^n$ est continue sur $[-1,1]$. Mais, pour tout $t\in [-1,1]$ et tout $n\geq 0$,
+$$|P(X=n)t^n|\leq P(X=n)$$
+et le terme de droite de cette inégalité est le terme général d'une série numérique convergente (dont la somme vaut 1). On a donc bien prouvé la convergence normale. Remarquons que cette inégalité aurait aussi pu être utilisée à la première question.
+<li> Rappelons que si les sommes de deux séries entières sont égales sur un intervalle ouvert contenant 0, alors tous les coefficients sont égaux. Ainsi, si $G_X=G_Y$ sur l'intervalle $]-1,1[$, on a pour tout $n\in\mathbb N$, $P(X=n)=P(Y=n)$. Puisque $X$ et $Y$ sont à valeurs dans $\mathbb N$, ceci signifie que $X$ et $Y$ ont la même loi.
+<li> Si $X$ suit une loi de Bernoulli de paramètre $p$, alors $G_X(t)=(1-p)+pt$. Si $X$ suit une loi binomiale de paramètres $n$ et $p$, alors 
+$$G_X(t)=\sum_{k=0}^n \binom nk p^k(1-p)^{n-k}t^k=\big((1-p)+pt)^n.$$
+<li> Puisque $X$ et $Y$ sont à valeurs dans $\mathbb N$, pour tout $n\in\mathbb N$, on a 
+$$(X+Y=n)=\bigcup_{k=0}^n (X=k)\cap (Y=n-k).$$
+Par indépendance de $X$ et de $Y$, on a donc
+$$P(X+Y=n)=\sum_{k=0}^n P(X=k)P(Y=n-k).$$
+Reconnaissant le produit de Cauchy de deux séries entières, on conclut que
+$$\sum_{n=0}^{+\infty}P(X+Y=n)=\sum_{n=0}^{+\infty} \sum_{k=0}^nP(X=k)t^k P(Y=n-k)t^{n-k}=G_X(t)G_Y(t).$$
+<li> On a 
+$$G_{X+Y}(t)=G_X(t)G_Y(t)=\big(p+(1-p)t)^{n+m}.$$
+Ainsi, $X+Y$ suit une loi binomiale de paramètres $n+m$ et $p$. On pouvait aussi dire que, puisque $X$ est la somme de $n$ variables aléatoires de Bernoulli indépendantes de paramètre $p$ et que $Y$ est la somme de $m$ variables aléatoires de Bernoulli indépendantes de paramètre $p$, et puisque $X$ et $Y$ sont indépendantes, $X+Y$ est la somme de $n+m$ variables aléatoires de Bernoulli indépendantes de paramètres $p$. Ainsi, $X+Y$ suit une loi binomiale de paramètre $(n+m,p)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3503"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3503"),	max:5, rating:4.6875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3503,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Variables aléatoires décomposables (d'après Oral ENS) <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3503.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3503,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3503','imageenonce3503');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3503"></a><div class=inner id="innerenonce3503">Une variable aléatoire discrète $X$ à valeurs dans $\mathbb N$ est dite décomposable s'il existe deux variables aléatoires discrètes à valeurs dans $\mathbb N$ indépendantes $X_1$ et $X_2,$ non presque sûrement constantes, telles que $X=X_1+X_2.$
+<ol class="enumeratechiffre">
+<li> Une variable aléatoire de Bernoulli est-elle décomposable ? Une variable aléatoire binomiale est-elle décomposable ?
+<li> Montrer que le polynôme $T^4+2T+1$ ne peut se factoriser comme produit de deux polynômes de degré $2$ à coefficients dans $\mathbb R_+$. En déduire une variable aléatoire réelle discrète  décomposable $X$ telle que $X^2$ ne soit pas décomposable.
+<li> Soit $n\geq 3$ un entier qui n'est pas premier et soit $X$ une variable aléatoire suivant la loi uniforme sur $\{0,\dots,n-1\}$. Démontrer que $X$ est décomposable.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3503','imageindication3503');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3503"></a><div class=inner id="innerindication3503" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser la fonction génératrice. On pourra penser à une loi binomiale facile.
+<li> &Eacute;crire $n=mk$ et considérer la division euclidienne par $k.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3503','imagecorrige3503',3503);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3503"></a><div class=inner id="innercorrige3503" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $X$ une variable aléatoire de Bernoulli. Si elle était décomposable et s'écrivait $X_1+X_2$, alors soit $a&lt;b$ et $c&lt;d$ telles que $P(X_1=a)\neq 0,$ 
+$P(X_1=b)\neq 0,$ $P(X_2=c)\neq 0$ et $P(X_2=d)\neq 0$ (les variables aléatoires $X_1$ et $X_2$ ne peuvent pas être presque sûrement constantes). Alors 
+$P(X=a+c)&gt;0,$ $P(X=a+d)&gt;0$ et $P(X=b+d)&gt;0$ et $a+c,$ $a+d$ et $b+d$ sont 3 réels différents. Ceci contredit que $X$ ne prend que deux valeurs.<br>
+Si $X$ suit une loi binomiale $\mathcal B(n,p)$ avec $n\geq 2$, alors $X$ est décomposable : elle s'écrit $X=X_1+X_2$ où $X_1$ et $X_2$ sont deux variables aléatoires indépendantes suivant des lois binomiales respectives $\mathcal B(n_1,p)$ et $\mathcal B(n_2,p)$ avec $n=n_1+n_2$ (et $n_1,n_2\geq 1$).
+<li> Si le polynôme $T^4+2T+1$ se factorise en $(T^2+aT+b)(T^2+cT+d)$ avec $a,b,c,d\geq 0$, alors on doit avoir $0=a+c$ (coefficient devant $T^3$) et donc $a=c=0$. Le coefficient devant $T^2$ est alors $b+d$ et doit être nul, d'où $b=d=0$. Avec un raisonnement identique, on prouve que $T^4+2T+1$ ne peut pas se factoriser un produit d'un polynôme de degré $3$ et d'un polynôme de degré $1$ à coefficients dans $\mathbb R_+$ (ou alors on peut remarquer que $T^4+2T+1$ n'a pas de racines dans $\mathbb R).$ <br>
+Considérons alors une variable aléatoire $X$ qui suit une loi binomiale $\mathcal B(2,1)$. Elle est décomposable. De plus, $P(X^2=4)=1/4,$ 
+$P(X^2=1)=1/2$ et $P(X^2=0)=1/4.$ Ainsi, la fonction génératrice de $X^2$ est
+$$G_{X^2}(t)=\frac14 (t^4+2t+1).$$
+Si $X^2$ était décomposable et s'écrivant $X^2=Y_1+Y_2,$ alors on aurait
+$$G_{X^2}(t)=G_{Y_1}(t)G_{Y_2}(t)$$
+où $G_{Y_1}$ et $G_{Y_2}$ sont des polynômes à coefficients dans $\mathbb R_+.$ C'est impossible d'après la première partie de la question. 
+<li> &Eacute;crivons $n=km$ avec $1&lt;k,m&lt;n.$ Considérons $X_1$ et $X_2$ deux variables aléatoires indépendantes telles que $X_1$ suit une loi uniforme sur $\{0,k,\dots,(m-1)k\}$ et $X_2$ suit une loi uniforme sur $\{0,1,\dots,k-1\}$ et posons $Y=X_1+X_2.$ Alors $Y$ prend toutes les valeurs du type $\ell k+j,$ 
+avec $0\leq \ell\leq m-1$ et $0\leq j\leq k-1.$ Mais par la division euclidienne, tout élément de $\{0,\dots,n-1\}$ s'écrit justement de façon unique sous cette forme. Et donc $Y$ prend ses valeurs dans $\{0,\dots,n-1\}.$ De plus, 
+$$P(Y=\ell k+j)=P(X_1=\ell k)\times P(X_2=j)=\frac{1}m\times \frac 1k=\frac 1n.$$
+Ainsi, $Y$ suit bien une loi uniforme sur $\{0,\dots,n-1\}$ et $X=X_1+X_2$ est décomposable.<br>
+On peut démontrer la réciproque de cette propriété : si $n\geq 3$ est premier et $X$ suit la loi uniforme sur $\{0,\dots,n-1\}$, alors $X$ n'est pas décomposable. Mais c'est difficile - sauf si vous trouvez une solution facile que je serais ravi de lire !
+</ol></div></div></div>
+
+<div class=titrepartie>Fonction caractéristique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2043"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2043"),	max:5, rating:2.9230769230769, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2043,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Uniforme continuité de la transformée de Fourier d'une mesure <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2043.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2043,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2043','imageenonce2043');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2043"></a><div class=inner id="innerenonce2043">Soit $\mu$ une mesure de probabilité sur $\mathbb R$. Montrer que
+sa transformée de Fourier est uniformément continue.</div></div><div class=indication><a href="javascript:showAll('innerindication2043','imageindication2043');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2043"></a><div class=inner id="innerindication2043" style="display:none;">Couper l'intégrale en deux parties. Une partie où
+$\mu$ a un petit poids, une partie contrôlée car $t-s$ est petit...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2043','imagecorrige2043',2043);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2043"></a><div class=inner id="innercorrige2043" style="display:none;">Soient $\veps&gt;0$ et $t,s\in\mathbb R$. On a 
+$$|\hat{\mu}(t)-\hat{\mu}(s)|\leq\int_{\mathbb R}|e^{itx}-e^{isx}|d\mu(x).$$
+Soit $A&gt;0$ tel que $\mu(\mathbb R\backslash[-A,A])\leq\veps$. Alors, on découpe $\mathbb R$ en 
+$[-A,A]\cup(\mathbb R\backslash[-A,A])$. Majorant $|e^{itx}-e^{isx}|$ par 2 sur $\mathbb R\backslash[-A,A]$, on 
+trouve
+\begin{eqnarray*}
+ |\hat{\mu}(t)-\hat{\mu}(s)|&\leq&2\veps+\int_{-A}^A|e^{itx}-e^{isx}|d\mu(x)\\
+&\leq&2\veps+\int_{-A}^A|t-s||x|d\mu(x)\textrm{ par l'inégalité des accroissements finis}\\
+&\leq&2\veps+|t-s|A^2.
+\end{eqnarray*}
+On pose $\eta=\veps/A^2$. Si $|t-s|&lt;\eta$, alors 
+$$|\hat{\mu}(t)-\hat{\mu}(s)|&lt;\veps,$$
+ce qui prouve l'uniforme continuité de $\hat\mu$ sur $\mathbb R$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2044"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2044"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2044,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction caractéristique périodique <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2044.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2044,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2044','imageenonce2044');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2044"></a><div class=inner id="innerenonce2044">Soit $X$ une variable aléatoire. On souhaite démontrer que
+$\phi_X(1)=1$ si et seulement si $P_X(\mathbb R\backslash2\pi \mathbb Z)=0$.
+<ol class="enumeratechiffre">
+ <li> On suppose que $\phi_X(1)=1$. Démontrer que $\int_{\mathbb R}(1-\cos x)dP_X(x)=0$.
+En déduire que $P_X(\mathbb R\backslash2\pi \mathbb Z)=0$.
+<li> Démontrer la réciproque.
+<li> Démontrer que ces deux conditions sont aussi équivalentes à $\phi_X$ est $1$-périodique.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2044','imageindication2044');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2044"></a><div class=inner id="innerindication2044" style="display:none;"><ol class="enumeratechiffre">
+<li> Séparer la fonction caractéristique en partie imaginaire et partie réelle.
+<li> &Eacute;crire la loi de $X$ à l'aide de sommes de masses de Dirac.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2044','imagecorrige2044',2044);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2044"></a><div class=inner id="innercorrige2044" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $1=\phi_X(1)=\int_{\mathbb R}\cos xdP_X(x)+i\int_{\mathbb R}\sin xdP_X(x)$,
+et donc $\int_{\mathbb R}\cos xdP_X(x)=1=\int_{\mathbb R}dP_X(x)$, ce qui prouve la première partie de
+l'assertion. De plus, la fonction $(1-\cos x)dP_X(x)$ est strictement positive sur
+$\mathbb R\backslash2\pi \mathbb Z$. Puisque son intégrale (par rapport à la mesure $P_X$)
+est nulle, c'est bien que $P_X(\mathbb R\backslash2\pi \mathbb Z)=0$. On aurait aussi pu remarquer
+que, puisque $\phi_X(1)=1$, on a 
+$$\int_{\mathbb R}e^{itx}dP_X(x)=\int_{\mathbb R}|e^{itx}|dP_X(x)$$
+ce qui entraine $|e^{itx}|=1$ $P_X$-presque sûrement.
+<li> La condition entraîne que 
+$$P_X=\sum_{k\in\mathbb Z}a_k\delta_{2\pi k},$$
+où $(a_k)$ est une suite de réels de $[0,1]$ avec $\sum_k a_k=1$. 
+On en déduit que 
+$$\phi_X(t)=\sum_{k\in\mathbb Z}a_k \int_{\mathbb R} e^{itx}d\delta_{2\pi k}(x)=\sum_{k\in\mathbb Z}a_k e^{i2\pi k t}.$$
+En particulier, 
+$$\phi_X(1)=\sum_{k\in\mathbb Z}a_k =1.$$
+<li> La démonstration précédente prouve aussi que si $P_X(\mathbb R\backslash2\pi \mathbb Z)=0$, alors $\phi_X$ est $1$-périodique.
+Réciproquement, si $\phi_X$ est $1$-périodique, alors $\phi_X(1)=\phi_X(0)=1$.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2045"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2045"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2045,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Stabilité de la loi par la somme <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2045.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2045,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2045','imageenonce2045');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2045"></a><div class=inner id="innerenonce2045">Soient $X,Y$ deux variables aléatoires réelles indépendantes de même loi.
+On suppose qu'elles possèdent un moment d'ordre 2 et on note $\sigma^2$ leur variance commune.
+On suppose de plus que $\frac{X+Y}{\sqrt 2}$ a même loi que $X$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $X$ est d'espérance nulle.
+<li> Donner un développement limité à l'ordre 2 de $\phi_X$.
+<li> Démontrer que 
+$$\forall n\geq 1,\ \forall t\in\mathbb R,\ \left[\phi_X\left(\frac{t}{2^{n/2}}\right)\right]^{2^n}=\phi_X(t).$$
+<li> En déduire que $X$ suit une loi normale dont on précisera les paramètres.
+<li> Retrouver ce résultat en appliquant le théorème limite central.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2045','imageindication2045');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2045"></a><div class=inner id="innerindication2045" style="display:none;"><ol class="enumeratechiffre">
+<li> Si deux variables ont même loi, elles ont même espérance.
+<li> $\phi_X$ est de classe $C^2$.
+<li> Supposer d'abord $n=2$, et utiliser la formule donnant la fonction caractéristique d'une somme de deux
+variables aléatoires indépendantes.
+<li> Introduire le développement limité dans le résultat précédent...
+<li> Quelle est la loi de $\frac{X_1+\dots+X_{2^n}}{2^{n/2}}$, où les $X_i$ sont des variables
+aléatoires réelles indépendantes et de même loi que $X$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2045','imagecorrige2045',2045);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2045"></a><div class=inner id="innercorrige2045" style="display:none;"><ol class="enumeratechiffre">
+<li> L'espérance de $(X+Y)/\sqrt 2$ doit être égale à l'espérance de $X$. Si on note $m$ cette valeur, on doit donc avoir
+$\sqrt 2 m=m$, ce qui donne $m=0$.
+<li> Puisque $X$ admet un moment d'ordre 2, $\phi_X$ est de classe $C^2$. Elle admet donc un développement limité à l'ordre 2 en 0 
+donné par 
+$$\phi_X(u)=\phi_X(0)+\frac{\phi_X'(0)}{1!}u+\frac{\phi_X''(0)}{2!}u^2+o(u^2).$$
+Or, $\phi_X(0)=1$, $\phi_X'(0)=iE(X)=0$ et $\phi_X''(0)=-E(X^2)=-\sigma^2$. On en déduit que 
+$$\phi_X(u)=1+\frac{-\sigma^2}2u^2+o(u^2).$$
+<li> On va d'abord prouver que, pour tout $t\in\mathbb R$, on a 
+$$\left[\phi_X\left(\frac{t}{\sqrt 2}\right)\right]^2=\phi_X(t).$$
+Une récurrence élémentaire aboutit ensuite au résultat. En effet, puisque $X$ et $Y$ sont indépendantes,
+$$\phi_X(t)=\phi_{(X+Y)/\sqrt 2}(t)=\phi_{X/\sqrt 2}(t)\phi_{Y/\sqrt 2}(t)=\left[\phi_{X/\sqrt 2}(t)\right]^2.$$
+Or, 
+$$\phi_{X/\sqrt 2}(t)=\int_{\Omega}e^{itX(\omega)/\sqrt 2}dP(\omega)=\phi_X(t/\sqrt 2).$$
+On en déduit le résultat.
+<li> Fixons $t\in\mathbb R$ et soit $n\geq 1$. Alors, en introduisant le développement limité
+dans l'expression précédente, on trouve :
+\begin{eqnarray*}
+ \phi_X(t)&=&\left(1+\frac{-\sigma^2}{2}\times \frac{t^2}{2^n}+o\left(\frac1{2^n}\right)\right)^{2^n}\\
+&=&\exp\left(2^n\ln\left(1+\frac{-\sigma^2}{2}\times \frac{t^2}{2^n}+o\left(\frac1{2^n}\right)\right)\right)\\
+&=&\exp\left(\frac{-\sigma^2t^2}2+o(1)\right).
+\end{eqnarray*}
+La quantité de gauche ne dépend pas de $n$, et si on fait tendre $n$ vers $+\infty$ on trouve
+$$\phi_X(t)=\exp\left(\frac{-\sigma^2t^2}2\right).$$
+On reconnait la fonction caractéristique d'une loi normale de paramètres $0$ et $\sigma^2$. La fonction caractéristique
+caractérisant la loi, on en déduit que $X\sim \mathcal N(0,\sigma^2)$.
+<li> Soit $(X_i)$ une suite de variables aléatoires réelles indépendantes et de même loi que $X$. Alors, on prouve
+aisément par récurrence que 
+$$S_n=\frac{X_1+\dots+X_{2^n}}{2^{n/2}}$$
+a même loi que $X$. Or, le théorème limite central garantit que $S_n$ converge en loi vers $\mathcal N(0,\sigma^2)$. 
+Donc $X$ a pour loi $\mathcal N(0,\sigma^2)$. 
+</ol></div></div></div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

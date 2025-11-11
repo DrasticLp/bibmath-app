@@ -1,0 +1,411 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Variables aléatoires : inégalités de Markov et de Tchebychev, estimation</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fproba.html">Exercices de dénombrement - probabilités - statistiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Variables aléatoires : inégalités de Markov et de Tchebychev, estimation</h1>
+<div class=titrepartie>Inégalités, estimation</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3088"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3088"),	max:5, rating:0.83333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3088,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Comparaison des inégalités de Markov et de Tchebychev <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3088.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3088,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3088','imageenonce3088');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3088"></a><div class=inner id="innerenonce3088">Le nombre de pièces sortant d’une usine en une journée est une variable aléatoire d’espérance 50.
+On veut estimer la probabilité que la production d'un jour donné dépasse 75 pièces.
+<ol class="enumeratechiffre">
+ <li> En utilisant l’inégalité de Markov, quelle estimation obtient-on sur cette probabilité?
+ <li> Que peut-on dire de plus sur cette probabilité si on sait que la variance de la production quotidienne est $25$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3088','imageindication3088');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3088"></a><div class=inner id="innerindication3088" style="display:none;"><ol class="enumeratechiffre">
+ <li> 
+ <li> Remarquer que $(X\geq 75)\subset (|X-50|\geq 25)$ et utiliser l'inégalité de Tchebychev.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3088','imagecorrige3088',3088);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3088"></a><div class=inner id="innercorrige3088" style="display:none;"><ol class="enumeratechiffre">
+ <li> D'après l'inégalité de Markov, on a 
+ $$P(X\geq 75)\leq\frac{50}{75}=\frac 23.$$
+ Ce n'est pas une très bonne estimation....
+ <li> Remarquons que $(X\geq 75)\subset (|X-50|\geq 25)$. Alors d'après l'inégalité de Tchebychev,
+ \begin{align*}
+  P(X\geq 75)&\leq P(|X-50|\geq 25)\leq \frac{V(X)}{25^2}=\frac{1}{25}=0,\!04.
+ \end{align*}
+ L'estimation obtenue est bien meilleure! Ce n'est pas très surprenant, car l'inégalité de Tchebychev utilise une information supplémentaire sur $X$, sa variance.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2026"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2026"),	max:5, rating:1.5454545454545, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2026,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lancer de dé <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2026.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2026,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2026','imageenonce2026');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2026"></a><div class=inner id="innerenonce2026">On jette $3600$ fois un dé équilibré à $6$ faces. Minorer la probabilité que le nombre d'apparitions du numéro $1$ soit compris entre $480$ et $720.$</div></div><div class=indication><a href="javascript:showAll('innerindication2026','imageindication2026');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2026"></a><div class=inner id="innerindication2026" style="display:none;">Appliquer l'inégalité de Bienaymé-Tchebychev à une variable aléatoire suivant une loi binomiale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2026','imagecorrige2026',2026);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2026"></a><div class=inner id="innercorrige2026" style="display:none;">Soit $S$ la variable aléatoire comptant le nombre d'apparitions du chiffre 1 au cours de ces lancers. $S$ suit une loi binomiale de paramètres 3600 et 1/6. On sait donc que $E(S)=600$ et $V(S)=500$. Remarquons en outre que
+$$480&lt;S&lt;720\iff -120&lt;S-600&lt;120\iff |S-600|&lt;120.$$
+Par l'inégalité de Bienaymé-Tchebychev,
+$$P(|S-600|\geq 120)\leq \frac{500}{120^2}\leq 0,035.$$
+On en déduit que
+$$P(480&lt;S&lt;720)\geq 1-0,035=0,965.$$
+En particulier, la probabilité que le numéro 1 apparaisse entre 480 et 720 fois au cours de ces $3600$ lancers est supérieur à 0,96.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2040"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2040"),	max:5, rating:2.1052631578947, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2040,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pièces défectueuses <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2040.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2040,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2040','imageenonce2040');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2040"></a><div class=inner id="innerenonce2040">Une usine fabrique des pièces dont une proportion inconnue $p$ est défectueuse, et on souhaite trouver une valeur approchée de $p$. On effectue un prélèvement de $n$ pièces. On suppose que le prélèvement se fait sur une population très grande, et donc qu'il peut s'apparenter à une suite de $n$  tirages indépendants avec remise. On note $X_n$ la variable aléatoire égale au nombre de pièces défectueuses et on souhaite quantifier le fait que $X_n/n$ approche $p$.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $X_n$? Sa moyenne? Sa variance?
+<li> Démontrer que, pour tout $\veps&gt;0$, $P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac 1{4n\veps^2}.$
+<li> En déduire une condition sur $n$ pour que $X_n/n$ soit une valeur approchée de $p$ à $10^{-2}$ près avec une probabilité supérieure ou égale à $95\%$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2040','imageindication2040');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2040"></a><div class=inner id="innerindication2040" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev à $X_n$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2040','imagecorrige2040',2040);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2040"></a><div class=inner id="innercorrige2040" style="display:none;"><ol class="enumeratechiffre">
+<li> $X_n$ est la somme de $n$ variables aléatoires de Bernoulli indépendantes de paramètre $p$. Ainsi, $X_n$ suit une loi binomiale $\mathcal B(n,p)$. On en déduit que 
+$$E(X_n)=np\textrm{ et }V(X_n)=np(1-p).$$
+<li> Appliquons l'inégalité de Bienaymé-Tchebychev à $X_n$. On a donc
+$$P(|X_n-E(X_n)|\geq a)\leq \frac{V(X_n)}{a^2}.$$
+Or, 
+$$\left|\frac{X_n}n-p\right|\geq\veps\iff |X_n-np|\geq n\veps\iff |X_n-E(X_n)|\geq n\veps.$$
+On applique donc l'inégalité de Bienaymé-Tchebychev avec $a=n\veps$ et on trouve que
+$$P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac {p(1-p)}{n\veps^2}.$$
+Mais sur $[0,1]$, la fonction $x\mapsto x(1-x)$ admet un maximum égal à $1/4$ (et atteint en $1/2$). On en déduit le résultat voulu. On pouvait aussi remarquer que c'est directement le résultat qui conduit à la loi faible des grands nombres.
+<li> On cherche $n$ tel que $P\left(\left|\frac{X_n}n-p\right|&lt;10^{-2}\right)\geq 0,95$ soit encore, en passant à l'événement contraire $P\left(\left|\frac{X_n}n-p\right|\geq 10^{-2}\right)\leq 0,05$. Il suffit donc de choisir $n$ tel que $\frac{1}{4n10^{-4}}\leq 0,05$ soit $n\geq 5\cdot 10^4$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2028"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2028"),	max:5, rating:1.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2028,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Majoration de probabilités et loi géométrique <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2028.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2028,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2028','imageenonce2028');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2028"></a><div class=inner id="innerenonce2028">Soit $n\geq 1$ un entier et $X$ une variable aléatoire suivant la loi géométrique $\mathcal G(1/n)$. 
+<ol class="enumeratechiffre">
+<li> Montrer que $P(X\geq n^2)\leq \frac 1n$.
+<li> Montrer que $P(|X-n|\geq n)\leq 1-\frac 1n$. En déduire que $P(X\geq 2n)\leq 1-\frac 1n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2028','imageindication2028');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2028"></a><div class=inner id="innerindication2028" style="display:none;">La première inégalité est une conséquence de l'inégalité de Markov, la seconde de l'inégalité de Bienaymé-Tchebychev.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2028','imagecorrige2028',2028);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2028"></a><div class=inner id="innercorrige2028" style="display:none;">Rappelons que l'espérance d'une variable aléatoire suivant une loi géométrique de paramètre $p$ vaut $\frac 1p$ et que sa variance vaut $\frac q{p^2}$, avec $q=1-p$.
+<ol class="enumeratechiffre">
+<li> $X$ étant à valeurs positives de moyenne $n$, l'inégalité de Markov donne, pour tout $a&gt;0$,
+$$P(X\geq a)\leq \frac{n}a.$$
+On obtient le résultat voulu avec $a=n^2$.
+<li> On a $V(X)=\left(1-\frac 1n\right)n^2=n(n-1)$. On obtient en appliquant l'inégalité de Bienaymé-Tchebychev  avec $\veps&gt;0$,
+$$P(|X-n|\geq\veps)\leq \frac{n(n-1)}{\veps^2}.$$
+Pour $\veps=n$, on obtient le résultat voulu. De plus, $X$ étant à valeurs dans $\mathbb N^*$, les événements $|X-n|\geq n$ et $X\geq 2n$ sont égaux, ce qui donne la deuxième inégalité.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater3145"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3145"),	max:5, rating:1.625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3145,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une variante de l'inégalité de Markov <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3145.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(3145,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3145','imageenonce3145');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3145"></a><div class=inner id="innerenonce3145">Soit $X$ une variable aléatoire réelle finie à valeurs dans $\mathbb R_+$, $f:\mathbb R_+\to\mathbb R_+^*$ une fonction croissante. Démontrer que
+$$P(X\geq a)\leq \frac{E(f(X))}{f(a)}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3145','imageindication3145');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3145"></a><div class=inner id="innerindication3145" style="display:none;">Appliquer l'inégalité de Markov à $Y=f(X)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3145','imagecorrige3145',3145);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3145"></a><div class=inner id="innercorrige3145" style="display:none;">Soit $\Omega$ l'univers où est défini $X$. Par croissance de la fonction $f$, pour tout $\omega\in\Omega$, on a
+$$X(\omega)\geq a\implies f(X(\omega))\geq f(a).$$
+Posons $Y=f(X)$ et appliquons l'inégalité de Markov à $Y$. On a donc
+\begin{align*}
+P(X\geq a)&\leq P(f(X)\geq f(a))\\
+&\leq \frac{E(f(X))}{f(a)}.
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1264"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1264"),	max:5, rating:2.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1264,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Estimation... <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1264.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1264,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1264','imageenonce1264');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1264"></a><div class=inner id="innerenonce1264"><ol class="enumeratechiffre">
+<li> Soit $X$ une variable aléatoire suivant une loi binomiale $\mathcal B(n,p)$ et soit $\veps&gt;0$. 
+Démontrer que 
+$$P\left(\left|\frac Xn-p\right|\geq \veps\right)\leq \frac{p(1-p)}{n\veps^2}.$$
+<li> Application : On lance un dé cubique parfait. Déterminer un nombre de lancers à effectuer pour pouvoir affirmer avec un risque d'erreur inférieur à $5\%$ que la fréquence d'apparition du 6 au cours de ces lancers diffère de 1/6 d'au plus 1/100?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1264','imageindication1264');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1264"></a><div class=inner id="innerindication1264" style="display:none;"><ol class="enumeratechiffre">
+<li> Inégalité de Bienaymé-Tchebychev à $Y=X/n$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1264','imagecorrige1264',1264);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1264"></a><div class=inner id="innercorrige1264" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquons l'inégalité de Bienaymé-Tchebychev à $Y=\frac Xn$. On a 
+$$P(|Y-E(Y)|\geq\veps)\leq\frac{V(Y)}{\veps^2}.$$
+Mais ici, $E(Y)=\frac 1nE(X)=p$ et $V(Y)=\frac{1}{n^2}V(X)=\frac{p(1-p)}n$. Ceci donne donc immédiatement le résultat.
+<li> Soit $X$ la variable aléatoire égale au nombre d'apparitions du chiffre 6 au cours des $n$ lancers. $X$ suit la loi $\mathcal B(n,1/6)$. On cherche $n$ tel que 
+$$P\left(\left|\frac Xn-\frac 16\right|&lt;\frac 1{100}\right)\geq 0,95\iff P\left(\left|\frac Xn-\frac 16\right|\geq \frac 1{100}\right)\leq 0,05.$$
+On applique ensuite le résultat de la question précédente avec $\veps=\frac 1{100}$ et $p=\frac 16$. Il suffit que $n$ vérifie 
+$$\frac{5\times 10^{4}}{36n}\leq 0,05$$
+soit 
+$$n\geq 27778.$$
+Il suffit d'effectuer 27778 lancers. Cela dit, rien ne dit que ce nombre est optimal, et d'ailleurs, il ne l'est pas!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3089"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3089"),	max:5, rating:2.7857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3089,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Surréservation et inégalité de Tchebychev <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3089.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3089,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3089','imageenonce3089');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3089"></a><div class=inner id="innerenonce3089">Une compagnie aérienne exploite un avion Paris-Montréal d'une capacité de 150 places.
+Pour ce vol, une analyse statistique a montré qu'un passager ayant réservé son billet
+se présentait à l'embarquement avec une probabilité de $p=0,\!75$. La compagnie souhaite
+optimiser le remplissage de l'avion et souhaite vendre $n$ billets, avec $n&gt;150$,
+mais en limitant le risque que plus de 150 personnes se rendent à l'embarquement
+à moins de $5\%$. On supposera dans la suite que $np&lt; 150$.<br>
+On définit la variable aléatoire $S_n$ comme le nombre de personnes, parmi les $n$
+ayant réservé un billet, se présentant à l'embarquement.
+<ol class="enumeratechiffre">
+ <li> Quelle est la loi de $S_n$?
+ <li> En remarquant que $(S_n\geq 150)\subset (|S_n-np|\geq 150-np)$, démontrer que 
+ $$P(S_n\geq 150)\leq \frac{np(1-p)}{(150-np)^2}.$$
+ <li> Résoudre sur $]0,150[$ l'inéquation $\frac{x(1-p)}{(150-x)^2}\leq 0,\!05$.
+ <li> Combien la compagnie peut-elle vendre de billets tout en s'assurant que la probabilité que plus de 150 clients se présentent à l'embarquement est inférieure ou égale à $5\%$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3089','imageindication3089');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3089"></a><div class=inner id="innerindication3089" style="display:none;"><ol class="enumeratechiffre">
+ <li> On est dans le cadre d'une répétition d'épreuves de Bernoulli indépendantes.
+ <li> Utiliser l'inégalité de Bienaymé-Tchebychev.
+ <li> 
+ <li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3089','imagecorrige3089',3089);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3089"></a><div class=inner id="innercorrige3089" style="display:none;"><ol class="enumeratechiffre">
+ <li> $S_n$ compte le nombre de succès (se présenter à l'embarquement) lors de la réalisation  
+ de $n$ épreuves de Bernoulli indépendantes de même paramètre $p=0,\!75$. $S_n$ suit donc une loi binomiale $\mathcal B(n,p)$.
+ <li> Remarquons que 
+ $$S_n\geq 150\implies S_n-np\geq 150-np\implies |S_n-np|\geq |150-np|$$
+ puisque $150-np\geq 0$. On peut alors appliquer l'inégalité de Tchebychev qui donne immédiatement le résultat, 
+ puisque $E(S_n)=np$ et $V(S_n)=np(1-p)$.
+ <li> La résolution de cette inéquation du second degré donne $x\in [0;125]$.
+ <li> Si $np\leq 125$, en particulier si $n\leq 166$, alors on sait que $P(S_n\geq 150)\leq 0,\!05$.
+ Si la compagnie vend 166 billets, la probabilité que plus de 150 clients se présentent à l'embarquement est inférieure à $0,\!05$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3090"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3090"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3090,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode de Monte-Carlo <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3090.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3090,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3090','imageenonce3090');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3090"></a><div class=inner id="innerenonce3090">On munit le plan d'un repère orthonormé $(O,\vec i,\vec j)$. On choisit au hasard, et uniformément, un point $M$
+dans le carré unité, c'est-à-dire le carré dont les sommets sont les points de coordonnées $(0,0)$, $(0,1)$, 
+$(1,0)$ et $(1,1)$. On note $X$ la variable aléatoire qui vaut 1 si le point est dans le quart de disque unité,
+et $0$ sinon.
+<ol class="enumeratechiffre">
+ <li> Justifier que $X$ suit une loi de Bernoulli dont on précisera le paramètre $p$.
+ <li> &Eacute;crire une fonction Python $\verb+simulX()+$ qui simule cette variable aléatoire $X$.
+ <li> On répète $n$ fois et de façon indépendante cette expérience et on note $X_n$ le résultat obtenu lors
+ de la $n$-ième expérience. On pose $S_n$ la variable aléatoire $S_n=X_1+\cdots+X_n$. Quelle est la loi de $S_n$?
+ <li> On pose $P_n=\frac{4S_n}n$ et on considère $\veps&gt;0$. Justifier que 
+ $$P(|P_n-\pi|\geq \veps)\leq\frac{\pi(4-\pi)}{\veps^2 n}.$$
+ <li> Combien suffit-il de tirer de points pour que $P_n$ constitue une approximation de $\pi$ à $10^{-2}$ près, avec une probabilité supérieure ou 
+ égale à $95\%$?
+ <li> &Eacute;crire une fonction Python $\verb+approxpi()+$ utilisant la fonction $\verb+simulX()+$ qui renvoie une approximation de $\pi$ à $10^{-2}$ près, avec une probabilité supérieure ou 
+ égale à $95\%$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3090','imageindication3090');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3090"></a><div class=inner id="innerindication3090" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li> On pourra utiliser que $\sup_{p\in[0,1]}p(1-p)1/4$.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev à $P_n$.
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3090','imagecorrige3090',3090);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3090"></a><div class=inner id="innercorrige3090" style="display:none;"><ol class="enumeratechiffre">
+ <li> $X$ prend les deux valeurs $1$ et $0$. De plus, puisque le point est tiré uniformément sur le carré unité, on a 
+ $$P(X=1)=\frac{\textrm{aire(disque unité)}}{\textrm{aire(carré unité)}}=\frac\pi4.$$
+ <li> 
+<pre><code class="language-python">import numpy as np;
+
+def simulX():
+    x=np.random.rand()
+    y=np.random.rand()
+    if ( (x*x+y*y)&lt;=1):
+        return 1
+    else:
+        return 0
+</code></pre>
+ <li> $S_n$ suit une loi binomiale de paramètres $n$ et $p$.
+ <li> On observe que $E(P_n)=\frac{4}n E(S_n)=\pi$ et que
+$$V(P_n)=\frac{16}{n^2}V(S_n)=\frac{16}{n^2}\times n\times \frac \pi 4\times\left(1-\frac\pi 4\right)=\frac{\pi(4-\pi)}{n}.$$
+L'inégalité de Bienaymé-Tchebychev appliquée à $P_n$  donne 
+ $$P\left(\left|P_n-\pi \right|\geq\veps\right)\leq \frac{\pi(4-\pi)}{n\veps^2}.$$
+ <li> On remarque que 
+ $$P(|P_n-\pi|&lt; 10^{-2})=1-P(|P_n-\pi|\geq 10^{-2})$$ 
+ et donc que l'inégalité $P(|P_n-\pi|&lt;10^{-2})\geq 0,\!95$ est équivalente à 
+ $$P(|P_n-\pi|\geq 10^{-2})\leq 0,\!05.$$
+ On applique l'inégalité précédente avec $\veps=10^{-2}$. Il suffit donc de choisir $n$ tel que 
+ $$\frac{\pi(4-\pi)}{n10^{-4}}\leq 0,\!05\iff n\geq \frac{10^4 \pi(4-\pi)}{0,\!05}.$$
+Le choix de $n=539354$ convient.
+ On peut remarquer que c'est beaucoup pour une approximation assez médiocre!
+ <li> 
+<pre><code class="language-python">def approxpi():
+    p=0
+    for i in range(539354):
+        p=p+simulX()
+    return 4*p/539354;
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2027"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2027"),	max:5, rating:3.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2027,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une variante de l'inégalité de Bienaymé-Tchebychev <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2027.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2027,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2027','imageenonce2027');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2027"></a><div class=inner id="innerenonce2027">Soit $X$ une variable aléatoire réelle. On suppose que $X$ admet une espérance $E(X)=m$ et une variance $V(X)=\sigma^2$. On fixe $\alpha&gt;0$.
+<ol class="enumeratechiffre">
+<li> Soit $\lambda\geq 0$. Démontrer que $P(X-m\geq \alpha)=P(X-m+\lambda\geq \alpha+\lambda)$.
+<li> Vérifier que $E((X-m+\lambda)^2)=\sigma^2+\lambda^2$.
+<li> Montrer que, pour tout $\lambda&gt;0$, $P(X-m\geq\alpha)\leq\frac{\sigma^2+\lambda^2}{\alpha^2+\lambda^2+2\lambda \alpha}$.
+<li> En déduire que $P(X-m\geq\alpha)\leq \frac{\sigma^2}{\alpha^2+\sigma^2}.$
+<li> Démontrer que $P(|X-m|\geq \alpha)\leq   \frac{2\sigma^2}{\alpha^2+\sigma^2}.$
+Quand obtient-on une meilleure inégalité que l'inégalité de Bienaymé-Tchebychev?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2027','imageindication2027');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2027"></a><div class=inner id="innerindication2027" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Linéarité de l'espérance.
+<li> Appliquer l'inégalité de Markov à une bonne variable aléatoire.
+<li> &Eacute;tudier une fonction.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2027','imagecorrige2027',2027);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2027"></a><div class=inner id="innercorrige2027" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$X-m\geq \alpha\iff X-m+\lambda\geq \alpha+\lambda.$$
+Les deux événements sont donc identiques et leurs probabilités respectives sont égales.
+<li> On développe et on utilise la linéarité de l'espérance :
+$$E((X-m+\lambda)^2)=E((X-m)^2)+2\lambda E(X-m)+\lambda^2=\sigma^2+\lambda^2.$$
+<li> On sait que 
+$$P(X-m\geq \alpha)=P(X-m+\lambda\geq \alpha+\lambda)\leq P((X-m+\lambda)^2\geq (\alpha+\lambda)^2).$$
+ En appliquant l'inégalité de Markov à la variable aléatoire $(X-m+\lambda)^2$, on en déduit immédiatement le résultat demandé.
+<li> On étudie la fonction $\varphi(\lambda)=\frac{\sigma^2+\lambda^2}{\alpha^2+\lambda^2+2\lambda \alpha}$. En calculant la dérivée, on voit facilement qu'elle admet un minimum pour $\lambda=\sigma^2/\alpha$, ce minimum valant $\frac{\sigma^2}{\sigma^2+\alpha^2}.$
+<li> On sait que $|X-m|\geq \alpha\iff (X-m)\geq \alpha$ ou $(X-m)\leq -\alpha$. En reprenant les questions précédentes, mais en remplaçant $X-m$ par $m-X$, on trouve que 
+$$P(|X-m|\geq \alpha)=P(X-m\geq \alpha)+P(m-X\geq \alpha)\leq  \frac{2\sigma^2}{\alpha^2+\sigma^2}.$$
+Cette inégalité est meilleure que l'inégalité de Bienaymé-Tchebychev si et seulement si 
+$$\frac{2\sigma^2}{\alpha^2+\sigma^2}\leq \frac{\sigma^2}{\alpha^2}\iff \sigma^2(\alpha^2-\sigma^2)\leq 0\iff \alpha\leq \sigma.$$
+Cela dit, dans le cas $\alpha\leq \sigma,$ on a 
+$$\frac{2\sigma^2}{\alpha^2+\sigma^2}\geq 1,$$
+et majorer une probabilité par un réel supérieur ou égal à $1$ n'est pas intéressant !
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3144"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3144"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3144,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Cantelli <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3144.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3144,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3144','imageenonce3144');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3144"></a><div class=inner id="innerenonce3144">Soit $X$ une variable aléatoire réelle et $a&gt;0$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $t\geq 0$, $P\big(X-E(X)\geq a\big)\leq \frac{t^2+V(X)}{(a+t)^2}$.
+<li> En déduire que $P\big(X-E(X)\geq a\big)\leq \frac{V(X)}{V(X)+a^2}.$
+<li> Démontrer l'inégalité de Cantelli : $P\big(|X-E(X)|\geq a\big)\leq \frac{2V(X)}{V(X)+a^2}$. Comparer avec l'inégalité de Tchebychev.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3144','imageindication3144');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3144"></a><div class=inner id="innerindication3144" style="display:none;"><ol class="enumeratechiffre">
+<li> S'inspirer de la preuve de l'inégalité de Tchebychev en utilisant la variable aléatoire $Y=X-E(X)+t$.
+<li> Optimiser en $t$.
+<li> Appliquer l'inégalité précédente à $Z=-X$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3144','imagecorrige3144',3144);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3144"></a><div class=inner id="innercorrige3144" style="display:none;"><ol class="enumeratechiffre">
+<li> Considérons la variable aléatoire $Y=X-E(X)+t$. On a
+$$X-E(X)\geq a\iff X-E(X)+t\geq a+t$$
+et ceci entraîne, puisque $a+t\geq 0$, 
+$$\big(X-E(X)+t\big)^2\geq (a+t)^2.$$
+L'événement $X-E(X)\geq a$ est donc inclus dans l'événement $\big(X-E(X)+t\big)^2\geq (a+t)^2$. On en déduit
+\begin{align*}
+P\big(X-E(X)\geq a\big)&\leq P\Big(\big(X-E(X)+t\big)^2\geq (a+t)^2\Big)\\
+&\leq \frac{E\Big(\big(X-E(X)+t\big)^2\Big)}{(a+t)^2}
+\end{align*}
+d'après l'inégalité de Markov. De plus, 
+\begin{align*}
+E\Big(\big(X-E(X)+t\big)^2\Big)&=E\Big(\big(X-E(X)\big)^2\Big)+2tE\Big(X-E(X)\Big)+t^2\\
+&=V(X)+0+t^2\\
+&=V(X)+t^2.
+\end{align*}
+On a donc démontré que 
+$$P\big(X-E(X)\geq a\big)\leq \frac{t^2+V(X)}{(a+t)^2}.$$
+<li> On va chercher la valeur de $t$ pour laquelle le membre de droite de l'inégalité précédente est le plus petit possible. Pour cela, on pose, pour $t\geq 0$, $f(t)=\frac{t^2+V(X)}{(a+t)^2}$. La fonction $f$ est dérivable sur $[0,+\infty[$ et, sur cet intervalle,
+\begin{align*}
+f'(t)&=\frac{2t(a+t)^2-2(a+t)(t^2+V(X))}{(a+t)^4}\\
+&=\frac{2(at-V(X))}{(a+t)^3}.
+\end{align*}
+La fonction $f$ atteint donc son minimum en $t=V(X)/a$, et en ce point elle vaut 
+$$f(V(X)/a)=\frac{\frac{V(X)^2}{a^2}+V(X)}{\left(\frac{V(X)}a+a\right)^2}=\frac{\frac{V(X)}a\left(\frac{V(X)}a+a\right)}{\left(\frac{V(X)}a+a\right)^2}=
+\frac{V(X)}{V(X)+a^2}.$$
+Ceci démontre le resultat demandé.
+<li> Si on applique l'inégalité précédente à $Z=-X$, qui a la même variance que $X$, alors on obtient 
+$$P\Big(-\big(X-E(X)\big)\geq a\Big)\leq \frac{V(X)}{V(X)+a^2}.$$
+Puisque 
+$$|X-E(X)|\geq a=\Big(\big(X-E(X)\big)\geq a\Big)\cup \Big(-\big(X-E(X)\big)\geq a\Big),$$
+on a bien 
+$$P\big(|X-E(X)|\geq a\big)\leq \frac{2V(X)}{V(X)+a^2}.$$
+Cette inégalité est meilleure que l'inégalité de Tchebychev si et seulement si 
+$$\frac{2V(X)}{V(X)+a^2}\leq \frac{V(X)}{a^2}$$
+c'est-à-dire si et seulement si $V(X)\geq a^2$ (ou $V(X)=0$).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2037"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2037"),	max:5, rating:4.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2037,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;cart à la moyenne <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2037.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2037,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2037','imageenonce2037');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2037"></a><div class=inner id="innerenonce2037">Dans cet exercice, $(\Omega,\mathcal A,\mathbb P)$ désigne un espace de probabilité, et $X,Y,(X_i)_{i\geq 1}$ des variables
+aléatoires définies sur $(\Omega,\mathcal A,\mathbb P)$. 
+<ol class="enumeratechiffre">
+<li> Soit $\lambda&gt;0$. On suppose que $\mathbb E(\exp(\lambda Y))$ est finie. Démontrer que, pour tout $a\in\mathbb R$, 
+$$\mathbb P(Y\geq a)\leq e^{-\lambda a}\mathbb E\big(e^{\lambda Y}\big).$$
+<li> On suppose de plus que $\mathbb E(\exp(-\lambda Y))$ est finie. Déduire de la question précédente que 
+$$\mathbb P(|Y|\geq a)\leq e^{-\lambda a}\mathbb E\big(e^{\lambda Y}\big)+e^{-\lambda a}\mathbb E\big(e^{-\lambda Y}\big).$$
+<li> <ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $\lambda\geq 0$, on a 
+$$\cosh\lambda\leq\exp\left(\frac{\lambda^2}2\right)$$
+(on pourra utiliser des développements en série entière).
+<li> Démontrer que si $\lambda\geq 0$ et $x\in[-1,1]$, alors
+$$\exp(\lambda x)\leq\cosh(\lambda)+x\sinh(\lambda)\leq\exp\left(\frac{\lambda^2}2\right)+x\sinh(\lambda).$$
+<li> Démontrer que si la variable aléatoire $X$ prend ses valeurs dans $[-1,1]$ et est centrée (c'est-à-dire si
+$\mathbb E(X)=0$), alors on a pour tout $\lambda\geq 0$
+$$\mathbb E\left(e^{\lambda X}\right)\leq \exp\left(\frac{\lambda^2}2\right)\textrm{ et }\mathbb E\left(e^{-\lambda X}\right)\leq \exp\left(\frac{\lambda^2}2\right).$$
+<li> Montrer que si les variables aléatoires indépendantes $X_i$ prennent leurs valeurs dans $[-1,1]$ et sont centrées, alors on a 
+$$\mathbb P\left(\left|n^{-1/2}\sum_{i=1}^n X_i\right|\geq a\right)\leq 2\exp\left(-\frac{a^2}2\right)$$
+pour tout $n\geq 1$ et tout $a\geq 0$.
+</ol>
+</ol>
+On peut démontrer que le facteur $-1/2$ intervenant dans l'exponentielle est optimal.</div></div><div class=indication><a href="javascript:showAll('innerindication2037','imageindication2037');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2037"></a><div class=inner id="innerindication2037" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est une variante de l'inégalité de Markov.
+<li> Enlever les valeurs absolues et utiliser deux fois le résultat de la question précédente.
+<li> <ol class="enumeratechiffre">
+<li> Tout est dit dans l'énoncé!
+<li> Raisonner par convexité.
+<li> Intégrer le résultat de la question précédente.
+<li> Appliquer le résultat de la question 2 à $Y=n^{-1/2}(X_1+\dots+X_n)$, puis utiliser l'indépendance et le résultat de la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2037','imagecorrige2037',2037);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2037"></a><div class=inner id="innercorrige2037" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'écrire que $Y\geq a\iff \exp(\lambda Y)\geq\exp(\lambda a)$ et d'utiliser l'inégalité de Markov!
+<li> On a $|Y|\geq a$ si et seulement si $Y\geq a$ ou $-Y\geq a$, ces deux événements étant disjoints. On a donc 
+$$P(|Y|\geq a)=P(Y\geq a)+P(-Y\geq a)$$
+et on applique deux fois le résultat de la question précédente, à $Y$ et à $-Y$.
+<li> <ol class="enumeratechiffre">
+<li> On a d'une part
+$$\cosh(\lambda)=\sum_{n\geq 0}\frac{\lambda^{2n}}{(2n)!}$$
+et d'autre part
+$$\exp\left(\frac{\lambda^2}2\right)=\sum_{n\geq 0}\frac{\lambda^{2n}}{2^n (n!)}.$$
+Or, pour tout $n\geq 0$, on a $(2n)!\geq 2^n n!$ (pourquoi?). Donc le résultat s'en déduit.
+<li> La deuxième inégalité est une conséquence immédiate du résultat de la question précédente. Pour la première, considérons la fonction affine $g(x)=\cosh(\lambda)+x\sinh(\lambda)$. Alors $g(1)=\exp(\lambda)$ et $g(-1)=\exp(-\lambda)$. Autrement dit, $g$ coïncide avec la fonction $\exp(\lambda x)$ en $1$ et $-1$. Mais cette dernière fonction est convexe, sa courbe représentative est sous ses cordes, donc on en déduit le résultat.
+<li> Pour tout $\omega\in\Omega$, on a 
+$$\exp(\lambda X(\omega))\leq \exp\left(\frac{\lambda^2}2\right)+X(\omega)\sinh(\lambda).$$
+En utilisant la croissance de l'espérance et puisque $X$ est centrée, on trouve
+$$\mathbb E\left(e^{\lambda X}\right)\leq \exp\left(\frac{\lambda^2}2\right).$$
+L'autre inégalité s'obtient en appliquant la même méthode à $-X$, qui est centrée et à valeurs dans $[-1,1]$.
+<li> On applique le résultat de la première question à $Y=n^{-1/2}(X_1+\dots+X_n)$. On en déduit que 
+$$\mathbb P(|Y|\geq a)\leq \exp(-\lambda a)\mathbb E\left(e^{\sum_{i=1}^n\frac{\lambda}{n^{-1/2}}X_i}\right)+
+ \exp(-\lambda a)\mathbb E\left(e^{\sum_{i=1}^n\frac{-\lambda}{n^{-1/2}}X_i}\right).$$
+On utilise ensuite l'indépendance de la suite et la propriété fonctionnelle de la fonction exponentielle :
+\begin{eqnarray*}
+\mathbb E\left(e^{\sum_{i=1}^n\frac{\lambda}{n^{-1/2}}X_i}\right)&=&\mathbb E\left(\prod_{i=1}^n e^{\frac{\lambda}{n^{-1/2}}X_i}\right)\\
+&=&\prod_{i=1}^n \mathbb E\left( e^{\frac{\lambda}{n^{-1/2}}X_i}\right).
+\end{eqnarray*}
+D'après le résultat de la question précédente, on trouve
+$$ \mathbb E\left( e^{\frac{\lambda}{n^{-1/2}}X_i}\right)\leq \exp\left(\frac{\lambda^2}{2n}\right),$$
+ce qui donne finalement
+$$\mathbb E\left(e^{\sum_{i=1}^n\frac{\lambda}{n^{-1/2}}X_i}\right)\leq \exp\left(\frac{\lambda^2}{2}\right).$$
+On fait pareil avec l'autre quantité (tout est symétrique) et on trouve
+$$\mathbb P(|Y|\geq a)\leq 2\exp(-\lambda a)\exp\left(\frac{\lambda^2}2\right).$$
+Il suffit de choisir $\lambda=a$ (c'est bien sûr la valeur optimale) pour obtenir l'inégalité demandée.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2493"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2493"),	max:5, rating:3.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2493,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Comportement en temps long des marches aléatoires <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2493.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2493,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2493','imageenonce2493');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2493"></a><div class=inner id="innerenonce2493">Soit $(X_k)_{k\geq 1}$ une suite de variables aléatoires mutuellement indépendantes telles que, pour tout $k\in\mathbb N^*$, 
+$P(X_k=1)=P(X_k=-1)=1/2.$ Pour $n$ dans $\mathbb N^*$ on note $S_n=\sum_{k=1}^n X_k$. 
+<ol class="enumeratechiffre">
+<li> Pour $t\in\mathbb R$, calculer $E\left(e^{tS_n}\right)$.
+<li> En déduire que, pour $n$ dans $\mathbb N^*$ et $\lambda$ dans $\mathbb R_+$, 
+$$P(|S_n|\geq\lambda)\leq 2\exp\left(\frac{-\lambda^2}{2n}\right)$$
+(on pourra utiliser, sans la démontrer, l'inégalité $\cosh(u)\leq\exp(u^2/2)$).
+<li> Soit $c&gt;1$. Pour tout $n\in\mathbb N^*$, on note $A_n$ l'événement $[|S_n|\leq \sqrt{2cn\ln n}]$. Démontrer que $P\left(\liminf_n A_n\right)=1$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2493','imageindication2493');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2493"></a><div class=inner id="innerindication2493" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser l'indépendance des variables aléatoires.
+<li> Utiliser l'inégalité de Markov.
+<li> Utiliser le théorème de Borel-Cantelli bien sûr!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2493','imagecorrige2493',2493);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2493"></a><div class=inner id="innercorrige2493" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque les $e^{tX_i}$ sont indépendantes (et d'espérance finie), on a 
+$$E\left(e^{tS_n}\right)=E\left(\prod_{i=1}^n e^{tX_i}\right)=\prod_{i=1}^n E\left(e^{tX_i}\right)=\left(\cosh(t)\right)^n.$$
+<li> On a $P(|S_n|\geq \lambda)=P(S_n\geq\lambda)+P(S_n\leq -\lambda)$. Puisque $S_n$ est une variable symétrique, on a $P(S_n\geq \lambda)=P(S_n\leq-\lambda)$ et donc il suffit de prouver que 
+$$P(S_n\geq\lambda)\leq \exp\left(\frac{-\lambda^2}{2n}\right).$$
+Remarquons que l'on a $S_n\geq\lambda\iff e^{tS_n}\geq e^{t\lambda}$. Puisque $e^{tS_n}\geq 0$, on peut appliquer l'inégalité de Markov pour déduire que 
+$$P(S_n\geq\lambda)\leq e^{-t\lambda}E\left(e^{tS_n}\right)=\cosh(t)^n \exp(-\lambda t)\leq \exp\left(\frac{nt^2}2-\lambda t\right).$$
+On conclut alors en choisissant $t=\lambda/n$.
+<li> D'après la question précédente, on a 
+$$P(|S_n|&gt; \sqrt{2cn\ln n})\leq \frac 2{n^c}.$$
+Puisque $c&gt;1$, la série $\sum_{n\geq 1}2/n^c$ est convergente, et il résulte du lemme de Borel-Cantelli que 
+$$P\left(\limsup_n \overline{A_n}\right)=0.$$
+Passant au complémentaire, on trouve le résultat escompté.
+</ol></div></div></div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

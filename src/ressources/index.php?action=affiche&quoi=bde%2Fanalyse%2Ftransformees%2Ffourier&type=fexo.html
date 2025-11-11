@@ -1,0 +1,1277 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Transformée de Fourier</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Transformée de Fourier</h1>
+Tout au long de cette feuille d'exercices, la transformée de Fourier est définie par
+$$\hat f(x)=\int_{\mathbb R}e^{-itx}f(t)dt.$$
+
+<div class=titrepartie>Fonctions intégrables</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1886"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1886"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1886,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction triangle <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1886.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1886,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1886','imageenonce1886');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1886"></a><div class=inner id="innerenonce1886">On considère la fonction triangle $f$ définie par :
+$$f(x)=\left\{
+\begin{array}{ll}
+1+x&\textrm{si }-1\leq x\leq 0\\
+1-x&\textrm{si }0\leq x&lt;1\\
+0&\textrm{sinon.}\end{array}\right.$$
+Démontrer que, pour $\xi\neq 0,$ 
+$$\hat f(\xi)=\frac{\sin^2(\xi/2)}{(\xi/2)^2}.$$
+Que vaut $\hat f(0)$?</div></div><div class=indication><a href="javascript:showAll('innerindication1886','imageindication1886');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1886"></a><div class=inner id="innerindication1886" style="display:none;">Calculer intervalle par intervalle, en faisant une intégration par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1886','imagecorrige1886',1886);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1886"></a><div class=inner id="innercorrige1886" style="display:none;">On suppose d'abord $\xi\neq 0.$ On fait une intégration par parties, et on trouve : 
+\begin{align*}
+\int_{-1}^0 (1+x)e^{-i \xi x}dx&=\left[\frac{(1+x)e^{-i x\xi}}{-i\xi}\right]_0^1+\int_{-1}^0 \frac{e^{-i\xi x}}{i\xi}dx\\
+&=\frac{i\xi-e^{i\xi}+1}{\xi^2}.
+\end{align*}
+De même, on trouve
+$$\int_0^1 (1-x)e^{-i\xi x}dx=
+\frac{-i\xi-e^{-i\xi}+1}{\xi^2}.$$
+On en déduit :
+$$\hat{f}(\xi)=\frac{2-e^{i\xi}-e^{-i\xi}}{\xi^2}.$$
+Puisque 
+\begin{align*}
+\sin^2(\xi/2)&=\left(\frac{e^{i\xi/2}-e^{-i\xi/2}}{2i}\right)^2\\
+&=\frac{e^{i\xi}+e^{-i\xi}-2}{-4},
+\end{align*}
+on en déduit bien le résultat demandé.
+Ces calculs ne sont valables que si $\xi\neq 0$. Si $\xi=0$, on doit calculer $\int_{\mathbb R}f(x)dx$ ou encore calculer l'aire du triangle. Elle vaut $1$ (ce qui est cohérent avec l'expression précédente en faisant tendre $\xi$ vers $0$)
+et c'est normal car la fonction $\hat f$ est continue.<br>
+Une autre façon de procéder est de remarquer que $f=g\star g$, où $g=\mathbf 1_{[-1/2,1/2]}.$ 
+On a alors $\hat f=(\hat g)^2,$ et il est facile de calculer $\hat g$, qui est donnée par 
+$$\hat g(\xi)=\frac{\sin(\xi/2)}{\xi/2}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3358"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3358"),	max:5, rating:1.8108108108108, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3358,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur les propriétés algébriques de la transformée de Fourier <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3358.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3358,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3358','imageenonce3358');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3358"></a><div class=inner id="innerenonce3358">Soit $f\in L^1(\mathbb R)$ et $\alpha\in\mathbb R.$ 
+<ol class="enumeratechiffre">
+<li> Démontrer que la fonction $\varphi(x)=\hat f(x)\cos(\alpha x)$ 
+est la transformée de Fourier d'une fonction de $L^1(\mathbb R)$ que l'on explicitera en fonction de $f$ et $\alpha.$
+<li> Reprendre la question avec $\psi(x)=\hat f(x)\sin(\alpha x).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3358','imageindication3358');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3358"></a><div class=inner id="innerindication3358" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser $\cos(x)=(e^{ix}+e^{-ix})/2$ et la formule 
+$$\widehat{\tau_a f}(x)=e^{-ix}\hat f(x).$$
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3358','imagecorrige3358',3358);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3358"></a><div class=inner id="innercorrige3358" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit, pour tout $x\in\mathbb R,$
+\begin{align*}
+\hat f(x)\cos(\alpha x)&=\frac 12\left(\hat f(x)e^{i\alpha x}+\hat f(x)e^{-i\alpha x}\right)\\
+&=\frac12\left(\widehat{\tau_{-\alpha}f}(x)+\widehat{\tau_{\alpha}f}(x)\right).
+\end{align*}
+Ainsi, $\varphi$ est la transformée de Fourier de la fonction $\displaystyle\frac 12\left(\tau_{-\alpha} f+\tau_{\alpha} f\right).$
+<li> La même méthode prouve que $\psi$ est la transformée de Fourier de la fonction 
+$\displaystyle\frac 1{2i}\left(\tau_{-\alpha} f-\tau_{\alpha} f\right).$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3360"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3360"),	max:5, rating:1.195652173913, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3360,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction et dérivées intégrables entraîne transformée de Fourier intégrable <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3360.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3360,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3360','imageenonce3360');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3360"></a><div class=inner id="innerenonce3360">Soit $f:\mathbb R\to\mathbb R$ une fonction de classe $\mathcal C^2.$
+Montrer que si $f,$ $f'$ et $f''$ sont dans $L^1(\mathbb R)$, alors
+$\hat f\in L^1(\mathbb R).$</div></div><div class=indication><a href="javascript:showAll('innerindication3360','imageindication3360');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3360"></a><div class=inner id="innerindication3360" style="display:none;">Relier $\widehat{f''}$ et $\hat f$ pour déduire l'intégrabilité
+de $\hat f$ au voisinage de l'infini.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3360','imagecorrige3360',3360);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3360"></a><div class=inner id="innercorrige3360" style="display:none;">Puisque $f$, $f'$ et $f''$ sont dans $L^1(\mathbb R)$, on sait que pour tout $x\in\mathbb R,$ 
+$$\widehat{f''}(x)=(ix)^2 \hat{f}(x).$$
+On en déduit, puisque $\|\widehat{f''}\|_\infty \leq \|f''\|_1,$ que pour tout $x\in\mathbb R^*,$
+$$|\hat{f}(x)|\leq \frac{\|f''\|_1}{|x|^2}.$$
+D'autre part, on sait aussi que $\|\hat f\|_\infty\leq \|f\|_1$.
+D'où
+\begin{align*}
+\int_{\mathbb R}|\hat{f}(x)|dx&=\int_{[-1,1]}|\hat{f}(x)|dx+\int_{\mathbb R\backslash [-1,1]}|\hat{f}(x)|dx\\
+&\leq 2\|\hat f\|_\infty+\|f''\|_1\int_{\mathbb R\backslash [-1,1]} \frac{1}{|x|^2}dx\\
+&\leq 2\|f\|_1+2\|f''\|_1.
+\end{align*}
+Donc $\hat f\in L^1(\mathbb R).$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1892"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1892"),	max:5, rating:1.8275862068966, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1892,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformée de Fourier et produit de convolution <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1892.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1892,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1892','imageenonce1892');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1892"></a><div class=inner id="innerenonce1892"><ol class="enumeratechiffre">
+<li> En utilisant la transformée de Fourier, montrer que l'algèbre $L^1(\mtr)$ ne possède pas d'unité, c'est-à-dire qu'il 
+n'existe pas de fonction $g\in L^1(\mtr)$ telle que $f\star g=f$ pour tout $f\in L^1(\mtr)$.
+<li> Resoudre dans $L^1(\mtr)$ l'équation $f\star f=f$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1892','imageindication1892');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1892"></a><div class=inner id="innerindication1892" style="display:none;"><ol class="enumeratechiffre">
+<li> La transformée de Fourier d'une fonction de $L^1(\mathbb R)$ doit tendre vers $0$ en l'infini.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1892','imagecorrige1892',1892);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1892"></a><div class=inner id="innercorrige1892" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons qu'une telle fonction $g\in L^1(\mathbb R)$ existe et soit $f\in L^1(\mathbb R)$. Puisque la transformée de Fourier transforme le produit de convolution en produit de fonctions, on a 
+$$\forall \xi\in\mtr, \hat{f}(\xi)\hat{g}(\xi)=\hat{f}(\xi).$$
+Puisque ceci est vrai pour toute fonction de $L^1(\mtr)$ et que pour tout $\xi\in\mathbb R$, il existe une fonction $f$ de $L^1(\mtr)$ telle que $\hat{f}(\xi)\neq 0$,
+on a $\hat{g}(\xi)=1$ pour tout $\xi\in\mtr$. Maintenant, on sait que la transformée de Fourier d'une fonction de $L^1(\mtr)$ tend vers 0 à l'infini.
+Il n'y a donc aucune fonction $g$ telle que $\hat{g}(\xi)=1$ pour tout $\xi\in\mtr$.
+<li> On compose une fois encore par la transformée de Fourier. On a :
+$$\forall\xi\in\mtr, \hat{f}^2(\xi)=\hat{f}(\xi)\iff \hat{f}(\xi)(1-\hat{f}(\xi))=0.$$
+On en déduit que pour tout $\xi\in\mtr$, $\hat{f}(\xi)=0$ ou 1, mais comme $\hat{f}$ est continue, on a forcément $\hat{f}(\xi)=1$ pour tout $\xi$ ou
+$\hat{f}(\xi)=0$ pour tout $\xi$. Comme auparavant, le cas identiquement égal à 1 est impossible, et donc $\hat{f}(\xi)=0$ pour tout $\xi$. Par injectivité
+de la transformée de Fourier, on en déduit que $f=0$ presque partout.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1704"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1704"),	max:5, rating:1.875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1704,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul d'une transformée de Fourier par résolution d'une équation différentielle <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1704.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1704,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1704','imageenonce1704');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1704"></a><div class=inner id="innerenonce1704">En formant une équation différentielle vérifiée par $f$, calculer la valeur de
+$$f(x)=\int_0^{+\infty}\frac{e^{-t}}{\sqrt t}e^{itx}dt.$$
+On rappelle que $\int_0^{+\infty}e^{-u^2}du=\sqrt\pi/2$.</div></div><div class=indication><a href="javascript:showAll('innerindication1704','imageindication1704');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1704"></a><div class=inner id="innerindication1704" style="display:none;">Dériver $f$ puis faire une intégration par parties pour trouver l'équation différentielle vérifiée.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1704','imagecorrige1704',1704);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1704"></a><div class=inner id="innercorrige1704" style="display:none;">On remarque d'abord que $f$ est bien définie pour tout $x$.
+En effet, on a 
+$$\left|\frac{e^{-t}}{\sqrt t}e^{itx}\right|\leq\frac{e^{-t}}{\sqrt t}.$$
+Cette fonction est intégrable sur $[0,+\infty[$, car en 0 elle est équivalente
+à $\frac{1}{\sqrt t}$ qui est intégrable (intégrale de Riemann), et, au voisinage de $+\infty$, elle
+vérifie
+$$\left|\frac{e^{-t}}{\sqrt{t}}\right|\leq \frac{1}{t^2}.$$
+Prouvons également que $f$ est de classe $C^1$. Pour cela, on remarque que la fonction
+$$g:(x,t)\mapsto\frac{e^{-t}}{\sqrt t}e^{itx}$$
+admet en tout point de $\mathbb R\times ]0,+\infty[$ une dérivée partielle par rapport à $x$ égale à
+$$\frac{\partial g}{\partial x}(x,t)=i\sqrt te^{-t}e^{itx}.$$
+De plus, on a, pour tout $x\in\mathbb R$,
+$$\left|\frac{\partial g}{\partial x}(x,t)\right|\leq \sqrt te^{-t}$$
+et la fonction apparaissant à droite dans l'inégalité précédente est intégrable sur $]0,+\infty[$
+(elle est continue en 0, et au voisinage de $+\infty$, elle est négligeable devant $1/t^2$).
+On en déduit par le théorème de dérivation des intégrales à paramètres que $f$ est dérivable, avec
+$$f'(x)=\int_0^{+\infty}i\sqrt te^{-t}e^{itx}.$$
+On exprime le membre de droite de cette égalité en fonction de $f$ grâce à une intégration par parties,
+en posant $v(t)=\sqrt{t}$ et $u(t)=\frac1{ix-1}e^{(ix-1)t}$. Puisque $u(0)v(0)=0$ et 
+$\lim_{t\to+\infty}u(t)v(t)=0$, on en déduit 
+\begin{eqnarray*}
+f'(x)&=&\frac{-i}{2(ix-1)}\int_0^{+\infty}\frac{e^{-t}}{\sqrt t}e^{itx}dt\\
+&=&\frac{-i(-ix-1)}{2(x^2+1)}f(x)\\
+&=&\frac{-x+i}{2(x^2+1)}f(x).
+\end{eqnarray*}
+Il ne reste plus qu'à résoudre cette équation différentielle. On sait que les solutions sont les fonctions du type 
+$$f(x)=C\exp(A(x))$$
+où $C\in\mathbb R$ et $A$ est une primitive de 
+$$x\mapsto \frac{-x+i}{2(x^2+1)}.$$
+On commence par écrire 
+$$\frac{-x+i}{2(x^2+1)}=\frac{-x}{2(x^2+1)}+\frac{i}{2(x^2+1)}$$
+et on en déduit une primitive
+$$A(x)=\frac{-1}{4}\ln(x^2+1)+\frac{i}{2}\arctan(x).$$
+Ainsi, les solutions sont les fonctions de l'équation différentielle sont les fonctions
+$$f(x)=C(x^2+1)^{-1/4}\exp\left(\frac i2\arctan x\right),$$
+$C\in\mathbb R.$
+On détermine la valeur de la constante $C$ en calculant $f(0)=C$. On a par ailleurs
+$$f(0)=\int_0^{+\infty}\frac{e^{-t}}{\sqrt{t}}dt=2\int_0^{+\infty}e^{-u^2}du$$
+en effectuant le changement de variables $t=u^2$. Utilisant le rappel, on trouve
+que $C=\sqrt{\pi}$.</div></div></div>
+[exo=3596 ]
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1887"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1887"),	max:5, rating:1.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1887,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Semi-groupe de Poisson <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1887.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1887,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1887','imageenonce1887');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1887"></a><div class=inner id="innerenonce1887">Pour $\alpha&gt;0$, on pose $f(x)=e^{-\alpha |x|}$.
+<ol class="enumeratechiffre">
+<li> Calculer la transformée de Fourier de $f$. 
+<li> A l'aide de la formule de réciprocité, en déduire la transformée de Fourier de $x\mapsto\frac{1}{1+x^2}$.
+<li> Calculer $f\star f$; en déduire la transformée de Fourier de $x\mapsto\frac{1}{(1+x^2)^2}$.
+<li> Déterminer la transformée de Fourier de $x\mapsto \frac{x}{(1+x^2)^2}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1887','imageindication1887');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1887"></a><div class=inner id="innerindication1887" style="display:none;"><ol class="enumeratechiffre">
+<li> Séparer les intégrales sur $[0,+\infty[$ et $]-\infty,0]$.
+<li> Prendre $\alpha=1$.
+<li> Quel est l'effet de la transformée de Fourier sur le produit de convolution?
+<li> Dériver....
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1887','imagecorrige1887',1887);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1887"></a><div class=inner id="innercorrige1887" style="display:none;"><ol class="enumeratechiffre">
+<li> On a :
+\begin{eqnarray*}
+\hat{f}(\xi)&=&\int_0^{+\infty}e^{(-\alpha -i \xi)x}dx+\int_{-\infty}^0 e^{(\alpha -i\xi)x}dx\\
+&=&\dis\frac{1}{\alpha+i\xi}+\frac{1}{\alpha-i\xi}=\frac{2\alpha}{\alpha^2+\xi^2}.
+\end{eqnarray*}
+<li> Pour $\alpha=1$, $\hat{f}(\xi)=\frac{2}{1+\xi^2}.$ Cette fonction étant dans $L^1$, sa transformée de Fourier est $x\mapsto 2\pi f(-x)$. Puisque toutes les fonctions sont paires, la transformée de Fourier
+de $x\mapsto \frac{1}{1+x^2}$ est donc $x\mapsto \pi\times e^{-|x|}$.
+<li> On commence par calculer le produit de convolution. On a :
+\begin{eqnarray*}
+f\star f(x)&=&\int_{\mtr}e^{-\alpha(|x-y|+|y|)}dy\\
+&=&\int_{-\infty}^{0}e^{-\alpha(|x-y|-y)}+\int_0^{+\infty}e^{-\alpha(|x-y|+y)}dy.
+\end{eqnarray*}
+Si $x&gt;0$, on a :
+\begin{eqnarray*}
+f\star f(x)&=&\int_{-\infty}^0e^{-\alpha(x-2y)}dy+\int_{0}^x e^{-\alpha x}dy+\int_x^{+\infty} e^{-\alpha(2y-x)}dy\\
+&=&\frac{e^{-\alpha x}}{2\alpha}+xe^{-\alpha x}+e^{\alpha x}\frac{e^{-2\alpha x}}{2\alpha}\\
+&=&e^{-\alpha x}\left(x+\frac{1}{\alpha}\right).
+\end{eqnarray*}
+La fonction $f$ étant paire, $f\star f$ l'est aussi, et on a donc $f\star f(x)=e^{-\alpha|x|}\left(|x|+1/\alpha\right)$.
+Maintenant, la transformée de Fourier de cette fonction, pour $\alpha=1$ est $x\mapsto \frac{4}{(1+x^2)^2}$, puisque la transformée de Fourier 
+transforme le produit de convolution de deux fonctions en produit usuel. On applique une fois encore la formule d'inversion de la transformée de Fourier 
+(ce qui est légitime puisque toutes les fonctions sont intégrables). La transformée de Fourier de $x\mapsto \frac{1}{(1+x^2)^2}$ est la fonction
+$\dis x\mapsto \frac\pi 2 e^{-|x|}(|x|+1)$.
+<li> Remarquons que la dérivée de la fonction $x\mapsto \frac{1}{1+x^2}$ est $x\mapsto \frac{-2x}{(1+x^2)^2}$. En utilisant 
+les formules habituelles sur l'influence de la dérivation sur la transformée de Fourier, on en déduit :
+\begin{eqnarray*}
+\mathcal{F}\left(\frac{x}{(1+x^2)^2}\right)(\xi)&=&-\frac{1}{2}\mathcal{F}\left(\frac{d}{dx}\left(\frac{1}{1+x^2}\right)\right)(\xi)\\
+&=&-\frac{1}{2}\times i\xi \mathcal{F}\left(\frac{1}{1+x^2}\right)(\xi)=-\frac{i\pi}2\xi e^{-|\xi|}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1893"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1893"),	max:5, rating:2.037037037037, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1893,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Semi-groupe de la chaleur <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1893.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1893,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1893','imageenonce1893');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1893"></a><div class=inner id="innerenonce1893">Pour $t&gt;0$, on pose $\dis q_t(x)=\frac{1}{\sqrt{4\pi t}}e^{-x^2/4t}$. Calculer la transformée de Fourier de $q_t$. En déduire
+que $q_t\star q_s=q_{s+t}$ (la famille $(q_t)$ s'appelle semi-groupe de la chaleur). On rappelle que la transformée de Fourier de la fonction $f_a$ définie par $f_a(x)=e^{-ax^2}$ est $\hat{f_a}(x)=\left(\frac{\pi}{a}\right)^{1/2} e^{-\frac{x^2}{4a}}$.</div></div><div class=indication><a href="javascript:showAll('innerindication1893','imageindication1893');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1893"></a><div class=inner id="innerindication1893" style="display:none;">Pour la seconde question,
+prendre la transformée de Fourier du produit de convolution, et utiliser l'unicité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1893','imagecorrige1893',1893);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1893"></a><div class=inner id="innercorrige1893" style="display:none;">On sait que si $f_a(x)=e^{-ax^2}$, alors on a $\hat{f_a}(x)=\left(\frac{\pi}{a}\right)^{1/2} e^{-\frac{x^2}{4a}}$.
+Il suffit maintenant d'observer que $q_t(x)=\frac{1}{\sqrt{4\pi t}}f_{1/4t}(x)$. Il vient :
+$$\hat{q_t}(x)=\frac{1}{\sqrt{4\pi t}}\sqrt{4\pi t}e^{-t x^2}=e^{-t x^2}.$$
+D'autre part, on a :
+$$\mathcal{F}(q_t\star q_s)(x)=\hat{q_t}\hat{q_s}(x)=e^{-(s+t)x^2}=\mathcal{F}\left(q_{s+t}\right)(x).$$
+Par injectivité de la transformée de Fourier, on en déduit que $q_t\star q_s=q_{s+t}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3359"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3359"),	max:5, rating:0.95238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3359,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation de convolution <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3359.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3359,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3359','imageenonce3359');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3359"></a><div class=inner id="innerenonce3359">Résoudre dans $L^1(\mathbb R)$ l'équation de convolution $f\star e^{-2|x|}=e^{-3|x|}$. On rappelle que, pour $\alpha&gt;0,$ si $f_\alpha(x)=e^{-\alpha |x|},$ alors 
+$$\widehat{f_\alpha}(x)=\frac{2\alpha}{\alpha^2+x^2}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3359','imageindication3359');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3359"></a><div class=inner id="innerindication3359" style="display:none;">Appliquer la transformée de Fourier, trouver une formule pour $\hat f,$ puis utiliser le lemme de Riemann-Lebesgue</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3359','imagecorrige3359',3359);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3359"></a><div class=inner id="innercorrige3359" style="display:none;">Soit $f\in L^1(\mathbb R)$ telle que $f\star f_2=f_3.$ Appliquant la transformée de Fourier, on trouve 
+$$\hat f \widehat{f_2}=\widehat{f_3}$$
+ce qui donne en utilisant le rappel de l'énoncé, pour tout $x\in\mathbb R,$
+$$\hat f(x)=\frac 32\times \frac{x^2+4}{x^2+9}.$$
+Mais ceci contredit le lemme de Riemann-Lebesgue qui dit que $\lim_{x\to+\infty}\hat f(x)=0.$ Ainsi, l'équation n'admet pas de solutions.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1888"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1888"),	max:5, rating:1.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1888,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Régularité <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1888.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1888,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1888','imageenonce1888');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1888"></a><div class=inner id="innerenonce1888">Soit $f\in L^1(\mtr)$ telle que $\xi\mapsto \xi\hat{f}(\xi)\in L^1(\mtr)$. Montrer que $f$ coïncide presque partout avec une fonction $g$ de classe $C^1$ sur $\mtr$
+que l'on déterminera.</div></div><div class=indication><a href="javascript:showAll('innerindication1888','imageindication1888');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1888"></a><div class=inner id="innerindication1888" style="display:none;">Justifier d'abord que $\hat{f}\in L^1(\mtr)$, puis utiliser la formule d'inversion de la transformée de Fourier.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1888','imagecorrige1888',1888);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1888"></a><div class=inner id="innercorrige1888" style="display:none;">Prouvons d'abord que $\hat{f}\in L^1(\mtr)$. Puisque $\hat{f}$ est continue, $\hat{f}$ est bornée sur $[-1,1]$ ce qui justifie la convergence 
+de $\int_{-1}^1 |\hat{f}(\xi)|d\xi$. D'autre part, si $|\xi|\geq 1$, on a $|\hat{f}(\xi)|\leq |\xi\hat{f}(\xi)|$, ce qui prouve la convergence de 
+$\int_1^{+\infty}|\hat{f}(\xi)|d\xi$ ainsi que celle de $\int_{-\infty}^{-1}|\hat{f}(\xi)|d\xi$. 
+Maintenant, d'après la formule d'inversion de la transformée de Fourier, $f$ est égale presque partout à la fonction 
+$$g(x)=\int_\mtr \hat{f}(\xi)e^{2i\pi \xi x}d\xi.$$
+Mais il est clair que cette fonction $g$ est de classe $C^1$ (ou bien parce qu'il s'agit de la transformée de Fourier conjuguée
+d'une fonction $h$ tel que $x\mapsto xh(x)$ est intégrable, ou bien en dérivant directement sous le signe intégrale).</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3361"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3361"),	max:5, rating:1.8947368421053, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3361,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation intégrale <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3361.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3361,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3361','imageenonce3361');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3361"></a><div class=inner id="innerenonce3361">Pour $\alpha&gt;0$, on pose 
+\begin{align*}
+f_\alpha(x)&=e^{-\alpha |x|}\\
+g_\alpha(x)&=\frac{1}{x^2+\alpha^2}
+\end{align*}
+et on rappelle que $\widehat{f_\alpha}=2\alpha g_\alpha.$
+<ol class="enumeratechiffre">
+<li> Calculer $\widehat{g_\alpha}.$
+<li> Soit $0&lt;a&lt;b$. On souhaite déterminer toutes les fonctions $u\in L^1(\mathbb R)$ telles que, pour tout $x\in\mathbb R,$
+$$\int_{-\infty}^{+\infty}\frac{u(t)}{(x-t)^2+a^2}dt=\frac{1}{x^2+b^2}.$$
+<ol class="enumeratechiffre">
+<li> &Eacute;crire cette équation sous la forme d'une équation faisant intervenir un produit de convolution.
+<li> Résoudre l'équation.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3361','imageindication3361');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3361"></a><div class=inner id="innerindication3361" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la formule d'inversion de la transformée de Fourier.
+<li> <ol class="enumeratechiffre">
+<li>
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3361','imagecorrige3361',3361);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3361"></a><div class=inner id="innercorrige3361" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $f_\alpha$ et $g_\alpha$ sont dans $L^1(\mathbb R),$ on peut appliquer la formule d'inversion de la transformée de Fourier. De plus, par parité, on obtient 
+$$\widehat{g_\alpha}=\frac \pi{\alpha}{f_\alpha}.$$
+<li> <ol class="enumeratechiffre">
+<li> L'équation s'écrit $u\star g_a=g_b.$
+<li> Soit $u\in L^1(\mathbb R)$. Alors par injectivité de la transformée de Fourier, on a $u\star g_a=g_b$ si et seulement si
+$$\hat u \widehat{g_a}=\widehat g_b.$$
+En tenant compte du résultat précédent, c'est équivalent à dire que, pour tout $x\in\mathbb R,$
+$$\hat u(x)=\frac{a}b e^{-(b-a)|x|}=\frac{a(b-a)}{\pi b}\widehat{g_{b-a}}(x).$$
+En utilisant à nouveau l'injectivité de la transformée de Fourier, c'est encore équivalent à 
+$$u=\frac{a(b-a)}{\pi b}g_{b-a}.$$
+On a bien déterminé les solutions de l'équation intégrale.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1894"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1894"),	max:5, rating:2.2307692307692, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1894,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation intégrale <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1894.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1894,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1894','imageenonce1894');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1894"></a><div class=inner id="innerenonce1894">Le but de cet exercice est de rechercher des fonctions $u$ intégrables telles que, pour tout $x\in\mtr$,
+$$u(x)=e^{-|x|}+\beta\int_\mtr e^{-|x-s|}u(s)ds,$$
+où $\beta$ est un réel strictement positif. On rappelle que pour $\alpha&gt;0,$ la transformée de Fourier de la fonction $x\mapsto e^{-\alpha|x|}$ 
+est la fonction $x\mapsto \frac{2\alpha}{\alpha^2+x^2}.$ On pose $f(x)=e^{-|x|}$.
+<ol class="enumeratechiffre">
+<li> Ecrire cette équation sous forme d'une équation faisant intervenir un produit de convolution.
+<li> On suppose que l'équation admet une solution. Déterminer $\hat u$. En déduire que $\beta\in ]0,1/2[$.
+<li> Réciproquement, on suppose $\beta\in ]0,1/2[$. Démontrer que l'équation admet une unique solution et la déterminer.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1894','imageindication1894');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1894"></a><div class=inner id="innerindication1894" style="display:none;"><ol class="enumeratechiffre">
+<li> Séparer l'intégrale en deux.
+<li> Calculer $u\star f$.
+<li> Si $\beta\geq 1/2$, $\hat u$ ne sera pas définie en un point.
+<li> Inverser la transformée de Fourier.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1894','imagecorrige1894',1894);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1894"></a><div class=inner id="innercorrige1894" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est clair que cette équation peut aussi s'écrire $u=f+\beta u\star f$.
+<li> On suppose qu'il existe une solution $u$ intégrable. En appliquant la transformée de Fourier, on vérifie que $\hat{u}$ vérifie :
+$$\hat{u}=\frac{\hat{f}}{1-\beta\hat{f}}=\frac{2}{(1-2\beta)+\xi^2},$$
+où on a utilisé le résultat de la première question.
+Dans le cas où $\beta\geq 1/2$, ceci définit une fonction qui n'est pas continue sur $\mtr$ puisqu'elle n'est même pas définie en un point. L'équation
+n'admet donc pas de solution. 
+<li> Supposons $\beta\in ]0,1/2[$. Si l'équation admet une solution $u$, la question précédente nous donne une forme unique pour $\hat u$. Par injectivité de la transformée de Fourier, l'équation admet au plus une solution. Réciproquement, posons
+$$u(x)=\frac{1}{\sqrt{1-2\beta}}e^{-\sqrt{1-2\beta}|x|}.$$
+On fait ce choix car on sait alors que 
+$$\hat u(\xi)=\frac{2}{(1-2\beta)+\xi^2}$$
+et c'est exactement ce que l'on veut. D'autre part,
+\begin{align*}
+\mathcal F(f+\beta u\star f)(x)&=\hat f(x)+\beta \hat u(x)\hat f(x)\\
+&=\frac{2}{1+x^2}+\beta \frac{2}{(1-2\beta)+x^2}\times \frac{2}{1+x^2}\\
+&=\frac{2}{(1-2\beta)+x^2}.
+\end{align*}
+Ainsi, $\hat u= \mathcal F(f+\beta u\star f)$ et par injectivité de la transformée de Fourier, $u=\mathcal F(f+\beta u\star f).$ Ainsi, $u$ est solution de l'équation.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3475"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3475"),	max:5, rating:2.2307692307692, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3475,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation différentielle résolue avec la transformée de Fourier <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3475.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3475,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3475','imageenonce3475');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3475"></a><div class=inner id="innerenonce3475">Soit $a\in\mathbb R$. Déterminer les fonctions $f\in L^1(\mathbb R)\cap\mathcal C^1(\mathbb R)$ telles que, pour tout $t\in\mathbb R,$ $f'(t)=f(t+a)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3475','imageindication3475');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3475"></a><div class=inner id="innerindication3475" style="display:none;">Calculer la transformée de Fourier des deux membres et démontrer que $\hat f=0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3475','imagecorrige3475',3475);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3475"></a><div class=inner id="innercorrige3475" style="display:none;">Supposons qu'une telle fonction $f$ existe. Alors $f'\in L^1(\mathbb R)$ et on sait que, pour tout $x\in\mathbb R,$
+$$\widehat{f'}(x)=ix\hat f(x).$$
+D'autre part, si on note $g$ la fonction définie pour $x\in\mathbb R$ par $g(x)=f(x+a)$, alors 
+$$\widehat{g}(x)=e^{iax}\hat f(x).$$
+On doit donc avoir, pour tout $x\in\mathbb R,$ $ix\hat f(x)=e^{iax}\hat f(x).$ Prenons le module de chacun de ces membres. On obtient que, pour $x\neq \pm 1,$ 
+$\hat f(x)=0$. Par continuité de la transformée de Fourier, ceci est vrai pour tout $x\in\mathbb R$. Par injectivité de la transformée de Fourier, $f=0$. Réciproquement, la fonction nulle vérifie bien cette équation.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1890"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1890"),	max:5, rating:2.2857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1890,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions impaires <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1890.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1890,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1890','imageenonce1890');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1890"></a><div class=inner id="innerenonce1890">Soit $f\in L^1(\mathbb R)$. On dira dans cet exercice que $f$ est impaire si pour presque tout $x&gt;0,$ $f(-x)=-f(x).$
+<ol class="enumeratechiffre">
+<li> Démontrer que 
+$$\int_{\mathbb R}f(x)e^{-itx^2}dx=\frac 12\int_0^{+\infty}\left(\frac{f(\sqrt u)}{\sqrt u}+\frac{f(-\sqrt u)}{\sqrt u}\right)e^{-iut}du.$$
+<li> En déduire que $f$ est impaire si et seulement si, pour tout $t\in \mathbb R$, $\int_{\mathbb R}f(x)e^{-itx^2}dx=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1890','imageindication1890');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1890"></a><div class=inner id="innerindication1890" style="display:none;"><ol class="enumeratechiffre">
+<li> Couper l'intégrale en deux et faire un changement de variables.
+<li> Injectivité de la transformée de Fourier.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1890','imagecorrige1890',1890);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1890"></a><div class=inner id="innercorrige1890" style="display:none;"><ol class="enumeratechiffre">
+<li> On coupe l'intégrale en deux, on se ramène à $[0,+\infty[$, puis on fait un changement de variables $u=x^2$ :
+\begin{eqnarray*}
+\int_{\mathbb R }f(x)e^{-itx^2}dx&=&\int_{-\infty}^0 f(x)e^{-itx^2}dx+\int_{0}^{+\infty}f(x)e^{-itx^2}dx\\
+&=&\int_0^{+\infty}\left(f(-x)+f(x)\right)e^{-itx^2}dx\\
+&=&\frac 12\int_0^{+\infty}\frac{1}{\sqrt u}\left(f(-\sqrt u)+f(\sqrt u)\right)e^{-itu}du.
+\end{eqnarray*}
+<li> D'abord, si $f$ est impaire, alors pour presque tout $u\geq 0$, on a 
+$$f(-\sqrt u)=-f(\sqrt u),$$
+et donc la fonction à l'intérieur de l'intégrale est presque partout nulle et on a $\int_{\mathbb R}f(x)e^{-itx^2}dx=0$. Réciproquement, si cette intégrale est nulle, posons 
+$$g(x)=\mathbf 1_{]0,+\infty[}(x) \frac{1}{\sqrt x}\left(f(-\sqrt x)+f(\sqrt x)\right).$$
+Alors on sait d'après la première question que $\hat g=0$. Par injectivité de la transformée de Fourier, $g=0$. Donc, pour presque tout $x&gt;0$, on a $f(-\sqrt x)=-f(\sqrt x)$. Ceci entraîne que $f$ est impaire.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3357"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3357"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3357,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Continuité des caractères de l'algèbre $L^1(\mathbb R)$ <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3357.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3357,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3357','imageenonce3357');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3357"></a><div class=inner id="innerenonce3357">Soit $f\in L^1(\mathbb R)$ on note $f^{*n}$ le produit de convolution $f\star\cdots\star f$ itéré, où $f$ apparaît $n$ fois. Soit $f\in L^1(\mathbb R)$ telle que $\|f\|_1&lt;1$.  
+<ol class="enumeratechiffre">
+<li> Démontrer que $g=-\sum_{n=1}^{+\infty}f^{*n}$ définit un élément
+de $L^1(\mathbb R)$ et qu'il vérifie $f\star g=f+g.$
+<li> En utilisant la transformée de Fourier, démontrer que si $f\star h=f+h$ avec $h\in L^1(\mathbb R),$ alors $h=g.$
+<li> Soit $\chi:L^1(\mathbb R)\to \mathbb C$ une forme linéaire multiplicative, c'est-à-dire que $\chi(u\star v)=\chi(u)\chi(v)$.
+<ol class="enumeratechiffre">
+<li> En utilisant le résultat de la première question, démontrer que $\chi(f)\neq 1.$
+<li> En déduire qu'on ne peut pas avoir $|\chi(f)|\geq 1.$
+<li> En déduire que $\chi$ est continue et de norme inférieure ou égale à $1$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3357','imageindication3357');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3357"></a><div class=inner id="innerindication3357" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li>
+<li> <ol class="enumeratechiffre">
+<li> Faire un raisonnement par l'absurde en appliquant $\chi$ à l'égalité $f\star g=f+g.$
+<li> Faire à nouveau un raisonnement par l'absurde et considérant $f_1=f/\chi(f)$ à qui on peut appliquer le résultat de la question précédente.
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3357','imagecorrige3357',3357);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3357"></a><div class=inner id="innercorrige3357" style="display:none;"><ol class="enumeratechiffre">
+<li> De l'inégalité $\|f\star g\|_1\leq \|f\|_1\|g\|_1,$ on déduit par récurrence que $\|f^{*n}\|_1\leq \|f\|_1^n$. Ainsi, la série $\sum_n \|f^{*n}\|_1$ est une série convergente. Puisque $L^1(\mathbb R)$ est un espace de Banach, ceci entraîne la convergence de $\sum_{n=1}^{+\infty}f^{*n}$ vers un élément $g$ de $L^1(\mathbb R).$ De plus, par continuité de $h\in L^1(\mathbb R)\mapsto h\star f,$ on a 
+$$g\star f=-\sum_{n=1}^{+\infty} f^{*(n+1)}=g+f.$$
+<li> Remarquons, par continuité de la transformée de Fourier, que 
+$$\hat g=-\sum_{n=1}^{+\infty}\hat f^n=\frac{\hat f}{\hat f-1}$$
+puisque $\|\hat f\|_\infty\leq \|f\|_1&lt;1.$
+D'autre part, si $f\star h=f+h$, on a $\hat f\hat h=\hat f+\hat h$ et donc 
+$$\hat h=\frac{\hat f}{\hat f-1}.$$
+Ainsi, $\hat h=\hat g$ et par injectivité de la transformée de Fourier, $h=g.$
+<li> <ol class="enumeratechiffre">
+<li> Raisonnons par l'absurde et supposons que $\chi(f)=1.$ Alors, en appliquant $\chi$ à l'égalité $f\star g=f+g,$ on trouve
+$$\chi(f)\chi(g)=\chi(f)+\chi(g)\implies \chi(g)=1+\chi(g)$$
+ce qui est impossible.
+<li> Si $|\chi(f)|\geq 1,$ posons $f_1=f/\chi(f).$ Alors $\|f_1\|_1\leq 1,$ et d'après le résultat de la question précédente, on ne peut pas avoir $\chi(f_1)=1.$ Mais $\chi(f_1)=\chi(f)/\chi(f)=1,$ et on a à nouveau une contradiction.
+<li> On a donc démontré que si $\|f\|_1&lt;1,$ alors $|\chi(f)|\leq 1.$ Ceci prouve que $\chi$ est continue avec $\|\chi\|\leq 1.$
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1889"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1889"),	max:5, rating:3.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1889,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Non-densité des translatées <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1889.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1889,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1889','imageenonce1889');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1889"></a><div class=inner id="innerenonce1889">Soit $f\in L^1(\mathbb R)$ telle qu'il existe $x_0\in\mathbb R$ vérifiant
+$\hat{f}(x_0)=0$. Montrer que l'espace vectoriel engendré par 
+les $(\tau_x f)$, $x\in\mathbb R$ n'est pas dense dans $L^1(\mathbb R)$, 
+où $\tau_xf(t)=f(t-x)$.</div></div><div class=indication><a href="javascript:showAll('innerindication1889','imageindication1889');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1889"></a><div class=inner id="innerindication1889" style="display:none;">Démontrer qu'une fonction dont la transformée de Fourier ne s'annule pas ne peut pas être approchée par une combinaison linéaire de $\tau_x f.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1889','imagecorrige1889',1889);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1889"></a><div class=inner id="innercorrige1889" style="display:none;">Notons $E$ l'espace vectoriel engendré par les $\tau_x f,$ $x\in\mathbb R,$ et fixons $g$ une fonction de $L^1(\mathbb R)$ dont la transformée de Fourier ne s'annule pas en $x_0$ (par exemple la fonction $x\mapsto e^{-x^2}$).
+Soit $h\in E.$ Alors on sait que 
+$$|\hat h(x_0)-\hat g(x_0)|\leq \|\hat h-\hat g\|_\infty\leq \|h-g\|_1.$$
+Or, écrivons $h=\sum_{k=1}^n a_k \tau_{x_k}f.$
+Alors, 
+\begin{align*}
+\hat h(x_0)&=\sum_{k=1}^n a_k e^{-ix_k x_0}\hat f(x_0)=0.
+\end{align*}
+On a donc $\|h-g\|_1\geq |\hat g(x_0)|$ et ainsi $g$ n'est pas dans l'adhérence de $E.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1895"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1895"),	max:5, rating:3.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1895,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation de la chaleur <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1895.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1895,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1895','imageenonce1895');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1895"></a><div class=inner id="innerenonce1895">On considère une tige homogène très mince de longueur infinie. La température de la tige au temps $t\geq 0$ au point d'abscisse $x\in\mtr$ est notée $u(t,x)$. On suppose que cette fonction
+vérifie l'équation suivante, appelée équation de la chaleur :
+$$\left\{
+\begin{array}{ll}
+\displaystyle \frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0&(t,x)\in]0,+\infty[\times\mtr\\
+u(0,x)=u_0(x).
+\end{array}\right.$$
+On suppose que $u_0\in L^1(\mtr)$, et on cherche une solution à l'équation précédente, $C^1$ par rapport à la variable de temps sur $]0,+\infty[$, $C^2$ par rapport à la variable d'espace sur $\mathbb R$, et telle que $u(t,\cdot)$ tend vers $u_0(\cdot)$ dans $L^1$ lorsque $t$ tend vers $0$.
+<ol class="enumeratechiffre">
+<li> Analyse : On suppose que l'équation précédente possède une solution $u:[0,+\infty[\times\mathbb R$ telle qu'il existe une fonction $g\in L^1(\mtr)$,
+tendant vers $0$ en l'infini, vérifiant, pour tout $t\geq 0$,
+$$|u(t,x)|\leq g(x),\quad \left|\frac{\partial u}{\partial t}(t,x)\right|\leq g(x), \quad \left|\frac{\partial u}{\partial x}(t,x)\right|\leq g(x),\quad \left|\frac{\partial^2 u}{\partial x^2}(t,x)\right|\leq g(x).$$ 
+On note $\mathcal{F}_x(u)(t,x)$ 
+la transformée de Fourier de $u$ par rapport à la variable d'espace $x$ :
+$$\mathcal{F}_x(u)(t,x)=\int_{\mtr}u(t,\xi)e^{-i\xi x}d\xi.$$
+<ol class="enumeratechiffre">
+<li> Montrer que 
+$$\mathcal{F}_x\left(\frac{\partial u}{\partial t}\right)=\frac{\partial }{\partial t}\mathcal{F}_x(u).$$
+Montrer aussi que 
+$$\mathcal{F}_x\left(\frac{\partial^2 u}{\partial x^2}\right)=- x^2\mathcal{F}_x(u).$$
+<li> Pour chaque $x\in\mtr$ fixé, on note $v:[0,+\infty[\to\mathbb R$ la fonction définie par $v(t)=\mathcal{F}_x(u)(t,x)$. Montrer que $v$ est solution d'une équation différentielle sur $]0,+\infty[$.
+<li> Résoudre cette équation.
+<li> En déduire la valeur de $u$ - on rappelle que
+$$\mathcal{F}_x\left(\frac{1}{\sqrt{4\pi t}}\exp\left(-\frac{x^2}{4t}\right)\right)(\xi)=e^{-\xi^2 t}.$$
+</ol>
+<li> Synthèse : vérifier que la fonction $u$ mise en évidence lors de l'analyse est bien solution de l'équation de la chaleur.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1895','imageindication1895');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1895"></a><div class=inner id="innerindication1895" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li>
+<li> Appliquer la transformée de Fourier à l'équation aux dérivées partielles.
+<li> Ne pas oublier la constante en $x$. Pour obtenir sa valeur en fonction des données de l'énoncé, regarder les valeurs pour $t=0$.
+<li> Remarquer que la transformée de Fourier transforme le produit de convolution en produit.
+</ol>
+<li>  
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1895','imagecorrige1895',1895);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1895"></a><div class=inner id="innercorrige1895" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> D'abord, on a 
+$$\mathcal{F}_x\left(\frac{\partial u}{\partial t}\right)(t,x)=\int_{\mtr}e^{-i\xi x} \frac{\partial u}{\partial t}(t,\xi)d\xi.$$
+De la majoration $\left|\frac{\partial u}{\partial t}(t,\xi)\right|\leq g(\xi)$, on déduit que l'on peut permuter les symboles d'intégration et
+de dérivation, et finalement on a :
+$$\mathcal{F}_x\left(\frac{\partial u}{\partial t}\right)(t,x)=\frac{\partial \mathcal F_x(u)}{\partial t}(t,x).$$
+D'autre part, puisque $\frac{\partial^2 u}{\partial x^2}$ et $\frac{\partial u}{\partial x}$ sont intégrables, et que, à $t$ fixé, $u(t,x)$ et $\frac{\partial u}{\partial x}(t,x)$ tendent vers $0$ lorsque $|x|$
+tend vers $+\infty,$ on a aussi,
+par une double intégration par parties :
+$$\mathcal{F}_x\left(\frac{\partial^2 u}{\partial x^2}\right)(t,x)=(i x)^2\mathcal F_x{u}(t,x).$$
+<li> 
+Le fait d'appliquer la transformée de Fourier sur l'équation initiale donne, pour $x$ fixé  et $t&gt;0$ :
+$$v'(t)+ x^2v(t)=0.$$
+<li> On résout cette question pour tout $x\in\mtr$ fixé. On trouve, pour $t&gt;0,$ :
+$$\mathcal F_x(u)(t,x)=h(x)e^{- x^2 t}.$$
+Mais $u(t,\cdot)\to u_0(\cdot)$ dans $L^1$ lorsque $t\to 0$ et donc, par continuité de la transformée de Fourier, $\mathcal F_x(u)(t,x)\to \widehat{u_0}(x)$ pour tout $x\in\mathbb R$ lorsque $t\to 0$. On en déduit 
+$h(x)=\widehat{u_0}(x)$ et finalement 
+$$\mathcal F(u)(t,x)=\widehat{u_0}(x)e^{-x^2 t}.$$
+<li> Remarquons que l'on a :
+$$\mathcal F_x(u)(t,x)=\mathcal{F}_x\left(u_0\star q_t\right),$$
+où $q_t$ est la fonction donnée par l'énoncé, c'est-à-dire
+$$q_t(x)=\frac{1}{\sqrt{4\pi t}}\exp\left(-\frac{x^2}{4t}\right).$$
+Par injectivité de la transformée de Fourier, on obtient 
+$$u(t,x)=u_0(x)\star\left[\frac{1}{\sqrt{4\pi t}}\exp\left(-\frac{x^2}{4t}\right)\right].$$
+</ol>
+<li> On pose donc $u(t,x)=u_0\star q_t$, l'intégration se faisant par rapport à la variable d'espace $x.$ Puisque $(q_t)_{t&gt;0}$ est une unité approchée et que $u\in L^1$, on a bien que $u(t,\cdot)$ converge vers $u_0(\cdot)$ dans $L^1$.  En utilisant à nouveau que  $u_0$ est dans $L^1$ et que $q_t$ et toutes ses dérivées sont à décroissance rapide, on prouve que $u$ est $\mathcal C^\infty$ par rapport à la variable d'espace et que, pour tout $j\geq 1,$ 
+$$\frac{\partial^j u}{\partial x^j}=u_0\star q_t^{(j)}.$$ 
+En particulier, puisque
+$$\sqrt{4\pi t}q_t'(x)=-\frac{x}{2t}\exp\left (-\frac{x^2}{4t}\right)$$
+et
+$$\sqrt{4\pi t}q_t''(x)=\left(\frac{-1}{2t}+\frac{x^2}{4t^2}\right)\exp\left (-\frac{x^2}{4t}\right)$$
+on a 
+$$\sqrt{4\pi t}\frac{\partial^2 u}{\partial x^2}(t,x)=\int_{\mathbb R}u_0(x-y)
+\left(\frac{-1}{2t}+\frac{y^2}{4t^2}\right)\exp\left (-\frac{y^2}{4t}\right)dy.$$
+D'autre part, considérons $x\in\mathbb R$ fixé et remarquons que 
+$$\sqrt{4\pi t}u(t,x)=\int_{\mathbb R}u_0(x-y)\exp\left (-\frac{y^2}{4t}\right)dy.$$
+Soit $0&lt;a&lt;b$ et posons
+$$F(t,y)=u_0(x-y)\exp\left (-\frac{y^2}{4t}\right).$$
+Alors
+$$\frac{\partial F}{\partial y}(t,y)=u_0(x-y)\exp\left (-\frac{y^2}{4t}\right)
+\left(\frac{-1}{2t}+\frac{y^2}{4t^2}\right).$$
+En particulier, il existe $C&gt;0$ tel que, pour $t\in[a,b]$, 
+$$\left|\frac{\partial F}{\partial y}(t,y)\right|\leq C |u_0(x-y)| (1+y^2) \exp\left (-\frac{y^2}{4b}\right).$$
+Cette dernière fonction étant intégrable, on peut appliquer le théorème de dérivation sous le signe intégral, et on trouve
+$$\sqrt{4\pi t}\frac{\partial u}{\partial t}(t,x)=\int_{\mathbb R}u_0(x-y)
+\left(\frac{-1}{2t}+\frac{y^2}{4t^2}\right)\exp\left (-\frac{y^2}{4t}\right)dy.$$
+Ainsi, $u$ est bien solution de l'équation aux dérivées partielles.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1896"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1896"),	max:5, rating:3.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1896,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Espace de Wiener <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1896.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1896,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1896','imageenonce1896');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1896"></a><div class=inner id="innerenonce1896">On note $W=L^1(\mtr)\cap \mathcal{F}(L^1(\mtr))$, espace de Wiener constitué des fonctions intégrables qui sont également la transformée 
+de Fourier d'une fonction intégrable.
+<ol class="enumeratechiffre">
+<li> Montrer que $f\in W\iff f\in L^1(\mtr)$ et $\hat{f}\in L^1(\mtr)$.
+<li> Montrer que $f\in W\implies f\in L^p(\mtr)$ pour tout $p\in [1,+\infty]$.
+<li> Montrer que $f\in W\iff \hat{f}\in W$.
+<li> Montrer que si $(f,g)\in W^2$ alors $f\star g\in W$ et $fg\in W$.
+<li> Pour $f\in W$, on pose $N(f)=\|f\|_1+\|\hat{f}\|_1$. Montrer que $N$ est une norme sur $W$.
+<li> Dans cette question, on va prouver que $W$, muni de la norme $N$, est un espace de Banach. Pour cela, on considère
+$(f_n)$ une suite de Cauchy de $W$ pour cette norme.
+<ol class="enumeratechiffre">
+<li> Montrer l'existence de $f\in L^1(\mtr)$ et de $g\in L^1(\mtr)$ tels que $\|f_n-f\|_1\to 0$ et $\|\hat{f_n}-g\|_1\to 0$.
+<li> Montrer que $\hat{f}=g$ presque partout.
+<li> En déduire que la suite $(f_n)$ converge dans $(W,N)$, puis que $(W,N)$ est un espace de Banach.
+</ol>
+<li> On pose $h(x)=e^{-\pi x^2}$, et on pose $h_n(x)=nh(n x)$, dont on rappelle que c'est une unité approchée.
+<ol class="enumeratechiffre">
+<li> Prouver que si $f\in L^1(\mtr)$, alors $f\star h_n$ est continue.
+<li> Prouver que si $f\in L^1(\mtr)$, alors $f\star h_n$ est dans $W$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Soit $f\in L^1(\mtr)\cap L^p(\mtr)$. Montrer que $\|f\star h_n-f\|_p\to 0$.
+<li> En déduire que $W$ est dense dans $L^p(\mtr)$ pour $p\in[1,+\infty[$.
+</ol>
+<li>
+<ol class="enumeratechiffre">
+<li> Soit $f\in L^1(\mtr)\cap C_0(\mtr)$. Montrer que $\|f\star h_n-f\|_\infty\to 0$. 
+<li> En déduire que $W$ est dense dans $C_0(\mtr)$ muni de $\|.\|_\infty$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1896','imageindication1896');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1896"></a><div class=inner id="innerindication1896" style="display:none;"><ol class="enumeratechiffre">
+<li> Inverser la transformée de Fourier.
+<li> Prouver d'abord que $f$ est dans $L^\infty$. Pour montrer que $f$ est dans $L^p$, dominer $|f(t)|^p$ en fonction 
+de $\|f\|_\infty$ et $|f(t)|$.
+<li> Un sens est trivial. Pour l'autre, utiliser la formule de réciprocité.
+<li> Utiliser le lien entre transformée de Fourier, produit de convolution et produit de fonctions. Utiliser aussi les deux
+questions précédentes pour les appartenances à $L^1(\mtr)$.
+<li> Vérifier les 3 axiomes.
+<ol class="enumeratechiffre">
+<li> Se ramener à la complétude de $L^1(\mtr)$.
+<li> Utiliser la continuité de la transformation de Fourier de $L^1(\mtr)$ dans $C_0(\mtr)$.
+<li> Résumer les travaux précédents.
+</ol>
+<ol class="enumeratechiffre">
+<li> Théorème de convergence dominée.
+<li> Question précédente.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1896','imagecorrige1896',1896);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1896"></a><div class=inner id="innercorrige1896" style="display:none;"><ol class="enumeratechiffre">
+<li> D'abord, si $f\in W$, alors par la formule d'inversion de la transformée de Fourier,
+$\hat{f}(x)=g(-x)$ où $g$ est défini par $\hat{g}=f$. Donc $\hat{f}\in L^1(\mtr)$. Réciproquement,
+si $f\in L^1(\mtr)$ est telle que $\hat{f}\in L^1(\mtr)$, il suffit de poser $g(x)=\hat{f}(-x)$, 
+et la même formule d'inversion de la transformée de Fourier donne le résultat!
+<li> Soit $g\in L^1(\mtr)$ tel que $\hat{g}=f$. Par les propriétés de la transformée de Fourier d'une fonction intégrable, 
+$f\in L^\infty$. D'autre part, par hypothèse, $f\in L^1$. Pour montrer que $f\in L^p$, avec $p\in]1,+\infty[$, on peut remarquer que :
+$$|f(t)|^p \leq \|f\|_\infty^{p-1}|f(t)|,$$
+ce qui donne le résultat.
+<li> D'abord, si $f\in W$, $\hat{f}$ est clairement dans $W$ puisque c'est la transformée de Fourier d'une
+fonction intégrable. La réciproque est presque évidente en utilisant la formule de réciprocité de la transformation de Fourier. En effet, si $\hat{f}\in L^1(\mtr)$,
+on sait que $f=\hat{g}$ où $g(x)=\hat{f}(-x)$. Ce qui prouve le résultat.
+<li> D'abord, les propriétés du produit de convolution entraînent $f\star g\in L^1(\mtr)$. D'autre part,
+si $f=\hat{f_1}$ et $g=\hat{g_1}$, on a $\mathcal{F}(f_1g_1)=\hat{f_1}\star \hat{g_1}=f\star g$. Il suffit donc de vérifier
+que $f_1g_1$ est intégrable : mais ceci vient du fait que $f_1$ et $g_1$ sont encore dans $W$ d'après la question 2., et sont donc dans $L^2$ 
+d'après la question 1. Et le produit de deux fonctions de $L^2$ est dans $L^1$. Pour le produit, c'est presque pareil. Il est dans $L^1$ car les fonctions
+$f$ et $g$ sont dans $L^2$, et on a $\mathcal{F}(f_1\star g_1)=fg$. Enfin, $f_1\star g_1$ est intégrable comme produit de convolution
+de deux fonctions intégrables.
+<li> Il suffit de vérifier les 3 axiomes, ce qui se fait aisément d'après les propriétés de la norme et la linéarité de la transformation de Fourier.
+<li> <ol class="enumeratechiffre">
+<li> Remarquons que $\|f_n-f_p\|_1\leq N(f_n-f_p)$ et $\|\hat{f_n}-\hat{f_p}\|_1\leq N(f_n-f_p)$ : les suites $(f_n)$ et $(\hat{f_n})$ sont
+de Cauchy dans $L^1(\mtr)$, qui est complet, ce qui donne l'existence de $f$ et $g$.
+<li> Par continuité de la transformation de Fourier de $L^1(\mtr)$ dans $C_0(\mtr)$, on a $\|\hat{f_n}-\hat{f}\|_{\infty}\to 0$.
+Fixons maintenant $A&gt;0$. De l'inégalité 
+$$\int_{-A}^A|\hat{f}(t)-\hat{f_n}(t)|dt\leq 2A \|\hat{f_n}-\hat{f}\|_\infty,$$
+on déduit que $(\hat{f_n})$ tend vers $\hat{f}$ dans $L^1([-A,A])$. Maintenant, on a aussi $(\hat{f_n})$ qui tend vers $g$ dans $L^1([-A,A])$. 
+Par unicité de la limite, $\hat{f}=g$ pour presque tout $x\in[-A,A]$. $A$ étant choisi arbitraire, en prenant une suite $(A_k)$ qui tend vers $+\infty$,
+on en déduit que $\hat{f}=g$ presque partout.
+<li> On résume les travaux précédents : la fonction $f$ précédemment exhibée est dans l'espace de Wiener, 
+puisque sa transformée de Fourier est intégrable. En outre, on vient de prouver
+que $N(f_n-f)\to 0$. C'est que $(f_n)$ converge vers $f$ pour $N$ dans $W$, ce qui prouve la complétude.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Il s'agit d'une application immédiate du théorème de continuité sous le signe intégrale, une fois le produit de convolution
+écrit sous la forme 
+$$f\star h_n(x)=\int_{\mtr}h_n(x-t)f(t)dt.$$
+<li> Remarquons d'abord que $f\star h_n$ est bien élément de $L^1$ (car $h_n\in L^\infty$). D'autre part,
+$\widehat{f\star h_n}=\hat{f}\hat{h_n}$ qui est élément de $L^1$ car $\hat{f}$ est élément de $L^\infty(\mtr)$ 
+et $\hat{h_n}$ est élément de $L^1(\mtr)$. C'est une conséquence de la question 3., car $h_n\in W$ : $h_n$ est une gaussienne et la transformée de Fourier d'une gaussienne est une gaussienne (c'est-à-dire une fonction du type $x\mapsto e^{-ax^2}$).
+</ol>
+<li>
+<ol class="enumeratechiffre">
+<li> C'est une conséquence "standard" des propriétés des unités approchées.
+<li> $f\star h_n$ est dans $W$, et converge vers $f$ : on en déduit que $W$ est dense dans $L^1(\mtr)\cap L^p(\mtr)$,
+pour la norme de $L^p(\mtr)$. Maintenant, $L^1(\mtr)\cap L^p(\mtr)$ est dense dans $L^p(\mtr)$, puisqu'il contient les fonctions
+continues à support compact. D'où le résultat.
+</ol>
+<li>
+<ol class="enumeratechiffre">
+<li> Ce fait est à nouveau une propriété "standard" des unités approchées.
+<li> C'est le même raisonnement que précédemment, car une fois encore, les fonctions continues à support compact sont denses dans $C_0(\mtr)$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1891"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1891"),	max:5, rating:4.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1891,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Non-Surjectivité de la transformée de Fourier <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1891.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1891,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1891','imageenonce1891');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1891"></a><div class=inner id="innerenonce1891">On sait que la transformation de Fourier est une application linéaire continue de $L^1(\mtr)$ dans l'ensemble des fonctions continues de limite nulle 
+à l'infini $C_0(\mtr)$. Le but de cet exercice est de prouver qu'ainsi définie, la transformée de Fourier n'est pas surjective, c'est-à-dire qu'il existe
+des fonctions de $C_0(\mtr)$ qui ne sont pas la transformée de Fourier d'une fonction de $L^1(\mtr)$. On fixe $f\in L^1(\mtr)$, impaire.
+<ol class="enumeratechiffre">
+<li> Montrer que pour tout $x\in\mtr$, on a :
+$$\hat{f}(x)=-2i \int_0^{+\infty} f(t)\sin(xt)dt.$$
+<li> Prouver que la fonction $\phi(x)=\int_x^{+\infty}\frac{\sin u}{u}du$ est définie, continue et bornée sur $[0,+\infty[$.
+<li> Montrer que l'on a :
+$$\int_1^R \frac{\hat{f}(t)}{t}dt=\int_0^{+\infty}-2i f(x)\left(\int_{ x}^{ R x}\frac{\sin u}{u}du\right)dx.$$
+En déduire :
+$$\lim_{R\to +\infty}\int_1^R \frac{\hat{f}(t)}{t}dt=-2i\int_0^{+\infty}f(x)\phi(x)dx.$$ 
+<li> Soit $g$ la fonction définie sur $\mtr$ par 
+$$g(x)=\frac{\arctan x}{\ln(2+x^2)}.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $g\in C_0(\mtr)$.
+<li> On suppose que $g$ est la transformée de Fourier d'une fonction intégrable $f$. Montrer que $f$ est nécessairement impaire (presque partout).
+<li> En déduire que $g$ n'est pas la transformée de Fourier d'une fonction intégrable.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1891','imageindication1891');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1891"></a><div class=inner id="innerindication1891" style="display:none;"><ol class="enumeratechiffre">
+<li> Découper l'intégrale en 2 autour de 0, et faire le changement de variables $u=-t$ dans la première intégrale.
+<li> Prouver la convergence à l'aide d'une intégration par parties. La continuité est évidente, pour la bornitude, étudier la limite en $+\infty$.
+<li> Pour la première partie, il suffit d'utiliser le théorème de Fubini (justifier!). Pour la seconde, le théorème de convergence dominée (justifier!).
+<li> <ol class="enumeratechiffre">
+<li> Trivial!
+<li> Utiliser l'injectivité de la transformée de Fourier!
+<li> Que vaut $\lim_{R\to+\infty}\frac{g(t)}{t}dt$?
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1891','imagecorrige1891',1891);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1891"></a><div class=inner id="innercorrige1891" style="display:none;"><ol class="enumeratechiffre">
+<li> On découpe l'intégrale en 2, et on fait le changement de variables $u=-t$ dans la première intégrale :
+\begin{eqnarray*}
+\hat{f}(x)&=&\int_{-\infty}^0f(t)e^{-ixt}dt+\int_{0}^{+\infty}f(t)e^{-i xt}dt\\
+&=&-\int_{0}^{+\infty} f(t)e^{i xt}dt+\int_0^{+\infty}f(t)e^{-i xt}dt\\
+&=&-2i \int_0^{+\infty} f(t)\sin( xt)dt.
+\end{eqnarray*}
+<li> D'abord, la fonction $u\mapsto \frac{\sin u}{u}$ est continue sur $[0,+\infty[$, une fois prolongée par 1 en 0. D'autre part, il est bien connu que, si la fonction $u\mapsto \frac{\sin u}{u}$
+n'est pas intégrable, l'intégrale $\dis \int_1^X\frac{\sin u}{u}du$ admet une limite quand $X\to+\infty$. Il suffit pour cela de faire une intégration par parties :
+$$\int_1^X\frac{\sin u}{u}du=\left[\frac{-\cos u}{u}\right]_1^X-\int_1^X \frac{\cos u}{u^2}du,$$
+la première quantité admettant une limite si $X$ tend vers $+\infty$, tandis que la fonction $u\mapsto\frac{\cos u}{u^2}$
+est intégrable sur $[1,+\infty[$. Ceci justifie donc que la fonction $\phi$ est définie. D'autre part, elle est continue sur $[0,+\infty[$, car, par la relation de Chasles,
+$$\phi(x)=\int_x^1\frac{\sin u}udu+\int_1^{+\infty}\frac{\sin u}udt,$$
+et par le théorème fondamental du calcul intégral, $x\mapsto \int_x^1\frac{\sin u}udu$ est continue (et même de classe $\mathcal C^1$ sur $[0,+\infty[$. Enfin, $\phi$ admet $0$ pour limite en $+\infty$ (c'est le reste d'une intégrale convergente) : on en déduit qu'elle est bornée sur $[0,+\infty[$.
+<li> On a :
+$$\int_1^R \frac{\hat{f}(t)}{t}dt=\int_1^R\left(\int_0^{+\infty}\frac{-2i}{t}f(x)\sin( xt)dt\right)dx.$$
+Remarquons que $h(t,x)=\frac{-2i}{t}f(x)\sin( xt)$ est dans $L^1([1,R]\times [0,+\infty[)$ : on a en effet 
+$$|h(t,x)|\leq \frac{2}{t}|f(x)|,$$
+et la fonction majorante est clairement intégrable sur $[1,R]\times[0,+\infty[$. Utilisant le théorème de Fubini, on en déduit :
+\begin{eqnarray*}
+\int_1^R \frac{\hat{f}(t)}{t}dt&=&\int_0^{+\infty}-2i f(x)\left(\int_1^R\frac{\sin xt}{t}dt\right)dx
+\end{eqnarray*}
+Or, $f(x)\left(\int_{x}^{ x}\frac{\sin u}{u}du\right)\to f(x)\phi(x)$ si $R\to +\infty$. D'autre part, on a :
+$$\int_{x}^{R x}\frac{\sin u}{u}du=\phi( x)-\phi(R x).$$
+Comme la fonction $\phi$ est bornée sur $\mtr$, on obtient :
+$$\left|f(x)\left(\int_{x}^{ R x}\frac{\sin u}{u}du\right)\right|\leq 2\|\phi\|_\infty|f(x)|.$$
+On peut donc appliquer le théorème de convergence dominée et on obtient :
+$$\lim_{R\to +\infty}\int_1^R \frac{\hat{f}(t)}{t}dt=-2i\int_0^{+\infty}f(x)\phi(x)dx.$$
+<li> <ol class="enumeratechiffre">
+<li> C'est quasi-évident!
+<li> Remarquons que $g$ est impaire. On note $h(x)=-f(-x)$. La transformée de Fourier de $h$ vérifie :
+\begin{eqnarray*}
+\hat{h}(\xi)&=&\dis -\int_\mtr f(-x)e^{-i\xi x}dx\\
+&=&\dis -\int_\mtr f(x)e^{i\xi x}dx\\
+&=&-g(-\xi)=g(\xi)=\hat{f}(\xi).
+\end{eqnarray*}
+Par injectivité de la transformée de Fourier, on en déduit que $f(x)=-f(-x)$ pour presque tout $x$.
+<li> Au voisinage de $+\infty$, on a :
+$$\frac{g(t)}{t}\sim \frac{\pi}{4t\ln(t)},$$
+et il est bien connu que cette dernière fonction n'est pas intégrable (cas d'une intégrale de Bertrand divergente). Si $g$ était la transformée de Fourier d'une fonction intégrable, par les questions précédentes, l'intégrale 
+$\int_1^{+\infty}\frac{g(t)}{t}dt$ convergerait. Ce n'est pas le cas : la transformation de Fourier n'est pas une surjection de
+$L^1(\mtr)$ sur $C_0(\mtr)$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1897"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1897"),	max:5, rating:3.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1897,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Non-surjectivité de la transformée de Fourier <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1897.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1897,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1897','imageenonce1897');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1897"></a><div class=inner id="innerenonce1897"><ol class="enumeratechiffre">
+<li> Soit $g_n$ l'indicatrice de $[-n,n]$, et $h$ l'indicatrice de $[-1,1]$. Calculer explicitement
+$g_n\star h$.
+<li> Montrer que $2\pi g_n\star h$ est la transformée de Fourier de 
+$$f_n=\frac{4}{x^2}\sin(nx)\sin(x).$$
+<li> Montrer que $\|f_n\|_1\to+\infty$.
+<li> En déduire que la transformée de Fourier n'est pas un opérateur surjectif de $L^1(\mtr)$ dans $C_0(\mtr)$.
+<li> Montrer que son image est dense.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1897','imageindication1897');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1897"></a><div class=inner id="innerindication1897" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Faites le contraire de ce qu'on devrait faire....
+<li> On pourra utiliser que $|\sin x|\geq\frac{2}{\pi}x$ si $x$ est dans $[0,\pi/2]$.
+<li> Utiliser le théorème d'isomorphisme de Banach.
+<li> Utiliser par exemple $\mcs(\mtr)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1897','imagecorrige1897',1897);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1897"></a><div class=inner id="innercorrige1897" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est juste un petit calcul à faire... On trouve que $g_n\star h(x)=2$ si $x$ est dans $[-n+1,n-1]$, vaut
+0 si $x$ est hors de $[-n-1,n+1]$, et est linéaire sur $[-n-1,-n+1]$ et $[n-1,n+1]$.
+<li> On va en fait calculer la transformée de Fourier de $g_n\star h$. On a 
+$$\mathcal{F}(g_n\star h)=\hat{g_n}\hat{h}.$$
+Un calcul facile montre que 
+$$\mathcal{F}(\mathbf 1_{[-a,a]})(x)=2\frac{\sin(ax)}{x}.$$
+Ainsi, $\mathcal F(g_n\star h)=f_n$ qui est une fonction de $L^1(\mathbb R)$.
+La formule d'inversion de la transformée de Fourier nous dit que
+$$\overline{\mathcal{F}}(f_n)=2\pi g_n\star h.$$
+On conclut en remarquant que $\mathcal{F}$ et $\overline{\mathcal{F}}$ coïncident sur les fonctions paires.
+<li> On utilise le fait que si $t\in[0,\pi/2]$, $\sin(t)\geq 2t/\pi$. Il vient
+$$\|f_n\|_1\geq C \int_0^{\pi/2}\left|\frac{\sin(n\pi )}{x}\right|dx\geq C\int_0^{n\pi /2}\left|\frac{\sin u}{u}\right|du$$
+après le changement de variables $u=nx.$ 
+Ceci tend vers $+\infty$ quand $n\to+\infty$ car la fonction $u\mapsto \sin(u)/u$ n'est pas intégrable.
+<li> Si la transformée de Fourier était surjective, puisqu'on sait qu'elle est injective et que $L^1(\mtr)$
+et $C_0(\mtr)$ sont des espaces de Banach, elle serait automatiquement un isomorphisme d'espace de Banach. En particulier,
+la réciproque serait continue, et il existerait $C&gt;0$ telle que, pour tout $f$ de $L^1(\mtr)$, on aurait
+$$\|\hat{f}\|_\infty\geq C\|f\|_1.$$
+C'est impossible, en testant cette inégalité avec $f=f_n$ puisque $\|\widehat{f_n}\|_\infty =2\pi \|g_n\star h\|_\infty=4\pi$ alors que $\|f_n\|_1\to+\infty.$
+<li> La transformée de Fourier étant un isomorphisme de l'ensemble $\mcs(\mtr)$ des fonctions à décroissance rapide,
+son image contient $\mcs(\mtr)$. Il est aisé de vérifier que $\mcs(\mtr)$ est dense dans $C_0(\mtr)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1898"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1898"),	max:5, rating:3.3571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1898,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une base hilbertienne de $L^2(\mtr)$ <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1898.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1898,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1898','imageenonce1898');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1898"></a><div class=inner id="innerenonce1898"><ol class="enumeratechiffre">
+<li> Soit $H$ un espace de Hilbert, et $E$ un sous espace vectoriel de $H$.
+<ol class="enumeratechiffre">
+<li> Montrer que $(E^\perp)^\perp=\overline{E}$.
+<li> En déduire $E^\perp=\{0\}$ si, et seulement si, $E$ est dense dans $H$.
+</ol>
+<li> On suppose désormais que $H=L^2(\mtr)$. Le but est d'étudier la famille $(x^ne^{-x^2/2})$.
+<ol class="enumeratechiffre">
+<li> Montrer qu'il s'agit d'une famille libre.
+<li> Supposons qu'il existe une fonction $h\in H$ telle que $\langle h,x^ne^{-x^2/2}\rangle=0$ pour tout $n$.
+Montrer que la transformée de Fourier de $x\mapsto h(x)e^{-x^2/2}$ est bien définie, et est de classe $C^\infty$. On note
+$g$ cette fonction,
+$$g(t)=\int_{\mtr}e^{-x^2/2}h(x)e^{-i x t}dx.$$
+Que vaut $g^{(n)}(0)$?
+<li> Montrer qu'à l'aide de la formule précédente, on peut en fait définir $g$ comme fonction holomorphe sur $\mtc$.
+Que dire de $g$?
+<li> En déduire que $h=0$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Démontrer que la famille s'orthonormalise en une famille $(H_n(x)e^{-x^2/2})$, où $H_n$ est un polynôme 
+de degré $n$ (que l'on ne demande pas de calculer). Que dire de la famille $(H_n(x)e^{-x^2/2})$?
+<li> Démontrer que les $H_n$ sont égaux, à un coefficient près (que l'on ne demande pas de calculer),
+aux polynômes de Hermite 
+$$H_n^*(x)=(-1)^n e^{x^2}\frac{d^n}{dx^n}(e^{-x^2}).$$
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1898','imageindication1898');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1898"></a><div class=inner id="innerindication1898" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Une inclusion est facile. Pour l'autre, prendre $y$ qui n'est pas dans $\overline{E}$,
+et montrer que $y$ n'est pas dans $(E^\perp)^\perp$ (on pourra considérer le projeté orthogonal de
+$y$ sur $\overline{E}$.
+<li> Immédiat!
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Regarder la limite en l'infini.
+<li> Inégalité de Cauchy-Schwarz.
+<li> Utiliser le théorème donnant la régularité des intégrales à paramètres pour les fonctions holomorphes.
+<li> Utiliser la bonne propriété de la transformée de Fourier.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li>
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1898','imagecorrige1898',1898);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1898"></a><div class=inner id="innercorrige1898" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<ol class="enumeratechiffre">
+<li> Prenons $y\in E$. Alors clairement, $y\in (E^\perp)^\perp$. Ceci montre que $E\subset (E^\perp)^\perp$.
+Puisque ce dernier ensemble est fermé, il contient même $\overline{E}$. Prenons maintenant $y\notin \overline{E}$.
+$\overline{E}$ étant une partie convexe fermée d'un espace de Hilbert, $y$ se décompose en 
+$y=y_0+y_1$, où $y_0\in \overline{E}$ et $y_1\in\overline{E}^\perp$. En particulier, $y_1\in E^\perp$. 
+Mais alors, $\langle y,y_1\rangle=\|y_1\|^2\neq 0$, et donc $y\notin (E^\perp)^\perp$.
+<li> C'est immédiat!
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Laissé au lecteur.
+<li> L'inégalité de Cauchy-Schwarz montre que, quel que soit $n$, la fonction $x\mapsto x^n h(x)e^{-x^2/2}$ 
+est dans $L^1(\mtr)$. Ceci justifie la définition de la transformée de
+Fourier et le fait qu'elle est $C^\infty$. En outre,
+$$g^{(n)}(0)=\langle h,x^n e^{-x^2/2}\rangle=0.$$
+<li> Soit $R&gt;0$. Pour $|z|\leq R$, on a 
+$$\left|h(x)e^{-x^2/2}e^{-i zx}\right|\leq |h(x)|e^{-x^2/2}e^{ Rx}.$$
+La fonction qui majore est intégrable : ceci suffit à justifier que la formule
+$$g(z)=\int_{\mtr}e^{-x^2/2}h(x)e^{-i x z}dx$$
+définit une fonction holomorphe sur $\mtc$. Comme toutes ses dérivées en $0$ sont nulles,
+on sait bien que $g=0$.
+<li> L'injectivité de la transformée de Fourier assure que $h=0$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Le procédé d'orthonormalisation de Gram-Schmidt garantit l'existence d'une telle famille. En outre, d'après
+les questions précédentes, l'espace vectoriel engendré par la famille $(H_n(x)e^{-x^2/2})$ est dense dans $L^2(\mtr)$.
+Cette famille est donc une base hilbertienne de $L^2(\mtr)$.
+<li> Par unicité dans le procédé d'orthonormalisation de Gram-Schmidt, il suffit de prouver que, pour $n\neq m$, on a
+$$I=\langle H_n^*(x)e^{-x^2/2},H_m^*(x)e^{-x^2/2}\rangle =0.$$
+Supposons par exemple $n&lt;m$, on a
+\begin{eqnarray*}
+I&=&\int_\mtr e^{x^2}\frac{d^n}{dx^n}(e^{-x^2})\frac{d^m}{dx^m}(e^{-x^2})\\
+&=&\int_\mtr P_n(x)\frac{d^m}{dx^m}(e^{-x^2})dx.
+\end{eqnarray*}
+Il suffit maintenant de prouver que, si $k&lt;m$, on a 
+$$\int_\mtr x^k \frac{d^m}{dx^m}(e^{-x^2/2})dx=0,$$
+ce qui se fait en réalisant $k$ intégrations par parties!
+</ol></div></div></div>
+
+<div class=titrepartie>Transformée de Fourier-Plancherel</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater3365"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3365"),	max:5, rating:1.2307692307692, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3365,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction indicatrice <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3365.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(3365,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3365','imageenonce3365');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3365"></a><div class=inner id="innerenonce3365">On rappelle que la transformée de Fourier de la fonction $\mathbf 1_{[-1,1]}$ est la fonction définie par $t\mapsto 2\frac{\sin t}{t}$ (convenablement prolongée par continuité en $0$). 
+Calculer $\displaystyle \int_{\mathbb R}\frac{\sin^2 t}{t^2}dt.$</div></div><div class=indication><a href="javascript:showAll('innerindication3365','imageindication3365');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3365"></a><div class=inner id="innerindication3365" style="display:none;">Utiliser la formule de Plancherel.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3365','imagecorrige3365',3365);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3365"></a><div class=inner id="innercorrige3365" style="display:none;">Notons $f$ la fonction indicatrice de $[-1,1]$ et remarquons que cette fonction est dans $L^2(\mathbb R)\cap L^1(\mathbb R)$. Par la formule de Fourier-Plancherel, on a 
+$$\|\hat f\|_2^2=2\pi \|f\|_2^2.$$
+En remplaçant $f$ et $\hat f$ par leurs valeurs et en remarquant que $\|f\|_2^2=\int_{-1}^1 1dt=2,$ on trouve 
+$$\int_{\mathbb R}\frac{\sin^2(t)}{t^2}dt=\pi.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1899"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1899"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1899,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction triangle <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1899.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1899,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1899','imageenonce1899');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1899"></a><div class=inner id="innerenonce1899">On rappelle que la transformée de Fourier de la fonction triangle définie par :
+$$f(x)=\left\{
+\begin{array}{ll}
+1+x&\textrm{si }-1\leq x\leq 0\\
+1-x&\textrm{si }0\leq x&lt;1\\
+0&\textrm{sinon.}\end{array}\right.$$
+est $\hat{f}(t)=\frac{\sin^2(t/2)}{(t/2)^2}$. Calculer $\int_{0}^{+\infty} \frac{\sin^4 x}{x^4}dx.$</div></div><div class=indication><a href="javascript:showAll('innerindication1899','imageindication1899');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1899"></a><div class=inner id="innerindication1899" style="display:none;">Utiliser la relation de Plancherel-Parseval.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1899','imagecorrige1899',1899);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1899"></a><div class=inner id="innercorrige1899" style="display:none;">Puisque la fonction $f$ (qui est continue à support compact) est dans $L^2(\mathbb R),$ on sait par la formule de Plancherel que 
+\begin{align*}
+\int_{-\infty}^{+\infty}|\hat f(x)|^2dx&=2\pi \int f(x)^2 dx\\
+&=2\pi \int_0^1 (1-x)^2dx+\int_{-1}^0 (1+x)^2dx\\
+&=\frac{4\pi}3.
+\end{align*}
+On a donc prouvé que 
+$$\int_0^{+\infty}\frac{\sin^4(t/2)}{(t/2)^4}dt=\frac 12 \int_{-\infty}^{+\infty}|\hat f(x)|^2dx=\frac{2\pi}3.$$
+On conclut avec le changement de variables $x=t/2,$ et on trouve 
+$$\int_0^{+\infty}\frac{\sin^4 x}{x^4}dx=\frac{\pi}{3}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater3362"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3362"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3362,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul d'intégrale <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3362.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(3362,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3362','imageenonce3362');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3362"></a><div class=inner id="innerenonce3362">On rappelle que, pour $a&gt;0$, si on pose $f_a(x)=\frac{1}{a^2+x^2},$ alors
+$$\widehat{f_a}(x)=\frac{\pi}a e^{-a|x|},\ x\in\mathbb R.$$
+Calculer, pour $a,b&gt;0,$
+$$\int_{\mathbb R}\frac{dx}{(x^2+a^2)(x^2+b^2)}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3362','imageindication3362');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3362"></a><div class=inner id="innerindication3362" style="display:none;">Utiliser la formule de Plancherel.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3362','imagecorrige3362',3362);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3362"></a><div class=inner id="innercorrige3362" style="display:none;">Puisque les fonctions $f_a$ et $f_b$ sont dans $L^1(\mathbb R)\cap L^2(\mathbb R)$, on sait d'après la formule de Plancherel que 
+\begin{align*}
+\int_{\mathbb R}\frac{dx}{(x^2+a^2)(x^2+b^2)}&=
+\frac1{2\pi}\int_{\mathbb R}\mathcal F(f_a)(u)\mathcal F(f_b)(u)du\\
+&=\frac{\pi}{2ab}\int_{\mathbb R} e^{-(a+b)|u|}du\\
+&=\frac{\pi}{ab}\int_0^{+\infty}e^{-(a+b)u}du\\
+&=\frac{\pi}{ab(a+b)}.
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater3363"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3363"),	max:5, rating:1.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3363,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de transformée de Plancherel (en trichant) <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3363.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(3363,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3363','imageenonce3363');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3363"></a><div class=inner id="innerenonce3363">On rappelle que si on note, pour $a&gt;0,$ $f_a(x)=\textrm{signe}(x)e^{-a|x|},$
+alors 
+$$\widehat{f_a}(x)=\frac{-2i x}{a^2+x^2}.$$
+On considère $f(x)=\frac{x}{a^2+x^2}.$
+<ol class="enumeratechiffre">
+<li> Vérifier que $f$ appartient à $L^2(\mathbb R)$ et n'appartient pas à $L^1(\mathbb R).$
+<li> Calculer la transformée de Fourier-Plancherel de $f$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3363','imageindication3363');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3363"></a><div class=inner id="innerindication3363" style="display:none;"><ol class="enumeratechiffre">
+<li> Travailler avec des équivalents en l'infini.
+<li> Utiliser la formule d'inversion.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3363','imagecorrige3363',3363);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3363"></a><div class=inner id="innercorrige3363" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque d'abord que $f$ est continue sur $\mathbb R.$ De plus, $f(x)\sim_{\pm\infty}\frac 1x$ et donc $f$ n'est pas intégrable. En revanche, $f^2(x)\sim_{\pm\infty}\frac1{x^2}$ et donc $f^2$ est intégrable. 
+<li> On sait que 
+$$\mathcal F\circ \mathcal F(f_a)=2\pi \tilde{f_a}$$
+où $\tilde{f_a}(x)=f_a(-x).$ Ainsi, puisque $f_a\in L^1\cap L^2,$
+$$\mathcal F(\widehat{f_a})=\mathcal F(\mathcal F(f_a))=-2\pi f_a$$
+(la fonction $f_a$ est impaire).
+Finalement
+$$\mathcal F(f)=-i\pi f_a.$$
+On a ici un peu "triché" pour calculer la transformée de Fourier-Plancherel car on a utilisé la formule rappelée dans l'énoncé qui simplifie beaucoup le calcul de la transformée de Fourier-Plancherel. Si on ne connaissait pas la formule du départ, on aurait pu appliquer 
+le théorème des résidus à la fonction $F(z)=\frac{z}{a^2+z^2}e^{-ix z}$ et au contour $\Gamma_R$ composé du demi-cercle (supérieur) centré à l'origine et de rayon $R&gt;a$ et du segment $[-R,R]$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater1900"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1900"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1900,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sinus cardinal <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1900.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(1900,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1900','imageenonce1900');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1900"></a><div class=inner id="innerenonce1900"><ol class="enumeratechiffre">
+<li> Calculer la transformée de Fourier de la fonction caractéristique d'un intervalle $[a,b]$.
+<li> Soit $\theta(x)=\frac{\sin x}{x}$. La fonction $\theta$ est-elle dans $L^1$? Dans $L^2$? Calculer sa transformée de Fourier-Plancherel.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1900','imageindication1900');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1900"></a><div class=inner id="innerindication1900" style="display:none;"><ol class="enumeratechiffre">
+<li> Calcul facile, pour peu qu'on n'oublie pas le cas $a=b$.
+<li> S'aider de la première question pour des valeurs particulières de $a$ et $b$, et inverser la transformée de Fourier.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1900','imagecorrige1900',1900);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1900"></a><div class=inner id="innercorrige1900" style="display:none;"><ol class="enumeratechiffre">
+<li> On a :
+\begin{eqnarray*}
+\hat{f}(\xi)&=&\int_{\mtr}e^{-i \xi x}1_{[a,b](x)}dx=\int_{a}^b e^{-i\xi x}dx\\
+&=&\left\{\begin{array}{ll}
+\dis \frac{e^{-ib \xi}-e^{-ia\xi}}{-i \xi}&\textrm{si }a\neq b\\
+0&\textrm{sinon.}
+\end{array}\right.
+\end{eqnarray*}
+<li> C'est un résultat bien connu que $\theta$ est telle que $\int_0^x\theta(t)dt$ admet une limite quand $x\to+\infty$,
+sans que $\theta$ n'appartienne à $L^1(\mtr)$. Pour le prouver, on peut par exemple utiliser 
+$$\frac{|\sin t|}{t}\geq \frac{\sin^2t}{t}\geq \frac{1}{2t}-\frac{\cos 2t}{2t}.$$
+On conclut car $\int_1^x\frac{1}{2t}dt$ tend vers l'infini, alors que $\int_1^x \frac{\cos 2t}{2t}dt$ converge si $x\to+\infty$.
+En revanche, il est clair que $\theta$ appartient à $L^2$ (précisons simplement qu'il n'y a aucun problème de convergence en 0
+où la fonction est prolongée par continuité en posant $\theta(0)=1$). Il est donc légitime de calculer la transformée de Fourier-Plancherel de $\theta$.
+Il est difficile de calculer directement cette transformée. Mais remarquons que, si $f(x)=1_{[-1,1]}(x)$, la question précédente nous donne
+$$\hat{f}(\xi)=2\theta(\xi).$$
+On utilise la transformée de Fourier conjuguée, et on obtient :
+$$\mathcal F(\theta)(x)=4\pi f(-x)=4 \pi 1_{[-1,1]}(x).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater3366"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3366"),	max:5, rating:1.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3366,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Valeur propre <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3366.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(3366,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3366','imageenonce3366');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3366"></a><div class=inner id="innerenonce3366">Soit $\mathcal F$ l'opérateur de Fourier-Plancherel sur $L^2(\mathbb R)$ et soit $\lambda$ une valeur propre de $\mathcal F$. Démontrer que $\lambda\in \{\pm\sqrt{2\pi},\pm i\sqrt{2\pi}\}.$</div></div><div class=indication><a href="javascript:showAll('innerindication3366','imageindication3366');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3366"></a><div class=inner id="innerindication3366" style="display:none;">Que vaut $\mathcal F^4$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3366','imagecorrige3366',3366);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3366"></a><div class=inner id="innercorrige3366" style="display:none;">Puisque $\mathcal F\circ\mathcal F f=2\pi \tilde f$, avec $\tilde f(x)=f(-x),$ on obtient que $\mathcal F^4=4\pi^2 \textrm{Id}_{L^2(\mathbb R)}.$ Ainsi, si $\lambda$ est une valeur propre de $\mathcal F,$ on doit avoir
+$\lambda^4=4\pi^2$ ce qui donne les 4 valeurs possibles.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater3531"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3531"),	max:5, rating:0.95238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3531,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivée intégrable et de carré intégrable <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3531.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(3531,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3531','imageenonce3531');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3531"></a><div class=inner id="innerenonce3531">Soit $f\in L^1(\mathbb R)$ de classe $\mathcal C^1.$ On suppose que $f'\in L^1(\mathbb R)\cap L^2(\mathbb R)$. Démontrer que $\hat f\in L^1(\mathbb R)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3531','imageindication3531');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3531"></a><div class=inner id="innerindication3531" style="display:none;">Commencer par écrire que $\hat f$ est dans $L^1([1,+\infty[)$ en l'écrivant comme produit de deux fonctions de $L^2([1,+\infty[)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3531','imagecorrige3531',3531);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3531"></a><div class=inner id="innercorrige3531" style="display:none;">On remarque que puisque $f'\in L^1\cap L^2,$ $\widehat{f'}$ est élément de $L^2(\mathbb R)$. Par le lien entre régularité et transformée de Fourier, on sait aussi que $\widehat{f'}=x\hat f.$ Ainsi, on peut écrire, pour $x\neq 0,$ 
+$$\hat f(x)=\frac 1x\widehat{f'}(x).$$
+Or, $x\mapsto 1/x\in L^2([1,+\infty[)$ et $\widehat{f'}\in L^2([1,+\infty[)$. Par produit (et inégalité de Cauchy-Schwarz), $\hat f\in L^1(\mathbb R)$. De plus, puisque $\hat f$ est continue, $\hat f\in L^1([0,1])$. Ainsi,
+$\hat f\in L^1([0,+\infty[)$. Le raisonnement est similaire sur $]-\infty,0]$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater3356"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3356"),	max:5, rating:2.2666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3356,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de transformée de Plancherel <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3356.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(3356,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3356','imageenonce3356');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3356"></a><div class=inner id="innerenonce3356">Pour $x\in\mathbb R^*$ et $\alpha&gt;0,$ on pose
+$$f(x)=\frac{\sin(x)}{|x|}\textrm{ et }f_\alpha(x)=e^{-\alpha |x|}\frac{\sin(x)}{|x|}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $f$ et $f_\alpha$ sont dans $L^2(\mathbb R)$ et que $\|f-f_\alpha\|_2\to 0$ lorsque $\alpha\to 0.$
+<li> Démontrer que pour tout $\alpha&gt;0,$ $f_\alpha\in L^1(\mathbb R)$ puis démontrer que pour tout $y\in\mathbb R$ 
+$$\frac{d \widehat{f_\alpha}(y)}{d\alpha}(\alpha)=\frac 1{2i}\left(\frac{2\alpha}{\alpha^2+(1+ y)^2}-\frac{2\alpha}{\alpha^2+(1- y)^2}\right).$$
+<li> En déduire, pour tout $y\in\mathbb R,$ $\widehat {f_\alpha}(y).$
+<li> En déduire $\mathcal F f(y).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3356','imageindication3356');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3356"></a><div class=inner id="innerindication3356" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le théorème de convergence dominée.
+<li> Utiliser le théorème de dérivation des intégrales à paramètres.
+<li> Intégrer, puis pour enlever la constante faire tendre $\alpha$ vers l'infini.
+<li> Utiliser le fait que la transformée de Fourier-Plancherel est une isométrie.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3356','imagecorrige3356',3356);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3356"></a><div class=inner id="innercorrige3356" style="display:none;"><ol class="enumeratechiffre">
+<li> Les fonctions $f$ et $f_\alpha$ sont définies presque partout (on ne peut pas les prolonger par continuité en $0$ car les limites à droite et à gauche sont opposées). Cela dit, si on les prolonge en posant $f(0)=f_\alpha(0)=0,$
+ces deux fonctions sont continues par morceaux sur $\mathbb R.$ En particulier, elles sont mesurables. De plus, elles sont bornées car $|f_\alpha(x)|\leq |f(x)|\leq 1$ pour tout $x\in\mathbb R.$ Reste à étudier le comportement en l'infini, mais on a
+$$\int_{1}^{+\infty}|f_\alpha(x)|^2dx\leq \int_1^{+\infty}|f(x)|^2 dx\leq \int_1^{+\infty}\frac{dx}{x^2}&lt;+\infty.$$
+Ainsi, $f,f_\alpha\in L^2(\mathbb R)$. On va utiliser ensuite le théorème de convergence dominée. En effet, pour tout $x\neq 0,$
+$$(f(x)-f_\alpha(x))^2=(1-e^{-\alpha|x|})^2\frac{\sin^2 x}{x^2}\leq |f(x)|^2$$
+et cette dernière fonction est intégrable. De plus, il est clair que pour tout $x\neq 0,$ $f(x)-f_\alpha(x)\to 0$ lorsque $\alpha\to 0.$ On obtient bien que $\|f-f_\alpha\|_2\to 0$ lorsque $\alpha\to 0.$
+<li> Pour tout $x\in\mathbb R$ et tout $\alpha&gt;0,$ $|f_\alpha(x)|\leq e^{-\alpha |x|}$ qui est une fonction intégrable et donc $f_\alpha\in L^1(\mathbb R)$. Ainsi, pour $\alpha&gt;0$ et $y\in\mathbb R,$
+$$\widehat{f_\alpha}(y)=\int_{\mathbb R}e^{-ixy} e^{-\alpha |x|} \frac{\sin(x)}{|x|}dx.$$
+On va utiliser le théorème de dérivation sous le signe intégral. Soit $\alpha_0&gt;0$, fixons $y\in\mathbb R$ et posons 
+$$\varphi_\alpha(x,\alpha)=e^{-ixy} e^{-\alpha |x|} \frac{\sin(x)}{|x|}$$
+de sorte que 
+$$\frac{\partial \varphi_\alpha}{\partial\alpha}(x,\alpha)=- e^{-ixy}e^{-\alpha|x|}\sin(x).$$
+En particulier,
+$$\left|\frac{\partial \varphi_\alpha}{\partial\alpha}(x,\alpha)\right|\leq e^{-\alpha|x|}\leq e^{-\alpha_0|x|}$$
+pour tout $x\in\mathbb R^*$ et tout $\alpha&gt;\alpha_0$. On en déduit que $\alpha\mapsto \widehat{f_\alpha}(y)$ est dérivable sur tout $[\alpha_0,+\infty[$, donc sur $]0,+\infty[$, et que 
+$$\frac{d\widehat{f_\alpha}(y)}{d_\alpha}(\alpha)=-\int_{\mathbb R}e^{-ixy}e^{-\alpha|x|}\sin(x)dx.$$
+Reste à calculer cette dernière intégrale, ce que l'on fait en écrivant
+$$\sin(x)=\frac{e^{ix}-e^{-ix}}{2i}.$$
+On a alors
+\begin{align*}
+\int_{\mathbb R}e^{ix}e^{-ixy}e^{-\alpha |x|}dx&=
+\int_{-\infty}^0 e^{x(\alpha+i(1-y))}dx+\int_0^{+\infty}e^{x(-\alpha+i(1-y))}dx
+\\
+&= \frac{1}{\alpha+i(1-y)}-\frac{1}{-\alpha+i(1-y)}\\
+&=\frac{2\alpha}{\alpha^2+(1-y)^2}.
+\end{align*}
+De la même façon,
+$$\int_{\mathbb R}e^{ix}e^{-ixy}e^{-\alpha |x|}dx=\frac{2\alpha}{\alpha^2+(1+y)^2}.$$
+Ainsi, 
+$$\frac{d \widehat{f_\alpha}(y)}{d\alpha}(\alpha)=\frac{1}{2i}\left(
+\frac{2\alpha}{\alpha^2+(1+y)^2}-\frac{2\alpha}{\alpha^2+(1-y)^2}\right).$$
+<li> On intègre la relation précédente (à $y$ fixé) et on trouve qu'il existe $C(y)\in\mathbb R$ tel que, pour tout $\alpha&gt;0$ et tout $y\in\mathbb R,$ on a 
+$$\widehat{f_\alpha}(y)=\frac i2\ln\left(\frac{\alpha^2+(1-y)^2}{\alpha^2+(1+y)^2}\right)+C(y).$$
+Pour déterminer $C(y)$ on va faire tendre $\alpha$ vers $+\infty.$ 
+En effet, par le théorème de convergence dominée, il est facile de voir que $f_\alpha$ tend vers $0$ dans $L^1(\mathbb R)$ quand $\alpha$ tend vers $+\infty.$ Puisque la transformée de Fourier est continue de $L^1(\mathbb R)$ dans $\mathcal C_0(\mathbb R),$ on en déduit que (à $y$ fixé), $\widehat{f_\alpha}(y)\to 0$ quand $\alpha\to+\infty.$ Revenant à l'expression de $\widehat{f_\alpha}$ trouvée précédemment, on trouve $C(y)=0.$ Ainsi, 
+$$\widehat{f_\alpha}(y)=\frac i2\ln\left(\frac{\alpha^2+(1-y)^2}{\alpha^2+(1+y)^2}\right)$$ 
+pour tout $y\in\mathbb R.$
+<li> Puisque la transformée de Fourier est une isométrie, 
+$$\|\mathcal F f-\widehat{f_\alpha}\|_2=\|\mathcal F(f-f_\alpha)\|_2=\|f-f_\alpha\|_2\to 0$$
+lorsque $\alpha\to 0.$ Par le théorème de Riesz-Fischer, il existe une suite de nombre réels $\alpha_k&gt;0$ qui tend vers $0$ et telle que $\widehat{f_{\alpha_k}}\to \mathcal Ff$ presque partout. Il en résulte que 
+$$(\mathcal F f)(y)=i\ln \left|\frac{1-y}{1+y}\right|$$
+pour presque tout $y\in\mathbb R.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater1901"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1901"),	max:5, rating:2.5833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1901,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fourier et Fourier-Plancherel <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1901.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(1901,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1901','imageenonce1901');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1901"></a><div class=inner id="innerenonce1901">Pour $f\in L^1(\mtr)$, on note $\hat{f}$ la transformée de
+Fourier de $f$. Pour $g\in L^2(\mtr)$,
+on note $\mathcal{F}(g)$ la transformée de Fourier-Plancherel de $g$. 
+<ol class="enumeratechiffre">
+<li> Soit $f\in L^1(\mtr)$ et $g\in L^2(\mtr)$. Parmi les deux formules suivantes, laquelle peut avoir un sens?
+$$\widehat{f\star g}=\hat{f}\mathcal{F}(g)\textrm{ ou }\mathcal{F}(f\star g)=\hat{f}\mathcal{F}(g).$$
+La démontrer.
+<li> Soit $f,g\in L^2(\mtr)$. Parmi les deux formules suivantes, laquelle peut avoir un sens?
+$$\mathcal{F}(f)\star\mathcal{F}(g)=2\pi \mathcal{F}(fg)\textrm{ ou } \mathcal{F}(f)\star\mathcal{F}(g)=2\pi \widehat{fg}.$$
+La démontrer.
+<li> On note $f_a(x)=2\frac{\sin(ax)}{ x}$. Déduire de la question précédente $f_a\star f_b$, avec $a,b&gt;0$.
+<li> Montrer que l'équation $f\star f=f$, où $f\in L^2(\mtr)$ admet une infinité de solutions. Comparer avec 
+le cas où $f\in L^1(\mtr)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1901','imageindication1901');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1901"></a><div class=inner id="innerindication1901" style="display:none;">Pour savoir quelles formules ont un sens, on devra se poser la question de savoir où vit le produit, ou le produit de convolution, des deux fonctions dont on veut calculer la transformée de Fourier(-Plancherel). Pour démontrer les formules qui ont un sens, on pourra utiliser la densité de $\mathcal S(\mathbb R)$. Pour la troisième question, il faut se souvenir que $g_a$ est la transformée de Fourier de l'indicatrice de l'intervalle $[-a/2,a/2]$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1901','imagecorrige1901',1901);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1901"></a><div class=inner id="innercorrige1901" style="display:none;"><ol class="enumeratechiffre">
+<li> Le produit de convolution d'une fonction $L^1$ et d'une fonction $L^2$ étant une fonction $L^2$, la seule formule qui peut
+avoir un sens est la deuxième. On la démontre par densité de $S(\mtr)$. Soit en effet $(g_n)$ une suite de fonctions
+de $\mcs(\mtr)$ qui converge vers $g$. Alors $f\star g_n$ est un élément de $L^1\cap L^2$, là où les transformées de Fourier
+et de Fourier-Plancherel coïncident. On a donc :
+$$\mathcal{F}(f\star g_n)=\widehat{f\star g_n}=\hat{f}\hat{g_n}=\hat{f}\mathcal{F}(g_n).$$
+La transformée de Fourier-Plancherel étant continue, on a $\mathcal{F}(g_n)\to \mathcal{F}(g)$ dans $L^2$. Puisque $\hat f$ est bornée, on a aussi $\hat f\mathcal F(g_n)\to \hat f\mathcal F(g)$ dans $L^2$. D'autre part, puisque  
+$$\|f\star g_n-f\star g\|_2\leq \|f\|_1\|g_n-g\|_2\to 0,$$
+on sait que $f\star g_n\to f\star g$ dans $L^2.$
+Par continuité de la transformée de Fourier-Plancherel, $\mathcal F(f\star g_n)\to \mathcal F(f\star g)$ dans $L^2.$ On conclut au résultat demandé par unicité de la limite.
+<li> Puisque $f$ et $g$ sont tous deux dans $L^2(\mtr)$, leur produit est dans $L^1(\mtr)$, seule la deuxième
+formule peut avoir un sens! On démontre alors cette formule de la même façon que la précédente... Elle est vraie
+si $f$ et $g$ sont tous deux dans $\mcs(\mtr)$ -prendre par exemple la transformée de Fourier conjuguée, puis on procède en prenant
+une suite $(f_n)$ qui converge vers $f$ et une suite $(g_n)$ qui converge vers $g$... Pour être précis, il faut vérifier que les deux applications 
+$$\begin{array}{rcl}L^2\times L^2 &\to&\mathcal C_b(\mathbb R)\\
+(f,g)&\mapsto&\widehat{fg}\end{array}\quad\textrm{ et }\quad
+\begin{array}{rcl}L^2\times L^2 &\to&\mathcal C_b(\mathbb R)\\
+(f,g)&\mapsto&\mathcal F(f)\star \mathcal F(g)
+\end{array}
+$$
+sont continues. Mais ce sont des applications bilinéaires, et pour tous $f,g\in L^2,$ on a d'une part
+$$\|\widehat{fg}\|_\infty\leq \|fg\|_1\leq \|f\|_2\|g\|_2$$
+et d'autre part
+$$\|\mathcal F(f)\star \mathcal F(g)\|_\infty\leq \|\mathcal F(f)\|_2\|\mathcal F(g)\|_2\leq 2\pi \|f\|_2\|g\|_2.$$
+<li> Posons $g_a=\mathbf 1_{[-a,a]}(x)$, de sorte que $\mathcal{F}(g_a)=\hat{g_a}=f_a$. D'après la formule précédente, on a
+$$f_a\star f_b=\mathcal{F}(g_a)\star\mathcal{F}(g_b)=2\pi \widehat{g_ag_b}=2\pi\widehat{g_c}=2\pi f_c,$$
+où $c=\min(a,b)$.
+<li> D'après l'équation précédente, chaque fonction $\frac 1{2\pi}f_a$ avec $a&gt;0$ est solution de l'équation. Rappelons que dans $L^1(\mtr)$, cette équation n'a pas de solution non nulle !
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater3364"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3364"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3364,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Image de $L^1(\mathbb R)$ par la transformée de Fourier <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3364.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(3364,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3364','imageenonce3364');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3364"></a><div class=inner id="innerenonce3364">Dans cet exercice, on désigne par $\mathcal F$ la transformée de Fourier ou la transformée de Fourier-Plancherel (suivant le contexte). On rappelle que, si $f,g\in L^2(\mathbb R)$, alors $2\pi \mathcal F(fg)=\mathcal F(f)\star \mathcal F(g).$ Le but de l'exercice est de démontrer que 
+$$\mathcal F(L^1(\mathbb R))=L^2(\mathbb R)\star L^2(\mathbb R).$$
+<ol class="enumeratechiffre">
+<li> Soit $f,g\in L^2(\mathbb R)$. &Eacute;tablir que $2\pi f\star g=\mathcal F(\overline{\mathcal F}f\overline{\mathcal F}g).$
+<li> En déduire que $L^2(\mathbb R)\star L^2(\mathbb R)\subset\mathcal F(L^1(\mathbb R))$.
+<li> Soit $f\in L^1(\mathbb R)$. On pose $f_1=\sqrt{|f|}/2\pi$ et $f_2=\textrm{signe(f)}\sqrt{|f|}$ en convenant que $\textrm{signe}(0)=1.$
+On pose $u=\mathcal F(f_1)$ et $v=\mathcal F(f_2)$. Démontrer que $u\star v=\mathcal F(f).$ 
+<li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3364','imageindication3364');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3364"></a><div class=inner id="innerindication3364" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le rappel avec $\overline{\mathcal F}(f)$ et $\overline{\mathcal F}(g).$
+<li>
+<li> Utiliser le rappel à nouveau.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3364','imagecorrige3364',3364);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3364"></a><div class=inner id="innercorrige3364" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que $\overline{\mathcal F}(f)$ et $\overline{\mathcal F}(g)$ sont dans $L^2(\mathbb R)$ donc leur produit est dans $L^1(\mathbb R)$. D'après le rappel, 
+\begin{align*}
+\mathcal F(\overline{\mathcal F}(f)\overline{\mathcal F}(g))&=\frac1{2\pi}\mathcal F\overline{\mathcal F}(f)\mathcal F\overline{\mathcal F}(g)\\
+&=2\pi f\star g
+\end{align*}
+car $\mathcal F\circ \overline{\mathcal F}=2\pi \textrm{Id}_{L^2(\mathbb R)}$.
+<li> On vient de prouver que, pour tous $f,g\in L^2(\mathbb R),$ il existe $h\in L^1(\mathbb R)$ défini par $h=\overline{\mathcal F}(f)\overline{\mathcal F}(g)/2\pi$ tel que $f\star g=\mathcal F(h).$ Ceci prouve l'inclusion demandée.
+<li> Il est d'abord clair que $f_1$ et $f_2$ sont dans $L^2(\mathbb R)$.
+D'après le rappel, 
+$$u\star v=2\pi \mathcal F(f_1f_2)=\mathcal F(f).$$
+<li> La question précédente nous dit que, pour tout $f\in L^1(\mathbb R)$, il existe $u,v\in L^2(\mathbb R)$ tels que $f=u\star v$ ce qui prouve l'inclusion réciproque $L^1(\mathbb R)\subset L^2(\mathbb R)\star L^2(\mathbb R).$
+Ainsi, on a bien prouvé l'égalité.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater3415"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3415"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3415,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exercice de synthèse sur Fourier et Fourier-Plancherel <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3415.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(3415,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3415','imageenonce3415');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3415"></a><div class=inner id="innerenonce3415">Dans cet exercice, on notera indifféremment $\hat f$ pour la transformée de Fourier ou la transformée de Fourier-Plancherel d'une fonction $f$ de $L^1(\mathbb R)$
+ou $L^2(\mathbb R)$. Pour $a&gt;0$, on pose $\varphi_a(x)=e^{-a|x|}$.
+<ol class="enumeratechiffre">
+<li> Sans calculer $\widehat{\varphi_a}$, justifier que $\widehat{\varphi_a}$ appartient à $\mathcal C^\infty(\mathbb R)$.
+<li> Sans calculer $\widehat{\varphi_a}$, justifier que $\widehat{\varphi_a}$ appartient à $L^2(\mathbb R)$ et calculer $\|\widehat{\varphi_a}\|_2.$
+ <li> Montrer que la transformée de Fourier de $\varphi_a$ vaut
+$$\widehat{\varphi_a}(\xi)=\frac{2a}{a^2+\xi^2}\ .$$
+<li> Calculer la transformée de Fourier de $x\mapsto x\varphi_a(x)$.
+<li> Soient $a\not= b$ deux réels strictement positifs. Sans calculer $\varphi_a\star\varphi_b$, montrer que $\varphi_a*\varphi_b\in\mathcal C(\mathbb R)\cap L^1(\mathbb R)$.
+A l'aide de la transformée de Fourier, montrer qu'il existe deux réels $\alpha$ et $\beta$ que l'on déterminera tels que pour tout $x\in\mathbb R$,
+$\varphi_a*\varphi_b(x)=\alpha \varphi_a(x)+\beta\varphi_b(x)$. On justifiera soigneusement sa réponse.
+<li> On pose $\psi_a=\widehat{\varphi_a}$. Montrer que $\psi_a$ est intégrable sur $\mathbb R$ et calculer sa transformée de Fourier. 
+Montrer que si $a$ et $b$ sont deux réels strictement positifs,
+$$\psi_a*\psi_b=2\pi\psi_{a+b}.$$
+<li> Calculer $\varphi'_a(x)$ pour $x\not=0$. Montrer que pour tout $\xi\in\mathbb R$,
+$$\widehat{\varphi'_a}(\xi)=\frac{2ia\xi}{a^2+\xi^2}.$$
+<li> Montrer que la fonction $\xi\mapsto \frac\xi{a^2+\xi^2}$ est de carré intégrable sans être intégrable. A l'aide de ce qui précède, calculer sa transformée de Fourier Plancherel.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3415','imageindication3415');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3415"></a><div class=inner id="innerindication3415" style="display:none;"><ol class="enumeratechiffre">
+<li> Que dire de $x\mapsto x^j \varphi$?
+<li> Utiliser les propriétés élémentaire de la transformée de Fourier-Plancherel.
+<li> Calcul direct.
+<li> Intégration par parties ou formule du cours.
+<li> Propriétés du produit de convolution, puis calcul de $\widehat{\varphi_a\star \varphi_b}$, décomposition en éléments simples, et injectivité de la transformée de Fourier.
+<li> Formule d'inversion de Fourier.
+<li> Calcul direct.
+<li> Formule d'inversion de Fourier-Plancherel.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3415','imagecorrige3415',3415);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3415"></a><div class=inner id="innercorrige3415" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que, pour tout $j\geq 0,$ $x^j \varphi_a$ est dans $L^1(\mathbb R)$. On en déduit, par un résultat du cours, que $\varphi_a\in \mathcal C^\infty(\mathbb R)$.
+<li> Il est clair que $\varphi_a\in L^2(\mathbb R)$. La transformée de Fourier-Plancherel envoyant $L^2(\mathbb R)$ dans $L^2(\mathbb R)$, on a $\widehat{\varphi_a}\in L^2(\mathbb R)$. De plus, on sait que 
+\begin{align*}
+\left\|\widehat{\varphi_a}\right\|_2&=\sqrt{2\pi}\|\varphi_a\|_2\\
+&=\sqrt{2\pi}\left(2\int_0^{+\infty}e^{-2ax}\right)^{1/2}\\
+&=\sqrt{2\pi}\left(2\frac{1}{2a}\right)\\
+&=\sqrt{\frac{2\pi}a}.
+\end{align*}
+<li> Soit $\xi\in\mathbb R$. On a 
+\begin{align*}
+\widehat{\varphi_a}(\xi)&=\int_{\mathbb R}e^{-ix\xi}e^{-a|x|}dx\\
+&=\int_0^{+\infty}e^{(-i\xi-a)x}dx+\int_{-\infty}^0 e^{(-i\xi +a)x}dx\\
+&=\frac{1}{a+i\xi}+\frac 1{a-i\xi}\\
+&=\frac{2a}{a^2+\xi^2}.
+\end{align*}
+<li> Par une formule du cours, pour tout $\xi\in\mathbb R,$
+$$\widehat{\varphi_a}'(\xi)=-i\widehat{x\varphi_a}(\xi).$$
+Mais 
+$$\widehat{\varphi_a}'(\xi)=\frac{-4a}{(a^2+\xi^2)^2}.$$
+On en déduit que 
+$$\widehat{x\varphi_a}(\xi)=\frac{-4ia\xi}{(a^2+\xi^2)^2}.$$
+<li> $\varphi_a$ et $\varphi_b$ sont toutes les deux dans $L^2(\mathbb R)$. Leur produit de convolution est donc une fonction continue. De plus, $\varphi_a$ et $\varphi_b$ sont toutes les deux dans $L^1(\mathbb R)$. Leur produit de convolution est donc dans $L^1(\mathbb R)$. La transormée de Fourier transformant le produit de convolution en produit de fonctions, on a pour tout $\xi\in\mathbb R,$
+\begin{align*}
+\widehat{\varphi_a\star\varphi_b}(\xi)&=\widehat{\varphi_a}(\xi)\cdot \widehat{\varphi_b}(\xi)\\
+&=\frac{2a}{a^2+\xi^2}\cdot \frac{2b}{b^2+\xi^2}.
+\end{align*}
+On décompose le membre de droite en éléments simples, en écrivant 
+$$\frac{2a}{a^2+\xi^2}\cdot \frac{2b}{b^2+\xi^2}=\frac{\alpha_0}{a^2+\xi^2}+\frac{\beta_0}{b^2+\xi^2}.$$
+En mettant au même dénominateur, on trouve que $\alpha_0$ et $\beta_0$ sont solutions du système
+$$\left\{
+\begin{array}{rcl}
+\alpha_0 b^2+\beta_0 a^2&=&4ab\\
+\alpha_0+\beta_0&=&0
+\end{array}\right.
+\iff 
+\left\{\begin{array}{rcl}
+\alpha_0&=&\frac{4ab}{b^2-a^2}\\
+\beta_0&=&\frac{4ab}{a^2-b^2}.
+\end{array}\right.$$
+On a donc 
+$$\widehat{\varphi_a\star \varphi_b}=\frac{2b}{b^2-a^2}\widehat{\varphi_a}+\frac{2a}{a^2-b^2}\widehat{\varphi_b}.$$
+Par (linéarité et) injectivité de la transformée de Fourier, on obtient 
+$$\varphi_a\star\varphi_b = \frac{2b}{b^2-a^2} \varphi_a+\frac{2a}{a^2-b^2}\varphi_b$$
+dans $L^1(\mathbb R)$ donc partout puisque les deux membres sont continus sur $\mathbb R.$
+<li> $\psi_a$ est une fonction continue sur $\mathbb R$ et, au voisinage de $\pm\infty,$ 
+$\psi_a(x)\sim \frac1{x^2}.$ Ainsi, $\psi_a\in L^1(\mathbb R)$. De plus, par la formule d'inversion de Fourier, pour tout $x\in\mathbb R,$ 
+$$\widehat{\psi_a}(x)=2\pi \varphi_a(-x)=2\pi e^{-a|x|}.$$
+De même, $\psi_a\star \psi_b\in L^1(\mathbb R)$ puisque $\psi_a,\psi_b\in L^1(\mathbb R)$. On obtient, pour tout $x\in\mathbb R,$ 
+$$\widehat{\psi_a\star\psi_b}(x)=\widehat{\psi_a}(x)\widehat{\psi_b}(x)=4\pi^2 e^{-(a+b)|x|}=2\pi \widehat{\psi_{a+b}}(x).$$
+L'injectivité de la transformée de Fourier permet de conclure au résultat demandé.
+<li> On a 
+$$\varphi_a'(x)=
+\left\{
+\begin{array}{ll}
+-ae^{-ax}&\textrm{ si }x&gt;0\\
+ae^{ax}&\textrm{ si }x&lt;0.
+\end{array}\right.
+$$
+On en déduit, pour tout $\xi\in\mathbb R,$ 
+\begin{align*}
+\widehat{\varphi_a'}(\xi)&=-a\int_0^{+\infty}e^{(-i\xi-a)x}dx+a\int_{-\infty}^0 e^{(-i\xi+a)x}dx\\
+&=\frac{-a}{a+i\xi}+\frac a{a-i\xi}\\
+&=\frac{2ai\xi}{a^2+\xi^2}.
+\end{align*}
+<li> Notons $h$ cette fonction, qui est continue sur $\mathbb R$. Au voisinage de $\pm\infty,$ $|h(\xi)|\sim \frac1{|\xi|}$ ce qui prouve qu'elle n'est pas intégrable. En revanche, $|h(\xi)|^2\sim
+\frac{1}{\xi^2}$ ce qui prouve que $h\in L^2(\mathbb R)$. De plus, 
+$$h=\frac{1}{2ia}\widehat{\varphi_a'}=\frac{-i}{2a}\mathcal F(\varphi_a')$$
+puisque $\varphi_a'\in L^1\cap L^2.$ Par la formule d'inversion de la transformée de Fourier Plancherel et par imparité de $\varphi_a',$ on obtient
+$$\mathcal F(h)=\frac{-i\pi }{a} \varphi_a'.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater3416"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3416"),	max:5, rating:2.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3416,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Solutions faibles <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3416.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(3416,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3416','imageenonce3416');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3416"></a><div class=inner id="innerenonce3416">Soit $f\in L^2(\mathbb R),$ on considère l'équation différentielle $(E)$ suivante : $y''-y=f.$ On pose 
+$$g(x)=-\frac{\hat f(x)}{1+x^2}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe un unique $y\in L^2(\mathbb R)$ tel que $\hat y=g.$
+ <li> Démontrer que $y$ est une solution faible de $(E),$ c'est-à-dire que pour tout $\varphi\in\mathcal C^{\infty}_c(\mathbb R),$
+ $$\int_{\mathbb R}y(x)(-\varphi(x)+\varphi''(x))dx=\int_{\mathbb R}f(x)\varphi(x)dx.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3416','imageindication3416');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3416"></a><div class=inner id="innerindication3416" style="display:none;"><ol class="enumeratechiffre">
+<li> La transformée de Fourier-Plancherel est un isomorphisme de $L^2(\mathbb R)$.
+<li> Passer par la transformée de Fourier-Plancherel qui conserve (presque) le produit scalaire).
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3416','imagecorrige3416',3416);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3416"></a><div class=inner id="innercorrige3416" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que $\widehat f$ est dans $L^2(\mathbb R)$ puisque $f\in L^2(\mathbb R)$. De plus, $x\mapsto \frac1{1+x^2}$ est bornée, et donc $g$ est dans $L^2(\mathbb R)$. Puisque la transformée de Fourier Plancherel est un isomorphisme de $L^2(\mathbb R),$ on en déduit le résultat demandé.
+<li> Soit $\varphi\in\mathcal C^\infty_c(\mathbb R)$. Alors $-\varphi+\varphi''\in \mathcal S(\mathbb R)\subset L^2(\mathbb R)$. On a donc 
+\begin{align*}
+\int_{\mathbb R}y(x)(-\varphi(x)+\varphi''(x))dx&=\frac 1{2\pi}\int_{\mathbb R}\widehat y(x) \big(-\widehat \varphi(x)+\widehat{\varphi''}(x)\big)dx\\
+&=-\frac1{2\pi}\int_{\mathbb R}\widehat y(x) (1+x^2)\widehat\varphi(x)dx\\
+&=\frac1{2\pi}\int_{\mathbb R}\widehat f(x)\widehat{\varphi}(x)dx\\
+&=\int_{\mathbb R}f(x)\varphi(x)dx.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater1902"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1902"),	max:5, rating:4.0909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1902,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Densité <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1902.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(1902,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1902','imageenonce1902');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1902"></a><div class=inner id="innerenonce1902">On rappelle qu'une partie $A$ d'un espace de Hilbert $H$ est
+totale dans $H$ (ie $\vect(A)$ est dense dans $H$) si et seulement si
+$A^\perp=\{0\}$.
+<ol class="enumeratechiffre">
+<li> Soit $f\in L^2(\mtr)$ et $x\in\mtr$. Montrer que
+$\mathcal{F}(\tau_x f)=e^{- ix\cdot }\mathcal{F}$ (où $e^{-ix\cdot}$ désigne la fonction $y\mapsto e^{-ixy}$).
+<li> Soit $f\in L^2(\mtr)$ telle que $\mathcal{F}(f)=0$ sur un
+ensemble $A$ de mesure strictement positive. Montrer qu'il existe
+$g\neq 0$ telle que $\langle g,h\rangle=0$ pour tout $h\in\vect(\tau_x
+f;\ x\in\mtr)$.
+<li> En déduire que si $\vect(\tau_x f;x\in\mtr)$ est dense, alors
+$\mathcal{F}(f)\neq 0$ presque partout.
+<li> Réciproquement, on suppose que $\mathcal{F}(f)\neq 0$ presque
+partout, et on suppose que $g\perp \vect(\tau_x
+f;x\in\mtr)$. Montrer que la transformée de Fourier (ordinaire!) de 
+$\overline{\mathcal{F}(g)}\mathcal{F}(f)$ est identiquement nulle. Conclure que
+$\vect(\tau_x f; x\in\mtr)$ est dense.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1902','imagecorrige1902',1902);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1902"></a><div class=inner id="innercorrige1902" style="display:none;"><ol class="enumeratechiffre">
+<li> Cette formule est vraie si $f\in L^1(\mtr)\cap L^2(\mtr)$
+(on peut faire le calcul effectif). Considérons maintenant $f\in L^2$ et soit $(f_n)$ une suite de $L^1\cap L^2$ qui converge (pour la norme $L^2$) vers $f$. Alors $\tau_x f_n\to \tau_x f$ dans $L^2$ et par continuité de la transformée de Fourier-Plancherel, on sait que $\mathcal F(\tau_x f_n)\to \mathcal F(\tau_x f)$ dans $L^2.$ D'autre part, on a aussi $\mathcal F(f_n)\to \mathcal F$ dans $L^2$ et ceci entraîne, puisque la fonction $e^{-ix\cdot}$ est bornée, que  $e^{-ix\cdot }\mathcal F(f_n)\to e^{-ix\cdot}\mathcal F(f)$ (toujours dans $L^2$). On conclut par unicité de la limite.
+<li> D'après la formule de Fourier-Plancherel,
+on a: $2\pi \langle g,h\rangle=\langle
+\mathcal{F}(g),\mathcal{F}(h)\rangle$. Maintenant, si $h$ est dans
+$\vect(\tau_x f;x\in\mtr)$, il existe un entier $p$, des complexes
+$\lambda_1,\dots,\lambda_p$ et $x_1,\dots,x_p$ tels que
+$\mathcal{F}(h)(y)=(\lambda_1 e^{-i x_1y}+\dots+\lambda_p
+e^{-i x_p y})\mathcal{F}(f)(y)$. On considère une fonction $g_1\in
+L^2(\mtr)$ non nulle presque partout et telle que $g_1=0$ là où
+$\mathcal{F}(f)\neq 0$. Alors $\langle g_1,\mathcal{F}(h)\rangle=0$ pour tout $h$
+comme précédemment. Puisque la transformée de Fourier-Plancherel est
+un isomorphisme, il existe un élément $g\in L^2(\mtr)$ non nul tel que
+$\mathcal{F}(g)=g_1$. Pour ce $g$, on a $\langle g,h\rangle=0$.
+<li> D'après la question précédente, et en utilisant le rappel du début de l'exercice,
+si $\mathcal{F}(f)$ est non nul sur un ensemble de mesure positive,
+alors $\vect(\tau_x f; x\in\mtr)$ n'est pas dense. Par contraposée,
+on déduit le résultat demandé.
+<li> En raisonnant comme précédemment, pour la fonction $h=\tau_x f$
+$$\int_{\mtr} \mathcal{F}(f)(y)\overline{\mathcal{F}(g)}(y)e^{-i
+xy}dy=\int_{\mathbb R}\mathcal F(h)(y)\overline{\mathcal F(g)}(y)dy=\langle \mathcal F(g),\mathcal F(h)\rangle=2\pi \langle g,h\rangle=0.$$
+Puisque $x$ peut-être choisi arbitrairement, la transformée de
+Fourier de la fonction $\overline{\mathcal{F}(g)}\mathcal{F}(f)$
+est identiquement nulle. En particulier, par injectivité de la
+transformée de Fourier, $\overline{\mathcal{F}(g)}\mathcal{F}(f)$
+est identiquement nulle, ce qui entraine $\mathcal{F}(g)=0$ par
+hypothèse sur $f$, puis $g=0$ (par injectivité de la transformé de Fourier-Plancherel).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater1903"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1903"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1903,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une projection <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1903.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(1903,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1903','imageenonce1903');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1903"></a><div class=inner id="innerenonce1903">On rappelle les résultats suivants :
+<ul class="rien">
+<li> Si $f,g\in L^2(\mtr)$, alors $2\pi \widehat{fg}=\mathcal{F}(f)\star\mathcal{F}(g).$
+<li> $\mathcal{F}(1_{-[a,a]})=2\frac{\sin(a x)}{x}$ et réciproquement $\mathcal{F}(\sin x/x)=\pi\times1_{[-1,1]}.$
+</ul>
+Pour $f\in L^2(\mtr)$, on pose 
+$$Pf(x)=\frac{1}{\pi}\int_{\mtr}f(x-y)\frac{\sin y}{y}dy.$$
+<ol class="enumeratechiffre">
+<li> Justifier que $Pf$ est bien définie et est une fonction continue.
+<li> Montrer que $Pf\in L^2(\mtr)$ (on s'aidera des rappels, et on pourra écrire $f=\mathcal{F}(g)$).
+<li> En déduire que $\|Pf\|_2\leq \|f\|_2$, et que $P\circ P=P$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1903','imagecorrige1903',1903);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1903"></a><div class=inner id="innercorrige1903" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit du produit de convolution de deux fonctions de $L^2$.
+<li> Attention, ceci n'est plus conséquence des résultats classiques sur le produit de convolution.
+Simplement, puisque $\sin x/\pi x$ et $f$ sont éléments de $L^2(\mtr)$, il existe $g$ et $h$ éléments de $L^2(\mtr)$
+tels que $\sin x/\pi x=\mathcal{F}(h)$ et $f=\mathcal{F}(g)$. On a alors :
+$$Pf=\frac{1}{\pi}\left(\frac{\sin x}{x}\right)\star f=\mathcal{F}(g)\star\mathcal{F}(h)=2\pi \widehat{gh}.$$
+Il reste à remarquer que la fonction $h$ est, à un multiple près, l'indicatrice du segment
+$[-1,1]$. Elle est bornée, dans $L^2$ et donc $gh\in L^2(\mtr)$ (comme produit d'une fonction de $L^2$ et d'une fonction de $L^\infty$) et $gh\in L^1(\mtr)$ (comme produit de deux fonctions de $L^2$).
+Par coïncidence de la transformée de Fourier et de la transformée de Fourier-Plancherel sur ces deux espaces, on en déduit
+que $\mathcal{F}(gh)\in L^2(\mtr)$.
+<li> Soit $f\in L^2(\mtr)$ qu'on écrit $f=\mathcal{F}(g)$. On a :
+\begin{eqnarray*}
+\|Pf\|_2&=&(2\pi)\|\mathcal{F}(gh)\|_2\\
+&=&(2\pi)^{3/2}\|gh\|_2.
+\end{eqnarray*}
+Puisque $h=\frac 1{2\pi}\mathbf 1_{[-1,1]}$, on a 
+$$\|Pf\|_2\leq \sqrt{2\pi}\|g\|_2=\|\mathcal F(g)\|_2=\|f\|_2.$$
+D'autre part,
+\begin{eqnarray*}
+P\circ P(f)&=&2\pi P(\mathcal{F}(gh))\\
+&=&(2\pi)^2\mathcal{F}(gh^2).
+\end{eqnarray*}
+On conclut en remarquant que $gh^2=\frac{1}{2\pi}gh$.
+</ol></div></div></div>
+
+<div class=titrepartie>Transformée de Fourier des fonctions de la classe de Schwartz</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater1904"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1904"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1904,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit et produit de convolution <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1904.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(1904,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1904','imageenonce1904');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1904"></a><div class=inner id="innerenonce1904">Soient $f$ et $g$ deux élements de $\mcs(\mtr)$. Justifier que $fg$ et $f\star g$ sont encore éléments de $\mcs(\mtr)$.
+</div></div><div class=indication><a href="javascript:showAll('innerindication1904','imageindication1904');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1904"></a><div class=inner id="innerindication1904" style="display:none;">Pour le produit, utiliser la définition. Pour le produit de convolution, utiliser la transformée de Fourier.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1904','imagecorrige1904',1904);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1904"></a><div class=inner id="innercorrige1904" style="display:none;">Pour le produit, c'est très facile en utilisant la formule de Leibniz pour la dérivée par exemple. Pour le produit
+de convolution, le mieux est d'utiliser la transformée de Fourier. En effet,
+$$\mathcal{F}(f\star g)=\hat{f}\hat{g},$$
+qui est élément de $\mcs(\mtr)$. On peut alors appliquer la formule d'inversion de la transformée de Fourier qui donne
+$$f\star g=\overline{\mathcal{F}}(\hat{f}\hat{g}),$$
+et utiliser que $\mcs(\mtr)$ est stable par transformation de Fourier (inverse).
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>36</span> <span id="rater3532"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3532"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3532,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quations différentielles dans $\mathcal S(\mathbb R)$ <a id=heart36 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart36" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3532.html"> [Signaler une erreur]</a><a id=exo36 href="javascript:ajouteexo(3532,36,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3532','imageenonce3532');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3532"></a><div class=inner id="innerenonce3532">Soit $g\in\mathcal S(\mathbb R)$. Démontrer qu'il existe une unique fonction $f\in\mathcal S(\mathbb R)$ telle que $f^{(12)}+f^{(8)}+f=g.$</div></div><div class=indication><a href="javascript:showAll('innerindication3532','imageindication3532');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3532"></a><div class=inner id="innerindication3532" style="display:none;">Appliquer la transformée de Fourier, et utiliser le théorème d'inversion dans $\mathcal S(\mathbb R)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3532','imagecorrige3532',3532);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3532"></a><div class=inner id="innercorrige3532" style="display:none;">Appliquons la transformée de Fourier à cette équation, on sait que $f$ est solution de l'équation si et seulement si
+$$x^{12}\hat f+x^8 \hat f+\hat f=\hat g\iff \hat f=\frac{\hat g}{1+x^4+x^{12}}.$$
+Pour conclure, il suffit, puisque la transformée de Fourier est une bijection de $\mathcal S(\mathbb R)$, de remarquer que $h:x\mapsto \hat g(x)/(1+x^8+x^{12})$ est dans $\mathcal S(\mathbb R)$. Ceci est plutôt facile à vérifier. C'est clairement une fonction de classe $\mathcal C^\infty.$ De plus, pour tout $n\in\mathbb N,$ on a
+par la formule de Leibniz 
+$$h^{(n)}=\sum_{k=0}^n F_k \hat g^{(k)}$$
+où $F_k$ est une fraction rationnelle. On en déduit aisément que 
+$$|x^N| h^{(n)}(x)\to 0\textrm{ lorsque }|x|\to+\infty.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>37</span> <span id="rater1905"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1905"),	max:5, rating:1.9230769230769, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1905,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une estimation d'intégrale <a id=heart37 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart37" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1905.html"> [Signaler une erreur]</a><a id=exo37 href="javascript:ajouteexo(1905,37,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1905','imageenonce1905');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1905"></a><div class=inner id="innerenonce1905">Soit $(x,y)\mapsto f(x,y)$ une fonction de $\mathcal{S}(\mtr^2)$.
+<ol class="enumeratechiffre">
+<li> Montrer que 
+$$\left\|\frac{\partial^2 f}{\partial x\partial y}\right\|_2=\frac1{\sqrt{2\pi}}\left\|xy\hat{f}\right\|_2.$$
+<li> Obtenir une estimation du même type pour $\left\|\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}\right\|_2$.
+<li> En déduire que
+$$2\left\|\frac{\partial^2f}{\partial x\partial y}\right\|_2\leq \left\|\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}\right\|_2.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1905','imageindication1905');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1905"></a><div class=inner id="innerindication1905" style="display:none;">Poser $g=\frac{\partial^2 f}{\partial x\partial y}$. Quelle est la transformée de Fourier de $g$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1905','imagecorrige1905',1905);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1905"></a><div class=inner id="innercorrige1905" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $g=\frac{\partial^2 f}{\partial x\partial y}$. Il est bien connu que la transformée de Fourier de g
+est :
+$$\hat{g}(x,y)=i^2xy \hat{f}(x,y).$$
+On en déduit
+$$\left\|\frac{\partial^2 f}{\partial x\partial y}\right\|_2=\|g\|_2=\frac{1}{\sqrt{2\pi}} \|xy \hat{f}\|_2.$$
+<li> De même, si on pose $h=\frac{\partial^2 f}{\partial^2 x}+\frac{\partial^2 f}{\partial^2 y}$, la transformée de Fourier
+de $h$ est 
+$$\hat{h}(x,y)=-x^2 \hat{f}(x,y)-y^2 \hat{f}(x,y).$$
+On en déduit que 
+$$\|h\|_2=\frac1{\sqrt{2\pi}}\|\hat f\|_2=\frac1{\sqrt{2\pi}}\|(x^2+y^2)\hat{f}\|_2.$$
+<li> Il suffit d'utiliser l'inégalité classique $2|xy|\leq x^2+y^2$ pour en déduire le résultat.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>38</span> <span id="rater3474"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3474"),	max:5, rating:3.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3474,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Bernstein <a id=heart38 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart38" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3474.html"> [Signaler une erreur]</a><a id=exo38 href="javascript:ajouteexo(3474,38,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3474','imageenonce3474');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3474"></a><div class=inner id="innerenonce3474">Dans cet exercice, on admet l'existence d'une fonction $\rho$ de classe $\mathcal C^\infty$ valant $1$ sur $[-1,1]$ et $0$ sur $\mathbb R\backslash[-2,2].$
+<ol class="enumeratechiffre">
+ <li> Soit $f\in L^1(\mathbb R)$. Pour $\lambda&gt;0$, on pose $f_{\lambda}(x)=f(\lambda x)$. Exprimer $\widehat{f_\lambda}$
+ en fonction de $\hat f.$
+ <li> On pose $r(x)=\frac1{2\pi}\int_{\mathbb R}e^{ixt}\rho(t)dt.$ Justifier que $r$ est de classe $\mathcal C^1,$
+ puis que que $r$ et $r'$ sont intégrables.
+ <li> Soit $\lambda&gt;0$ et soit $f\in L^1(\mathbb R)\cap\mathcal C^1(\mathbb R)$. On suppose que $\hat f$
+ est nulle en dehors du segment $[-\lambda,\lambda]$. 
+ <ol class="enumeratechiffre">
+ <li> Justifier que $f\star r_\lambda\in L^1(\mathbb R).$
+ <li> Démontrer que $f=\lambda f\star r_\lambda.$
+ <li> En déduire que si $f\in L^\infty(\mathbb R)$, il existe une constante $C&gt;0,$ indépendante de $\lambda$ et de $f,$ telle que 
+ $$\|f'\|_\infty\leq C\lambda \|f\|_\infty.$$
+ </ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3474','imageindication3474');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3474"></a><div class=inner id="innerindication3474" style="display:none;"><ol class="enumeratechiffre">
+ <li> Faire un changement de variables (ou cours).
+ <li> $\rho\in\mathcal S(\mathbb R)$.
+ <li> 
+ <ol class="enumeratechiffre">
+ <li> Propriétés usuelles du produit de convolution.
+ <li> Utiliser la transformée de Fourier.
+ <li> Justifier que $\|r_\lambda'\|_1=\|r'\|_1.$
+ </ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3474','imagecorrige3474',3474);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3474"></a><div class=inner id="innercorrige3474" style="display:none;"><ol class="enumeratechiffre">
+ <li> D'après le cours, ou en effectuant un changement de variables dans l'intégrale, pour tout $x\in\mathbb R,$ on a 
+$$\widehat{f_\lambda}(x)=\frac 1\lambda \widehat f\left(\frac x\lambda\right).$$
+ <li> On commence par remarquer que $\rho$ est dans la classe de Schwartz $\mathcal S(\mathbb R)$ ($\rho$ est de classe $\mathcal C^\infty$ et toutes ses dérivées sont à support compact). Ainsi, $\hat \rho$ est aussi dans la classe de Schwartz. Mais $r(x)=\frac 1{2\pi}\hat\rho(x)$ et donc $r\in\mathcal S(\mathbb R)$. En particulier, $r$ est de classe $\mathcal C^1$ et $r$ et $r'$ sont intégrables.
+ <li> 
+ <ol class="enumeratechiffre">
+ <li> Puisque $f,r_\lambda\in L^1(\mathbb R)$ et que la convolée de deux fonctions de $L^1(\mathbb R)$ est dans $L^1(\mathbb R)$, on obtient que $f\star r_\lambda\in L^1(\mathbb R)$.
+ <li> On va utiliser la transformée de Fourier. Remarquons que, par inversion de la transformée de Fourier dans $\mathcal S(\mathbb R)$, $\hat r=\rho$. Ainsi, pour tout $x\in\mathbb R,$ on a
+\begin{align*}
+\widehat{\lambda f\star r_\lambda}(x)&=\lambda \hat f(x)\widehat{r_\lambda}(x)\\
+&=\lambda \hat f(x) \frac 1\lambda \hat \rho\left(\frac x\lambda\right)\\
+&=\hat f(x) \rho\left(\frac x\lambda\right).
+\end{align*}
+Or, si $x\in[-\lambda,\lambda]$, $x/\lambda\in[-1,1]$ et $\rho(x/\lambda)=1$ d'où 
+$\widehat{\lambda f\star r_\lambda}(x)=\hat f(x)$. Si $x\notin[-\lambda,\lambda]$, $\widehat{\lambda f\star r_\lambda}(x)=\hat f(x)=0$. On a ainsi démontrer que 
+$$\hat f=\widehat{\lambda f\star r_\lambda}.$$
+Par injectivité de la transformée de Fourier, $f=\lambda f\star r_\lambda.$
+<li> Puisque $f$ est dans $L^1(\mathbb R)$ et que $r_\lambda\in \mathcal C^\infty_c(\mathbb R)$, on sait que $(f\star r_\lambda)'=f\star r_\lambda '$.
+Ainsi, on a 
+\begin{align*}
+\|f'\|_\infty&= \|\lambda f\star r_\lambda'\|_\infty\\
+&\leq \lambda \|f\|_\infty \cdot \|r'_\lambda\|_1.
+\end{align*}
+Or, 
+\begin{align*}
+\|r_\lambda'\|_1&=\int_{\mathbb R}|\lambda r'(\lambda x)|dx\\
+&=\int_{\mathbb R} |r'(u)|du\quad\quad (u=\lambda x).
+\end{align*}
+On obtient finalement 
+$$\|f'\|_\infty \leq \lambda \|f\|_\infty \|r'\|_1.$$
+</ol></div></div></div>
+[exo=1906 ]
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

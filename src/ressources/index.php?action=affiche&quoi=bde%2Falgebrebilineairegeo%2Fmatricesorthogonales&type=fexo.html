@@ -1,0 +1,708 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Matrices orthogonales et isométries vectorielles</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrebilineairegeo.html">Exercices sur les espaces euclidiens</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Matrices orthogonales et isométries vectorielles</h1>
+<div class=titrepartie>Généralités sur les matrices orthogonales</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1059"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1059"),	max:5, rating:1.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1059,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices orthogonales triangulaires supérieures <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1059.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1059,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1059','imageenonce1059');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1059"></a><div class=inner id="innerenonce1059">Quelles sont les matrices orthogonales triangulaires supérieures?</div></div><div class=indication><a href="javascript:showAll('innerindication1059','imageindication1059');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1059"></a><div class=inner id="innerindication1059" style="display:none;">Commencer par les matrices de taille 2, de taille 3....</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1059','imagecorrige1059',1059);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1059"></a><div class=inner id="innercorrige1059" style="display:none;">On va prouver que ce sont les matrices diagonales dont les coefficients diagonaux sont égaux à $\pm 1$. Commençons par la première colonne de la matrice $M$ orthogonale et triangulaire supérieure. Puisque sa norme vaut 1, et que seul le premier coefficient est non-nul, celui-ci vaut $\pm 1$. Considérons désormais la deuxième colonne, dont les coefficients éventuellement non-nuls sont $m_{1,2}$ et $m_{2,2}$. Puisque la première colonne est orthogonale à cette colonne, on a $\pm m_{1,2}=0$ et donc $m_{1,2}=0$. En considérant la norme, on trouve que $m_{2,2}=\pm 1$.<br>
+Considérons maintenant la troisième colonne. Ses coefficients éventuellement non-nuls sont 
+$m_{1,3}$, $m_{2,3}$ et $m_{3,3}$. &Eacute;crivons que la troisième colonne est orthogonale à la première. On trouve $m_{1,3}=0$. &Eacute;crivons ensuite que la troisième colonne est orthogonale à la seconde. On trouve $m_{2,3}=0$. Le calcul de la norme donne $m_{3,3}=\pm 1$. On continue ainsi pour chaque colonne.<br>
+Réciproquement, une matrice diagonale dont les coefficients diagonaux sont égaux à $\pm 1$ est bien une matrice orthogonale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1060"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1060"),	max:5, rating:1.3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1060,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS pour que la matrice soit orthogonale <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1060.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1060,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1060','imageenonce1060');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1060"></a><div class=inner id="innerenonce1060">Soient $(a,b,c)\in\mathbb R^3$, on pose $S=a+b+c$ et $\sigma=ab+bc+ca$, et 
+$$M=\left(\begin{array}{ccc}
+a&b&c\\
+c&a&b\\
+b&c&a
+\end{array}\right).$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $M\in O_3(\mathbb R)$ si et seulement si $\sigma=0$ et $S=\pm 1$.
+<li> Démontrer que $M\in SO_3(\mathbb R)$ si et seulement si $\sigma=0$ et $S=1$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1060','imageindication1060');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1060"></a><div class=inner id="innerindication1060" style="display:none;"><ol class="enumeratechiffre">
+<li> Les colonnes forment une famille orthonormale.
+<li> Calculer en plus le déterminant, sous forme factorisée.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1060','imagecorrige1060',1060);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1060"></a><div class=inner id="innercorrige1060" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que $M\in O_3(\mathbb R)$ si et seulement si les colonnes forment une base orthonormale de $\mathbb R^3$. Or, le produit scalaire de deux colonnes différentes est toujours égal à $\sigma$, et la norme de chaque colonne vaut $(a^2+b^2+c^2)^{1/2}$. On a donc 
+$$M\in O_3(\mathbb R)\iff \sigma=0\textrm{ et }(a^2+b^2+c^2)=1.$$
+Or, si $\sigma=0$, on  a 
+$$S^2=a^2+b^2+c^2+2\sigma=a^2+b^2+c^2.$$
+On en déduit donc que 
+$$M\in O_3(\mathbb R)\iff \sigma=0\textrm{ et }S^2=1\iff \sigma=0\textrm{ et }S=\pm 1.$$
+<li> On a 
+$$M\in SO_3(\mathbb R)\iff M\in O_3(\mathbb R)\textrm{ et }\det(M)=1\iff \sigma=0\textrm{ et }S=\pm 1\textrm{ et }\det(M)=1.$$
+Calculons le déterminant de $M$. On a 
+\begin{eqnarray*}
+\det(M)&=&\left|
+\begin{array}{ccc}
+a&b&c\\
+c&a&b\\
+b&c&a
+\end{array}
+\right|
+\\
+&=&\left| \begin{array}{ccc}
+a+b+c&b&c\\
+a+b+c&a&b\\
+a+b+c&c&a
+\end{array}\right|\\
+&=&(a+b+c)\left| \begin{array}{ccc}
+1&b&c\\
+1&a&b\\
+1&c&a
+\end{array}\right|\\
+&=&S\left| \begin{array}{ccc}
+1&b&c\\
+0&a-b&b-c\\
+0&c-b&a-c
+\end{array}\right|\\
+&=&S(a^2+b^2+c^2-ab-bc-ca)\\
+&=&S(S^2-3\sigma).\\
+\end{eqnarray*}
+Maintenant, si on sait déjà que $S=\pm 1$ et $\sigma=0$, alors $\det(M)=S$, et donc $\det(M)=1$ est équivalent à $S=1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3309"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3309"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3309,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices orthogonales à coefficients entiers <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3309.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3309,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3309','imageenonce3309');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3309"></a><div class=inner id="innerenonce3309">Démontrer que l'ensemble des matrices de $O_n(\mathbb R)$ à coefficients (entiers) relatif est fini. Déterminer son cardinal.</div></div><div class=indication><a href="javascript:showAll('innerindication3309','imageindication3309');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3309"></a><div class=inner id="innerindication3309" style="display:none;">Combien chaque colonne admet-elle de coefficients non nuls?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3309','imagecorrige3309',3309);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3309"></a><div class=inner id="innercorrige3309" style="display:none;">Soit $A\in\mathcal M_n(\mathbb Z)\cap O_n(\mathbb R)$. Alors on sait que, pour tout $j=1,\dots,n,$ 
+$$\sum_{i=1}^n a_{i,j}^2=1.$$
+Puisque $a_{i,j}\in\mathbb Z,$ ceci n'est possible que s'il existe $\phi(j)\in\{1,\dots,n\}$ tel que $a_{\phi(j),j}=\pm 1$ et $a_{i,j}=0$ pour tout $i\neq \phi(j)$. De plus, deux colonnes sont non colinéaires. Ainsi, $\phi:\{1,\dots,n\}\to\{1,\dots,n\}$ est injective, donc bijective puisqu'on travaille avec des ensembles finis. Ainsi, il y a au plus $2^n\cdot n!$ telles matrices (le $2^n$ correspond au choix des signes, le $n!$ aux permutations des vecteurs). <br>
+Réciproquement, si on se donne des signes $\veps_i\in\{-1,1\},$ $i=1,\dots,n$, et si les colonnes de $A$ constituent une permutation des vecteurs $\veps_i e_i,$ où $(e_1,\dots,e_n)$ est la base canonique de $\mathbb R^n,$ alors $A$ est orthogonale. Il y a donc exactement $2^n\times n!$ matrices de $O_n(\mathbb R)$ à coefficients entiers.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1061"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1061"),	max:5, rating:2.4444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1061,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur les coefficients d'une matrice orthogonale <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1061.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1061,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1061','imageenonce1061');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1061"></a><div class=inner id="innerenonce1061">Soit $M=(m_{i,j})_{1\leq i,j\leq n}\in\mathcal O_n(\mathbb R)$. On note $(C_1,\dots,C_n)$ les vecteurs colonnes de $M$, $v=\sum_{j=1}^n C_j$,
+et $u=\sum_{j=1}^n e_j$, où $(e_1,\dots,e_n)$ est la base canonique de $\mtr^n$ muni de son produit scalaire canonique.
+<ol class="enumeratechiffre">
+<li> Montrer que $\sum_{i=1}^n\sum_{j=1}^n m_{i,j}=(u|v).$
+<li> En déduire que $\left|\sum_{i=1}^n\sum_{j=1}^n m_{i,j}\right|\leq n$. Cette inégalité est-elle optimale?
+<li> Démontrer que  $\sum_{1\leq i,j\leq n}|m_{i,j}|\leq n^{3/2}.$
+<li> Démontrer que $\sum_{1\leq i,j\leq n}|m_{i,j}|\geq n.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1061','imageindication1061');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1061"></a><div class=inner id="innerindication1061" style="display:none;"><ol class="enumeratechiffre">
+<li> Ecrire $m_{i,j}$ comme un produit scalaire.
+<li> Utiliser l'inégalité de Cauchy-Schwarz.
+<li> Utiliser l'inégalité de Cauchy-Schwarz sur la somme sur $i$.
+<li> Démontrer que 
+$$\sum_{i=1}^n |m_{i,j}|\geq \left(\sum_{i=1}^n m_{i,j}^2\right)^{1/2}.$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1061','imagecorrige1061',1061);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1061"></a><div class=inner id="innercorrige1061" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que $m_{i,j}=(C_j,e_i)$. Ainsi, $\sum_{j=1}^n m_{i,j}=(v,e_i)$, d'où le résultat en sommant sur $i$, 
+et en utilisant la linéarité du produit scalaire.
+<li> L'inégalité de Cauchy-Schwarz donne 
+$$\left|\sum_{i=1}^n\sum_{j=1}^n m_{i,j}\right|\leq\|u\|\|v\|.$$
+Mais comme $(e_j)$ et $(C_j)$ sont des bases orthonormales de $\mtr^n$ (la deuxième car $M$ est orthogonale,
+ce qui équivaut à dire que ses vecteurs colonnes forment une base orthonormale), on a par le théorème de Pythagore
+$$\|u\|^2=\|v\|^2=n.$$
+Ceci donne l'inégalité demandée. Cette inégalité est optimale, car $I_n$ est orthogonale, et la valeur absolue de la somme
+de ses coefficients fait $n$.
+<li> Par l'inégalité de Cauchy-Schwarz, 
+$$\sum_{i=1}^n |m_{i,j}|\leq \sqrt{\sum_{i=1}^n m_{i,j}^2}\sqrt{\sum_{j=1}^n 1^2}=\|C_j\|\times n^{1/2}=n^{1/2}.$$
+On somme alors sur $j$ et comme il y a $n$ termes dans la somme, on trouve le résultat voulu.
+<li> Le point clé est de remarquer que 
+$$\sum_{i=1}^n |m_{i,j}|\geq \left(\sum_{i=1}^n m_{i,j}^2\right)^{1/2}$$
+(c'est-à-dire que la norme 1 est plus grande que la norme 2). Ceci se prouve très facilement en mettant les deux membres au carré. Une fois ceci prouvé, on écrit que 
+$$\sum_{i=1}^n |m_{i,j}|\geq \|C_j\|=1,$$
+et à nouveau on somme $n$ fois cette inégalité pour trouver le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater3310"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3310"),	max:5, rating:2.6875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3310,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec le produit vectoriel <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3310.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(3310,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3310','imageenonce3310');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3310"></a><div class=inner id="innerenonce3310">Déterminer toutes les matrices de $O_3(\mathbb R)$ telles que la première colonne est $\begin{pmatrix}3/5\\4/5\\0\end{pmatrix}.$</div></div><div class=indication><a href="javascript:showAll('innerindication3310','imageindication3310');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3310"></a><div class=inner id="innerindication3310" style="display:none;">La deuxième colonne doit être orthogonale à la première. La dernière est, au signe près, le produit vectoriel des deux premières.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3310','imagecorrige3310',3310);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3310"></a><div class=inner id="innercorrige3310" style="display:none;">Notons $C_1,C_2,C_3$ les trois colonnes avec $C_1=\begin{pmatrix}3/5\\4/5\\0\end{pmatrix}.$ On remarque que $\|C_1\|=1$. On sait que $\langle C_1,C_2\rangle=0$ et que $\|C_2\|^2=1.$ Notons $C_2=\begin{pmatrix}a\\b\\c\end{pmatrix}.$ Alors on a 
+$$3a+4b=0\textrm{ et }a^2+b^2+c^2=1.$$
+On en déduit que $b=-3a/4$ et que $c=\veps \sqrt{1-\frac{25}{16}a^2}.$ En particulier, on doit avoir $|a|\leq 4/5.$ Ces conditions sont suffisantes pour que $C_1\perp C_2$ et que $\|C_2\|^2=1.$ Enfin, on a $C_3=\veps ' C_1\wedge C_2,$ avec $\veps'=\pm 1.$ On trouve donc 
+$$C_3=\begin{pmatrix} \veps'\frac 45 c\\ -\veps'\frac 35 c\\ -\veps' \frac{5}4 a\end{pmatrix}.$$
+Finalement, les matrices qui fonctionnent sont celles s'écrivant : 
+$$\begin{pmatrix}
+\frac 35&a&\frac \veps' \frac 45 c\\
+\frac 45&-\frac 34 a&-\veps' \frac 35 c\\
+0& -\veps' \frac 35 c&-\veps' \frac 54 a
+\end{pmatrix}$$
+où $\veps,\veps'\in\{-1,1\},$ $a\in [-4/5,4/5],$ $c=\veps\sqrt{1-\frac{25}{16}a^2}.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1062"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1062"),	max:5, rating:2.8095238095238, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1062,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Factorisation QR <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1062.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1062,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1062','imageenonce1062');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1062"></a><div class=inner id="innerenonce1062"><ol class="enumeratechiffre">
+<li> Soit $\mathcal B$ une base d'un espace euclidien $E$ et soit $\mathcal C$ l'orthonormalisée de Schmidt de $\mathcal B$. Que dire de la matrice de passage de $\mathcal C$ à $\mathcal B$?
+<li> Montrer que, pour toute matrice $A\in GL_n(\mathbb R)$, il existe une matrice orthogonale $Q$ et une matrice triangulaire supérieure $R$ dont tous les coefficients diagonaux sont strictement positifs telles que $A=QR$.
+<li> Démontrer que le couple $(Q,R)$ est unique.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1062','imageindication1062');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1062"></a><div class=inner id="innerindication1062" style="display:none;"><ol class="enumeratechiffre">
+<li> Le résultat est dans la question suivante!
+<li> Interpréter la matrice $A$ comme la matrice de passage de la base canonique à une base $\mathcal B$, puis s'inspirer de la question précédente.
+<li> Commencer par démontrer qu'une matrice orthogonale qui est aussi triangulaire supérieure à coefficients diagonaux strictement positifs est égale à l'identité. 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1062','imagecorrige1062',1062);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1062"></a><div class=inner id="innercorrige1062" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $(x_1,\dots,x_n)$ la base $\mathcal B$ et $(u_1,\dots,u_n)$ son orthonormalisée de Schmidt. Puisque, pour tout $1\leq p\leq n$, $\textrm{vect}(u_1,\dots,u_p)=\textrm{vect}(x_1,\dots,x_p)$, la matrice de passage est triangulaire supérieure. De plus, les coefficients sur la diagonale sont égaux à $\langle u_i,x_i\rangle$. Ils sont donc strictement positifs.
+<li> Notons $x_1,\dots,x_n$ les vecteurs colonnes de $A$. Alors puisque la matrice $A$ est inversible, la famille $(x_1,\dots,x_n)$ est une base de $\mathbb R^n$. Notons $\mathcal B$ cette base et $\mathcal C$ l'orthonormalisée de Schmidt de $\mathcal B$. Notons $Q$ la matrice de passage de la base canonique à $\mathcal C$, et $R$ la matrice de passage de $\mathcal C$ à $\mathcal B$. Alors, par les formules de changement de base, on a 
+$$A=QR.$$
+Mais $Q$ est orthogonale, car on passe d'une base orthonormée à une autre, et $R$ est triangulaire supérieure d'après la question précédente.
+<li> Imaginons que l'on puisse écrire $A=Q_1R_1=Q_2R_2.$ Il vient 
+$$Q_2^{-1}Q_1=R_2R_1^{-1}.$$
+Mais $Q_2^{-1}Q_1$ est une matrice orthogonale (pourquoi?) et $R_2R_1^{-1}$ est une matrice triangulaire supérieure, à coefficients diagonaux strictement positifs (pourquoi?). Or, une matrice orthogonale qui est aussi triangulaire supérieure est diagonale (pourquoi?), et ses coefficients diagonaux sont égaux à $\pm 1$. Comme ici les coefficients diagonaux sont strictement positifs, il sont égaux à $1$, et $Q_2^{-1}Q_1=I_n$, soit $Q_2=Q_1$, et par suite $R_2=R_1$.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Isométries vectorielles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1070"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1070"),	max:5, rating:1.3888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1070,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une symétrie orthogonale <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1070.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1070,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1070','imageenonce1070');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1070"></a><div class=inner id="innerenonce1070">Soit $E=\mathbb R_3[X]$ muni du produit scalaire $\langle P,Q\rangle =\int_{-1}^1 P(t)Q(t)dt$. On considère
+l'endomorphisme de $E$ défini par $\phi(P)(X)=P(-X)$. Démontrer que $\phi$ est une symétrie orthogonale.</div></div><div class=indication><a href="javascript:showAll('innerindication1070','imageindication1070');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1070"></a><div class=inner id="innerindication1070" style="display:none;">Revenir à la définition d'une symétrie, puis d'un endomorphisme orthogonal.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1070','imagecorrige1070',1070);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1070"></a><div class=inner id="innercorrige1070" style="display:none;">Il faut d'abord prouver que $\phi$ est une symétrie, c'est-à-dire que $\phi\circ\phi=Id$.
+Mais c'est clair, car $P(-(-X))=P(X)$. Il faut aussi démontrer que $\phi$ est une symétrie orthogonale, c'est-à-dire que
+$\phi$ conserve le produit scalaire, ou encore que
+$$\langle \phi (P),\phi(Q)\rangle=\langle P,Q\rangle$$
+pour tous polynômes $P,Q\in E$. Mais,
+$$\langle \phi(P),\phi(Q)\rangle =\int_{-1}^1 P(-t)Q(-t)dt=\int_{-1}^1 P(u)Q(u)du=\langle P,Q\rangle,$$
+le seul argument utilisé étant le changement de variables $u=-t$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1071"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1071"),	max:5, rating:1.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1071,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une symétrie orthogonale <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1071.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1071,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1071','imageenonce1071');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1071"></a><div class=inner id="innerenonce1071">Soit $E$ un espace vectoriel euclidien, et $a\in E\backslash\{0\}$. On pose 
+$$s_a(x)=x-2\frac{(a,x)}{(a,a)}a,$$
+Montrer que $s_a$ est un endomorphisme orthogonal. Calculer $\ker(s_a-id)$, $\ker(s_a+id)$. 
+Décrire alors géométriquement $s_a$.
+</div></div><div class=indication><a href="javascript:showAll('innerindication1071','imageindication1071');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1071"></a><div class=inner id="innerindication1071" style="display:none;">Calculer $\|s_a(x)\|$, puis démontrer que $s_a$ est une symétrie orthogonale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1071','imagecorrige1071',1071);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1071"></a><div class=inner id="innercorrige1071" style="display:none;">Posons $F=\vect(a)$ et $G=a^\perp$. Soit $x\in E$, que l'on décompose
+en $x=g+\lambda a$, avec $g\in G$. On a alors :
+$$s_a(x)=x-2\frac{(a,\lambda a)}{(a,a)}a=\lambda a+g-2\lambda a=g-\lambda a.$$
+Ceci prouve en particulier, à l'aide de la relation de Pythagore, que $\|x\|^2=\|s_a(x)\|^2=\|g\|^2+\lambda^2\|a\|^2$, et que l'endomorphisme est orthogonal.
+Le calcul précédent prouve en outre que $\ker(s_a-id)=G$ et $\ker(s_a+id)=\vect(a)$. Ainsi, on a
+$$\ker(s_a-id)\oplus^\perp \ker(s_a+id)=E.$$
+$s_a$ est la symétrie orthogonale par rapport à l'hyperplan $a^\perp$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3311"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3311"),	max:5, rating:1.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3311,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Barycentre de deux isométries est une isométrie <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3311.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3311,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3311','imageenonce3311');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3311"></a><div class=inner id="innerenonce3311">Soit $E$ un espace euclidien et $u,v\in O(E).$ 
+<ol class="enumeratechiffre">
+<li> Démontrer que si $x\in E$ est tel que $u(x)\neq v(x),$ alors $\langle u(x),v(x)\rangle &lt; \|u(x)\|\cdot \|v(x)\|.$
+<li> On suppose qu'il existe $\lambda\in]0,1[$ tel que $\lambda u+(1-\lambda) v\in O(E)$. Démontrer que $u=v.$ 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3311','imageindication3311');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3311"></a><div class=inner id="innerindication3311" style="display:none;"><ol class="enumeratechiffre">
+<li> Cas d'égalité dans l'inégalité de Cauchy-Schwartz.
+<li> Procéder par contraposée, et calculer $\|\lambda u(x)+(1-\lambda)v(x)\|^2$ pour un $x$ bien choisi.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3311','imagecorrige3311',3311);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3311"></a><div class=inner id="innercorrige3311" style="display:none;"><ol class="enumeratechiffre">
+<li> Si on a   $\langle u(x),v(x)\rangle = \|u(x)\|\cdot \|v(x)\|,$ on se retrouve dans le cas d'égalité de Cauchy-Schwarz (sans les valeurs absolues) et on a $v(x)=\lambda u(x)$ avec $\lambda\in\mathbb R_+$. Mais puisque $u$ et $v$ sont des isométries vectorielles, on a $\|u(x)\|=\|v(x)\|=\|x\|,$ et donc $\lambda=1$ ce qui n'est pas possible.
+<li> Supposons que $u\neq v$. Soit $x\in E$ tel que $u(x)\neq v(x)$. Alors d'après la question précédente,  $\langle u(x),v(x)\rangle &lt; \|u(x)\|\cdot \|v(x)\|=\|x\|^2.$ D'autre part, 
+\begin{align*}
+\|(1-\lambda)u(x)+\lambda v(x)\|^2&=(1-\lambda)^2 \|u(x)\|^2+\lambda^2 \|v(x)\|^2+2\lambda(1-\lambda) \langle u(x),v(x)\rangle\\
+&&lt;(1-\lambda)^2 \|x\|^2+\lambda^2 \|x\|^2+2\lambda (1-\lambda)\|x\|^2\\
+&&lt;\big( (1-\lambda)+\lambda\big)^2 \|x\|^2\\
+&&lt;\|x\|^2.
+\end{align*}
+Ainsi, $\lambda u+(1-\lambda)v\notin O(E).$ Par contraposée, si $\lambda u+(1-\lambda)v\in O(E),$ alors $u=v.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3313"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3313"),	max:5, rating:2.2105263157895, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3313,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphisme orthogonal sur $\mathcal M_n(\mathbb R)$ <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3313.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3313,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3313','imageenonce3313');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3313"></a><div class=inner id="innerenonce3313">Pour $n\geq 2$, on munit $\mathcal M_n(\mathbb R)$ du produit scalaire $\langle M,N\rangle=\textrm{Tr}(M^T N)$. Déterminer les réels $a$ et $b$ de sorte que $f:\mathcal M_n(\mathbb R)\to\mathcal M_n(\mathbb R),$ $M\mapsto aM+bM^T$ soit orthogonal.</div></div><div class=indication><a href="javascript:showAll('innerindication3313','imageindication3313');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3313"></a><div class=inner id="innerindication3313" style="display:none;">Faire un raisonnement par analyse/synthèse : si $f$ est orthogonale, $\|f(M)\|=\|M\|$ pour toute matrice $M$. Calculer et faire des simplifications, puis essayer avec des matrices simples pour obtenir des conditions nécessaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3313','imagecorrige3313',3313);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3313"></a><div class=inner id="innercorrige3313" style="display:none;">On va faire un raisonnement par analyse/synthèse. On remarque d'abord que $f$ est clairement linéaire. Supposons que $f$ est orthogonale. Alors pour toute matrice $M\in\mathcal M_n(\mathbb R),$ on a $\|f(M)\|^2=\|M\|^2.$ Mais,
+\begin{align*}
+\|f(M)\|^2&=\langle aM+bM^T,aM+bM^T\rangle\\
+&= \textrm{Tr} \big( (aM^T+bM)(aM+bM^T) \big)\\
+&=\textrm{Tr} \big(abM^2+ab (M^T)^2+a^2 M^TM+b^2 MM^T\big).
+\end{align*}
+Utilisant que $\textrm{Tr}(A^T)=\textrm{Tr}(A),$ on trouve
+\begin{align*}
+\|f(M)\|^2&=2ab \textrm{Tr}(M^2)+(a^2+b^2)\textrm{Tr}(M^TM).
+\end{align*}
+On en déduit alors que pour tout $M\in\mathcal M_n(\mathbb R),$ 
+$$2ab \textrm{Tr}(M^2)+(a^2+b^2)\textrm{Tr}(M^TM)=\textrm{Tr}(M^TM).$$
+Pour $M=E_{1,2}$, on a $M^T M=E_{2,2}$ et $M^2=0,$ et donc on en déduit
+$$a^2+b^2=1.$$
+Pour $M=E_{1,1}$, on a $M^TM=M^2=E_{1,1}$ et donc
+$$ab=0.$$
+Réciproquement, le calcul précédent montrer que si $a^2+b^2=1$ et $ab=0,$ alors l'endomorphisme est orthogonal. Pour conclure, on remarque que le système 
+$$\left\{
+\begin{array}{rcl}
+a^2+b^2&=&1\\
+ab&=&0
+\end{array}
+\right.$$
+a pour solutions les couples $(0,1),\ (0,-1),\ (-1,0),\ (1,0).$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2522"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2522"),	max:5, rating:2.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2522,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composée d'une homothétie et d'un endomorphisme orthogonal <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2522.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2522,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2522','imageenonce2522');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2522"></a><div class=inner id="innerenonce2522">Soit $E$ un espace vectoriel euclidien et $u\in\mathcal L(E)$ tel que, pour tout $x,y\in E$, 
+\[\langle x,y\rangle=0\implies \langle u(x),u(y)\rangle=0.\]
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe $k\in\mathbb R_+$ tel que, pour tout $x\in E$, $\|u(x)\|=k\|x\|$ (on pourra considérer une base orthonormée $(e_1,\dots,e_n)$ de $E$ et les vecteurs $e_1+e_i$, $e_1-e_i$).
+<li> En déduire que $u$ est la composée d'une homothétie et d'un endomorphisme orthogonal.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2522','imageindication2522');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2522"></a><div class=inner id="innerindication2522" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer que $(u(e_1),\dots,u(e_n)$ est une famille orthogonale de $E$ avec $\|u(e_i)\|=\|u(e_1)\|$. Calculer la norme de $u(x)$ à l'aide de cette base.
+<li> Considérer $v=\frac 1ku$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2522','imagecorrige2522',2522);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2522"></a><div class=inner id="innercorrige2522" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(e_1,\dots,e_n)$ une base orthonormée de $E$. Remarquons d'abord que le résultat est immédiat si $n=1$, les seules applications linéaires de $\mathbb R$ dans $\mathbb R$ étant les applications de la forme $u(x)=kx$. Supposons maintenant que $n\geq 2$ et pour $i\in\{2,\dots,n\}$, posons $x=e_1+e_i$ et $y=e_1-e_i$. Alors 
+\[\langle x,y\rangle=\langle e_1,e_1\rangle-\langle e_i,e_i\rangle=0.\]
+On en déduit que $\langle u(x),u(y)\rangle=0$. Mais en développant, on trouve 
+\[ \langle u(x),u(y)\rangle=\langle u(e_1),u(e_1)\rangle-\langle u(e_i),u(e_i)\rangle.\]
+Ainsi, en notant $k^2=\langle u(e_1),u(e_1)\rangle$, on a $\langle u(e_i),u(e_i)\rangle=k^2$ pour tout $i=1,\dots,n$. De plus, on a pour $i\neq j$, 
+\[\langle u(e_i),u(e_j)\rangle=\langle e_i,e_j\rangle=0.\]
+Ainsi, $(u(e_1),\dots,u(e_n))$ est une famille orthogonale de $E$. Maintenant, si $x\in E$, on le décompose en $x=\sum_{i=1}^n x_ie_i$ de sorte que $u(x)=\sum_{i=1}^n x_iu(e_i).$ On calcule la norme de $\|u(x)\|$ en utilisant la famille orthogonale $(u(e_1),\dots,u(e_n))$ de sorte que 
+$$\|u(x)\|^2=\sum_{i=1}^n x_i^2 \|u(e_i)\|^2=k^2\sum_{i=1}^n x_i^2=k^2\|x\|^2.$$
+<li> Si $k=0$, alors $u=0$ et $u$ est la composée de l'homothétie de rapport 0 et de n'importe quel endomorphisme orthogonal. Si $k\neq 0$, notons $h$ l'homothétie de rapport $k$, de sorte que $h^{-1}$ est l'homothétie de rapport $1/k$. Alors, si $v=h^{-1}\circ u$, on a $\|v(x)\|=\frac 1k\|u(x)\|=\|x\|$. Donc $v$ est un endomorphisme orthogonal et $u=h\circ v$ est bien la composée d'un endomorphisme orthogonal et d'une homothétie.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1066"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1066"),	max:5, rating:2.2142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1066,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphismes orthogonaux et orthogonal d'un sous-espace vectoriel <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1066.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1066,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1066','imageenonce1066');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1066"></a><div class=inner id="innerenonce1066">Soit $E$ un espace vectoriel euclidien, soit $u\in\mathcal O(E)$ et soit $F$ un sous-espace vectoriel de $E$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $u(F^\perp)=\big[ u(F)\big]^\perp$.
+<li> On dit que $F$ est stable par $u$ si $u(F)\subset F$. Démontrer que 
+$F$ est stable par $u$ si et seulement si $F^\perp$ est stable par $u$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1066','imageindication1066');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1066"></a><div class=inner id="innerindication1066" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de prouver une inclusion, puis de raisonner avec les dimensions.
+<li> Remarquer d'abord que si $F$ est stable par $u$, on a en réalité $u(F)=F$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1066','imagecorrige1066',1066);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1066"></a><div class=inner id="innercorrige1066" style="display:none;"><ol class="enumeratechiffre">
+<li> Prenons $x\in E$. Puisque $u$ est un automorphisme de $E$, on sait qu'il existe un unique $y\in E$ tel que $x=u(y)$. On a alors la chaine d'équivalence :
+\begin{eqnarray*}
+x\in u(F^\perp)&\iff&y\in F^\perp\\
+&\iff&\forall z\in F,\ \langle y,z\rangle=0\\
+&\iff&\forall z\in F,\ \langle u(y),u(z)\rangle=0\\
+&\iff&\forall z\in F,\ \langle x,u(z)\rangle=0\\
+&\iff&x\in \big[u(F)\big]^\perp.
+\end{eqnarray*}
+<li> Remarquons d'abord que si $F$ est stable par $u$, on a en réalité $u(F)=F$. En effet, $u$ étant un automorphisme de $E$, il préserve la dimension des sous-espaces. Supposons ensuite que $F$ est stable par $u$, et donc que $u(F)=F$. Alors d'après la question précédente, on a :
+$$u(F^\perp)=\big [u(F)\big]^\perp=F^\perp$$
+et donc $F^\perp$ est stable par $u$. La réciproque se démontre exactement de la même façon, en remarquant que $(F^\perp)^\perp=F$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1068"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1068"),	max:5, rating:2.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1068,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Si on enlève la linéarité.... <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1068.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1068,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1068','imageenonce1068');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1068"></a><div class=inner id="innerenonce1068">Soit $E$ un espace vectoriel euclidien et soit $f:E\to E$ une application telle que 
+$$\forall x,y\in E,\ \langle f(x),f(y)\rangle=\langle x,y\rangle.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que l'image d'une base orthonormale de $E$ par $f$ est une base orthonormale.
+<li> En déduire que $f$ est linéaire.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1068','imageindication1068');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1068"></a><div class=inner id="innerindication1068" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Montrer que si $x=x_1e_1+\dots+x_ne_n$, alors 
+$$f(x)=x_1 f(e_1)+\dots +x_n f(e_n).$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1068','imagecorrige1068',1068);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1068"></a><div class=inner id="innercorrige1068" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(e_1,\dots,e_n)$ une base orthonormale de $E$. Alors on a, pour tout $i,j$ dans $\{1,\dots,n\}$, 
+$$\langle f(e_i),f(e_j)\rangle=\langle e_i,e_j\rangle$$
+ce qui prouve bien que $(f(e_i))$ est une base orthonormale de $E$.
+<li> On travaille toujours dans la base orthonormée précédente. Prenons $x\in E$ et écrivons-le 
+$$x=\sum_{i=1}^n \langle x,e_i\rangle e_i.$$
+Alors 
+$$\langle f(x),f(e_i)\rangle= \langle x,e_i\rangle.$$
+De plus, puisque $(f(e_1),\dots,f(e_n))$ est une base orthonormale de $E$, on sait que 
+\begin{eqnarray*}
+f(x)&=&\sum_{i=1}^n \langle f(x),f(e_i)\rangle f(e_i)\\
+&=&\sum_{i=1}^n \langle x,e_i\rangle f(e_i).
+\end{eqnarray*}
+Autrement dit, on a prouvé que si on écrit $x=\sum_{i=1}^n x_i e_i$, alors $f(x)=\sum_{i=1}^n x_i f(e_i)$. Ceci suffit à prouver que $f$ est linéaire. En effet, prenons également $y=\sum_{i=1}^n y_i e_i\in E$ et $\lambda\in\mathbb R$. Alors on a d'une part :
+\begin{eqnarray*}
+f(x)&=&\sum_{i=1}^n x_i f(e_i)\\
+f(y)&=&\sum_{i=1}^n y_i f(e_i)\\
+f(x)+\lambda f(y)&=&\sum_{i=1}^n (x_i+\lambda y_i) f(e_i)\\
+\end{eqnarray*}
+et d'autre part
+\begin{eqnarray*}
+x+\lambda y&=&\sum_{i=1}^n (x_i+\lambda y_i) e_i\\
+f(x+\lambda y)&=&\sum_{i=1}^n (x_i+\lambda y_i) f(e_i)\\
+\end{eqnarray*}
+ce qui prouve bien que $f$ est linéaire.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1069"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1069"),	max:5, rating:2.1875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1069,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme et projection orthogonale <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1069.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1069,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1069','imageenonce1069');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1069"></a><div class=inner id="innerenonce1069">Soit $E$ un espace vectoriel euclidien et soit $u\in O(E)$. On pose $v=u-Id$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $\ker(v)=(\textrm{Im}v)^\perp$. En déduire que $\ker(v)^\perp=\textrm{Im}(v)$.
+<li> Soit $$u_n=\frac 1n\sum_{k=0}^{n-1}u^k.$$ Démontrer que pour tout $x\in E$, $(u_n(x))$ converge vers le projeté orthogonal de $x$ sur $\ker v$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1069','imageindication1069');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1069"></a><div class=inner id="innerindication1069" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer l'inclusion $\subset$ puis utiliser l'égalité des dimensions.
+<li> &Eacute;crire $x=a+b$ avec $a\in\ker(v)$ et $b\in \ker(v)^\perp$, et calculer $u_n(a)$ et $u_n(b)$. Pour ce dernier calcul, on utilisera la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1069','imagecorrige1069',1069);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1069"></a><div class=inner id="innercorrige1069" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in \ker v$, c'est-à-dire que $u(x)=x$. Alors, pour tout $y\in \textrm{Im}(v)$, $y=v(z)=u(z)-z$, on a 
+$$\langle x,y\rangle=\langle x,u(z)-z\rangle=\langle x,u(z)\rangle-\langle x,z\rangle=\langle u(x),u(z)\rangle -\langle x,z\rangle=0$$
+car $u$ est un endomorphisme orthogonal. On a donc $\ker(v)\subset (\textrm{Im}(v))^\perp$. Comme, par le théorème du rang et le fait que $\dim(F^\perp)=\dim(E)-\dim(F)$, ces deux sous-espaces ont la même dimension, ils sont donc égaux. L'autre égalité se déduit immédiatement en prenant les orthogonaux.
+<li> &Eacute;crivons $x=a+b$ avec $a\in\ker(v)$ et $b\in\ker(v)^\perp$. Puisque $v(a)=0$, on a $u(a)=a$, et donc il est facile de vérifier que $u_n(a)=a$. D'autre part, calculons $u_n(b)$. Pour cela, on remarque que $b\in\textrm{Im}(v)$ et donc que $b=v(c)=u(c)-c$. Mais alors,
+\begin{eqnarray*}
+u_n(b)&=&u_n(v(c))\\
+&=&\frac1n\sum_{k=0}^{n-1}u^{k+1}(c)-\frac 1n\sum_{k=0}^{n-1} u^k(c)\\
+&=&\frac 1nu^{n}(c)-\frac 1n c
+\end{eqnarray*}
+et ceci tend vers 0 lorsque $n$ tend vers l'infini (on utilise à nouveau que l'endomorphisme est orthogonal, et donc que $\|u^{n}(c)\|=\|c\|$). On en déduit que $u_n(x)$ tend vers $a$, le projeté orthogonal de $x$ sur $\ker v$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3312"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3312"),	max:5, rating:2.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3312,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le groupe orthogonal est engendré par les réflexions <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3312.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3312,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3312','imageenonce3312');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3312"></a><div class=inner id="innerenonce3312">Soit $E$ un espace vectoriel euclidien de dimension non nulle. On rappelle qu'un endomorphisme de $u$ admet toujours ou une droite stable, ou un plan stable. On souhaite prouver que $O(E)$ est engendré par les réflexions : 
+<ol class="enumeratechiffre">
+<li> Démontrer le résultat si $\dim(E)\in\{1,2\}.$
+<li> Démontrer le résultat dans le cas général.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3312','imageindication3312');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3312"></a><div class=inner id="innerindication3312" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $\dim(E)=2$, utiliser que si $u\in O(E)\backslash SO(E),$ alors $u$ est une réflexion.
+<li> Procéder par récurrence. On pourra utiliser que si $F$ est stable par $u,$ alors $F^\perp$ est aussi stable par $u.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3312','imagecorrige3312',3312);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3312"></a><div class=inner id="innercorrige3312" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $\dim(E)=1,$ alors ou bien $u=\textrm{Id}$ ou bien $u=-\textrm{Id}$. Dans le second cas, on a déjà une réflexion (si $\dim(E)=1,$ le seul hyperplan de $E$ est $\{0\}$). Dans le premier cas, on écrit $\textrm{Id}=(-\textrm{Id})\circ (-\textrm{Id})$. <br>
+Si $\dim(E)=2,$ alors ou bien $u\in O(E)\backslash SO(E)$ et dans ce cas $u$ est une réflexion ou bien $u\in SO(E)$. Fixons alors $s$ une réflexion de $E$. ALors $v=s\circ u\in O(E)$ et $\det(v)=\det(s)\det(v)=-1$ donc $v$ est une réflexion. Ainsi, $u=v\circ s^{-1}=v\circ s$ et donc $O(E)$ est bien engendré par les réflexions.
+<li> On commence par démontrer un résultat intermédiaire : soit $F$ un sous-espace de $E$ différent de $\{0\}$ et de $E$. Soit $\sigma\in O(F)$ une réflexion. Alors l'endomorphisme $u$ défini sur $E$ par $u(x)=\sigma(x)$ si $x\in F$ et par $u(x)=x$ si $x\in F^\perp$ est une réflexion. En effet, une réflexion est un endomorphisme tel qu'il existe une base orthonormée de l'espace tel que la matrice de l'endomorphisme dans cette base est $\textrm{diag}(-1,1,\dots,1)$. Ici, il suffit de prendre une base orthonormée $\mathcal B'$ de $F$ dans laquelle la matrice de $\sigma$ a cette forme, et de la compléter par n'importe quelle base orthonormée de $F^\perp.$ <br> 
+On va alors démontrer le résultat par récurrence sur $\dim(E)$. L'initialisation a été réalisée dans la question précédente pour $\dim(E)\in \{1,2\}.$ On suppose que $\dim(E)\geq 3$ et que le résultat a été démontré pour tout isométrie vectorielle d'un espace euclidien de dimension inférieure stricte à $\dim(E).$ D'après le rappel, $u$ admet un sous-espace $F$ de dimension $1$ ou $2$ qui est stable. Puisque $u$ est orthogonale, on sait que $F^\perp$ est aussi stable par $u$. Notons $u_F$ et $u_{F^\perp}$ les endomorphismes induits par $u$ sur $F$ et sur $F^\perp$. Ce sont des isométries vectorielles et $\dim(F),\dim(F^\perp)&lt;\dim(E).$ Par hypothèse de récurrence, il existe des réflexions $\sigma_1,\dots,\sigma_p$ de $F$ et des réflexions $\sigma'_1,\dots,\sigma'_q$ de $F^\perp$ telles que 
+$$u_F=\sigma_1\circ\cdots\circ\sigma_p\textrm{ et }u_{F^\perp}=\sigma'_1\circ\cdots\circ\sigma'_q.$$
+D'après le résultat préliminaire, on peut prolonger chaque $\sigma_i$ en une réflexion $s_i$ sur $E,$ avec $s_i(x)=x$ si $x\in F^\perp$, et on peut prolonger chaque $\sigma_i'$ en une réflexion $s_i'$ sur $E,$ avec $s_i'(x)=x$ si $x\in F.$ Il est alors facile de vérifier que 
+$$u=s_1\circ\cdots\circ s_p\circ s_1'\circ\cdots\circ s_q',$$
+les deux endomorphismes coïncidant sur chacun des sous-espaces supplémentaires $F$ et $F^\perp.$
+</ol></div></div></div>
+
+<div class=titrepartie>Matrices orthogonalement semblables</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3317"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3317"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3317,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice orthogonalement trigonalisable <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3317.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3317,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3317','imageenonce3317');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3317"></a><div class=inner id="innerenonce3317">Soit $A\in\mathcal M_n(\mathbb R)$ dont le polynôme caractéristique est scindé. Démontrer que $A$ est orthogonalement semblable à une matrice triangulaire supérieure.</div></div><div class=indication><a href="javascript:showAll('innerindication3317','imageindication3317');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3317"></a><div class=inner id="innerindication3317" style="display:none;">Utiliser l'orthonormalisée de Gram-Schmidt d'une base qui trigonalise.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3317','imagecorrige3317',3317);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3317"></a><div class=inner id="innercorrige3317" style="display:none;">Soit $u$ l'endomorphisme de $\mathbb R^n$ dont la matrice dans la base canonique est $A$. L'hypothèse nous dit que $u$ est trigonalisable. Autrement dit, il existe une base $(e_1,\dots,e_n)$ de $\mathbb R^n$ telle que, pour tout $j\in\{1,\dots,n\},$ $u(\vect(e_1,\dots,e_j))\subset \vect(e_1,\dots,e_j).$ Soit $(f_1,\dots,f_n)$ la base orthonormale obtenue à partir de $(e_1,\dots,e_n)$
+en appliquant le procédé d'orthonormalisation de Gram-Schmidt. Alors puisque $\vect(e_1,\dots,e_j)=\vect(f_1,\dots,f_j)$ pour tout $j=1,\dots,n,$ cette base est aussi une base de trigonalisation de $u$. Autrement dit, la matrice de $u$ dans cette base est triangulaire supérieure. On a donc $A=PBP^{-1}$ avec $B$ matrice triangulaire supérieure et $P$ la matrice de passage de la base canonique de $\mathbb R^n$ à la base $(f_1,\dots,f_n)$. Comme il s'agit de deux bases orthonormales, la matrice $P$ est orthogonale, et on a prouvé le résultat.</div></div></div>                               
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater3318"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3318"),	max:5, rating:3.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3318,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Réduction d'un endomorphisme de trace nulle dans un espace euclidien <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3318.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(3318,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3318','imageenonce3318');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3318"></a><div class=inner id="innerenonce3318">Soit $E$ un espace euclidien et $u\in\mathcal L(E)$ de trace nulle. 
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe un vecteur unitaire $e\in E$ tel que $\langle u(e),e\rangle=0.$
+<li> En déduire qu'il existe une base orthonormée de $E$ dans laquelle la matrice de $u$ est à diagonale nulle. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3318','imageindication3318');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3318"></a><div class=inner id="innerindication3318" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par remarquer que si $A$ est la matrice de $u$ dans une base orthonormale de $E$, alors $a_{i,i}=\langle u(e_i),e_i\rangle.$
+<li> Procéder par récurrence sur la dimension de l'espace.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3318','imagecorrige3318',3318);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3318"></a><div class=inner id="innercorrige3318" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(e_1,\dots,e_n)$ une base orthonormale de $E$, et $A$ la matrice de $u$ dans cette base. Alors, pour tout $i=1,\dots,n$, $a_{i,i}=\langle A(e_i),e_i\rangle.$ Puisque $\sum_{i=1}^n a_{i,i}=0,$ il n'est pas possible que $\langle A(e_i),e_i\rangle&gt;0$ pour tout $i=1,\dots,n$ ou que $\langle A(e_i),e_i\rangle&lt;0$ pour tout $i=1,\dots,n$. <br>
+S'il existe $i\in\{1,\dots,n\}$ tel que $\langle A(e_i),e_i\rangle=0,$ il suffit de considérer $e=e_i.$ Sinon, soit $i\neq j$ tel que $\langle A(e_i),e_i\rangle&gt;0$ et $\langle A(e_j),j\rangle&lt;0.$ Alors, 
+l'application $f:[0,1]\to \mathbb R$ définie par 
+$$f(t)=\langle A((1-t)e_i+te_j),(1-t)e_i+te_j\rangle$$
+est continue et vérifie $f(0)&gt;0$ et $f(1)&lt;0$. Il existe donc $t_0\in[0,1]$ tel que $f(t_0)=0.$ Il suffit alors de choisir
+$$e=\frac{(1-t_0)e_i+t_0 e_j}{\|(1-t_0)e_i+t_0 e_j\|}.$$
+<li> On va raisonner par récurrence sur la dimension de $E$. Si la dimension de $E$ vaut $1$, le résultat est évident. Pour $n\geq 1,$ on suppose que le résultat a été démontré pour tous les endomorphismes de trace nulle sur un espace euclidien de dimension $n$, et on le prouve pour un endomorphisme euclidien de trace nulle sur un espace euclidien $E$ de dimension $n+1$. 
+Par la première question, on commence par choisir $e_1$ unitaire tel que $\langle u(e_1),e_1\rangle=0.$ Complétons $(e_1)$ en une base orthonormée 
+$(e_1,\dots,e_{n+1})$ de $E$. Alors la matrice de $u$ dans cette base a la forme suivante : 
+$$\begin{pmatrix}
+0&L\\
+C&B
+\end{pmatrix}$$
+avec $B\in\mathcal M_{n}(\mathbb R)$ de trace nulle. Par hypothèse de récurrence, il existe $P\in O_n(\mathbb R)$ tel que $PBP^T$ est à diagonale nulle. Mais alors, si on pose 
+$$Q=\begin{pmatrix}
+1&0\\
+0&P
+\end{pmatrix}
+$$ 
+alors $Q$ est orthogonale et $Q^{-1}AP$ est une matrice de trace nulle. Comme on n'a effectué que des changements de base orthonormale, on a prouvé le résultat.
+</ol></div></div></div>
+
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Réduction des matrices orthogonales et des isométries vectorielles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1067"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1067"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1067,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphisme orthogonal diagonalisable <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1067.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1067,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1067','imageenonce1067');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1067"></a><div class=inner id="innerenonce1067">Soit $E$ un espace vectoriel euclidien et soit $u\in\mathcal O(E)$ diagonalisable. Démontrer que $u$ est une symétrie.</div></div><div class=indication><a href="javascript:showAll('innerindication1067','imageindication1067');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1067"></a><div class=inner id="innerindication1067" style="display:none;">Quelles peuvent être les valeurs propres de $u$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1067','imagecorrige1067',1067);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1067"></a><div class=inner id="innercorrige1067" style="display:none;">Soit $\lambda$ une valeur propre de $u$, de vecteur propre associé $x$. Alors on a
+$$\|x\|=\|u(x)\|=|\lambda|\times\|x\|.$$
+Ainsi, on a $\lambda=\pm 1$. Ainsi, dans une base de vecteurs propres, la matrice de $u$ est constituée de $1$ et de $-1$ sur la diagonale. C'est bien la matrice d'une symétrie.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater3314"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3314"),	max:5, rating:1.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3314,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En dimension 4 <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3314.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(3314,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3314','imageenonce3314');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3314"></a><div class=inner id="innerenonce3314">Soit $E$ un espace vectoriel euclidien de dimension $4$ et soit $u\in O(E)$ tel que $u^2=-\textrm{Id}_E$. Démontrer qu'il existe une base orthonormée de $E$ telle que la matrice de $u$ dans cette base soit 
+$$\begin{pmatrix}R(\pi/2)&0\\0&R(\pi/2)\end{pmatrix}\textrm{ avec }R(\theta)=\begin{pmatrix}\cos(\theta)&-\sin(\theta)\\ \sin(\theta)&\cos(\theta)\end{pmatrix}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3314','imageindication3314');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3314"></a><div class=inner id="innerindication3314" style="display:none;">$u$ admet-elle des valeurs propres? Utiliser le théorème de réduction, et éventuellement permuter des vecteurs!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3314','imagecorrige3314',3314);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3314"></a><div class=inner id="innercorrige3314" style="display:none;">On commence par remarquer que, comme $u^2=-\textrm{Id}_E,$ $u$ ne peut pas admettre de valeur propre réelle (une telle valeur propre $\lambda$ vérifierait $\lambda^2=-1$). D'après le théorème de réduction des symétries vectorielles, il existe une base orthonormée $\mathcal B=(e_1,e_2,e_3,e_4)$ de $E$ de sorte que 
+$$\textrm{Mat}_\mathcal B=\begin{pmatrix}R(\theta_1)&0\\0&R(\theta_2)\end{pmatrix}.$$
+Puisque $u^2=-\textrm{Id}_E,$ on doit avoir $R(2\theta_j)=\begin{pmatrix}-1&0\\0&-1\end{pmatrix}$ pour $j=1,2$. Il est facile de voir que ceci entraîne que $2\theta_j=\pi\ [2\pi]$ ou encore que $\theta_j=\frac{\pi}2\ [\pi].$ Maintenant, si $\theta_1=-\frac{\pi}{2}\ [\pi]$, il suffit de remplacer la base $\mathcal B$ par $(-e_1,e_2,e_3,e_4)$ pour pouvoir choisir un angle égal à $\pi/2$. De même, si $\theta_2=-\frac{\pi}2\ [\pi]$, on remplace $(e_3,e_4)$ par $(-e_3,e_4)$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater3315"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3315"),	max:5, rating:2.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3315,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme d'une matrice orthogonale et de sa transposée <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3315.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(3315,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3315','imageenonce3315');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3315"></a><div class=inner id="innerenonce3315">Soit $A\in\mathcal M_n(\mathbb R)$. Démontrer que les propriétés suivantes sont équivalentes : 
+<ol class="enumeratechiffre">
+<li> Il existe $B\in O_n(\mathbb R)$ tel que $A=B+B^T$;
+<li> $A\in\mathcal S_n(\mathbb R),$ $\textrm{Sp}(A)\subset [-2,2]$ et les valeurs propres de $A$ dans $]-2,2[$ sont de multiplicité paire.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3315','imageindication3315');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3315"></a><div class=inner id="innerindication3315" style="display:none;">Pour $1.\implies 2.$, partir du théorème de réduction des matrices orthogonales pour $B,$ faire la somme, et tout devrait bien se passer! Pour $2.\implies 1.$, partir du théorème de réduction des matrices symétriques pour $A$, et construire $B$ par blocs. On pourra utiliser que si $\lambda\in [-2,2]$, il existe $\theta\in\mathbb R$ tel que $\lambda=2\cos(\theta).$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3315','imagecorrige3315',3315);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3315"></a><div class=inner id="innercorrige3315" style="display:none;">$1.\implies 2.$ Si $A=B+B^T,$ il est clair que $A^T=A$ et donc que $A$ est symétrique. De plus, d'après le théorème de réduction des matrices orthogonales, il existe une matrice orthogonale $P$ telle que 
+$$B=P\begin{pmatrix}I_p&\\&-I_q&&(0)\\
+&&R(\theta_1)\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)
+\end{pmatrix} P^T$$
+avec $p,q,r\in\mathbb N$, $\theta_1,\dots,\theta_r\in \mathbb R\backslash\pi\mathbb Z$ et $R(\theta)=\begin{pmatrix} \cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{pmatrix}.$
+Dans ce cas, on a 
+$$B+B^T=P\begin{pmatrix}2I_p&\\&-2I_q&&(0)\\
+&&R(\theta_1)+R(\theta_1)^T\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)+R(\theta_r)^T
+\end{pmatrix} P^T.$$
+Ceci démontre le résultat, en remarquant que 
+$$R(\theta)+R(\theta)^T =\begin{pmatrix}2\cos\theta&0\\0&2\cos\theta\end{pmatrix}.$$
+Les valeurs propres de $A$ sont alors $2$ (de multiplicité $p$), $-2$ (de multiplicité $q$) et les $2\cos(\theta_i)$, qui sont dans $]-2,2[$ et qui sont de multiplicité paire (il est possible que les $\theta_i$ ne soient pas tous distincts).<br>
+$2.\implies 1.$ Notons $p$ (resp. $q$) la multiplicité de $2$ (resp. $-2$). Les valeurs propres de $A$ dans $]-2,2[$ sont de multiplicité paire. Notons les $\lambda_1,\lambda_1,\dots,\lambda_r,\lambda_r$, comptées avec leur multiplicité. Le théorème des réduction des matrices symétriques nous dit qu'il existe $P\in O_n(\mathbb R)$ tel que 
+$$A=
+P\begin{pmatrix}2I_p&\\&-2I_q&&(0)\\
+&&\lambda_1 I_2\\
+&(0)&&\ddots\\
+&&&&\lambda_r I_2
+\end{pmatrix} P^T.$$
+On peut alors s'inspirer de la preuve de $1.\implies 2.$ et remarquer que, pour $i=1,\dots,r,$ il existe $\theta_i\in\mathbb R$ tel que $2\cos(\theta_i)=\lambda_i.$ On pose alors 
+$$B=P\begin{pmatrix}I_p&\\&-I_q&&(0)\\
+&&R(\theta_1)\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)
+\end{pmatrix} P^T$$
+qui est bien élément de $O_n(\mathbb R)$ et satisfait $A=B+B^T.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater1065"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1065"),	max:5, rating:3.5833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1065,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence de suites de matrices orthogonales <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1065.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(1065,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1065','imageenonce1065');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1065"></a><div class=inner id="innerenonce1065">Soit $A\in O_n(\mathbb R)$ dont $1$ n'est pas valeur propre.
+<ol class="enumeratechiffre">
+<li> &Eacute;tudier la convergence de la suite $\frac 1{p+1}(I_n+A+\dots+A^p)$.
+<li> La suite $(A^p)$ est-elle convergente?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1065','imageindication1065');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1065"></a><div class=inner id="innerindication1065" style="display:none;"><ol class="enumeratechiffre">
+<li> Multiplier par $I_n-A$.
+<li> Utiliser le lemme de Césaro.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1065','imagecorrige1065',1065);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1065"></a><div class=inner id="innercorrige1065" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $M_p=\frac 1{p+1}(I_n+A+\dots+A^p)$. Alors 
+$$(I_n-A)M_p=\frac1{p+1}(I_{n}-A^{p+1}).$$
+Or, $A$ est un élément de $O_n(\mathbb R)$ donc c'est une isométrie. En prenant la norme subordonnée des applications linéaires, on a $\|A^{p+1}\|=1$ pour tout $p\in\mathbb N$. Ainsi, $(I_n-A)M_p$ tend vers 0. Mais comme $1$ n'est pas valeur propre de $A$, la matrice $I_n-A$ est inversible, et donc $(M_p)$ tend vers 0.
+<li> Si la suite $(A_p)$ convergeait vers $B$, alors d'après le lemme de Césaro, $(M_p)$ convergerait également vers $B$. Or, $(M_p)$ converge vers 0, et donc $B=0$. Mais c'est impossible, car $\|A^p\|=1$ et donc on a également $\|B\|=1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1103"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1103"),	max:5, rating:3.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1103,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit de réflexions <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1103.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1103,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1103','imageenonce1103');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1103"></a><div class=inner id="innerenonce1103"><ol class="enumeratechiffre">
+<li> Soit $u$ une rotation du plan euclidien orienté. Démontrer que $u$ est le produit de deux réflexions.
+<li> Soit $u$ un endomorphisme orthogonal d'un espace vectoriel euclidien orienté. Démontrer que $u$ est le produit de réflexions.
+</ol>
+On rappelle qu'une réflexion est une symétrie orthogonale par rapport à un hyperplan.</div></div><div class=indication><a href="javascript:showAll('innerindication1103','imageindication1103');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1103"></a><div class=inner id="innerindication1103" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser la forme réduite des endomorphismes orthogonaux.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1103','imagecorrige1103',1103);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1103"></a><div class=inner id="innercorrige1103" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $\theta$ l'angle de la rotation. Soit $D_1$ une droite de $E=\mathbb R^2$ et $D_2$ l'image de
+$D_1$ par la rotation d'angle $\theta/2$. Si on note $s_1$ et $s_2$ les réflexions d'axe respectivement $D_1$ et $D_2$, alors $s_2\circ s_1$ est une rotation (endomorphisme orthogonal de déterminant 1). 
+En regardant l'image d'un vecteur de $D_1$ par cette rotation, on constate que son angle vaut $\theta$.
+<li> Dans une base orthonormée de $E$, la matrice de $u$ est de la forme 
+$$A=\left(\begin{array}{ccccc}
+I_p&0\dots&&&0\\
+0&-I_q&\dots&&0\\
+0&0&R_{\theta_1}&0&\dots\\
+\vdots&\dots&\ddots&\ddots&0\\
+0&\dots&\dots&\dots&R_{\theta_r}
+\end{array}
+\right)$$
+où $R_{\theta_i}$ est la matrice d'une rotation d'un plan euclidien $F_i$. Chaque $R_{\theta_i}$ s'écrit comme produit de deux réflexions du plan, $s_1$ et $s_2$. Notons $B_{i,1}$ et $B_{i,2}$ leurs matrices dans la base de $F_i$ dont est issue la matrice de $u$, et posons 
+$$A_{i,1}=\left(\begin{array}{ccccc}
+I_p&0\dots&&&0\\
+0&I_q&\dots&&0\\
+0&0&I_{m_1}&0&\dots\\
+\vdots&\dots&\ddots&B_{i,1}&0\\
+0&\dots&\dots&\dots&I_{m_2}
+\end{array}
+\right), 
+A_{i,2}=\left(\begin{array}{ccccc}
+I_p&0\dots&&&0\\
+0&I_q&\dots&&0\\
+0&0&I_{m_1}&0&\dots\\
+\vdots&\dots&\ddots&B_{i,2}&0\\
+0&\dots&\dots&\dots&I_{m_2}
+\end{array}
+\right).$$
+Alors $A_{i,1}$ et $A_{i,2}$ sont des matrices de réflexion (sauriez-vous le justifier précisément?) et 
+$$A_{i,2}A_{i,1}=\left(\begin{array}{ccccc}
+I_p&0\dots&&&0\\
+0&I_q&\dots&&0\\
+0&0&I_{m_1}&0&\dots\\
+\vdots&\dots&\ddots&R_{\theta_i}&0\\
+0&\dots&\dots&\dots&I_{m_2}
+\end{array}
+\right).$$
+On pose encore, pour $k=1,\dots,q$, 
+$$C_k=
+\left(\begin{array}{cccc}
+I_{p+k-1}&0\dots&&0\\
+0&-1&\dots&0\\
+\vdots&0&I_{q-k}&\dots\\
+0&\dots&\dots&I_{2r}
+\end{array}
+\right).$$
+$C_k$ est aussi la matrice d'une réflexion. On conclut en remarquant que 
+$$A=C_1\times\dots\times C_q\times A_{1,2}\times A_{1,1}\times\dots\times A_{r,2}\times A_{r,1}.$$
+</ol></div></div></div>
+
+<div class=titrepartie>Isométries vectorielles en dimension 2</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater1063"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1063"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1063,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Echange de deux vecteurs <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1063.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(1063,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1063','imageenonce1063');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1063"></a><div class=inner id="innerenonce1063">Soit $E$ un plan vectoriel euclidien orienté, et soient $u$ et $v$ deux vecteurs unitaires de $E$. Déterminer les automorphismes orthogonaux qui envoient $u$ sur $v$.</div></div><div class=indication><a href="javascript:showAll('innerindication1063','imageindication1063');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1063"></a><div class=inner id="innerindication1063" style="display:none;">Il suffit de déterminer les rotations et les symétries qui envoient $u$ sur $v$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1063','imagecorrige1063',1063);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1063"></a><div class=inner id="innercorrige1063" style="display:none;">Il suffit de déterminer les rotations et les symétries qui envoient $u$ sur $v$. Pour les rotations, c'est très simple : il ne peut que s'agir de la rotation d'angle $(u,v)$. Pour les symétries, il y a deux cas à distinguer :
+<ul class="rien">
+<li> Si $u=v$ ou si $u=-v$, alors il ne peut s'agir que de la symétrie orthogonale par rapport à $\textrm{vect}(u,v)$.
+<li> Si $u$ et $v$ ne sont pas colinéaires, alors soit $s$ une symétrie orthogonale par rapport à la droite $D$ qui envoie $u$ sur $v$. Notons $e_1$ un vecteur directeur unitaire de $D$, et $e_2$ un vecteur unitaire orthogonal à $e_1$. L'expression analytique de la symétrie $s$ est 
+$$s(x_1e_1+x_2e_2)=x_1e_1-x_2e_2.$$
+Notons $u=u_1 e_1+u_2e_2$ et $v=v_1e_1+v_2e_2$. Alors $s(u)=v$ entraine $u_1=v_1$ et $u_2=-v_2$. Faisons la somme de $u$ et $v$, on en déduit que $e_1$ est proportionnelle à $u+v$ et donc $s$ est la symétrie orthogonale par rapport à $\textrm{vect}(u+v)$. Réciproquement, la symétrie orthogonale $s$ par rapport à $\textrm{vect}(u+v)$ envoie bien $u$ sur $v$. En effet, puisque $\|u\|=\|v\|=1$, $u+v$ et $u-v$ sont orthogonaux et $s$ est aussi la symétrie par rapport à $\textrm{vect}(u+v)$ parallèlement à $\textrm{vect}(u-v)$. &Eacute;crivant $u=\frac{1}2\big((u+v)+(u-v)\big)$, on obtient immédiatement que $s(u)=v$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater1064"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1064"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1064,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rotations et symétries qui commutent <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1064.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(1064,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1064','imageenonce1064');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1064"></a><div class=inner id="innerenonce1064">Soient $E$ un plan euclidien orienté, $r$ une rotation de $E$ et $s$ une symétrie orthogonale de $E$.
+<ol class="enumeratechiffre">
+<li> Déterminer l'automorphisme orthogonal $s\circ r\circ s$.
+<li> Déterminer l'automorphisme orthogonal $r\circ s\circ r$.
+<li> A quelle condition a-t-on $s\circ r=r\circ s$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1064','imageindication1064');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1064"></a><div class=inner id="innerindication1064" style="display:none;"><ol class="enumeratechiffre">
+<li> Considérer un repère orthonormé direct $(e_1,e_2)$ dont $e_1$ est un vecteur directeur de l'axe de $s$. Calculer $s\circ r\circ s(e_1)$.
+<li> Utiliser la question précédente, en composant à gauche par $s$.
+<li> Appliquer la première question, et le fait que $s^{-1}=s$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1064','imagecorrige1064',1064);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1064"></a><div class=inner id="innercorrige1064" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $e_1$ un vecteur unitaire tel que $s$ soit une symétrie par rapport à $\textrm{vect}(e_1)$, et soit $e_2$ tel que $(e_1,e_2)$ soit un repère orthonormé direct. On constate que $s\circ r\circ s$ est un automorphisme orthogonal du plan de déterminant égal à 1. C'est donc une rotation. Pour connaitre l'angle de cette rotation, il suffit de calculer l'image d'un vecteur, par exemple $e_1$. Notons $\theta$ l'angle de $r$. Alors :
+\begin{eqnarray*}
+s\circ r\circ s(e_1)&=&s\circ r(e_1)\\
+&=&s\big(\cos\theta e_1+\sin\theta e_2)\\
+&=&\cos\theta e_1-\sin \theta e_2\\
+&=&\cos(-\theta)e_1+\sin(-\theta)e_2.
+\end{eqnarray*}
+Ainsi, $s\circ r\circ s$ est la rotation d'angle $-\theta$ (c'est-à-dire $r^{-1}$). <br>
+Un autre raisonnement peut-être plus simple peut être mené. $s\circ r$ est une transformation orthogonale comme composée de transformations orthogonales, son déterminant est $-1$ comme produit des déterminants de $r$ et de $s$, donc $s\circ r$ est une symétrie orthogonale. Elle est d'ordre 2 donc $(s\circ r)\circ (s\circ r)=Id$. Par associativité, on a $(s\circ r\circ s)\circ r=Id$ et donc (par unicité de l'inverse), $s\circ r\circ s=r^{-1}$.
+<li> Notons $\sigma=r\circ s\circ r$. Alors on a d'après la question précédente
+$$s\circ \sigma=s\circ r\circ s\circ r=r^{-1}\circ r=Id.$$
+Ainsi, 
+$$\sigma=s^{-1}=s.$$
+<li> Supposons que $s\circ r=r\circ s$. Puisque $s=s^{-1}$, en composant à droite par $s$, on trouve
+$$s\circ r\circ s=r.$$
+Mais le terme de gauche est la rotation d'angle $-\theta$ si $r$ est la rotation d'angle $\theta$. Il faut donc que ces deux rotations coïncident. Ceci n'est possible que si $r$ est la rotation d'angle $0$ ou la rotation d'angle $\pi$, c'est-à-dire si $r=Id$ ou $r=-Id$. Réciproquement, si $r=Id$ ou $r=-Id$, $s$ et $r$ commutent.
+</ol></div></div></div>
+
+<div class=titrepartie>Isométries vectorielles en dimension 3</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater2198"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2198"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2198,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Orthogonale et symétrique <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2198.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(2198,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2198','imageenonce2198');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2198"></a><div class=inner id="innerenonce2198">On considère la matrice $M=\frac{1}9\begin{pmatrix}1&8&-4\\8&1&4\\-4&4&7\end{pmatrix}$. Vérifier que $M$ est une matrice orthogonale et symétrique. Sans calculer son polynôme caractéristique, justifier que $M$ est diagonalisable, déterminer ses valeurs propres avec multiplicité, et calculer son polynôme minimal.</div></div><div class=indication><a href="javascript:showAll('innerindication2198','imageindication2198');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2198"></a><div class=inner id="innerindication2198" style="display:none;">Quelles peuvent être les valeurs propres d'une matrice orthogonale et symétrique?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2198','imagecorrige2198',2198);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2198"></a><div class=inner id="innercorrige2198" style="display:none;">La matrice $M$ est clairement symétrique, et on vérifie qu'elle est orthogonale en vérifiant que les vecteurs colonnes sont de norme 1 et orthogonaux deux à deux. Puisque $M$ est symétrique réelle, elle est diagonalisable dans $\mathbb R$, notons $\lambda_1,\lambda_2$ et $\lambda_3$ ses valeurs propres. Puisque $M$ est une matrice orthogonale, c'est une isométrie et donc $\lambda_i\in\{-1,1\}$. De plus, on sait que $M$ est semblable à la matrice diagonale avec $\lambda_1,\lambda_2$ et $\lambda_3$ sur la diagonale. Comme la trace est un invariant de similitude, on doit avoir $\lambda_1+\lambda_2+\lambda_3=1$. La seule possibilité est que $1$ est valeur propre double, et $-1$ est valeur propre simple. De plus, puisque $M$ est diagonalisable, son polynôme minimal est scindé à racines simples et vaut donc $(X-1)(X+1)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater3316"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3316"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3316,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Réduction d'un élément de $SO_3(\mathbb R)$ <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3316.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(3316,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3316','imageenonce3316');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3316"></a><div class=inner id="innerenonce3316">Soit $A=\begin{pmatrix}0&1&0\\
+0&0&1\\
+1&0&0\end{pmatrix}.$
+<ol class="enumeratechiffre">
+<li> Démontrer que $A\in SO_3(\mathbb R).$
+<li> Déterminer un vecteur unitaire $e_1$ tel que $Ae_1=e_1.$
+<li> Déterminer une base orthonormale $(e_2,e_3)$ de $\vect(e_1)^\perp.$
+<li> Expliciter $P\in O_3(\mathbb R)$ et $\theta\in\mathbb R$ tel que 
+$$A=P\begin{pmatrix}1&0&0\\
+0&\cos\theta&-\sin\theta\\
+0&\sin\theta&\cos\theta\end{pmatrix}P^{-1}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3316','imageindication3316');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3316"></a><div class=inner id="innerindication3316" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li> Commencer par chercher une base, puis orthonormaliser la!
+<li> Quelle est la matrice de $A$ dans la base $(e_1,e_2,e_3)$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3316','imagecorrige3316',3316);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3316"></a><div class=inner id="innercorrige3316" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par remarquer que les vecteurs colonnes sont unitaires et deux à deux orthogonaux, donc $A\in O_3(\mathbb R)$. On montre ensuite facilement que $\det(A)=1$, d'où $A\in SO_3(\mathbb R)$. 
+<li> Il est facile de vérifier que l'espace propre associé à $1$ est $\vect(e_1)$, où 
+$$e_1=\frac1{\sqrt 3}\begin{pmatrix}1\\1\\1\end{pmatrix}.$$
+<li> On remarque que $u=\begin{pmatrix}x\\y\\z\end{pmatrix}$ est dans $\textrm{vect}(e_1)^\perp$ si et seulement si 
+$$x+y+z=0\iff \left\{\begin{array}{rcl}
+x&=&-y-z\\
+y&=&y\\
+z&=&z
+\end{array}\right.$$
+Une base de $\textrm{vect}(e_1)^\perp$ est donc donnée par $(u_2,u_3),$
+où 
+$$u_2=\begin{pmatrix}-1\\1\\0\end{pmatrix}\textrm{ et }u_3=\begin{pmatrix}
+-1\\0\\1
+\end{pmatrix}.$$
+On lui applique le procédé d'orthonormalisation de Gram-Schmidt et on trouve une base orthonormale $(e_2,e_3)$ de $\textrm{vect}(e_1)^\perp$ avec
+$$e_2=\frac {1}{\sqrt 2}\begin{pmatrix}
+-1\\1\\0
+\end{pmatrix}\textrm{ et }e_3=\frac1{\sqrt 6}\begin{pmatrix}-1\\-1\\2
+\end{pmatrix}.$$
+La famille $(e_1,e_2,e_3)$ est alors une base orthonormée de $\mathbb R^3.$
+<li> Le cours nous dit que $A$ est une rotation d'axe $\textrm{vect}(e_1)$. Notons $P$ la matrice orthogonale de passage de la base canonique à $(e_1,e_2,e_3)$. Alors un petit calcul montre que 
+$$P^{-1}AP=P^TAP=\begin{pmatrix}
+1&0&0\\
+0&\frac{-1}{2}&\frac{\sqrt 3}2\\
+0&\frac{-\sqrt 3}2&\frac{-1}2
+\end{pmatrix}.$$
+La matrice $P$ précédente et le réel $\theta=\frac{-2\pi}3$ conviennent.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater1099"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1099"),	max:5, rating:2.2727272727273, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1099,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Caractérisation <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1099.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(1099,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1099','imageenonce1099');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1099"></a><div class=inner id="innerenonce1099">Caractériser géométriquement l'endomorphisme de $\mathbb R^3$ canoniquement associé à 
+$$A=\frac 19 \left(
+\begin{array}{ccc}
+-8&4&1\\
+4&7&4\\
+1&4&-8
+\end{array}\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1099','imageindication1099');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1099"></a><div class=inner id="innerindication1099" style="display:none;">La matrice $A$ est symétrique et orthogonale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1099','imagecorrige1099',1099);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1099"></a><div class=inner id="innercorrige1099" style="display:none;">On remarque que la matrice $A$ est symétrique et orthogonale. L'endomorphisme canoniquement associé est donc une symétrie orthogonale. Pour le déterminer complètement, il suffit de déterminer l'ensemble de ses points invariants. On résout donc l'équation $AX=X$, et on trouve que l'ensemble des points invariants est $F=\textrm{vect}(1,4,1)$. $A$ est donc la matrice, dans la base canonique, de la symétrie orthogonale par rapport à $F$, ou encore du retournement par rapport à $F$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater1100"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1100"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1100,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Caractérisation <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1100.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(1100,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1100','imageenonce1100');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1100"></a><div class=inner id="innerenonce1100">Caractériser l'endomorphisme $f$ de $\mathbb R^3$ dont la matrice dans la base canonique est
+$$A=\frac 13\left(
+\begin{array}{ccc}
+2&-1&2\\
+2&2&-1\\
+-1&2&2
+\end{array}\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1100','imageindication1100');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1100"></a><div class=inner id="innerindication1100" style="display:none;">$A$ est une matrice orthogonale. Calculer son déterminant.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1100','imagecorrige1100',1100);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1100"></a><div class=inner id="innercorrige1100" style="display:none;">On vérifie que les colonnes de $A$ forment une base orthonormée. Ainsi, $f$ est un endomorphisme orthogonal. De plus, $\det(A)=1$. $f$ est donc une rotation. Cherchons son axe en cherchant ses points fixes. L'équation $AX=X$ donne que l'axe est la droite $\textrm{vect}(1,1,1)$. Posons $u=(1,1,1)$. Pour déterminer l'angle de cette rotation, que l'on note $\theta$, on remarque qu'en écrivant la matrice de $f$ sous forme réduite, on a $\textrm{Tr}(A)=1+2\cos\theta$. Or, $\textrm{Tr}(A)=2$, et donc $\cos(\theta)=\frac 12$, soit $\theta=\pm \frac{\pi}3$ modulo $2\pi$. <br>
+Pour conclure quant au signe de $\theta$, on peut remarquer que, posant $v=(1,-1,0)$, qui est orthogonal à $u$, alors la base $(u,v,f(v))$ est directe, ce qui signifie que $\theta\in ]0,\pi[$ modulo $2\pi$. On en déduit donc que $f$ est la rotation d'axe dirigé par $(1,1,1)$ et d'angle $\pi/3$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater1716"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1716"),	max:5, rating:1.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1716,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Déterminer la matrice d'une rotation <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1716.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(1716,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1716','imageenonce1716');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1716"></a><div class=inner id="innerenonce1716">L'espace $\mathbb R^3$ est muni de sa structure canonique usuelle d'espace euclidien orienté. La base canonique est noté $(\vec i,\vec j,\vec k)$. Le vecteur $(1,1,1)=\vec i+\vec j+\vec k$ est noté $\vec v$. Dans cet exercice, on souhaite calculer la matrice $M$ dans la base canonique de la rotation $r$ d'axe $\mathbb R\vec v$ et d'angle $2\pi/3$.
+<ol class="enumeratechiffre">
+<li> Méthode 1 : en étudiant la restriction de $r$ au plan affine $P$ d'équation $x+y+z=1$, déterminer la matrice $M$.
+<li> Méthode 2 : En utilisant la matrice de $r$ dans une base orthonormée directe donc le premier vecteur est le vecteur $\frac 1{\sqrt 3}\vec v$, déterminer $M$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1716','imageindication1716');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1716"></a><div class=inner id="innerindication1716" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le triangle équilatéral de sommet $A(1,0,0)$, $B=(0,1,0)$ et $C=(0,0,1)$.
+<li> Utiliser les formules de changement de base.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1716','imagecorrige1716',1716);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1716"></a><div class=inner id="innercorrige1716" style="display:none;"><ol class="enumeratechiffre">
+<li> Utilisons les notations affines suivantes : $O=(0,0,0)$, $A=O+\vec i$, $B=O+\vec j$, $C=O+\vec k$. Alors $ABC$ est un triangle équilatéral du plan $P$. De plus, la droite affine $O+\mathbb R\vec v$ est orthogonale au plan $P$ et elle coupe ce plan en $(1/3,1/3,1/3)$, centre de gravité du triangle équilatéral $ABC$. Donc la restriction de $r$ au plan $P$ transforme $A$ en $B$, $B$ en $C$ et $C$ en $A$. Ceci permet de conclure que $r(\vec i)=\vec j$, $r(\vec j)=\vec k$ et $r(\vec k)=\vec i$. Donc
+$$M=\left(
+\begin{array}{ccc}
+0&0&1\\
+1&0&0\\
+0&1&0
+\end{array}\right).$$
+Cette méthode est facile mais un peu particulière puisqu'elle dépend fortement de la nature géométrique de $r$. La méthode de la question 2 est plus générale.
+<li> Soit $e_1=\frac 1{\sqrt 3}\vec v=(1/\sqrt 3,1/\sqrt 3,1/\sqrt 3)$. Le vecteur $e_2=\frac 1{\sqrt 2}(1,-1,0)$ est unitaire et orthogonal à $e_1$. Posons ensuite $e_3=e_1\wedge e_2$, de sorte que 
+$$e_3=\frac 1{\sqrt 6}(1,1,-2).$$
+La famille $B=(e_1,e_2,e_3)$ est une base orthonormée directe de $\mathbb R^3$. La matrice de $r$ dans cette base est 
+$$M_1=\left(
+\begin{array}{ccc}
+1&0&0\\
+0&\cos(2\pi/3)&-\sin(2\pi/3)\\
+0&\sin(2\pi/3)&\cos(2\pi/3)\\
+\end{array}\right)=
+\left(
+\begin{array}{ccc}
+1&0&0\\
+0&-1/2&-\sqrt 3/2\\
+0&\sqrt 3/2&-1/2\\
+\end{array}\right).$$
+La matrice de passage de la base canonique à la base $(e_1,e_2,e_3)$ est 
+$$P=\left(\begin{array}{ccc}
+\frac 1{\sqrt 3}&\frac{1}{\sqrt 2}&\frac{1}{\sqrt 6}\\
+\frac 1{\sqrt 3}&\frac{-1}{\sqrt 2}&\frac{1}{\sqrt 6}\\
+\frac 1{\sqrt 3}&0&-\frac{2}{\sqrt 6}\\
+\end{array}\right).$$
+Par les formules de changement de base, on a 
+$$M=PM_1P^T.$$
+Tout calcul fait, on retrouve bien sûr la même matrice qu'à la première question!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater1102"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1102"),	max:5, rating:1.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1102,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS pour avoir une matrice de rotation <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1102.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(1102,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1102','imageenonce1102');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1102"></a><div class=inner id="innerenonce1102">Déterminer les réels $a,b,c,d,e$ tels que la matrice 
+$$A=\left(\begin{array}{ccc}
+\frac{1}{\sqrt 2}&\frac{1}{\sqrt 3}&c\\
+a&\frac{1}{\sqrt 3}&d\\
+\frac{1}{\sqrt 2}&b&e
+\end{array}\right)$$
+représente une rotation de $\mathbb R^3$.</div></div><div class=indication><a href="javascript:showAll('innerindication1102','imageindication1102');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1102"></a><div class=inner id="innerindication1102" style="display:none;">$A$ va représenter une rotation si et seulement si ses vecteurs colonnes forment une base orthonormée directe de $\mathbb R^3$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1102','imagecorrige1102',1102);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1102"></a><div class=inner id="innercorrige1102" style="display:none;">$A$ va représenter une rotation si et seulement si ses vecteurs colonnes forment une base orthonormée directe de $\mathbb R^3$. Pour que la première colonne soit de norme 1, il faut et il suffit de $a=0$. Pour que la deuxième colonne soit orthogonale à la première, il faut et il suffit que $b=-\frac 1{\sqrt 3}$. Remarquons que dans ce cas la deuxième colonne est bien de norme 1. Pour déterminer $c,d,e$, plusieurs méthodes sont envisageables :
+<ul class="rien">
+<li> La plus simple est d'utiliser le produit vectoriel. Si $(u,v)$ est une famille orthonormale, le seul vecteur $w$ tel que $(u,v,w)$ forme une base orthonormée directe est $w=u\wedge v$. On trouve alors facilement que $c=-\frac 1{\sqrt 6}$, $d=\frac 2{\sqrt 6}$ et $e=\frac 1{\sqrt 6}$.
+<li> On écrit toutes les relations connues : l'orthogonalité de la première et de la troisième colonne donne $c+e=0$, celle de la deuxième et de la troisième donne $c+d-e=0$. On obtient alors $c=-e$ et $d=2e$. Sachant que $c^2+d^2+e^2=1$, ceci permet de déterminer $e$ au signe près. On calcule alors le déterminant de la matrice $A$, qui doit être égal à $1$,  pour trouver le signe de $e$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater1101"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1101"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1101,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphisme orthogonal négatif <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1101.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(1101,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1101','imageenonce1101');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1101"></a><div class=inner id="innerenonce1101">Soit $E$ un espace vectoriel de dimension 3, et soit $f\in O^-(E)$. Démontrer que $f$ est la composée d'une rotation d'axe une droite $D$ et de la réflexion par rapport à $D^\perp$.</div></div><div class=indication><a href="javascript:showAll('innerindication1101','imageindication1101');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1101"></a><div class=inner id="innerindication1101" style="display:none;">Utiliser la matrice sous forme réduite.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1101','imagecorrige1101',1101);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1101"></a><div class=inner id="innercorrige1101" style="display:none;">Il existe une base orthonormale $(u,v,w)$ de $E$ telle que la matrice de $f$ dans cette base orthonormale soit de la forme 
+$$\left(
+\begin{array}{ccc}
+-1&0&0\\
+0&\cos\theta&-\sin\theta\\
+0&\sin\theta&\cos\theta
+\end{array}
+\right).$$
+Notons $D=\textrm{vect}(u)$ de sorte que $D^\perp=\textrm{vect}(v,w)$. Soit $s$ la réflexion par rapport à $D^\perp$. Sa matrice dans la base $(u,v,w)$ est 
+$$\left(
+\begin{array}{ccc}
+-1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right).$$
+Ainsi, la matrice de $s\circ f$ est 
+$$\left(
+\begin{array}{ccc}
+1&0&0\\
+0&\cos\theta&-\sin\theta\\
+0&\sin\theta&\cos\theta
+\end{array}
+\right).$$
+C'est bien la matrice d'une rotation $r$ d'axe $D$. Puisque $s^{-1}=s$, on a bien 
+$$f=r\circ s=s\circ r$$
+qui est donc la composée d'une rotation et d'une réflexion.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater2492"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2492"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2492,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sous-groupe de $S0_3(\mathbb R)$ agissant transitivement <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2492.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(2492,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2492','imageenonce2492');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2492"></a><div class=inner id="innerenonce2492">Soit $E$ un espace vectoriel euclidien de dimension 3, $\mathcal S$ sa sphère unité. Si $D$ est une droite vectorielle de $E$, on note $\sigma_D$ la rotation d’angle $\pi$ autour de $D$ (appelée aussi demi-tour). Par conséquent, $\sigma_D$ appartient au groupe spécial orthogonal $SO(E)$, dont on rappelle qu'il est engendré par les demi-tours.
+<ol class="enumeratechiffre">
+<li> Soit $D$ une droite vectorielle, $g$ dans $SO(E)$. Reconnaître l’endomorphisme $g \circ \sigma_D \circ g^{-1}$.
+<li> Soit $g\in SO(E)$. Montrer que $g$ est un demi-tour si et seulement s'il existe $x\in \mathcal S$ tel que $g(x)=-x$.<br>
+Dans les deux questions suivantes, on se donne un sous-groupe $G$ de $SO(E)$ agissant transitivement sur $\mathcal S$ c’est-à-dire :
+$$\forall (x, y) ∈ \mathcal S^2, \exists g \in G, g(x) = y.$$
+<li> Montrer que $G$ contient un demi-tour.
+<li> En déduire que $G = SO(E)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2492','imageindication2492');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2492"></a><div class=inner id="innerindication2492" style="display:none;"><ol class="enumeratechiffre">
+<li> Quels sont les éléments invariants de $g\circ \sigma_D\circ g^{-1}$?
+<li> Deux vecteurs propres associés à des valeurs propres distinctes d'une isométrie sont orthogonaux.
+<li>
+<li> Utiliser les questions 1. et 3. et le fait que $SO(E)$ est engendré par les demi-tours.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2492','imagecorrige2492',2492);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2492"></a><div class=inner id="innercorrige2492" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que si $x\in g(D)$, alors $g^{-1}(x)\in D$ et donc $g\circ\sigma_D \circ g^{-1}(x)=g\circ  g^{-1}(x)=x$. Si $x\in g(D^\perp)=g(D)^\perp$ (cette dernière égalité vient du fait que $g$ est une isométrie), alors $g^{-1}(x)\in D^\perp$ et donc $g\circ \sigma_D \circ g^{-1}(x)=g\circ (g^{-1}(-x))=-x$. Ainsi, $g\circ\sigma_D \circ g^{-1}$ est le demi-tour d'axe $g(D)$.
+<li> Si $g$ est un demi-tour d'axe $D$, prenons $x\in\mathcal S\cap D^\perp$. Alors $g(x)=-x$. Réciproquement, supposons qu'il existe $x\in\mathcal S$ tel que $g(x)=-x$ et notons $D$ l'axe de $g$ (c'est-à-dire $\ker(g-Id_E)$). Alors, puisque deux vecteurs propres associés à des valeurs propres distinctes d'une isométrie sont orthogonaux, $x\in D^\perp$, et on sait que $g$ induit une rotation sur $D^\perp$. La seule rotation qui transforme un vecteur non-nul en son opposé est la rotation d'angle $\pi$. Donc $g$ est bien un demi-tour.
+<li> Prenons $x\in\mathcal S$. Alors, puisque $G$ agit transitivement, il existe $g\in G$ tel que $g(x)=-x$. La question précédente nous dit que $g$ est un demi-tour.
+<li> Puisque $SO(E)$ est engendré par les demi-tours, il suffit de démontrer que $G$ contient tous les demi-tours. D'après la question précédente, il existe un demi-tour $\sigma_D$ élément de $G$. Soit $x$ un vecteur unitaire de $D$. Soit maintenant $\sigma_{D'}$ un autre demi-tour et soit $x'$ un vecteur unitaire de $D'$. On sait qu'il existe $g\in G$ tel que $g(x)=x'$, autrement dit $g(D)=D'$. D'après la première question $g\circ \sigma_D\circ  g^{-1}=\sigma_{D'}$ et ceci est un élément de $G$.
+</ol></div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

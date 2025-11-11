@@ -1,0 +1,321 @@
+<!doctype html><html lang="fr"<head><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta charset="utf-8"><meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Etude d'une fonction de hachage : le MD5"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Etude d'une fonction de hachage : le MD5</title><link type="text/css" href="css/cryptostyle.css" rel="stylesheet" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({  tex2jax: {inlineMath: [['$','$']]} });</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/javascript" src="common/fonctions.js"></script><script src="common/spoiler.js"></script></head><body><header id="bandeau"><div id="bandeaucentre"><span id=bandeaulogo>Cryptographie et codes secrets</span><span id=bandeaumilieu><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" title="Consulter notre page Facebook">
+	<img src="img/fb.png" /></a></span><div id=bandeaurecherche><form id="formrech" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></form></div></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()">
+	<img src="img/menumobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="img/deletemobile.png">
+	</a></span><span class="itembandeaumobile">Cryptographie!</span></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site">
+	<img src="img/forumgrand.png" /></a></span>
+	<span class="itembandeaumobilesansbordure"><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" 
+	title="Consulter notre page Facebook"><img src="img/fbmobile.png" /></a></span>
+	<span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()">
+	<img src="img/loupemobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()">
+	<img src="img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><section id="listemenuhaut"><span id="menu0" class="item"><a href="Analyse.class.html">Accueil</a></span><span id="menu1" class="itemselectionne"><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Findex.html">Méthodes anciennes</a></span><span id="menu2" class="item"><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findex.html">Les 2 guerres</a></span><span id="menu3" class="item"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Méthodes modernes</a></span><span id="menu4" class="item"><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=chasseur/index">Chasseurs de codes</a></span><span id="menu5" class="item"><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><span id="menu6" class="item"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Compléments</a></span><span id="menu7" class="item"><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><span id="menu8" class="item"><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="Analyse.class.html">Accueil</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme0"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert0"  style="display:none;"/></div></div><div class="itemmenumobileselectionne"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(1);">Méthodes anciennes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme1"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert1"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=substi%252Findex.html">Substitution monoalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=poly%252Findex.html">Substitution polyalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fpolygraphiqueindex.html">Chiffres polygraphiques</a></span></div><div class="sousitemmenumobile"><span><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=ancienne/homophoneindex">Chiffres homophones</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Ftranspoindex.html">Transposition</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fsurchiffrement.html">Surchiffrement</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(2);">Les 2 guerres</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme2"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert2"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexpremguerre.html">Première Guerre Mondiale</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexsecguerre.html">Deuxième Guerre Mondiale</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(3);">Méthodes modernes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme3"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert3"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Préambule</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclesecrete.html">Clé secrète</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclepublique.html">Clé publique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexprotocole.html">Protocoles</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexconcret.html">Mises en oeuvre</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexfutur.html">Futur</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(4);">Chasseurs de codes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme4"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert4"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findextheorie.html">Quelques principes</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexvaincre.html">Quelques cas concrets</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexoutils.html">Outils</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexenigmes.html">Enigmes</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme5"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert5"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(6)">Compléments</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme6"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert6"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile6"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexfigures.html">Portraits</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexmaths.html">Compléments mathématiques</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexinfo.html">Compléments informatique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexclasse.html">En classe</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme7"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert7"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme8"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert8"  style="display:none;"/></div></div></nav></div><div id="main"><div style="width:100%"><div id="pubhaut"></div></div><div id="maincentre"><div id="gauche"><article id="contenugauche"><div class="chemin"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Le plan de la partie : méthodes modernes de cryptographie</a> &gt; </div><h1>Etude d'une fonction de hachage : le MD5</h1>
+
+    <script language="JavaScript">
+    <!--
+
+ function nouveau()
+   {
+	texte="moderne/md5expli.html";
+        F1=open(texte,"Annexe","width=490,height=260,screenX=20,screenY=50,scrollbars=yes");
+	F1.scrollbars.visible=true;
+        F1.focus();
+   }
+
+/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 1.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Code also contributed by Greg Holt
+ * Modified by Frederic Bayart
+ * See http://pajhome.org.uk/site/legal.html for details.
+ */
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF)
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16)
+  return (msw << 16) | (lsw & 0xFFFF)
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt))
+}
+
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */
+function cmn(q, a, b, x, s, t)
+{
+  return safe_add(rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b)
+}
+function ff(a, b, c, d, x, s, t)
+{
+  return cmn((b & c) | ((~b) & d), a, b, x, s, t)
+}
+function gg(a, b, c, d, x, s, t)
+{
+  return cmn((b & d) | (c & (~d)), a, b, x, s, t)
+}
+function hh(a, b, c, d, x, s, t)
+{
+  return cmn(b ^ c ^ d, a, b, x, s, t)
+}
+function ii(a, b, c, d, x, s, t)
+{
+  return cmn(c ^ (b | (~d)), a, b, x, s, t)
+}
+
+/*
+ * Calculate the MD5 of an array of little-endian words, producing an array
+ * of little-endian words.
+ */
+function coreMD5(x)
+{
+  var a =  1732584193
+  var b = -271733879
+  var c = -1732584194
+  var d =  271733878
+
+  for(i = 0; i < x.length; i += 16)
+  {
+    var olda = a
+    var oldb = b
+    var oldc = c
+    var oldd = d
+
+    a = ff(a, b, c, d, x[i+ 0], 7 , -680876936)
+    d = ff(d, a, b, c, x[i+ 1], 12, -389564586)
+    c = ff(c, d, a, b, x[i+ 2], 17,  606105819)
+    b = ff(b, c, d, a, x[i+ 3], 22, -1044525330)
+    a = ff(a, b, c, d, x[i+ 4], 7 , -176418897)
+    d = ff(d, a, b, c, x[i+ 5], 12,  1200080426)
+    c = ff(c, d, a, b, x[i+ 6], 17, -1473231341)
+    b = ff(b, c, d, a, x[i+ 7], 22, -45705983)
+    a = ff(a, b, c, d, x[i+ 8], 7 ,  1770035416)
+    d = ff(d, a, b, c, x[i+ 9], 12, -1958414417)
+    c = ff(c, d, a, b, x[i+10], 17, -42063)
+    b = ff(b, c, d, a, x[i+11], 22, -1990404162)
+    a = ff(a, b, c, d, x[i+12], 7 ,  1804603682)
+    d = ff(d, a, b, c, x[i+13], 12, -40341101)
+    c = ff(c, d, a, b, x[i+14], 17, -1502002290)
+    b = ff(b, c, d, a, x[i+15], 22,  1236535329)
+
+    a = gg(a, b, c, d, x[i+ 1], 5 , -165796510)
+    d = gg(d, a, b, c, x[i+ 6], 9 , -1069501632)
+    c = gg(c, d, a, b, x[i+11], 14,  643717713)
+    b = gg(b, c, d, a, x[i+ 0], 20, -373897302)
+    a = gg(a, b, c, d, x[i+ 5], 5 , -701558691)
+    d = gg(d, a, b, c, x[i+10], 9 ,  38016083)
+    c = gg(c, d, a, b, x[i+15], 14, -660478335)
+    b = gg(b, c, d, a, x[i+ 4], 20, -405537848)
+    a = gg(a, b, c, d, x[i+ 9], 5 ,  568446438)
+    d = gg(d, a, b, c, x[i+14], 9 , -1019803690)
+    c = gg(c, d, a, b, x[i+ 3], 14, -187363961)
+    b = gg(b, c, d, a, x[i+ 8], 20,  1163531501)
+    a = gg(a, b, c, d, x[i+13], 5 , -1444681467)
+    d = gg(d, a, b, c, x[i+ 2], 9 , -51403784)
+    c = gg(c, d, a, b, x[i+ 7], 14,  1735328473)
+    b = gg(b, c, d, a, x[i+12], 20, -1926607734)
+
+    a = hh(a, b, c, d, x[i+ 5], 4 , -378558)
+    d = hh(d, a, b, c, x[i+ 8], 11, -2022574463)
+    c = hh(c, d, a, b, x[i+11], 16,  1839030562)
+    b = hh(b, c, d, a, x[i+14], 23, -35309556)
+    a = hh(a, b, c, d, x[i+ 1], 4 , -1530992060)
+    d = hh(d, a, b, c, x[i+ 4], 11,  1272893353)
+    c = hh(c, d, a, b, x[i+ 7], 16, -155497632)
+    b = hh(b, c, d, a, x[i+10], 23, -1094730640)
+    a = hh(a, b, c, d, x[i+13], 4 ,  681279174)
+    d = hh(d, a, b, c, x[i+ 0], 11, -358537222)
+    c = hh(c, d, a, b, x[i+ 3], 16, -722521979)
+    b = hh(b, c, d, a, x[i+ 6], 23,  76029189)
+    a = hh(a, b, c, d, x[i+ 9], 4 , -640364487)
+    d = hh(d, a, b, c, x[i+12], 11, -421815835)
+    c = hh(c, d, a, b, x[i+15], 16,  530742520)
+    b = hh(b, c, d, a, x[i+ 2], 23, -995338651)
+
+    a = ii(a, b, c, d, x[i+ 0], 6 , -198630844)
+    d = ii(d, a, b, c, x[i+ 7], 10,  1126891415)
+    c = ii(c, d, a, b, x[i+14], 15, -1416354905)
+    b = ii(b, c, d, a, x[i+ 5], 21, -57434055)
+    a = ii(a, b, c, d, x[i+12], 6 ,  1700485571)
+    d = ii(d, a, b, c, x[i+ 3], 10, -1894986606)
+    c = ii(c, d, a, b, x[i+10], 15, -1051523)
+    b = ii(b, c, d, a, x[i+ 1], 21, -2054922799)
+    a = ii(a, b, c, d, x[i+ 8], 6 ,  1873313359)
+    d = ii(d, a, b, c, x[i+15], 10, -30611744)
+    c = ii(c, d, a, b, x[i+ 6], 15, -1560198380)
+    b = ii(b, c, d, a, x[i+13], 21,  1309151649)
+    a = ii(a, b, c, d, x[i+ 4], 6 , -145523070)
+    d = ii(d, a, b, c, x[i+11], 10, -1120210379)
+    c = ii(c, d, a, b, x[i+ 2], 15,  718787259)
+    b = ii(b, c, d, a, x[i+ 9], 21, -343485551)
+
+    a = safe_add(a, olda)
+    b = safe_add(b, oldb)
+    c = safe_add(c, oldc)
+    d = safe_add(d, oldd)
+  }
+  return [a, b, c, d]
+}
+
+/*
+ * Convert an array of little-endian words to a hex string.
+ */
+function binl2hex(binarray)
+{
+  var hex_tab = "0123456789abcdef"
+  var str = ""
+  for(var i = 0; i < binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
+           hex_tab.charAt((binarray[i>>2] >> ((i%4)*8)) & 0xF)
+  }
+  return str
+}
+
+/*
+ * Convert an array of little-endian words to a base64 encoded string.
+ */
+function binl2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+  var str = ""
+  for(var i = 0; i < binarray.length * 32; i += 6)
+  {
+    str += tab.charAt(((binarray[i>>5] << (i%32)) & 0x3F) |
+                      ((binarray[i>>5+1] >> (32-i%32)) & 0x3F))
+  }
+  return str
+}
+
+/*
+ * Convert an 8-bit character string to a sequence of 16-word blocks, stored
+ * as an array, and append appropriate padding for MD4/5 calculation.
+ * If any of the characters are >255, the high byte is silently ignored.
+ */
+function str2binl(str)
+{
+  var nblk = ((str.length + 8) >> 6) + 1 // number of 16-word blocks
+  var blks = new Array(nblk * 16)
+  for(var i = 0; i < nblk * 16; i++) blks[i] = 0
+  for(var i = 0; i < str.length; i++)
+    blks[i>>2] |= (str.charCodeAt(i) & 0xFF) << ((i%4) * 8)
+  blks[i>>2] |= 0x80 << ((i%4) * 8)
+  blks[nblk*16-2] = str.length * 8
+  return blks
+}
+
+/*
+ * Convert a wide-character string to a sequence of 16-word blocks, stored as
+ * an array, and append appropriate padding for MD4/5 calculation.
+ */
+function strw2binl(str)
+{
+  var nblk = ((str.length + 4) >> 5) + 1 // number of 16-word blocks
+  var blks = new Array(nblk * 16)
+  for(var i = 0; i < nblk * 16; i++) blks[i] = 0
+  for(var i = 0; i < str.length; i++)
+    blks[i>>1] |= str.charCodeAt(i) << ((i%2) * 16)
+  blks[i>>1] |= 0x80 << ((i%2) * 16)
+  blks[nblk*16-2] = str.length * 16
+  return blks
+}
+
+/*
+ * External interface
+ */
+function hexMD5 (str) { return binl2hex(coreMD5( str2binl(str))) }
+function hexMD5w(str) { return binl2hex(coreMD5(strw2binl(str))) }
+function b64MD5 (str) { return binl2b64(coreMD5( str2binl(str))) }
+function b64MD5w(str) { return binl2b64(coreMD5(strw2binl(str))) }
+/* Backward compatibility */
+function calcMD5(str) { return binl2hex(coreMD5( str2binl(str))) }
+
+ //-->
+    </script>
+   
+      <p>&nbsp;&nbsp;<font size="+2">R</font>appelons qu'une fonction de hachage calcule le résumé d'un texte, et que ce résumé doit être très sensible au texte initial (une petite modification du texte doit provoquer une grande modification du résumé). Une des fonctions de hachage les plus utilisées (du moins jusqu'en 2005) fut
+MD5 (pour <span class=rougedico>M</span>essage <span class=rougedico>D</span>igest 5). Elle n'est plus considérée comme sûre pour un usage en cryptographie
+car durant l'été 2004, des chercheurs chinois ont montré comment réaliser des collisions avec MD5, c'est-à-dire comment produire
+deux messages ayant la même empreinte (le même résumé) en appliquant l'algorithme MD5. Cela dit, le MD5 est encore utilisé pour des usages non sensibles,
+par exemple pour vérifier l'intégrité d'un fichier téléchargé. De plus, le MD5 est une sorte de "mythe" pour certains geeks. Par exemple, quelques heures
+avant le lancement de Free Mobile, en 2012, la page officielle consacrée au lancement affichait cette suite un peu étrange : 
+"efb7929e6a5b7dcc6ebb79aa3c45af13". Ceci constitue l'empreinte, après application de MD5, de la phrase "jesaispas".</p>
+
+&nbsp;&nbsp;<font size=+2>V</font>oyons maintenant comment fonctionne le MD5.
+<div class=liste>
+<ul>
+<li><b>Etape 1 : Complétion</b><br>
+&nbsp;&nbsp;Le message est constitué de b bits m<sub>1</sub>...m<sub>b</sub>. On complète le message par un 1, et suffisamment de 0 pour que le message étendu ait une longueur congruente à 448, modulo 512. Puis on ajoute à ce message la valeur de b, codée en binaire sur 64 bits (on a donc b qui peut valoir jusque 2<sup>64</sup>... ce qui est énorme). On obtient donc un message dont la longueur totale est un multiple de 512 bits. On va travailler itérativement sur chacun des blocs de 512 bits.
+<li><b>Etape 2 : Initialisation</b><br>
+&nbsp;&nbsp;On définit 4 buffers de 32 bits A,B,C et D, initialisés ainsi (les chiffres sont hexadécimaux, ie a=10, b=11...).
+<blockquote>
+A=01234567<br>
+B=89abcdef<br>
+C=fedcba98<br>
+D=76543210<br>
+</blockquote>
+On définit aussi 4 fonctions F,G,H et I, qui prennent des arguments codés sur 32 bits, et renvoie une valeur sur 32 bits, les opérations se faisant bit à bit.
+<blockquote>
+F(X,Y,Z) = (X AND Y) OR (not(X) AND Z)<br>
+G(X,Y,Z) = (X AND Z) OR (Y AND not(Z))<br>
+H(X,Y,Z) = X xor Y xor Z<br>
+I(X,Y,Z) = Y xor (X OR not(Z))<br>
+</blockquote>
+Ce qu'il y a d'important avec ces 4 fonctions et que si les bits de leurs arguments X,Y et Z sont indépendants, les bits du résultat le sont aussi.
+<li><b>Etape 3 : Calcul itératif</b><br>
+&nbsp;&nbsp;Pour chaque bloc de 512 bits du texte, on fait les opérations suivantes :
+<ol>
+<li>on sauvegarde les valeurs des registres dans AA,BB,CC,DD.
+<li>on calcule de nouvelles valeurs pour A,B,C,D à partir de leurs anciennes valeurs, à partir des bits du bloc qu'on étudie, et à partir des 4 fonctions F,G,H,I.
+<li>on fait A=AA+A, B=BB+B, C=CC+C, D=DD+D.
+</ol>
+Le détail des calculs se trouve <a href="javascript:nouveau()">en annexe.</a>
+<li><b>Etape 4 : Ecriture du résumé</B><br>
+&nbsp;&nbsp;Le résumé sur 128 bits est obtenu en mettant bout à bout les 4 buffers A,B,C,D de 32 bits.
+</ul> 
+</div>
+<center><img src="moderne/images/md5.gif"></center></p>
+&nbsp;&nbsp;<font size=+2>L</font>e programme JavaScript suivant permet de calculer le résumé MD5 d'un texte.
+<CENTER>
+<form name="md5" method=get>
+<TABLE cellSpacing=2 cellPadding=1 border=0>
+  <TR>
+   
+    <TD bgColor=#66FF99>Message</TD>
+    <TD bgColor=#66FF99><TEXTAREA name=entree rows=3 cols=50>BibMath</TEXTAREA></TD></TR>
+ 
+  <TR bgColor=#ffff99 >
+    <TD > <INPUT onclick="document.md5.sortie.value=hexMD5(document.md5.entree.value)" type=button value=Calculer!>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT onclick="entree.value=''; sortie.value=''" type=button value=Effacer> 
+    </TD><td bgColor=#ffff99>&nbsp; </td></TR>
+  <TR>
+    <TD bgColor=#33CCFF>Résumé</TD>
+    <TD 
+  bgColor=#33CCFF><input type=text size=40 name="sortie"></TD></TR></TABLE></CENTER></FORM>
+<div class=titrepartie>Consulter aussi</div><div class=liste><ul><li><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Fsigelec.html">Les signatures électroniques, une des applications des fonctions de hachage</a></li></ul></div></article></div><aside id="droite"><div id="pubdroite"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5238512654171693"
+     data-ad-slot="3610567220"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside></div></div><footer id="pied"><div id="piedcentre"><section id="listepied"><span class="item"><a href="contact.php%3Forigine=erreur.html">Signaler une erreur, une faute d'orthographe</a></span><span class="item"><a href="contact.php%3Forigine=contribuer.html">Contribuer au site</a></span><span class="item"><a href="credits.php.html">Crédits</a></span></section></div></footer><footer id="piedmobile"><span class="item"><script language="JavaScript1.1"> <!-- 
+	hsh = new Date();
+      hsd = document;
+      hsi = '<a href="http://www.xiti.com/xiti.asp?s=65164"'
+      hsi += ' TARGET="_top"><img width="80" height="15" border=0 '
+      hsi += 'src="http://logv17.xiti.com/oco.xiti?s=65164'
+      hsi += '&p=&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+      if(parseFloat(navigator.appVersion)>=4)
+            {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+      hsd.writeln(hsi + '&ref=' + hsd.referrer.replace('&', '$') + ' " title="Mesurez votre audience"></a>');//-->  
+      </script></span><span class="item"><a href="contact.php%3Forigine=mobile.html">Nous contacter</a></span></footer></body><script type="text/javascript" src="common/scrolling.js"></script></html>   

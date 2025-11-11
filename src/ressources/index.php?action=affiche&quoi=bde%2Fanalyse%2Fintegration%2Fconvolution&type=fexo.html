@@ -1,0 +1,627 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Produit de convolution</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Produit de convolution</h1>
+<div class=titrepartie>Existence et calculs</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1718"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1718"),	max:5, rating:1.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1718,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indicatrices <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1718.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1718,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1718','imageenonce1718');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1718"></a><div class=inner id="innerenonce1718">Soit $f=\mathbf{1}_{[-1,1]}$ et $g=\mathbf{1}_{[-a,a]}$, avec $a\geq 1$. Calculer $f\star g$ après en avoir justifié
+l'existence.</div></div><div class=indication><a href="javascript:showAll('innerindication1718','imageindication1718');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1718"></a><div class=inner id="innerindication1718" style="display:none;">Il faut séparer différents cas...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1718','imagecorrige1718',1718);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1718"></a><div class=inner id="innercorrige1718" style="display:none;">$f$ et $g$ sont par exemple deux fonctions de $L^2(\mtr)$ : on peut donc calculer leur produit de convolution.
+On a 
+$$f\star g(x)=\int_\mtr 1_{[-1,1]}(y)1_{[-a,a]}(x-y)dy.$$
+On a donc
+$$f\star g(x)=\int_{-1}^1 1_{[-a,a]}(x-y)dy=\int_{x-1}^{x+1}1_{[-a,a]}(u)du$$
+après le changement de variables $u=x-y.$  On obtient donc 
+$$f\star g(x)=\mathrm{longueur}([x-1,x+1]\cap [-a,a]).$$
+ On distingue donc plusieurs cas :
+<ul class="rien">
+<li> si $x+1\leq -a,$ c'est-à-dire $x\leq -a-1,$ alors  $f\star g(x)=0$.
+<li> si $x+1\geq -a$ et $x-1\leq -a,$ c'est-à-dire si $-a-1\leq x\leq -a+1,$ ce qui entraîne automatiquement que $x-a\leq -1$ puisque $a\geq 1,$ on a $f\star g(x)=(x+a)-(-1)=x+a+1.$
+<li> si $x-1\geq -a$ et $x+1\leq a,$ c'est-à-dire si $-a+1\leq x\leq a-1,$ alors $f\star g(x)=2.$
+<li> si $x+1\geq a$ et $x-1\leq a,$ c'est-à-dire si $-1+a\leq x\leq a+1,$ ce qui entraîne automatiquement que $x+a\geq 1,$ on a $f\star g(x)=1-(x-a)=-x+a+1.$
+<li> si $x-1\geq a,$ c'est-à-dire si $x\geq a+1,$ alors $f\star g(x)=0.$  
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1719"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1719"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1719,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux fonctions dans $L^1_{\textrm{loc}}$ <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1719.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1719,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1719','imageenonce1719');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1719"></a><div class=inner id="innerenonce1719">Soit $\alpha$ et $\beta$ deux nombres réels. Montrer l'existence et calculer le produit de convolution $(e^{\alpha x}\mathbf{1}_{[0,+\infty[})\star(e^{\beta x}\mathbf{1}_{[0,+\infty[})$.</div></div><div class=indication><a href="javascript:showAll('innerindication1719','imageindication1719');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1719"></a><div class=inner id="innerindication1719" style="display:none;">Comme les fonctions sont positives, il suffit de calculer l'intégrale. On se ramène à un calcul facile à faire, sachant que 
+$\mathbf{1}_{[0,+\infty[}(x-y)=1\iff x\geq y$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1719','imagecorrige1719',1719);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1719"></a><div class=inner id="innercorrige1719" style="display:none;">Remarquons d'abord que l'existence du produit de convolution de ces deux fonctions ne résulte pas immédiatement des théorèmes du cours. En effet, si $\alpha$ et $\beta$ sont strictement positifs,
+alors les deux fonctions ne sont dans aucun $L^p$ pour $p\geq 1$. Elles sont dans $L^1_{\textrm{loc}}$, et aucune des deux n'est à support compact.
+Ainsi, pour démontrer l'existence du produit de convolution, il faut montrer que, pour tout $x\in\mathbb R,$ la fonction $y\mapsto e^{\alpha(x-y)}\mathbf{1}_{[0,+\infty[}(x-y)e^{\beta y}\mathbf{1}_{[0,+\infty[}(y)$ est intégrable.
+Mais comme cette fonction est positive, il suffit de faire le calcul sans les valeurs absolues. On a alors :
+\begin{eqnarray*}
+f\star g(x)&=&\int_{\mtr}e^{\alpha (x-y)}\mathbf{1}_{[0,+\infty[}(x-y)e^{\beta y}\mathbf{1}_{[0,+\infty[}(y)dy\\
+&=&e^{\alpha x}\int_0^{+\infty}e^{-\alpha y}\mathbf{1}_{[0,+\infty[}(x-y)e^{\beta y}dy
+\end{eqnarray*}
+Or, $x-y\in[0,+\infty[\iff x\geq y$. Il en résulte que, si $x\leq 0$, on a $f\star g(x)=0$. D'autre part,
+si $x\geq 0$, on a :
+\begin{eqnarray*}
+f\star g(x)&=&e^{\alpha x}\int_0^x e^{(\beta-\alpha)y}dy\\
+&=&\left\{
+\begin{array}{ll}
+\dis \frac{1}{\beta-\alpha}\left(e^{\beta x}-e^{\alpha x}\right)&\textrm{si $\beta\neq\alpha$}\\
+\dis xe^{\alpha x}&\textrm{sinon.}
+\end{array}
+\right.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3353"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3353"),	max:5, rating:1.9375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3353,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Où est le produit de convolution? <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3353.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3353,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3353','imageenonce3353');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3353"></a><div class=inner id="innerenonce3353">Soit $f\in L^p(\mathbb R)$ où $p\in[1,+\infty]$. On pose pour tout $x\in\mathbb R$
+$$F(x)=\int_x^{x+1}f(y)dy.$$
+<ol class="enumeratechiffre">
+<li> Exprimer $F$ à l'aide d'un produit de convolution.
+<li> Montrer que si $p\in ]1,+\infty[,$ alors $F\in\mathcal C_0(\mathbb R)\cap L^p(\mathbb R)$.
+<li> Montrer que si $p=1,$ alors $F\in\mathcal C_0(\mathbb R)\cap \bigcap_{q\in[1,+\infty[}L^q(\mathbb R)$.
+<li> Que peut-on dire sur $F$ lorsque $p=+\infty?$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3353','imageindication3353');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3353"></a><div class=inner id="innerindication3353" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser $g=\mathbf 1_{[-1,0]}$.
+<li> Utiliser que $g\in L^q(\mathbb R)$ pour une bonne valeur de $q$.
+<li> Utiliser que $g\in L^q(\mathbb R)$ pour toutes les valeurs de $q$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3353','imagecorrige3353',3353);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3353"></a><div class=inner id="innercorrige3353" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $g=\mathbf 1_{[-1,0]}$. Alors pour tout $(x,y)\in\mathbb R^2,$
+on a $g(x-y)=1\iff x-y\in [-1,0]\iff y\in[x,x+1]$. Ainsi, on a $F(x)=f\star g(x).$
+<li> Notons $q$ l'exposant conjugué de $p$. Puisque $f\in L^p(\mathbb R)$ et
+$g\in L^q(\mathbb R)$, alors $f\star g$ est continue, tend vers $0$ à l'infini. De plus, puisque $g\in L^p(\mathbb R)$ et $f\in L^1(\mathbb R),$ on a $f\star g\in L^p(\mathbb R)$.
+<li> Soit $q\in[1,+\infty[.$ Puisque $g\in L^q(\mathbb R)$ et $f\in L^1(\mathbb R),$ on a $f\star g\in L^q(\mathbb R)$. Puisque $g\in L^\infty(\mathbb R)$ et $f\in L^1(\mathbb R),$ la fonction $f\star g$ est continue. On a même $f\star g\in L^\infty(\mathbb R)$ avec $\|f\star g\|_\infty \leq \|f\|_1.$ Reste à montrer que $f\star g$ tend vers $0$ à l'infini (ce n'est pas toujours le cas du produit de convolution d'une fonction de $L^1$ par $L^\infty$). 
+On va utiliser le théorème de convergence dominée. On a 
+$$|f(y)g(x-y)|\leq |f(y)|$$
+et cette dernière fonction est intégrable. De plus, 
+$$\lim_{x\to+\infty}f(y)g(x-y)=0.$$
+Ainsi, par le théorème de convergence dominée, 
+$$\lim_{x\to+\infty}f\star g(x)=0.$$
+<li> Puisque $g\in L^\infty(\mathbb R)$, $F$ est continue et bornée. 
+Sans informations supplémentaires sur $f$ (par exemple que $f$ tend vers $0$ en $+\infty$), on n'a pas conclure que $F$ tend vers $0$ en $+\infty.$
+Par exemple, pour $f=1,$ $F=1.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1720"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1720"),	max:5, rating:2.2142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1720,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions de $[0,+\infty[$ <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1720.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1720,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1720','imageenonce1720');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1720"></a><div class=inner id="innerenonce1720"><ol class="enumeratechiffre">
+<li> Soit $f,g$ deux fonctions mesurables définies sur $\mathbb R$, nulles sur $]-\infty,0[$ et localement bornées sur $[0,+\infty[$ (c'est-à-dire bornées sur tout segment de $[0,+\infty[)$. Montrer que le produit
+de convolution $f\star g$ a un sens.
+<li> Soit $K\in L^\infty_{loc}(\mtr_+)$. Pour $n\in\mtn$, on note $K_n=K^{\star n}=K\star\dots\star K$ ($n$ facteurs).
+Montrer que pour tout $a&gt;0$, pour tout $x\in [0,a]$ et tout $n\in\mtn^*$, on a 
+$$|K_n(x)|\leq M(a)^n\frac{x^{n-1}}{(n-1)!},$$
+où $M(a)=\sup_{x\in[0,a]}|K(x)|$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1720','imageindication1720');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1720"></a><div class=inner id="innerindication1720" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Procéder par récurrence.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1720','imagecorrige1720',1720);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1720"></a><div class=inner id="innercorrige1720" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $f$ et $g$ deux telles fonctions. Il faut prouver la convergence, pour tout $x$, de l'intégrale
+$$\int_{\mtr}f(x-y)g(y)dy.$$
+Mais en fait il suffit d'intégrer sur $[0,+\infty[$ puisque $g$ est nulle ailleurs. En outre,
+$$f(x-y)\neq 0\implies x-y\geq 0\implies y\leq x.$$
+Il suffit donc de prouver la convergence de
+$$\int_0^x f(x-y)g(y)dy.$$
+Mais la convergence est clair, car $f$ et $g$ sont localement bornées!
+<li> De la question précédente, on peut aussi tirer que le produit de convolution de deux fonctions à support dans $[0,+\infty[$ est à support dans $[0,+\infty[$. Ainsi, pour chaque $n$, le support de $K_n$ est inclus dans $[0,+\infty[$. On démontre ensuite le résultat par récurrence sur $n$, puisqu'il est clair au rang $n=1$. Supposons le vérifié
+au rang $n$, et prouvons-le au rang $n+1$.
+ On a 
+\begin{eqnarray*}
+K_{n+1}(x)&=&K_n\star K(x)\\
+&=&\int_{\mtr}K(x-y)K_n(y)dy\\
+&=&\int_0^x K(x-y)K_n(y)dy\\
+&\leq&\frac{M(a)^{n}}{(n-1)!}\int_0^x M(a)\times y^{n-1}dy\\
+&\leq&\frac{M(a)^{n+1}}{(n-1)!}\frac{x^n}{n}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1721"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1721"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1721,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convolée de Gaussiennes <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1721.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1721,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1721','imageenonce1721');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1721"></a><div class=inner id="innerenonce1721">Pour $(m,\sigma)\in\mtr\times\mtr_+^*$, on considère la fonction $g_{m,\sigma}$ définie par
+$$g_{m,\sigma}(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-m)^2}{2\sigma^2}}.$$
+Si $(p,\sigma)$ et $(q,\tau)$ sont dans $\mtr\times\mtr_+^*$, peut-on définir $g_{p,\sigma}\star g_{q,\tau}$? Que dire de cette fonction? La calculer. On rappelle que 
+$\int_{\mtr}e^{-x^2/2}dx={\sqrt{2\pi}}$.</div></div><div class=indication><a href="javascript:showAll('innerindication1721','imageindication1721');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1721"></a><div class=inner id="innerindication1721" style="display:none;">Pour l'existence et les propriétés, lister tous les espaces $L^p$ auxquels les fonctions $g_{p,\sigma}$ et $g_{q,\tau}$ appartiennent, et faire correspondre cette liste avec les résultats du cours.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1721','imagecorrige1721',1721);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1721"></a><div class=inner id="innercorrige1721" style="display:none;">$g_{p,\sigma}$ et $g_{(q,\tau)}$ sont dans tous les $L^p(\mtr)$. Il en résulte (par exemple, $L^2\star L^2$), que leur produit de convolution est partout défini, qu'il est borné, uniformément continu, et tend vers 0 à l'infini.
+Il est aussi dans tous les $L^p$, puisqu'on peut voir aussi cela comme le produit de convolution $L^1\star L^p$. Enfin, la fonction résultante sera $C^\infty$.  Procédons maintenant au calcul :
+\begin{eqnarray*}
+g_{p,\sigma}\star g_{q,\tau}(x)&=&\dis \frac{1}{\alpha\tau 2\pi}\int_{\mtr}e^{\frac{-(x-y-p)^2}{2\alpha^2}}e^\frac{-(y-q)^2}{2\beta^2}dy
+\end{eqnarray*}
+Notre stratégie est alors la suivante : on va regrouper tous les termes en $y$, puis faire apparaitre une exponentielle du type $e^{(y-m)^2/2r^2}$ pour utiliser le résultat demandé. C'est parti!
+\begin{eqnarray*}
+g_{p,\sigma}\star g_{q,\tau}(x)&=&\dis \frac{1}{\alpha\tau 2\pi}\int_{\mtr}e^{-\frac{(\beta^2+\alpha^2)}{2\alpha^2\beta^2}\times \left(y^2-2\frac{\beta^2(p+x)+\alpha^2 q}{\beta^2+\alpha^2}y\right)}e^{-\frac{1}{2\alpha^2\beta^2}\left(\beta^2(x^2+p^2-2px)+\alpha^2 q^2\right)}dx\\
+&=&\dis\frac{1}{\alpha\tau 2\pi}\int_{\mtr}e^{-\frac{\beta^2+\alpha^2}{2\alpha^2\beta^2}\left(y-\frac{\beta^2(p+x)+\alpha^2 q}{\beta^2+\alpha^2}\right)^2}dy e^{\frac{(\beta^2(p+x)+\alpha^2 q)^2}{2\alpha^2\beta^2(\alpha^2+\beta^2)}}e^{-\frac{1}{2\alpha^2\beta^2}\left(\beta^2(x^2+p^2-2px)+\alpha^2 q^2\right)}\\
+\end{eqnarray*}
+L'intégrale est de la forme souhaitée, avec $r=\frac{\alpha\beta}{\sqrt{\alpha^2+\beta^2}}$. Modulo le changement de variables $z=(y-m)/r$, on trouve que cette intégrale vaut $\sqrt{2\pi}\times r$. Après un petit calcul pour simplifier la dernière exponentielle, on trouve :
+\begin{eqnarray*}
+g_{p,\sigma}\star g_{q,\tau}(x)&=&\frac{1}{\sqrt{2\pi}\sqrt{\alpha^2+\beta^2}}e^{-\frac{1}{2(\alpha^2+\beta^2)}\left(x-p-q\right)^2}\\
+&=&g_{p+q,\sqrt{\sigma^2+\tau^2}}(x).
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3352"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3352"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3352,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convolée de noyaux de Laplace <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3352.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3352,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3352','imageenonce3352');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3352"></a><div class=inner id="innerenonce3352">Pour $a&gt;0$, on pose $g_a(x)=e^{-a|x|}.$ 
+<ol class="enumeratechiffre">
+<li> Sans chercher à calculer explicitement le produit de convolution, démontrer que pour $a,b&gt;0,$ 
+on a $g_a\star g_b\in C(\mathbb R)\cap \bigcap_{p\in[1,+\infty]}L^p(\mathbb R).$
+<li> Pour $a,b&gt;0,$ calculer explicitement $g_a\star g_b.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3352','imageindication3352');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3352"></a><div class=inner id="innerindication3352" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le fait que $g_a$ est dans tous les $L^p.$
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3352','imagecorrige3352',3352);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3352"></a><div class=inner id="innercorrige3352" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que $g_a\in \bigcap_{p\in[1,+\infty]}L^p(\mathbb R).$ 
+Ainsi, en utilisant que $g_a\in L^1$ et $g_b\in L^p,$ $p\in[1,+\infty[$, on en déduit que $g_a\star g_b\in L^p(\mathbb R)$ (ici $p\in[1,+\infty[$). 
+De plus, en utilisant que $g_a\in L^2$ et $g_b\in L^2$, on en déduit que $g_a\star g_b$ est une fonction continue, bornée, et qui tend vers $0$ en l'infini. 
+<li> Pour le calcul, on remarque que puisque $g_a$ et $g_b$ sont paires, $g_a\star g_b$ est paire et on peut supposer $x\geq 0$. On a alors
+\begin{align*}
+g_a\star g_b(x)&=\int_{-\infty}^{+\infty}e^{-a|x-t|}e^{-b|t|}dt\\
+&=\int_{-\infty}^0 e^{-ax+(a+b)t}dt+\int_0^x e^{-ax+(a-b)t}dt+e^{ax}\int_x^{+\infty}e^{-(a+b)t}dt.
+\end{align*}
+Si $a\neq b,$ on a 
+\begin{align*}
+g_a\star g_b(x)&=\frac{e^{-ax}}{a+b}+\frac{e^{-ax}e^{(a-b)x}}{a-b}-\frac{e^{-ax}}{a-b}+\frac{e^{ax}e^{-ax-bx}}{a+b}\\
+&=\frac{e^{-ax}}{a+b}+\frac{e^{-bx}}{a-b}-\frac{e^{-ax}}{a-b}+\frac{e^{-bx}}{a+b}\\
+&=\frac{2}{a^2-b^2}\left(ae^{-bx}-be^{-ax}\right).
+\end{align*}
+Si $a=b,$ un calcul similaire donne
+$$g_a\star g_b(x)=e^{-ax}\left(\frac 1a+x\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1722"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1722"),	max:5, rating:2.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1722,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand $C^1\star C^1$ donne $C^2$... <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1722.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1722,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1722','imageenonce1722');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1722"></a><div class=inner id="innerenonce1722">Soit $f$ et $g$ deux fonctions continues sur $\mtr$ de classe $C^1$, bornées, et dont les dérivées sont bornées.
+On suppose que $f$ et $g'$ sont dans $L^1(\mtr)$. Montrer que $f\star g$ est bien définie, et qu'elle est de classe $C^2$.
+</div></div><div class=indication><a href="javascript:showAll('innerindication1722','imageindication1722');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1722"></a><div class=inner id="innerindication1722" style="display:none;">Il faudra jouer sur les deux expressions du produit de convolution... tantôt avec $f(x-y)g(y)$, tantôt avec $f(x)g(x-y)$. Remarquons que les deux intégrales 
+sont toujours de même nature, car on passe de l'une à l'autre par un changement de variables. Il suffit ensuite d'utiliser simplement le théorème de dérivation sous le signe intégrale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1722','imagecorrige1722',1722);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1722"></a><div class=inner id="innercorrige1722" style="display:none;">On va jouer sur les deux expressions du produit de convolution. D'une part, remarquons que l'on a, pour tous $x$ et $y$ :
+$$|f(y)g(x-y)|\leq \|g\|_\infty|f(y)|,$$
+ce qui prouve que, pour tout $x$, la fonction $y\mapsto f(y)g(x-y)$ est intégrable. Le produit de convolution est donc
+bien défini (remarquons que la convergence de $\int_\mtr|f(x-y)g(y)|dy$ est équivalente à la convergence de $\int_{\mtr}|f(y)g(x-y)|dy$, puisqu'on déduit l'une de l'autre par un changement de variables affine).
+On peut donc définir :
+$$f\star g(x)=\int_{\mtr}f(x-y)g(y)dy=\int_{\mtr}g(x-y)f(y)dy.$$
+En outre, la fonction $x\mapsto g(x-y)f(y)$ est dérivable sur $\mtr$, et on a :
+$$\left|g'(x-y)f(y)\right|\leq \|g'\|_\infty|f(y)|,$$
+et la fonction à droite de cette inégalité ne dépend plus de $x$ et est intégrable (par rapport à $y$). On en déduit que $f\star g$ est dérivable,
+et que 
+$$(f\star g)'(x)=\int_{\mtr}g'(x-y)f(y)dy.$$
+Par le changement de variable dont on vient de parler, on a encore :
+$$(f\star g)'(x)=\int_{\mtr}f(x-y)g'(y)dy.$$
+On recommence la même opération, en utilisant la majoration 
+$$|f'(x-y)g'(y)|\leq \|f'\|_\infty |g'(y)|.$$
+Ainsi, on prouve que $f\star g$ est deux fois dérivable, et l'on a :
+$$(f\star g)''(x)=\int_{\mtr}f'(x-y)g'(y)dy.$$
+Il reste à vérifier que $(f\star g)''$ est continue, ce qui résulte immédiatement du théorème de continuité d'une fonction définie par une intégrale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1737"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1737"),	max:5, rating:1.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1737,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction höldérienne <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1737.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1737,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1737','imageenonce1737');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1737"></a><div class=inner id="innerenonce1737">Soit $f\in L^1$ à support compact et $g:\mathbb R\to\mathbb R$ une fonction continue $\alpha$-höldérienne, avec $\alpha\in ]0,1]$ :
+$$\exists C&gt;0,\ \forall (x,y)\in\mathbb R^2,\ |g(x)-g(y)|\leq C|x-y|^\alpha.$$
+Démontrer que $f\star g$ existe et est une fonction $\alpha$-höldérienne.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1737','imagecorrige1737',1737);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1737"></a><div class=inner id="innercorrige1737" style="display:none;">Notons $K$ le support de $f$. Pour tout $x\in\mathbb R$, l'intégrale $\int_K f(t)g(x-t)$ est convergente car $t\mapsto g(x-t)$ est bornée sur le compact $K$ puisque $g$ est continue et car $f$ est intégrable sur $K$ (le produit d'une fonction bornée et d'une fonction intégrable est intégrable). De plus, pour tous $x,y\in\mathbb R$, on a
+\begin{eqnarray*}
+|f\star g(x)-f\star g(y)|&=&\left| \int_K f(t)\big(g(x-t)-g(y-t)\big) dt\right|\\
+&\leq &\int_K |f(t)| |g(x-t)-g(y-t)| dt\\
+&\leq&C \int_K |f(t)| |x-y|^\alpha dt\\
+&\leq & C\|f\|_1 |x-y|^\alpha,
+\end{eqnarray*}
+ce qui prouve le résultat.</div></div></div>
+
+<div class=titrepartie>Divers</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3351"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3351"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3351,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convolée de deux fonctions paires <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3351.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3351,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3351','imageenonce3351');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3351"></a><div class=inner id="innerenonce3351">Soit $f$ et $g$ deux fonctions convolables paires. Démontrer que $f\star g$ est paire.</div></div><div class=indication><a href="javascript:showAll('innerindication3351','imageindication3351');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3351"></a><div class=inner id="innerindication3351" style="display:none;">Faire des changements de variables.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3351','imagecorrige3351',3351);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3351"></a><div class=inner id="innercorrige3351" style="display:none;">Soit $x\in\mathbb R$. Alors 
+\begin{align*}
+f\star g(-x)&=\int_{\mathbb R}f(-x-t)g(t)dt\\
+&=\int_{\mathbb R}f(-x+u)g(-u)du\textrm{ (changement de variables $u=-t$)}\\
+&=\int_{\mathbb R}f(x-u)g(u)du\textrm{ (par parité de $f$ et $g$)}\\
+&=f\star g(x).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3349"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3349"),	max:5, rating:1.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3349,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas d'élément neutre dans $L^1(\mathbb R)$ <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3349.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3349,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3349','imageenonce3349');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3349"></a><div class=inner id="innerenonce3349">Démontrer que l'algèbre $(L^1(\mathbb R),\star)$ n'admet pas d'élément neutre. On pourra procéder par l'absurde, supposer l'existence d'un élément neutre $f$, considérer $\alpha&gt;0$ tel que $\int_{|x|&lt;\alpha}|f|&lt;1$, considérer $g=\mathbf 1_{[-\alpha,\alpha]}$ et s'intéresser à $g\star f(0)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3349','imageindication3349');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3349"></a><div class=inner id="innerindication3349" style="display:none;">Majorer $g(0)=g\star f(0)$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3349','imagecorrige3349',3349);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3349"></a><div class=inner id="innercorrige3349" style="display:none;">On raisonne par l'absurde et on suppose l'existence d'un élément neutre $f$. 
+Soit $\alpha&gt;0$ tel que $\int_{|x|&lt;\alpha}|f|&lt;1$ et posons $g=\mathbf 1_{[-\alpha,\alpha]}$. Alors, puisque $g\in L^\infty$ et $f\in L^1,$
+$g\star f$ est définie partout et est continue. De plus, $g$ est continue en $0.$ De l'égalité $g\star f =g$ dans $L^1,$ qui entraîne l'égalité presque partout, on déduit $g(0)=g\star f(0).$ Or,
+\begin{align*}
+1=g(0)=g\star f(0)&=\int_{\mathbb R}g(t)f(-t)dt\\
+&=\int_{-\alpha}^{\alpha} f(-t)dt\\
+&\leq \int_{-\alpha}^{\alpha}|f(t)|dt\\
+&&lt;1.
+\end{align*}
+Ceci est une contradiction, et donc $L^1(\mathbb R)$ n'admet pas d'élément neutre pour le produit de convolution.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater3350"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3350"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3350,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formule de Leibniz <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3350.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(3350,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3350','imageenonce3350');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3350"></a><div class=inner id="innerenonce3350">Soit $f$ et $g$ deux fonctions continues sur $\mathbb R,$ dont l'une au moins est à support compact. Soit $n\geq 1.$  Démontrer que 
+$$x^n (f\star g)=\sum_{k=0}^n \binom nk (x^k f)\star (x^{n-k}g).$$</div></div><div class=indication><a href="javascript:showAll('innerindication3350','imageindication3350');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3350"></a><div class=inner id="innerindication3350" style="display:none;">&Eacute;crire $x=(x-t)+t.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3350','imagecorrige3350',3350);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3350"></a><div class=inner id="innercorrige3350" style="display:none;">Soit $x\in\mathbb R$ et soit $[a,b]$ un segment contenant le support de $g.$
+On écrit 
+\begin{align*}
+x^n(f\star g)(x)&=\int_{-\infty}^{+\infty} x^n f(x-t)g(t)dt\\
+&=\int_a^b (x-t+t)^n f(x-t)g(t)dt\\
+&=\int_a^b \sum_{k=0}^n \binom nk (x-t)^k f(x-t) t^{n-k}g(t)dt\\
+&=\sum_{k=0}^n \binom nk \int_a^b (x-t)^k f(x-t) t^{n-k}g(t)dt\\
+&=\sum_{k=0}^n \binom nk (x^k f)\star (x^{n-k} g)(x).
+\end{align*}
+Remarquons que la permutation de l'intégrale est de la somme est possible
+car on intègre des fonctions continues sur un segment.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1723"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1723"),	max:5, rating:1.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1723,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'opérateur de convolution <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1723.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1723,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1723','imageenonce1723');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1723"></a><div class=inner id="innerenonce1723">Soit $f\in L^1(\mtr^n)$. Montrer que l'opérateur 
+$$\begin{array}{rcl}
+T:L^2(\mtr^n)&\to&L^2(\mtr^n)\\
+g&\mapsto&f\star g
+\end{array}$$
+est continu. Calculer son adjoint.</div></div><div class=indication><a href="javascript:showAll('innerindication1723','imageindication1723');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1723"></a><div class=inner id="innerindication1723" style="display:none;">La continuité utilise des propriétés du cours du produit de convolution. Pour calculer l'adjoint, il faut transformer le produit scalaire $&lt;Tg,h&gt;$ en un certain produit scalaire $&lt;g,k&gt;$, et on identifie $k$ et $T^*h$.
+Il faudra notamment permuter deux intégrations, ce qu'on justifiera soigneusement.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1723','imagecorrige1723',1723);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1723"></a><div class=inner id="innercorrige1723" style="display:none;">D'abord, on a, par les propriétés bien connues du produit de convolution :
+$$\|Tg\|_2=\|f\star g\|_2\leq \|f\|_1\|g\|_2.$$
+Ceci prouve que $T$ est continue, et que l'on a $\|T\|\leq \|f\|_1$. Pour calculer l'adjoint, on procède comme habituellement. Soit donc $h\in L^2(\mtr^n)$. On a :
+\begin{eqnarray*}
+\langle Tg,h\rangle &=&\int_{\mtr^n}f\star g(x)\overline{h(x)}dx\\
+&=&\int_{\mtr^n}\int_{\mtr^n}f(x-y)g(y)dy\overline{h(x)}dx.
+\end{eqnarray*}
+On admet pour le moment que l'on peut permuter les intégrales à notre guise. On en déduit :
+\begin{eqnarray*}
+\dis \langle Tg,h\rangle&=&\int_{\mtr^n}\int_{\mtr^n}f(x-y)\overline{h(x)}dxg(y)dy\\
+&=&\int_{\mtr^n}\overline{\int_{\mtr^n}\overline{f(x-y)}h(x)dx}g(y)dy\\
+&=&\langle g,T^*h\rangle
+\end{eqnarray*}
+L'adjoint est donc l'opérateur $h\mapsto \int_{\mtr^n}\overline{f(x-y)}h(x)dx$. C'est encore l'opérateur de convolution par $\tilde{f}$, où $\tilde{f}(x)=\overline{f}(-x)$. Il reste à vérifier que l'on pouvait effectuer permuter les intégrations. Ceci est justifié si on prouve que $(x,y)\mapsto f(x-y)g(y)\overline{h(x)}$ est dans $L^1(\mtr^n\times\mtr^n)$. Mais on a :
+$$\int_{\mtr^n}\int_{\mtr^n}|f(x-y)g(y)\overline{h}(x)|dydx\leq\int_{\mtr^n}|f|\star|g|(x)|h(x)|dx\leq \| |f|\star |g|\|_2 \|h\|_2,$$
+où la dernière inégalité est l'inégalité de Cauchy-Schwarz. On trouve enfin
+$$\int_{\mtr^n}\int_{\mtr^n}|f(x-y)g(y)\overline{h}(x)|dydx\leq \|f\|_1\|g\|_2\|h\|_2&lt;+\infty,$$
+ce qui par le théorème de (Fubini-)Tonelli entraîne le résultat souhaité.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3355"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3355"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3355,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateur commutant avec les translations <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3355.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3355,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3355','imageenonce3355');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3355"></a><div class=inner id="innerenonce3355">Pour tout fonction $f:\mathbb R\to\mathbb C,$ et pour tout $a\in\mathbb R,$ on note $\tau_a f$ la translatée de $f$ par $a,$ définie par $\tau_a f(x)=f(x-a)$. On dit qu'un opérateur $T:L^2(\mathbb R)\to \mathcal C_0(\mathbb R)$ commute avec les translations si, pour tout $f\in L^2(\mathbb R)$ et tout $a\in \mathbb R,$ on a $T\circ \tau_a(f)=\tau_a\circ T(f).$
+<ol class="enumeratechiffre">
+<li> Soit $\varphi\in L^2(\mathbb R)$. Démontrer que l'opérateur $T_\varphi:L^2(\mathbb R)\to \mathcal C_0(\mathbb R)$, défini par 
+$T_\varphi f = f\star \varphi$ commute avec les translations.
+<li> Soit $T:L^2(\mathbb R)\to \mathcal C_0(\mathbb R)$ un opérateur qui commute avec les translations.
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe une fonction $\varphi\in L^2(\mathbb R)$ telle que 
+$$(Tf)(0)=\int_{\mathbb R}f(y)\varphi(-y)dy$$
+pour tout $f\in L^2(\mathbb R)$.
+<li> En déduire que $T=T_\varphi.$
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3355','imageindication3355');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3355"></a><div class=inner id="innerindication3355" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> <ol class="enumeratechiffre">
+<li> Utiliser le théorème de représentation de Riesz.
+<li> Utiliser l'invariance par translation.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3355','imagecorrige3355',3355);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3355"></a><div class=inner id="innercorrige3355" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons d'abord que la convolée de deux fonctions de $L^2$ est bien une fonction continue tendant vers $0$ en l'infini. Soit $a\in\mathbb R$ et $f\in L^2(\mathbb R)$. Pour tout $x\in\mathbb R,$ on a 
+\begin{align*}
+T_\varphi(\tau_a f)(x)&=\int_{\mathbb R} \tau_a f(x-y)\varphi(y)dyf\\
+&=\int_{\mathbb R}f(x-a-y) \varphi(y)dy\\
+&=\tau_a(Tf)(x).
+\end{align*}
+<li> <ol class="enumeratechiffre">
+<li> Puisque $g \in\mathcal C_0(\mathbb C)\mapsto g(0)$ est une forme linéaire continue, la composée $f\in L^2(\mathbb R)\mapsto Tf(0)$ est une forme linéaire continue (sur $L^2(\mathbb R)$). Le théorème de représentation de Riesz dit qu'il existe $\psi\in L^2(\mathbb R)$ tel que, pour tout $f\in L^2(\mathbb R),$
+$$Tf(0)=\int_{\mathbb R}f(y)\overline{\psi(y)}dy.$$
+Il suffit alors de poser $\varphi(y)=\overline{\psi(-y)}.$
+<li> Soit $f\in L^2(\mathbb R)$ et $a\in \mathbb R$. Alors
+\begin{align*}
+Tf(a)&=T\tau_{-a}f(0)\\
+&=\int_{\mathbb R}f(a+y)\varphi(-y)dy\\
+&=\int_{\mathbb R}f(a-x)\varphi(x)dx\\
+&=T_\varphi f(a).
+\end{align*}
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1724"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1724"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1724,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application à la topologie <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1724.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1724,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1724','imageenonce1724');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1724"></a><div class=inner id="innerenonce1724"><ol class="enumeratechiffre">
+<li> Donner un exemple de partie mesurable $A$ de $\mtr$ de mesure (de Lebesgue) non nulle, mais ne contenant aucun ouvert (on rappelle que l'on dit alors que $A$
+est d'intérieur vide).
+<li> Soient $A$ et $B$ deux parties mesurables de $\mtr^d$, de mesure finie mais non nulle. Montrer que la fonction $\mathbf{1}_A\star \mathbf{1}_B$ est continue. En calculant son intégrale sur $\mtr^d$, montrer qu'elle n'est pas identiquement nulle.
+En déduire que l'ensemble $A+B=\{a+b;\ a\in A,\ b\in B\}$ est d'intérieur non vide.
+<li> Reprendre la question précédente si $A$ et/ou $B$ peuvent maintenant être de mesure infinie.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1724','imageindication1724');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1724"></a><div class=inner id="innerindication1724" style="display:none;"><ol class="enumeratechiffre">
+<li> Penser aux irrationnels! 
+<li> A quels espaces $L^p$ appartiennent les fonctions $\mathbf{1}_A$ et $\mathbf{1}_B$? Dans quoi est contenu le support de $\mathbf{1}_A\star \mathbf{1}_B$?
+<li> Se ramener au cas précédent en considérant $A_1\subset A$ de mesure finie non nulle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1724','imagecorrige1724',1724);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1724"></a><div class=inner id="innercorrige1724" style="display:none;"><ol class="enumeratechiffre">
+<li> Par exemple, $\mtr\backslash \mtq$ est de mesure non-nulle (car $\mtq$, comme toute partie dénombrable, est de mesure 
+nulle pour la mesure de Lebesgue). En revanche, $\mtr\backslash\mtq$ ne peut pas contenir d'ouvert en raison de la densité de $\mtq$ dans $\mtr$.
+<li> Puisque $A$ et $B$ sont supposés de mesure finie, il est clair que les fonctions $\mathbf{1}_A$ et $\mathbf{1}_B$ sont dans tous les espaces $L^p(\mtr^d)$, $1\leq p\leq +\infty$.
+Considérant le produit de convolution de $\mathbf{1}_A\star\mathbf{1}_B$ comme le produit de convolution de deux fonctions de $L^2$, ou d'une fonction de $L^1$ par
+une fonction de $L^\infty$, on obtient que $\mathbf{1}_A\star\mathbf{1}_B$ est continue. Elle ne peut pas être égale à la fonction nulle. Une méthode pour prouver cela serait de prendre la transformée de Fourier de $\mathbf{1}_A\star \mathbf{1}_B$, et de vérifier que l'on n'obtient pas la fonction nulle. C'est plus facile qu'en utilisant
+directement le produit de convolution, puisqu'on l'a alors transformé en produit. L'énoncé de l'exercice propose une autre méthode. En permutant les intégrales
+ce qui est légitime puisque les fonctions sont positives, on obtient : 
+\begin{eqnarray*}
+\int_{\mtr^d}\mathbf{1}_A\star\mathbf{1}_B(x)dx&=&\int_{\mtr^d}\int_{\mtr^d}\mathbf 1_A(x-y)\mathbf 1_B(y)dydx\\
+&=&\int_{\mtr^d}\int_{\mtr^d}\mathbf 1_A(x-y)dx\mathbf 1_B(y)dy\\
+&=&\int_{\mtr^d}\lambda(A)\mathbf 1_B(y)dy\\
+&=&\lambda(A)\lambda(B)\neq 0.
+\end{eqnarray*}
+L'intégrale de la fonction $\mathbf{1}_A\star \mathbf{1}_B$ n'est pas nulle, cette fonction n'est pas identiquement nulle.
+En outre, son support est inclus dans $A+B$. Soit $y\in A+B$ tel que
+$\mathbf{1}_A\star \mathbf{1}_B(y)\neq 0$. Par continuité de la fonction en $y$, il existe un ouvert $U$ tel que pour tout $z\in U$, on a 
+$\mathbf{1}_A\star \mathbf{1}_B(z)\neq 0$. On en déduit que $U\subset A+B$.
+<li> Dans tous les cas, il existe $A_1\subset A$ et $B_1\subset B$ tels que $A_1$ et $B_1$ sont de mesure finie non nulle.
+D'après la question précédente, $A_1+B_1$ contient un ouvert. On en déduit qu'il en est de même de $A+B$, puisque $A_1+B_1\subset A+B$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3627"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3627"),	max:5, rating:3.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3627,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Construction de fonctions plateaux <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3627.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3627,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3627','imageenonce3627');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3627"></a><div class=inner id="innerenonce3627">Soit $K$ un compact de $\mathbb R^d$ et $\Omega$ un ouvert de $\mathbb R^d$ contenant $K.$ Le but de l'exercice est de démontrer qu'il existe $\varphi\in\mathcal C^\infty_c(\mathbb R^d)$ tel que $\varphi=1$ sur $K$ et $\varphi=0$ sur $\mathbb R^d\backslash\Omega.$
+On rappelle qu'il existe $\psi\in\mathcal C^\infty_c(\mathbb R^d)$ non identiquement nulle et positive (quitte à considérer $\psi^2$).
+Pour $\alpha&gt;0,$ on pose
+$$K_\alpha=\{x\in\mathbb R^d:\ \textrm{dist}(x,K)\leq\alpha\}.$$
+<ol class="enumeratechiffre">
+<li> Justifier qu'il existe $\veps&gt;0$ tel que $K_{2\veps}\subset\Omega.$
+<li> Démontrer l'existence d'une fonction $\rho_\veps\in\mathcal C_c^{\infty}(\mathbb R^d)$ telle que $\int_{\mathbb R^d}\rho_\veps=1$ et $\rho_\veps(x)=0$ si $x\notin \overline B(0,\veps).$
+<li> Démontrer que la fonction $\varphi=\mathbf 1_{K_\veps}\star \rho_\veps$ convient.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3627','imageindication3627');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3627"></a><div class=inner id="innerindication3627" style="display:none;"><ol class="enumeratechiffre">
+<li> Recouvrir $K$ par des boules contenues dans $\Omega.$
+<li> Utiliser la fonction $\psi$ de l'énoncé.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3627','imagecorrige3627',3627);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3627"></a><div class=inner id="innercorrige3627" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in K$. Il existe $\alpha_x&gt;0$ tel que $B(x,2 \alpha_x)\subset\Omega$ puisque $\Omega$ est ouvert. On a aussi $K\subset\bigcup_{x\in K}B(x,\alpha_x).$ Par compacité, il existe $p\in\mathbb N$ et $x_1,\dots,x_p\in K$ tels que, notant $\alpha_i=\alpha_{x_i}$, $K\subset \bigcup_{i=1}^p B(x_i,\alpha_i).$ 
+Posons $\veps=\min(\alpha_i,\ i=1,\dots,p)$ et prenons $y\in K_\veps.$ 
+Alors il existe $x\in K$ tel que $d(x,y)\leq\veps.$ De plus, il existe $i\in\{1,\dots,p\}$ tel que $d(x,x_i)&lt;\veps.$ Ainsi, $d(y,x_i)&lt;2\veps\leq 2\alpha_i$ et donc $y\in\Omega.$
+<li> Considérons la fonction $\psi$ donnée par l'énoncé. Soit $M&gt;0$ tel que $\psi(x)=0$ si $\|x\|\geq M.$ Considérons alors $\phi_\veps(x)=\psi(M x/\veps).$ On a cette fois $\phi_\veps(x)=0$ dès que $\|x\|\geq\veps.$ Finalement, on conclut en posant $\rho_\veps=\phi_\veps/\|\phi_\veps\|_1.$
+<li> D'abord, la fonction $\varphi$ est bien dans $\mathcal C^\infty(\mathbb R^d)$, comme convolution d'une fonction de $L^1$ et d'une fonction de $\mathcal C^\infty_c.$ Elle est à support compact comme convolée de deux fonctions à support compact. On observe ensuite que pour $x\in\mathbb R^d,$
+$$\varphi(x)=\int_{K_\veps}\rho_{\veps}(x-y)dy.$$
+Si $x\notin K_{2\veps}$ et $y\in K_\veps,$ alors par l'inégalité triangulaire $\|x-y\|\geq\veps$ et $\varphi(x)=0.$ Si $x\in K$ et $y\notin K_\veps,$ on a $\|x-y\|\geq\veps$ et donc $\rho_\veps(x-y)=0.$ Ainsi, 
+$$\varphi(x)=\int_{\mathbb R^d}\rho_\veps(x-y)dy=1.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1725"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1725"),	max:5, rating:4.5454545454545, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1725,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions radiales <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1725.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1725,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1725','imageenonce1725');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1725"></a><div class=inner id="innerenonce1725"><ol class="enumeratechiffre">
+<li> Montrer que si $f$ et $g$ sont deux fonction de $L^1(\mtr)$ paires, alors $f\star g$ est encore paire.
+<li> Généralisation : on dit qu'une fonction $f:\mtr^n\to\mtc$ est radiale si la valeur de $f(x)$ ne dépend que de la distance de $x$ à l'origine (la norme choisie ici est la norme euclidienne classique). Montrer que le produit de convolution de deux fonctions 
+radiales de $L^1(\mtr^n)$ est encore une fonction radiale.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1725','imageindication1725');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1725"></a><div class=inner id="innerindication1725" style="display:none;">Pour la première question, il suffit de calculer $f\star g(x)-f\star g(-x)$, et de faire quelques changements de variables dans les intégrales. Pour la seconde question, on fixe $x\in\mtr^n$, et on veut montrer que,
+pour tout $x_1\in\mtr^n$ avec $\|x_1\|=\|x\|$, on a $f\star g(x)=f\star g(x_1)$. Mais puisque $x$ et $x_1$ ont même norme,
+il existe un automorphisme orthogonal $A$ tel que $x_1=Ax$. Copier ensuite les calculs faits dans le cas de $\mtr$, mais en utilisant le changement de variables donné par $A$ (il est de jacobien 1).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1725','imagecorrige1725',1725);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1725"></a><div class=inner id="innercorrige1725" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in\mtr$. On a :
+\begin{eqnarray*}
+f\star g(-x)&=&\int_{\mtr}f(-x-y)g(y)dy\\
+&=&\int_{\mtr}f(-x+u)g(-u)du\textrm{ ($u=-y$)}\\
+&=&\int_{\mtr}f(-x+u)g(u)du\\
+&=&\int_{\mtr}f(x-u)g(u)du\\
+&=&f\star g(x).
+\end{eqnarray*}
+<li> On fixe $x\in\mtr^n$, et $x_1$ avec $\|x_1\|=\|x\|$. Il existe un endomorphisme orthogonal $A$ tel que $x_1=Ax$. Remarquons que, puisque cet endomorphisme est orthogonal,
+la valeur absolue de son jacobien est 1 (la différentielle d'une application linéaire est l'application linéaire elle-même). Il vient :
+\begin{eqnarray*}
+f\star g(x_1)&=&\int_{\mtr^n}f(Ax-y)g(y)dy\\
+&=&\int_{\mtr^n}f(Ax-Au)g(Au)du
+\end{eqnarray*}
+où la dernière égalité vient du changement de variables $y=Au$. Maintenant, on a $\|Au\|=\|u\|$, et puisque $f$ et $g$ sont radiales, on a 
+\begin{eqnarray*}
+f\star g(x_1)&=&\int_{\mtr^n}f(x-u)g(u)du\\
+&=&f\star g(x).
+\end{eqnarray*}
+La fonction $f\star g$ est donc radiale elle-aussi.
+</ol></div></div></div>
+
+<div class=titrepartie>Suites régularisantes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater3628"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3628"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3628,rating); this.setRating(rating);   this.disable();    done();     }});</script> - $(L^1(\mathbb R),\star)$ n'admet pas d'élément neutre <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3628.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(3628,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3628','imageenonce3628');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3628"></a><div class=inner id="innerenonce3628">Le but de l'exercice est de démontrer que $(L^1(\mathbb R),\star,+)$ ne possède pas d'élément neutre pour la convolution, c'est-à-dire qu'il n'existe pas de fonction $f\in L^1(\mathbb R)$ telle que, pour tout $g\in L^1(\mathbb R)$, on a $f\star g=g$. On raisonne par l'absurde et on suppose qu'une telle fonction $f$ existe.
+<ol class="enumeratechiffre">
+<li> Soit $(g_n)$ une approximation de l'unité. Démontrer qu'il existe une sous-suite de $(g_n)$ qui converge presque partout vers $f$ sur $\mathbb R.$
+<li> Obtenir une contradiction.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3628','imageindication3628');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3628"></a><div class=inner id="innerindication3628" style="display:none;"><ol class="enumeratechiffre">
+<li> La convergence dans $L^1$ entraîne la convergence presque partout pour une sous-suite.
+<li> Prendre une suite $(g_n)$ tel pour tout $n\in\mathbb N^*,$ le support de $g_n$ est inclus dans $]-1/n,1/n[$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3628','imagecorrige3628',3628);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3628"></a><div class=inner id="innercorrige3628" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que la suite $(g_n\star f)$ converge dans $L^1$ vers $f$. Puisque $f$ est un élément neutre, on a $g_n\star f=g_n$ pour tout $n\in\mathbb N$ et donc $(g_n)$ converge vers $f$ dans $L^1.$ Par le théorème de Riesz, il existe une sous-suite $(g_{n_k})$ qui converge vers $f$ presque partout sur $\mathbb R.$
+<li> D'autre part, il est possible de choisir une suite $(g_n)$ tel que le support de chaque $g_n$ est contenu dans $[-1/n,1/n]$ pour tout $n\geq 1.$ La suite $(g_{n_k})$ converge alors presque partout vers $0.$ Par unicité de la limite, $f=0$ presque partout et donc $f$ est la fonction nulle dans $L^1$. Ceci contredit que $f$ est une unité car $0\star g=0$ pour tout $g\in L^1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1732"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1732"),	max:5, rating:2.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1732,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme de l'opérateur de convolution <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1732.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1732,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1732','imageenonce1732');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1732"></a><div class=inner id="innerenonce1732"><ol class="enumeratechiffre">
+<li> Soit $p\in[1,+\infty]$, et $h\in L^p(\mtr^d)$. On sait que $T_h:f\mapsto f\star h$ est une application linéaire continue de $L^1$ dans $L^p$, et que
+$$\|T_h\|_{\mcl(L^1,L^p)}\leq \|h\|_p.$$
+En testant $T_h$ sur une approximation de l'unité, démontrer que 
+$$\|T_h\|_{\mcl(L^1,L^p)}= \|h\|_p.$$
+<li> Soit $p\in[1,+\infty[$ et $h\in L^1(\mtr^d)$ une fonction positive. On sait que $T_h:f\mapsto f\star h$ est une application linéaire continue sur $L^p$, et que 
+$$\|T_h\|_{\mcl(L^p)}\leq \|h\|_1.$$
+Pour $n\in\mathbb N$ et $x\in\mathbb R^d$, on note $h_n(x)=\frac{1}{\|h\|_1}n^d h(nx)$.
+<ol class="enumeratechiffre">
+<li> Justifier que $(h_n)$ est une approximation de l'unité.
+<li> Pour $n\in\mathbb N$, $f\in L^p(\mathbb R^d)$ et $x\in \mathbb R^d,$
+on note $f_n(x)=f(x/n)$ et $g_n(x)=f_n\star h(nx).$ Vérifier que pour presque tout $x\in\mathbb R^d,$ 
+$$f\star h_n(x)=\frac1{\|h\|_1}f_n\star h(nx).$$
+<li> Démontrer que
+$$\|g_n\|_p\leq \|T_h\|_{\mathcal L(L^p)}\|f\|_p.$$  
+<li> En déduire que 
+$$\|T_h\|_{\mcl(L^p)}=\|h\|_1.$$
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1732','imageindication1732');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1732"></a><div class=inner id="innerindication1732" style="display:none;"><ol class="enumeratechiffre">
+<li> Ecrire l'inégalité  $\|\alpha_k\star h\|_P\leq \|T_h\|\times\dots$, puis passer à la limite dans cette inégalité.
+<li> <ol class="enumeratechiffre">
+<li> Utiliser la définition.
+<li> Faire des changements de variables.
+<li> Faire des changements de variables.
+<li> Utiliser un théorème sur les approximations de l'unité.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1732','imagecorrige1732',1732);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1732"></a><div class=inner id="innercorrige1732" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(\alpha_k)$ une telle unité approchée. Chaque $\alpha_k$ étant positif et d'intégrale 1, on a $\|\alpha_k\|_1=1$. On en déduit :
+$$\|\alpha_k\star h\|_p\leq \|T_h\|.$$
+Maintenant, puisque $(\alpha_k)$ est une unité approchée, $\alpha_k\star h$ converge vers $h$ dans $L^p$. Passant à la limite dans l'inégalité précédente, on obtient :
+$$\|h\|_p\leq \|T_h\|.$$
+<li> <ol class="enumeratechiffre">
+<li> La suite $(h_n)$ est une suite de fonctions positives. Par un changement de variables, on vérifie facilement que $\int_{\mathbb R^d}h_n=1.$ Si $B=B(0,\delta)$ est un voisinage de 0, on a :
+$$\int_{\|x\|\geq\delta}h(nx)dx=\frac{1}{\|h\|_1}\int_{\|x\|\geq n\delta}h(x)dx=\frac{1}{\|h\|_1}\int_{\mtr^d}\mathbf{1}_{A_n}(x)h(x)dx,$$
+où $A_n=\{x\in\mtr^d;\|x\|\geq n\}$. 
+Or, pour tout $x\neq 0,$ $\mathbf 1_{A_n}(x)h(x)\to 0$ et de plus, 
+$$|\mathbf 1_{A_n}(x)h(x)|\leq h(x)$$
+qui est une fonction intégrable. En appliquant le théorème de convergence dominée, on obtient que $\frac{1}{\|h\|_1}\int_{\mtr^d}\mathbf{1}_{A_n}(x)h(x)dx$ tend vers 0. 
+<li> On a 
+\begin{align*}
+f_n\star h(nx)&=\int_{\mathbb R^d}f_n(nx-y)h(y)dy\\
+&=\int_{\mathbb R^d}f(x-y/n)h(y)dy\\
+&=\int_{\mtr^d}f(x-y)n^dh(ny)dy\\
+&=\|h\|_1 f\star h_n(x).
+\end{align*}
+<li> On a 
+\begin{align*}
+\|g_n\|_p^p&=\int_{\mathbb R^d}|f_n\star h(nx)|^pdx\\
+&=\frac{1}{n^d} \int_{\mathbb R^d}|f_n\star h(x)|^pdx\\
+&=\frac1{n^d} \|f_n\star h\|_p^p\\
+&\leq \frac1{n^d} \|T_h\|_{\mathcal L(L^p)}^p \|f_n\|_p^p.
+\end{align*}
+Or,
+\begin{align*}
+\|f_n\|^p_p&=\int_{\mathbb R^d}|f(x/n)|^p dx\\
+&=n^d\int_{\mathbb R^d}|f(y)|^p dy\\
+&=n^d\|f\|_p^p
+\end{align*}
+On obtient donc 
+$$\|g_n\|_p \leq \|T_h\|_{\mathcal L(L^p)}\|f\|.$$
+<li> 
+On sait que 
+$$\|f\star h_n\|_p=\frac{1}{\|h\|_1}\|g_n\|_p$$
+d'après le résultat de la question 2.2. On obtient finalement 
+$$\|f\star h_n\|_p\leq \frac{\|T_h\|}{\|h\|_1}\|f\|_p.$$
+Maintenant, puisque $(h_n)$ est une approximation de l'unité, en choisissant $f\neq 0,$ $f\star h_n\to f$ dans $L^p$, et on en déduit :
+$$\|T_h\|\geq \|h\|_1,$$
+ce qui est bien l'inégalité demandée.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1733"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1733"),	max:5, rating:2.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1733,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence du taux d'accroissement <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1733.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1733,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1733','imageenonce1733');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1733"></a><div class=inner id="innerenonce1733">Soit $f\in L^1(\mtr)$. 
+<ol class="enumeratechiffre">
+<li> Pour $h\in\mtr$, exprimer la fonction $x\mapsto \int_x^{x+h}f(t)dt$ comme le produit de convolution de $f$ par une fonction $\alpha_h$.
+<li> On pose $F(x)=\int_0^xf(t)dt$, et on pose $G_h(x)=\frac{F(x+h)-F(x)}{h}$. Justifier que $G_h$ converge vers $f$ dans $L^1(\mtr)$ quand $h$ tend vers 0.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1733','imageindication1733');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1733"></a><div class=inner id="innerindication1733" style="display:none;"><ol class="enumeratechiffre">
+<li> Chercher $\alpha_h$ sous la forme d'une fonction caractéristique. 
+<li> La suite $(\alpha_h/h)$ ne serait-elle pas une unité approchée?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1733','imagecorrige1733',1733);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1733"></a><div class=inner id="innercorrige1733" style="display:none;"><ol class="enumeratechiffre">
+<li> Avec une telle forme, on est tenté de chercher $\alpha_h$ sous la forme d'une fonction caractéristique $1_{[u,v]}$. On a en effet :
+$$\int_x^{x+h}f(t)dt=\int_{\mtr}f(t)1_{[x,x+h]}(t)dt.$$
+Maintenant, on a aussi :
+$$t\in[x,x+h]\iff t-x\in[0,h]\iff x-t\in[-h,0].$$
+D'où l'on déduit
+$$\int_x^{x+h}f(t)dt=f\star\alpha_h(x),$$
+avec $\alpha_h(t)=1_{[-h,0]}.$
+<li> Un calcul immédiat donne $\frac{F(x+h)-F(x)}{h}=f\star\frac{\alpha_h}{h}(x)$. On est donc ramené à prouver que $f\star (\alpha_h/h)$ tend vers $f$ dans $L^1$. Pour cela, il suffit de prouver que
+la suite $(\alpha_h/h)_{h&gt;0}$, est une suite régularisante pour $h\to 0$. C'est presque immédiat, car c'est une fonction positive, son intégrale vaut 1, et son support est compris dans $[-h,0]$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1734"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1734"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1734,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Weierstrass <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1734.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1734,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1734','imageenonce1734');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1734"></a><div class=inner id="innerenonce1734">Pour tout $n\geq 1$, on pose 
+$$a_n=\int_{-1}^1(1-t^2)^ndt\textrm{ et }p_n:\mtr\to\mtc,\ t\mapsto\left\{
+\begin{array}{ll}
+(1-t^2)^n/a_n&\textrm{si }|t|\leq 1\\
+0&\textrm{sinon.}
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $(p_n)$ est une unité approchée.
+<li> Soit $f$ une fonction continue sur $\mtr$, nulle en dehors de $I=[-1/2,1/2]$. Montrer que, pour tout $n\geq 1,$ $f\star p_n$ est une fonction polynomiale sur $I$. En déduire que $f$ est limite uniforme sur $I$ d'une suite de fonctions polynomiales.
+<li> Démontrer le théorème de Weierstrass : si $J$ est un segment de $\mtr$, et si $f:J\to\mtc$ est une fonction continue, alors $f$ 
+est limite uniforme sur $J$ d'une suite de fonctions polynomiales.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1734','imageindication1734');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1734"></a><div class=inner id="innerindication1734" style="display:none;"><ol class="enumeratechiffre">
+<li> Il faut faire les calculs.
+<li> Prendre le produit de convolution dans le bon sens ($p_n\star f$), puis développer $p_n$.
+<li> Prolonger $f$ en une fonction continue sur $\mtr$, nulle en dehors d'un segment contenant $J$, puis se ramener à l'intervalle $I$ par un changement de variables affines.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1734','imagecorrige1734',1734);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1734"></a><div class=inner id="innercorrige1734" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que $p_n$ est positive, et que 
+$$\int_{-\infty}^{\infty}p_n(t)dt=\int_{-1}^1p_n(t)dt=1$$
+par définition de $p_n$ et $a_n$. Par ailleurs,
+$$a_n=2\int_0^1(1-t^2)^ndt\geq 2\int_0^1 t(1-t^2)^ndt=\left[\frac{-(1-t^2)^{n+1}}{n+1}\right]_0^1=\frac{1}{n+1}.$$
+Ainsi, en dehors de l'intervalle $[-\alpha,\alpha]$, on a :
+$$\int_{|t|\geq\alpha}p_n(t)dt=\frac{2}{a_n}\int_\alpha^1(1-t^2)^ndt=\frac{2}{a_n}(1-\alpha^2)^n\leq 2(n+1)(1-\alpha^2)^n,$$
+et comme $|1-\alpha^2|&lt;1$, ceci suffit pour conclure que $\int_{|t|\geq\alpha}p_n(t)dt$ tend vers 0 lorsque $n$ tend vers $+\infty.$ 
+<li> Pour montrer que $f\star p_n$ est une fonction polynomiale sur $I$, on peut remarquer que, pour tout $x$ de $I$ :
+$$f\star p_n(x)=p_n\star f(x)=\int_{-1/2}^{1/2}p_n(x-t)f(t)dt.$$
+De plus, pour $x$ et $t$ dans $I$, on a $|x-t|\leq 1$, ce qui prouve que $p_n(x-t)=(1-(x-t)^2)^n/a_n$. Or en développant $(1-(x-t)^2)^n,$ on obtient une expression de la forme 
+$$\frac{(1-(x-t)^2)^n}{a_n}=\sum_{k=0}^{2n} Q_k(t)x^k$$
+où $Q_k\in\mathbb R[X]$. On en déduit que, pour tout $x\in I,$
+$$f\star p_n(x)=\sum_{k=0}^{2n}\frac{1}{a_n}\left(\int_{-1/2}^{1/2} Q_k(t)dt\right) x^k.$$
+Ainsi, $f\star p_n$ est bien une fonction polynomiale. <br>
+On aurait aussi pu, en utilisant le théorème de dérivation sous le signe intégral, remarquer que $f\star p_n$ est $\mathcal C^\infty$ sur $I$ avec 
+$$(f\star p_n)^{(k)}=f\star p_n^{(k)}.$$
+En particulier, $(f\star p_n)^{(2n-1)}=0$ sur $I$ donc $f\star p_n$ est bien une fonction polynomiale de degré au plus $2n$ sur $I.$<br>
+De plus, $f$ est une fonction uniformément continue et bornée. Comme $(p_n)$ est une unité approchée, $(f\star p_n)_n$ converge uniformément vers $f$ sur $\mathbb R.$ En se restreignant à $I,$ on a prouvé que $f$ est limite uniforme d'une suite de fonctions polynomiales sur $I.$
+<li> On va ramener le cas général au cas précédent. Soit $[a,b]$ un intervalle de $\mtr$ et $f:[a,b]\to\mtc$ une fonction continue sur $[a,b]$. On considère $[c,d]$ un segment avec $c&lt;a$ et $b&lt;d$ et on prolonge $f$ en une fonction continue, toujours notée $f$, telle que $f$ est nulle en dehors de $[c,d]$ (on peut par exemple 
+prolonger $f$ par une fonction affine sur $[c,a]$ et sur $[b,d]$). Pour se ramener à l'intervalle $[-1/2,1/2]$, on fait ensuite un changement de variables affines, en posant :
+$$g(t)=f\left((d-c)t+\frac{c+d}{2}\right).$$
+$g$ est une fonction continue sur $\mtr$, nulle en dehors de $[-1/2,1/2]$. Elle est limite uniforme de polynômes. Il en est de même de $f$ (l'image d'un polynôme par un
+changement de variables affines est encore un polynôme).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater1735"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1735"),	max:5, rating:3.6363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1735,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Féjer <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1735.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(1735,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1735','imageenonce1735');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1735"></a><div class=inner id="innerenonce1735">Si $f$ et $g$ sont deux fonctions continues et $2\pi$-périodiques, on définit leur produit de convolution par 
+$$f\star g(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-t)g(t)dt.$$
+Dans toute la suite, $f$ désigne une telle fonction continue $2\pi-$périodique. Pour $k\in\mtz$, on note $e_k(x)=e^{ikx}$. On note 
+$$S_n=e_{-n}+e_{-(n-1)}+\dots+e_0+\dots+e_{n-1}+e_n,\textrm{ }C_n=\frac{S_0+S_1+\dots+S_n}{n+1}.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $f\star S_n$ est un polynôme trigonométrique. Quel nom donne-t-on usuellement à $f\star S_n$?
+<li> Montrer que si $x\notin \mtr\backslash 2\pi\mtz$, on a :
+$$C_n(x)=\frac{1}{n+1}\left(\frac{\sin((n+1)x/2)}{\sin(x/2)}\right)^2.$$
+<li> Montrer que $C_n\geq 0$, que $\frac{1}{2\pi}\int_{-\pi}^\pi C_n(t)dt=1$, et que pour tout $\alpha\in]0,\pi]$, $C_n$ converge uniformément vers 0 sur 
+$[-\pi,\pi]\backslash [-\alpha,\alpha]$. 
+<li> Montrer que $f\star C_n$ converge uniformément vers $f$ sur $\mtr$.
+</ol>
+Ainsi, cet exercice prouve le théorème de Féjer : toute fonction continue $2\pi-$périodique est limite uniforme sur $\mtr$ de polynômes trigonométriques. En outre, il donne 
+une suite qui réalise l'approximation uniforme - la suite des moyennes de Césaro de la série de Fourier de $f$.</div></div><div class=indication><a href="javascript:showAll('innerindication1735','imageindication1735');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1735"></a><div class=inner id="innerindication1735" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire le calcul en observant que $f\star e_k=e_k\star f$.
+<li> Calculer d'abord $S_n$ en reconnaissant une somme géométrique. En déduire $C_n$ en utilisant que $\sin(ax)=\Im m(e^{iax})$.
+<li> Pour l'intégrale, utiliser la linéarité et l'expression à partir des $e_k$. Pour la convergence uniforme, utiliser le résultat précédent.
+<li> Exprimer $f(x)$ à l'aide d'une intégrale faisant intervenir $C_n$, et calculer $f\star C_n-f$. Couper l'intégrale en 2, traiter l'une par la convergence
+uniforme de $C_n$, l'autre par continuité uniforme de $f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1735','imagecorrige1735',1735);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1735"></a><div class=inner id="innercorrige1735" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que le changement de variables $y=x-t$ et la $2\pi-$périodicité des fonctions assure que $f\star e_k=e_k\star f$. Ainsi, on en déduit
+$$f\star e_k(x)=\frac{1}{2\pi}\int_{-\pi}^\pi e^{ik(x-t)}f(t)dt=\left(\frac{1}{2\pi}e^{-ikt}f(t)dt\right)e_k(x).$$
+Par linéarité, $f\star S_n$ est un polynôme trigonométrique, et on reconnait même que c'est la $n-$ième somme partielle de la série de Fourier de $f$.
+<li> C'est un calcul excessivement classique! En remarquant que $S_n$ est une somme géométrique, on en déduit, pour $x\notin\mtr\backslash 2\pi\mtz$ :
+$$S_n(x)=e^{-inx}\frac{e^{(2n+1)ix}-1}{e^{ix}-1}=\frac{\sin( (n+1)x/2)}{\sin(x/2)}.$$
+On recommence, en utilisant l'astuce classique d'écrire $\sin( (n+1)x/2)=\Im(e^{i(n+1)x/2})$. On trouve :
+$$\sum_{k=0}^ne^{(k+1/2)ix}={e^{i(n+1)x/2}}\frac{\sin((n+1)x/2)}{\sin(x/2)}.$$
+Retournant à $C_n$ en prenant la partie imaginaire, on trouve le résultat demandé.
+<li> La positivité de $C_n$ résulte immédiatement de l'expression précédente qui fait intervenir un carré. Pour l'intégrale, il suffit d'abord de remarquer que :
+$$\frac{1}{2\pi}\int_{-\pi}^\pi S_n(t)=1$$
+(calcul immédiat), ce qui donne le même résultat pour $C_n$ par linéarité. Ensuite, si $x\in[-\pi,\pi]\backslash [-\alpha,\alpha]$, on a $|\sin(x/2)|\geq |\sin(\alpha/2)|$, ce qui entraîne 
+$$|C_n(x)|\leq \frac{1}{(n+1)\sin^2(\alpha/2)},$$
+quantité qui tend vers 0 indépendamment de $x$.
+<li> Remarquons d'abord que si $x\in\mtr$, on a :
+$$f\star C_n(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-u)C_n(u)du.$$
+Prouvons la convergence uniforme. On fixe $\veps&gt;0$. On a :
+$$|f\star C_n(x)-f(x)|=\left|\frac{1}{2\pi}\int_{-\pi}^{\pi}(f(x-u)-f(x))C_n(u)du\right|.$$
+On fixe un $\alpha\in]0,2\pi]$ (une valeur précise sera explicitée plus tard), et on découpe l'intégrale. On obtient :
+$$|f\star C_n(x)-f(x)|\leq\frac{1}{2\pi}\int_{|\alpha|\leq t\leq \pi}|f(x-u)-f(x)|C_n(u)du+\frac{1}{2\pi}\int_{|t|\leq\alpha}|f(x-u)-f(x)|C_n(u)du.$$
+On gère les deux parties de l'intégrale très différemment. D'une part, $f$ est une fonction continue et périodique. Elle est donc bornée par une constante $M$ sur $\mtr$ (la borne $M$ étant celle qui apparait 
+sur l'intervalle $[0,2\pi]$). On a donc :
+$$\frac{1}{2\pi}\int_{|\alpha|\leq t\leq \pi}|f(x-u)-f(x)|C_n(u)du\leq \frac{2M}{2\pi}\int_{\alpha\leq |t|\leq\pi}C_n(u)du.$$
+Maintenant, puisque la fonction $C_n$ converge uniformément vers $0$ sur $[-\pi,-\alpha]\cup[\alpha,\pi]$, l'intégrale qui apparait dans cette dernière expression tend vers 0. Il existe donc $N\in\mtn$ tel que, pour $n\geq N$, on a
+$$\frac{1}{2\pi}\int_{|\alpha|\leq t\leq \pi}|f(x-u)-f(x)|C_n(u)du\leq\veps.$$
+Pour l'autre expression, on remarque que si $\alpha$ est petit, $x-u$ et $x$ seront proches, et on peut espérer que $|f(x-u)-f(x)|$ sera petit. Il nous faut ici un argument d'uniforme continuité. C'est possible, car toute fonction
+continue et périodique est en fait uniformément continue (c'est un très bon exercice utilisant le théorème de Heine et des découpages avec des $\veps$). Pour $\veps&gt;0$ fixé, il existe donc $\alpha&gt;0$ (c'est maintenant qu'on le fixe) tel que
+$$|z-y|\leq\alpha\implies |f(z)-f(y)|\leq\veps.$$
+On obtient 
+$$\frac{1}{2\pi}\int_{|\alpha|\leq t\leq \pi}|f(x-u)-f(x)|C_n(u)du\leq \veps\frac{1}{2\pi}\int_{-\pi}^{\pi}C_n(u)du\leq\veps.$$
+Finalement, pour $n\geq N$, on a bien 
+$$|f\star C_n(x)-f(x)|\leq 2\veps,$$
+ce qui prouve la convergence uniforme (sur $\mtr$).
+</ol></div></div></div>
+
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Produit de convolution de mesures</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1736"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1736"),	max:5, rating:3.4166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1736,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Masses de Dirac <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1736.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1736,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1736','imageenonce1736');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1736"></a><div class=inner id="innerenonce1736">Pour $a\in\mtr$, on note $\delta_a$ la masse de Dirac en $a$, c'est-à-dire la mesure telle que 
+$$\delta_a(A)=1\iff a\in A,\ \delta_a(A)=0\textrm{ sinon}.$$
+<ol class="enumeratechiffre">
+<li> Si $\mu$ est une mesure de Borel positive sur $\mtr$, exprimer $\mu\star\delta_a$ comme une certaine mesure image de $\mu$. Etudier le cas particulier de $\mu=\delta_b$, et $\mu$ la mesure de Lebesgue.
+<li> Pour $m\geq 1$ un entier, et $p\in[0,1]$, on considère la mesure 
+$$B(m,p)=\sum_{k=0}^m \binom mk p^k(1-p)^{m-k}\delta_k.$$
+Montrer que $B(m,p)=B(1,p)\star B(1,p)\star\dots\star B(1,p)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1736','imagecorrige1736',1736);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1736"></a><div class=inner id="innercorrige1736" style="display:none;"><ol class="enumeratechiffre">
+<li> On a, si $B$ est un borélien :
+$$\mu\star\delta_a(B)=\int_{\mtr}\mu(B-x)\delta_a(x)=\mu(B-a).$$
+$\mu\star\delta$ est donc la mesure image de $\mu$ par la translation $\tau_a:x\mapsto x+a$. Si $\mu=\delta_b$, on en déduit
+$$\delta_b\star\delta_a(B)=\delta_b(B-a)=1\iff b\in B-a\iff a+b\in B,$$
+et sinon $\delta_b\star \delta_a(B)=0$. 
+On a donc $\delta_b\star\delta_a=\delta_{a+b}.$ D'autre part, puisque la mesure de Lebesgue $\lambda$ est invariante par translation, on a $\lambda\star\delta_a=\lambda$.
+<li> On démontre ce résultat par récurrence sur $m$, puisqu'il est vrai au rang 1. On suppose maintenant qu'il est vrai au rang $m$, et on le prouve au rang $m+1$. En vertu de la formule énoncée précédemment, on a 
+\begin{eqnarray*}
+\left(\sum_{k=0}^m \binom mk p^k(1-p)^{m-k}\delta_k\right)\star(p\delta_1+(1-p)\delta_0)&=&\sum_{k=0}^m \binom mk p^{k+1}(1-p)^{m-k}\delta_{k+1}\\
+&&\textrm{ }+\sum_{k=0}^m \binom mk p^k(1-p)^{m+1-k}\delta_k.
+\end{eqnarray*}
+On déduit le résultat demandé par un changement d'indices, et la formule du triangle de Pascal.
+</ol></div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

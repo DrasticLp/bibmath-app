@@ -1,0 +1,515 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math sup : intégration sur un segment</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathsup/index">Math Sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math sup : intégration sur un segment</h1>
+<div class=titrepartie>Fonctions uniformément continues</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater193"></span><script>var myRating = raterJs( { element:document.querySelector("#rater193"),	max:5, rating:0.52, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(193,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Manipuler la définition <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=193.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(193,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce193','imageenonce193');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce193"></a><div class=inner id="innerenonce193">Soit $f:\mathbb R\to\mathbb R$. &Eacute;crire, avec des quantificateurs, que $f$ n'est pas uniformément continue.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige193','imagecorrige193',193);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige193"></a><div class=inner id="innercorrige193" style="display:none;">Il suffit de nier la définition :
+$$\exists \veps&gt;0,\ \forall \eta&gt;0,\ \exists (x,y)\in I^2, |x-y|\leq \eta\wedge |f(x)-f(y)|&gt;\veps,$$
+le symbole $\wedge$ signifiant "et".</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater194"></span><script>var myRating = raterJs( { element:document.querySelector("#rater194"),	max:5, rating:1.9583333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(194,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sont-elles uniformément continues? <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=194.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(194,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce194','imageenonce194');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce194"></a><div class=inner id="innerenonce194">Soit $f$ une fonction uniformément continue sur une partie $D$ de $\mathbb R$. Soient $(x_n)$ et $(y_n)$
+deux suites d'éléments de $D$ telles que $\lim_{n\to+\infty}(x_n-y_n)=0$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\lim_{n\to+\infty}(f(x_n)-f(y_n))=0$.
+<li> Dire si les fonctions suivantes sont uniformément continues sur l'intervalle considéré.
+<ol class="enumeratechiffre">
+<li> $f(x)=1/x$ sur $[1,+\infty[$.
+<li> $f(x)=1/x$ sur $]0,1]$.
+<li> $f(x)=\sin(x^2)$ sur $\mathbb R$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication194','imageindication194');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication194"></a><div class=inner id="innerindication194" style="display:none;">Pour les exemples 2 et 3, on pourra utiliser la définition.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige194','imagecorrige194',194);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige194"></a><div class=inner id="innercorrige194" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $\varepsilon&gt;0$. Puisque $f$ est uniformément continue, il existe $\eta&gt;0$ tel que
+$$|x-y|&lt;\eta\implies |f(x)-f(y)|&lt;\varepsilon.$$
+Puisque $(x_n-y_n)$ tend vers 0, il existe un entier $N$ tel que, pour $n\geq N$, on a 
+$$|x_n-y_n|&lt;\eta.$$
+Ainsi, pour $n\geq N$, on a 
+$$|f(x_n)-f(y_n)|&lt;\varepsilon,$$
+ce qui est le résultat voulu.
+<li>
+<ol class="enumeratechiffre">
+<li> On écrit, pour $x,y\geq 1$,
+$$|f(x)-f(y)|=\frac{|x-y|}{|xy|}\leq |x-y|.$$
+Ceci prouve que $f$ est uniformément continue sur $[1,+\infty]$. Elle y est même lipschitzienne.
+<li> Le raisonnement précédent ne fonctionne pas sur $]0,1]$ car si $x$ et $y$ sont petits,
+alors $xy$ est très petit, et peut être beaucoup plus petit que $x-y$. Par exemple, prenons
+$x_n=1/2n$ et $y_n=1/n$. Alors
+$$f(x_n)-f(y_n)=n\to+\infty.$$
+Ainsi, quelque soit $\eta&gt;0$, il est possible de trouver $n$ assez grand tel que $|x_n-y_n|=1/2n&lt;\eta$, et
+pourtant $|f(x_n)-f(y_n)|&gt;\veps$. La fonction $f$ n'est pas uniformément continue sur $]0,1]$.
+<li> On fait un raisonnement similaire, sachant que $\sin(n\pi)=0$ et $\sin(n\pi+\pi/2)=\pm 1$. 
+Posons donc $x_n=\sqrt{n\pi}$ et $y_n=\sqrt{n\pi+\pi/2}$. Alors $|f(x_n)-f(y_n)|=1$, tandis que
+$$x_n-y_n=\frac{n\pi-n\pi-\pi/2}{\sqrt{n\pi}+\sqrt{n\pi+\pi/2}}\to 0.$$
+Par le même raisonnement qu'à la question précédente, $f$ n'est pas uniformément continue sur $\mathbb R$.
+</ol>
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater195"></span><script>var myRating = raterJs( { element:document.querySelector("#rater195"),	max:5, rating:2.9411764705882, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(195,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions continues périodiques <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=195.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(195,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce195','imageenonce195');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce195"></a><div class=inner id="innerenonce195">Soit $f$ une fonction continue sur $\mtr$ admettant une période $T$. Prouver que $f$ est uniformément continue.</div></div><div class=indication><a href="javascript:showAll('innerindication195','imageindication195');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication195"></a><div class=inner id="innerindication195" style="display:none;">Appliquer le théorème de Heine en prenant un peu de marge sur l'intervalle.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige195','imagecorrige195',195);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige195"></a><div class=inner id="innercorrige195" style="display:none;">Fixons $\veps&gt;0$. Par le théorème de Heine, $f$ est uniformément continue sur le segment $[-T,2T]$ :
+$$\exists\eta&gt;0,\ x,y\in[-T,2T]\textrm{ et }|x-y|\leq\eta\implies |f(x)-f(y)|\leq\varepsilon$$
+(on peut supposer $\eta&lt;T$). Prenons alors $x$ et $y$ dans $\mtr$, avec $|x-y|\leq\eta$. Il existe $k\in \mtz$ tel que $x'=x+kT\in[0,T]$. Mais alors, on a $y'=y+kT\in[x'-\eta,x'+\eta]\subset[-T,2T]$. Remarquons enfin que $|x'-y'|\leq\eta$. On en déduit :
+$$|f(x)-f(y)|=|f(x')-f(y')|\leq \veps.$$
+La fonction est uniformément continue sur $\mtr$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater196"></span><script>var myRating = raterJs( { element:document.querySelector("#rater196"),	max:5, rating:2.5833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(196,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une limite à l'infini <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=196.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(196,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce196','imageenonce196');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce196"></a><div class=inner id="innerenonce196">Soit $f:\mathbb R_+\to\mathbb R$ une fonction continue admettant une limite (finie) en $+\infty$. Montrer que $f$ est uniformément continue.</div></div><div class=indication><a href="javascript:showAll('innerindication196','imageindication196');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication196"></a><div class=inner id="innerindication196" style="display:none;">Fixer $\veps&gt;0$, appliquer la définition de la limite pour cet $\veps&gt;0$ et couper en deux : $[0,A+1]$ et $[A,+\infty[$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige196','imagecorrige196',196);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige196"></a><div class=inner id="innercorrige196" style="display:none;">Soit $\veps&gt;0$ et $a=\lim_{+\infty}f$. Alors on sait qu'il existe $A&gt;0$ tel que, pour tout $x\geq A$, on a
+$$|f(x)-a|&lt;\veps/2.$$
+D'autre part, d'après le théorème de Heine, $f$ est uniformément continue sur le segment $[0,A+1]$ : il existe $\eta&gt;0$ tels que, pour tous
+$x,y\in[0,A+1]$ avec $|x-y|&lt;\eta$, on a $|f(x)-f(y)|&lt;\veps$. Quitte à le réduire, on peut toujours supposer $\eta&lt;1$. Prouvons maintenant que $f$ est uniformément continue sur $\mathbb R_+$ en prenant
+deux élements $x,y\in\mathbb R_+$ avec $|x-y|&lt;\eta$. On distingue deux cas :
+<ol class="enumeratechiffre">
+<li> Si $x\in[0,A]$ ou $y\in[0,A]$, alors, puisque $|x-y|&lt;\eta&lt;1$, on a $x$ et $y$ qui sont éléments de $[0,A+1]$. On a donc bien
+$$|f(x)-f(y)|&lt;\veps.$$
+<li> Sinon, on a $x\geq A$ et $y\geq A$. On passe alors par $a$ :
+$$|f(x)-f(y)|=|f(x)-a+a-f(y)|\leq |f(x)-a|+|f(y)-a|&lt;\veps.$$
+</ol>
+Ainsi, on a bien prouvé que $f$ est uniformément continue sur $\mathbb R_+$. Remarquons l'intérêt d'utiliser le théorème de Heine
+sur $[0,A+1]$ et non sur $[0,A]$. Il faut travailler sur quelque chose de plus grand que $[0,A]$ pour éviter les problèmes de raccord.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater197"></span><script>var myRating = raterJs( { element:document.querySelector("#rater197"),	max:5, rating:2.15, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(197,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composition <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=197.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(197,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce197','imageenonce197');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce197"></a><div class=inner id="innerenonce197">Soit $f:I\to\mathbb R$ et $g:\mathbb R\to\mathbb R$.
+<ol class="enumeratechiffre">
+<li> On suppose que $f$ et $g$ sont uniformémement continues. Montrer que $g\circ f$ est uniformément continue.
+<li> On suppose que $f$ est uniformément continue et bornée et que $g$ est continue.
+Démontrer que $g\circ f$ est uniformément continue.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication197','imageindication197');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication197"></a><div class=inner id="innerindication197" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la définition de l'uniforme continuité à $g$, puis à $f$.
+<li> Se ramener à la question précédente avec le théorème de Heine.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige197','imagecorrige197',197);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige197"></a><div class=inner id="innercorrige197" style="display:none;"><ol class="enumeratechiffre">
+<li> Fixons $\veps&gt;0$. Puisque $g$ est uniformément continue, il existe $\delta&gt;0$ tel que, si $|a-b|&lt;\delta$, on a 
+$|g(a)-g(b)|&lt;\veps$. Pour ce $\delta&gt;0$, puisque $f$ est uniformémement continue, il existe $\eta&gt;0$ tel que,
+si $|x-y|&lt;\eta$, on a $|f(x)-f(y)|&lt;\delta$. Mais alors, si $|x-y|&lt;\eta$, on a 
+$$|g(f(x))-g(f(y))|&lt;\veps.$$
+Ainsi, $g\circ f$ est uniformément continue.
+<li> Soit $M&gt;0$ tel que $|f(x)|\leq M$ pour tout $x\in I$. Notons $h$ la restriction de $g$ au segment $[-M,M]$, de sorte que $g\circ f=h\circ f$. Par le théorème de Heine, la fonction $h$ est uniformément continue. Il suffit alors d'appliquer le résultat de la question précédente.
+</ol></div></div></div>
+
+<div class=titrepartie>Propriétés fondamentales de l'intégrale</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater385"></span><script>var myRating = raterJs( { element:document.querySelector("#rater385"),	max:5, rating:1.2962962962963, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(385,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Relation de Chasles <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=385.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(385,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce385','imageenonce385');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce385"></a><div class=inner id="innerenonce385"><ol class="enumeratechiffre">
+<li> Soient $m,n\in\mathbb Z$ avec $n\geq m$.
+Calculer $\int_m^n \lfloor x \rfloor dx$.
+<li> Calculer $\int_{-1}^2 x|x|dx$.
+<li> Calculer, pour tout $a\in\mathbb R$, $I(a)=\int_0^1 \min(x,a)dx$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication385','imageindication385');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication385"></a><div class=inner id="innerindication385" style="display:none;"><ol class="enumeratechiffre">
+<li> Découper l'intégrale en somme d'intégrales sur des intervalles du type $[p,p+1]$, où $p$ est un entier.
+<li> Remplacer $|x|$ par sa valeur en intégrant sur $[-1,0]$, puis sur $[0,2]$.
+<li> Si $a\in [0,1]$, il faut utiliser la relation de Chasles...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige385','imagecorrige385',385);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige385"></a><div class=inner id="innercorrige385" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $p$ est un entier, alors 
+$$\int_{p}^{p+1}\lfloor x\rfloor dx=\int_{p}^{p+1}pdx=p.$$
+On en déduit que 
+\begin{eqnarray*}
+\int_m^n \lfloor x \rfloor dx&=&\sum_{p=m}^{n-1}\int_p^{p+1} \lfloor x \rfloor dx\\
+&=&\sum_{p=m}^{n-1}p\\
+&=&\frac{(n-m)(n+m-1)}2
+\end{eqnarray*}
+(la dernière somme étant la somme d'une suite arithmétique).
+<li> On va, par la propriété de Chasles, faire la somme de l'intégrale sur $[-1,0]$, puis sur $[0,2]$, intervalles où s'exprime
+facilement $|x|$. On obtient :
+\begin{eqnarray*}
+\int_{-1}^2 x|x|dx&=&\int_{-1}^0 x|x|dx+\int_{0}^2 x|x|dx\\
+&=&\int_{-1}^0 -x^2dx+\int_0^2 x^2 dx\\
+&=&\left[-\frac{x^3}3\right]_{-1}^0+\left[\frac{x^3}{3}\right]_0^2\\
+&=&\frac 73.
+\end{eqnarray*}
+<li> Si $a\leq 0$, alors pour tout $x\in [0,1]$, on a $\min(x,a)=a$ et donc
+$$\int_0^1 \min(x,a)dx=a.$$
+Si $a\geq 1$, alors pour tout $x\in [0,1]$, on a $\min(x,a)=x$ et donc
+$$\int_0^1 \min(x,a)dx=\int_0^1 xdx=\frac 12.$$
+Si $a\in [0,1]$, on découpe l'intégrale en deux et on trouve par la relation de Chasles :
+\begin{eqnarray*}
+\int_0^1 \min(x,a)dx&=&\int_0^a xdx+\int_a^1 adx\\
+&=&\frac{a^2}2+a(1-a)\\
+&=&a-\frac{a^2}2.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater386"></span><script>var myRating = raterJs( { element:document.querySelector("#rater386"),	max:5, rating:1.4651162790698, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(386,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Retrouver la fonction <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=386.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(386,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce386','imageenonce386');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce386"></a><div class=inner id="innerenonce386">Soit $f:[a,b]\to\mathbb R$ continue telle que $|f(x)|\leq 1$ pour tout $x\in[a,b]$
+et $\int_a^b f(x)dx=b-a$. Que dire de $f$?</div></div><div class=indication><a href="javascript:showAll('innerindication386','imageindication386');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication386"></a><div class=inner id="innerindication386" style="display:none;">$f=1$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige386','imagecorrige386',386);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige386"></a><div class=inner id="innercorrige386" style="display:none;">On remarque que $b-a=\int_a^b 1dx$, et donc que 
+$$\int_a^b \big(1-f(x)\big)dx=0$$
+alors que $x\mapsto 1-f(x)$ est une fonction continue sur $[a,b]$ et positive. C'est donc que $1-f$ est la fonction
+nulle, ou encore que $f=1$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater387"></span><script>var myRating = raterJs( { element:document.querySelector("#rater387"),	max:5, rating:2.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(387,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale de $f$ et de $f^2$ <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=387.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(387,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce387','imageenonce387');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce387"></a><div class=inner id="innerenonce387">Déterminer les fonctions continues $f:[0,1]\to [0,1]$ vérifiant $\int_0^1 f(t)dt=\int_0^1 f^2(t)dt$.</div></div><div class=indication><a href="javascript:showAll('innerindication387','imageindication387');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication387"></a><div class=inner id="innerindication387" style="display:none;">&Eacute;crire toute sous la même intégrale et remarquer que la fonction qu'on intègre est positive.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige387','imagecorrige387',387);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige387"></a><div class=inner id="innercorrige387" style="display:none;">Soit $f$ une solution. Alors 
+$$\int_0^1 \big(f(t)-f^2(t))dt=0\iff \int_0^1 f(t)\big(1-f(t)\big)dt=0.$$
+Or, puisque $f$ est à valeurs dans $[0,1]$, la fonction $t\in[0,1]\mapsto f(t)\big(1-f(t)\big)$ est positive ou nulle. 
+De plus, elle est continue et son intégrale sur $[0,1]$ est nulle. Ainsi, elle est identiquement nulle. Ceci entraine
+que pour tout $t\in [0,1]$, on a $f(t)=0$ ou $f(t)=1$. On va en réalité prouver que $f=0$ ou que $f=1$ (observez que ce n'est pas la même chose! Il y a inversion de quantificateurs…).<br>
+Supposons en effet qu'il existe $t_0$ et $t_1$ dans $[0,1]$ avec $f(t_0)=0$ et $f(t_1)=1$. Alors, puisque $f$ est continue, par le théorème des valeurs intermédiaires, il existe $c\in [0,1]$ tel que $f(c )=1/2$, ce qui ne peut pas être le cas.
+On en déduit que  $f=0$ ou $f=1$. <br>
+
+Réciproquement, ces fonctions sont solutions. On a donc démontré que les seules
+fonctions continues $f:[0,1]\to [0,1]$ vérifiant $\int_0^1 f(t)dt=\int_0^1 f^2(t)dt$ sont les fonctions constantes égales à 0 ou à 1.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater388"></span><script>var myRating = raterJs( { element:document.querySelector("#rater388"),	max:5, rating:1.9655172413793, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(388,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;galité des valeurs absolues <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=388.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(388,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce388','imageenonce388');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce388"></a><div class=inner id="innerenonce388">Soit $f:[a,b]\to\mathbb R$ une fonction continue telle que
+$$\left|\int_a^b f(t)dt\right|=\int_a^b |f(t)|dt.$$
+Montrer que $f$ garde un signe constant sur $[a,b]$.</div></div><div class=indication><a href="javascript:showAll('innerindication388','imageindication388');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication388"></a><div class=inner id="innerindication388" style="display:none;">Se ramener à $\int_a^b f(t)dt\geq 0$ et calculer 
+$\int_a^b\big(|f(t)|-f(t)\big)dt$. Conclure à l'aide d'un théorème du cours.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige388','imagecorrige388',388);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige388"></a><div class=inner id="innercorrige388" style="display:none;">Quitte à changer $f$ en $-f$ (ce qui ne change pas le problème), on peut supposer que $\int_a^b f(t)dt\geq 0$. Alors on a 
+$$\int_a^b \big(|f(t)|-f(t)\big)dt=\int_a^b |f(t)|dt-\int_a^b f(t)dt=0$$
+d'après l'hypothèse. Or, la fonction $t\mapsto |f(t)|-f(t)$ est continue et positive, d'intégrale nulle.
+C'est nécessairement la fonction nulle, donc $f(t)=|f(t)|$ pour tout $t\geq 0$. Autrement dit, $f$ est toujours positive.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1104"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1104"),	max:5, rating:2.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1104,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Valeur moyenne <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1104.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1104,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1104','imageenonce1104');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1104"></a><div class=inner id="innerenonce1104">Soit $f:[a,b]\to\mathbb R$ continue. Démontrer que sa valeur moyenne est atteinte : il existe $c\in [a,b]$ tel que 
+$$f(c)=\frac{1}{b-a}\int_a^b f(t)dt.$$</div></div><div class=indication><a href="javascript:showAll('innerindication1104','imageindication1104');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1104"></a><div class=inner id="innerindication1104" style="display:none;">Encadrer l'intégrale, puis utiliser le théorème des valeurs intermédiaires....</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1104','imagecorrige1104',1104);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1104"></a><div class=inner id="innercorrige1104" style="display:none;">$f$ étant continue sur le segment $[a,b]$, elle y est bornée et elle y atteint son minimum et son maximum. Soient $x_1,x_2\in [a,b]$ tels que 
+$$f(x_1)=\min_{[a,b]}f\textrm{ et }f(x_2)=\max_{[a,b]}f.$$
+Alors, puisque, pour tout $x\in [a,b]$, on a 
+$$f(x_1)\leq f(x)\leq f(x_2),$$
+on a en intégrant
+$$(b-a)f(x_1)\leq \int_a^b f(x)dx\leq (b-a)f(x_2)$$
+soit encore
+$$f(x_1)\leq\frac 1{b-a}\int_a^b f(x)dx\leq f(x_2).$$
+Mais par le théorème des valeurs intermédiaires, puisque $f$ est continue sur $[a,b]$, toute valeur comprise entre $f(x_1)$ et $f(x_2)$ est prise par $f$. On en déduit qu'il existe $c\in [a,b]$ tel que 
+$$f(c)=\frac 1{b-a}\int_a^b f(x)dx.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1105"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1105"),	max:5, rating:2.6875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1105,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Continuité <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1105.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1105,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1105','imageenonce1105');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1105"></a><div class=inner id="innerenonce1105">Soit $f:[0,1]\to\mathbb R$ une fonction continue. Pour tout $x\in\mathbb R$, on pose 
+$$g(x)=\int_0^1 f(t)e^{tx}dt.$$
+Démontrer que $g$ est une fonction continue sur $\mathbb R$.</div></div><div class=indication><a href="javascript:showAll('innerindication1105','imageindication1105');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1105"></a><div class=inner id="innerindication1105" style="display:none;">Fixer $a$ et démontrer que $g$ est continue en $a$. Pour cela, on pourra majorer $|g(x)-g(a)|$ par tous les moyens possibles....</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1105','imagecorrige1105',1105);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1105"></a><div class=inner id="innercorrige1105" style="display:none;">Fixons $a\in\mathbb R$ et soit $x\in\mathbb R$. Nous allons prouver que $g$ est continue en $a$. Pour cela, majorons $|g(x)-g(a)|$ : 
+$$|g(x)-g(a)|=\left |\int_0^1 f(t)(e^{tx}-e^{ta})dt\right|\leq \int_0^1 |f(t)| \times |e^{tx}-e^{ta}|dt.$$
+Puisque $f$ est continue sur l'intervalle $[0,1]$, elle y est bornée. Soit $M=\sup_{[0,1]}|f|$. Alors on a 
+$$|g(x)-g(a)|\leq M\int_0^1 |e^{tx}-e^{ta}|dt.$$
+Plusieurs méthodes sont alors possibles. Une des plus simples est calculer l'intégrale qui reste en séparant les cas $x&gt;a$ et $x&lt;a$. On va plutôt utiliser la continuité de l'application exponentielle en $0$ en mettant en facteur $e^{ta}$.  On a en effet
+$$|e^{tx}-e^{ta}|=e^{ta}|e^{t(x-a)}-e^0|\leq e^{|a|} |e^{t(x-a)}-e^0|.$$
+Fixons maintenant $\veps&gt;0$ (c'est le moment de mettre les mains dans le cambouis!). Puisque la fonction exponentielle est continue en $0$, il existe $\delta&gt;0$ tel que, si $|h|&lt;\delta$, alors 
+$$|e^{h}-e^0|\leq\veps.$$
+Si $|x-a|&lt;\delta$, alors pour tout $t\in [0,1]$, on a encore $|t(x-a)|&lt;\delta$ et donc 
+$$ |e^{t(x-a)}-e^0|&lt;\veps.$$
+On en déduit que 
+$$|g(x)-g(a)|\leq Me^{|a|}\int_0^1\veps dt=Me^{|a|}\veps.$$
+Ceci prouve bien que $g$ est continue en $a$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater390"></span><script>var myRating = raterJs( { element:document.querySelector("#rater390"),	max:5, rating:3.9411764705882, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(390,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lemme de Riemann-Lebesgue <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=390.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(390,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce390','imageenonce390');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce390"></a><div class=inner id="innerenonce390">Soit $\varphi$ une fonction en escalier sur $[a,b]$. On pose 
+$$u_n=\int_a^b\varphi(x)\sin(nx)dx.$$
+Montrer que $\lim_{n\to+\infty}u_n=0$. Montrer que cette propriété est conservée si $\varphi$ est continue par morceaux sur $[a,b]$.</div></div><div class=indication><a href="javascript:showAll('innerindication390','imageindication390');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication390"></a><div class=inner id="innerindication390" style="display:none;">Séparer l'intégrale définissant $u_n$ en fonction d'une subdivision adaptée à $\varphi$. Pour la seconde question, approcher une fonction continue par morceaux par une fonction en escalier.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige390','imagecorrige390',390);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige390"></a><div class=inner id="innercorrige390" style="display:none;">Soit $a=a_0&lt;a_1&lt;\dots&lt;a_p=b$ une subdivision adaptée à $\varphi$, et $y_i$ la valeur prise par $\varphi$ sur $]a_i,a_{i+1}[$. Remarquons que :
+\begin{eqnarray*}
+u_n&=&\sum_{i=0}^{p-1}\int_{a_i}^{a_{i+1}}\varphi(x)\sin(nx)dx\\
+&=&\sum_{i=0}^{p-1}y_i\int_{a_i}^{a_{i+1}}\sin(nx)dx\\
+&=&\frac{1}{n}\sum_{i=0}^{p-1}y_i(\cos(na_i)-\cos(na_{i+1})).
+\end{eqnarray*}
+Soit $M$ la plus grande des valeurs des $|y_i|$. On a :
+$$|u_n|\leq \frac{1}{n}\sum_{i=0}^{p-1}2M\leq\frac{2pM}{n}.$$
+On en déduit bien que $(u_n)$ tend vers 0. D'autre part, si $\varphi$ est continue par morceaux sur $[a,b]$, et si $\veps&gt;0$ est fixé, il existe une fonction en escalier $\psi$ telle que, pour tout $x\in[a,b]$, on a :
+$$|\varphi(x)-\psi(x)|\leq\veps.$$
+On a alors :
+$$\int_a^b\varphi(x)\sin(nx)dx=\int_a^b(\varphi(x)-\psi(x))\sin(nx)dx+\int_a^b\psi(x)\sin(nx)dx.$$
+On en déduit :
+$$
+\left|\int_a^b\varphi(x)\sin(nx)dx\right|\leq\left|\int_a^b(\varphi(x)-\psi(x))\sin(nx)dx\right|+\left|\int_a^b\psi(x)\sin(nx)dx\right|.$$
+Maintenant, on choisit $n_0$ de sorte que pour $n\geq n_0$, on ait :
+$$\left|\int_a^b\psi(x)\sin(nx)dx\right|\leq\veps.$$
+Pour un tel $n$, on a encore :
+$$\left|\int_a^b(\varphi(x)-\psi(x))\sin(nx)dx\right|\leq \int_a^b\big|(\varphi(x)-\psi(x))\sin(nx)\big|dx\leq (b-a)\veps.$$
+Ceci prouve que, pour $n\geq n_0$, on a :
+$$\left|\int_a^b\varphi(x)\sin(nx)dx\right|\leq \veps+(b-a)\veps.$$
+La propriété est conservée si $\varphi$ est continue par morceaux.</div></div></div>
+
+<div class=titrepartie>Sommes de Riemann</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater408"></span><script>var myRating = raterJs( { element:document.querySelector("#rater408"),	max:5, rating:1.7647058823529, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(408,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limites de suites <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=408.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(408,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce408','imageenonce408');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce408"></a><div class=inner id="innerenonce408">Calculer la limite des suites suivantes :
+<ol class="enumeratechiffre">
+<li> $\dis u_n=\frac 1n\left(\sin\left(\frac{\pi}{n}\right)+\sin\left(\frac{2\pi}{n}\right)+\dots+\sin\left(\frac{n\pi}{n}\right)\right).$
+<li> $\dis u_n=n\left(\frac{1}{(n+1)^2}+\dots+\frac{1}{(n+n)^2}\right).$
+<li> $\dis u_n=\frac{\sqrt{1}+\sqrt{2}+\dots+\sqrt{n-1}}{n\sqrt{n}}.$
+<li> $\dis u_n=\sqrt[n]{\left(1+\left(\frac{1}{n}\right)^2\right)\left(1+\left(\frac{2}{n}\right)^2\right)\dots\left(1+\left(\frac{n}{n}\right)^2\right)}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication408','imageindication408');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication408"></a><div class=inner id="innerindication408" style="display:none;">Mettre $u_n$ sous la forme $u_n=\frac{1}{n}(f(a)+f(a+(b-a)/n)+\dots+f(b))$. Pour le 4., utiliser d'abord l'écriture exponentielle.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige408','imagecorrige408',408);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige408"></a><div class=inner id="innercorrige408" style="display:none;"><ol class="enumeratechiffre">
+<li> On a directement l'écriture sous la forme d'une somme de Riemann :
+$$u_n\to\int_0^1\sin(\pi x)dx=\frac{2}{\pi}.$$
+<li> On écrit d'abord :
+$$u_n=\frac{1}{n}\left(\frac{1}{(1+1/n)^2}+\dots+\frac{1}{(1+n/n)^2}\right).$$
+On a donc :
+$$u_n\to\int_0^1\frac{1}{(1+x)^2}dx=\left[-\frac{1}{1+x}\right]_0^1=\frac{1}{2}.$$
+<li> On a :
+$$u_n=\frac{1}{n}\left(\sqrt{\frac{1}{n}}+\dots+\sqrt{\frac{n-1}{n}}\right),$$
+et donc :
+$$u_n\to\int_0^1\sqrt{x}dx=\frac{2}{3}.$$
+<li> On a :
+$$u_n=\exp\left(\frac{1}{n}\left(\ln\left(1+\left(\frac{1}{n}\right)^2\right)+\dots+\ln\left(1+\left(\frac{n}{n}\right)^2\right)\right)\right).$$
+Par composition des limites, ceci converge vers :
+$$\exp\left(\int_0^1\ln(1+x^2)dx\right).$$
+L'intégrale se calcule à l'aide d'une intégration par parties :
+\begin{eqnarray*}
+\int_0^1\ln(1+x^2)dx&=&\left[x\ln(1+x^2)\right]_0^1-2\int_0^1\frac{x^2}{1+x^2}dx\\
+&=&\ln(2)-2\int_0^1\frac{x^2+1-1}{x^2+1}dx\\
+&=&\ln(2)-2+\frac{\pi}{2}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater409"></span><script>var myRating = raterJs( { element:document.querySelector("#rater409"),	max:5, rating:1.6842105263158, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(409,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=409.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(409,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce409','imageenonce409');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce409"></a><div class=inner id="innerenonce409">Déterminer la limite de 
+$$v_n=\frac1n\prod_{k=1}^n (k+n)^{1/n}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication409','imageindication409');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication409"></a><div class=inner id="innerindication409" style="display:none;">Utiliser la fonction exponentielle pour se ramener à une somme de Riemann.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige409','imagecorrige409',409);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige409"></a><div class=inner id="innercorrige409" style="display:none;">On va se ramener à une somme de Riemann en utilisant la fonction exponentielle.
+On écrit donc
+\begin{eqnarray*}
+v_n&=&\frac1n\prod_{k=1}^n (k+n)^{1/n}\\
+&=&\frac1n\prod_{k=1}^n \exp\left(\frac1n\ln(k+n)\right)\\
+&=&\frac1n\exp\left(\frac1n\big(\ln(1+n)+\dots+\ln(n+n)\big)\right)\\
+&=&\frac1n\exp\left(\frac1n\left(\ln\left(n\left(1+\frac1n\right)\right)+\dots+\ln\left(n\left(1+\frac nn\right)\right)\right)\right)\\
+&=&\frac1n\exp\left(\frac1n\left(n\ln n+\ln\left(1+\frac 1n\right)+\dots+\ln\left(1+\frac nn\right)\right)\right)\\
+&=&\frac1n\exp(\ln n)\exp\left(\frac1n\left(\ln\left(1+\frac 1n\right)+\dots+\ln\left(1+\frac nn\right)\right)\right)\\
+&=&\exp\left(\frac1n\left(\ln\left(1+\frac 1n\right)+\dots+\ln\left(1+\frac nn\right)\right)\right).
+\end{eqnarray*}
+On pose $f(x)=\ln(x)$, fonction continue sur $[1,2]$, et on considère $S_n(f)$ la $n$-ième somme de Riemann
+de $f$ entre 1 et 2. On a 
+$$v_n=\exp(S_n(f)).$$
+Par le théorème des sommes de Riemann, on a
+$$S_n(f)\to\int_1^2 f(t)dt=\int_1^2\ln(x)dx.$$
+Or,
+$$\int_1^2\ln(x)dx=[x\ln x-x]_1^2=2\ln 2-1.$$
+Par le théorème de composition des limites, on trouve finalement
+que $(v_n)$ converge vers $\exp(2\ln 2-1)=4/e$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1108"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1108"),	max:5, rating:2.7, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1108,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme presque harmonique <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1108.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1108,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1108','imageenonce1108');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1108"></a><div class=inner id="innerenonce1108">Déterminer la limite de $S_n=\sum_{p=n}^{2n}\frac 1p$.</div></div><div class=indication><a href="javascript:showAll('innerindication1108','imageindication1108');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1108"></a><div class=inner id="innerindication1108" style="display:none;">Interpréter cette somme comme une somme de Riemann. On pourra écrire $p=n+k$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1108','imagecorrige1108',1108);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1108"></a><div class=inner id="innercorrige1108" style="display:none;">On va interpréter cette somme comme une somme de Riemann. Ce n'est pas tout à fait immédiat, l'astuce consiste ici à écrire $p=n+k$ avec $k$ dans $0,\dots,n$. On a donc
+$$S_n=\sum_{k=0}^n \frac{1}{n+k}=\frac 1n\sum_{k=0}^n \frac{1}{1+\frac kn}.$$
+On reconnait alors une somme de Riemann de la fonction continue $x\mapsto \frac 1{1+x}$ sur l'intervalle $[0,1]$. On en déduit que 
+$$S_n\to\int_0^1 \frac{1}{1+x}dx=\ln 2.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1106"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1106"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1106,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme de Riemann alternée <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1106.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1106,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1106','imageenonce1106');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1106"></a><div class=inner id="innerenonce1106">Soit $f$ continue sur $[0,1]$. Déterminer la limite de la suite $u_n=\frac 1n\sum_{k=0}^n (-1)^k f\left(\frac kn\right).$</div></div><div class=indication><a href="javascript:showAll('innerindication1106','imageindication1106');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1106"></a><div class=inner id="innerindication1106" style="display:none;">Calculer la limite de la somme des termes pairs et des termes impairs en utilisant le théorème sur les sommes de Riemann.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1106','imagecorrige1106',1106);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1106"></a><div class=inner id="innercorrige1106" style="display:none;">Supposons pour fixer les idées que $n=2p$ est pair. On a alors
+$u_n=v_p-w_p$
+où 
+$$v_p=\frac 12\times \frac{1}p\sum_{k=0}^p f\left(\frac kp\right)$$
+et 
+$$w_p=\frac 12\times \frac{1}p\sum_{k=0}^{p-1}f\left(\frac{k}p+\frac{1}{2p}\right).$$
+Or, par le théorème sur les sommes de Riemann d'une fonction continue, $(v_p)$ tend vers $\frac 12\int_0^1 f(t)dt$. Pour les mêmes raisons, $(w_p)$ tend aussi vers $\frac 12\int_0^1 f(t)dt$. On en déduit que $(u_n)$ tend vers 0 (on traite le cas $n$ impair exactement de la même façon).</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Intégrales et suites</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater411"></span><script>var myRating = raterJs( { element:document.querySelector("#rater411"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(411,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Série harmonique alternée <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=411.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(411,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce411','imageenonce411');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce411"></a><div class=inner id="innerenonce411">Pour $n\geq 0$, on définit 
+$$I_n=\int_0^1 \frac{x^n}{1+x}dx.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que la suite $(I_n)$ tend vers 0.
+<li> Pour $n\geq 0$, calculer $I_n+I_{n+1}$.
+<li> En déduire $\lim_{n\to+\infty}\sum_{k=0}^n \frac{(-1)^k}{k+1}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication411','imageindication411');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication411"></a><div class=inner id="innerindication411" style="display:none;"><ol class="enumeratechiffre">
+<li> Majorer la fonction à intégrer (le dénominateur).
+<li> Mettre $x^n$ en facteur. 
+<li> Si on exprime la somme en fonction des $I_n$, la plupart des termes se simplifient. 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige411','imagecorrige411',411);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige411"></a><div class=inner id="innercorrige411" style="display:none;"><ol class="enumeratechiffre">
+<li> On majore la fonction à intégrer, plus précisément le dénominateur. En effet, pour tout $x\in[0,1]$, on a 
+$$0\leq \frac1{1+x}\leq 1\implies 0\leq \frac{x^n}{1+x}\leq x^n.$$
+En intégrant cette inégalité entre 0 et 1, on trouve
+$$0\leq I_n\leq \int_0^1 x^n dx=\frac1{n+1}.$$
+Par le théorème des gendarmes, la suite $(I_n)$ tend vers 0.
+<li> On a 
+$$I_n+I_{n+1}=\int_0^1 \frac{x^n+x^{n+1}}{1+x}dx=\int_0^1 \frac{x^n(1+x)}{1+x}dx=\int_0^1 x^ndx=\int_0^1 \frac{x^n(1+x)}{1+x}dx=\frac{1}{n+1}.$$
+<li> Notons $S_n=\sum_{k=0}^n \frac{(-1)^{k}}{k+1}$. En remplaçant $\frac1{k+1}$ par $I_k+I_{k+1}$, on trouve
+$$S_n=(I_0+I_1)-(I_1+I_2)+(I_2+I_3)-\dots+(-1)^n(I_n+I_{n+1}).$$
+De nombreux termes de cette somme se simplifient et on trouve
+$$S_n=I_0+(-1)^{n}I_{n+1}.$$
+Comme $(I_n)$ tend vers $0$, on en déduit que $(S_n)$ converge vers $I_0$. Reste à calculer cette dernière intégrale. On trouve
+$$I_0=\int_0^1\frac1{1+x}dx=\left[\ln(1+x)\right]_0^1=\ln2.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater413"></span><script>var myRating = raterJs( { element:document.querySelector("#rater413"),	max:5, rating:1.1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(413,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un équivalent de $\ln(n!)$ <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=413.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(413,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce413','imageenonce413');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce413"></a><div class=inner id="innerenonce413"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Montrer que, pour tout $i\geq 2$,
+$$\int_{i-1}^i\ln t\,dt\leq\ln i\leq\int_i^{i+1}\ln t \,dt.$$
+<li> Montrer que, pour tout entier $n\geq 1$,
+$$\int_1^n \ln t\,dt\leq \ln(n!)\leq \int_1^n\ln t \,dt+\ln n.$$
+</ol>
+<li> Pour tout $x&gt;0$, calculer $F(x)=\int_1^x \ln t\, dt.$
+<li> En déduire que $\ln(n!)$ est équivalent à $n\ln(n)$ lorsque $n$ tend vers $+\infty$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication413','imageindication413');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication413"></a><div class=inner id="innerindication413" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Encadrer d'abord $\ln(t)$ sur $[i,i+1]$, puis intégrer.
+<li> Faire la somme de 2 à $n-1$, puis ajouter les bords...
+</ol>
+<li> Intégration par parties.
+<li> Appliquer la définition.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige413','imagecorrige413',413);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige413"></a><div class=inner id="innercorrige413" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Soit $t\in [i-1,i]$. Alors, puisque la fonction logarithme est croissante, on a
+$$\ln(t)\leq \ln(i).$$
+On intègre cette inégalité pour $t$ parcourant $[i-1,i]$ :
+$$\int_{i-1}^i \ln(t)dt\leq\int_{i-1}^i\ln(i)dt=(i-(i-1))\ln(i)=\ln(i).$$
+La deuxième partie de l'inégalité se prouve exactement de la même façon, en remarquant que
+pour tout $t$ dans $[i,i+1]$, on a
+$$\ln(i)\leq\ln(t).$$
+On pourra remarquer que l'inégalité de droite est aussi valable si $i=1,$ ce qu'on utilisera dans la suite.
+<li> On commence par sommer l'inégalité de gauche pour $i$ allant de $2$ jusqu'à $n$. Par la formule de Chasles, le
+membre de gauche est
+$$\int_1^2\ln(t)dt+\int_2^3\ln(t)dt+\dots+\int_{n-1}^n\ln(t)dt=\int_1^n \ln (t)dt.$$
+Le membre du milieu vaut lui $$\sum_{i=2}^n \ln(i)=\ln\left(\prod_{i=2}^n i\right)=\ln(n!).$$
+On somme ensuite la seconde inégalité pour $i$ allant de $1$ à $n-1$. On trouve
+$$\ln\big((n-1)!\big)\leq \int_1^n\ln(t)dt.$$
+Il suffit ensuite d'ajouter $\ln(n)$ de chaque côté de l'inégalité
+pour obtenir le résultat demandé.
+</ol>
+<li> On réalise une intégration par parties, écrivant $\ln(t)=1\times \ln(t)$, d'où
+$$F(x)=[t\ln(t)]_1^x-\int_1^x t\times\frac 1tdt=x\ln x-x+1.$$
+<li> Des deux questions précédentes, on tire
+$$n\ln n-n+1\leq\ln(n!)\leq n\ln n+\ln n-n+1$$
+soit encore
+$$1+\frac{-n+1}{n\ln n}\leq\frac{\ln(n!)}{n\ln n}\leq 1+\frac{\ln n-n+1}{n\ln n}.$$
+Par le théorème d'encadrement des limites, $\frac{\ln(n!)}{n\ln (n)}$ tend vers 1 quand $n$ tend vers
+$+\infty$. Ceci signifie bien que $\ln(n!)$ est équivalent à $n\ln(n)$ lorsque $n$ tend vers $+\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater414"></span><script>var myRating = raterJs( { element:document.querySelector("#rater414"),	max:5, rating:2.0625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(414,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Série harmonique <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=414.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(414,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce414','imageenonce414');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce414"></a><div class=inner id="innerenonce414">On pose, pour $n\geq 1$, 
+$$u_n=\sum_{k=1}^n \frac1k\textrm{ et }v_n=u_n-\ln n.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout entier naturel $k$ non nul, on a 
+$$\frac{1}{k+1}\leq\int_k^{k+1}\frac 1xdx\leq \frac 1k.$$
+<li> En déduire que pour tout entier $n\geq 2$, on a 
+$$u_n-1\leq \ln n\leq u_n-\frac 1n\textrm{ et }0\leq v_n\leq 1.$$
+<li> Démontrer que pour tout entier naturel non nul, 
+$$v_{n+1}-v_n=\frac1{n+1}-\int_n^{n+1}\frac{dx}x.$$
+<li> En déduire que la suite $(v_n)$ converge vers une limite $\gamma$ (que l'on ne cherchera pas à calculer). Que dire de $(u_n)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication414','imageindication414');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication414"></a><div class=inner id="innerindication414" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le fait que la fonction $x\mapsto \frac 1x$ est décroissante sur l'intervalle $[k,k+1]$.
+<li> Il faut sommer les inégalités précédentes et utiliser la relation de Chasles.
+<li> 
+<li> Que suffit-il pour qu'une suite bornée converge?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige414','imagecorrige414',414);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige414"></a><div class=inner id="innercorrige414" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $x\mapsto \frac 1x$ est décroissante sur l'intervalle $[k,k+1]$. En particulier, pour tout $x\in [k,k+1]$, on a 
+$$\frac 1{k+1}\leq \frac 1x\leq \frac 1k.$$
+On intègre cette inégalité pour $x$ parcourant l'intervalle $[k,k+1]$. On en déduit que 
+$$\frac 1{k+1}=\int_k^{k+1} \frac1{k+1}dt\leq \int_k^{k+1}\frac 1xdx\leq \frac 1k=\int_k^{k+1}\frac 1k dt.$$
+<li> Sommons les inégalités précédentes pour $k$ allant de $1$ à $n-1$. Le membre le plus à droite de l'inégalité est 
+$$1+\frac 12+\dots+\frac 1{n-1}=u_n-\frac 1n.$$
+Le membre au milieu est
+$$\int_1^2\frac 1xdx+\int_2^3\frac 1xdx+\dots+\int_{n-1}^n \frac 1xdx=\int_1^n \frac 1x dx=\ln n.$$
+Enfin, le membre le plus à gauche est
+$$\frac 12+\frac13+\dots+\frac 1n=u_n-1.$$
+On a ainsi obtenu la première inégalité demandée. 
+De $u_n-1\leq \ln n$, on tire facilement $v_n=u_n-\ln n\leq 1$. De l'autre inégalité, 
+$\ln n\leq u_n-\frac 1n\leq u_n$, on tire $v_n=u_n-\ln n\geq 0.$
+<li> On a facilement
+$$v_{n+1}-v_n=\frac 1{n+1}-(\ln (n+1)-\ln n)=\frac 1{n+1}-\int_n^{n+1}\frac{dx}x.$$
+<li> On va prouver que la suite $(v_n)$ est décroissante. C'est en effet une conséquence de la question précédente et de l'inégalité 
+$$\frac{1}{n+1}\leq\int_n^{n+1}\frac 1xdx$$
+prouvée à la première question. 
+Ainsi, la suite $(v_n)$ est décroissante et minorée par 0. Elle est convergente. En revanche, puisque 
+$$u_n\geq \ln n+\frac 1n,$$
+on en déduit que $(u_n)$ tend vers $+\infty$.
+</ol></div></div></div>
+
+<div class=titrepartie>Suites d'intégrales</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater412"></span><script>var myRating = raterJs( { element:document.querySelector("#rater412"),	max:5, rating:1.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(412,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites d'intégrales <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=412.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(412,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce412','imageenonce412');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce412"></a><div class=inner id="innerenonce412">Calculer la limite de la suite $(u_n)$ dans les cas suivants :
+$$\begin{array}{lll}
+\mathbf 1.\ u_n=\int_0^1 x^n\ln(1+x)dx&\quad&\mathbf 2.\ u_n=\int_0^n \frac{dt}{1+e^{nt}}.
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication412','imageindication412');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication412"></a><div class=inner id="innerindication412" style="display:none;">Encadrer les fonctions à intégrer par des fonctions que l'on sait facilement intégrer. Intégrer ces inégalités, puis utiliser le théorème des gendarmes. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige412','imagecorrige412',412);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige412"></a><div class=inner id="innercorrige412" style="display:none;"><ol class="enumeratechiffre">
+<li> On va encadrer la fonction à intégrer. Pour cela, on remarque que pour tout $x\in [0,1]$, on a
+$$0=\ln(1)\leq\ln(1+x)\leq \ln 2.$$
+On multiplie cette inégalité par $x^n$, qui est positif, et on intégre. On trouve
+$$0=\int_0^1 0dx\leq \int_0^1 x^n\ln(1+x)dx\leq \int_0^1 (\ln 2)x^n dx=\frac{\ln 2}{n+1}.$$
+Par le théorème des gendarmes, on remarque que $(u_n)$ tend vers 0.
+<li> La méthode est complètement similaire. On remarque en effet que, pour tout $t\in [0,n]$, on a
+$$0\leq \frac1{1+e^{nt}}\leq\frac 1{e^{nt}}=e^{-nt}.$$
+On intègre cette inégalité entre $0$ et $n$ et on trouve
+$$0\leq u_n\leq \int_0^n e^{-nt}=\frac {1}n(1-e^{-n^2})\leq\frac 1n.$$
+Par le théorème des gendarmes, $(u_n)$ converge vers 0.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater416"></span><script>var myRating = raterJs( { element:document.querySelector("#rater416"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(416,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Strictement croissante <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=416.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(416,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce416','imageenonce416');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce416"></a><div class=inner id="innerenonce416">Soit $f:[0,1]\to\mathbb R$ strictement croissante telle que $f(0)=0$ et $f(1)=1$.
+Prouver que $\lim_{n\to+\infty}\int_0^1\big(f(t))^n dt=0.$</div></div><div class=indication><a href="javascript:showAll('innerindication416','imageindication416');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication416"></a><div class=inner id="innerindication416" style="display:none;">Couper l'intégrale en deux parties : de $0$ à $1-\veps$ puis de $1-\veps$ à $1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige416','imagecorrige416',416);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige416"></a><div class=inner id="innercorrige416" style="display:none;">Soit $\veps&gt;0$ (vérifiant aussi $\veps&lt;1$). Posons $\alpha=f(1-\veps)$. Alors, pour tout $x\in[0,1-\veps]$, on a 
+$0=f(0)\leq f(x)\leq f(1-\veps)=\alpha$. De plus, la suite $(\alpha^n)$ tend vers 0, donc il existe $N\in\mathbb N$
+tel que, pour tout $n\geq N$, on a $0\leq\alpha^n\leq\veps$. On en déduit que, pour tout $n\geq N$, 
+\begin{eqnarray*}
+0\leq\int_0^1 \big(f(t)\big)^n dt&=&\int_0^{1-\veps} \big(f(t)\big)^n dt+\int_{1-\veps}^1\big(f(t)\big)^ndt\\
+&\leq&(1-\veps)\alpha^n +\int_{1-\veps}^1 1^n dt\\
+&\leq&\alpha^n +\veps\leq2\veps
+\end{eqnarray*}
+ce qui achève la preuve.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater418"></span><script>var myRating = raterJs( { element:document.querySelector("#rater418"),	max:5, rating:3.2941176470588, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(418,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Cesaro pour les intégrales <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=418.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(418,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce418','imageenonce418');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce418"></a><div class=inner id="innerenonce418">Soit $f:[0,+\infty[\to\mathbb R$ une fonction continue admettant une limite finie $a$ en $+\infty$.
+Montrer que
+$$\frac 1x\int_0^x f(t)dt\to a\textrm{ quand }x\to+\infty.$$</div></div><div class=indication><a href="javascript:showAll('innerindication418','imageindication418');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication418"></a><div class=inner id="innerindication418" style="display:none;">Fixer $\veps&gt;0$ et $A$ tel que $|f(x)-a|&lt;\veps$ pour $x&gt;A$. Couper l'intégrale en $A$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige418','imagecorrige418',418);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige418"></a><div class=inner id="innercorrige418" style="display:none;">Soit $\veps&gt;0$ et $A\geq 0$ tel que $|f(x)-a|&lt;\veps$. Pour $x&gt;A$, on coupe l'intégrale en $A$.
+$$\frac 1x\int_0^x f(t)dt=\frac1x\int_0^A f(t)dt+\frac1x\int_A^xf(t)dt.$$
+On peut trouver $x_0$ assez grand tel que, pour tout $x&gt;x_0$, on a 
+$$\left|\frac1x\int_0^A f(t)dt\right|&lt;\veps.$$
+D'autre part, on a 
+$$\frac1x\int_A^x(a-\veps)dt\leq \frac1x\int_A^xf(t)dt\leq \frac1x\int_A^x(a+\veps)dt$$
+ce qui implique
+$$\frac{(a-\veps)(x-A)}{x}\leq \frac1x\int_A^xf(t)dt\leq \frac{(x-A)(a+\veps)}x.$$
+Il est alors possible de trouver $x_1$ tel que, pour tout $x&gt;x_1$, on a 
+$$a-2\veps\leq \frac{(a-\veps)(x-A)}{x}\textrm{ et }\frac{(x-A)(a+\veps)}x\leq a+2\veps.$$
+Pour $x&gt;\max(x_0,x_1)$, on a donc
+$$-3\veps\leq \frac 1x\int_0^x f(t)dt-a\leq 3\veps,$$
+ce qui prouve le résultat voulu.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater419"></span><script>var myRating = raterJs( { element:document.querySelector("#rater419"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(419,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme $p$ et norme infinie <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=419.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(419,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce419','imageenonce419');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce419"></a><div class=inner id="innerenonce419">Soit $f$ une fonction définie, continue, positive sur $[a,b]$. Montrer que 
+$$\lim_{n\to +\infty}\left(\int_a^b f(x)^n dx\right)^{1/n}=\sup_{x\in [a,b]}f(x).$$</div></div><div class=indication><a href="javascript:showAll('innerindication419','imageindication419');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication419"></a><div class=inner id="innerindication419" style="display:none;">Prendre un point de $[a,b]$ où le maximum de $f$ est atteint, et minorer l'intégrale par l'intégrale autour d'un voisinage de ce point bien choisi.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige419','imagecorrige419',419);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige419"></a><div class=inner id="innercorrige419" style="display:none;">Soit $M=\sup_{x\in[a,b]}f(x)$. Puisque $f$ est continue, il existe un point $c$ dans $[a,b]$ tel que $f(c)=M$. On suppose pour le moment que $c\in]a,b[$. Fixons $\veps&gt;0$. Il existe $\eta&gt;0$ tel que, pour tout $x$ dans $[c-\eta,c+\eta]$, $f(x)\geq M-\veps$.
+On a alors :
+$$2\eta(M-\veps)^n\leq\int_{c-\eta}^{c+\eta}f(x)^ndx\leq \int_a^b f(x)^n dx\leq (b-a)M^n,$$
+$$(2\eta)^{1/n}(M-\veps)\leq\left(\int_a^b f(x)^n dx\right)^{1/n}\leq (b-a)^{1/n}M.$$
+Maintenant, $(2\eta)^{1/n}$ tend vers 1, et $(b-a)^{1/n}$ aussi. Il est donc possible de trouver un entier $n_0$ tel que, pour $n\geq n_0$, on a :
+$$M-2\veps\leq\left(\int_a^b f(x)^n dx\right)^{1/n}\leq M+\veps.$$
+Ceci prouve le résultat demandé. La preuve est identique si $c$ est une des bornes, mais on intègre par exemple entre $a$ et $a+\eta$ simplement.</div></div></div>
+
+<div class=titrepartie>Inégalité de Cauchy-Schwarz</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater422"></span><script>var myRating = raterJs( { element:document.querySelector("#rater422"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(422,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme deux d'une fonction et de sa dérivée <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=422.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(422,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce422','imageenonce422');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce422"></a><div class=inner id="innerenonce422">Soit $f:[a,b]\to\mathbb R$ de classe $C^1$ telle que $f(a)=0$. 
+<ol class="enumeratechiffre">
+<li> Prouver que, pour tout $x\in[a,b]$,
+$$|f(x)|^2\leq (x-a)\int_a^b |f'(t)|^2dt.$$
+<li> En déduire que
+$$\int_a^b |f(x)|^2dx\leq\frac{(b-a)^2}{2}\int_a^b |f'(x)|^2dx.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication422','imageindication422');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication422"></a><div class=inner id="innerindication422" style="display:none;"><ol class="enumeratechiffre">
+<li> Représenter $f$ par l'intégrale de sa dérivée, puis appliquer l'inégalité de Cauchy-Schwarz.
+On pourra écrire $f'=f'\times 1$.
+<li> Intégrer l'inégalité précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige422','imagecorrige422',422);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige422"></a><div class=inner id="innercorrige422" style="display:none;"><ol class="enumeratechiffre">
+<li> Comme $f(a)=0$, on a
+$$f(x)=\int_a^x f'(t)dt.$$
+Ecrivons $f'=1\times f'$ et appliquons l'inégalité de Cauchy-Schwarz. On trouve
+$$|f(x)|^2=\left|\int_a^x f'(t)\times 1dt\right|^2\leq \int_a^x |f'(t)|^2dt\times \int_a^x1^2 dt\leq (x-a)\int_a^b |f'(t)|^2dt.$$
+<li> Il suffit d'intégrer l'inégalité précédente entre $a$ et $b$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater423"></span><script>var myRating = raterJs( { element:document.querySelector("#rater423"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(423,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Borne inférieure <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=423.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(423,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce423','imageenonce423');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce423"></a><div class=inner id="innerenonce423">Soit $E$ l'ensemble des fonctions continues strictement positives sur $[0,1]$.
+Calculer, après en avoir justifié l'existence 
+$$\inf_{f\in E}\left(\int_0^1 f(x)dx\times\int_0^1\frac1{f(x)}dx\right).$$
+Cette borne inférieure est-elle atteinte? Si oui, par quelles fonctions?</div></div><div class=indication><a href="javascript:showAll('innerindication423','imageindication423');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication423"></a><div class=inner id="innerindication423" style="display:none;">&Eacute;crire $f=(\sqrt f)^2$ et $\frac 1f=\frac 1{(\sqrt f)^2}$, puis appliquer l'inégalite de Cauchy-Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige423','imagecorrige423',423);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige423"></a><div class=inner id="innercorrige423" style="display:none;">Remarquons d'abord que, pour tout $f\in E$, on a
+$$\int_0^1 f(x)dx\times\int_0^1\frac1{f(x)}dx\geq 0$$ 
+et donc la borne inférieure existe. De plus, écrivons 
+$$1=\sqrt f\times\frac{1}{\sqrt f}.$$
+Alors, d'après l'inégalité de Cauchy-Schwarz, on a
+$$1\leq \left[\left(\int_0^1 f(x)dx\right)\times\left(\int_0^1\frac1{f(x)}dx\right)\right]^{1/2}$$
+ce qui prouve que la borne inférieure est supérieure ou égale à 1. Elle est atteinte pour les fonctions constantes, et donc la borne
+inférieure vaut 1.
+De plus, pour que 
+$$1=\left(\int_0^1 f(x)dx\times\int_0^1\frac1{f(x)}dx\right),$$
+il faut avoir égalité dans l'inégalité de Cauchy-Schwarz, donc il faut qu'il existe une constante $\lambda&gt;0$ 
+telle que
+$$\sqrt f=\frac{\lambda}{\sqrt f},$$
+c'est-à-dire que la borne inférieure est atteinte seulement pour les fonctions constantes.</div></div></div>
+
+
+
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

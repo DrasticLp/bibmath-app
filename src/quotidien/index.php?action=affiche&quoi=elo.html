@@ -1,0 +1,218 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Mathématiques du quotidien"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Comment estimer la force relative de deux joueurs ? Le classement Elo</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="itemselectionne"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="../ressources/moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:flex" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitemselectionne"><a href="index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="../ressources/moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Mathématiques au quotidien</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=elo.html">Comment estimer la force relative de deux joueurs ? Le classement Elo</a> &gt; </div><h1>Comment estimer la force relative de deux joueurs ? Le classement Elo</h1>
+<p class=petit>La lecture de cette page nécessite des connaissances du niveau Première ou Terminale Spécialité Mathématiques.</p>
+
+<div class=titrepartie>Le problème</div>
+<p class=dtexte>
+<img src="images/ArpadElo.jpg" class=imgbios>Lorsque deux joueurs d'échecs, qui ont déjà joué de nombreuses parties,
+s'affrontent pour la première fois, on aimerait savoir quelle est la probabilité de victoire de l'un sur l'autre. 
+Autrement dit, on aimerait classer des joueurs d'échecs en fonction de leur niveau de telle sorte que,
+ même sans qu'ils ne se soient jamais rencontrés, on puisse estimer leur force relative.
+ Le physicien et joueur d'échec américain (d'origine hongroise)
+Arpard Elo a développé au XX<sup>è</sup> siècle un système de classement qui répond à ce problème.
+Dans cette page, nous allons vous expliquer comment ce système fonctionne. Pour le moment, on va 
+utiliser un modèle simplifié, pour lequel il n'y a pas de match nul.</p>
+<p class=dtexte>L'idée d'Elo est assez simple. Il veut attribuer une note à chaque joueur, son classement Elo.
+La différence de note entre deux joueurs caractérise leur force relative&nbsp;: si la différence entre le classement Elo
+de $A$ et de $B$ vaut $100$ points, et si la différence entre le classement Elo de $B$ et $C$ vaut $100$ points, 
+il y a le même écart de force relative entre $A$ et $B$ qu'entre $B$ et $C$. Par exemple, si $A$ est deux fois plus fort que $B,$
+alors $B$ sera deux fois plus fort que $C$.</p>
+<p class=dtexte>Que signifie $A$ est deux fois plus fort que $B$ ? Ceci signifie que si $A$ et $B$ jouent un grand nombre
+de parties l'un contre l'autre, alors $A$ en remportera deux fois plus que $B.$ On est alors amené à introduire les quantités suivantes : </p>
+<div class=dliste>
+<ul>
+<li>la <span class=rougedico>force relative</span> de $A$ par rapport à $B,$ que l'on va noter $f(A/B)$&nbsp;: si $A$ et $B$ jouent $N$ parties
+l'un contre l'autre, on note $N_A$ le nombre de victoires de $A$ et $N_B$ le nombre de victoires de $B$. On a donc $N_A+N_B=N.$
+La force relative de $A$ sur $B$ vaut 
+$$f(A/B)=\frac{N_A}{N_B}.$$
+<li>la probabilité $P(A/B)$ que $A$ batte $B$ lorsqu'ils s'affrontent. Cette probabilité vaut 
+$$P(A/B)=\frac{N_A}{N_A+N_B}.$$
+</ul>
+</div>
+<p class=dtexte>Ces deux quantités sont liées&nbsp;: il suffit de faire un petit calcul pour observer que 
+$$P(A/B)=\frac{f(A/B)}{1+f(A/B)}.$$
+
+<div class=titrepartie>Comment calculer la probabilité de victoire connaissant la différence de classement ?</div>
+<p class=dtexte>On se trouve confronté maintenant au problème suivant : on a deux joueurs $A$ et $B$
+de classement respectif $\textrm{Elo}(A)$ et $\textrm{Elo}(B)$. Comment déterminer la probabilité que $A$ gagne
+si $A$ et $B$ s'affrontent&nbsp;? On va commencer par essayer d'exprimer la force relative $f(A/B)$ de $A$ par rapport
+à $B.$ Rappelons que cette force relative ne doit dépendre que de la différence $\textrm{Elo}(A)-\textrm{Elo}(B)$. 
+On cherche donc une fonction $H$ telle que 
+$$f(A/B)=H(\textrm{Elo}(A)-\textrm{Elo}(B)).$$
+Cette fonction $H$ doit vérifier une propriété bien particulière. En effet, il est légitime de 
+penser que si $A$ est deux fois plus fort que $B$, et que si $B$ est deux fois plus fort que $C,$
+alors $A$ est quatre fois plus fort que $C.$ Autrement dit, on a 
+$$f(A/C)=f(A/B)\times f(B/C).$$
+Pour la fonction $H,$ cela signifie
+$$H(\textrm{Elo}(A)-\textrm{Elo}(C))=H(\textrm{Elo}(A)-\textrm{Elo}(B))\times H(\textrm{Elo}(B)-\textrm{Elo}(C)).$$
+Si on note $D=\textrm{Elo}(A)-\textrm{Elo}(B)$ et $D'=\textrm{Elo}(B)-\textrm{Elo}(C),$
+alors on doit avoir
+$$H(D+D')=H(D)\times H(D').$$
+On reconnait ici une propriété vérifiée par les fonctions du type $x\mapsto \exp(cx),$
+et pour peu que l'on suppose que $H$ est continue, on peut même prouver que ce sont les seules
+fonctions de ce type. Ainsi, on doit avoir 
+$$f(A/B)=\exp(c D)$$
+où $D$ est la différence $\textrm{Elo}(A)-\textrm{Elo}(B).$ En utilisant la formule donnée ci-dessus, on a
+$$P(A/B)=\frac{\exp(cD)}{1+\exp(cD)}=\frac{1}{1+\exp(-cD)}.$$
+Dans la pratique, pour les échecs, la constance $c$ choisie est $c=\ln(10)/400,$
+qui donne la formule plus jolie 
+$$P(A/B)=\frac{1}{1+10^{-\frac{D}{400}}}$$
+(si vous êtes choqué par la notation $10^x,$ elle ne signifie rien d'autre que $\exp(x\ln(10))).$
+</p>
+<p class=dtexte>Ainsi, on a rempli la première partie du contrat. On a une fonction qui nous permet, 
+étant donnée la différence de classement entre deux joueurs, d'estimer la probabilité qu'un joueur a de l'emporter sur un autre. 
+Le tableau suivant donne la conversion, en donnant la probabilité $P(A/B)$ en fonction de quelques différences de classement Elo.</p>
+<div class=equation>
+<table class=tablebibmath>
+<tr>
+<td> Probabilité </td> <td>Différence de classement </td>
+</tr>
+<tr><td>$0,\!92$</td><td>$400$</td></tr>
+<tr><td>$0,\!76$</td><td>$200$</td></tr>
+<tr><td>$0,\!64$</td><td>$100$</td></tr>
+<tr><td>$0,\!57$</td><td>$50$</td></tr>
+<tr><td>$0,\!53$</td><td>$20$</td></tr>
+<tr><td>$0,\!515$</td><td>$10$</td></tr>
+
+</table>
+</div>
+
+<div class=titrepartie>Comment calculer le classement Elo ?</div>
+<p class=dtexte>Si l'on se contente de ce que l'on a fait jusqu'à présent, on n'a pas complètement résolu le problème initial.
+On sait donner la probabilité de gain d'un joueur sur un autre connaissant la différence de classement Elo, mais on ne sait
+pas comment calculer le classement Elo d'un joueur&nbsp;...</p>
+<p class=dtexte>Arpad Elo a proposé la méthode suivante. On affecte initialement à un joueur un classement Elo arbitraire, 
+par exemple $0.$ On notera $\textrm{Elo}(n)$ son classement après $n$ parties. On suppose qu'au cours de sa $n$-ème partie, 
+notre joueur affronte un joueur $B$ et que la différence de classement Elo entre les deux joueurs vaut $D.$
+La probabilité que $A$ gagne vaut $P(D),$ donnée par la formule précédente. On note $R$ le résultat du match : il vaut $1$ si $A$ gagne, 
+et $0$ si $A$ perd. Alors on a 
+$$\textrm{Elo}(n+1)=\textrm{Elo}(n)+K(R-P(D))$$
+où $K$ est une constante appelée <span class=rougedico>coefficient de développement. </span></p>
+<p class=dtexte>Réfléchissons un peu à cette formule : si $A$ gagne, il est normal que son classement augmente, 
+d'autant plus si sa probabilité de gagner était faible. Si $A$ perd, il est normal que son classement diminue, 
+d'autant plus si sa probabilité de gagner était forte. La formule ci-dessus exprime exactement cette idée. 
+La constante $K$ rend le classement plus ou moins volatile. Plus $K$ est élevé, plus le classement va changer après une partie.
+Cela peut être intéressant pour les premières parties jouées, pour évaluer plus rapidement la force d'un joueur.
+ En revanche, quand le classement est déjà bien établi, on peut 
+faire choisir $K$ plus petit, pour qu'une seule partie n'ait pas une influence trop forte.
+Aux échecs, $K=40$ pour les $30$ premières parties, puis $K$ redescend à $20$ et même à $10$ pour les joueurs forts (dont le 
+classement est supérieur à $2400$ Elo).</p>
+<p class=dtexte>Voyons un exemple : $A$ est classé $2000$ Elo et joue contre $B$ qui est classé $1900$ Elo, 
+soit une différence de $100$ points. La probabilité que $A$ gagne vaut 
+$$P(A/B)=\frac{1}{1+10^{-100/400}}\simeq 0,\!64.$$
+</p>
+<div class=dliste>
+<ul>
+<li>Si $A$ gagne, alors son nouveau classement Elo sera 
+$$2000+20\times(1-0,\!64)=2007.$$
+Le nouveau classement Elo de $B$ sera $1893$ (la formule est symétrique : $B$ perd autant 
+de points que $A$ en marque).
+<li>Si $A$ fait match nul, alors son nouveau classement Elo sera 
+$$2000+20\times(0,\!5-0,\!64)=1997.$$
+Le nouveau classement Elo de $B$ sera $1903$.
+<li>Si $A$ perd, son nouveau classement Elo sera 
+$$2000+20\times (0-0,\!64)=1987,$$
+tandis que celui de $B$ sera $1913.$
+</ul>
+</div>
+<p class=dtexte>Remarquons qu'une défaite de $A$ contre un joueur plus faible impacte plus fortement son classement
+qu'une victoire contre le même joueur.</p>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Est-ce que cela fonctionne ?</div>
+<p class=dtexte>On va maintenant vérifier que la formule permettant de mettre à jour le classement Elo fonctionne.
+Pour cela, on considère deux joueurs $A$ et $B$ auxquels on attribue le classement initial de $1000$ points.
+Puis on fait jouer $n$ fois les deux joueurs l'un contre l'autre $3$ parties, avec le résultat suivant : 
+$A$ gagne la première et la troisième partie, $B$ gagne la deuxième partie. Ainsi, $A$ gagne deux fois sur trois
+et est donc deux fois plus fort que $B$. On s'attend donc, si $n$ devient très grand, à ce que la différence 
+de classement entre les deux joueurs donne $P(A/B)\simeq 0,\!66.$</p>
+<p class=dtexte>
+Pour vérifier cela, on peut utiliser le petit programme suivant sous Python :
+</p>
+<iframe src="https://trinket.io/embed/python/fd0a930ebd6f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<p class=dtexte>Comme vous pouvez le constater, il y a environ 121 points d'écart de classement Elo entre les deux joueurs.
+Cela donne une probabilité théorique de gain pour $A$ valant
+$$P(A/B)=\frac{1}{1+10^{-121/400}}\simeq 0,\!667.$$
+C'est très proche de $2/3,$ et donc cette méthode fonctionne bien !</p>
+
+<div class=titrepartie>Et avec des matchs nuls ?</div>
+<p class=dtexte>On peut adapter la méthode précédente si on s'autorise maintenant à ce qu'une partie puisse
+se terminer par un match nul. On attribue cette fois un gain à chaque partie, qui vaut $1$ si $A$ gagne,
+$0,\!5$ s'il y a match nul et $0$ si $B$ gagne. Si $A$ et $B$ s'affrontent au cours de $N$ parties,
+on note $N_A$ le gain total de $A$ et $N_B$ le gain total de $B$. La force relative de $A$ par rapport à $B$ 
+est toujours 
+$$f(A/B)=\frac{N_A}{N_B}$$
+et le gain moyen de $A$ est $P(A/B)=\frac{N_A}{N}.$ On a toujours la formule
+$$P(A/B)=\frac{f(A/B)}{1+f(A/B)}$$
+qui nous amène, par le même développement, à la formule
+$$P(A/B)=\frac{1}{1+\exp(-cD)}.$$
+Pour mettre à jour le classement Elo, on utilise la même formule
+$$\textrm{Elo}(n+1)=\textrm{Elo}(n)+K(R-P(D))$$
+mais cette fois le résultat $R$ peut également valoir $0,\!5$ s'il y a match nul.
+</p>
+
+
+<p class=petit>La photographie d'Arpad Elo est tirée du site :  http://www.chessbase.com/newsprint.asp?newsid=4326.</p>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>

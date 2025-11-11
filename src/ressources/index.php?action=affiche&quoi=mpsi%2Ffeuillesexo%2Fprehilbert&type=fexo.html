@@ -1,0 +1,972 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math sup : espaces préhilbertiens et euclidiens</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math sup : espaces préhilbertiens et euclidiens</h1>
+<div class=titrepartie>Produit scalaire, orthogonalité</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2589"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2589"),	max:5, rating:1.4583333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2589,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produits scalaires sur $\mathbb R^2$ <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2589.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2589,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2589','imageenonce2589');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2589"></a><div class=inner id="innerenonce2589">Les applications suivantes définissent-elles un produit scalaire sur $\mathbb R^2$?
+<ol class="enumeratechiffre">
+ <li> $\varphi_1\big((x_1,x_2),(y_1,y_2)\big)=\sqrt{x_1^2+y_1^2+x_2^2+y_2^2}$;
+ <li> $\varphi_2\big((x_1,x_2),(y_1,y_2)\big)=4x_1y_1-x_2y_2$;
+ <li> $\varphi_3\big((x_1,x_2),(y_1,y_2)\big)=x_1y_1-3x_1y_2-3x_2y_1+10x_2y_2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2589','imageindication2589');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2589"></a><div class=inner id="innerindication2589" style="display:none;"><ol class="enumeratechiffre">
+ <li> $\varphi_1$ est-elle bilinéaire?
+ <li> $\varphi_2$ est-elle positive?
+ <li> &Eacute;crire $\varphi_3\big((x_1,x_2),(x_1,x_2)\big)$ comme une somme de deux carrés.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2589','imagecorrige2589',2589);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2589"></a><div class=inner id="innercorrige2589" style="display:none;"><ol class="enumeratechiffre">
+ <li> $\varphi_1$ n'est pas bilinéaire. Posons en effet $u=(1,1)$. Si $\varphi_1$ était bilinéaire, on devrait avoir
+ $\varphi_1(2u,u)=2\varphi_1(u,u)$. Mais $\varphi_1(2u,u)=\sqrt{2^2+1^2+2^2+1^2}=\sqrt{10}$ alors que $\varphi_1(u,u)=\sqrt{4}$. On n'a pas
+ $\sqrt{10}=2\sqrt{4}$.
+ <li> $\varphi_2$ n'est pas positive : en effet, si $u=(0,1)$, alors 
+ $\varphi_2(u,u)=-1&lt;0$.
+ Donc $\varphi_2$ n'est pas un produit scalaire.
+ <li> $\varphi_3$ est bilinéaire et symétrique. De plus, on a 
+ \begin{align*}
+  \varphi_3\big((x_1,x_2),(x_1,x_2)\big)&=x_1^2-3x_1x_2-3x_1x_2+10x_2^2\\
+  &=x_1^2-6x_1x_2+10x_2^2\\
+  &=(x_1-3x_2)^2+x_2^2.
+ \end{align*}
+Ceci est positif ou nul (somme de deux carrés), et si c'est nul, alors on a à la fois $x_2^2=0$ (et donc $x_2=0$) et $x_1-3x_2=0$, donc $x_1=3x_2=0$.
+Ainsi, $\varphi_3$ est définie positive. C'est donc bien un produit scalaire.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2591"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2591"),	max:5, rating:1.2083333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2591,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un produit scalaire sur les polynômes <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2591.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2591,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2591','imageenonce2591');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2591"></a><div class=inner id="innerenonce2591">Soit $n\geq 1$ et soit $a_0,\dots,a_n$ des réels distincts deux à deux. Montrer que l'application $\varphi:\mathbb R_n[X]\times\mathbb R_n[X]\to\mathbb R$
+définie par $\varphi(P,Q)=\sum_{i=0}^n P(a_i)Q(a_i)$ définit un produit scalaire sur $\mathbb R_n[X]$.</div></div><div class=indication><a href="javascript:showAll('innerindication2591','imageindication2591');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2591"></a><div class=inner id="innerindication2591" style="display:none;">Un polynôme de degré inférieur ou égal à $n$ admettant au moins $(n+1)$ racines est le polynôme nul.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2591','imagecorrige2591',2591);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2591"></a><div class=inner id="innercorrige2591" style="display:none;">Il est d'une part très facile (et laisser au lecteur) de vérifier que $\varphi$ est une forme bilinéaire symétrique
+(ie $\varphi(P_1+\lambda P_2,Q)=\varphi(P_1,Q)+\lambda\varphi(P_2,Q)$ et $\varphi(P,Q)=\varphi(Q,P)$). D'autre part,
+pour tout $P\in\mathbb R_n[X]$, on a $\varphi(P,P)=\sum_{i=0}^n (P(a_i))^2$. Cette quantité est positive ou nulle.
+De plus, si elle est nulle, c'est-à-dire si $\varphi(P,P)=0$, alors comme on considère la somme de $n+1$ quantités positives ou nulles, chacune de ces
+quantités doit être nulle, et donc, pour tout $i=0,\dots,n$, on a $P(a_i)=0$. Ainsi, $P$ est un polynôme de degré inférieur
+ou égal à $n$ admettant au moins $n+1$ racines. Ainsi, $P$ est le polynôme nul.
+On a donc démontré que $\varphi$ est une forme bilinéaire, symétrique, et définie positive : c'est un produit scalaire sur $\mathbb R_n[X]$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1033"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1033"),	max:5, rating:2.2333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1033,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des exemples de produit scalaire <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1033.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1033,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1033','imageenonce1033');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1033"></a><div class=inner id="innerenonce1033">Démontrer que les formules suivantes définissent des produits scalaires sur l'espace vectoriel associé :
+<ol class="enumeratechiffre">
+<li> $\langle f,g\rangle=f(0)g(0)+\int_0^1 f'(t)g'(t)dt$ sur $E=\mathcal C^1([0,1],\mathbb R)$;
+<li> $\langle f,g\rangle=\int_a^b f(t)g(t)w(t)dt$ sur $E=\mathcal C([a,b],\mathbb R)$ où $w\in E$ est telle que $w(x)&gt;0$ pour tout $x\in]a,b[.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1033','imageindication1033');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1033"></a><div class=inner id="innerindication1033" style="display:none;">Le point difficile est de démontrer que la forme est définie. Utiliser le fait que si $h$ est continue et positive, alors $\int_a^b h(t)dt=0\implies h\equiv 0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1033','imagecorrige1033',1033);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1033"></a><div class=inner id="innercorrige1033" style="display:none;">Dans les deux exemples, la difficulté est de démontrer qu'on a affaire à une forme définie.
+<ol class="enumeratechiffre">
+<li> Si $\langle f,f\rangle=0$, alors on a à la fois $(f(0))^2=0$, donc $f(0)=0$, et 
+$$\int_0^1 \big(f'(t)\big)^2dt=0.$$
+Or, $(f')^2$ est continue et positive sur $[0,1]$. Puisque son intégrale est nulle, c'est que $f'$ est nulle sur $[0,1]$. On en déduit que $f$ est constante sur $[0,1]$, puis, comme $f(0)=0$, que $f$ est identiquement nulle sur $[0,1]$.
+<li> Si $f\in E$ est tel que $\langle f,f\rangle=0$, le même raisonnement donne que $f^2w=0$ sur $[a,b]$, donc, puisque $w$ ne s'annule pas sur $]a,b[$, que $f=0$ sur $]a,b[$. Par continuité, on en déduit que $f=0$ sur $[a,b]$ et donc que $f\equiv 0$. La forme est bien définie positive.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2590"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2590"),	max:5, rating:1.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2590,rating); this.setRating(rating);   this.disable();    done();     }});</script> - CNS pour avoir un produit scalaire <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2590.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2590,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2590','imageenonce2590');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2590"></a><div class=inner id="innerenonce2590">Soit $a$ et $b$ des réels et $\varphi:\mathbb R^2\times\mathbb R^2\to \mathbb R$ définie par 
+$$\varphi\big((x_1,x_2),(y_1,y_2)\big)=x_1y_1+4x_1y_2+bx_2y_1+ax_2y_2.$$
+Donner une condition nécessaire et suffisante portant sur les réels $a$ et $b$ pour que 
+$\varphi$ définisse un produit scalaire sur $\mathbb R^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication2590','imageindication2590');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2590"></a><div class=inner id="innerindication2590" style="display:none;">Trouver une condition portant sur $b$ pour que $\varphi$ soit symétrique. &Eacute;crire ensuite $\varphi\big((x_1,x_2),(x_1,x_2)\big)$ en reconnaissant le début d'un carré.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2590','imagecorrige2590',2590);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2590"></a><div class=inner id="innercorrige2590" style="display:none;">On remarque d'abord que $\varphi$ est une forme bilinéaire. Pour qu'elle soit symétrique, il est nécessaire que $b=4$. En effet, on doit avoir
+$$\varphi\big((1,0),(0,1)\big)=\varphi\big((0,1),(1,0)\big)\implies b=4.$$
+On vérifie facilement que cette condition est aussi suffisante pour que $\varphi$ soit symétrique.<br>
+On va ensuite trouver une condition portant sur $a$ pour que $\varphi$ soit définie positive. On a 
+$$\varphi\big((x_1,x_2),(x_1,x_2)\big)=x_1^2+8x_1x_2+ax_2^2=(x_1+4x_2)^2+(a-16)x_2^2.$$
+Si $a\leq 16$, alors $\varphi$ n'est pas définie positive. En effet, on a 
+$$\varphi\big((-4,1),(-4,1)\big)=(a-16)\leq 0.$$
+Réciproquement, si $a&gt;16$, alors $\varphi\big((x_1,x_2),(x_1,x_2)\big)\geq 0$ et si 
+$\varphi\big((x_1,x_2),(x_1,x_2)\big)=0$, alors on a 
+$$\left\{\begin{array}{rcl}
+          x_1+4x_2&=&0\\
+          x_2&=&0
+         \end{array}
+\right.$$
+ce qui donne facilement $x_1=x_2=0$.<br>
+En conclusion, $\varphi$ définit un produit scalaire sur $\mathbb R^2$ si et seulement si $b=4$ et $a&gt;16$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1038"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1038"),	max:5, rating:2.5833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1038,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un produit scalaire sur les fonctions continues <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1038.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1038,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1038','imageenonce1038');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1038"></a><div class=inner id="innerenonce1038">Soit $E=\mathcal C([0,1])$ l'ensemble des fonctions continues de $[0,1]$ dans $\mathbb R$,
+et soit $a=(a_n)$ une suite de $[0,1]$. On pose, pour $f,g\in E$,
+$$\phi(f,g)=\sum_{n=0}^{+\infty}\frac1{2^n}f(a_n)g(a_n).$$
+Donner une condition nécessaire et suffisante sur $a$ pour que $\phi$ définisse un produit scalaire sur $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication1038','imageindication1038');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1038"></a><div class=inner id="innerindication1038" style="display:none;">Tout tourne autour de la densité de $a$ dans $[0,1]$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1038','imagecorrige1038',1038);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1038"></a><div class=inner id="innercorrige1038" style="display:none;">Remarquons d'abord que $\phi$ est bien définie. En effet, les fonctions $f$ et $g$ étant continues
+sur le segment $[0,1]$, elles y sont bornées par une constante $M&gt;0$, et donc on a 
+$$\left|\frac1{2^n}f(a_n)g(a_n)\right|\leq \frac{M^2}{2^n},$$
+et la série qui définit $\phi(f,g)$ converge absolument. De plus, il est très facile de vérifier que $\phi$
+est une forme bilinéaire, symétrique et positive. On doit donc trouver une condition nécessaire et suffisante sur $a$
+pour que ce soit une forme définie. D'abord, si $a$ est dense dans $[0,1]$, alors $\phi$ est définie. En effet, si 
+$$\phi(f,f)=\sum_{n=0}^{+\infty}\frac{f^2(a_n)}{2^n}=0,$$
+alors on a 
+$$\forall n\geq 0, f^2(a_n)=0\implies f(a_n)=0.$$
+Si $a$ est dense dans $[0,1]$, ceci entraine que $f=0$ et donc que $\phi$ est définie. Réciproquement, on suppose
+que $a$ n'est pas dense dans $[0,1]$, et on prouve que $\phi$ n'est pas définie. Mais si $a$ n'est pas dense dans $[0,1]$, 
+on peut trouver un intervalle $I\subset [0,1]$, non réduit à un point, et qui ne comprend aucun terme de la suite $(a_n)$. 
+Soit alors $f\in E$ une fonction (continue) nulle sur $[0,1]\backslash I$ et valant $1$ au milieu de $I$ (pensez à une fonction $f$
+dont la courbe représentative est une dent). Alors, $f(a_n)=0$ pour tout entier $n$ puisque $a_n$ n'est jamais élément de $I$, et
+donc $\phi(f,f)=0$, alors que $f\neq 0$.</div></div></div>
+
+<div class=titrepartie>Inégalité de Cauchy-Schwarz et norme</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3259"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3259"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3259,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une première application de l'inégalité de Cauchy-Schwarz <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3259.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3259,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3259','imageenonce3259');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3259"></a><div class=inner id="innerenonce3259">Démontrer que pour tous $x_1,\dots,x_n\in\mathbb R,$
+$$\left(\sum_{k=1}^n \frac{x_k}{2^k}\right)^2\leq\frac 13\sum_{k=1}^n x_k^2.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3259','imageindication3259');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3259"></a><div class=inner id="innerindication3259" style="display:none;">Il suffit d'appliquer l'inégalité de Cauchy-Schwarz dans $\mathbb R^n$ muni de son produit scalaire canonique, avec $x=(x_1,\dots,x_n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3259','imagecorrige3259',3259);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3259"></a><div class=inner id="innercorrige3259" style="display:none;">Il suffit d'appliquer l'inégalité de Cauchy-Schwarz dans $\mathbb R^n$ muni de son produit scalaire canonique, avec $x=(x_1,\dots,x_n)$ et $y=(2^{-1},\cdots,2^{-n})$. Il vient
+\begin{align*}
+\left|
+\sum_{k=1}^n \frac{x_k}{2^k}\right|&\leq \left(\sum_{k=1}^n \frac{1}{2^{2k}}\right)^{1/2}\left(\sum_{k=1}^n x_k^2\right)^{1/2}
+\end{align*}
+Par croissance de la fonction carrée sur $\mathbb R_+$, et en utilisant la formule donnant la somme d'une suite géométrique, on trouve
+\begin{align*}
+\left(\sum_{k=1}^n \frac{x_k}{2^k}\right)^2
+&\leq \frac{\frac 14-\frac{1}{4^{n+1}}}{1-\frac 14}\left(\sum_{k=1}^n x_k^2\right)\\
+&\leq \frac{\frac 14}{\frac 34}\left(\sum_{k=1}^n x_k^2\right)\\
+&\leq \frac 13\left(\sum_{k=1}^n x_k^2\right).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1475"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1475"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1475,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand une inégalité en implique une autre... <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1475.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1475,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1475','imageenonce1475');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1475"></a><div class=inner id="innerenonce1475">Soit $x,y,z$ trois réels tels que $2x^2+y^2+5z^2\leq 1$. Démontrer que $(x+y+z)^2\leq\frac {17}{10}.$</div></div><div class=indication><a href="javascript:showAll('innerindication1475','imageindication1475');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1475"></a><div class=inner id="innerindication1475" style="display:none;">Appliquer astucieusement l'inégalité de Cauchy-Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1475','imagecorrige1475',1475);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1475"></a><div class=inner id="innercorrige1475" style="display:none;">Il suffit d'écrire :
+$$x+y+z=\frac{1}{\sqrt 2}\times \sqrt 2 x+1\times y+\frac{1}{\sqrt 5}\times \sqrt 5 z.$$
+D'après l'inégalité de Cauchy-Schwarz (pour le produit scalaire canonique sur $\mathbb R^3$), on a 
+$$(x+y+z)^2\leq \left(\left(\frac 1{\sqrt 2}\right)^2+1^2+\left(\frac 1{\sqrt 5}\right)^2\right)\times (2x^2+y^2+5z^2)\leq \frac{17}{10}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1036"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1036"),	max:5, rating:2.1333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1036,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications de l'inégalité de Cauchy-Schwarz <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1036.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1036,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1036','imageenonce1036');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1036"></a><div class=inner id="innerenonce1036">Soient $x_1,\dots,x_n\in\mathbb R$.
+<ol class="enumeratechiffre">
+<li> Démontrer que 
+$$\left(\sum_{k=1}^n x_k\right)^2\leq n\sum_{k=1}^n x_k^2$$
+et étudier les cas d'égalité.
+<li> On suppose en outre que $x_k&gt;0$ pour chaque $k\in\{1,\dots,n\}.$
+Démontrer que 
+$$\left(\sum_{k=1}^n x_k\right)\left(\sum_{k=1}^n \frac 1{x_k}\right)\geq n^2$$
+et étudier les cas d'égalité.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1036','imageindication1036');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1036"></a><div class=inner id="innerindication1036" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer l'inégalité de Cauchy-Schwarz au produit scalaire canonique de $\mathbb R^n$ avec les vecteurs $x=(x_1,\dots,x_n)$ et $y=(1,\dots,1)$.
+<li> Appliquer l'inégalité de Cauchy-Schwarz aux vecteurs $y=(\sqrt{x_1},\dots,\sqrt{x_n})$ et $z=\left(\frac 1{\sqrt{x_1}},\dots,\frac 1{\sqrt{x_n}}\right)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1036','imagecorrige1036',1036);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1036"></a><div class=inner id="innercorrige1036" style="display:none;"><ol class="enumeratechiffre">
+<li> On va appliquer l'inégalité de Cauchy-Schwarz au produit scalaire canonique de $\mathbb R^n$ avec les vecteurs $x=(x_1,\dots,x_n)$ et $y=(1,\dots,1)$. On trouve
+$$0\leq \left|\sum_{k=1}^n x_k\right|=\left|\sum_{k=1}^n x_k \times 1\right|\leq \left(\sum_{k=1}^n x_k^2\right)^{1/2}\left(\sum_{k=1}^n 1^2\right)^{1/2}.$$
+Il suffit de prendre le carré pour obtenir l'inégalité désirée, puisque la fonction $x\mapsto x^2$ est croissante
+sur $[0,+\infty[.$ 
+De plus, il y a égalité si et seulement s'il y a égalité dans l'application de l'inégalité de Cauchy-Schwarz, c'est-à-dire si et seulement si les vecteurs $(x_1,\dots,x_n)$ et $(1,\dots,1)$ sont liés; autrement dit, si et seulement si tous les $x_i$ sont égaux.
+<li> Appliquons l'inégalité de Cauchy-Schwarz aux vecteurs $y=(\sqrt{x_1},\dots,\sqrt{x_n})$ et $z=\left(\frac 1{\sqrt{x_1}},\dots,\frac 1{\sqrt{x_n}}\right)$. Alors on trouve
+$$n=\sum_{k=1}^n y_k z_k\leq \left(\sum_{k=1}^n x_k\right)^{1/2}\left(\sum_{k=1}^n \frac 1{x_k}\right)^{1/2}$$
+ce qui, mis au carré, donne l'inégalité demandé. Comme précédemment, on a égalité si et seulement si les vecteurs $y$ et $z$ sont liés. Puisqu'ils sont tous les deux à coordonnées strictement positives, c'est équivalent à dire qu'il existe $\lambda&gt;0$ tel que $x_k=\frac \lambda{x_k}$ pour tout $k=1,\dots,n$. Ainsi, il y a égalité si et seulement si tous les $x_k$ sont égaux.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2197"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2197"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2197,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nature d'une série <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2197.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2197,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2197','imageenonce2197');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2197"></a><div class=inner id="innerenonce2197"><ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\geq 0,$
+$$\sum_{k=0}^n \sqrt{\binom nk}\leq 2^{n/2}\sqrt{n+1}.$$
+<li> En déduire la nature de la série de terme général $u_n=\frac{1}{n^2(\sqrt 2)^n}\sum_{k=0}^n \sqrt{\binom nk}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2197','imageindication2197');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2197"></a><div class=inner id="innerindication2197" style="display:none;">Utiliser l'inégalité de Cauchy-Schwarz en écrivant $\sqrt{\binom nk}=1\times \sqrt{\binom nk}.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2197','imagecorrige2197',2197);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2197"></a><div class=inner id="innercorrige2197" style="display:none;"><ol class="enumeratechiffre">
+<li> On va utiliser l'inégalité de Cauchy-Schwarz en écrivant  $\sqrt{\binom nk}=1\times \sqrt{\binom nk}.$
+Il vient 
+\begin{eqnarray*}
+\sum_{k=0}^n \sqrt{\binom nk}&\leq& \left(\sum_{k=0}^n 1^2\right)^{1/2}\left(\sum_{k=0}^n \binom nk\right)^{1/2}\\
+&\leq&(n+1)^{1/2}2^{n/2}.
+\end{eqnarray*}
+<li> 
+On en déduit que 
+$$0\leq u_n\leq \frac{(n+1)^{1/2}}{n^{2}}\leq \frac{(2n)^{1/2}}{n^2}=\frac {\sqrt 2}{n^{3/2}}.$$
+Par majoration par une série de Riemann convergente, la série $\sum_n u_n$ est convergente.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3253"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3253"),	max:5, rating:2.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3253,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit scalaire et théorème fondamental du calcul intégral <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3253.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3253,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3253','imageenonce3253');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3253"></a><div class=inner id="innerenonce3253">Soit $f\in\mathcal C^1([a,b],\mathbb R)$ telle que $f(a)=0$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $t\in [a,b],$ on a
+$$f^2(t)\leq (t-a)\int_a^t f'^2(u)du.$$
+<li> En déduire que 
+$$\int_a^b f^2(t)dt\leq \frac{(b-a)^2}2\int_a^b f'^2(u)du.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3253','imageindication3253');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3253"></a><div class=inner id="innerindication3253" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $f(t)=\int_a^t f'(u)du$ puis appliquer l'inégalité de Cauchy-Schwarz.
+<li> Intégrer l'inégalité précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3253','imagecorrige3253',3253);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3253"></a><div class=inner id="innercorrige3253" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $f$ est de classe $\mathcal C^1$ et s'annule en $a$, on a par le théorème fondamental du calcul intégral 
+$$f(t)=\int_a^t f'(u)du=\int_a^t 1\times f'(u)du.$$
+On applique alors l'inégalité de Cauchy-Schwarz : 
+\begin{align*}
+f^2(t)&\leq\left(\int_a ^t 1du\right)\left(\int_a^t f'^2(u)du\right)\\
+&\leq(t-a)\int_a^t f'^2(u)du\\
+&\leq (t-a)\int_a^b f'^2(u)du
+\end{align*}
+puisque $f'^2\geq 0$ et que $t\in [a,b].$ On intègre ensuite cette inégalité pour $t\in [a,b],$ et on trouve
+\begin{align*}
+\int_a^b f^2(t)dt&\leq \left(\int_a^b (t-a)dt\right)\left(\int_a^b f'^2(u)du\right)\\
+&\leq\frac{(b-a)^2}2 \int_a^b f'^2(u)du.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1037"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1037"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1037,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de borne inférieure <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1037.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1037,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1037','imageenonce1037');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1037"></a><div class=inner id="innerenonce1037">Soit $E=\mathcal C([a,b],\mathbb R_+^*)$. Déterminer $\inf_{f\in E}\left(\int_a^b f\times \int_a^b \frac 1f\right)$. Cette borne inférieure est-elle atteinte?</div></div><div class=indication><a href="javascript:showAll('innerindication1037','imageindication1037');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1037"></a><div class=inner id="innerindication1037" style="display:none;">Appliquer l'inégalité de Cauchy-Schwarz au produit $\sqrt f\times\frac 1{\sqrt f}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1037','imagecorrige1037',1037);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1037"></a><div class=inner id="innercorrige1037" style="display:none;">Utilisons le produit scalaire canonique sur $F=\mathcal C([a,b],\mathbb R)$ défini par 
+$$\langle f,g\rangle=\int_a^b fg.$$
+D'après l'inégalité de Cauchy-Schwarz pour ce produit scalaire avec le produit $\sqrt f\times\frac 1{\sqrt f}$. On obtient
+$$b-a=\int_a^b \sqrt f\times \frac 1{\sqrt f}\leq \left(\int_a^b f\right)^{1/2}\times \left(\int_a^b \frac 1f\right)^{1/2}.$$
+Prenant le carré, on trouve que, pour tout $f\in E$, 
+$$(b-a)^{2}\leq \int_a^b f\times\int_a^b \frac 1f.$$
+De plus, pour $f=1$, qui est élément de $E$, on a clairement égalité. Ainsi, la borne inférieure recherchée vaut $(b-a)^2$ et est atteinte par la fonction identiquement égale à 1 (plus généralement, par les fonctions constantes).</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1039"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1039"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1039,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Stricte convexité de la boule <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1039.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1039,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1039','imageenonce1039');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1039"></a><div class=inner id="innerenonce1039">Soit $E$ un espace préhilbertien et soit $B=\{x\in E;\ \|x\|\leq 1\}$. Démontrer que $B$ est strictement convexe, c'est-à-dire que, pour tous $x,y\in B$, $x\neq y$ et tout $t\in ]0,1[$, $\|tx+(1-t)y\|&lt;1$.</div></div><div class=indication><a href="javascript:showAll('innerindication1039','imageindication1039');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1039"></a><div class=inner id="innerindication1039" style="display:none;">Montrer d'abord l'inégalité au sens large. Utiliser les cas d'égalité .</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1039','imagecorrige1039',1039);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1039"></a><div class=inner id="innercorrige1039" style="display:none;">Soient $x\neq y$ dans $B$, et $0&lt;t&lt;1$. Prouvons d'abord l'inégalité au sens large :
+$$\|tx+(1-t)y\|\leq t\|x\|+(1-t)\|y\|\leq t+(1-t)=1.$$
+Pour que l'on ait égalité, il faut que les deux inégalités soient des égalités, ce qui entraîne :
+<ul class="rien">
+<li> il existe $\lambda\in\mtr^+$ tel que $tx=\lambda(1-t)y$ (cas d'égalité dans l'inégalité triangulaire pour une norme issue d'un produit scalaire);
+<li> $\|x\|=\|y\|=1$.
+</ul>
+Ces deux conditions ensemble entrainent alors que $x=y$, ce qui est impossible par hypothèse.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3258"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3258"),	max:5, rating:2.1176470588235, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3258,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Approximation au sens des moindres carrés <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3258.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3258,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3258','imageenonce3258');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3258"></a><div class=inner id="innerenonce3258">Soit $E$ un espace préhilbertien et $x_1,\dots,x_p\in E$. Montrer que la fonction $f$ définie sur $E$ par $f(x)=\sum_{i=1}^p \|x-x_i\|^2$ atteint son minimum en $m=\frac 1p\sum_{i=1}^p x_i.$</div></div><div class=indication><a href="javascript:showAll('innerindication3258','imageindication3258');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3258"></a><div class=inner id="innerindication3258" style="display:none;">&Eacute;crire $x-x_i=x-m+m-x_i.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3258','imagecorrige3258',3258);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3258"></a><div class=inner id="innercorrige3258" style="display:none;">On va passer par $m$ : pour cela, on écrit $x-x_i=x-m+m-x_i$ de sorte que 
+$$\|x-x_i\|^2=\|x-m\|^2+2\langle x-m,m-x_i\rangle+\|m-x_i\|^2.$$
+Il vient, en faisant la somme
+\begin{align*}
+f(x)&=p\|x-m\|^2+2\sum_{i=1}^p \langle x-m,m-x_i\rangle+f(m)\\
+&=p\||x-m\|^2+2 \left\langle x-m,\sum_{i=1}^p (m-x_i)\right\rangle+f(m)\\
+&=p\|x-m\|^2+2\langle x-m,pm-pm\rangle+f(m)\\
+&=p\|x-m\|^2+f(m)\geq f(m).
+\end{align*}
+Ainsi, $f$ atteint son minimum en $m.$ </div></div></div>
+
+<div class=titrepartie>Orthogonalité</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3257"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3257"),	max:5, rating:1.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3257,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base de l'orthogonal <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3257.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3257,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3257','imageenonce3257');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3257"></a><div class=inner id="innerenonce3257">$\mathbb R^4$ est muni de sa structure euclidienne canonique.
+On considère les sous-espaces $F$ et $G$ de $\mathbb R^4$ définis par :
+$$F=\{(x,y,z,t)\in\mathbb R^4:\ x-y+2z+t=0\textrm{ et }-x+2y+3z-t=0\}$$
+$$G=\textrm{vect}\big((1,1,1,0),(2,1,1,-1)\big).$$
+Déterminer une base de $F^\perp$ et de $G^\perp.$</div></div><div class=indication><a href="javascript:showAll('innerindication3257','imageindication3257');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3257"></a><div class=inner id="innerindication3257" style="display:none;">Déterminer deux vecteurs $u$ et $v$ tels que $F=(\textrm{vect}(u,v))^\perp.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3257','imagecorrige3257',3257);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3257"></a><div class=inner id="innercorrige3257" style="display:none;">Notons $u=(1,-1,2,1)$ et $v=(-1,2,3,-1)$. Alors on a 
+\begin{align*}
+(x,y,z,t)\in F&\iff (x,y,z,t)\perp u\textrm{ et }(x,y,z,t)\perp v\\
+&\iff (x,y,z,t)\perp \textrm{vect}(u,v).
+\end{align*}
+Ainsi, $F=(\textrm{vect}(u,v))^\perp.$ Puisqu'on est en dimension finie, on a pour tout sous-espace $E$ de $\mathbb R^4$ : $(E^\perp)^\perp=E.$
+On conclut que $F^\perp=\textrm{vect}(u,v).$ Ainsi, puisque $(u,v)$ est une famille libre, $(u,v)$ est une base de $F^\perp.$
+Remarquons ensuite que 
+\begin{eqnarray*}(x,y,z,t)\in G^\perp&\iff& (x,y,z,t)\perp (1,1,1,0)\textrm{ et }(x,y,z,t)\perp (2,1,1,-1)\\
+&\iff &x+y+z=0\textrm{ et }2x+y+z-t=0\\
+&\iff&\left\{\begin{array}{rcl}
+x+y+z&=&0\\
+x-t&=&0\\
+\end{array}\right.
+\\
+&\iff &\left\{\begin{array}{rcl}
+x&=&x\\
+y&=&-x-z\\
+z&=&z\\
+t&=&x\\
+\end{array}\right.
+\end{eqnarray*}
+On en déduit qu'une famille génératrice de $G^\perp$ est donnée par les vecteurs $u_1=(1,-1,0,1)$ et $u_2=(0,-1,1,0)$. Ces vecteurs étant linéairement indépendants, ils forment une base de $G^\perp$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3255"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3255"),	max:5, rating:2.2666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3255,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Système d'équations de l'orthogonal <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3255.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3255,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3255','imageenonce3255');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3255"></a><div class=inner id="innerenonce3255">$\mathbb R^4$ est muni de sa structure euclidienne canonique.
+On considère le sous-espace $G$ de $\mathbb R^4$ défini par :
+$$G=\{(x,y,z,t)\in\mathbb R^4:\ x+y-z+t=0\textrm{ et }x+2y+3z+t=0\}.$$
+Déterminer un système d'équations de $G^\perp.$</div></div><div class=indication><a href="javascript:showAll('innerindication3255','imageindication3255');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3255"></a><div class=inner id="innerindication3255" style="display:none;">Commencer par chercher une base de $G$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3255','imagecorrige3255',3255);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3255"></a><div class=inner id="innercorrige3255" style="display:none;">On commence par chercher une base de $G$.
+On remarque que 
+\begin{eqnarray*}
+(x,y,z,t)\in G&\iff& \left\{\begin{array}{rcl}
+x+y-z+t&=&0\\
+x+2y+3z+t&=&0
+\end{array}\right.\\
+&\iff& \left\{\begin{array}{rcl}
+x+y-z+t&=&0\\
+y+4z&=&0
+\end{array}\right.\\
+&\iff&\left\{\begin{array}{rcl}
+x&=&-y+z-t=5z-t\\
+y&=&-4z\\
+z&=&z\\
+t&=&t
+\end{array}\right.\\
+\end{eqnarray*}
+Ainsi, si on pose $u_1=(5,-4,1,0)$ et $u_2=(-1,0,0,1)$, on sait que $(u_1,u_2)$ est une base de $G$. On détermine alors facilement un système d'équations pour $G^\perp$ :
+\begin{eqnarray*}
+(x,y,z,t)\in G^\perp&\iff& (x,y,z,t)\perp u_1\textrm{ et }(x,y,z,t)\perp u_2\\
+&\iff&\left\{
+\begin{array}{rcl}
+5x-4y+z&=&0\\
+-x+t&=&0
+\end{array}
+\right.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2196"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2196"),	max:5, rating:1.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2196,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une condition nécessaire et suffisante d'orthogonalité <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2196.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2196,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2196','imageenonce2196');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2196"></a><div class=inner id="innerenonce2196">Soit $E$ un espace vectoriel euclidien et $x,y$ deux éléments de $E$. Montrer que $x$ et $y$ sont orthogonaux si et seulement si $\|x+\lambda y\|\geq \|x\|$ pour tout $\lambda\in\mathbb R$.</div></div><div class=indication><a href="javascript:showAll('innerindication2196','imageindication2196');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2196"></a><div class=inner id="innerindication2196" style="display:none;">Développer $\|x+\lambda y\|^2$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2196','imagecorrige2196',2196);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2196"></a><div class=inner id="innercorrige2196" style="display:none;">Remarquons que, puisque tout est positif, l'inégalité est équivalente à $\|x+\lambda y\|^2\geq \|x\|^2$. Or,
+$$\|x+\lambda y\|^2=\|x\|^2+2\lambda \langle x,y\rangle+\lambda^2\|y\|^2$$
+et donc l'inégalité est équivalente à 
+$$2\lambda \langle x,y\rangle+\lambda^2\|y\|^2\geq 0.$$
+Supposons d'abord que $x$ est orthogonal à $y$, et donc que $\langle x,y\rangle=0$. Alors l'inégalité précédente est bien vérifiée pour tout $\lambda\in\mathbb R$. Réciproquement, supposons que, pour tout $\lambda\in \mathbb R$, 
+$$2\lambda \langle x,y\rangle+\lambda^2\|y\|^2\geq 0.$$
+Si $y=0,$ l'inégalité $2\lambda \langle x,y\rangle\geq 0$ pour 
+tout $\lambda\in\mathbb R$ entraîne $\langle x,y\rangle=0$. Si $y\neq 0,$
+alors $2\lambda \langle x,y\rangle+\lambda^2 \|y\|^2$ est un polynôme
+du second degré en $\lambda$ qui est toujours positif ou nul. Le discriminant de ce polynôme doit donc être négatif ou nul, ce qui signifie que $4\langle x,y\rangle^2\leq 0$. Ceci n'est possible que si $\langle x,y\rangle=0$, c'est-à-dire si $x$ et $y$ sont orthogonaux.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1042"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1042"),	max:5, rating:1.6333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1042,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Relations usuelles sur les orthogonaux <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1042.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1042,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1042','imageenonce1042');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1042"></a><div class=inner id="innerenonce1042">Soit $E$ un espace préhilbertien, et $A$ et $B$ deux parties de $E$. Démontrer les relations suivantes :
+<ol class="enumeratechiffre">
+<li> $A\subset B\implies B^\perp\subset A^\perp$.
+<li> $(A\cup B)^\perp=A^\perp\cap B^\perp$.
+<li> $A^\perp=\textrm{vect}(A)^\perp$;
+<li> $\textrm{vect}(A)\subset A^{\perp\perp}$.
+<li> On suppose de plus que $E$ est de dimension finie. Démontrer que 
+$\textrm{vect}(A)= A^{\perp\perp}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1042','imageindication1042');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1042"></a><div class=inner id="innerindication1042" style="display:none;"><ol class="enumeratechiffre">
+<li> Facile!
+<li> Facile, par double inclusion.
+<li> 
+<li> Utiliser le fait que $(A^\perp)^{\perp}$ est un sous-espace vectoriel de $E$.
+<li> Utiliser des conditions de dimension et la question précédente pour se ramener au cas où $A$ est un  sous-espace vectoriel.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1042','imagecorrige1042',1042);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1042"></a><div class=inner id="innercorrige1042" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $y\in B^\perp$. Alors, pour tout $x\in A$, on a $x\in B$ et donc $\langle x,y\rangle=0$, ce qui prouve que $y\in A^\perp$.
+<li> On commence par prendre $x\in (A\cup B)^\perp$, et prouvons que $x\in A^\perp$. En effet, si $y\in A$, on a $y\in A\cup B$, et donc $\langle x,y\rangle=0$.
+Ceci montre la première inclusion. Réciproquement, si $x\in A^\perp\cap B^\perp$, prenons $y\in (A\cup B)$. Alors si $y\in A$, 
+on a bien $\langle x,y\rangle =0$ puisque $x\in A^\perp$, et le cas où $y\in B$ se résoud de la même façon.
+<li> D'après la première question, puisque $A\subset \textrm{vect}(A)$, on a 
+$$\textrm{vect}(A)^\perp \subset A^\perp.$$
+Réciproquement, si $y\in A^\perp$, prenons $x\in\textrm{vect}(A)$. Alors on peut trouver des éléments $a_1,\dots,a_n$ de $A$ et des scalaires $\lambda_1,\dots,\lambda_n$ tels que 
+$$x=\lambda_1a_1+\dots+\lambda_n a_n.$$
+On a alors 
+\begin{eqnarray*}
+\langle y,x\rangle&=&\langle y,\lambda_1 a_1+\dots+\lambda_n a_n\rangle\\
+&=& \lambda_1 \langle y,a_1\rangle+\dots+\lambda_n \langle y,a_n\rangle\\
+&=&\lambda_1 0+\dots+\lambda_n 0\\
+&=&0,
+\end{eqnarray*}
+et donc $y\in \textrm{vect}(A)^\perp$.
+<li> On va commencer par prouver que $A\subset (A^{\perp})^{\perp}$. Mais, soit $x\in A$. Choisissons $y\in A^\perp$. On a alors $\langle x,y\rangle=0$, ce qui prouve que $x\in A^{\perp\perp}$.  D'autre part, $(A^\perp)^{\perp}$ est un sous-espace vectoriel de $E$ qui contient $A$. Il contient donc le sous-espace vectoriel engendré par $A$ et on a bien l'inclusion demandée.
+<li> Notons $B=\textrm{vect}(A)$ et $n=\dim(E)$. Alors d'après la question précédente,
+$$(A^\perp)^{\perp}=(B^\perp)^{\perp}.$$
+D'autre part,
+$$\dim(B^\perp)=n-\dim B\implies \dim((B^{\perp})^\perp)=n-\dim(B^\perp)=\dim(B).$$
+Ainsi, d'après la question précédente, on a $B\subset (B^\perp)^\perp$ et ces deux sous-espaces ont la même dimension. Ils sont donc égaux!
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1043"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1043"),	max:5, rating:1.9032258064516, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1043,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Orthogonal, somme et intersection <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1043.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1043,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1043','imageenonce1043');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1043"></a><div class=inner id="innerenonce1043">Soient $F$ et $G$ deux sous-espaces vectoriels d'un espace préhilbertien $E$. Montrer que :
+$$(F+G)^\perp=F^\perp\cap G^\perp.$$
+$$F^\perp+G^\perp\subset (F\cap G)^\perp.$$
+Que se passe-t-il en dimension finie?</div></div><div class=indication><a href="javascript:showAll('innerindication1043','imageindication1043');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1043"></a><div class=inner id="innerindication1043" style="display:none;">Utiliser que si $A\subset B$, alors $B^\perp\subset A^\perp$.
+En dimension finie, faire un raisonnement à l'aide des dimensions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1043','imagecorrige1043',1043);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1043"></a><div class=inner id="innercorrige1043" style="display:none;">On remarque d'abord que si $A\subset B$, alors on a $B^\perp\subset A^\perp$, ce qui est immédiat 
+en appliquant la définition.
+Ainsi, puisque $F\subset F+G$ et $G\subset F+G$, on obtient $(F+G)^\perp\subset F^\perp\cap G^\perp$.
+Prenons maintenant $x\in F^\perp\cap G^\perp$. Tout $z\in F+G$ s'écrit $z=f+g$, avec $f\in F$ et $g\in G$. 
+Alors :
+$$(x,z)=(x,f)+(x,g)=0,$$
+ce qui prouve que $F^\perp\cap G^\perp\subset (F+G)^\perp.$ D'autre part, on a $F\cap G\subset F$ et $F\cap G\subset G$,
+ce qui donne respectivement $F^\perp\subset (F\cap G)^\perp$ et $G^\perp\subset (F\cap G)^\perp$. Puisque $(F\cap G)^\perp$
+est un sous-espace vectoriel, il est stable par addition, et donc on a $F^\perp+G^\perp\subset (F\cap G)^\perp$.
+Dans le cas où $E$ est un espace de dimension finie, on peut obtenir l'autre inclusion en comparant les
+dimensions des sous-espaces :
+\begin{eqnarray*}
+\dim(F^\perp+G^\perp)&=&\dim F^\perp+\dim G^\perp-\dim(F^\perp\cap G^\perp)\\
+&=&\dim(F^\perp)+\dim(G^\perp)-\dim(F+G)^\perp\\
+&=&\dim(E)-\dim(F)-\dim(G)+\dim(F+G)\\
+&=&\dim(E)-\dim(F\cap G)\\
+&=&\dim((F\cap G)^\perp).
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1044"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1044"),	max:5, rating:2.5882352941176, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1044,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas de supplémentaire orthogonal! <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1044.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1044,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1044','imageenonce1044');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1044"></a><div class=inner id="innerenonce1044">On considère $E=C([0,1],\mtr)$ muni du produit scalaire $(f,g)=\int_0^1 f(t)g(t)dt.$
+Soit $F=\{f\in E,\ f(0)=0\}$. Montrer que $F^\perp=\{0\}$. En déduire que $F$ n'admet pas
+de supplémentaire orthogonal.</div></div><div class=indication><a href="javascript:showAll('innerindication1044','imageindication1044');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1044"></a><div class=inner id="innerindication1044" style="display:none;">On peut utiliser que si $g$ est dans $E$, alors $xg$ est dans $F$. 
+Si $F$ admet un supplémentaire orthogonal, on a toujours $F\oplus F^\perp=E$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1044','imagecorrige1044',1044);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1044"></a><div class=inner id="innercorrige1044" style="display:none;">Soit $g\in F^\perp$. Remarquons que la fonction $h$ définie par $h(x)=xg(x)$ 
+est dans $F$. On en déduit que $(g,h)=0$, ce qui donne $\int_0^1 xg^2(x)=0.$
+Or, la fonction $x\mapsto xg^2(x)$ est positive et continue sur $[0,1]$. Puisque son intégrale est nulle,
+c'est qu'il s'agit de la fonction identiquement nulle. Ainsi, pour tout $x&gt;0$, on a $g(x)=0$.
+Maintenant, $g$ est continue, et donc on obtient que $g$ est identiquement nulle. Ainsi, $F^\perp=\{0\}$.
+D'autre part, si $F$ admettait un supplémentaire orthogonal, on aurait $F\oplus F^\perp=E$. Ici,
+$F\oplus F^\perp=F\neq E$. Donc $F$ n'admet pas de supplémentaire orthogonal!</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Bases orthonormales</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1045"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1045"),	max:5, rating:1.7407407407407, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1045,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Orthonormalisation de Schmidt <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1045.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1045,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1045','imageenonce1045');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1045"></a><div class=inner id="innerenonce1045">Dans $\mathbb R^3$ muni du produit scalaire canonique, orthonormaliser en suivant le procédé de Schmidt la base suivante :
+$$u=(1,0,1),\ v=(1,1,1),\ w=(-1,-1,0).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1045','imageindication1045');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1045"></a><div class=inner id="innerindication1045" style="display:none;">Il suffit de suivre le cours...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1045','imagecorrige1045',1045);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1045"></a><div class=inner id="innercorrige1045" style="display:none;">Le premier vecteur est simplement $\frac u{\|u\|}$. Puisque $\|u\|=\sqrt 2$, on a
+$$e_1=\left(\frac{1}{\sqrt 2},0,\frac 1{\sqrt 2}\right).$$
+Cherchons ensuite $e'_2$ sous la forme $e'_2=v+\lambda e_1$ de sorte que $\langle e'_2,e_1\rangle=0$.
+On a 
+\begin{eqnarray*}
+\langle e'_2,e_1\rangle&=&\langle v,e_1\rangle+\lambda \langle e_1,e_1\rangle\\
+&=&\frac{2}{\sqrt 2}+\lambda\\
+&=&\sqrt 2+\lambda.
+\end{eqnarray*}
+On doit donc avoir $\lambda=-\sqrt 2$ ce qui donne
+$$e'_2=(0,1,0).$$
+Il est déjà normalisé et donc on pose $e_2=(0,1,0)$. Cherchons ensuite $e'_3$ sous la forme
+$$e'_3=w+\lambda e_1+\mu e_2$$
+de sorte que $\langle e'_3,e_1\rangle=0$ et $\langle e'_3,e_2\rangle=0$. Il vient :
+\begin{eqnarray*}
+\langle e'_3,e_1\rangle&=&\langle w,e_1\rangle+\lambda \langle e_1,e_1\rangle\\
+&=&-\frac{1}{\sqrt 2}+\lambda
+\end{eqnarray*}
+d'où il vient $\lambda=\frac{1}{\sqrt 2}$. Ensuite, on a 
+\begin{eqnarray*}
+\langle e'_3,e_2\rangle&=&\langle w,e_2\rangle+\mu \langle e_2,e_2\rangle\\
+&=& -1+\mu
+\end{eqnarray*}
+d'où $\mu=1$. On en déduit que 
+$$e'_3=\left(-\frac 12,0,\frac 12\right).$$
+On normalise ce vecteur, et on trouve 
+$$e_3=\left(-\frac 1{\sqrt 2},0,\frac 1{\sqrt 2}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater3254"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3254"),	max:5, rating:1.625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3254,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base orthonormale d'un sous-espace <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3254.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(3254,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3254','imageenonce3254');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3254"></a><div class=inner id="innerenonce3254">$\mathbb R^4$ est muni de sa structure euclidienne canonique.
+On considère le sous-espace $F$ de $\mathbb R^4$ défini par :
+$$F=\{(x,y,z,t)\in\mathbb R^4:\ x+z+t=0\textrm{ et }x-y+z=0\}.$$
+Déterminer une base orthonormale de $F$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3254','imagecorrige3254',3254);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3254"></a><div class=inner id="innercorrige3254" style="display:none;">On commence par chercher une base de $F$. On remarque que 
+\begin{eqnarray*}
+(x,y,z,t)\in F&\iff& \left\{\begin{array}{rcl}
+x&=&-z-t\\
+y&=&x+z=-t
+\end{array}\right.\\
+&\iff&
+\left\{\begin{array}{rcl}
+x&=&-z-t\\
+y&=&-t\\
+z&=&z\\
+t&=&t
+\end{array}\right.
+\end{eqnarray*}
+Posons alors $u_1=(-1,0,1,0)$ et $u_2=(-1,-1,0,1)$. Alors $(u_1,u_2)$ est une base de $F$. Malheureusement, elle n'est pas orthonormale. On l'orthonormalise en posant 
+$$v_1=\frac{u_1}{\|u_1\|}=\frac1{\sqrt 2}(-1,0,1,0).$$
+On pose ensuite 
+\begin{align*}
+u'_2&=u_2-\langle u_2,v_1\rangle v_1\\
+&=(-1,-1,0,1)-\frac{1}{\sqrt 2}\times \frac 1{\sqrt 2}(-1,0,1,0)\\
+&=(-1/2,-1,-1/2,1)
+\end{align*}
+de sorte que $\langle u'_2,v_1\rangle=0.$ On normalise enfin $u'_2$ en posant 
+$$v_2=\frac{u'_2}{\|u'_2\|}=\frac{\sqrt 2}{\sqrt 5}(-1/2,-1,-1/2,1). $$
+La famille $(v_1,v_2)$ est une base orthonormale de $F.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1047"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1047"),	max:5, rating:2.4074074074074, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1047,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver une base orthonormale <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1047.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1047,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1047','imageenonce1047');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1047"></a><div class=inner id="innerenonce1047">Déterminer une base orthonormale de $\mathbb R_2[X]$ muni du produit scalaire 
+$$\langle P,Q\rangle=\int_{-1}^1 P(t)Q(t)dt.$$</div></div><div class=indication><a href="javascript:showAll('innerindication1047','imageindication1047');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1047"></a><div class=inner id="innerindication1047" style="display:none;">Orthonormaliser la base canonique $(1,X,X^2)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1047','imagecorrige1047',1047);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1047"></a><div class=inner id="innercorrige1047" style="display:none;">On va orthonormaliser la base canonique $(1,X,X^2)$. Commençons par normaliser $1$. Sa norme est $\sqrt 2$. On pose donc $$P=\frac 1{\sqrt 2}.$$ Considérons ensuite 
+$$Q_1(X)=X+\lambda P$$
+où $\lambda$ est choisi de sorte que $\langle Q_1,P\rangle=0$. Mais,
+$$\langle Q_1,P\rangle=\int_{-1}^1 \frac t{\sqrt 2}dt+\lambda \langle P,P\rangle=\lambda.$$
+On doit donc avoir $\lambda=0$ (en réalité, les deux vecteurs $1$ et $X$ sont déjà orthogonaux!), 
+et donc $Q_1=X$. On normalise ce vecteur en 
+$$Q(X)=\sqrt{\frac 32}X.$$
+On pose enfin 
+$$R_1=X^2+\lambda P+\mu Q$$ de sorte que
+$\langle R_1,P\rangle=0$ et $\langle R_1,Q\rangle=0$. Mais, $X^2$ est déjà orthogonal à $X$, et donc par un calcul similaire au précédent, on va trouver que $\mu=0$. D'autre part,
+$$\langle R_1,P\rangle=\frac 1{\sqrt 2}\int_{-1}^1 t^2dt+\lambda=\frac {\sqrt 2}3+\lambda.$$
+On trouve $\lambda=-\frac{\sqrt 2}3$ et donc 
+$$R_1(X)=X^2-\frac{1}3.$$
+Reste à normaliser ce vecteur en 
+$$R(X)=\sqrt{\frac 58}(3X^2-1).$$
+Ainsi, $\left(\frac 1{\sqrt 2},\sqrt{\frac 32}X,\sqrt{\frac 58}(3X^2-1)\right)$ est une base orthonormale de $\mathbb R_2[X]$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater1049"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1049"),	max:5, rating:2.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1049,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une caractérisation des bases orthonormales <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1049.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(1049,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1049','imageenonce1049');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1049"></a><div class=inner id="innerenonce1049">Soit $E$ un espace préhilbertien, et $(e_1,\dots,e_n)$ une famille de $n$ vecteurs de $E$ de norme 1 tels que, pour tout $x\in E$, on a 
+$$\|x\|^2=\sum_{k=1}^n \langle x,e_k\rangle^2.$$
+Démontrer que $E$ est de dimension $n$ et que $(e_1,\dots,e_n)$ est une base orthonormale de $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication1049','imageindication1049');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1049"></a><div class=inner id="innerindication1049" style="display:none;">Démontrer d'abord qu'il s'agit d'une famille orthogonale.
+Pour démontrer qu'elle est génératrice, démontrer que, pour tout $x\in E$, on a 
+$$x=\sum_{k=1}^n \langle x,e_k\rangle e_k.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1049','imagecorrige1049',1049);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1049"></a><div class=inner id="innercorrige1049" style="display:none;">On va prouver que la famille est libre et génératrice. D'une part, si on applique l'égalité avec $e_j$, on obtient :
+$$1=1+\sum_{k\neq j}\langle e_k,e_j\rangle^2.$$
+Ainsi, pour tout $k\neq j$, on a $\langle e_k,e_j\rangle=0$, et la famille est orthogonale. Ainsi, c'est une famille libre.
+De plus, elle est génératrice. Prenons en effet $x\in E$, et posons
+$$y=\sum_{k=1}^n \langle x,e_k\rangle e_k.$$
+On va prouver que $x=y$. Pour cela, on remarque que, puisque la famille est orthogonale, on a
+$\langle x,e_k\rangle=\langle y,e_k\rangle$. Or, 
+$$\|x-y\|^2=\sum_{k=1}^n \langle x-y,e_k\rangle^2=0.$$
+Donc $x=y$. $(e_1,\dots,e_n)$ est donc une base orthonormale de $E$, qui est de dimension $n$
+(ceci n'était pas précisé au début de l'énoncé).<br>
+Une autre façon de prouver que la famille est génératrice est de considérer $F$ le sous-espace de $E$ engendré par $(e_1,\dots,e_n)$. Il s'agit d'un sous-espace de dimension finie de $E$. On peut donc considérer $p$ la projection orthogonale sur $F$. Pour tout $x\in E$, d'après le théorème de Pythagore, on a 
+$$\|x\|^2=\|p(x)\|^2+\|x-p(x)\|^2.$$
+Or, 
+$$p(x)=\sum_{i=1}^n \langle x,e_i\rangle e_i\implies \|p(x)\|^2=\sum_{i=1}^n \langle x,e_i\rangle^2=\|x\|^2.$$
+On en déduit que $\|x-p(x)\|=0$, ou encore que $p(x)=x$, ou encore que $x\in F$, ce qui achève la preuve de $F=E$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater1048"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1048"),	max:5, rating:2.84, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1048,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Similitudes <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1048.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(1048,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1048','imageenonce1048');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1048"></a><div class=inner id="innerenonce1048">Soit $E$ un espace euclidien,  $f\in\mathcal L(E)$ et $\lambda&gt;0$. On dit que $f$ est une similitude de rapport $\lambda$ si pour tout $x\in E$, $\|f(x)\|=\lambda \|x\|$.
+<ol class="enumeratechiffre">
+<li> Question préliminaire : soient $u,v\in E$ tels que $u+v\perp u-v$. Démontrer que $\|u\|=\|v\|$.
+<li> Démontrer que $f$ est une similitude de rapport $\lambda$ si et seulement si, pour tous $x,y\in E$,  $\langle f(x),f(y)\rangle =\lambda^2 \langle x,y\rangle.$
+<li> On souhaite prouver que $f$ est une similitude si et seulement si $f$ est non-nulle et conserve l'orthogonalité : pour tout couple $(x,y)\in E$, si $x\perp y$, alors $f(x)\perp f(y)$.
+<ol class="enumeratechiffre">
+<li> Prouver le sens direct.
+<li> Réciproquement, on suppose que $f$ est non-nulle et préserve l'orthogonalité. Soit $(e_1,\dots,e_n)$ une base orthonormale de $E$. Démontrer que, pour tout couple $(i,j)$, 
+$\|f(e_i)\|=\|f(e_j)\|$.
+<li> Conclure.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1048','imageindication1048');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1048"></a><div class=inner id="innerindication1048" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser une formule de polarisation.
+<li> Utiliser une formule de polarisation.
+<li> 
+<ol class="enumeratechiffre">
+<li> 
+<li> Utiliser le résultat de la première question.
+<li> Soit $\lambda$ tel que $\|f(e_i)\|=\lambda \|e_i\|$ ($\lambda$ ne dépend pas de $i$). Démontrer que $f$ est une similitude de rapport $\lambda$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1048','imagecorrige1048',1048);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1048"></a><div class=inner id="innercorrige1048" style="display:none;"><ol class="enumeratechiffre">
+<li> On va utiliser la formule de polarisation
+$$\langle x,y\rangle=\frac 14\left(\|x+y\|^2-\|x-y\|^2\right).$$
+Si on applique cette formule à $x=u+v$ et $y=u-v$, $x$ et $y$ sont orthogonaux et on trouve $\|u\|=\|v\|$.
+<li> Bien sûr, le sens réciproque est trivial puisqu'il suffit de choisir $x=y$. Réciproquement, supposons que pour tout $x\in E$, on a $\|f(x)\|=\lambda \|x\|$. Alors, par la formule de polarisation rappelée ci-dessus qu'on utilise deux fois :
+\begin{eqnarray*}
+\langle f(x),f(y)\rangle&=&\frac 14\left(\|f(x+y)\|^2-\|f(x-y)\|^2\right)\\
+&=&\frac 14\left(\lambda^2\|x+y\|^2-\lambda^2\|x-y\|^2\right)\\
+&=&\frac {\lambda^2}4\left(\|x+y\|^2-\|x-y\|^2\right)\\
+&=&\lambda^2 \langle x,y\rangle.
+\end{eqnarray*}
+<li>
+<ol class="enumeratechiffre">
+<li> C'est trivial d'après la question précédente. 
+<li> On sait que $e_i+e_j\perp e_i-e_j$. Puisque $f$ préserve l'orthogonalité, $f(e_i)+f(e_j)\perp f(e_i)-f(e_j)$. Et d'après la première question, $\|f(e_i)\|=\|f(e_j)\|.$
+<li> Soit $\lambda&gt;0$ tel que $\|f(e_i)\|=\lambda \|e_i\|$ ($\lambda$ ne dépend pas de $i$ d'après la question précédente, et est strictement positif sinon $f$ serait nulle). On va démontrer que $f$ est une similitude de rapport $\lambda$. Soit $x\in E$ qui s'écrit
+$$x=\sum_{i=1}^n x_i e_i.$$
+Alors 
+$$f(x)=\sum_{i=1}^n x_if(e_i).$$
+La famille $(f(e_i))$ étant orthogonale, on a 
+\begin{eqnarray*}
+\|f(x)\|^2&=&\sum_{i=1}^n |x_i|^2\|f(e_i)\|^2\\
+&=&\lambda^2 \sum_{i=1}^n |x_i|^2\\
+&=&\lambda^2 \|x\|^2.
+\end{eqnarray*}
+$f$ est bien une similitude de rapport $\lambda$.
+</ol>
+</ol></div></div></div>
+
+<div class=titrepartie>Projections orthogonales et calculs de distances</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater3263"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3263"),	max:5, rating:0.89473684210526, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3263,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projeté orthogonal dans $\mathbb R^4$ <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3263.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(3263,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3263','imageenonce3263');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3263"></a><div class=inner id="innerenonce3263">Dans $\mathbb R^4$ muni de son produit scalaire canonique, on considère $F$ le sous-espace vectoriel défini par 
+$$F=\{(x,y,z,t)\in\mathbb R^4:\ x+y+t=0\textrm{ et }x+y+2z-t=0\}.$$
+Déterminer le projeté orthogonal de $u=(1,8,1,1)$ sur $F$.</div></div><div class=indication><a href="javascript:showAll('innerindication3263','imageindication3263');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3263"></a><div class=inner id="innerindication3263" style="display:none;">Commencer par chercher une base $(u_1,u_2)$ de $F$. Ensuite, on peut l'orthonormaliser puis utiliser la formule du projeté, ou écrire a priori que le projeté orthogonal de $u$ s'écrit $au_1+bu_2$ et trouver des conditions sur $a$ et $b$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3263','imagecorrige3263',3263);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3263"></a><div class=inner id="innercorrige3263" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Méthode et correction de l'exercice en vidéo</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E3RednT6V4c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+On commencer par rechercher une base de $F$. Pour cela on écrit que 
+\begin{eqnarray*}
+(x,y,z,t)\in F&\iff&\left\{
+\begin{array}{rcl}
+x+y+t&=&0\\
+x+y+2z-t&=&0
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcll}
+x+y+t&=&0\\
+2z-2t&=&0&L_2\leftarrow L_2-L_1\\
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcll}
+x&=&-y&-t\\
+y&=&y\\
+z&=&&t\\
+t&=&&t
+\end{array}\right.
+\end{eqnarray*}
+Ainsi, si on pose $u_1=(-1,1,0,0)$ et $u_2=(-1,0,1,1)$, on trouve que $(u_1,u_2)$ est une base de $F$. Notons ensuite $p_F(u)$ le projeté orthogonal de $u$ sur $F$ et donnons deux méthodes pour le calculer.<br>
+Une première méthode consiste à écrire que $p_F(u)=au_1+bu_2=(-a-b,a,b,b)$
+de sorte que $u-p_F(u)=(1+a+b,8-a,1-b,1-b).$ On sait que $u-p_F(u)\perp u_1.$ Calculant le produit scalaire, on trouve
+$$-1-a-b+8-a=0\iff 2a+b=7.$$
+On sait aussi que $u-p_F(u)\perp u_2$ et toujours avec l'aide du produit scalaire : 
+$$-1-a-b+1-b+1-b=0\iff a+3b=1.$$
+Ainsi, $(a,b)$ est solution du système suivant, que l'on va résoudre : 
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+a+3b&=&1\\
+2a+b&=&7
+\end{array}\right.&\iff&
+\left\{\begin{array}{rcl}
+a+3b&=&1\\
+-5b&=&5
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+a&=&4\\
+b&=&-1
+\end{array}\right.
+\end{eqnarray*}
+On trouve $p_F(u)=(-3,4,-1,-1).$<br>
+Deuxième méthode : on va orthonormaliser la base $(u_1,u_2)$. Puisque $\|u_1\|=\sqrt 2,$ on pose 
+$$v_1=\frac1{\sqrt 2}(-1,1,0,0).$$
+On cherche ensuite $u'_2=u_2+\alpha v_1$ de sorte que $\langle u'_2,v_1\rangle=0.$ Ceci donne 
+$$\frac 1{\sqrt 2}+\alpha=0\iff \alpha=\frac{-1}{\sqrt 2}.$$
+On obtient 
+$$u'_2=(-1,0,1,1)+\left(\frac 12,-\frac 12,0,0\right)=\left(-\frac 12,-\frac 12,1,1\right).$$
+D'autre part, 
+$$\|u'_2\|^2=\frac 14+\frac 14+1+1=\frac{10}4$$
+et donc on pose 
+$$v_2=\frac{u'_2}{\|u'_2\|}=\frac1{\sqrt 10}(-1,-1,2,2).$$
+On sait ensuite que $p_F(u)=\langle u,v_1\rangle v_1+\langle u,v_2\rangle v_2.$
+Or, 
+$$\langle u,v_1\rangle=\frac{7}{\sqrt 2}\textrm{ et }\langle u,v_2\rangle=\frac{-5}{\sqrt{10}}$$
+de sorte que 
+$$\langle u,v_1\rangle v_1=\left(-\frac 72,\frac 72,0,0\right)$$
+et
+$$\langle u,v_2\rangle v_2=\left(\frac 12,\frac 12,-1,-1\right).$$
+Après un dernier petit calcul, on retrouve bien $p_F(u)=(-3,4,-1,-1).$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater1055"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1055"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1055,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection orthogonale dans $\mathbb R^4$ <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1055.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(1055,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1055','imageenonce1055');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1055"></a><div class=inner id="innerenonce1055">Soit $E=\mathbb R^4$ muni de son produit scalaire canonique et de la base canonique $\mathcal B=(e_1,e_2,e_3,e_4)$. On considère $G$ le sous-espace vectoriel des quadruplets $(x_1,x_2,x_3,x_4)$ de $E$ tels que
+$$\left\{
+\begin{array}{rcl}
+x_1+x_2&=&0\\
+x_3+x_4&=&0.
+\end{array}
+\right.
+$$
+<ol class="enumeratechiffre">
+<li> Déterminer une base orthonormale de $G$.
+<li> Déterminer la matrice dans $\mathcal B$ de la projection orthogonale $p_G$ sur $G$.
+<li> Soit $x=(x_1,x_2,x_3,x_4)$ un élément de $E$. Déterminer la distance de $x$ à $G$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1055','imageindication1055');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1055"></a><div class=inner id="innerindication1055" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par trouver une base de $G$ et l'orthonormaliser.
+<li> Utiliser la formule de la projection en fonction d'une base orthonormée de l'espace sur lequel on projette.
+<li> Utiliser la formule du cours!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1055','imagecorrige1055',1055);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1055"></a><div class=inner id="innercorrige1055" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par trouver une base de $G$. Mais on a 
+$$\left\{
+\begin{array}{rcl}
+x_1+x_2&=&0\\
+x_3+x_4&=&0\\
+\end{array}
+\right.\iff
+\left\{
+\begin{array}{rcl}
+x_1&=&x_1\\
+x_2&=&-x_1\\
+x_3&=&x_3\\
+x_4&=&-x_3.
+\end{array}\right.
+$$
+On en déduit que $(e_1-e_2,e_3-e_4)$ est une base de $G$. Ces deux vecteurs sont déjà orthogonaux, il suffit de les normaliser. Si on pose $u_1=\frac1{\sqrt 2}(e_1-e_2)$, $u_2=\frac1{\sqrt 2}(e_3-e_4)$, alors $(u_1,u_2)$ est une base orthonormale de $G$. 
+<li> On va calculer $p_G(e_i)$ par la formule 
+$$p_G(e_i)=\langle e_i,u_1\rangle u_1+\langle e_i,u_2\rangle u_2.$$
+On en déduit que la matrice de $p_G$ dans la base canonique est 
+$$\frac 12\left(
+\begin{array}{cccc}
+1&-1&0&0\\
+-1&1&0&0\\
+0&0&1&-1\\
+0&0&-1&1
+\end{array}
+\right).$$
+<li> On sait que $d(x,G)=\|x-p_G(x)\|$. &Eacute;crivons $x=(x_1,x_2,x_3,x_4)$. Alors 
+$$p_G(x)=\frac 12(x_1-x_2,-x_1+x_2,x_3-x_4,-x_3+x_4)$$
+et donc 
+$$x-p_G(x)=\frac 12(x_1+x_2,x_1+x_2,x_3+x_4,x_3+x_4).$$
+Il vient
+$$d(x,G)^2=\frac 12\left((x_1+x_2)^2+(x_3+x_4)^2\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater3260"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3260"),	max:5, rating:2.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3260,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul du projeté orthogonal <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3260.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(3260,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3260','imageenonce3260');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3260"></a><div class=inner id="innerenonce3260">Soit $E=\mathcal C([0,1])$ muni du produit scalaire $\langle f,g\rangle=\int_0^1 f(t)g(t)dt.$ Calculer le projeté orthogonal de $x^2$ sur $F=\textrm{vect}(1,x)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3260','imagecorrige3260',3260);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3260"></a><div class=inner id="innercorrige3260" style="display:none;">On va étudier deux façons de répondre à cet exercice. La première consiste à calculer une base orthonormée de $F$, et d'utiliser l'expression de la projection dans une base orthonormée. Posons $e_1=1$ et $e_2=x$, qui est une base de $F=\textrm{vect}(1,x)$. On va orthonormaliser cette base en une base orthonormale $(u_1,u_2)$. D'abord on a 
+$$u_1=\frac{u_1}{\|u_1\|}=1.$$
+Ensuite, on chercher $u'_2\in \textrm{vect}(u_1,e_2)$ tel que $u'_2\perp u_1$. Pour cela, on écrit $u'_2=e_2+\lambda_1 u_1.$ On a
+\begin{eqnarray*}
+u'_2\perp u_1&\iff&\langle u'_2,u_1\rangle=0\\
+&\iff&\langle e_2,u_1\rangle+\lambda_1=0\\
+&\iff&\int_0^1 xdx+\lambda_1=0\\
+&\iff&\lambda_1=-\frac 12.
+\end{eqnarray*}
+Ainsi, $u'_2=x-\frac 12$ est orthogonal à $u_1$ et $\textrm{vect}(u_1,u'_2)=\textrm{vect}(e_1,e_2)$. On normalise ensuite $u'_2$ : 
+$$\|u'_2\|^2=\int_0^1\left(x-\frac 12\right)^2dx=\frac 13\left[\left(x-\frac 12\right)^3\right]_0^1=\frac 13\left(\frac 18+\frac 18\right)=\frac1{12}$$
+et
+$$u_2=\frac{u'_2}{\|u'_2\|}=\sqrt{12}u'_2=\sqrt 3(2x-1).$$
+Il vient alors 
+$$p_F(x^2)=\langle x^2,u_2\rangle u_2+\langle x^2,u_1\rangle u_1.$$
+Or
+$$\langle x^2,u_2\rangle=\int_0^1 \sqrt 3(2x^3-x^2)dx=\sqrt 3\left(\frac 12-\frac 13\right)=\frac{\sqrt 3}6$$
+et $$\langle x^2,u_1\rangle=\int_0^1 x^2dx=\frac 13.$$
+On obtient pour conclure 
+$$p_F(x^2)=\frac 12(2x-1)+\frac13=x-\frac 16.$$
+L'autre méthode consiste à écrire a priori que $p_F(x^2)=ax+b$ puis à déterminer $a$ et $b$ en écrivant que 
+\begin{eqnarray*}
+x^2-p_F(x^2)\perp 1&\iff& \langle x^2-ax-b,1\rangle=0\\
+&\iff&\int_0^1 (x^2-ax-b)dx=0\\
+&\iff& \frac 13-\frac a2-b=0
+\end{eqnarray*}
+et 
+\begin{eqnarray*}
+x^2-p_F(x^2)\perp x&\iff& \langle x^2-ax-b,x\rangle=0\\
+&\iff&\int_0^1 (x^3-ax^2-bx)dx=0\\
+&\iff& \frac 14-\frac a3-\frac b2=0.
+\end{eqnarray*}
+On obtient un système que l'on résout facilement :
+$$\left\{
+\begin{array}{rcl}
+\frac 13-\frac a2-b&=&0\\
+\frac 14-\frac a3-\frac b2&=&0
+\end{array}\right. \iff
+\left\{
+\begin{array}{rcl}
+a&=&1\\
+b&=&-1/6.
+\end{array}\right. 
+$$
+On retrouve bien sûr le même projeté orthogonal $p_F(x^2)=x-\frac 16.$
+ </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater3256"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3256"),	max:5, rating:1.6111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3256,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distance à un hyperplan <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3256.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(3256,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3256','imageenonce3256');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3256"></a><div class=inner id="innerenonce3256">Dans $\mathbb R^3$ muni de sa structure euclidienne canonique, déterminer la distance de $u(3,4,3)$ au plan $\mathcal P$ d'équation $2x+y-z=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication3256','imageindication3256');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3256"></a><div class=inner id="innerindication3256" style="display:none;">Déterminer un vecteur normal au plan $\mathcal P$ et appliquer la formule du cours.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3256','imagecorrige3256',3256);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3256"></a><div class=inner id="innercorrige3256" style="display:none;">Un vecteur normal à $\mathcal P$ est donnée par $v=(2,1,-1)$. Ainsi, par une formule du cours, 
+$$d(u,\mathcal P)=\frac{|\langle u,v\rangle|}{\|v\|}=\frac{7}{\sqrt 6}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater2615"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2615"),	max:5, rating:1.7, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2615,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection dans un espace de matrices <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2615.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(2615,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2615','imageenonce2615');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2615"></a><div class=inner id="innerenonce2615">Soit $E=\mathcal M_2(\mathbb R)$ que l'on munit du produit scalaire
+$$\langle M,N\rangle=\textrm{Tr}(M^TN).$$
+On pose $F=\left\{\begin{pmatrix}
+                         a&b\\
+                         -b&a
+                        \end{pmatrix};\ (a,b)\in\mathbb R^2\right\}.$
+<ol class="enumeratechiffre">
+ <li> Déterminer une base orthonormée de $F^\perp$.
+ <li> Calculer la projection de $J=\begin{pmatrix}1&1\\
+                                     1&1
+                                    \end{pmatrix}$
+sur $F^\perp$.
+<li> Calculer la distance de $J$ à $F.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2615','imageindication2615');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2615"></a><div class=inner id="innerindication2615" style="display:none;"><ol class="enumeratechiffre">
+ <li> Commencer par trouver une base de $F$, puis une base de $F^\perp$, puis la rendre orthonormale.
+ <li> Utiliser la formule donnant la projection sur un sous-espace dans une base orthonormée.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2615','imagecorrige2615',2615);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2615"></a><div class=inner id="innercorrige2615" style="display:none;"><ol class="enumeratechiffre">
+ <li> On remarque d'abord qu'une matrice $M$ appartient à $F$ si et seulement si elle s'écrit
+ $aI_2+bK$ avec $K=\begin{pmatrix}
+                    0&1\\
+                    -1&0
+                   \end{pmatrix}$
+Autrement dit, $F$ est l'espace vectoriel engendré par les matrices $I_2$ et $K$.
+Soit $M=\begin{pmatrix}
+         x&y\\
+         z&t
+        \end{pmatrix}$
+un élément de $E$. Alors $M$ est élément de $F^\perp$ si et seulement si $M$ est orthogonale à $I_2$ et à $K$.
+Maintenant, 
+$$ \langle M,I_2\rangle=x+t\textrm{ et }\langle M,K\rangle=y-z.$$
+Ainsi, $M$ est élément de $F^\perp$ si et seulement si $t=-x$ et $z=y$. Autrement dit, on a prouvé que 
+$$F^\perp=\left\{\begin{pmatrix}
+                  x&y\\
+                  y&-x
+                 \end{pmatrix};\ (x,y)\in\mathbb R^2\right\}.$$
+Une base de $F^\perp$ est donnée par $(A,B)$, avec
+$$A=\begin{pmatrix}
+     1&0\\
+     0&-1
+    \end{pmatrix},\ 
+ B=\begin{pmatrix}
+    0&1\\
+    1&0
+   \end{pmatrix}.$$
+On va orthonormaliser cette base pour obtenir une base orthonormale de $F^\perp$. On ne va pas avoir à utiliser le procédé d'orthonormalisation
+de Gram-Schmidt, car $A$ et $B$ sont déjà orthogonales : $\langle A,B\rangle=0$. 
+De plus,
+$$\|A\|=\|B\|=\sqrt 2$$
+comme le montre un rapide calcul. Si on pose
+$$A_1=\frac1{\sqrt 2}A\textrm{ et }B_1=\frac 1{\sqrt 2}B,$$
+alors $(A_1,B_1)$ est une base orthonormée de $F^\perp$.
+<li> Il suffit d'appliquer le résultat qui exprime le projeté dans une base orthonormale : 
+\begin{align*}
+ p_{F^\perp}(J)&=\langle J,A_1\rangle A_1+\langle J,B_1\rangle B_1\\
+ &=0+\frac2{\sqrt 2}B_1\\
+ &=B.
+\end{align*}
+<li> On sait que 
+$$\textrm{dist}(J,F)=\|J-p_F(J)\|=\|p_{F^\perp}(J)\|=\|B\|=\sqrt 2.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater1051"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1051"),	max:5, rating:2.4166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1051,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Base orthonormale, polynômes et projection <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1051.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(1051,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1051','imageenonce1051');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1051"></a><div class=inner id="innerenonce1051">Soit $E=\mtr_3[X]$ muni du produit scalaire suivant :
+$$(a_0+a_1X+a_2X^2+a_3X^3,b_0+b_1X+b_2X^2+b_3X^3)=a_0b_0+a_1b_1+a_2b_2+a_3b_3.$$
+On pose $H$ l'hyperplan $H=\{P\in E;\ P(1)=0\}$.
+<ol class="enumeratechiffre">
+<li> Déterminer une base de $H$.
+<li> Déterminer une base orthonormale de $H$.
+<li> En déduire la projection orthogonale de $X$ sur $H$, puis la distance de $X$ à $H$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1051','imageindication1051');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1051"></a><div class=inner id="innerindication1051" style="display:none;"><ol class="enumeratechiffre">
+<li> La dimension de $H$ est 3. Il suffit de déterminer 3 vecteurs indépendants dans $H$. On peut aussi déterminer 
+classiquement une base d'un hyperplan, comme on le fait toujours!
+<li> Procédé de Gram-Schmidt.
+<li> C'est des formules du cours, ou à base du théorème de Pythagore!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1051','imagecorrige1051',1051);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1051"></a><div class=inner id="innercorrige1051" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $H$ est un hyperplan de $\mtr_3[X]$ (c'est le noyau d'une forme linéaire), sa dimension est 3.
+Pour trouver une base de $H$, il suffit de trouver trois vecteurs indépendants. Posons par exemple
+$R_1(X)=X-1$, $R_2(X)=X^2-X$ et $R_3(X)=X^3-X^2$. $(R_1,R_2,R_3)$ est une famille de 3 éléments de $H$, qui est
+libre car les degrés respectifs des $R_i$ sont distincts. On a donc bien une base de l'hyperplan.
+Il est possible aussi de déterminer une base de l'hyperplan comme on le fait usuellement quand on connait
+l'équation d'un sous-espace vectoriel. Notons $P(X)=a_0+a_1X+a_2X^2+a_3X^3$. On a donc 
+\begin{eqnarray*}
+P\in H&\iff& a_0+a_1+a_2+a_3=0\\
+&\iff& a_0=-a_1-a_2-a_3\\
+&\iff& \left\{\begin{array}
+{rccccc}
+a_0&=&-a_1&-a_2&-a_3\\
+a_1&=&a_1\\
+a_2&=&&a_2\\
+a_3&=&&&a_3.
+\end{array}\right.
+\end{eqnarray*}
+Cette méthode donne comme base $(X-1,X^2-1,X^3-1)$.
+<li> Il suffit d'appliquer le procédé de Gram-Schmidt à partir de l'une des bases construites à la question précédente.
+On a donc :
+$$P_1=R_1/\|R_1\|=\sqrt{\frac{1}{2}}(X-1).$$
+Posons $P'_2=R_2+\lambda P_1$, avec $\lambda$ de sorte que $(P'_2,P_1)=0$,
+ce qui entraîne $\lambda=-(P_1,R_2)$. Après normalisation, on trouve
+$$P_2=\sqrt{\frac{2}{3}}(X^2-(X+1)/2).$$
+On procède de même pour $P_3$, et on trouve 
+$$P_3=\sqrt{\frac{3}{4}}\left(X^3-(X^2+X+1)/3\right).$$
+<li> On a 
+$$P_H(x)=\sum_{j=1}^3 (X,P_j)P_j=\frac{-1}{4}\left(X^3+X^2-3X+1\right).$$
+Il vient :
+$$d^2(x,H)=\|x\|^2-\|P_H(x)\|^2=1-3/4=1/4.$$
+Si on n'avait pas calculé une base orthonormale de $H$, on aurait pu remarquer que le polynôme $Q=X^3+X^2+X+1$ est normal à l'hyperplan $H$ et donc que 
+$$d(X,H)=\frac{|\langle X,Q\rangle|}{\|Q\|}=\frac 12.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater1052"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1052"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1052,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un produit scalaire sur les polynômes <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1052.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(1052,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1052','imageenonce1052');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1052"></a><div class=inner id="innerenonce1052">Soient $E=\mathbb R_n[X]$ et $a_0,\dots,a_n$ des réels distincts.
+On pose, pour $(P,Q)\in E^2$,
+$$\langle P,Q\rangle=\sum_{k=0}^n P(a_k)Q(a_k).$$
+<ol class="enumeratechiffre">
+<li> Vérifier qu'on définit un produit scalaire sur $E$.
+<li> Déterminer une base orthonormée de $E$.
+<li> Déterminer la distance de $Q\in E$ au sous-espace
+$H=\left\{P\in E;\ \sum_{k=0}^n P(a_k)=0\right\}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1052','imageindication1052');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1052"></a><div class=inner id="innerindication1052" style="display:none;"><ol class="enumeratechiffre">
+<li> Un polynôme de degré au plus $n$ ayant au moins $n+1$ racines est le polynôme nul.
+<li> Penser aux polynômes interpolateurs de Lagrange.
+<li> Trouver un polynôme $R$ orthogonal à l'hyperplan $H$ et appliquer une formule du cours.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1052','imagecorrige1052',1052);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1052"></a><div class=inner id="innercorrige1052" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est clair qu'on définit ainsi une forme bilinéaire symétrique et que $\langle P,P\rangle\geq 0$. De plus, si
+$\langle P,P\rangle=0$, alors
+$$\sum_{k=0}^n P^2(a_k)=0\implies P(a_k)=0\textrm{ pour }k=0,\dots,n.$$
+Or, un polynôme de degré au plus $n$ ayant au moins $n+1$ racines est le polynôme nul.
+Donc $P=0$ et la forme bilinéaire est définie positive : c'est un produit scalaire.
+<li> Contrairement à ce que l'on fait souvent, ici, utiliser le procédé de Gram-Schmidt pour trouver une base
+orthonormale n'est pas la bonne idée. Il faut plutôt raisonner en terme de racines et voir que si $P$ s'annule en
+beaucoup de $a_k$, alors $P(a_k)Q(a_k)$ sera souvent nul. On va donc définir, pour $k=0,\dots,n$
+$$P_k=\prod_{j\neq k}(X-a_j).$$
+Il est clair que, pour $k\neq l$, on a
+$$\langle P_k,P_l\rangle=P_k(a_k)P_l(a_k)=0.$$
+La famille est donc orthogonale. On l'orthonormalise en remarquant que
+$$\|P_k\|^2=\prod_{j\neq k}(a_k-a_j)^2$$
+et on pose donc
+$$Q_k=\frac{P_k}{\prod_{j\neq k}(a_k-a_j)}.$$
+$(Q_0,\dots,Q_n)$ est une famille orthonormale de $n+1$ éléments dans un espace de dimension $n+1$.
+C'est une base de $\mathbb R_n[X]$.
+<li> On va trouver un vecteur normal à l'hyperplan $H$. C'est très facile en regardant la définition de $H$, car
+si on pose $R=1$, on a
+$$\langle P,R\rangle=\sum_{k=0}^n P(a_k).$$
+$R$ est donc un vecteur normal à $H$. Par une formule du cours (très facile à retrouver par un dessin), on en déduit
+que la distance de $Q$ à $H$ est
+$$\frac{|\langle Q,R\rangle|}{\|R\|}=\frac{\left|\sum_{k=0}^n Q(a_k)\right|}{\sqrt{n+1}}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater3261"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3261"),	max:5, rating:3.0588235294118, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3261,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distance à un sous-espace? <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3261.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(3261,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3261','imageenonce3261');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3261"></a><div class=inner id="innerenonce3261">Calculer $\displaystyle \inf_{a,b\in\mathbb R}\int_0^{2\pi} \big(t-a\cos(t)-b\sin(t)\big)^2 dt.$</div></div><div class=indication><a href="javascript:showAll('innerindication3261','imageindication3261');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3261"></a><div class=inner id="innerindication3261" style="display:none;">Faire apparaître ceci comme un problème de calcul de distance à un sous-espace de dimension 2 dans un bon espace préhilbertien.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3261','imagecorrige3261',3261);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3261"></a><div class=inner id="innercorrige3261" style="display:none;">On va faire apparaître ceci comme un problème de calcul de distance à un sous-espace de dimension 2 dans un bon espace préhilbertien. Pour cela, on pose $E=\mathcal C([0,2\pi])$ muni du produit scalaire $\langle f,g\rangle=\int_0^{2\pi} f(t)g(t)dt$. On cherche à calculer $$\inf_{a,b\in\mathbb R^2}\|t-a\sin-b\cos\|^2.$$
+Posons $F=\textrm{vect}(\sin,\cos)$. Alors $\{a\sin+b\cos:\ a,b\in\mathbb R\}=F$ et ce que l'on cherche est ni plus ni moins que 
+$$\inf_{f\in F}\|t-f\|^2.$$
+Puisque $F$ est de dimension finie, cela revient à calculer le projeté orthogonal $p_F(t)$ de $t$ sur $F$, puisqu'alors 
+$$\inf_{f\in F}\|t-f\|^2=\|t-p_F(t)\|^2=\|t\|^2-\|p_F(t)\|^2.$$
+Reste à calculer $p_F(t)$. Il y a plusieurs façons de s'y prendre. Ici, il est facile de voir que 
+$$\langle \sin,\cos\rangle=\int_0^{2\pi}\sin(t)\cos(t)dt=\frac 12\int_0^{2\pi}\sin(2t)dt=0$$
+et donc que la famille $(\sin,\cos)$ est déjà une base orthogonale de $F$. On la normalise en remarquant que 
+$$\int_0^{2\pi}\cos^2(t)dt=\int_0^{2\pi}\frac{1+\cos(2t)}{2}dt=\left[\frac t2+\frac{\sin(2t)}4\right]_0^{2\pi}=\pi.$$
+De même on prouve que 
+$$\int_0^{2\pi}\sin^2(t)dt=\pi.$$
+Ainsi, $\left(\frac{\cos}{\sqrt \pi},\frac{\sin}{\sqrt \pi}\right)$ est une base orthonormée de $F$. On a alors 
+\begin{eqnarray*}
+p_F(t)&=&\left\langle t,\frac{\cos}{\sqrt \pi}\right\rangle\frac{\cos}{\sqrt \pi}+\left\langle t,\frac{\sin}{\sqrt \pi}\right\rangle\frac{\sin}{\sqrt \pi}\\
+&=&\langle t,\cos\rangle\frac{\cos}{\pi}+\langle t,\sin\rangle\frac{\sin}{\pi}.
+\end{eqnarray*}
+Il reste à calculer ces deux produits scalaires. Pour cela, on remarque que, 
+par une intégration par parties,
+\begin{eqnarray*}
+\int_0^{2\pi}te^{it}dt&=&\left[t\frac{e^{it}}i\right]_0^{2\pi}-\int_0^{2\pi}\frac 1ie^{it}dt\\
+&=&-2i\pi+\left[e^{it}\right]_0^{2\pi}\\
+&=&-2i\pi.
+\end{eqnarray*}
+En particulier, en prenant la partie réelle et la partie imaginaire, on trouve
+$$\int_0^{2\pi}t\cos(t)dt=0\textrm{ et }\int_0^{2\pi}t\sin(t)dt=-2\pi.$$
+Finalement, on a 
+$$p_F(t)=-2\sin.$$
+Pour conclure, 
+\begin{eqnarray*}
+\inf_{f\in F}\|t-f\|^2&=&\|t\|^2-\|p_F(t)\|^2\\
+&=&\int_0^{2\pi}t^2dt-\int_0^{2\pi}4\sin^2(t)dt\\
+&=&\frac{8\pi^3}3-4\pi
+\end{eqnarray*}
+Il convient ici de distinguer ce qui est du calcul technique d'intégrale et ce qui relève des espaces préhilbertiens.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater1714"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1714"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1714,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Méthode des moindres carrés <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1714.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(1714,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1714','imageenonce1714');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1714"></a><div class=inner id="innerenonce1714">Soit $n$ et $p$ deux entiers naturels avec $p\leq n$. On munit $\mathbb R^n$ du produit scalaire canonique et on identifie $\mathbb R^n$ avec $\mathcal M_{n,1}(\mathbb R)$. On considère une matrice $A\in\mathcal M_{n,p}(\mathbb R)$ de rang $p$ et $B\in\mathcal M_{n,1}(\mathbb R)$. 
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe une unique matrice $X_0$ de $\mathcal M_{p,1}(\mathbb R)$ telle que 
+$$\|AX_0-B\|=\inf\{\|AX-B\|;\ X\in\mathcal M_{p,1}(\mathbb R)\}.$$
+<li> Montrer que $X_0$ est l'unique solution de 
+$$A^T AX=A^T B.$$
+<li> Application : déterminer 
+$$\inf\{(x+y-1)^2+(x-y)^2+(2x+y+2)^2;\ (x,y)\in\mathbb R^2\}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1714','imageindication1714');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1714"></a><div class=inner id="innerindication1714" style="display:none;"><ol class="enumeratechiffre">
+<li> Interpréter en terme de projection orthogonale, et remarquer que $A$ est injective.
+<li> &Eacute;crire que $AX_0$ doit être un projeté orthogonal, écrire donc que $AX_0-B$ doit être orthogonal à tous les vecteurs,etc...
+<li> Interpréter ce problème en les termes des deux questions précédentes. Pour trouver le minimum, on utilisera la question 2 qui donnera un système à résoudre.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1714','imagecorrige1714',1714);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1714"></a><div class=inner id="innercorrige1714" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $A$ est de rang $p$, l'application $X\mapsto AX$ qui va de $\mathcal M_{p,1}(\mathbb R)$ dans $\textrm{Im}(A)$ est injective. Or, $\inf\{\|AX-B\|;\ X\in\mathcal M_{p,1}(\mathbb R)\}$ est la distance de $B$ à $\textrm{Im}(A)$. Cette distance est atteinte uniquement au projeté orthogonal sur $\textrm{Im}(A)$ (qui est de dimension finie) de $B$. Ce projeté orthogonal s'écrit de façon unique $AX_0$. 
+<li> On a 
+\begin{eqnarray*}
+AX_0=p_{\textrm{Im}(A)}(B)&\iff& 
+\forall Z\in \textrm{Im}(A),\ AX_0-B\perp Z\\
+&\iff&  \forall X\in \mathcal M_{p,1}(\mathbb R),\ AX_0-B\perp AX\\
+&\iff&  \forall X\in \mathcal M_{p,1}(\mathbb R),\ (AX)^T (AX_0-B)=0\\
+&\iff& \forall X\in\mathcal M_{p,1}(\mathbb R),\ X^T (A^TAX_0-A^T B)=0\\
+&\iff &A^T AX_0=A^T B.
+\end{eqnarray*}
+$X_0$ est donc bien l'unique solution de $A^T AX=A^T B$.
+<li> Posons $A=\left(\begin{array}{cc}1&1\\
+1&-1\\
+2&1\end{array}\right)$, $B=\left(\begin{array}{c}
+1\\0\\-2\end{array}\right)$. On vérifie facilement que le rang de $A$ est $2$. La borne inférieure est donc atteinte en $X_0=\left(\begin{array}c x_0\\y_0\end{array}\right)$ solution de 
+$A^T AX_0=A^TB$. Or 
+$$A^T A=\left(\begin{array}{cc}
+6&2\\
+2&3
+\end{array}\right),\ A^TB=\left(\begin{array}c -3\\-1\end{array}\right).$$
+On résout alors l'équation et on trouve que $x_0=-1/2$ et $y_0=0$, et donc l'inf recherché vaut $7/2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater1058"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1058"),	max:5, rating:3.3684210526316, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1058,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Déterminants de Gram <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1058.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(1058,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1058','imageenonce1058');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1058"></a><div class=inner id="innerenonce1058">Soit $E$ un espace préhilbertien. Pour $x_1,\dots,x_p$ des vecteurs de $E$, on appelle matrice de Gram la matrice de $\mathcal M_p(\mathbb R)$ définie par $(\langle x_i,x_j\rangle)_{i,j}$. On appelle déterminant de Gram des vecteurs $x_1,\dots,x_p$, et on note $G(x_1,\dots,x_p)$, le déterminant de cette matrice.
+<ol class="enumeratechiffre">
+<li> Démontrer que $(x_1,\dots,x_p)$ est une famille libre si et seulement si $G(x_1,\dots,x_p)\neq 0$.
+<li> On suppose désormais que $(x_1,\dots,x_p)$ est une famille libre, et on note 
+$F=\textrm{vect}(x_1,\dots,x_p)$. Soit également $x\in E$. Démontrer que 
+$$d(x,F)^2=\frac{G(x,x_1,\dots,x_p)}{G(x_1,\dots,x_p)}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1058','imageindication1058');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1058"></a><div class=inner id="innerindication1058" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer d'abord que si la famille est liée, alors le déterminant est nul. Pour la réciproque, partir de $G(x_1,\dots,x_p)=0$, écrire une relation de liaison sur les colonnes, regarder ce que cela donne ligne par ligne, et faire une combinaison linéaire astucieuse de ces lignes...
+<li> &Eacute;crire $x=u+v$, où $u\in F$ et $v\in F^\perp$, et décomposer le déterminant en tenant compte de cette somme. Rappelons que $d(x,F)=\|v\|$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1058','imagecorrige1058',1058);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1058"></a><div class=inner id="innercorrige1058" style="display:none;"><ol class="enumeratechiffre">
+<li> D'abord, remarquons que si $(x_1,\dots,x_p)$ est une famille liée, un des vecteurs, disons le $j$-ième, est combinaison linéaire des autres. Mais alors cette relation se reporte sur la matrice de Gram, dont la $j$-ième colonne est combinaison linéaire des autres. Et donc $G(x_1,\dots,x_p)=0$. <br>
+Supposons ensuite que $G(x_1,\dots,x_p)=0$. Les vecteurs colonnes de la matrice de Gram sont donc liés. Ceci signifie qu'il existe des scalaires $\lambda_1,\lambda_2,\dots,\lambda_p$ non tous nuls tels que, pour tout $i=1,\dots,p$, on a 
+$$\langle \lambda_1 x_1+\dots+\lambda_p x_p,x_i\rangle =0.$$
+On obtient ainsi $p$ relations. Multiplions la première par $\lambda_1$, la deuxième par $\lambda_2$, etc..., et faisons la somme de ces relations. Par bilinéarité du produit scalaire, on trouve :
+$$\langle \lambda_1 x_1+\dots+\lambda_p x_p,\lambda_1 x_1+\dots+\lambda_p x_p\rangle
+=\|\lambda_1 x_1+\dots+\lambda_p x_p\|^2=0.$$
+Autrement dit, on a 
+$$\lambda_1 x_1+\dots+\lambda_p x_p=0$$
+et donc la famille $(x_1,\dots,x_p)$ est liée.
+<li> &Eacute;crivons $x=u+v$, avec $u\in F$ et $v\in F^\perp$, et rappelons que $d(x,F)=\|v\|$. Si on regarde la matrice de Gram associée, et tenant compte de l'orthogonalité de $v$ avec les autres vecteurs $x_1,\dots,x_p$, on trouve :
+$$G(x,x_1,\dots,x_p)=
+\left|
+\begin{array}{cccc}
+\|u\|^2+\|v\|^2&\langle u,x_1\rangle&\dots&\langle u,x_p\rangle\\
+\langle x_1,u\rangle+0&\langle x_1,x_1\rangle&\dots&\langle x_1,x_p\rangle\\
+\vdots&\vdots&\vdots&\vdots\\
+\langle x_p,u\rangle+0&\langle x_p,x_1\rangle&\dots&\langle x_p,x_p\rangle\\
+\end{array}\right|.$$
+Par multilinéarité du déterminant, et en inspectant la première colonne, on trouve 
+$$G(x,x_1,\dots,x_p)=G(u,x_1,\dots,x_p)+\left|
+\begin{array}{cccc}
+\|v\|^2&\langle u,x_1\rangle&\dots&\langle u,x_p \rangle\\
+0&\langle x_1,x_1\rangle&\dots&\langle x_1,x_p\rangle\\
+\vdots&\vdots&\vdots&\vdots\\
+0&\langle x_p,x_1\rangle&\dots&\langle x_p,x_p\rangle\\
+\end{array}\right|.$$
+Mais $G(u,x_1,\dots,x_p)$ est nul car la famille $(u,x_1,\dots,x_p)$ est liée. Le second déterminant est lui égal à $\|v\|^2 G(x_1,\dots,x_p)$, ce qui achève la preuve.
+</ol></div></div></div>
+
+<div class=cardcours>
+<div class="titrecours">Espaces préhilbertiens réels</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcours%252Fprehilbert.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Ffeuillesexo%252Fprehilbert&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fmethodes%252Fprehilbert.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcolles%252Fprehilbert&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fvideos%252Fprehilbert.html">Vidéos</a>
+<!-- <li><a href="index.php?action=affiche&quoi=mpsi/quizz/equadiffs.html">Quizz</a> -->
+</ul>
+</div>	
+</div>
+</div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

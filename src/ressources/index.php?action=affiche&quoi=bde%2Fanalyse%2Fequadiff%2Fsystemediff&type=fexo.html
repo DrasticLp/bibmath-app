@@ -1,0 +1,794 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Systèmes différentiels linéaires - résolution</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Systèmes différentiels linéaires - résolution</h1>
+
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater292"></span><script>var myRating = raterJs( { element:document.querySelector("#rater292"),	max:5, rating:1.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(292,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le plus facile des systèmes différentiels <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=292.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(292,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce292','imageenonce292');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce292"></a><div class=inner id="innerenonce292">Le mouvement d'une particule chargée dans un champ magnétique suivant l'axe $(Oz)$
+est régi par un système différentiel de la forme
+$$\left\{
+\begin{array}{rcl}
+x''&=&\omega y'\\
+y''&=&-\omega x'\\
+z''&=&0
+\end{array}\right.$$
+où $\omega$ dépend de la masse et de la charge de la particule, ainsi que du champ magnétique. 
+En posant $u=x'+iy'$, résoudre ce système différentiel.</div></div><div class=indication><a href="javascript:showAll('innerindication292','imageindication292');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication292"></a><div class=inner id="innerindication292" style="display:none;">$u$ satisfait une équation différentielle linéaire du premier ordre. En chercher les solutions (complexes), puis prendre les parties réelles et imaginaires de $u$ et intégrer encore une fois.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige292','imagecorrige292',292);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige292"></a><div class=inner id="innercorrige292" style="display:none;">D'abord, l'équation $z''=0$ donne facilement $z(t)=at+b$, avec $a$ et $b$ des constantes.
+Ensuite, on a
+$$u'=x''+iy''=\omega y'-i\omega x'=-i\omega u.$$
+On en déduit qu' il existe deux constantes $c$ et $d$ $u(t)=(c+id) e^{-i\omega t}$. En prenant les parties réelles et imaginaires, on trouve que
+\begin{eqnarray*}
+x'(t)&=&c\cos(\omega t)+d\sin(\omega t)\\
+y'(t)&=&d\cos(\omega t)-c\sin(\omega t).
+\end{eqnarray*}
+Il suffit d'intégrer une nouvelle fois pour trouver les valeurs de $x$ et de $y$ :
+\begin{eqnarray*}
+x(t)&=&c'\sin(\omega t)-d'\cos(\omega t)+e\\
+y(t)&=&d'\sin(\omega t)+c'\cos(\omega t)+f
+\end{eqnarray*}
+où on a posé $c'=c/\omega$ et $d'=d/\omega$, et où $e$ et $f$ sont deux constantes réelles. Il s'agit d'un mouvement hélicoïdal.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater293"></span><script>var myRating = raterJs( { element:document.querySelector("#rater293"),	max:5, rating:1.7352941176471, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(293,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Diagonalisable! <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=293.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(293,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce293','imageenonce293');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce293"></a><div class=inner id="innerenonce293">Résoudre les systèmes différentiels suivants :
+$$\mathbf 1. \left\{
+\begin{array}{rcl}
+x'&=&x+2y-z\\
+y'&=&2x+4y-2z\\
+z'&=&-x-2y+z
+\end{array}\right.\quad\quad
+\mathbf 2. \left\{\begin{array}{rcl}
+x'&=&y+z\\
+y'&=&-x+2y+z\\
+z'&=&x+z
+\end{array}\right.
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication293','imageindication293');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication293"></a><div class=inner id="innerindication293" style="display:none;">Introduire la matrice $A$ telle que $X'=AX$. Réduire cette matrice $A$ (elle est diagonalisable dans les deux cas),
+en déduire les solutions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige293','imagecorrige293',293);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige293"></a><div class=inner id="innercorrige293" style="display:none;"><ol class="enumeratechiffre">
+<li> Introduisons la matrice 
+$$A=\left(
+\begin{array}{ccc}
+1&2&-1\\
+2&4&-2\\
+-1&-2&1
+\end{array}\right),$$ de sorte que le système
+s'écrit $X'=AX$ avec $X(t)=\left(\begin{array}{c} x(t)\\y(t)\\z(t)\end{array}\right)$.
+Le polynôme caractéristique de $A$ est $X^2(X-6)$. $0$ est valeur propre double, mais $A$ est de rang 1
+et donc $\ker(A)$ est de dimension 2. Une base de $\ker(A)$ est donnée par les vecteurs
+$u_1=(1,0,1)$ et $u_2=(2,-1,0)$. D'autre part, une base de $\ker(A-6I)$ est donné par 
+$u_3=(1,2,-1)$. Les solutions sont donc données par les triplets s'écrivant 
+$$X(t)=\lambda u_1+\mu u_2+\gamma e^{6t} u_3.$$
+<li> Introduisons cette fois la matrice
+$$A=\left(
+\begin{array}{ccc}
+0&1&1\\
+-1&2&1\\
+1&0&1
+\end{array}\right),$$ de sorte que le système
+s'écrit $X'=AX$ avec $X(t)=\left(\begin{array}{c} x(t)\\y(t)\\z(t)\end{array}\right)$.
+Son polynôme caractéristique est $X(X-1)(X-2)$, de sorte que ses valeurs propres sont
+$0,1,2$, de vecteurs propres respectifs associés $u_0=(1,1,-1)$, $u_1=(0,-1,1)$, et $u_2=(1,1,1)$.
+Ainsi, les solutions sont données par les triplets
+$$X(t)=\lambda u_0+\mu e^t u_1+\gamma e^{2t}u_2.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater294"></span><script>var myRating = raterJs( { element:document.querySelector("#rater294"),	max:5, rating:2.2162162162162, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(294,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Diagonalisable...mais sur les complexes <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=294.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(294,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce294','imageenonce294');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce294"></a><div class=inner id="innerenonce294">Donner les solutions réelles du système différentiel  $X'=AX$ lorsque
+$$\mathbf 1. A=\left(\begin{array}{ccc}
+1&1&0\\
+-1&2&1\\
+1&0&1
+\end{array}\right)\quad\quad\mathbf 2. A=\left(\begin{array}{ccc}
+0&1&-1\\
+1&4&-2\\
+2&6&-3
+\end{array}\right).
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication294','imageindication294');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication294"></a><div class=inner id="innerindication294" style="display:none;">Chercher les valeurs propres : une est réelle, les deux autres sont complexes conjuguées. Résoudre le système sur $\mathbb C$ puis prendre la partie réelle.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige294','imagecorrige294',294);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige294"></a><div class=inner id="innercorrige294" style="display:none;"><ol class="enumeratechiffre">
+<li> Les valeurs propres (complexes) de $A$ sont $2$, $1+i$ et $1-i$. Un vecteur propre associé
+à 2 est donné par $V_2=(1,1,1)$. Pour $1+i$, un vecteur propre associé est $V_{1+i}=(i,-1,1)$.  Puisque $A$ est une matrice réelle, on va trouver deux solutions réelles indépendantes en considérant $\Re e(V_{1+i}e^{it})$ et
+$\Im m(V_{1+i}e^{it})$. 
+Un petit calcul donne 
+$$\Re e(V_{1+i}e^{(1+i)t})=e^t\begin{pmatrix}
+-\sin(t)\\ -\cos(t)\\ \cos(t)
+\end{pmatrix}
+\quad\quad
+\Im m(V_{1+i}e^{(1+i)t})=e^t\begin{pmatrix}
+\cos(t)\\ -\sin(t)\\ \sin(t)
+\end{pmatrix}.
+$$
+En conclusion, un triplet $(x_1(t),x_2(t),x_3(t))$ est solution du système ssi il existe
+trois constantes $\alpha,\lambda$ et $\mu$ telles que
+$$\left\{
+\begin{array}{rcl}
+x_1(t)=\alpha e^{2t}+\lambda e^t\cos (t)-\mu e^t \sin (t)\\
+x_2(t)=\alpha e^{2t}-\lambda e^t\sin (t)-\mu e^t \cos (t)\\
+x_3(t)=\alpha e^{2t}+\lambda e^t\sin (t)+\mu e^t \cos (t)\\
+\end{array}\right.$$
+<li> Les valeurs propres de la matrice sont $1$, $i$ et $-i$. Un vecteur propre associé à 1
+est $V_1=\left(\begin{array}{c}1\\-3\\-4\end{array}\right)$.
+Un vecteur propre associé à $i$ est $V_i=\left(\begin{array}{c}i\\1\\2\end{array}\right)$.
+Bien entendu, la matrice étant réelle, un vecteur propre associé à $-i$ est $\overline{V_i}$. 
+Pour obtenir des solutions réelles, on peut considérer (toujours parce que la matrice $A$ est réelle)
+$\Re e(V_i e^{it})$ et $\Im m (V_i e^{it})$. On trouve alors les solutions (indépendantes)
+$$\left(\begin{array}{c}-\sin (t)\\\cos (t)\\2\cos (t)\end{array}\right)\textrm{ et }
+\left(\begin{array}{c}\cos (t)\\\sin (t)\\2\sin (t)\end{array}\right).$$
+La solution générale du système dans $\mathbb R$ est donc 
+$$\left(
+\begin{array}{c}
+\lambda e^{t}-\mu\sin (t)+\nu\cos (t)\\
+-3\lambda e^t+\mu\cos (t)+\nu\sin (t)\\
+-4\lambda e^t+2\mu\cos (t)+2\nu\sin (t)
+\end{array}\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater309"></span><script>var myRating = raterJs( { element:document.querySelector("#rater309"),	max:5, rating:2.3928571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(309,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Systèmes non diagonalisables <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=309.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(309,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce309','imageenonce309');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce309"></a><div class=inner id="innerenonce309">Résoudre le système différentiel $X'=AX$ lorsque
+$$
+\begin{array}{lll}
+\mathbf 1.\ A=\left(\begin{array}{ccc}
+0&2&2\\
+-1&2&2\\
+-1&1&3
+\end{array}\right)&\quad&
+\mathbf 2.\ A=\left(\begin{array}{ccc}
+-6&5&3\\
+-8&7&4\\
+-2&1&1
+\end{array}\right)
+\end{array}$$
+</div></div><div class=indication><a href="javascript:showAll('innerindication309','imageindication309');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication309"></a><div class=inner id="innerindication309" style="display:none;">Rechercher les valeurs propres de la matrice, ses espaces propres.
+La matrice n'est pas diagonalisable? Tant pis, on la trigonalise et on se ramène à résoudre un système triangulaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige309','imagecorrige309',309);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige309"></a><div class=inner id="innercorrige309" style="display:none;"><ol class="enumeratechiffre">
+<li> On calcule le polynôme caractéristique de $A$ qui est $(X-2)^2(X-1)$.
+On cherche ensuite un vecteur propre pour la valeur propre $1.$ On cherche ensuite le sous-espace propre associé à la valeur propre $2.$ 
+Malheureusement, on trouve qu'il est de dimension $1,$ engendré par 
+$$v_2=\begin{pmatrix}2\\1\\1\end{pmatrix}.$$
+On cherche à trigonaliser $A$ de la façon la plus simple possible en cherchant un vecteur $v_3$ tel que $(A-2I_3)v_3=v_2.$ Posant $v_3=(x,y,z)$, on trouve le système
+$$\left\{
+\begin{array}{rcl}
+-2x+2y+2z&=&2\\
+-x+2z&=&1\\
+-x+y+z&=&1
+\end{array}\right.$$
+dont une solution est 
+$$v_3=\begin{pmatrix}-1\\0\\0\end{pmatrix}.$$
+Posons alors 
+$$P=\begin{pmatrix}
+2&2&-1\\
+0&1&0\\
+1&1&0
+\end{pmatrix}\textrm{, }T=\begin{pmatrix}1&0&0\\0&2&1\\0&0&2
+\end{pmatrix}$$
+et $Y=P^{-1}X$. On a alors l'équivalence
+$$X'=AX\iff Y'=TY.$$
+Résolvons ce dernier système, qui s'écrit encore 
+$$\left\{
+\begin{array}{rcl}
+y_1'(t)&=&y_1(t)\\
+y_2'(t)&=&2y_2(t)+y_3(t)\\
+y_3'(t)&=&2y_3(t)
+\end{array}\right.$$
+On trouve immédiatement qu'il existe deux constantes $a$ et $c$ telles que, pour tout $t\in\mathbb R,$ 
+$$y_1(t)=ae^t\textrm{ et }y_3(t)=ce^{2t}.$$
+L'équation portant sur $y_2$ s'écrit alors 
+$$y_2'(t)=2y_2(t)+ce^{2t}.$$
+Les solutions de l'équation homogène sont les fonctions qui s'écrivent $be^{2t},$ $b\in\mathbb R,$ tandis qu'on vérifie facilement qu'une solution particulière est la fonction $t\mapsto cte^{2t}$. Finalement, les solutions de $Y'=TY$ sont les fonctions 
+$$t\mapsto \begin{pmatrix}
+ae^t\\ (ct+b)e^{2t}\\ ce^{2t}
+\end{pmatrix},
+$$
+$a,b,c\in\mathbb R.$
+On retourne aux solutions de $X'=AX$ par la relation $X=PY,$ et on trouve les solutions 
+$$t\mapsto \begin{pmatrix}
+(2ct+2b-c)e^{2t}+2ae^t\\
+(ct+b)e^{2t}\\
+ae^t+(ct+b)e^{2t}
+\end{pmatrix},$$
+$a,b,c\in\mathbb R.$
+<li> On reprend la même méthode. Le polynôme caractéristique de $A$ est $X(X-1)^2$. Un vecteur propre associé à la valeur propre $0$ est $v_1=\left(\begin{array}{c}1\\0\\2\end{array}\right)$ et donc la fonction constante
+$t\mapsto \left(\begin{array}{c}1\\0\\2\end{array}\right)$ est une solution. 
+L'espace propre associé à la valeur propre $1$ est la droite vectorielle engendrée par $v_2=\begin{pmatrix} 1\\ 2\\-1\end{pmatrix}.$ En particulier, la
+matrice $A$ n'est pas diagonalisable. On va la trigonaliser en cherchant un vecteur $v_3$ tel que $(A-I)v_3=v_2.$ On trouve $v_3=\begin{pmatrix} 0\\ -1\\2
+\end{pmatrix}.$
+On pose ensuite 
+$$P=\begin{pmatrix}
+1&1&0\\
+0&2&-1\\
+2&-1&2
+\end{pmatrix},\ 
+T=\begin{pmatrix}
+0&0&0\\
+0&1&1\\
+0&0&1
+\end{pmatrix}$$
+et $Y=P^{-1}X$. On résout le système $Y'=TY$ dont les solutions sont 
+$$t\mapsto
+\begin{pmatrix}
+a\\
+(b+ct)e^t\\
+ce^t
+\end{pmatrix},$$
+$a,b,c\in\mathbb R.$ On retourne à $X$ par la relation $X=PY$ et on trouve que les solutions du système $X'=AX$ sont les fonctions
+$$t\mapsto \begin{pmatrix}
+a+e^{t}(b+c+t(b+2c))\\
+e^t(b+t(2b+4c))\\
+2a+e^t(b+3c+t(-b-2c))
+\end{pmatrix},$$
+$a,b,c\in\mathbb R.$
+<br>
+On peut aussi utiliser la méthode suivante. On cherche une solution sous la forme
+$$X(t)=e^t(tV_2+V_1).$$
+On a $X'(t)=AX(t)$ si et seulement si 
+$$\left\{
+\begin{array}{rcl}
+AV_2&=&V_2\\
+AV_1&=&V_1+V_2\\
+\end{array}\right.\iff
+\left\{
+\begin{array}{rcl}
+V_2&=&(A-I)V_1\\
+(A-I)^2V_1&=&0
+\end{array}\right.
+$$
+On cherche alors l'expression d'un élément $V_1$ de $\ker(A-I)^2$. Il est facile de vérifier
+que le noyau de $(A-I)^2$ est le plan d'équation $3X-2Y-Z=0$, dont une base est constituée
+des vecteurs $\left(\begin{array}{c}1\\1\\1\end{array}\right),\left(\begin{array}{c}1\\0\\3\end{array}\right).$
+$V_1$ s'écrit donc 
+$$V_1=\lambda\left(\begin{array}{c}1\\1\\1\end{array}\right)+\mu\left(\begin{array}{c}1\\0\\3\end{array}\right),$$
+avec $\lambda,\mu$ des réels. On en déduit
+$$V_2=(A-I)V_1=(\lambda+2\mu)\left(\begin{array}{c}1\\2\\-1\end{array}\right).$$
+Finalement, les solutions s'écrivent donc
+$$\nu\left(\begin{array}{c}1\\0\\2\end{array}\right)+e^t\left(\begin{array}{c}\lambda+\mu\\\lambda\\\lambda+3\mu\end{array}\right)+(\lambda+2\mu)te^t
+\left(\begin{array}{c}1\\2\\-1\end{array}\right),$$
+</ol>
+$\lambda,\mu,\nu\in\mathbb R.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater310"></span><script>var myRating = raterJs( { element:document.querySelector("#rater310"),	max:5, rating:2.6842105263158, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(310,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec l'exponentielle de matrice <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=310.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(310,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce310','imageenonce310');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce310"></a><div class=inner id="innerenonce310">Soit $A$ la matrice
+$$\left(
+\begin{array}{ccc}
+2&0&1\\
+1&-1&-1\\
+-1&2&2
+\end{array}
+\right).$$
+<ol class="enumeratechiffre">
+<li> Calculer le polynôme caractéristique de $A$.
+<li> En déduire la valeur de $\exp(tA)$.
+<li> Résoudre le système différentiel
+$$\left\{
+\begin{array}{rcl}
+x_1'(t)&=&2x_1(t)+x_3(t)\\
+x_2'(t)&=&x_1(t)-x_2(t)-x_3(t)\\
+x_3'(t)&=&-x_1(t)+2x_2(t)+2x_3(t)
+\end{array}\right.
+$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication310','imageindication310');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication310"></a><div class=inner id="innerindication310" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Poser $N=A-I_3$ et calculer $\exp(tN)$ en utilisant le théorème de Cayley-Hamilton.
+<li> Appliquer directement la formule avec l'exponentielle de matrice.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige310','imagecorrige310',310);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige310"></a><div class=inner id="innercorrige310" style="display:none;"><ol class="enumeratechiffre">
+<li> Un calcul sans difficultés montre que $\chi_A(X)=(X-1)^3$.
+<li> Posons $N=A-I_3$. Alors, d'après le théorème de Cayley-Hamilton, on a $N^3=0$,
+et donc $N$ est nilpotent d'indice 3. Ceci facilite grandement le calcul de l'exponentielle de $N$.
+En effet, on a 
+$$\exp(tN)=\sum_{n=0}^{+\infty}\frac{t^n N^n}{n!}=I_3+tN+\frac{t^2}2N^2.$$
+D'autre part, puisque $tA=tI_3+tN$ et que $tI_3$ et $tN$ commutent, on a
+$$\exp(tA)=\exp(tI_3)\exp(tN)=e^t\left(I_3+tN+\frac{t^2}2N^2\right).$$
+On en déduit
+$$\exp(tA)=
+e^t \left(\begin{array}{ccc}
+t+1&t^2&t^2+t\\
+t&t^2-2t+1&t^2-t\\
+-t&-t^2+2t&-t^2+t+1
+\end{array}\right).$$
+<li> Soit $X(t)=(x_1(t),x_2(t),x_3(t))$. Alors $X(t)=\exp(tA)X(0)$. En notant $X(0)=(a,b,c)$, on trouve
+\begin{eqnarray*}
+x_1(t)&=&a(t+1)e^t+bt^2e^t+c(t^2+t)e^t\\
+x_2(t)&=&ate^t+b(t^2-2t+1)e^t+c(t^2-t)e^t\\
+x_3(t)&=&-ate^t+b(-t^2+2t)e^t+c(-t^2+t+1)e^t.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater311"></span><script>var myRating = raterJs( { element:document.querySelector("#rater311"),	max:5, rating:3.1304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(311,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec l'exponentielle de matrice <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=311.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(311,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce311','imageenonce311');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce311"></a><div class=inner id="innerenonce311">Soit $A$ la matrice $A=\left(\begin{array}{rcl}
+a&b&c\\
+0&a&b\\
+0&0&a
+\end{array}
+\right)$. Calculer $\exp(A)$.
+En déduire la solution générale du sytème $X'=AX$.</div></div><div class=indication><a href="javascript:showAll('innerindication311','imageindication311');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication311"></a><div class=inner id="innerindication311" style="display:none;">Introduire $B=\left(\begin{array}{rcl}
+0&1&0\\
+0&0&1\\
+0&0&0
+\end{array}
+\right)$ et calculer $B^n$. Ecrire ensuite $A$ en fonction de $I_3$ et des puissances de $B$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige311','imagecorrige311',311);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige311"></a><div class=inner id="innercorrige311" style="display:none;">Introduisons 
+$$B=\left(\begin{array}{rcl}
+0&1&0\\
+0&0&1\\
+0&0&0
+\end{array}
+\right).$$
+Il est facile de remarquer que 
+$$B^2=\left(\begin{array}{rcl}
+0&0&1\\
+0&0&0\\
+0&0&0
+\end{array}
+\right)$$
+et $B^n=0$ pour $n\geq 3$. De plus, $A=(aI_3+b B+cB^2)$.
+Puisque $I_3,B$ et $B^2$ commutent, on a 
+$$\exp(A)=\exp(a)\exp(bB)\exp(cB^2).$$
+Or, utilisant que $B^n=0$ pour $n\geq 3$, on trouve
+\begin{eqnarray*}
+\exp(bB)&=&\sum_{n=0}^{+\infty}\frac{(bB)^n}{n!}\\
+&=&I_3+bB+\frac{b^2B^2}{2},
+\end{eqnarray*}
+et
+\begin{eqnarray*}
+\exp(cB^2)&=&\sum_{n=0}^{+\infty}\frac{(cB^2)^n}{n!}\\
+&=&I_3+cB^2.
+\end{eqnarray*}
+Il vient
+\begin{eqnarray*}
+\exp(A)&=&e^a\left(I_3+bB+\frac{b^2B^2}{2}\right)\left(I_3+cB^2\right)\\
+&=&e^a\left(I_3+bB+\left(\frac{b^2}2+c\right)B^2\right)
+\end{eqnarray*}
+soit
+$$\exp(A)=\left(\begin{array}{ccc}
+e^a&be^a&\left(\frac {b^2}2+c\right)e^a\\
+0&e^a&be^a\\
+0&0&e^a
+\end{array}\right).$$
+La solution générale de $X'=AX$ est alors donnée
+par $X(t)=\exp(tA)X(0)$, soit, en posant $X(0)=(\alpha,\beta,\gamma)$
+$$X(t)=\alpha e^{at}\left(\begin{array}{c}
+1\\0\\0
+\end{array}\right)+
+\beta e^{at}\left(\begin{array}{c}
+bt\\
+1\\
+0
+\end{array}
+\right)
++\gamma e^{at}\left(\begin{array}{c}
+ct+\frac{b^2t^2}{2}\\
+bt\\
+1
+\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater312"></span><script>var myRating = raterJs( { element:document.querySelector("#rater312"),	max:5, rating:2.7368421052632, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(312,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec second membre <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=312.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(312,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce312','imageenonce312');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce312"></a><div class=inner id="innerenonce312">Résoudre les systèmes différentiels suivants :
+$$\begin{array}{lll}
+\mathbf 1.\ 
+\left\{
+\begin{array}{rcl}
+x_1'(t)&=&6x_1(t)+3x_2(t)-3t+4e^{3t}\\
+x_2'(t)&=&-4x_1(t)-x_2(t)+4t-4e^{3t}
+\end{array}\right.
+&\quad&
+\mathbf 2.\ 
+\left\{
+\begin{array}{rcl}
+x_1'(t)&=&x_2(t)+1\\
+x_2'(t)&=&-x_1(t)+2x_2(t)+t.
+\end{array}\right.
+\end{array}$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication312','imageindication312');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication312"></a><div class=inner id="innerindication312" style="display:none;"><ol class="enumeratechiffre">
+<li> Introduire la matrice $A$ du sytème et la diagonaliser. Introduire
+ensuite le vecteur $Y(t)=\binom{y_1(t)}{y_2(t)}$ tel que $X(t)=PY(t)$
+(où $P$ est la matrice de passage à la base qui diagonalise $A$),
+et résoudre le système (diagonal) vérifié par $Y(t)$.
+<li> La méthode est similaire, mais cette fois la matrice n'est que trigonalisable. On obtient un système triangulaire, qu'on résout de bas en haut.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige312','imagecorrige312',312);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige312"></a><div class=inner id="innercorrige312" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $A=\left(
+\begin{array}{cc}
+6&3\\
+-4&-1
+\end{array}
+\right)$ la matrice du système. Ses valeurs propres sont 2 et 3, avec vecteurs propres
+respectifs $(-3,4)$ et $(4,-4)$. Soit $P$ la matrice de passage de la base canonique
+à la nouvelle base, c'est-à-dire
+$$P=\left(\begin{array}{cc}
+-3&4\\
+4&-4
+\end{array}\right),\ 
+P^{-1}=\frac14\left(\begin{array}{cc}
+4&4\\
+4&3\end{array}\right).$$
+Soit $Y(t)=\begin{pmatrix}y_1(t)\\y_2(t)\end{pmatrix}$ tel que 
+$X(t)=PY(t)$. Le système se réécrit alors en 
+$$PY'(t)=APY(t)+B(t)\iff Y'(t)=P^{-1}APY(t)+P^{-1}B(t),$$
+où $B(t)=\begin{pmatrix}-3t+4e^{3t}\\4t-4e^{3t}\end{pmatrix}$. Ainsi, on obtient le système
+différentiel diagonal suivant :
+$$\left\{
+\begin{array}{rcl}
+y_1'(t)&=&2y_1(t)+t\\
+y_2'(t)&=&3y_2(t)+e^{3t}.
+\end{array}
+\right.$$
+Il est désormais facile de résoudre séparément chacune des équations différentielles séparément, en cherchant
+notamment une solution particulière sous la forme d'une exponentielle-polynôme. On trouve alors que
+$$\left\{
+\begin{array}{rcl}
+y_1(t)&=&\lambda e^{2t}-\frac t2-\frac14\\
+y_2(t)&=&\mu e^{3t}+te^{3t}
+\end{array}\right.$$
+Revenant à $X(t)$, on trouve que les solutions du système différentiel initial sont les fonctions
+$$\left\{
+\begin{array}{rcl}
+x_1(t)&=&-3\lambda e^{2t}+4\mu e^{3t}+\frac{3t}2+\frac34+4te^{3t}\\
+x_2(t)&=&4\lambda e^{2t}-4\mu e^{3t}-2t-1-4te^{3t}.
+\end{array}\right.$$
+<li> La méthode est similaire, mais cette fois la matrice va simplement être trigonalisable. On pose donc 
+$$A=\left(
+\begin{array}{cc}
+0&1\\
+-1&2
+\end{array}
+\right)$$
+la matrice du système et 
+$$B(t)=\begin{pmatrix}
+1\\ t
+\end{pmatrix}.$$
+Le polynôme caractéristique de $A$ est $\chi_A(X)=(X-1)^2.$ La seule valeur propre de $A$ est $1,$ et donc $A$ n'est pas diagonalisable puisqu'elle n'est pas égale à $I_2$. Un vecteur propre associé à la valeur propre $1$ est $u=(1,1)$. On cherche ensuite $v$ tel que $Av=v+u,$ et on remarque que $v=(0,1)$ convient. Si on introduit alors 
+$$P=\begin{pmatrix}
+1&0\\
+1&1\end{pmatrix},
+T=\begin{pmatrix}
+1&1\\
+0&1
+\end{pmatrix}$$
+on a alors $A=PTP^{-1}$ et un petit calcul donne 
+$$P^{-1}=\begin{pmatrix}
+1&0\\
+-1&1
+\end{pmatrix}.$$
+On pose alors $Y(t)=P^{-1}X(t)$ et $C(t)=P^{-1}B(t).$
+On remarque que 
+\begin{align*}
+X'=AX+B&\iff PY'=APY+B\\
+&\iff Y'=TY+C.
+\end{align*}
+On a par ailleurs
+$$C(t)=\begin{pmatrix}
+1\\
+t-1
+\end{pmatrix}$$
+et en notant 
+$$Y(t)=\begin{pmatrix}y_1(t)\\y_2(t)\end{pmatrix},$$
+on obtient le système 
+$$\left\{
+\begin{array}{rcl}
+y_1'(t)&=&y_1(t)+y_2(t)+1\\
+y_2'(t)&=&y_2(t)+t-1.
+\end{array}\right.$$
+On résout ce système de bas en haut. Les méthodes usuelles de résolution des équations différentielles du premier ordre donnent 
+$$y_2(t)=Ce^t-t,\ C\in\mathbb R,$$
+et on obtient 
+$$y_1'(t)=y_1(t)+Ce^t-t+1.$$
+En utilisant à nouveau les mêmes méthodes, on trouve que 
+$$y_1(t)=De^t+Cte^t+t,\ D\in\mathbb R.$$
+Revenant à $X$ par la relation $X=PY,$ on trouve finalement que les solutions de l'équation sont les fonctions qui s'écrivent 
+$$\left\{
+\begin{array}{rcl}
+x_1(t)&=&(D+Ct)e^t+t\\
+x_2(t)&=&(D+C+Ct)e^t,
+\end{array}\right.
+$$
+où $C,D\in\mathbb R.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3553"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3553"),	max:5, rating:2.5142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3553,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3553.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3553,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3553','imageenonce3553');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3553"></a><div class=inner id="innerenonce3553">Sur $\mathbb R,$ on définit la relation $\mathcal R$ suivante : pour $x,y\in\mathbb R,$ $x\mathcal R y $ lorsque $xe^y=ye^x.$
+<ol class="enumeratechiffre">
+<li> Démontrer que $\mathcal R$ est une relation d'équivalence.
+<li> Soit $x\in\mathbb R.$ Déterminer le cardinal de la classe d'équivalence de $x$ (on pourra distinguer plusieurs cas suivant la valeur de $x$).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3553','imageindication3553');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3553"></a><div class=inner id="innerindication3553" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'appliquer la définition.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3553','imagecorrige3553',3553);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3553"></a><div class=inner id="innercorrige3553" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x,y,z\in\mathbb R.$ On peut commencer par remarquer que $x\mathcal R y$ si et seulement si $x/e^x=y/e^y.$
+<ul class="rien">
+<li> On a $xe^x=xe^x$ et donc $x\mathcal R x$ : la relation est réflexive.
+<li> Si $x\mathcal R y$ alors il est évident que $y\mathcal R x$.
+<li> Si $x\mathcal R y$ et $y\mathcal R z$, on a 
+$$\frac x{e^x}=\frac y{e^y}\textrm{ et }\frac y{e^y}=\frac z{e^z}$$
+d'où l'on tire 
+$$\frac x{e^x}=\frac z{e^z}$$
+et donc $x\mathcal R z$ : la relation est transitive.
+</ul>
+<li> Fixons $x\in\mathbb R$. La classe d'équivalence de $x$ est constituée des $y\in\mathbb R$ tels que 
+$$\frac{y}{e^y}=\frac x{e^x}.$$
+Ceci nous incite à étudier la fonction $f$ définie sur $\mathbb R$ par $f(y)=ye^{-y}$. Elle est dérivable (donc continue) sur $\mathbb R$ et sa dérivée est donnée par 
+$$f'(y)=(1-y)e^{-y}.$$
+La fonction $f$ est donc croissante sur $]-\infty,1[$ et décroissante sur $]1,+\infty[$. On obtient alors le tableau de variations suivant : 
+<div class=equation><img src="bde_images/tabvarrelation.png" width="450px" /></div>
+En appliquant le théorème des valeurs intermédiaires (la fonction est strictement monotone sur l'intervalle $]-\infty,1]$ et $[1,+\infty[$), on observe que :
+<ul class="rien">
+<li> Si $xe^{-x}\leq 0,$ ce qui correspond à $x\le 0,$ alors l'équation $ye^{-y}=xe^{-x}$ admet une unique solution qui est $y=x$ : la classe d'équivalence de $x$ est alors réduite à un unique élément.
+<li> Si $xe^{-x}\in ]0,e^{-1}[\cup ]e^{-1},+\infty[,$ ce qui correspond à $x\in ]0,1[\cup]1,+\infty[,$ l'équation $ye^{-y}=xe^{-x}$ admet deux solutions : la classe d'équivalence de $x$ contient alors deux éléments.
+<li> Si $xe^{-x}=e^{-1},$ c'est-à-dire si $x=1,$ la classe d'équivalence de $x$ ne contient qu'un seul élément, $x=1$ lui-même.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater313"></span><script>var myRating = raterJs( { element:document.querySelector("#rater313"),	max:5, rating:2.5555555555556, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(313,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Coefficients non constants <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=313.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(313,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce313','imageenonce313');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce313"></a><div class=inner id="innerenonce313">Résoudre le système différentiel suivant :
+$$\left\{\begin{array}{rcl}
+x_1'&=&(2-t)x_1+(t-1)x_2\\
+x_2'&=&2(1-t)x_1+(2t-1)x_2.
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication313','imageindication313');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication313"></a><div class=inner id="innerindication313" style="display:none;">Si on écrit le système $X'(t)=A(t)X(t)$, alors la matrice $A(t)$
+se diagonalise avec une matrice de passage indépendante de $t$.
+Ainsi, on peut résoudre ce système presque comme s'il était à coefficients
+constants.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige313','imagecorrige313',313);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige313"></a><div class=inner id="innercorrige313" style="display:none;">Posons 
+$$A(t)=\left(
+\begin{array}{cc}
+2-t&t-1\\
+2(1-t)&2t-1
+\end{array}\right)
+\textrm{ et }
+X(t)=\left(
+\begin{array}{c}
+x_1(t)\\
+x_2(t)
+\end{array}
+\right).$$
+On doit résoudre le système $X'(t)=A(t)X(t)$. On va procéder comme pour une matrice
+à coefficients constants, en diagonalisant pour chaque $t$ la matrice $A(t)$. 
+Son polynôme caractéristique est $\chi_{A(t)}(X)=X^2-(t+1)X+t$, dont les
+racines sont $t$ et $1$. Le miracle est que les vecteurs propres ne dépendent pas de $t$.
+En effet, si on pose $u_1=(1,1)$ et $u_2=(1,2)$, alors
+$A(t)u_1=u_1$ tandis que $A(t)u_2=tu_2$. Autrement dit, en posant 
+$$P=\left(
+\begin{array}{cc}
+1&1\\
+1&2
+\end{array}
+\right)\textrm{ et }
+D(t)=\left(
+\begin{array}{cc}
+1&0\\
+0&t
+\end{array}
+\right),
+$$
+on a $A(t)=PD(t)P^{-1}$. On peut donc résoudre le système exactement comme s'il était à
+coefficients constants. Plus précisément, en posant $Y(t)=P^{-1}X(t)$, alors
+$Y$ est solution de $Y'(t)=D(t)Y(t)$, soit 
+$$\left\{\begin{array}{rcl}
+y_1'&=&y_1\\
+y_2'&=&ty_2.
+\end{array}\right.$$
+Il vient $y_1(t)=Ce^t$,  et $y_2(t)=De^{t^2/2}$, avec $C,D\in\mathbb R$. 
+On revient à $X$ par la relation $X=PY$, et on trouve que les solutions de l'équation sont les fonctions 
+$$\left\{\begin{array}{rcl}
+x_1(t)&=&Ce^t+De^{t^2/2}\\
+x_2(t)&=&Ce^t+2De^{t^2/2},
+\end{array}\right.$$
+avec $C,D\in\mathbb R^2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater314"></span><script>var myRating = raterJs( { element:document.querySelector("#rater314"),	max:5, rating:3.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(314,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec second membre, et pas à coefficients constants <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=314.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(314,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce314','imageenonce314');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce314"></a><div class=inner id="innerenonce314">Résoudre le système différentiel
+$$\left\{\begin{array}{rcl}
+x'&=&2tx-y+t\cos t\\
+y'&=&x+2ty+t\sin t.
+\end{array}\right.$$
+On pourra, dans le système homogène, effectuer le changement de fonctions inconnues en posant
+$u=xe^{-t^2}$ et $v=ye^{-t^2}$.</div></div><div class=indication><a href="javascript:showAll('innerindication314','imageindication314');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication314"></a><div class=inner id="innerindication314" style="display:none;">Le changement de variables préconisé amène un système différentiel à coefficients constants très simple.
+Pour résoudre l'équation avec second membre, on utilise la méthode de variation de la constante.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige314','imagecorrige314',314);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige314"></a><div class=inner id="innercorrige314" style="display:none;">On considère le système homogène, et on obtient avec le changement de variables
+associé
+$$u'(t)=\big(-2tx(t)+x'(t)\big)e^{-t^2}=-v(t)$$
+et 
+$$v'(t)=\big(-2ty(t)+y'(t)\big)e^{-t^2}=u(t).$$
+Le système 
+$$\left\{
+\begin{array}{rcl}
+u'(t)&=&-v(t)\\
+v'(t)&=&u(t)
+\end{array}\right.$$
+possède comme système fondamental de solutions les deux vecteurs
+$$\left(\begin{array}{c}
+\cos t\\ \sin t\end{array}\right) \textrm{ et }
+\left(\begin{array}{c}
+-\sin t\\ \cos t\end{array}\right).$$
+Revenant au système initial, on trouve un système fondamental de solutions de l'équation homogène
+donné par les deux vecteurs 
+$$h_1(t)=\left(\begin{array}{c}
+\cos (t) e^{t^2}\\ \sin (t) e^{t^2}\end{array}\right)\textrm{ et } 
+h_2(t)=\left(\begin{array}{c}
+-\sin (t) e^{t^2}\\ \cos (t) e^{t^2}\end{array}\right).$$
+On cherche une solution de l'équation avec second membre
+par la méthode de variation des constantes. On pose 
+donc $f(t)=\lambda(t)h_1(t)+\mu(t)h_2(t)$, et on trouve que
+$$\lambda'(t)h_1(t)+\mu'(t)h_2(t)=\left(
+\begin{array}{c}
+t\cos t\\
+t\sin t
+\end{array}\right).$$
+On en déduit que $\lambda_1'(t)=te^{-t^2}$ et $\lambda_2'(t)=0$.
+Une solution particulière est donc obtenue par $\lambda_1(t)=-\frac12e^{-t^2}$
+et $\lambda_2(t)=0$. La solution générale de l'équation est donc
+$$
+\left\{
+\begin{array}{rcl}
+x(t)&=&\lambda \cos (t) e^{t^2}-\mu\sin (t) e^{t^2}-\frac{1}2\cos (t)\\
+y(t)&=&\lambda \sin (t) e^{t^2}+\mu\cos (t) e^{t^2}-\frac12\sin (t)
+\end{array}\right.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater315"></span><script>var myRating = raterJs( { element:document.querySelector("#rater315"),	max:5, rating:2.8666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(315,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Ordre plus grand <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=315.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(315,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce315','imageenonce315');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce315"></a><div class=inner id="innerenonce315">Résoudre le système différentiel d'ordre 2 suivant :
+$$
+\left\{
+\begin{array}{rcl}
+x''(t)&=&x'(t)+y'(t)-y(t)\\
+y''(t)&=&x'(t)+y'(t)-x(t)
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication315','imageindication315');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication315"></a><div class=inner id="innerindication315" style="display:none;">Introduire le vecteur
+$$X=\left(\begin{array}{c}
+x\\
+y\\
+x'\\
+y'
+\end{array}\right)$$
+et écrire que $X$ est solution d'un système d'ordre 1, ou bien
+faire un changement de fonctions inconnues (bien regarder la forme du système).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige315','imagecorrige315',315);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige315"></a><div class=inner id="innercorrige315" style="display:none;">Donnons deux méthodes. La première est de transformer le système en système d'ordre 1, mais de taille 4
+(comme on change une équation linéaire d'ordre 2 en un système d'ordre 1). Pour cela, on pose
+$$X=\left(\begin{array}{c}
+x\\
+y\\
+x'\\
+y'
+\end{array}\right).$$
+Alors, on a $X'=AX$ avec 
+$$A=\left(\begin{array}{ccccc}
+0&0&1&0\\
+0&0&0&1\\
+0&-1&1&1\\
+-1&0&1&1
+\end{array}\right).$$
+Il suffit alors de résoudre le système comme un système classique.<br>
+Une autre méthode, plus astucieuse, est de regarder un peu le système et d'observer la
+symétrie entre $x(t)$ et $y(t)$. Ceci incite à poser $u=x+y$ et $v=x-y$.
+Alors $u$ et $v$ sont solutions de
+$$\left\{
+\begin{array}{rcl}
+u''(t)-2u'(t)+u(t)&=&0\\
+v''(t)-v(t)&=&0
+\end{array}\right.$$
+On résout ces équations, et on trouve
+$$\left\{
+\begin{array}{rcl}
+u(t)&=&(\lambda t+\mu)e^t\\
+v(t)&=&\alpha e^t+\beta e^{-t}
+\end{array}\right.$$
+On retrouve alors facilement $x$ et $y$.</div></div></div>
+
+<div class=titrepartie>Exponentielle de matrice</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3514"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3514"),	max:5, rating:1.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3514,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Déterminant de l'exponentielle d'une matrice <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3514.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3514,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3514','imageenonce3514');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3514"></a><div class=inner id="innerenonce3514">Soit $A\in\mathcal M_n(\mathbb C)$. Démontrer que $\det(\exp A)=\exp(\textrm{Tr}A)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3514','imageindication3514');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3514"></a><div class=inner id="innerindication3514" style="display:none;">Raisonner à l'aide des valeurs propres.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3514','imagecorrige3514',3514);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3514"></a><div class=inner id="innercorrige3514" style="display:none;">Notons $\lambda_1,\dots,\lambda_n$ les valeurs propres de $A,$ répétées avec leur multiplicité. Alors les valeurs propres de $\exp(A)$ sont 
+$e^{\lambda_1},\dots,e^{\lambda_n}$. On en déduit que 
+$$\det(\exp(A))=\prod_{j=1}^n e^{\lambda_j}=e^{\sum_{j=1}^n \lambda_j}=\exp(\textrm{Tr}A).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3516"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3516"),	max:5, rating:1.7222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3516,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice antisymétrique et exponentielle <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3516.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3516,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3516','imageenonce3516');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3516"></a><div class=inner id="innerenonce3516">Soit $A\in\mathcal M_n(\mathbb R)$ une matrice antisymétrique. Démontrer que $\exp(A)\in O_n(\mathbb R)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3516','imageindication3516');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3516"></a><div class=inner id="innerindication3516" style="display:none;">Calculer $\exp(A)\exp(A^T)$ en utilisant que $A$ est antisymétrique.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3516','imagecorrige3516',3516);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3516"></a><div class=inner id="innercorrige3516" style="display:none;">Commençons par remarquer que si $A$ est antisymétrique, alors $A^T=-A.$ Ainsi, 
+on a 
+\begin{align*}
+\exp(A)\exp(A)^T&=\exp(A)\exp(A^T)\\
+&=\exp(A)\exp(-A)\\
+&=\exp(A-A) \textrm{ car $A$ et $-A$ commutent}\\
+&=I_n.
+\end{align*}
+Ainsi, $\exp(A)$ est bien une matrice orthogonale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3517"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3517"),	max:5, rating:1.95, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3517,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle d'une matrice non diagonalisable <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3517.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3517,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3517','imageenonce3517');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3517"></a><div class=inner id="innerenonce3517">Soit $\theta\in\mathbb R$ et $A$ la matrice $A=\begin{pmatrix}
+0&-\theta\\
+\theta&0
+\end{pmatrix}$. Démontrer que 
+$\exp(A)=\begin{pmatrix}
+\cos(\theta)&-\sin(\theta)\\
+\sin(\theta)&\cos(\theta)
+\end{pmatrix}.$</div></div><div class=indication><a href="javascript:showAll('innerindication3517','imageindication3517');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3517"></a><div class=inner id="innerindication3517" style="display:none;">Donner une formule pour $A^{2n}$ et $A^{2n+1}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3517','imagecorrige3517',3517);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3517"></a><div class=inner id="innercorrige3517" style="display:none;">Pour $n\in\mathbb N,$ on prouve facilement par récurrence que 
+$$A^{2n}=\begin{pmatrix}
+(-1)^n \theta^{2n}&0\\
+0&(-1)^n\theta^{2n}\end{pmatrix}\textrm{ et }
+A^{2n+1}=\begin{pmatrix}
+0&(-1)^{n+1}\theta^{2n+1}\\
+(-1)^n \theta^{2n+1}&0
+\end{pmatrix}.$$
+En utilisant la définition de l'exponentielle de matrice, on a donc 
+$$\exp(A)=\begin{pmatrix}
+\sum_{n=0}^{+\infty}\frac{(-1)^n}{(2n)!}\theta^{2n}&\sum_{n=0}^{+\infty}\frac{(-1)^{n+1}}{(2n+1)!}\theta^{2n+1} \\
+\sum_{n=0}^{+\infty}\frac{(-1)^{n}}{(2n+1)!}\theta^{2n+1}&\sum_{n=0}^{+\infty}\frac{(-1)^n}{(2n)!}\theta^{2n}
+\end{pmatrix}=\begin{pmatrix}
+\cos(\theta)&-\sin(\theta)\\
+\sin(\theta)&\cos(\theta)
+\end{pmatrix}$$
+d'après le développement en série entière des fonctions $\sin$ et $\cos$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3520"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3520"),	max:5, rating:1.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3520,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle d'une matrice avec un polynôme annulateur <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3520.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3520,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3520','imageenonce3520');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3520"></a><div class=inner id="innerenonce3520">Soit $n\geq 1$ et $A\in\mathcal M_n(\mathbb K)$ tel que $A^2-3A+2I_n=0$.
+<ol class="enumeratechiffre">
+<li> Pour $k\in\mathbb N,$ exprimer $A^k$ en fonction de $A$ et de $I_n$.
+<li> En déduire l'expression de $\exp(A)$ en fonction de $A$ et de $I_n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3520','imageindication3520');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3520"></a><div class=inner id="innerindication3520" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par calculer le reste dans la division euclidienne de $X^k$ par $X^2-3X+2$ (on pourra utiliser que les racines de ce dernier polynôme sont $1$ et $2$).
+<li> Appliquer la définition.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3520','imagecorrige3520',3520);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3520"></a><div class=inner id="innercorrige3520" style="display:none;"><ol class="enumeratechiffre">
+<li> En appliquant la division euclidienne de $X^k$ par $X^2-3X+2,$ on sait que, pour tout $k\in\mathbb N$, il existe $a_k,b_k\in\mathbb K$  et $Q_k\in\mathbb K[X]$ tels que 
+$$X^k=(X^2-3X+2)Q_k(X)+a_k X+b_k.$$
+Sachant que les racines de $X^2-3X+2$ sont $1$ et $2,$ en évaluant cette égalité en $X=1$ et $X=2,$ on trouve le système 
+$$\left\{\begin{array}{rcl}
+1&=&a_k+b_k\\
+2^k&=&2a_k+b_k
+\end{array}\right.$$
+d'où l'on tire $a_k=2^k-1$ et $b_k=2-2^k.$ Puisque $X^2-3X+2$ est un polynôme annulateur pour $A,$ on trouve finalement, pour tout $k\in\mathbb N,$
+$$A^k=(2^k-1)A+(2-2^k)I_n.$$
+<li> En appliquant la définition, on obtient
+\begin{align*}
+\exp(A)&=\sum_{k=0}^{+\infty}\frac{(2^k-1)}{k!}A+\sum_{k=0}^{+\infty}\frac{2-2^k}{k!}I_n\\
+&=(e^2-e)A+(2e-e^2)I_n.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3515"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3515"),	max:5, rating:3.05, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3515,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle d'une matrice trigonalisable <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3515.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3515,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3515','imageenonce3515');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3515"></a><div class=inner id="innerenonce3515">Soit $A=\begin{pmatrix}2&-1&-1\\ 2&1&-2 \\3&-1&-2 \end{pmatrix}$. Calculer $\exp(A)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3515','imageindication3515');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3515"></a><div class=inner id="innerindication3515" style="display:none;">&Eacute;crire $A=PTP^{-1}$ où $T$ est triangulaire supérieure, puis calculer $\exp(T)$ en écrivant $T=D+N,$ où $D$ est diagonale et $N$ est nilpotente.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3515','imagecorrige3515',3515);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3515"></a><div class=inner id="innercorrige3515" style="display:none;">Le polynôme caractéristique de $A$ est $\chi_A(X)=(X-1)^2(X+1)$. L'espace propre associé à la valeur propre $-1$ est $\textrm{vect}(v_1)$, où $v_1=\begin{pmatrix}1\\1\\2\end{pmatrix}$. L'espace propre associé à la valeur propre $2$ est $\textrm{vect}(v_2)$, où $v_2=\begin{pmatrix}1\\0\\1\end{pmatrix}.$ La matrice $A$ n'est donc pas diagonalisable et on va la trigonaliser (ce qui est possible puisque son polynôme caractéristique est scindé). Pour cela, on cherche $v_3$ tel que $(A-I_3)v_3=v_2$ et on trouve par exemple $v_3=\begin{pmatrix}0\\-1\\0\end{pmatrix}.$ Ainsi, $A=PTP^{-1}$ avec 
+$$T=\begin{pmatrix}
+-1&0&0\\
+0&1&1\\
+0&0&1
+\end{pmatrix}\textrm{ et }P=\begin{pmatrix}
+1&1&0\\
+1&0&-1\\
+2&1&0
+\end{pmatrix}.$$
+On a alors $\exp(A)=P\exp(T)P^{-1}.$ Le calcul de $P^{-1}$ ne pose pas de difficultés avec l'algorithme du pivot de Gauss, on trouve
+$$P^{-1}=\begin{pmatrix}
+-1&0&1\\
+2&0&-1\\
+-1&-1&1
+\end{pmatrix}.$$
+Pour calculer $\exp(A),$ on écrit $A=D+N$ où $D$ est la matrice diagonale
+$D=\textrm{diag}(-1,1,1)$ et $N$ est la matrice
+$$N=\begin{pmatrix}
+0&0&0\\
+0&0&1\\
+0&0&0
+\end{pmatrix}.$$
+On peut remarquer que $D$ et $N$ commutent de sorte que 
+$$\exp(D+N)=\exp(D)\exp(N).$$
+Puisque $N^2=0$, $\exp(N)=1+N$ alors que $\exp(D)=\textrm{diag}(e^{-1},e,e).$
+Finalement, après un calcul encore assez long (et inintéressant, seule la méthode compte ici), on trouve
+$$\exp(A)=\begin{pmatrix}
+e-e^{-1}&-e&e^{-1}\\
+e-e^{-1}&e&e^{-1}-e\\
+e-2e^{-1}&-e&2e^{-1}
+\end{pmatrix}.$$</div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

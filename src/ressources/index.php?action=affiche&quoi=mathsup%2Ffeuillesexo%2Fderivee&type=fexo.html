@@ -1,0 +1,799 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math Sup : Dérivabilité</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math Sup : Dérivabilité</h1>
+<div class=titrepartie>Dérivée en un point - Nombre dérivée</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2856"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2856"),	max:5, rating:1.4838709677419, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2856,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calculs de limites en utilisant le nombre dérivé <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2856.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2856,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2856','imageenonce2856');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2856"></a><div class=inner id="innerenonce2856">En utilisant la définition du nombre dérivé, déterminer les limites suivantes :
+$$
+\begin{array}{lll}
+{\mathbf 1.}\displaystyle \lim_{x\to 0}\frac{e^{3x+2}-e^2}{x}&\quad&
+{\mathbf 2.}\displaystyle \lim_{x\to 0}\frac{\cos x-1}{x}\\
+{\mathbf 3.}\displaystyle \lim_{x\to 1}\frac{\ln(2-x)}{x-1}&\quad&
+{\mathbf 4.}\displaystyle \lim_{x\to\frac{\pi}2}\frac{\exp(\cos x)-1}{x-\frac\pi2}.
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication2856','imageindication2856');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2856"></a><div class=inner id="innerindication2856" style="display:none;">Poser une fonction $f$ de sorte que la limite à calculer apparaisse comme la limite d'un taux d'accroissement. Utiliser ensuite la définition du nombre dérivé.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2856','imagecorrige2856',2856);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2856"></a><div class=inner id="innercorrige2856" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $f(x)=e^{3x+2}$. Alors on a $f(0)=e^2$ et 
+$$\frac{e^{3x+2}-e^2}{x}=\frac{f(x)-f(0)}{x-0}.$$
+Par définition du nombre dérivé comme limite du taux d'accroissement, on a 
+$$\lim_{x\to 0}\frac{e^{3x+2}-e^2}{x}=f'(0)=3e^2,$$
+puisque $f'(x)=3\exp(3x+2)$.
+<li> Posons $g(x)=\cos x$. On a $g(0)=1$ et donc
+$$\frac{\cos x-1}{x}=\frac{g(x)-g(0)}{x-0}.$$
+On en déduit que 
+$$\lim_{x\to 0}\frac{\cos x-1}{x}=g'(0)=0$$
+puisque $g'(x)=-\sin(x)$.
+<li> Posons $h(x)=\ln(2-x)$, qui est définie et dérivable sur $]-\infty,2[$ et vérifie $h'(x)=-\frac{1}{2-x}$. On a de plus
+$$\frac{\ln(2-x)}{x-1}=\frac{h(x)-h(1)}{x-1}$$
+puisque $h(1)=\ln(1)=0$. On en déduit que 
+$$\lim_{x\to 1}\frac{\ln(2-x)}{x-1}=h'(1)=-1.$$
+<li> Posons $k(x)=\exp(\cos x)$. La fonction $k$ est continue et dérivable sur $\mathbb R$, avec 
+$k'(x)=-\sin(x) \exp(\cos x)$ puisque $\cos'(x)=-\sin(x)$ et $\exp'(x)=\exp(x)$. D'autre part, on a 
+$$\frac{\exp(\cos x)-1}{x-\frac\pi2}=\frac{k(x)-k(\pi/2)}{x-\pi/2}.$$
+On en déduit que 
+$$\lim_{x\to\frac{\pi}2}\frac{\exp(\cos x)-1}{x-\frac\pi2}=k'(\pi/2)=-\sin(\pi/2)\exp(\cos(\pi/2))=-1\times\exp(0)=-1.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater208"></span><script>var myRating = raterJs( { element:document.querySelector("#rater208"),	max:5, rating:1.875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(208,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de limites avec la dérivée <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=208.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(208,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce208','imageenonce208');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce208"></a><div class=inner id="innerenonce208">&Eacute;tudier les limites suivantes :
+$$\begin{array}{lcl}
+\displaystyle \mathbf 1.\ \frac{\tan x-\sin x}{x^3}\textrm{ en 0}&&
+\displaystyle \mathbf 2.\ \frac{\tan 4x}{\sin x}\textrm{ en }0\\
+\displaystyle {\mathbf 3}.\ \frac{\sin x-\sin(5x)}{\sin x+\sin (5x)}\textrm{ en }0&&
+\displaystyle {\mathbf 4}.\ \frac{\sin(x\ln x)}{x}\textrm{ en }0\\
+\displaystyle \mathbf {\mathbf 5}.\ \left(1+\frac1x\right)^x\textrm{ en }+\infty&&
+\displaystyle \mathbf {\mathbf 6}.\ \frac{x(x-1)\sin(x-1)}{x^3-3x+2}\textrm{ en }1\\
+\displaystyle \mathbf {\mathbf 7}.\ {\ln x\ln(1-x)}\textrm{ en }0^+.
+\end{array}$$
+</div></div><div class=indication><a href="javascript:showAll('innerindication208','imageindication208');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication208"></a><div class=inner id="innerindication208" style="display:none;">Utiliser des formules de trigonométrie, des factorisations ou autres pour se ramener à des limites de taux d'accroissement.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige208','imagecorrige208',208);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige208"></a><div class=inner id="innercorrige208" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit
+$$\frac{\tan x-\sin x}{x^3}=\frac{\sin x}{x}\frac{1-\cos x}{x^2\cos x}=\frac{\sin x}{x}\frac{\sin^2(x/2)}{(x/2)^2}\frac{1}{2\cos x}.$$
+On trouve que la limite recherchée est $1/2$.
+<li> On écrit
+$$\frac{\tan 4x}{\sin x}=4\frac{\sin 4x}{4x}\times\frac{1}{\cos 4x}\times\frac{x}{\sin x}.$$
+La limite recherchée est 4.
+<li> Il suffit d'introduire partout $\sin x/x$. On trouve
+$$\frac{\sin x-\sin(5x)}{\sin x+\sin(5x)}=\frac{\frac{\sin x}{x}-5\frac{\sin 5x}{5x}}{\frac{\sin x}{x}+5\frac{\sin 5x}{5x}}.$$
+La limite recherchée est donc
+$$\frac{1-5}{1+5}=\frac{-2}3.$$
+<li> On écrit
+$$\frac{\sin(x\ln x)}{x}=\ln x\frac{\sin(x\ln x)}{x\ln x}.$$
+Or, si $x\to 0$, $x\ln x\to 0$. De plus, si $u\to 0$, on a $\sin u/u\to 1$. Par composition des limites, on obtient que
+$$\frac{\sin(x\ln x)}{x\ln x}\to 1\textrm{ quand }x\to 0.$$
+Comme $\ln x\to -\infty$ en 0, la limite recherchée est également $-\infty$.
+<li> Il faut prendre garde qu'on a une forme indéterminée de la forme $1^\infty$. On la lève en passant à l'exponentielle :
+$$\left(1+\frac1x\right)^x=\exp\left(x\ln\left(1+\frac{1}{x}\right)\right).$$
+On écrit ensuite
+$$x\ln\left(1+\frac{1}{x}\right)=\frac{\ln\left(1+\frac 1x\right)}{\frac{1}{x}}.$$
+Puisque $1/x\to 0$ lorsque $x\to+\infty$ et que $\ln(1+u)/u\to 1$ lorsque $u\to 0$, on en déduit par composition 
+(deux fois) que la limite recherchée est égale à $e$.
+<li> 1 est racine du dénominateur, et on factorise ce dénominateur par $x-1$. &Eacute;crivant 
+$x^3-3x+2=(x-1)(ax^2+bx+c)$, on trouve par identification que 
+$$x^3-3x+2=(x-1)(x^2+x-2)=(x-1)^2(x+2).$$
+Il vient
+$$\frac{x(x-1)\sin(x-1)}{x^3-3x+2}=\frac{x}{x+2}\times \frac{\sin(x-1)}{x-1}.$$
+Posant $u=x-1$, on a
+$$\lim_{x\to 1}\frac{\sin(x-1)}{x-1}=\lim_{u\to 0}\frac{\sin u}u=1.$$
+La limite recherché est donc égal à $\frac 13$. 
+<li> L'idée est de multiplier et de diviser par $x$ : 
+$$\ln x\ln(1-x)=x\ln x\times\frac{\ln(1-x)}{x}.$$
+Or,
+$$\frac{\ln(1-x)}{x}=\frac{\ln(1-x)-\ln(1)}{x}$$
+tend vers -1 lorsque $x$ tend vers 0 (c'est la dérivée de $\ln(1-x)$, qui vaut $-\frac 1{1-x}$, en 0). De plus, $x\ln x$ tend vers $0$ si $x\to 0^+$. La limite recherchée vaut donc 0.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater320"></span><script>var myRating = raterJs( { element:document.querySelector("#rater320"),	max:5, rating:1.2765957446809, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(320,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivable ou pas dérivable <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=320.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(320,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce320','imageenonce320');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce320"></a><div class=inner id="innerenonce320">Les fonctions suivantes sont-elles dérivables au point indiqué?
+$$f(x)=\frac{x}{1+|x|} \textrm{ en }0,\ \ \ g(x)=
+\left\{\begin{array}{ll}
+(x-1)&\textrm{ si }x\leq 1\\
+(x-1)^2&\textrm{ si }x&gt;1
+\end{array}\right.\textrm{ en }1,\quad\quad h(x)=|x|\sin x\textrm{ en }0.$$</div></div><div class=indication><a href="javascript:showAll('innerindication320','imageindication320');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication320"></a><div class=inner id="innerindication320" style="display:none;">Calculer la limite du taux d'accroissement, ou bien comparer la dérivée à droite et la dérivée à gauche.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige320','imagecorrige320',320);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige320"></a><div class=inner id="innercorrige320" style="display:none;">On revient à la définition, et on cherche si le taux d'accroissement admet une limite en 0.
+$$\frac{f(x)-f(0)}{x}=\frac{\frac{x}{1+|x|}}{x}=\frac{1}{1+|x|}\to 1$$
+lorsque $x\to 0$. La fonction est donc dérivable en $0$, de dérivée $1$.<br>
+Concernant $g$, on remarque que $g$ est définie sur $[1,+\infty[$ par $g(x)=(x-1)^2$ (la formule fonctionne encore pour $x=1$). La dérivée de $x\mapsto(x-1)^2$ étant $x\mapsto 2(x-1)$, la fonction $g$ 
+est donc dérivable à droite en $1$, et sa dérivée vaut $0$. 
+On remarque que $g$ est défini sur $]-\infty,1]$ par $g(x)=(x-1)$. La dérivée de la fonction $x\mapsto x-1$ étant $1$, $g$ est dérivable à gauche en $1$
+et sa dérivée vaut $1$. Les dérivées à droite et à gauche de $g$ en $1$ ne coïncident pas, donc $g$ n'est pas dérivable en $1$ .
+Pour $h$, on a 
+$$\frac{h(x)-h(0)}x=|x| \times\frac{\sin x}x.$$
+Puisque $\sin x/x$ tend vers 1 quand $x$ tend vers 0 et que $|x|$ tend vers 0 quand $x$ tend vers 0, le taux d'accroissement converge vers $0$ quand $x$ tend vers 0, et donc $h$ est dérivable en $0$, avec $h'(0)=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater324"></span><script>var myRating = raterJs( { element:document.querySelector("#rater324"),	max:5, rating:1.4081632653061, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(324,rating); this.setRating(rating);   this.disable();    done();     }});</script> - $C^1$ ou pas $C^1$? <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=324.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(324,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce324','imageenonce324');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce324"></a><div class=inner id="innerenonce324">&Eacute;tudier si les fonctions suivantes sont dérivables et $C^1$ sur $\mathbb R$ :
+$$f(x)=\left\{\begin{array}{ll}
+x^2\sin\left(\frac 1x\right)&x\neq 0\\
+0&x=0
+\end{array}\right.\quad\quad\quad
+g(x)=\left\{\begin{array}{ll}
+x^3\sin\left(\frac 1x\right)&x\neq 0\\
+0&x=0.
+\end{array}\right.
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication324','imageindication324');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication324"></a><div class=inner id="innerindication324" style="display:none;">Montrer que les deux fonctions sont dérivables en 0 en revenant à la définition (limite du taux d'accroissement).
+Calculer ensuite $f'(x)$ et $g'(x)$ pour $x\neq 0$, puis étudier si $f'$ et $g'$ sont continues en 0.
+On pourra notamment calculer $f'(1/2n\pi)$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige324','imagecorrige324',324);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige324"></a><div class=inner id="innercorrige324" style="display:none;">On remarque d'abord que $f$ est continue en 0, car, pour $x\neq 0$, on a
+$$|f(x)-f(0)|\leq x^2$$
+et $x^2\to 0$ quand $x\to 0$. D'autre part, $f$ est clairement $C^1$ sur $\mathbb R^*$.
+Etudions la dérivabilité en 0 en revenant à la définition, c'est-à-dire en étudiant
+si le taux d'accroissement admet une limite. On a :
+$$\frac{f(x)-f(0)}{x}=x\sin\left(\frac 1x\right)$$
+et ceci tend vers 0 quand $x$ tend vers 0, grâce à la majoration
+$|x\sin\left(\frac 1x\right)|\leq |x|$. Ainsi, $f$ est dérivable en 0,
+avec $f'(0)=0$. Pour déterminer si $f$ est $C^1$ en 0, il faut étudier si la dérivée est continue en 0.
+Pour $x\neq 0$, on a
+$$f'(x)=2x\sin\left(\frac{1}{x}\right)-\cos\left(\frac 1x\right).$$
+Or, posons $u_n=\frac{1}{2n\pi}$. Alors, $u_n$ tend vers 0, et
+$$f'(u_n)=\frac{1}{n\pi}\sin(2n\pi)-\cos(2n\pi)=-1\neq f'(0).$$
+Ainsi, $f'$ n'est pas continue en 0, et $f$ n'est pas de classe $C^1$. <br>
+Concernant $g$, on peut procéder comme pour $f$ pour démontrer que $g$ 
+est $C^1$ sur $\mathbb R^*$, dérivable en 0 avec $g'(0)=0$.
+De plus, pour $x\neq 0$,
+$$g'(x)=3x^2\sin\left(\frac1x\right)-x\cos\left(\frac 1x\right)$$
+de sorte que
+$$|g'(x)-g'(0)|\leq 3|x|^2+|x|.$$
+Ceci entraîne que $g'$ est continue en 0, et donc que $g$ est de classe $C^1$.
+On peut aussi prouver directement que $g$ est de classe $C^1$ en appliquant le théorème de prolongement d'une dérivée, puisque pour $x\neq 0$, 
+$$g'(x)=3x^2\sin\left(\frac1x\right)-x\cos\left(\frac 1x\right)$$
+et que cette quantité tend vers $0$ si $x$ tend vers $0$. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater326"></span><script>var myRating = raterJs( { element:document.querySelector("#rater326"),	max:5, rating:1.5434782608696, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(326,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avant et après <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=326.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(326,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce326','imageenonce326');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce326"></a><div class=inner id="innerenonce326">Soit $f$ une fonction dérivable en un point $x_0$. Montrer que
+$$\lim_{h\to 0}\frac{f(x_0+h)-f(x_0-h)}{2h}=f'(x_0).$$
+Réciproquement, si la limite précédente existe, peut-on dire que $f$ est dérivable en $x_0$?</div></div><div class=indication><a href="javascript:showAll('innerindication326','imageindication326');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication326"></a><div class=inner id="innerindication326" style="display:none;">Couper en passant par $f(x_0)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige326','imagecorrige326',326);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige326"></a><div class=inner id="innercorrige326" style="display:none;">Il suffit de couper en passant par $f(x_0)$ :
+$$\frac{f(x_0+h)-f(x_0-h)}{2h}=\frac{1}{2}\left(\frac{f(x_0+h)-f(x_0)}{h}+\frac{f(x_0-h)-f(x_0)}{-h}\right)\to\frac{f'(x_0)+f'(x_0)}{2}.$$
+La réciproque est clairement fausse. Il suffit de prendre $f(x)=|x|$ et $x_0=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater325"></span><script>var myRating = raterJs( { element:document.querySelector("#rater325"),	max:5, rating:2.4444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(325,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Raccordement <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=325.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(325,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce325','imageenonce325');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce325"></a><div class=inner id="innerenonce325">Soit $f:[0,1]\to\mathbb R$ dérivable vérifiant $f(0)=f(1)$ avec $f'$ continue en $0$ et en $1$. On définit $g$ sur $[0,1]$ par
+$$g(x)=\left\{\begin{array}{ll}
+f(2x)&\textrm{ si }0\leq x\leq\frac12\\
+f(2x-1)&\textrm{ si }\frac12&lt;x\leq 1.
+\end{array}\right.$$
+$g$ est-elle continue? dérivable? Si non, quelle(s) hypothèse(s) faut-il ajouter pour que ce soit le cas?</div></div><div class=indication><a href="javascript:showAll('innerindication325','imageindication325');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication325"></a><div class=inner id="innerindication325" style="display:none;">Le seul problème est en 1/2. On séparera l'étude des limites à gauche et à droite pour la fonction et pour le taux d'accroissement en 1/2.
+On pourra aussi utiliser le théorème de prolongement d'une dérivée pour déterminer les dérivées à droite et à gauche de $g$ en 1/2.
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige325','imagecorrige325',325);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige325"></a><div class=inner id="innercorrige325" style="display:none;">La fonction $g$ est clairement dérivable sur $]0,1/2[$ et sur $]1/2,1[$. Le seul problème est en 1/2. Mais,
+on a $$\lim_{x\to \frac{1}2^-}g(x)=f(1)=f(0)=\lim_{x\to \frac12^+}g(x).$$
+La fonction $g$ est donc continue en $1/2$. 
+Pour $x&lt;1/2$, on a 
+$$g'(x)=2f'(2x)\longrightarrow_{x\to \frac 12^-} 2f'(1)$$
+et donc, par le théorème de prolongement d'une dérivée, $g$ admet une dérivée à gauche en 1/2 égale à $2f'(1)$.
+De même, pour $x&gt;1/2$, on a
+$$g'(x)=2f'(2x-1)\longrightarrow_{x\to \frac 12^+} 2f'(0)$$
+et donc, par le théorème de prolongement d'une dérivée, $g$ admet une dérivée à droite en 1/2 égale à $2f'(0)$.
+La fonction $g$ est dérivable en 1/2 si et seulement si les dérivées à droite et à gauche coïncident, c'est-à-dire si et seulement $f'(1)=f'(0)$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater327"></span><script>var myRating = raterJs( { element:document.querySelector("#rater327"),	max:5, rating:2.2142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(327,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Variante du taux d'accroissement <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=327.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(327,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce327','imageenonce327');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce327"></a><div class=inner id="innerenonce327">Soit $f$ une fonction dérivable en $x_0\in\mathbb R$. Montrer que
+$$\frac{xf(x_0)-x_0f(x)}{x-x_0}$$
+admet une limite lorsque $x\to x_0$.</div></div><div class=indication><a href="javascript:showAll('innerindication327','imageindication327');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication327"></a><div class=inner id="innerindication327" style="display:none;">Découper le numérateur comme lorsqu'on étudie la limite du produit de deux quantités.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige327','imagecorrige327',327);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige327"></a><div class=inner id="innercorrige327" style="display:none;">On écrit
+$$xf(x_0)-x_0f(x)=xf(x_0)-x_0f(x_0)+x_0f(x_0)-x_0f(x)$$
+ce qui donne
+$$\frac{xf(x_0)-x_0f(x)}{x-x_0}=f(x_0)+x_0\frac{f(x_0)-f(x)}{x-x_0}.$$
+Par définition de la dérivabilité en $x_0$, ceci tend vers $f(x_0)-x_0f'(x_0)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater328"></span><script>var myRating = raterJs( { element:document.querySelector("#rater328"),	max:5, rating:1.8947368421053, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(328,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un problème de tangente <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=328.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(328,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce328','imageenonce328');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce328"></a><div class=inner id="innerenonce328">Démontrer que les courbes d'équation $y=x^2$ et $y=1/x$ admettent une unique tangente commune.</div></div><div class=indication><a href="javascript:showAll('innerindication328','imageindication328');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication328"></a><div class=inner id="innerindication328" style="display:none;">&Eacute;crire l'équation de la tangente à la première courbe au point d'abscisse $a$, et l'équation de la tangente
+à la deuxième courbe au point d'abscisse $b$. Quelle condition faut-il mettre sur $a$ et $b$ pour que
+les deux tangentes soient identiques?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige328','imagecorrige328',328);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige328"></a><div class=inner id="innercorrige328" style="display:none;">&Eacute;crivons l'équation de la tangente à la courbe d'équation $y=x^2$ au point d'abscisse $a$ : il s'agit de 
+$$y-a^2=2a(x-a)\iff y=2ax-a^2.$$
+De même, écrivons l'équation de la tangente à la courbe d'équation $y=1/x$ au point d'abscisse $b$ : il s'agit de
+$$y-\frac 1b=-\frac 1{b^2}(x-b)\iff y=-\frac 1{b^2}x+\frac 2b.$$
+Pour que les deux tangentes coincident, il faut que $a$ et $b$ vérifient
+$$\left\{
+\begin{array}{rcl}
+2a&=&\frac{-1}{b^2}\\
+-a^2&=&\frac 2b.
+\end{array}\right.$$
+On en déduit que $-8a=a^4$, ce qui donne $a=0$ ou $a=-2$. La solution $a=0$ est à exclure, car on ne peut pas déterminer
+de valeur correspondante pour $b$. Pour $a=-2$, on obtient $b=-1/2$, et on vérifie facilement que les tangentes en $a$ et en $b$ coincident.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater329"></span><script>var myRating = raterJs( { element:document.querySelector("#rater329"),	max:5, rating:3.2058823529412, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(329,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de limite <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=329.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(329,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce329','imageenonce329');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce329"></a><div class=inner id="innerenonce329">Soit $f:\mathbb R\to\mathbb R$ dérivable telle que $f(0)=0$. Montrer que
+$\sum_{k=1}^n f\left(\frac k{n^2}\right)$ admet une limite lorsque $n\to+\infty$ et la déterminer.</div></div><div class=indication><a href="javascript:showAll('innerindication329','imageindication329');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication329"></a><div class=inner id="innerindication329" style="display:none;">Se ramener à la définition de la dérivabilité par l'écriture sous la forme d'un développement limité d'ordre 1.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige329','imagecorrige329',329);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige329"></a><div class=inner id="innercorrige329" style="display:none;">Fixons $\veps&gt;0$. On sait qu'il existe $\delta&gt;0$ tel que, pour tout $x\in]-\delta,\delta[$, on a
+$$|f(x)-f'(0)x|\leq \veps\times |x|.$$
+Soit $n$ assez grand pour que $\frac{1}{n}&lt;\delta$. On applique
+alors la formule précédente à $x=\frac k{n^2}$, pour $k\in\{1,\dots,n\}$. On obtient
+$$-\veps\frac k{n^2}\leq f\left(\frac k{n^2}\right)-f'(0)\frac{k}{n^2}\leq \veps\frac k{n^2}.$$
+On somme ces inégalités pour $k$ allant de $1$ à $n$ et on trouve
+$$-\veps\frac{n+1}{2n}\leq \sum_{k=1}^n f\left(\frac k{n^2}\right)-f'(0)\frac{n+1}{2n}\leq \veps\frac{n+1}{2n}.$$
+&Eacute;crivant $\frac{n+1}{n}=1+\frac{1}{n}$ et en remarquant que $(n+1)/2n\leq 1$, on trouve
+$$-\veps+\frac{f'(0)}{2n}\leq \sum_{k=1}^n f\left(\frac k{n^2}\right)-\frac{f'(0)}2\leq \veps+\frac{f'(0)}{2n}.$$
+Pour $n$ assez grand, on en déduit que 
+$$-2\veps\leq \sum_{k=1}^n f\left(\frac k{n^2}\right)-\frac{f'(0)}2\leq 2\veps.$$
+On en conclut que la suite converge avec
+$$\lim_{n\to+\infty}\sum_{k=1}^n f\left(\frac k{n^2}\right)=\frac{f'(0)}{2}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater330"></span><script>var myRating = raterJs( { element:document.querySelector("#rater330"),	max:5, rating:3.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(330,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Hypothèse affaiblie <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=330.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(330,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce330','imageenonce330');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce330"></a><div class=inner id="innerenonce330">Soit $f$ définie sur un intervalle ouvert $I$ contenant $0$, continue sur $I$.
+On suppose en outre que $\lim_{x\to 0}\frac{f(2x)-f(x)}{x}=0$. Montrer que $f$ est dérivable en 0.
+</div></div><div class=indication><a href="javascript:showAll('innerindication330','imageindication330');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication330"></a><div class=inner id="innerindication330" style="display:none;">Pour $\veps&gt;0$ fixé, montrer que si $x$ est assez petit, pour tout $n\geq 1$, on a
+$$\left|f(x/2^n)-f(x/2^{n+1})\right|\leq \veps\left|x/2^{n+1}\right|.$$
+Utiliser ensuite l'inégalité triangulaire pour estimer $\left|f(x)-f(x/2^{n+1})\right|$, puis faire tendre
+$n$ vers $+\infty$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige330','imagecorrige330',330);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige330"></a><div class=inner id="innercorrige330" style="display:none;">Fixons $\veps&gt;0$. Par hypothèse, il existe $\alpha&gt;0$ tel que, pour tout $y$
+de $]-\alpha,\alpha[$, on a
+$$|f(y)-f(y/2)|\leq\veps|y/2|.$$
+Prenons $x$ dans $]-\alpha,\alpha[$. On applique l'inégalité précédente pour $y=x$, $y=x/2,\dots,$ $y=x/2^n$.
+On obtient successivement :
+\begin{eqnarray*}
+|f(x)-f(x/2)|&\leq& \veps |x/2|\\
+|f(x/2)-f(x/4)|&\leq& \veps |x/4|\\
+\vdots&\vdots&\vdots\\
+|f(x/2^n)-f(x/2^{n+1})|&\leq& \veps |x/2^{n+1}|\\
+\end{eqnarray*}
+En utilisant l'inégalité triangulaire, il vient
+$$|f(x)-f(x/2^{n+1})|\leq \veps |x|\left(\frac12+\frac14+\dots+\frac1{2^{n+1}}\right)\leq \veps|x|.$$
+Il suffit alors de faire tendre $n$ vers $+\infty$ et d'utiliser la continuité de $f$ en $0$ pour obtenir
+$$|f(x)-f(0)|\leq\veps|x|.$$
+Autrement dit, $f$ est dérivable en $0$, et $f'(0)=0$.</div></div></div>
+
+<div class=titrepartie>Théorème de Rolle - théorème des accroissements finis</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater322"></span><script>var myRating = raterJs( { element:document.querySelector("#rater322"),	max:5, rating:1.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(322,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite presque harmonique <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=322.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(322,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce322','imageenonce322');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce322"></a><div class=inner id="innerenonce322"><ol class="enumeratechiffre">
+<li> Démontrer que pour tout $x&gt;0$, on a
+$$\frac1{x+1}&lt;\ln(x+1)-\ln x&lt;\frac 1x.$$
+<li> On pose pour tout $n\in\mathbb N^*$
+$$v_n=\frac 1{n+1}+\dots+\frac 1{2n}.$$
+Démontrer que 
+$$\ln(2n+1)-\ln(n+1)&lt;v_n&lt;\ln(2n)-\ln n.$$
+En déduire que $(v_n)$ converge et déterminer sa limite.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication322','imageindication322');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication322"></a><div class=inner id="innerindication322" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer l'égalité des accroissements finis.
+<li> Appliquer l'inégalité précédente pour $x=n,\dots,2n-1$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige322','imagecorrige322',322);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige322"></a><div class=inner id="innercorrige322" style="display:none;"><ol class="enumeratechiffre">
+<li> On va appliquer le théorème des accroissements finis à la fonction $t\mapsto \ln t$ sur l'intervalle $[x,x+1]$. Il existe donc $\theta\in ]x,x+1[$ tel que
+$$\ln(x+1)-\ln x=\frac{x+1-x}\theta=\frac 1\theta.$$
+On conclut car 
+$$0&lt;x&lt;\theta&lt;x+1\implies \frac1{x+1}&lt;\frac 1\theta&lt;\frac 1x.$$
+<li> On applique l'inégalité précédente pour $x=n$, $x=n+1$, $x=n+2$ jusque $x=2n-1$. On somme ces inégalités : dans le terme du milieu, il y a beaucoup de simplifications et on obtient, en ne gardant que l'inégalité de gauche :
+$$v_n&lt;\ln(2n)-\ln n.$$
+On applique ensuite l'inégalité précédente pour $x=n+1$, $x=n+2$ jusque $x=2n$ et on ne garde cette fois que l'inégalité de droite. Là encore, il se produit des simplifications et on obtient
+$$\ln(2n+1)-\ln (n+1)&lt;v_n.$$
+Ceci se réécrit encore en
+$$\ln\left(\frac{2n+1}{n+1}\right)&lt;v_n&lt;\ln\left(\frac{2n}n\right)=\ln 2.$$
+Par le théorème des gendarmes, on en déduit que $(v_n)$ converge vers $\ln 2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater323"></span><script>var myRating = raterJs( { element:document.querySelector("#rater323"),	max:5, rating:2.03125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(323,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rolle itéré <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=323.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(323,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce323','imageenonce323');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce323"></a><div class=inner id="innerenonce323">Soit $f:[a,b]\to\mathbb R$ $n$ fois dérivable.
+<ol class="enumeratechiffre">
+<li> On suppose que $f$ s'annule en $(n+1)$ points distincts de $[a,b]$. Démontrer qu'il existe $c\in ]a,b[$ tel que $f^{(n)}(c)=0$.
+<li> On suppose que $f(a)=f'(a)=\dots=f^{(n-1)}(a)=f(b)=0$. Démontrer qu'il existe $c\in ]a,b[$ tel que $f^{(n)}(c)=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication323','imageindication323');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication323"></a><div class=inner id="innerindication323" style="display:none;">On pourra procéder par récurrence finie sur l'ordre de dérivation.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige323','imagecorrige323',323);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige323"></a><div class=inner id="innercorrige323" style="display:none;">On va procéder pour les deux questions par récurrence, le principal problème étant de trouver la bonne hypothèse de récurrence.
+<ol class="enumeratechiffre">
+<li> Posons, pour $0\leq k\leq n$, l'hypothèse $\mathcal P_k$: " $f^{(k)}$ s'annule en $n+1-k$ points distincts de $[a,b]$, et même de $]a,b[$ si $k\geq 1$". 
+<ul class="rien">
+<li> La propriété est vraie au rang $k=0$, par hypothèse.
+<li> Supposons la propriété vraie au rang $k&lt;n$ et prouvons la au rang $k+1$. Soient 
+$a\leq a_1&lt;a_2&lt;\dots&lt;a_{n+1-k}\leq b$ des réels tous distincts de sorte que $f^{(k)}(a_i)=0$ pour tout $i$. Appliquons le théorème de Rolle à la fonction $g=f^{(k)}$ sur les intervalles $[a_i,a_{i+1}]$, avec $1\leq i\leq n-k$. On obtient des réels $b_i$, avec $b_i\in ]a_i,a_{i+1}[$ tels que $f^{(k+1)}(b_i)=g'(b_i)=0$. De plus, ces réels sont distincts car 
+$$b_i&lt;a_{i+1}&lt;b_{i+1}$$
+et ils sont tous dans l'intervalle $]a,b[$ puisque $a\leq a_1&lt;b_1$ et $b_{n-k}&lt;a_{n+1-k}&lt;b$. 
+$\mathcal P_{k+1}$ est donc vraie.
+</ul>
+Par le principe de récurrence, $\mathcal P_n$ est vraie, et c'est exactement ce que l'on voulait démontrer.
+<li> On introduit cette fois, pour $0\leq k\leq n$, l'hypothèse de récurrence $\mathcal P_k$ : " $f^{(k)}$ s'annule en $b_k$ avec $a&lt;b_k$  et $b_k&lt;b$ si $k\geq 1$". $\mathcal P_0$ est clairement vérifiée, et si $\mathcal P_k$ est vérifiée pour $0\leq k&lt;n$, alors posons $g=f^{(k)}$. On sait que $g(a)=0$ et que $g(b_k)=0$. Par le théorème de Rolle, il existe $b_{k+1}\in ]a,b_k[\subset ]a,b[$ de sorte que
+$$f^{k+1}(b_{k+1})=g'(b_k)=0.$$
+$\mathcal P_{k+1}$ est donc vérifiée. <br>
+Par le principe de récurrence, $\mathcal P_n$ est vérifiée, et c'est exactement ce que l'on voulait prouver!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater331"></span><script>var myRating = raterJs( { element:document.querySelector("#rater331"),	max:5, rating:1.1904761904762, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(331,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Erreur commise <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=331.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(331,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce331','imageenonce331');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce331"></a><div class=inner id="innerenonce331">Majorer l'erreur commise dans les approximations suivantes :
+$$\mathbf a.\sqrt{10001}\simeq 100;\ \mathbf b. \frac{1}{0,999^2}\simeq 1;\ \mathbf c.\cos 1\simeq\frac12.$$</div></div><div class=indication><a href="javascript:showAll('innerindication331','imageindication331');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication331"></a><div class=inner id="innerindication331" style="display:none;">Utiliser l'inégalité des accroissements finis avec une fonction bien choisie.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige331','imagecorrige331',331);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige331"></a><div class=inner id="innercorrige331" style="display:none;">On va utiliser l'inégalité des accroissements finis avec une fonction bien choisie :
+<ol class="enumeratealpha">
+<li> Posons $f(x)=\sqrt x$ sur $[10000,10001]$. Alors
+$$0\leq f'(x)=\frac{1}{2\sqrt x}\leq \frac{1}{200},$$
+et donc
+$$\sqrt{10001}-100\leq \frac{1}{200}.$$
+<li> Posons $g(x)=\frac 1{x^2}$ sur $[0,999;1]$. Alors, sur cet intervalle, 
+$$g'(x)=\frac{-2}{x^3}\textrm{ soit }|g'(x)|\leq \frac{2}{0,999^3}\leq 3.$$
+Ainsi, 
+$$\left|\frac{1}{0,999^2}-1\right|\leq 3\cdot 10^{-3}.$$
+<li> Posons $h(x)=\cos(x)$, de dérivée $-\sin x$, $|h'(x)|\leq 1$. 
+On a donc 
+$$\left|\cos 1-\frac 12\right|\leq \left| 1-\frac\pi 3\right| \leq 5\cdot 10^{-2}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater332"></span><script>var myRating = raterJs( { element:document.querySelector("#rater332"),	max:5, rating:1.875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(332,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Au dessus d'une droite <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=332.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(332,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce332','imageenonce332');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce332"></a><div class=inner id="innerenonce332">Soit $f$ une fonction définie et de classe $C^1$ sur $[0,1]$.
+On suppose que $f(0)=0$ et que $f'(x)&gt;0$ pour tout $x\in[0,1]$.
+Montrer qu'il existe $m&gt;0$ tel que $f(x)\geq mx$ pour tout $x\in [0,1]$.</div></div><div class=indication><a href="javascript:showAll('innerindication332','imageindication332');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication332"></a><div class=inner id="innerindication332" style="display:none;">Poser $m=\inf_{x\in[0,1]} f'(x)$ et justifier que $m&gt;0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige332','imagecorrige332',332);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige332"></a><div class=inner id="innercorrige332" style="display:none;">$f'$ est continue sur $[0,1]$. Elle est donc bornée et atteint ses bornes.
+Soit $m=\inf_{x\in[0,1]}f'(x)$. Il existe $x_0\in[0,1]$ tel que $m=f'(x_0)$.
+En particulier $m&gt;0$ puisque $f'(x_0)&gt;0$. Considérons ensuite $x\in ]0,1]$. 
+Par le théorème des accroissement finis appliqués entre $0$ et $x$, il existe $c\in ]0,x[$ tel que
+$$f(x)-f(0)=f'(c) x.$$
+Puisque $f'(c)\geq m$, ceci entraine bien que $f(x)\geq mx.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater333"></span><script>var myRating = raterJs( { element:document.querySelector("#rater333"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(333,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction bornée dont la dérivée admet une limite <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=333.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(333,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce333','imageenonce333');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce333"></a><div class=inner id="innerenonce333">Soit $f:\mathbb R\to\mathbb R$ une fonction bornée et dérivable telle que $\lim_{+\infty}f'=l$.
+Montrer que $l=0$.</div></div><div class=indication><a href="javascript:showAll('innerindication333','imageindication333');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication333"></a><div class=inner id="innerindication333" style="display:none;">Supposer $l&gt;0$ et prendre un voisinage de $+\infty$ tel que $f'(x)\geq l/2$.
+Appliquer ensuite l'inégalité des accroissements finis.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige333','imagecorrige333',333);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige333"></a><div class=inner id="innercorrige333" style="display:none;">Supposons que $l\neq 0$. Sans perte de généralité, on peut supposer $l&gt;0$. Il existe alors
+un réel $A&gt;0$ tel que, pour tout $x\geq A$, on a 
+$$f'(x)\geq l/2$$
+(on applique la définition de la limite avec $\veps=l/2$). Mais alors, pour tout $x\geq A$, d'après le théorème des accroissements finis,
+on a
+$$f(x)-f(A)=f'(c)(x-A)\geq\frac{l(x-A)}{2}$$
+où $c\in[A,x]$. Faisant tendre $x$ vers $+\infty$, on trouve que $f$ tend vers $+\infty$ également ce qui est une contradiction.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater334"></span><script>var myRating = raterJs( { element:document.querySelector("#rater334"),	max:5, rating:2.9333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(334,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Injectivité locale <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=334.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(334,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce334','imageenonce334');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce334"></a><div class=inner id="innerenonce334">Soit $f:\mathbb R\to\mathbb R$ dérivable et $a\in\mathbb R$ tel que $f'(a)\neq 0$.
+<ol class="enumeratechiffre">
+<li> Montrer qu'il existe un intervalle $I$ centré en $a$ tel que $f(x)\neq f(a)$ pour tout $x\in I\backslash\{a\}$.
+<li> On suppose de plus que $f'$ est continue en $a$. Montrer qu'il existe un intervalle $I$ centré en $a$
+tel que $f_{|I}$ est injective.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication334','imageindication334');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication334"></a><div class=inner id="innerindication334" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par l'absurde et utiliser le taux d'accroissement.
+<li> Prendre $I$ tel que $f'\neq 0$ sur $I$, puis utiliser le théorème des accroissements finis.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige334','imagecorrige334',334);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige334"></a><div class=inner id="innercorrige334" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons pour que pour tout $\veps&gt;0$, il existe dans l'intervalle $]a-\veps,a+\veps[$ un réel
+$x_\veps$ tel que $f(x_\veps)=f(a)$. Alors le taux d'accroissement correspondant
+$$\frac{f(x_\veps)-f(a)}{x_\veps-a}$$
+est nul. Mais lorsque $\veps\to 0$, ce taux d'accroissement tend vers $f'(a)\neq 0$. On obtient une contradiction!
+<li> Puisque $f'(a)\neq 0$ et que $f'$ est continue en $a$, alors il existe un intervalle $I=]a-\veps,a+\veps[$ tel que,
+pour tout $x\in ]a-\veps,a+\veps[$, on a $f'(x)\neq 0$. Soient maintenant $x,y$ dans $I$. Alors, par le théorème des accroissements finis,
+il existe $c\in]x,y[$ tel que 
+$$f(x)-f(y)=f'(c)(x-y).$$
+Puisque $c\in I$, $f'(c)\neq 0$ et $f(x)-f(y)\neq 0$. On aurait aussi pu dire que sur l'intervalle $]a-\veps,a+\veps[$, la fonction est strictement monotone, donc injective.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater335"></span><script>var myRating = raterJs( { element:document.querySelector("#rater335"),	max:5, rating:2.7, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(335,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre de solutions d'une équation <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=335.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(335,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce335','imageenonce335');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce335"></a><div class=inner id="innerenonce335">Soit $P$ un polynôme. Montrer que l'équation $P(x)=e^x$ n'admet qu'un nombre fini de solutions.</div></div><div class=indication><a href="javascript:showAll('innerindication335','imageindication335');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication335"></a><div class=inner id="innerindication335" style="display:none;">Introduire $g(x)=P(x)-e^x$. Fabriquer des racines à $g'$, $g''$ en fonction des racines de $g$. Trouver
+une contradiction si $n$ est trop grand.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige335','imagecorrige335',335);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige335"></a><div class=inner id="innercorrige335" style="display:none;">On pose $g(x)=e^x-P(x)$. Si l'équation admet $n$ solutions, c'est que $g$ admet $n$ racines.
+Par des applications successives du théorème de Rolle, on trouve que $g'$ admet $n-1$ racines,
+$g''$ en admet $n-2$,..., jusque $g^{(n-1)}$ qui en admet au moins 1. Supposons maintenant que $n-1&gt;\deg(P)$. Alors,
+$$g^{(n-1)}=e^x-P^{(n-1)}=e^x$$
+et on trouve que l'équation $e^x=0$ admet au moins une solution. C'est bien entendu absurde, et on vient de prouver
+que l'équation $P(x)=e^x$ admet donc au plus $n+1$ solutions, avec $n=\deg(P)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater336"></span><script>var myRating = raterJs( { element:document.querySelector("#rater336"),	max:5, rating:2.7368421052632, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(336,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivée de polynôme <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=336.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(336,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce336','imageenonce336');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce336"></a><div class=inner id="innerenonce336">Soit $P\in\mathbb R[X]$ scindé (c'est-à-dire que $P$
+a toutes ses racines réelles, ou encore que
+$P(X)=c(X-x_1)^{\alpha_1}\dots(X-x_p)^{\alpha_p}$) et $\lambda\in\mathbb R$. Montrer que $P'+\lambda P$
+est scindé.</div></div><div class=indication><a href="javascript:showAll('innerindication336','imageindication336');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication336"></a><div class=inner id="innerindication336" style="display:none;">Considérer la fonction $f:x\mapsto e^{\lambda x}P(x)$ et lui appliquer le théorème de Rolle.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige336','imagecorrige336',336);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige336"></a><div class=inner id="innercorrige336" style="display:none;">On note $n$ le degré de $P$, $x_1&lt;\dots&lt;x_p$ ses racines distinctes,
+de multiplicité respective $\alpha_1,\dots,\alpha_p$ avec donc $\alpha_1+\dots+\alpha_p=n$.
+Chaque $x_i$ est encore racine de $P'$ de multiplicité $\alpha_i-1$, et donc de $P'+\lambda P$ de multiplicité $\alpha_i-1$. On a donc trouvé
+$\alpha_1-1+\dots+\alpha_p-1=\alpha_1+\dots+\alpha_p-p$ racines, comptées avec leur multiplicité.<br>
+On va trouver maintenant $p-1$ autres racines. Plus précisément, on va en trouver une dans chaque intervalle $]x_i,x_{i+1}[$,
+avec $i=1,\dots,p-1$. En effet, posons $f(x)=P(x)e^{\lambda x}$. $f$ est continu sur $[x_i,x_{i+1}]$,
+dérivable sur $]x_i,x_{i+1}[$ et on a $f(x_i)=f(x_{i+1})=0$. Par le théorème de Rolle, il existe
+$y_i\in]x_i,x_{i+1}[$ tel que $f'(y_i)=0$. Or, $f'(x)=(P'(x)+\lambda P(x))e^{\lambda x}$.
+Puisque la fonction exponentielle ne s'annule pas, $y_i$ est racine de $P'+\lambda P$.<br>
+On a donc obtenu une factorisation de $P'+\lambda P$ sous la forme
+$$P'+\lambda P=\prod_{i=1}^p (X-x_i)^{\alpha_i-1}\prod_{i=1}^{p-1}(X-y_i)Q(X).$$
+Remarquons de plus que $\sum_{i=1}^p (\alpha_i-1)+(p-1)=n-1$. Ainsi, si $\lambda=0$, $P'+\lambda P$ est de degré $n-1$ et on a bien prouvé que $P'+\lambda P$ est scindé. Si $\lambda\neq 0$, alors $P'+\lambda P$ est de degré $n$, et on en déduit que le degré de $Q$ vaut $1$, c'est à dire que $Q(X)=a(X-z)$. Là encore, on a prouvé que $P'+\lambda P$ est scindé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater338"></span><script>var myRating = raterJs( { element:document.querySelector("#rater338"),	max:5, rating:2.9565217391304, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(338,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rolle à l'infini <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=338.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(338,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce338','imageenonce338');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce338"></a><div class=inner id="innerenonce338">Soit $f:[0,+\infty[\to\mathbb R$ une fonction continue, dérivable sur $]0,+\infty[$ et telle que $f(0)=\lim_{+\infty}f=0$.
+On souhaite démontrer qu'il existe $d\in]0,+\infty[$ tel que $f'(d)=0$. Le résultat étant trivial si $f$ est identiquement nulle, on suppose que ce n'est pas le cas et qu'il existe $c\in]0,+\infty[$ tel que $f(c)&gt;0$.
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe $a\in]0,c[$ et $b\in]c,+\infty[$ tel que $f(a)=f(b)$.
+<li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication338','imageindication338');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication338"></a><div class=inner id="innerindication338" style="display:none;">Appliquer le théorème des valeurs intermédiaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige338','imagecorrige338',338);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige338"></a><div class=inner id="innercorrige338" style="display:none;">Pour $\veps=f(c)/2$, il existe $A\geq c$ tel que, pour $x\geq A$, $|f(x)|&lt;\veps$. Ainsi, on a
+$f(A)&lt;\frac{f(c)}2&lt;f(c)$.
+Par le théorème des valeurs intermédiaires, on trouve $b\in]c,A[$ tel que
+$f(b)=f(c)/2$. De même, $\frac{f(c)}{2}\in ]0,f(c)[$. On peut donc trouver $a\in]0,c[$ avec $f(a)=f(c)/2$.
+On a donc $a&lt;b$, $f(a)=f(b)$. On applique alors le théorème de Rolle entre $a$ et $b$ pour trouver $d\in]a,b[$ tel
+que $f'(d)=0$.<br>
+Il existe d'autres méthodes pour prouver ce résultat. Par exemple, on définit $g$ sur $[0,\pi/2[$ par $g(t)=f(\tan(t))$. Alors $g$ est continue sur $[0,\pi/2[$,
+dérivable sur $]0,\pi/2[$. De plus, par théorème de composition des limites $\lim_{\pi/2}g=\lim_{+\infty}f$ existe.
+On peut donc prolonger $g$ par continuité en $\pi/2$ et on a alors $g(\pi/2)=g(0)=f(0)=\lim_{+\infty}f$.
+On applique alors le théorème de Rolle à $g$ pour trouver $c\in]0,\pi/2[$ tel que $g'(c)=0$. Or,
+$$g'(x)=(1+\tan^2(x))f'(\tan(x)).$$
+Donc, $g'(c)=0\implies f'(\tan(c))=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater339"></span><script>var myRating = raterJs( { element:document.querySelector("#rater339"),	max:5, rating:2.2727272727273, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(339,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rolle et dérivée $n$-ième <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=339.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(339,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce339','imageenonce339');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce339"></a><div class=inner id="innerenonce339">Soit $f:[a,b]\to\mathbb R$ de classe $C^n$. On suppose qu'il existe $a\leq x_1&lt;x_2&lt;\dots&lt;x_n\leq b$
+tels que $f(x_i)=0$ pour tout $i=1,\dots,n$.
+<ol class="enumeratechiffre">
+<li> Soit $x\in[a,b]$ différent des $x_i$. Déterminer un réel $A$ pour lequel la fonction $\varphi:t\in[a,b]\mapsto f(t)-A(t-x_1)\cdots(t-x_n)$ s'annule en $x$.
+<li> En déduire qu'il existe 
+$\lambda\in[a,b]$ tel que
+$$f(x)=(x-x_1)\dots(x-x_n)\frac{f^{(n)}(\lambda)}{n!}.$$
+<li> En déduire que 
+$$|f(x)|\leq \frac{\|f^{(n)}\|_\infty}{n!}\prod_{i=1}^n |x-x_i|.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication339','imageindication339');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication339"></a><div class=inner id="innerindication339" style="display:none;"><ol class="enumeratechiffre">
+<li> $A=\frac{f(x)}{(x-x_1)\dots(x-x_n)}$.
+<li> &Eacute;tudier les zéros de $\varphi$ et de ses dérivées.
+<li> Pourquoi $\|f^{(n)}\|_\infty$ existe?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige339','imagecorrige339',339);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige339"></a><div class=inner id="innercorrige339" style="display:none;"><ol class="enumeratechiffre">
+<li> Le seul choix possible est $A=\frac{f(x)}{(x-x_1)\dots(x-x_n)}$.
+<li> La fonction $\varphi$ s'annule en $x_i$, et s'annule aussi en $x$ d'après le choix de $A$.
+Ainsi, $\varphi$ s'annule ainsi $n+1$ fois dans l'intervalle $[a,b]$. En appliquant le théorème de Rolle
+successivement à $\varphi'$ (qui possède donc $n$ zéros dans $]a,b[$), à $\varphi''$ (qui en possède $n-1$), etc...,
+on trouve qu'il existe $\lambda\in]a,b[$ tel que  $\varphi^{(n)}(\lambda)=0$. 
+Mais $\varphi^{(n)}(t)=f^{(n)}(t)-n!A$. Ainsi, $A=\frac{f^{(n)}(\lambda)}{n!}$.
+<li> Remarquons d'abord que $f^{(n)}$ est une fonction continue sur $[a,b]$ puisque $f$ est de classe $\mathcal C^n$. Ainsi, elle est bornée et atteint ses bornes. Le résultat vient donc de la question précédente, et des inégalités $|f^{(n)}(\lambda)|\leq \|f^{(n)}\|_\infty$ et 
+$$\left|\prod_{i=1}^n (x-x_i)\right|=\prod_{i=1}^n |x-x_i|.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater340"></span><script>var myRating = raterJs( { element:document.querySelector("#rater340"),	max:5, rating:2.2941176470588, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(340,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème des accroissements finis généralisés et règle de l'Hospital <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=340.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(340,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce340','imageenonce340');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce340"></a><div class=inner id="innerenonce340">Soit $f,g:[a,b]\to\mathbb R$ deux fonctions continues sur $[a,b]$ et dérivables sur $]a,b[$. 
+On suppose que $g'(x)\neq 0$ pour tout $x\in ]a,b[$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $x\in [a,b[$,  $g(x)\neq g(b)$.
+<li> On fixe $t\in[a,b[$, on pose $p=\frac{f(t)-f(b)}{g(t)-g(b)}$ et on considère la fonction $h$ définie sur $[a,b]$ par $h(x)=f(x)-p g(x)$. Vérifier que $h(b)=h(t)$ et en déduire qu'il existe un nombre réel $c(t)\in ]t,b[$ tel que 
+$$\frac{f(t)-f(b)}{g(t)-g(b)}=\frac{f'(c(t))}{g'(c(t))}.$$
+<li> On suppose qu'il existe un nombre réel $\ell$ tel que $\lim_{x\to b^-}\frac{f'(x)}{g'(x)}=\ell$. 
+Démontrer que 
+$$\lim_{t\to b^-}\frac{f(t)-f(b)}{g(t)-g(b)}=\ell.$$
+<li> Application : déterminer $\lim_{x\to 0^-}\frac{\cos(x)-e^x}{(x+1)e^x-1}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication340','imageindication340');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication340"></a><div class=inner id="innerindication340" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li>
+<li>
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige340','imagecorrige340',340);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige340"></a><div class=inner id="innercorrige340" style="display:none;"><ol class="enumeratechiffre">
+<li> S'il existait $x\in[a,b[$ tel que $g(x)=g(b)$, d'après le théorème de Rolle, il existerait $c\in ]x,b[$ tel que $g'(c)=0$, ce qui n'est pas le cas d'après les hypothèses.
+<li> On a 
+\begin{align*}
+h(b)-h(t)&=f(b)-pg(b)-f(t)+pg(t)\\
+&=\frac{g(t)f(b)-g(b)f(b)-f(t)g(b)+f(b)g(b)-g(t)f(t)+g(b)f(t)+f(t)g(t)-f(b)g(t)}{g(t)-g(a)}\\
+&=0
+\end{align*}
+La fonction $h$ étant continue sur $[t,b]$ et dérivable sur $]t,b[$, on peut lui appliquer le théorème de Rolle et il existe $c(t)\in ]t,b[$ tel que $h'(c(t))=0$. 
+Ceci s'écrit encore $f'(c(t))-pg'(c(t))=0$, ce qui est le résultat demandé.
+<li> Si $t\to b^-$, par le théorème des gendarmes, $c(t)\to b$. Par composition des limites, on a donc 
+$$\lim_{t\to b^-}\frac{f'(c(t))}{g'(c(t))}=\lim_{x\to b^-}\frac{f'(x)}{g'(x)}=\ell.$$
+<li> En posant $f(x)=\cos x-e^x$ et $g(x)=(x+1)e^x$, nous sommes exactement dans les conditions d'application du résultat
+précédent avec $a=-1$ et $b=0$. Puisque $f'(x)=-\sin(x)-e^x$ et $g'(x)=(x+2)e^x$ (remarquons que $g'$ ne s'annule pas sur $[-1,0]$), il vient $\frac{f'(0)}{g'(0)}=-\frac{1}{2}$
+qui est la limite recherchée. En pratique, on lève très rarement une indéterminée de cette façon. On cherche plutôt
+à utiliser des développements limités.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater341"></span><script>var myRating = raterJs( { element:document.querySelector("#rater341"),	max:5, rating:2.4347826086957, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(341,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme de $n$ valeurs <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=341.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(341,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce341','imageenonce341');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce341"></a><div class=inner id="innerenonce341">Soit $f:[0,1]\to\mathbb R$ une fonction de classe $C^1$ vérifiant $f(0)=0$ et $f(1)=1$.
+Démontrer que, pour tout $n\geq 1$, il existe $0&lt;x_1&lt;\dots&lt;x_n&lt;1$ vérifiant $f'(x_1)+\dots+f'(x_n)=n$.</div></div><div class=indication><a href="javascript:showAll('innerindication341','imageindication341');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication341"></a><div class=inner id="innerindication341" style="display:none;">Appliquer le théorème des accroissements finis entre 0 et $1/n$, puis entre $1/n$ et $2/n$, etc...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige341','imagecorrige341',341);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige341"></a><div class=inner id="innercorrige341" style="display:none;">Le résultat est clair pour $n=1$. C'est juste l'application du théorème des accroissements finis entre 0 et 1.
+Le résultat pour $n$ est à peine plus compliqué si on a la bonne idée. Appliquons le théorème des accroissements
+finis à $f$ entre $(i-1)/n$ et $i/n$, pour $i=1,\dots,n$. On obtient un point $x_i\in](i-1)/n,i/n[$ tel que
+$f'(x_i)=\frac{f(i/n)-f((i-1)/n)}{1/n}$. Lorsqu'on calcule la somme $f'(x_1)+\dots+f'(x_n)$, les termes se télescopent 
+deux à deux et on trouve finalement 
+$$f'(x_1)+\dots+f'(x_n)=\frac{f(1)-f(0)}{1/n}=n.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater342"></span><script>var myRating = raterJs( { element:document.querySelector("#rater342"),	max:5, rating:2.9130434782609, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(342,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Darboux <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=342.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(342,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce342','imageenonce342');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce342"></a><div class=inner id="innerenonce342">Soit $I$ un intervalle ouvert de $\mtr$, et $f$ une fonction dérivable sur $I$. On veut prouver que $f'$ vérifie le théorème des valeurs intermédiaires.
+<ol class="enumeratechiffre">
+<li> Pourquoi n'est-ce pas trivial?
+<li> Soit $(a,b)\in I^2$, tel que $f'(a)&lt;f'(b)$, et soit $z\in]f'(a),f'(b)[$. Montrer qu'il existe $\alpha&gt;0$ tel que, pour tout réel $h\in]0,\alpha]$, on ait :
+$$\frac{1}{h}\left(f(a+h)-f(a)\right)&lt;z&lt;\frac{1}{h}\left(f(b+h)-f(b)\right).$$
+<li> En déduire l'existence d'un réel $h&gt;0$ et d'un point $y$ de $I$ tels que :
+$$y+h\in I \textrm{ et }\frac{1}{h}\left(f(y+h)-f(y)\right)=z.$$
+<li> Montrer qu'il existe un point $x$ de $I$ tel que $z=f'(x)$.
+<li> En déduire que $f'(I)$ est un intervalle.
+<li> Soit $f$ la fonction définie sur $[0,1]$ par $f(x)=x^2\sin\left(\frac{1}{x^2}\right)$ si $x\in ]0,1]$ et par $f(0)=0.$ Montrer que $f$ est dérivable sur $[0,1]$. $f'$ est-elle continue sur $[0,1]$? Déterminer $f'([0,1])$. Qu'en concluez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication342','imageindication342');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication342"></a><div class=inner id="innerindication342" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser la définition du nombre dérivé en $a$ et $b$.
+<li> Appliquer le théorème des valeurs intermédiaires.
+<li> Appliquer le théorème des accroissements finis.
+<li>
+<li> Pour prouver la dérivabilité en 0, on revient à la définition.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige342','imagecorrige342',342);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige342"></a><div class=inner id="innercorrige342" style="display:none;"><ol class="enumeratechiffre">
+<li> $f'$ n'est pas toujours continue.
+<li> Soit $\veps=\min(z-f'(a),f'(b)-z)$. On suppose sans perte de généralité que $a&lt;b$. Par définition de la limite et de la dérivabilité à droite en $a$, il existe $\alpha_1&gt;0$ tel que, pour tout $h\in]0,\alpha_1]$, 
+$$\frac{f(a+h)-f(a)}{h}\leq f'(a)+\veps\leq z.$$
+De même, il existe $\alpha_2&gt;0$ tel que, pour tout $h\in]0,\alpha_2]$, 
+$$\frac{f(b+h)-f(b)}{h}\geq f'(b)-\veps\geq z.$$
+Il suffit de prendre $\alpha=\min(\alpha_1,\alpha_2)$.
+<li> On fixe $h$ dans $]0,\alpha]$. Soit $\phi$ la fonction :
+$$\phi(x)=\frac{f(x+h)-f(x)}{h}.$$
+Cette fonction est continue, et $z\in]\phi(a),\phi(b)[$. Par le théorème des valeurs intermédiaires, il existe $y\in I$ tel que $\phi(y)=z$.
+<li> Par le théorème des accroissements finis, il existe $x$ dans $[y,y+h]$ tel que $f'(x)=\frac{f(y+h)-f(y)}{h}=z.$
+<li> On vient de démontrer que si on prend deux éléments quelconques $f'(a)$ et $f'(b)$ de $f'(I)$ avec $f'(a)&lt;f'(b)$, et si on prend $z\in ]f'(a),f'(b)[$, alors $z\in f'(I)$ : c'est bien que $f'(I)$ est un intervalle.
+<li> Il est évident que $f$ est dérivable sur $]0,1]$. Pour prouver la dérivabilité en 0, on revient à la définition :
+$$\left|\frac{f(h)-f(0)}{h}\right|\leq h\left|\sin(1/h^2)\right|\leq h.$$
+$f$ est dérivable en $0$, avec $f'(0)=0$. Remarquons que si $x&gt;0$, on a :
+$$f'(x)=2x\sin\left(\frac{1}{x^2}\right)-\frac{2}{x}\cos\left(\frac{1}{x^2}\right).$$
+Posant $u_n=\frac{1}{\sqrt{2n\pi}}$, on a $u_n\to 0$ alors que $f'(u_n)\to-\infty$ : $f'$ n'est pas continue en 0. Enfin, on a $f'([0,1])=\mtr$, ce qui donne une autre preuve que $f'$ n'est pas continue puisque l'image d'un segment n'est pas forcément un segment!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater343"></span><script>var myRating = raterJs( { element:document.querySelector("#rater343"),	max:5, rating:2.7826086956522, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(343,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tangente passant par un point donné <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=343.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(343,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce343','imageenonce343');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce343"></a><div class=inner id="innerenonce343">Soit $f:[a,b]\to\mathbb R$ une fonction continue, dérivable sur $]a,b[$,
+et vérifiant $f(a)=f(b)=0$. Soit $d\in\mathbb R\backslash [a,b]$. Montrer qu'il existe une tangente à la courbe représentative
+de $f$ passant par le point $(d,0)$.</div></div><div class=indication><a href="javascript:showAll('innerindication343','imageindication343');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication343"></a><div class=inner id="innerindication343" style="display:none;">Traduire cela analytiquement. On doit trouver $x_0\in]a,b[$ vérifiant ... Appliquer ensuite le théorème de Rolle à une
+bonne fonction pour obtenir ce point.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige343','imagecorrige343',343);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige343"></a><div class=inner id="innercorrige343" style="display:none;">L'équation de la tangente au point d'abscisse $x_0$ est 
+$$y-f(x_0)=f'(x_0)(x-x_0).$$
+Cette tangente passe par le point $(d,0)$ si et seulement si
+$$f'(x_0)(x_0-d)-f(x_0)=0.$$
+On va chercher une fonction dont la dérivée va être presque de la forme précédente, et on va montrer par le théorème de Rolle que la dérivée de cette fonction s'annule. Pour cela, on pose
+$$g(x)=\frac{f(x)}{x-d}$$
+définie et continue sur $[a,b]$, dérivable sur $]a,b[$, de dérivée 
+$$g'(x)=\frac{f'(x)(x-d)-f(x)}{(x-d)^2}.$$
+De plus, $g(a)=g(b)=0$. Par le théorème de Rolle, on peut trouver $x_0\in]a,b[$ tel que $g'(x_0)=0$. Pour ce $x_0$, la relation
+$$f'(x_0)=\frac{f(x_0)}{x_0-d}$$
+est donc vérifiée, et la tangente à la courbe représentative de $f$ au point $(x_0,f(x_0))$ passe par $(d,0)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater353"></span><script>var myRating = raterJs( { element:document.querySelector("#rater353"),	max:5, rating:1.6842105263158, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(353,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Valeur approchée de $\ln 2$ <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=353.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(353,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce353','imageenonce353');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce353"></a><div class=inner id="innerenonce353">Soient $f,g:\mathbb R_+\to\mathbb R$ définies par 
+$$g(x)=(x-2)e^{x}+(x+2),\ f(x)=\frac{x}{e^x-1}\textrm{ si }x\neq 0\textrm{ et }f(0)=1.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $g\geq 0$ sur $\mathbb R_+$.
+<li> Démontrer que $f$ est de classe $C^1$ sur $\mathbb R_+$. Que vaut $f'(0)$?
+<li> Vérifier que $f''(x)=\frac{e^x g(x)}{(e^x-1)^3}$ pour tout $x&gt;0$. En déduire que $|f'(x)|\leq 1/2$ sur $\mathbb R_+$.
+<li> On définit une suite $(u_n)$ par $u_0=0$ et $u_{n+1}=f(u_n)$ pour tout entier naturel $n$. Prouver que, pour tout
+$n\in\mathbb N$, on a 
+$$|u_{n}-\ln 2|\leq \left(\frac12\right)^n \ln 2.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication353','imageindication353');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication353"></a><div class=inner id="innerindication353" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer la dérivée seconde.
+<li> On peut appliquer le théorème de prolongement d'une dérivée.
+<li> Dresser le tableau de variations de $f'$.
+<li> Appliquer le théorème du point fixe!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige353','imagecorrige353',353);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige353"></a><div class=inner id="innercorrige353" style="display:none;"><ol class="enumeratechiffre">
+<li> On va étudier $g$. Pour cela, il faut aller jusqu'à la dérivée seconde! En effet, $g$ est de classe $C^\infty$ sur $\mathbb R_+$, avec $g'(x)=(x-1)e^x+1$
+et $g''(x)=xe^x$, $x\in\mathbb R_+$. $g''$ est positive sur $\mathbb R_+$, donc $g'$ est croissante sur cet intervalle. De plus, $g'(0)=0$ donc $g'$ est positive sur
+$\mathbb R_+$. Ainsi, $g$ est croissante sur $\mathbb R_+$ et comme $g(0)=0$, $g$ est positive sur $\mathbb R_+$.
+<li> On va appliquer le théorème suivant : si $f$ est de classe $C^1$ sur $I\backslash\{x_0\}$, et si $f'$ admet une limite $l$ en $x_0$,
+alors $f$ se prolonge en une fonction de classe $C^1$ sur $I$ et $f'(x_0)=l$. Ici, $f$ est déjà définie en $x_0$, et on doit vérifier qu'elle est continue.
+Mais il est clair que 
+$$\frac{x}{e^x-1}=\left(\frac{e^x-1}{x-0}\right)^{-1}\to (\exp)'(0)=1$$
+et donc $f$ est continue en 0. De plus, $f$ est clairement $C^1$ sur $]0,+\infty[$ et on a 
+$$f'(x)=\frac{e^x-1-xe^x}{(e^x-1)^2}.$$
+Effectuons un développement limité de $f'$ autour de 0 :
+$$f'(x)=\frac{1+x+x^2/2+o(x^2)-1-x(1+x+o(x))}{(x+o(x))^2}=\frac{-x^2/2+o(x^2)}{x^2+o(x^2)}\to \frac{-1}2.$$
+Ainsi, $\lim_{x\to 0^{+}}f'(x)=-1/2$, ce qui prouve que $f$ est $C^1$ sur $\mathbb R_+$ et que $f'(0)=-1/2.$
+<li> Le calcul est aisé, et on en déduit que $f''\geq 0$ sur $]0,+\infty[$, et donc que $f'$ est croissante
+sur cet intervalle. D'autre part, $f'(0)=-1/2$ et 
+$$f'(x)\sim_{+\infty}\frac{-xe^x}{e^{2x}}=\frac{-x}{e^x}$$
+ce qui prouve que $\lim_{+\infty}f'(x)=0$. Ainsi, on en déduit que pour tout $x\in\mathbb R_+$, on a
+$$-\frac12\leq f'(x)\leq 0$$
+ce qui prouve que $|f'|\leq 1/2$ sur $\mathbb R_+$.
+<li> Par l'inégalité des accroissement finis, on sait que $|f(x)-f(y)|\leq \frac12 |x-y|$ pour tous $x,y\in\mathbb R_+$. On peut alors démontrer l'inégalité par récurrence sur $n$, le point clé étant de remarquer que $f(\ln 2)=\ln 2$.
+On peut également conclure en appliquant le théorème du point fixe! En effet, $f(\ln 2)=\ln 2$ et donc $\ln 2$ est
+l'unique point fixe de $f$ sur $\mathbb R_+$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater344"></span><script>var myRating = raterJs( { element:document.querySelector("#rater344"),	max:5, rating:4.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(344,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application du théorème des accroissements finis à l'étude d'une suite <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=344.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(344,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce344','imageenonce344');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce344"></a><div class=inner id="innerenonce344">Quelle est la nature de la suite $(\sin(\ln n))$?</div></div><div class=indication><a href="javascript:showAll('innerindication344','imageindication344');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication344"></a><div class=inner id="innerindication344" style="display:none;">S'aider du fait que $\sin(k\pi)=0$ et $\sin(2k\pi+\pi/2)=1$
+pour tout entier k. Bien sûr, si $n$ est un entier, $\ln(n)$ ne sera jamais égal à $k\pi$.
+Mais l'idée est que le logarithme croit très doucement au voisinage de l'infini.
+Ainsi, si $x$ est tel que $\ln(x)=k\pi$, et si $n$ est la partie entière de $x$, alors
+$\ln(n)$ sera presque égal à $\ln(x)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige344','imagecorrige344',344);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige344"></a><div class=inner id="innercorrige344" style="display:none;">On va s'aider du fait que $\sin(k\pi)=0$ et $\sin(2k\pi+\pi/2)=1$
+pour tout entier $k$. Bien sûr, si $n$ est un entier, $\ln(n)$ ne sera jamais égal à $k\pi$.
+Mais l'idée est que le logarithme croit très doucement au voisinage de l'infini.
+Ainsi, si $x$ est tel que $\ln(x)=k\pi$, et si $n$ est la partie entière de $x$, alors
+$\ln(n)$ sera presque égal à $\ln(x)$.
+On peut formaliser cela à l'aide de l'inégalité des accroissements finis.<br>
+Etape 1. Une sous-suite converge vers 0 - 
+Soit k un entier supérieur ou égal à 2. Soit $x_k=\exp(k\pi)$
+et $n_k$ l'entier directement supérieur ou égal à $x_k$.
+Remarquons que la suite $(n_k)$ est strictement croissante et
+que $|n_k-x_k|\leq 1$.
+On applique ensuite l'inégalité des accroissement finis à la fonction $\ln$.
+On obtient
+$$|\ln (x_k)-\ln(n_k)|\leq\frac{|n_k-x_k|}{|x_k|}\leq \exp(-k\pi).$$
+On réapplique l'inégalité des accroissements finis avec la fonction sinus. On trouve
+$$|\sin(\ln(x_k))-\sin(\ln(n_k))|\leq |\ln(x_k)-\ln(n_k)|\leq\exp(-k\pi)$$
+On en déduit que $|\sin(\ln(n_k))|\leq\exp(-k\pi)$ et donc
+que cette sous-suite tend vers 0.<br>
+Etape 2 . Une sous-suite converge vers 1 - 
+On reprend exactement le même raisonnement, mais avec
+$y_k=\exp(2k\pi+\pi/2)$ et $m_k$
+l'entier immédiatement supérieur ou égal à $x_k$.
+Les inégalités se reproduisent avec des changements immédiats, et
+on trouve que la suite $(\sin(\ln(m_k)))$ tend vers 1.<br>
+Ainsi, la suite admet deux sous-suites qui convergent vers des valeurs différentes.
+Elle est divergente. On pourrait aller plus loin et prouver que, pour tout $\ell\in[-1,1]$, il existe une suite-extraite de $(\sin(\ln n))$ qui converge vers $\ell$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater351"></span><script>var myRating = raterJs( { element:document.querySelector("#rater351"),	max:5, rating:3.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(351,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Zéros des dérivées des fonctions $C^\infty$ bornées <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=351.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(351,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce351','imageenonce351');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce351"></a><div class=inner id="innerenonce351">Soit $f:\mathbb R\to\mathbb R$ de classe $C^\infty$ et bornée.
+<ol class="enumeratechiffre">
+<li> Montrer que si une dérivée $f^{(k)}$ admet un nombre fini de zéros, alors les dérivées précédentes
+$f^{(p)}$, $1\leq p&lt;k$ tendent vers 0 en $\pm \infty$.
+<li> En déduire que, pour $k\geq 2$, $f^{(k)}$ s'annule au moins $k-1$ fois.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication351','imageindication351');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication351"></a><div class=inner id="innerindication351" style="display:none;"><ol class="enumeratechiffre">
+<li> Montrer par récurrence décroissante sur $p$ que $f^{(p)}$ garde un signe constant au voisinage de $+\infty$, 
+puis conclure en utilisant le lien entre comportement de la fonction et signe de la dérivée, et le fait qu'une fonction bornée
+ne peut avoir sa dérivée qui admet une limite non-nulle à l'infini.
+<li> Utiliser le théorème de Rolle et le théorème de Rolle "à l'infini" pour fabriquer des zéros.
+Commencer par fabriquer un zéro à $f''$, puis itérer.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige351','imagecorrige351',351);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige351"></a><div class=inner id="innercorrige351" style="display:none;"><ol class="enumeratechiffre">
+<li> On va montrer par récurrence décroissante sur $p$ que $f^{(p)}$ garde un signe constant au voisinage de $+\infty$.
+C'est clairement vrai pour $p=k$ puisque $f^{(k)}$ admet simplement un nombre fini de zéros. Supposons le résultat
+vrai pour $f^{(p)}$, $p\geq 2$, et prouvons-le pour $f^{(p-1)}$. Du fait que $(f^{(p-1)})'$ garde un signe constant
+au voisinage de $+\infty$, la fonction $f^{(p-1)}$ est monotone dans ce même voisinage du type $[A,+\infty[$. Elle n'y admet
+au maximum qu'un seul zéro, et donc elle va elle-même garder un signe constant dans un voisinage éventuellement plus petit
+de $+\infty$.<br>
+En particulier, $f'$ est monotone au voisinage de $+\infty$. Elle admet donc une limite en $+\infty$, éventuellement égale 
+à $\pm\infty$. Mais pour que $f$ soit bornée, il est impératif que cette limite soit nulle. Donc $f'$ tend vers 0 en $+\infty$.
+Répétant le même travail à partir de $f''$ (on sait désormais que $f'$ est bornée au voisinage de $+\infty$), on trouve
+que $f''$ tend vers 0 en $+\infty$. Par récurrence, il vient que $f^{(p)}$ tend vers 0 en $+\infty$ pour tout $p$
+de $1,\dots,k$. Bien sûr, l'étude au voisinage de $-\infty$ est complètement similaire.
+<li> On sait que $f'$ tend vers 0 en $\pm\infty$. Utilisant
+le théorème de Rolle à l'infini, on sait qu'il existe $c$ tel que $f''(c)=0$. Mais comme $f''$ admet aussi comme limite
+0 en $\pm\infty$, deux nouvelles applications du théorème de Rolle montrent qu'on trouve deux points $d$ et $e$
+avec $f^{(3)}(d)=f^{(3)}(e)=0$. On peut itérer le raisonnement, en utilisant à la fois le théorème de Rolle classique
+et le théorème de Rolle à l'infini, et on trouve que $f^{(k)}$ admet bien $k-1$ zéros au moins.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Dérivées successives</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater347"></span><script>var myRating = raterJs( { element:document.querySelector("#rater347"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(347,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Premiers calculs avec la formule de Leibniz <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=347.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(347,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce347','imageenonce347');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce347"></a><div class=inner id="innerenonce347">Calculer la dérivée $n$-ième des fonctions suivantes :
+$$
+\begin{array}{lll}
+\mathbf 1. x\mapsto x\exp(x)&\quad\quad&\mathbf 2. x\mapsto (x^3+2x-7)e^x
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication347','imageindication347');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication347"></a><div class=inner id="innerindication347" style="display:none;">Appliquer la formule de Leibniz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige347','imagecorrige347',347);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige347"></a><div class=inner id="innercorrige347" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $u(x)=xe^x$ et écrivons $u(x)=v(x)w(x)$ avec $v(x)=x$ et $w(x)=e^x$. On va appliquer la formule de Leibniz
+$$u^{(n)}(x)=\sum_{k=0}^n \binom nk v^{(k)}(x)w^{(n-k)}x.$$
+Cette somme ne va comporter que deux termes. En effet, on a 
+$$v(x)=x,\ v'(x)=1,\ v^{(k)}(x)=0,\ k\geq 2.$$
+Comme de plus $w^{(k)}(x)=e^x$ pour tout $k\geq 0$, on a donc
+$$u^{(n)}(x)=xe^x+ne^x=(x+n)e^x.$$
+Remarquons que cette formule se démontre aussi très facilement par récurrence.
+<li> Posons $f(x)=(x^3+2x-7)e^x.$ On va appliquer la formule de Leibniz en écrivant $f(x)=g(x)h(x)$ avec $h(x)=x^3+2x-7$ et $g(x)=e^x.$ La situation est assez facile ici car $h'(x)=3x^2+2$, $h''(x)=6x$, $h^{(3)}(x)=6$ et $h^{(k)}(x)=0$ dès que $k\geq 4$. D'autre part, les dérivées successives de la fonction exponentielle sont encore égales à la fonction exponentielle. On en déduit que 
+\begin{eqnarray*}
+f^{(n)}(x)&=&\sum_{k=0}^3 \binom nk h^{(k)}(x)e^x\\
+&=&\left((x^3+2x-7)+n(3x^2+2)+\frac{n(n-1)}26x+\frac{n(n-1)(n-2)}66\right)e^x\\
+&=&\big(x^3+3nx^2+(3n^2-3n+2)x+(n^3-3n^2+4n-7)\big)e^x.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater346"></span><script>var myRating = raterJs( { element:document.querySelector("#rater346"),	max:5, rating:1.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(346,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynômes de Laguerre <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=346.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(346,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce346','imageenonce346');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce346"></a><div class=inner id="innerenonce346">On pose, pour tout entier naturel $n$ et pour tout réel $x$, 
+$$h_n(x)=x^ne^{-x}\textrm{ et }L_n(x)=\frac{e^x}{n!}h_n^{(n)}(x).$$
+<ol class="enumeratechiffre">
+<li> Montrer que, pour tout entier $n$, $L_n$ est une fonction polynômiale. Préciser son degré et son coefficient dominant.
+<li> Plus précisément, montrer que, pour tout $k\in\{0,\dots,n\}$, il existe $Q_k\in\mathbb R[X]$ tel que, pour tout $x\in\mathbb R$, on a
+$$h_n^{(k)}(x)=x^{n-k}e^{-x}Q_k(x).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication346','imageindication346');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication346"></a><div class=inner id="innerindication346" style="display:none;">Il s'agit d'appliquer la formule de Leibniz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige346','imagecorrige346',346);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige346"></a><div class=inner id="innercorrige346" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après la formule de Leibniz, pour tout $x\in\mathbb R$, 
+$$h_n^{(n)}(x)=\sum_{j=0}^n \binom nj (e^{-x})^{(j)}(x^n)^{(n-j)}.$$
+Or,
+$$(e^{-x})^{(j)}=(-1)^j e^{-x},$$
+et
+$$(x^n)^{(n-j)}=n(n-1)\dots (j+1)x^{j}.$$
+On a donc
+$$h_n^{(n)}(x)=e^{-x}P_n(x)$$
+où $P_n$ est un polynôme de degré $n$ et de coefficient dominant valant $(-1)^n \binom nn=(-1)^n$.
+$L_n$ est donc bien une fonction polynômiale de degré $n$ et de coefficient dominant valant $(-1)^n/n!$.
+<li> Il s'agit (encore une fois!) de la formule de Leibniz à appliquer correctement!
+En effet, pour tout $x\in\mathbb R$, 
+$$h_n^{(k)}(x)=\sum_{j=0}^k \binom kj (e^{-x})^{(j)}(x^n)^{(k-j)}.$$
+Or, 
+$$(e^{-x})^{(j)}=(-1)^j e^{-x},$$
+et 
+$$(x^n)^{(k-j)}=n(n-1)\dots (n-k+j+1)x^{n-k+j}=x^{n-k}R_{n,j,k}(x)$$
+où $R_{n,j,k}$ est un polynôme (et même un monôme...). 
+En sommant tout cela, on trouve
+$$h_n^{(k)}(x)=e^{-x}x^{n-k}\sum_{j=0}^k\binom kj (-1)^j R_{n,j,k}(x)$$
+ce qui est le résultat voulu en posant 
+$$Q_k(x)=\sum_{j=0}^k\binom kj (-1)^j R_{n,j,k}(x).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater345"></span><script>var myRating = raterJs( { element:document.querySelector("#rater345"),	max:5, rating:2.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(345,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul un peu sophistiqué <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=345.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(345,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce345','imageenonce345');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce345"></a><div class=inner id="innerenonce345">Soit $n\geq 1$ et $1\leq k\leq n$. 
+<ol class="enumeratechiffre">
+<li> Calculer la dérivée $k$-ème de $x\mapsto x^{n-1}$ et $x\mapsto \ln(1+x)$.
+<li> En déduire la dérivée $n$-ième de la fonction suivante :
+$x\mapsto x^{n-1}\ln(1+x).$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication345','imageindication345');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication345"></a><div class=inner id="innerindication345" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence en écrivant les premières dérivées pour deviner la formule.
+<li> Utiliser la formule de Leibniz.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige345','imagecorrige345',345);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige345"></a><div class=inner id="innercorrige345" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $g(x)=x^{n-1}$ et $h(x)=\ln(1+x)$,
+qui sont $C^\infty$ sur respectivement $\mathbb R$ et $]-1,+\infty[$.
+On établit alors par récurrence que
+$$g^{(k)}(x)=(n-1)\dots(n-k)x^{n-1-k}=\frac{(n-1)!}{(n-1-k)!}x^{n-1-k},$$
+puis que 
+$$h^{(k)}(x)=\frac{(-1)^{k-1}(k-1)!}{(1+x)^k}$$
+pour $k&gt;0$.
+<li> Posons $f(x)=x^{n-1}\ln(1+x)$ et écrivons $f(x)=g(x)h(x)$. Utilisant la formule de Leibniz, et $g^{(n)}=0$, on trouve
+$$f^{(n)}(x)=(n-1)!\sum_{k=1}^{n}(-1)^{k-1}\binom{n}{k}\frac{x^{k-1}}{(1+x)^{k}}.$$
+Si $x=0$, on trouve que $f^{(n)}(0)=n!$. Si $x\neq 0$, on factorise par $x$ pour faire apparaitre
+une somme qu'on va simplifier à l'aide de la formule du binôme :
+\begin{eqnarray*}
+f^{(n)}(x)&=&\frac{(n-1)!}{x}\left(1-\sum_{k=0}^n\binom{n}{k}\left(\frac{-x}{1+x}\right)^k\right)\\
+&=&\frac{(n-1)!}{x}\left(1-\left(1+\frac{-x}{1+x}\right)^n\right)\\
+&=&\frac{(n-1)!}{x}\left(1-\frac{1}{(1+x)^n}\right).
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater350"></span><script>var myRating = raterJs( { element:document.querySelector("#rater350"),	max:5, rating:2.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(350,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de dérivée $n$-ième <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=350.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(350,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce350','imageenonce350');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce350"></a><div class=inner id="innerenonce350">Soit $n\in\mathbb N$. Montrer que la dérivée d'ordre $n+1$ de $x^ne^{1/x}$ est
+$$\frac{(-1)^{n+1}}{x^{n+2}}e^{1/x}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication350','imageindication350');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication350"></a><div class=inner id="innerindication350" style="display:none;">Procéder par récurrence et utiliser la formule de Leibniz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige350','imagecorrige350',350);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige350"></a><div class=inner id="innercorrige350" style="display:none;">La fonction est de classe $C^\infty$ sur $\mathbb R^*$. Démontrons la formule demandée par récurrence sur $n$.
+Pour $n=0$, la dérivée de $e^{1/x}$ est bien $\frac{-1}{x^2}e^{1/x}$. Supposons la formule vraie au rang $n-1$, et prouvons-la
+au rang $n$. Pour cela, on écrit $x^ne^{1/x}$ sous la forme $x\times x^{n-1}e^{1/x}$ et on utilise la formule
+de Leibniz :
+$$\left(x^n e^{1/x}\right)^{(n+1)}=x\left(x^{n-1}e^{1/x}\right)^{(n+1)}+(n+1)\left(x^{n-1}e^{1/x}\right)^{(n)}.$$
+On introduit alors le résultat de l'hypothèse de récurrence, qui donne directement la valeur du second terme et aussi
+celle du premier terme après une dernière dérivation :
+$$x\left(x^{n-1}e^{1/x}\right)^{(n+1)}=x\left(\frac{(-1)^{n+1}}{x^{n+3}}e^{1/x}+\frac{(-1)^{n+1}(n+1)}{x^{n+2}}e^{1/x}\right).$$
+En mettant tous les résultats ensembles, on trouve exactement le résultat demandé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater348"></span><script>var myRating = raterJs( { element:document.querySelector("#rater348"),	max:5, rating:2.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(348,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un grand classique! <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=348.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(348,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce348','imageenonce348');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce348"></a><div class=inner id="innerenonce348">On considère $f:\mathbb R\to\mathbb R$ définie par 
+$$f(x)=\left\{\begin{array}{ll}
+0&\textrm{ si }x\leq 0\\
+e^{-\frac{1}{x}}&\textrm{ si }x&gt;0.
+\end{array}
+\right.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $f$ est $C^\infty$ sur $]0,+\infty[$ et que, pour tout $x&gt;0$, on a $f^{(n)}(x)=e^{-\frac1x}P_n(1/x)$
+où $P_n\in\mathbb R[X]$.
+<li> Montrer que $f$ est $C^\infty$ sur $\mathbb R$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication348','imageindication348');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication348"></a><div class=inner id="innerindication348" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> Montrer par récurrence sur $n$ que $f$ est de classe $C^n$. On pourra utiliser que 
+$$\lim_{x\to 0^+}e^{-\frac1x}P\left(\frac1x\right)=0$$
+pour tout polynôme $P$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige348','imagecorrige348',348);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige348"></a><div class=inner id="innercorrige348" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction exponentielle est $C^\infty$ sur $\mathbb R$ et $x\mapsto 1/x$ est $C^\infty$ sur $]0,+\infty[$. On en déduit
+par le théorème de composition que $f$ est $C^\infty$ sur $]0,+\infty[$. Prouvons la formule demandée par récurrence sur $n$.
+Elle est trivialement vérifiée si $n=0$. Supposons la vraie au rang $n$ et prouvons-la au rang $n+1$. Par le théorème de dérivation 
+d'une fonction composée :
+$$f^{(n+1)}(x)=e^{-\frac 1x}\left(\frac{1}{x^2}P_n\left(\frac1x\right)-\frac{1}{x^2}P_n'\left(\frac 1x\right)\right)=e^{-\frac 1x}P_{n+1}\left(\frac1x\right)$$
+où $P_{n+1}(X)=X^2 P_n(X)-X^2P_n'(X)$.
+<li> La première chose à remarquer est que, par comparaison des polynômes et de l'exponentielle au voisinage de $-\infty$, on a
+$$\lim_{x\to 0^+}e^{-\frac1x}P\left(\frac1x\right)=0$$
+pour tout polynôme $P$. On démontre alors par récurrence sur $n$ que $f$ est $C^n$ sur $\mathbb R$ tout entier.
+C'est clair pour $n=0$, en appliquant la propriété précédente avec $P=1$. Supposons que $f$ soit de classe $C^n$,
+avec $f^{(n)}(0)=0$.
+Pour montrer que $f$ est $C^{n+1}$ il suffit de vérifier que $f^{(n)}$ est dérivable en 0.
+Mais, pout $x&gt;0$, on a 
+$$\frac{f^{(n)}(x)-f^{(n)}(0)}{x}=e^{-\frac 1x}\frac1xP_n\left(\frac 1x\right)\to 0$$
+si $x\to 0^+$ par la propriété précédente pour $P=XP_n$. Ainsi, $f^{(n)}$ est dérivable en 0 et $f^{(n+1)}(0)=0$.<br>
+Une preuve alternative consiste à utiliser le théorème de prolongement d'une dérivée. En effet, 
+puisque $f^{(n+1)x}$ admet comme limite 0 quand $x\to 0$, ce théorème nous dit que $f^{(n)}$ est dérivable
+en 0, que $f^{(n+1)}$ est continue en 0 avec $f^{(n+1)}(0)=0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater352"></span><script>var myRating = raterJs( { element:document.querySelector("#rater352"),	max:5, rating:3.4666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(352,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des nombres complexes <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=352.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(352,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce352','imageenonce352');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce352"></a><div class=inner id="innerenonce352">Soit $a+ib$ une racine $n-$ième de l'unité, et $f(x)=e^{ax}\cos(bx)$. Donner une formule simple pour $f^{(n)}$.</div></div><div class=indication><a href="javascript:showAll('innerindication352','imageindication352');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication352"></a><div class=inner id="innerindication352" style="display:none;">Utiliser la fonction $g(x)=e^{ax}\cos(bx)+ie^{ax}\sin(bx)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige352','imagecorrige352',352);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige352"></a><div class=inner id="innercorrige352" style="display:none;">Une première solution consiste à utiliser la formule de Leibniz et à couper la somme en 4, suivant le nombre de fois où on dérive le cosinus. Il est toutefois plus aisé d'utiliser :
+$$g(x)=e^{ax}\cos(bx)+ie^{ax}\sin(bx)=e^{(a+ib)x}.$$
+On a alors :
+$$g^{(n)}(x)=(a+ib)^n e^{(a+ib)x}=e^{(a+ib)x}$$
+puisque $a+ib$ est une racine n-ième de l'unité. Il suffit alors de remarquer que $f$ est la partie réelle de $g$ pour conclure que :
+$$f^{(n)}(x)=f(x)=e^{ax}\cos(bx).$$</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Applications à l'étude de suite - théorème du point fixe</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater752"></span><script>var myRating = raterJs( { element:document.querySelector("#rater752"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(752,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite récurrente <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=752.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(752,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce752','imageenonce752');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce752"></a><div class=inner id="innerenonce752">On considère la suite récurrente définie par $u_0\in \mathbb R^*$ et $u_{n+1}=f(u_n)$ pour tout $n\in\mathbb N$,
+où $f$ la fonction définie par $f(x)=1+\frac 14\sin\frac 1x$.
+<ol class="enumeratechiffre">
+<li> Déterminer $I=f(\mathbb R^*)$, et montrer que $I$ est stable par $f$.
+<li> Démontrer qu'il existe $\gamma\in I$ tel que $f(\gamma)=\gamma$.
+<li> Démontrer que, pour tout $x\in I$, 
+$$|f'(x)|\leq\frac 49.$$
+<li> Démontrer que $(u_n)$ converge vers $\gamma$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication752','imageindication752');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication752"></a><div class=inner id="innerindication752" style="display:none;"><ol class="enumeratechiffre">
+<li> Quelle est l'image de la fonction sinus?
+<li> Utiliser le théorème des valeurs intermédiaires.
+<li> Calculer la dérivée.
+<li> Utiliser l'inégalité des accroissements finis.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige752','imagecorrige752',752);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige752"></a><div class=inner id="innercorrige752" style="display:none;"><ol class="enumeratechiffre">
+<li> L'image de $\mathbb R$ par $\sin(1/x)$ étant égale à $[-1,1]$, 
+on en déduit que $f(\mathbb R^*)=[3/4,5/4]=I$. $I$ est stable par $f$ car $f(I)\subset f(\mathbb R^*)=I$.
+<li> On a $f(3/4)\geq 3/4$ et $f(5/4)\leq 5/4$ puisque $I$ est stable par $f$. Posons alors $g(x)=f(x)-x$. $g$ est continue, $g(3/4)\geq 0$ et $g(5/4)\leq 0$. Par le théorème des valeurs intermédiaires, il existe $\gamma\in I$ tel que $g(\gamma)=0$, ou encore $f(\gamma)=\gamma$.
+<li> On calcule la dérivée de $f$ :
+$$f'(x)=-\frac{1}{4x^2}\cos\frac 1x,$$
+formule valable sur $I$. Or, pour tout $x\in I$, on a 
+$$|f'(x)|\leq \frac{16}{4\times 9}=\frac{4}9&lt;1.$$
+<li> Notons $k=4/9$. On démontre par récurrence sur $n$ que, pour tout $n\geq 1$, on a 
+$$|u_n-\gamma|\leq k^{n-1} |u_1-\gamma|.$$
+C'est vrai si $n=1$. Supposons que c'est vrai au rang $n\geq 1$ et prouvons-le au rang $n+1$. On remarque que, puisque $u_1\in I$ et que $I$ est stable par $f$, alors $u_n\in I$. Il suffit alors d'écrire 
+$$|u_{n+1}-\gamma|=|f(u_n)-f(\gamma)|\leq k|u_n-\gamma|\leq k^{n}|u_1-\gamma|$$
+pour le prouver au rang $(n+1)$.<br>
+On déduit alors du théorème des gendarmes que $(u_n-\gamma)$ tend vers 0, c'est-à-dire que $(u_n)$ tend vers $\gamma$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater729"></span><script>var myRating = raterJs( { element:document.querySelector("#rater729"),	max:5, rating:3.5882352941176, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(729,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème du point fixe <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=729.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(729,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce729','imageenonce729');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce729"></a><div class=inner id="innerenonce729">Soit $f:[a;b]\to\mathbb [a,b]$ une application dérivable. On suppose qu'il existe $k\in ]0,1[$ tel que, pour tout $x\in [a,b]$, on a $|f'(x)|\leq k$. On dit que $\gamma\in [a,b]$ est un point fixe de $f$ si $f(\gamma)=\gamma$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $f$ admet un point fixe.
+<li> Démontrer que ce point fixe est unique. On le note $\gamma$.
+<li> Soit $(u_n)$ une suite récurrente définie par $u_0\in [a,b]$ et $u_{n+1}=f(u_n)$.
+Démontrer que $(u_n)$ converge vers $\gamma$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication729','imageindication729');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication729"></a><div class=inner id="innerindication729" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;tudier la fonction $g(x)=f(x)-x$.
+<li> Utiliser le fait que $f$ est $k$-lipschitzienne.
+<li> Même chose!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige729','imagecorrige729',729);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige729"></a><div class=inner id="innercorrige729" style="display:none;"><ol class="enumeratechiffre">
+<li> Considérons la fonction $g$ définie sur $[a,b]$ par $g(x)=f(x)-x$. Alors $g$ est continue sur $[a,b]$, $g(a)=f(a)-a\geq 0$ et $g(b)=f(b)-b\leq 0$. Par le théorème des valeurs intermédiaires, il existe $\gamma\in [a,b]$ tel que $g(\gamma)=0$, c'est-à-dire tel que $f(\gamma)=\gamma$.
+<li> Supposons qu'il existe deux points fixes différents $\gamma_1$ et $\gamma_2$. Alors
+$$|\gamma_1-\gamma_2|=|f(\gamma_1)-f(\gamma_2)|\leq k |\gamma_1-\gamma_2|&lt;|\gamma_1-\gamma_2|.$$
+Ceci est impossible et donc $f$ admet un unique point fixe $\gamma$.
+<li> On démontre par récurrence sur $n$ que, pour tout $n\geq 0$, on a 
+$$|u_n-\gamma|\leq k^n |u_0-\gamma|.$$
+C'est vrai si $n=0$ et si c'est vrai à un certain rang $n$, alors il suffit d'écrire 
+$$|u_{n+1}-\gamma|=|f(u_n)-\gamma|\leq k|u_n-\gamma|\leq k^{n+1}|u_0-\gamma|$$
+pour le prouver au rang $(n+1)$.<br>
+On déduit alors du théorème des gendarmes que $(u_n-\gamma)$ tend vers 0, c'est-à-dire que $(u_n)$ tend vers $\gamma$.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

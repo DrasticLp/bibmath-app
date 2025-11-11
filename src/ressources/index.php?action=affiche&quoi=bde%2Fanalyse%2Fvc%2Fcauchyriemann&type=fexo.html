@@ -1,0 +1,374 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Conditions de Cauchy-Riemann</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Conditions de Cauchy-Riemann</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater745"></span><script>var myRating = raterJs( { element:document.querySelector("#rater745"),	max:5, rating:1.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(745,rating); this.setRating(rating);   this.disable();    done();     }});</script> - $\mathbb R$-différentiable <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=745.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(745,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce745','imageenonce745');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce745"></a><div class=inner id="innerenonce745">Pour $z=x+iy$, on pose $f(z)=x+iy^2$. 
+<ol class="enumeratechiffre">
+<li> Prouver que $f$ est $\mathbb R$-différentiable sur $\mathbb C$. Déterminer la différentielle de $f$.
+<li> En quels points $f$ est-elle $\mathbb C$-différentiable?
+Existe-t-il un ouvert non vide $U$ de $\mathbb C$ tel que la restriction de $f$ à $U$
+soit holomorphe sur $U$?
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication745','imageindication745');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication745"></a><div class=inner id="innerindication745" style="display:none;"><ol class="enumeratechiffre">
+<li> $f$ est polynomiale. 
+<li> Utiliser les équations de Cauchy-Riemann.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige745','imagecorrige745',745);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige745"></a><div class=inner id="innercorrige745" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $f$ est polynomiale, donc de classe $C^\infty$. Elle est donc $\mathbb R$-différentiable.
+De $\frac{\partial f}{\partial x}(x_0,y_0)=1=(1,0)$ et $\frac{\partial f}{\partial y}(x_0,y_0)=2iy_0=(0,2y_0)$, on déduit
+que 
+$$df_{x_0+iy_0}(x+iy)=\left(\begin{array}{cc}1&0\\0&2y_0\end{array}\right)\left(\begin{array}{c}x\\y\end{array}\right)
+=\left(\begin{array}{c}x\\2y_0y\end{array}\right)=x+2iy_0y.$$
+On a librement utilisé le passage entre représentation 
+par un vecteur dans $\mathbb R^2$ et par un nombre complexe.
+<li> Soient $P=\Re e(f)$ et $Q=\Im m(f)$. D'après les équations de Cauchy-Riemann, 
+$f$ est $\mathbb C$-différentiable (ou holomorphe) au point $z=x+iy$ si et seulement si
+$$\left\{
+\begin{array}{rcl}\frac{\partial P}{\partial x}(z)&=&\frac{\partial Q}{\partial y}(z)\\
+\frac{\partial P}{\partial y}(z)&=&-\frac{\partial Q}{\partial x}(z)\\
+\end{array}\right.$$
+ce qui équivaut à la condition $2y=1$. Or, $\{x+iy\in\mathbb C; 1=2y\}$ est d'intérieur vide (c'est une droite!).
+La fonction $f$ n'est holomorphe sur aucun ouvert non vide de $\mathbb C$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater747"></span><script>var myRating = raterJs( { element:document.querySelector("#rater747"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(747,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Parties réelles et imaginaires harmoniques <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=747.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(747,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce747','imageenonce747');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce747"></a><div class=inner id="innerenonce747">Soit $f=u+iv$ une fonction holomorphe dans un ouvert $\Omega$.
+Montrer que $u$ et $v$ sont harmoniques, c'est-à-dire
+que $$\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0.$$</div></div><div class=indication><a href="javascript:showAll('innerindication747','imageindication747');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication747"></a><div class=inner id="innerindication747" style="display:none;">Utiliser les équations de Cauchy-Riemann et le théorème de Schwarz.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige747','imagecorrige747',747);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige747"></a><div class=inner id="innercorrige747" style="display:none;">Puisque $f$ est holomorphe, les équations de Cauchy-Riemann nous disent que :
+$$
+\left\{
+\begin{array}{rcl}
+\frac{\partial u}{\partial x}&=&\frac{\partial v}{\partial y}\\
+\frac{\partial u}{\partial y}&=&-\frac{\partial v}{\partial x}.
+\end{array}\right.
+$$
+Remarquons aussi que les fonctions $u$ et $v$ sont $C^2$, puisque être holomorphe
+entraîne être de classe $C^\infty$.
+On a donc 
+$$\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=\frac{\partial^2 v}{\partial x\partial y}-\frac{\partial^2 v}{\partial y\partial x}=0$$
+où la dernière égalité provient du théorème de Schwarz (on rappelle que $v$ est $C^2$).
+La preuve pour $v$ est tout à fait similaire.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater749"></span><script>var myRating = raterJs( { element:document.querySelector("#rater749"),	max:5, rating:1.7333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(749,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Symétrie <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=749.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(749,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce749','imageenonce749');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce749"></a><div class=inner id="innerenonce749">Soit $U$ un ouvert de $\mathbb C$ et $f$ une fonction holomorphe sur $U$.
+Soit $V=\{z\in\mathbb C;\ \bar z\in U\}$. On pose, pour $z\in V$, $g(z)=\overline{f(\bar z)}$.
+Montrer que $g$ est holomorphe sur $V$.</div></div><div class=indication><a href="javascript:showAll('innerindication749','imageindication749');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication749"></a><div class=inner id="innerindication749" style="display:none;">Vérifier que $g$ satisfait les équations de Cauchy-Riemann.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige749','imagecorrige749',749);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige749"></a><div class=inner id="innercorrige749" style="display:none;">On va vérifier que $g$ satisfait les équations de Cauchy-Riemann en tout point de $V$.
+Si on pose $z=x+iy$ et $f(z)=P(x,y)+iQ(x,y)$, alors on a 
+$$g(z)=\overline{f(x-iy)}=P(x,-y)-iQ(x,-y):=u(x,y)+iv(x,y)$$ 
+où $u(x,y)=P(x,-y)$ et $v(x,y)=-Q(x,-y)$. Ainsi, $g$ est bien $\mathbb R$-différentiable. De plus, on a 
+$$\frac{\partial u}{\partial x}(x,y)=\frac{\partial P}{\partial x}(x,-y)=\frac{\partial Q}{\partial y}(x,-y)$$
+tandis que 
+$$\frac{\partial v}{\partial y}(x,y)=-\left(-\frac{\partial Q}{\partial y}(x,-y)\right)=\frac{\partial Q}{\partial y}(x,-y).$$
+On a donc bien $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$. On vérifie
+de la même façon que $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$, ce qui achève la preuve du fait
+que $g$ est holomorphe.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater3586"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3586"),	max:5, rating:1.875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3586,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Conditions de Cauchy-Riemann et pas holomorphe ! <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3586.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(3586,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3586','imageenonce3586');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3586"></a><div class=inner id="innerenonce3586">On considère $f$ la fonction définie sur $\mathbb C$ par 
+$$
+f(z)=\left\{
+\begin{array}{ll}
+\frac{(\bar z)^3}{|z|^2}&\textrm{ si }z\neq 0\\
+0&\textrm{sinon.}
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $f$ est continue en $0$.
+<li> Démontrer que $f$ vérifie les conditions de Cauchy-Riemann en $0.$
+<li> Pour $\veps&gt;0$ et $\theta\in\mathbb R,$ calculer $f(\veps e^{i\theta})/\veps e^{i\theta}$. En déduire que $f$ n'est pas holomorphe en $0$. Pourquoi ceci ne contredit pas un théorème du cours ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3586','imageindication3586');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3586"></a><div class=inner id="innerindication3586" style="display:none;"><ol class="enumeratechiffre">
+<li> Majorer $|f(z)|$.
+<li> Calculer explicitement $f$ en fonction de $x,y$ pour $z=x+iy$, expliciter $P$ et $Q$ puis les dérivées partielles.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3586','imagecorrige3586',3586);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3586"></a><div class=inner id="innercorrige3586" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour $z\in\mathbb C^*,$ on a 
+$$|f(z)-f(0)|\leq \frac{|\bar z|^3}{|z|^2}=|z|.$$
+Par le théorème des gendarmes, on a $|f(z)-f(0)|\to 0$ si $z\to 0,$ et donc
+$f$ est continue en $0.$
+<li> Soit $z\neq 0$ et posons $z=x+iy,$ avec $x,y\in\mathbb R.$ Alors 
+$$f(z)=\frac{(x-iy)^3}{x^2+y^2}=\frac{x^3-3xy^2}{x^2+y^2}+i\frac{-3x^2y+y^3}{x^2+y^2}.$$
+Posons $P(x,y)=\frac{x^3-3xy^2}{x^2+y^2}$ et $Q(x,y)=\frac{-3x^2y+y^3}{x^2+y^2}.$ Alors 
+$$\frac{P(x,0)-P(0,0)}{x}=\frac{x^3}{x^3}=1$$
+et 
+$$\frac{P(0,y)-P(0,0)}{y}=0.$$
+Ainsi, on a prouvé que $P$ admet des dérivées partielles en $0$ égales à 
+$$\frac{\partial P}{\partial x}(0)=1\textrm{ et }\frac{\partial P}{\partial y}(0)=0.$$
+De même on a 
+$$\frac{Q(x,0)-Q(0,0)}{x}=0$$
+$$\frac{Q(0,y)-Q(0,0)}{y}=1.$$
+Ainsi, $Q$ admet des dérivées partielles en $0$ égales à 
+$$\frac{\partial Q}{\partial x}(0)=0\textrm{ et }\frac{\partial Q}{\partial y}(0)=1.$$
+On vérifie immédiatement que 
+$$\frac{\partial P}{\partial x}(0)=\frac{\partial Q}{\partial y}(0)\textrm{ et }
+\frac{\partial P}{\partial y}(0)=-\frac{\partial Q}{\partial x}(0).$$
+Ainsi, $f$ vérifie bien les conditions de Cauchy-Riemann en $0.$
+<li> Il est immédiat que 
+$$\frac{f(\veps e^{i\theta})}{\veps e^{i\theta}}=e^{-4i\theta}.$$
+Si $f$ était holomorphe en $0,$ pour tout $\theta\in\mathbb R,$ ce quotient devrait tendre, quand $\veps$ tend vers $0,$ vers $f'(0)$. Or, si $\theta=0,$ ce quotient tend vers $1$ et si $\theta=\pi/4,$ ce quotient tend vers $-1.$ Ainsi, $f$ n'est pas holomorphe en $0.$ Ceci ne contredit pas un résultat du cours car on n'a jamais prouvé que $f$ est $\mathbb R$-différentiable en $0$ (et d'ailleurs, cet exercice démontre que $f$ ne l'est pas).
+</ol>
+Remarquons qu'on aurait pu (plus simplement) définir $f$ par $f(z)=\frac{(\bar z)^2}{z}$ si $z\neq 0$ (c'est bien entendu la même fonction), mais dans la question 2, il aurait de toute façon fallu multiplier par $\bar z$ au numérateur et au dénominateur pour retrouver les parties réelles et imaginaires.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater746"></span><script>var myRating = raterJs( { element:document.querySelector("#rater746"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(746,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions holomorphes à valeurs réelles <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=746.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(746,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce746','imageenonce746');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce746"></a><div class=inner id="innerenonce746">Soit $\Omega$ un ouvert connexe et $f$ une fonction
+holomorphe dans $\Omega$. On écrit $f=u+iv$, où $u$ et $v$
+sont à valeurs réelles.
+Montrer que les propositions suivantes sont équivalentes :
+<ol class="enumeratechiffre">
+<li> $f$ est constante;
+<li> $u$ est constante;
+<li> $v$ est constante;
+<li> $\bar f$ est holomorphe;
+<li> $|f|$ est constante.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication746','imageindication746');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication746"></a><div class=inner id="innerindication746" style="display:none;">Montrer par les conditions
+de Cauchy-Riemann que $(2)\iff (3)$ et que ces deux conditions sont alors
+équivalentes à $(1)$. Pour $(4)$, écrire $2u=f+\bar f$,
+et pour $(5)$, calculer $|f|^2$. Sa différentielle est nulle. On obtient
+un système.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige746','imagecorrige746',746);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige746"></a><div class=inner id="innercorrige746" style="display:none;">On écrit $f=u+iv$ où $u,v$ sont de classe $C^1$.
+Puisque $f$ est holomorphe, les équations de Cauchy-Riemann donnent
+$$
+\left\{
+\begin{array}{rcl}
+\frac{\partial u}{\partial x}&=&\frac{\partial v}{\partial y}\\
+\frac{\partial u}{\partial y}&=&-\frac{\partial v}{\partial x}.
+\end{array}\right.
+$$
+Ainsi, on a $du=0\iff dv=0$. Puisque $\Omega$ est connexe, ceci entraîne
+que $(2)$ est équivalente à $(3)$. Maintenant, clairement $(1)$ implique
+$(2)$, et si on a $(2)$, on a aussi $(3)$ et bien sûr $f$ est constante. On vient donc de démontrer que les trois premières conditions sont équivalentes.<br>
+Si $f$ est constante, $\bar f$ l'est aussi et est donc holomorphe.
+Réciproquement, si $\bar f$ est holomorphe, alors $2u=f+\bar f$
+l'est aussi. Mais puisque $u$ est à valeurs réelles, 
+$\Im m(u)$ est constante, et c'est la partie imaginaire
+d'une fonction holomorphe. D'après ce qu'on vient de démontrer (plus précisément $(3)\implies (1)$),
+$u$ est constante, donc $f$ aussi.<br>
+Enfin, si $f$ est constant, $|f|$ l'est aussi. Réciproquement,
+si $|f|$ est constant, alors il existe $c$ tel que, pour 
+tout $z\in\Omega$,
+$$u^2(z)+v^2(z)=c^2.$$
+Si $c=0$, alors $f=0$ et c'est terminé. Sinon, supposons $c\neq 0$.
+La différentielle de la fonction constante $z\mapsto u^2(z)+v^2(z)$ est donc nulle.
+D'où, en dérivant par rapport à $x$, puis par rapport à $y$ :
+$$u(z)\frac{\partial u}{\partial x}(z)+v(z)\frac{\partial v}{\partial x}(z)=0=u(z)\frac{\partial u}{\partial y}(z)+v(z)\frac{\partial v}{\partial y}(z).$$
+En tenant compte des conditions de Cauchy-Riemann, on obtient le système suivant, où les inconnues
+sont $\frac{\partial u}{\partial x}$ et $\frac{\partial u}{\partial y}$ :
+$$\left\{
+\begin{array}{rcl}
+u(z)\frac{\partial u}{\partial x}(z)-v(z)\frac{\partial u}{\partial y}(z)&=&0\\
+v(z)\frac{\partial u}{\partial x}(z)+u(z)\frac{\partial u}{\partial y}(z)&=&0.
+\end{array}\right.$$
+Le déterminant de ce système est $u^2(z)+v^2(z)=c^2&gt;0$, et donc les dérivées partielles de $u$ sont nulles.
+On en déduit que $u$ est constante, puis que $f$ l'est aussi.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater748"></span><script>var myRating = raterJs( { element:document.querySelector("#rater748"),	max:5, rating:2.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(748,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Reconstruction <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=748.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(748,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce748','imageenonce748');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce748"></a><div class=inner id="innerenonce748">Soient $a,b,c\in\mathbb R$. Pour $z=x+iy$, on pose
+$$P(z)=ax^2+2bxy+cy^2.$$
+Donner une condition nécessaire et suffisante sur $a,b,c$ pour qu'il existe une fonction holomorphe
+$f$ sur $\mathbb C$ vérifiant $\Re e(f)=P$. Lorsque cette condition est remplie, déterminer
+toutes les fonctions $f$ solution.</div></div><div class=indication><a href="javascript:showAll('innerindication748','imageindication748');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication748"></a><div class=inner id="innerindication748" style="display:none;">&Eacute;crire $f=P+iQ$. Les équations de Cauchy-Riemann donnent deux conditions sur les dérivées partielles
+de $Q$. Appliquer ensuite le théorème de Schwarz pour trouver la condition nécessaire.
+Réciproquement, intégrer les relations portant sur les dérivées partielles de $Q$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige748','imagecorrige748',748);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige748"></a><div class=inner id="innercorrige748" style="display:none;">Supposons qu'il existe $f$ vérifiant ces conditions. Posons $Q=\Im m(f)$. Alors
+$$\frac{\partial Q}{\partial y}=\frac{\partial P}{\partial x}=2ax+2by\textrm{ et }\frac{\partial Q}{\partial x}=-\frac{\partial P}{\partial y}=-2bx-2cy.$$
+Par le théorème de Schwarz, on a
+$$\frac{\partial^2 Q}{\partial x\partial y}=\frac{\partial^2 Q}{\partial y\partial x}\implies 2a=-2c$$
+c'est-à-dire $a=-c$. Réciproquement, si $a=-c$, alors en intégrant la relation portant sur $\frac{\partial Q}{\partial y}$, on trouve
+$$Q(x,y)=2axy+by^2+h(x)$$
+où $h$ est $C^1$. Reportant cette formule dans le calcul de la dérivée partielle de $Q$ par rapport à $x$, on trouve
+$$2ay+h'(x)=-2bx+2ay\implies h(x)=-bx^2+C,$$
+avec $C\in \mathbb R$. Alors, si $f$ est telle que $\Re e(f)=P$, $f$ est nécessairement égal à 
+$$f(z)=a(x^2-y^2)+2bxy+i\big(b(y^2-x^2)+2axy+C\big).$$
+Réciproquement, il est facile de voir qu'une telle fonction vérifie les équations de Cauchy-Riemann.
+On a donc trouvé toutes les solutions à $\Re e(f)=P$. Il est très facile de trouver une expression de $f$ en fonction de $z$. On a en effet $f(z)=(a-ib)z^2+iC$.<br>
+Remarquons ici l'analogie avec un exercice classique concernant les formes différentielles : trouver
+une primitive! L'utilisation du théorème de Schwarz ici correspond au fait qu'une forme différentielle
+exacte est nécessairement fermée.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2745"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2745"),	max:5, rating:2.2857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2745,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver une fonction holomorphe connaissant sa partie réelle <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2745.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2745,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2745','imageenonce2745');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2745"></a><div class=inner id="innerenonce2745">Pour $(x,y)\neq (0,0)$, on pose $P(x,y)=x+\frac{x}{x^2+y^2}$. 
+<ol class="enumeratechiffre">
+ <li> Démontrer qu'il existe une unique fonction holomorphe $f$ définie sur $\mathbb C\backslash\{0\}$ dont la partie réelle est $P$ et telle que $f(1)=2$.
+ <li> Pour $z\neq 0$, déterminer l'expression de $f(z)$ en fonction de $z$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2745','imageindication2745');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2745"></a><div class=inner id="innerindication2745" style="display:none;"><ol class="enumeratechiffre">
+ <li> Procéder par analyse/synthèse en utilisant les conditions de Cauchy-Riemann.
+ <li> Reconnaître $z$ et $\bar z$, ou remplacer $x$ par $(z+\bar z)/2$ et $y$ par $(z-\bar z)/2$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2745','imagecorrige2745',2745);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2745"></a><div class=inner id="innercorrige2745" style="display:none;"><ol class="enumeratechiffre">
+ <li> On suppose qu'une telle fonction existe et on l'écrit $f(x+iy)=P(x,y)+iQ(x,y)$. Les équations de Cauchy-Riemann nous disent que, pour tout $(x,y)\neq (0,0)$, on a
+ \begin{align*}
+  \frac{\partial Q}{\partial y}(x,y)&=\frac{\partial P}{\partial x}(x,y)=1+\frac{y^2-x^2}{(x^2+y^2)^2}\\
+  \frac{\partial Q}{\partial x}(x,y)&=-\frac{\partial P}{\partial y}(x,y)=\frac{2xy}{(x^2+y^2)^2}.
+ \end{align*}
+ On va déterminer les fonctions $Q$ de classe $\mathcal C^1$ sur $\mathbb R^2\backslash\{(0,0)\}$ vérifiant ces équations. On commence par intégrer la deuxième équation,
+ qui est, à $y$ fixé, de la forme $y u'(x)/u(x)^2$, avec $u(x,y)=(x^2+y^2)$. Il existe donc $C:\mathbb R\to\mathbb R$ de classe $\mathcal C^1$ telle que 
+ $$Q(x,y)=\frac{-y}{x^2+y^2}+C(y).$$
+ Pour déterminer $y$, on utilise la première équation, qui nous dit que 
+ $$C'(y)+\frac{y^2-x^2}{(x^2+y^2)^2}=1+\frac{y^2-x^2}{(x^2+y^2)^2}.$$
+ On en déduit que $C'(y)=1$, puis que $C(y)=y+A$. Ainsi, si $f$ est solution, $f$ s'écrit
+ $$f(x+iy)=x+iy+\frac{x-iy}{x^2+y^2}+iA.$$
+ La condition $f(1)=2$ entraîne que $A=0$.<br>
+ Réciproquement, la fonction définie ci-dessus est bien une fonction holomorphe sur $\mathbb C\backslash\{0\}$ puisqu'elle vérifie les équations de Cauchy-Riemann sur cet ouvert.
+ <li> On remarque que 
+ $$f(z)=z+\frac{\bar z}{|z|^2}=z+\frac{\bar z}{z\bar z}=z+\frac 1z.$$
+ Si on ne reconnaissait pas $z$ et $\bar z$, on aurait pu utiliser la méthode suivante, plus pénible dans le cas présent, mais qui fonctionne à tous les coups :
+ remplacer $x$ par $(z+\bar z)/2$ et $y$ par $(z-\bar z)/2i$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater750"></span><script>var myRating = raterJs( { element:document.querySelector("#rater750"),	max:5, rating:3.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(750,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Courbes orthogonales <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=750.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(750,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce750','imageenonce750');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce750"></a><div class=inner id="innerenonce750">Soit $f=u+iv$ une fonction holomorphe dans un ouvert $\Omega$.
+Montre que les familles de courbes $u(x,y)=\textrm{constante}$ et $v(x,y)=\textrm{constante}$ sont orthogonales.
+Plus précisément, montrer qu'en tout point $z_0=x_0+iy_0$ de deux de ces courbes tel que $f'(z_0)\neq 0$,
+leurs tangentes respectives sont perpendiculaires.</div></div><div class=indication><a href="javascript:showAll('innerindication750','imageindication750');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication750"></a><div class=inner id="innerindication750" style="display:none;">Par le théorème des fonctions implicites, écrire
+la tangente au point $(x_0,y_0)$ de la courbe $u(x,y)=C$. Faire de même pour $v$.
+Calculer le produit scalaire des vecteurs directeurs.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige750','imagecorrige750',750);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige750"></a><div class=inner id="innercorrige750" style="display:none;">On sait que, pour une courbe définie implicitement par $u(x,y)=C$, avec $u$ différentiable, la tangente au point $(x_0,y_0)$  est 
+$$\frac{\partial u}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial u}{\partial y}(x_0,y_0)(y-y_0)= 0$$
+pourvu que la différentielle en $(x_0,y_0)$ de $u$ est non nulle. Dans notre cas, on ne peut pas avoir $\frac{\partial u}{\partial x}(x_0,y_0)=0$ et $\frac{\partial u}{\partial y}(x_0,y_0)=0$ simultanément, car par les conditions de Cauchy-Riemann, on aurait $f'(z_0)=0$. 
+Un vecteur directeur de la tangente au point $(x_0,y_0)$ de la courbe $u(x,y)=C$ est donc 
+$$\left(\begin{array}{c}
+-\frac{\partial u}{\partial y}(x_0,y_0)\\
+\frac{\partial u}{\partial x}(x_0,y_0)\\
+\end{array}\right).$$
+On peut faire la même chose pour la tangente au point $(x_0,y_0)$ d'une courbe $v=\textrm{cste}$. Un vecteur
+directeur est donné par :
+$$\left(\begin{array}{c}
+-\frac{\partial v}{\partial y}(x_0,y_0)\\
+\frac{\partial v}{\partial x}(x_0,y_0)\\
+\end{array}\right).$$
+On fait alors le produit scalaire des deux vecteurs directeurs trouvés : par application des équations de Cauchy-Riemann, on
+trouve qu'il est nul!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater751"></span><script>var myRating = raterJs( { element:document.querySelector("#rater751"),	max:5, rating:3.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(751,rating); this.setRating(rating);   this.disable();    done();     }});</script> - d-barre <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=751.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(751,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce751','imageenonce751');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce751"></a><div class=inner id="innerenonce751">Dans cet exercice, on identifie $\mathbb R^2$ et $\mathbb C$ via l'application $(x,y)\mapsto x+iy$.
+Soit $\Omega$ un ouvert de $\mathbb C$ et $f\in C^1(\Omega)$ à valeurs dans $\mathbb C$. On note
+$$\frac{\partial f}{\partial z}=\frac12\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)
+\textrm{ et }\frac{\partial f}{\partial \bar z}=\frac12\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right).$$
+<ol class="enumeratechiffre">
+<li> Montrer que 
+$$\frac{\partial \bar f}{\partial \bar z}=\overline{\left(\frac{\partial f}{\partial z}\right)}.$$
+<li> Montrer que $f$ est holomorphe si et seulement si $\frac{\partial f}{\partial \bar z}=0$.
+Montrer que dans ce cas, $f'(z)=\frac{\partial f}{\partial z}(z)$.
+<li> On dit que $f$ est antiholomorphe si $\bar f$ est holomorphe.
+Montrer que $f$ est antiholomorphe si et seulement si $\frac{\partial f}{\partial z}=0$.
+<li> Soit $f$ de classe $C^2$. Montrer que $\Delta f=4\frac{\partial ^2 f}{\partial z\partial \bar z}$.
+<li> On suppose que $f$ est une fonction holomorphe. Montrer que
+$$\Delta |f|^2=4|f'(z)|^2.$$
+<li> On considère $f_1,\dots,f_p$ des fonctions holomorphes dans un ouvert connexe $\Omega$.
+On suppose que $|f_1|^2+\dots+|f_p|^2$ est constante. Montrer que chaque fonction $f_j$
+est constante.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication751','imageindication751');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication751"></a><div class=inner id="innerindication751" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $f=u+iv$.
+<li> Montrer que $\frac{\partial f}{\partial \bar z}=0$ est équivalent aux équations de Cauchy-Riemann.
+Pour la deuxième partie de la question, identifier $f'(z)$ avec la différentielle de $f$ au point $z$.
+<li> Utiliser les question précédentes.
+<li> Composer les dérivées.
+<li> Calculer le laplacien en utilisant la question précédente.
+<li> Appliquer le laplacien à l'équation $|f_1|^2+\dots+|f_p|^2=C$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige751','imagecorrige751',751);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige751"></a><div class=inner id="innercorrige751" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit $f=u+iv$, et $\bar f=u-iv$. On a
+\begin{eqnarray*}
+\frac{\partial \bar f}{\partial \bar z}&=&\frac12\left(\frac{\partial \bar f}{\partial x}+i\frac{\partial \bar f}{\partial y}\right)\\
+&=&\frac12\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)
++\frac{i}2\left(\frac{\partial u}{\partial y}-\frac{\partial v}{\partial x}\right)
+\end{eqnarray*}
+De même,
+\begin{eqnarray*}
+\frac{\partial f}{\partial z}&=&\frac12\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)\\
+&=&\frac12\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)
+-\frac{i}2\left(\frac{\partial u}{\partial y}-\frac{\partial v}{\partial x}\right)
+\end{eqnarray*}
+Prenant le conjugué complexe de la dernière équation, on trouve le résultat.
+<li> En reprenant le même calcul que précédemment, on a :
+\begin{eqnarray*}
+\frac{\partial f}{\partial \bar z}&=&\frac12\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)\\
+&=&\frac12\left(\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}\right)
++\frac{i}2\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right)
+\end{eqnarray*}
+La nullité de $\frac{\partial f}{\partial \bar z}$ est donc équivalente aux équations de Cauchy-Riemann, ce
+qui prouve le résultat. On écrit ensuite $f'(z)=a+ib$. On a $f'(z).(x+iy)=(ax-by)+i(ay-bx)$.
+Mais $f'(z).(x+iy)$ représente l'image du vecteur $(x,y)$ par la différentielle de $f$ au point $z$.
+Ceci est égal à 
+$$\left(\frac{\partial u}{\partial x}(z)x+\frac{\partial u}{\partial y}(z)y, \frac{\partial v}{\partial x}(z)x+\frac{\partial v}{\partial y}(z)y\right).$$
+Par identification par exemple sur la première coordonnée 
+(rappelons qu'on a identifié $\mathbb C$ et $\mathbb R^2$), on trouve
+$$f'(z)=\frac{\partial u}{\partial x}(z)-i\frac{\partial u}{\partial y}(z).$$
+Mais le calcul précédent nous donne
+\begin{eqnarray*}
+\frac{\partial f}{\partial z}&=&\frac12\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)
+-\frac{i}2\left(\frac{\partial u}{\partial y}-\frac{\partial v}{\partial x}\right)\\
+&=&\frac{\partial u}{\partial x}(z)-i\frac{\partial u}{\partial y}(z)
+\end{eqnarray*}
+où on a utilisé les équations de Cauchy-Riemann. Ceci prouve l'égalité demandée.
+<li> On a
+\begin{eqnarray*}
+f\textrm{ antiholomorphe}&\iff&\bar f\textrm{ holomorphe}\\
+&\iff& \frac{\partial \bar f}{\partial \bar z}=0\\
+&\iff& \overline{\left(\frac{\partial f}{\partial z}\right)}=0\\
+&\iff&\frac{\partial f}{\partial z}=0.
+\end{eqnarray*}
+<li> On a 
+\begin{eqnarray*}
+4\frac{\partial^2 f}{\partial z\partial \bar z}&=&2\frac{\partial}{\partial z}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)\\
+&=&\frac{\partial }{\partial x}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)-i\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)\\
+&=&\frac{\partial^2 f}{\partial x^2}+i\frac{\partial^2 f}{\partial x\partial y}-i\frac{\partial^2 f}{\partial y\partial x}+\frac{\partial^2 f}{\partial y^2}\\
+&=&\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}=\Delta f
+\end{eqnarray*}
+où on a utilisé le théorème de Schwarz.
+<li> On applique le résultat de la question précédente à $g=|f|^2=f\bar f$ qui est bien une fonction de classe $\mathcal C^2$ (puisqu'une fonction holomorphe est même $\mathcal C^\infty$). On obtient 
+\begin{eqnarray*}
+\Delta(|f|^2)&=&4\frac{\partial ^2}{\partial z\partial \bar z}(f\bar f)\\
+&=&4\frac{\partial }{\partial z}\left(f\frac{\partial \bar f}{\partial \bar z}\right)
+\end{eqnarray*}
+où on a dérivé le produit en utilisant que $\frac{\partial f}{\partial \bar z}=0$
+car $f$ est holomorphe. On dérive le deuxième produit en utilisant cette fois le fait que 
+$\displaystyle \overline{\frac{\partial f}{\partial z}}$ est antiholomorphe. On en déduit
+\begin{eqnarray*}
+\Delta(|f|^2)&=&4\frac{\partial }{\partial z}\left(f\overline{\frac{\partial f}{\partial z}}\right)\\
+&=&4\frac{\partial f}{\partial z}\overline{\frac{\partial f}{\partial z}}\\
+&=&4|f'(z)|^2.
+\end{eqnarray*}
+<li> Supposons que $|f_1|^2+\dots+|f_p|^2=C$. On applique le laplacien à cette équation (le laplacien est évidemment un opérateur linéaire) et on trouve,
+d'après la question précédente 
+$$|f_1'(z)|^2+\dots+|f_p'(z)|^2=0.$$
+Chaque dérivée $f_j'(z)$ est donc nulle sur $\Omega$ ouvert connexe. On en déduit
+que $f_j$ est constante sur $\Omega$.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

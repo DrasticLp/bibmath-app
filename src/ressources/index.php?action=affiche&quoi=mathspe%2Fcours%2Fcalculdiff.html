@@ -1,0 +1,383 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Résumé de cours : calcul différentiel</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Résumé de cours : calcul différentiel</h1><div class=cours>
+
+
+<p class=utexte>$E$ est un $\mathbb R$-espace vectoriel normé de dimension finie $p$, $F$ est un $\mathbb R$-espace vectoriel de dimension finie $n$.
+On fixe une base $(e_1,\dots,e_p)$ de $E$ et une base $(u_1,\dots,u_n)$ de $F.$
+ Soit $\mathcal U$ un ouvert de $E$ et $f:\mathcal U\to F$. On écrira aussi $f=(f_1,\dots,f_n)$ où les $f_i$ sont
+ les fonctions coordonnées de $f$ dans la base $(u_1,\dots,u_n)$.
+</p>
+
+<div class=titrepartie>Dérivées suivant un vecteur, dérivées partielles</div>
+<p class=utexte>
+Soit $v\in E$ et $a\in\mathcal U$.  On dit que $f$ admet une <span class=rougedico>dérivée suivant le vecteur $v$ en $a$</span> si l'application $t\mapsto f(a+tv)$ est dérivable en $0$. Dans ce cas, on note
+$$D_vf(a)=\lim_{t\to 0}\frac{f(a+tv)-f(a)}{t}$$
+la dérivée de $f$ en $a$ suivant le vecteur $v$.
+</p>
+<p class=utexte>
+On appelle <span class=rougedico>$i$-ème dérivée partielle</span>, $1\leq i\leq p$ de  $f$ en $a$ la dérivée suivant le vecteur $e_i$ de $f$ en $a$, et on note 
+$$\frac{\partial f}{\partial x_i}(a)=\partial_i f(a)=\lim_{t\to 0}\frac{f(a+te_i)-f(a)}t.$$
+</p>
+<div class=theo><span class=grastheo>Proposition :</span> $f=(f_1,\dots,f_n)$ admet une dérivée par rapport à $v$ en $a$ 
+si et seulement si tous les $f_i$, $1\leq i\leq n$, admettent une dérivée par rapport à $v$ en $a$. Dans ce cas,
+$$D_vf(a)=(D_vf_1(a),\dots,D_v f_n(a)).$$
+</div>
+
+
+<div class=titrepartie>Différentielle</div>
+<p class=utexte>On fixe $a\in\mathcal U.$</p>
+<p class=utexte>
+On dit que $f$ est <span class=rougedico>différentiable en $a$</span> s'il existe un voisinage $V$ de $0$ dans $E$ et
+une application linéaire $L:E\to F$ et une application $\veps: V\to F$ vérifiant $\lim_{h\to 0}\veps(h)=0$ tels que, pour tout $h\in V$, 
+$$f(a+h)=f(a)+L(h)+\|h\|\veps(h).$$
+L'application $L$, si elle existe, est unique et s'appelle la <span class=rougedico>différentielle</span> de $f$ en $a$
+ (ou encore <span class=rougedico>application linéaire tangente</span>). On la note $df_a$ ou $df(a).$
+ On dit que $f$ est différentiable sur $\mathcal U$ si elle est différentiable en tout point de $\mathcal U.$</p>
+<p class=untexte><span class=grastheo>Remarque : </span>On note souvent $o(h)$ pour désigner $\|h\|\veps(h).$ </p>
+<div class=theo><span class=grastheo>Proposition :</span> Si $f$ est différentiable en $a$, alors $f$ est continue en $a$ et $f$ admet en $a$ une dérivée suivant tout vecteur $v\in E$. De plus,
+$$df(a)(v)=D_vf(a).$$
+</div>
+<div class=theo><span class=grastheo>Proposition :</span> Si $f$ est différentiable en $a$, alors les $p$ dérivées partielles de $f$ en $a$ existent.
+ De plus, pour tout $h\in E$, on a 
+$$df(a)(h)=\sum_{i=1}^p \frac{\partial f}{\partial x_i}(a)h_i.$$
+</div>
+
+<p class=utexte>Si $f$ est différentiable en $a$, et si on écrit $f=(f_1,\dots,f_n)$, alors on appelle <span class=rougedico>matrice jacobienne</span> de $f$ en $a$ la matrice
+$$J_a f=\left(
+\frac{\partial f_i}{\partial x_j}(a)\right)_{1\leq i\leq n,\ 1\leq j\leq p}.$$
+Lorsque $n=p$, le déterminant de la matrice jacobienne s'appelle <span class=rougedico>déterminant jacobien</span>.
+</p>
+<div class=exemple><p class=untexte><span class=grastheo>Exemples :</span></p>
+<div class=liste>
+<ul>
+<li>Si $f:E\to F$ est une application linéaire, elle est différentiable en tout point de $E$ et sa différentielle est constante égale à $f$.
+<li>Si $f:\mathcal U\to F$ est une application constante, elle est différentiable en point de $\mathcal U$
+et sa différentielle est l'application identiquement nulle.
+</ul>
+</div>
+</div>
+<div class=theo><span class=grastheo>Proposition :</span> Si $E=\mathbb R$, alors $f$ est différentiable en $a$ si et seulement si $f$ est dérivable en $a.$ Dans ce cas, on a $f'(a)=df(a)(1)$. 
+</div>
+
+
+<div class=titrepartie>Opérations sur les applications différentiable</div>
+<p class=utexte>Dans cette partie, $G$ et $H$ désignent des espaces vectoriels de dimension finie.</p>
+
+<div class=theo>
+<span class=grastheo>Proposition : </span>
+Si $f:U\to F$ et $g:U\to F$ sont différentiables en $a\in U$, alors toute combinaison linéaire $\lambda f+\mu g$ est différentiable en $a$ et on a 
+$$d(\lambda f+\mu g)(a)=\lambda df(a)+\mu dg(a).$$
+</div>
+
+<div class=theo>
+<span class=grastheo>Proposition : </span>
+Si $f:U\to F$ et $g:U\to G$ sont différentiables en $a$ et si $B:F\times G\to H$ est bilinéaire, alors $B(f,g)$ est
+ différentiable en $a$ et 
+$$d(B(f,g))(a)=B(df(a),g)+B(f,dg(a)).$$
+</div>
+<p class=utexte>Plus généralement, si $M$ est une application multilinéaire (continue), 
+et si $f_1,\dots,f_p$ sont différentiables, alors $M(f_1,\dots,f_p)$ est différentiable
+et 
+$$d(M(f_1,\dots,f_p))(a)=\sum_{j=1}^p M(f_1,\dots,f_{j-1},df_j(a),f_{j+1},\dots,f_p).$$
+</p> 
+<div class=theo><span class=grastheo>Composée de deux applications différentiables (règle de la chaîne) :</span>
+Si $\mathcal V$ est un ouvert de $F$, $g:\mathcal V\to G$, $f(\mathcal U)\subset \mathcal V$, si $f$ est différentiable en $a$ et
+ $g$ est différentiable en $f(a)$, alors $g\circ f$ est différentiable en $a$ et 
+$$d(g\circ f)(a)=dg(f(a))\circ  df(a).$$
+</div>
+<p class=utexte>Sur les matrices jacobiennes, l'égalité précédente se traduit par un produit de matrices :
+$$J_a (g\circ f)=J_{f(a)}g\times J_a f.$$
+</p>
+<div class=theo><span class=grastheo>Corollaire :</span> Si $\mathcal V$ est un ouvert de $F$, $g:\mathcal V\to G$, 
+$f(\mathcal U)\subset \mathcal V$, si $f$ est différentiable en $a$ et $g$ est différentiable en $f(a)$, 
+alors les dérivées partielles de $g\circ f$ en $a$ sont données par 
+$$\frac{\partial g\circ f}{\partial x_i}(a)=\sum_{j=1}^n \frac{\partial g}{\partial y_j}(f(a))\frac{\partial f_j}{\partial x_i}(a).$$
+</div>
+<p class=utexte>En particulier, si $f$ est différentiable sur $\mathcal U$ et si $x_1,\dots,x_p:I\to \mathbb R$ sont dérivables sur $I$ et
+ vérifient $(x_1(t),\dots,x_p(t))\in \mathcal U$ pour tout $t\in I$, la fonction 
+$F(t)=f(x_1(t),\dots,x_p(t))$ est dérivable sur $I$ et vérifie
+$$F'(t)=\sum_{i=1}^p x_i'(t)\frac{\partial f}{\partial x_i}(x_1(t),\dots,x_p(t)).$$
+Plus généralement, si $f$ est différentiable sur $\mathcal U,$ si $x_1,\dots,x_p:\mathcal V\to\mathbb R$ sont différentiables
+sur $\mathcal V$ et vérifient $(x_1(t_1,\dots,t_m),\dots,x_p(t_1,\dots,t_m))\in\mathcal U$ pour tout
+$(t_1,\dots,t_m)\in \mathcal V,$ alors la fonction 
+$$F(t_1,\dots,t_m)=f(x_1(t_1,\dots,t_m),\dots,x_p(t_1,\dots,t_m))$$
+est différentiable sur $\mathcal U$ et ses dérivées partielles vérifient 
+$$\frac{\partial F}{\partial t_i}(t_1,\dots,t_m)=\sum_{j=1}^p \frac{\partial x_j}{\partial t_i}(t_1,\dots,t_m)\times \frac{\partial f}{\partial x_j}(x_1(t),\dots,x_m(t))$$
+où on a noté $t=(t_1,\dots,t_m)$.
+</p>
+<div class=theo><span class=grastheo>Dérivée le long d'un arc :</span> 
+Si $\gamma:I\to\mathcal U$ est une application définie sur un intervalle $I$ de $\mathbb R$, dérivable en $t$, 
+si $f$ est différentiable en $\gamma(t)$, alors $f\circ \gamma$ est dérivable en $t$ et 
+$$(f\circ \gamma)'(t)=df_{\gamma(t)}( \gamma'(t)).$$
+</div>
+<p class=utexte>Si on écrit $\gamma=(\gamma_1,\dots,\gamma_p),$ alors la relation précédente s'écrit
+$$(f\circ\gamma)'(t)=\sum_{k=1}^p \gamma_k'(t)\frac{\partial f}{\partial x_k}(\gamma(t)).$$
+</p>
+
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Applications de classe $C^k$, $k\geq 1$</div>
+<p class=utexte>On dit que $f$ est de classe $C^1$ sur $\mathcal U$ si $f$ est différentiable sur $\mathcal U$ et 
+si l'application $\mathcal U\to\mathcal L(E,F),\ a\in \mathcal U\mapsto df(a) $ est continue.
+<div class=theo><span class=grastheo>Théorème :</span> 
+$f$ est de classe $C^1$ sur $\mathcal U$ si et seulement si toutes les dérivées partielles $\frac{\partial f}{\partial x_i}$ de 
+$f$ existent sur $\mathcal U$  et si elles sont continues sur $\mathcal U$.
+<div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/JaqxNP5VZWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+</div>
+<p class=untexte><span class=grastheo>Opérations sur les fonctions de classe $C^1$ : </span></p>
+<div class=liste>
+<ul>
+<li>toute combinaison linéaire de deux fonctions de classe $C^1$ est de classe $C^1$.
+<li>la composée de deux fonctions de classe $C^1$ est de classe $C^1$.
+<li>si $B$ est une application bilinéaire et $f,g$ sont deux fonctions de classe $C^1$, 
+alors $B(f,g)$ est de classe $C^1.$
+</ul>
+</div>
+<div class=theo><span class=grastheo>Théorème :</span> Si $f$ est une application de classe $C^1$ de $\mathcal U$
+ dans $F$, si $\gamma$  est une application de classe $C^1$ de $[0,1]$ dans $\mathcal U$, si $\gamma(0)=a$, $\gamma(1) = b$, alors :
+$$f (b) - f (a) = \int_0^1 df(\gamma(t))( \gamma'(t))dt.$$
+</div>
+<p class=untexte>
+En particulier, l'intégrale qui apparaît dans l'égalité précédente ne dépend que des extrémités de $\gamma,$
+mais pas de $\gamma$ lui-même.
+</p>
+<div class=theo><span class=grastheo>Corollaire : </span>Si $\mathcal U$ est connexe par arcs et si $f:\mathcal U\to F$
+ est de classe $C^1$, $f$ est constante si et seulement si $df=0$ sur $\mathcal U$.</div>
+
+<p class=utexte>Pour $k\geq 2$, on définit par récurrence les dérivées partielles d'ordre $k$ de $f$ comme les dérivées partielles des dérivées partielles d'ordre $k-1$ de $f$. Par exemple, les dérivées partielles d'ordre $2$ sont les fonctions 
+$$\frac{\partial}{\partial x_i}\left(\frac{\partial f}{\partial x_j}\right)$$
+avec $1\leq i,j\leq p$. On la note $\frac{\partial^2 f}{\partial x_i\partial x_j}$
+ou encore $\partial_i\partial_j f.$ Plus généralement, pour tout $k$-uplet $(i_1,\dots,i_k)$ de $\{1,\dots,p\}^k$, 
+$$\frac{\partial^k f}{\partial x_{i_1}\dots \partial x_{i_k}}=\frac{\partial}{\partial x_{i_1}}
+\left(\frac{\partial }{\partial x_{i_2}}\left(\cdots \left(\frac{\partial f}{\partial x_{i_k}}\right)\right)\right).$$
+</p>
+<p class=utexte>
+On dit que $f:U\to F$ est de <span class=rougedico>classe $C^k$</span> sur $\mathcal U$ avec $k\geq 1$ si elle admet sur $\mathcal U$
+ toutes les dérivées partielles possibles jusqu'à l'ordre $k$ et si ces dérivées partielles sont continues sur $\mathcal U$.
+ </p>
+<div class=theo><span class=grastheo>Théorème de Schwarz :</span> Si $f$ est de classe $C^2$ sur $\mathcal U$, alors pour tout
+ $a\in \mathcal U$, pour tout $1\leq i,j\leq p,$
+$$\frac{\partial^2 f}{\partial x_i\partial x_j}(a)=\frac{\partial^2 f}{\partial x_j \partial x_i}(a).$$
+<div>
+			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Démonstration en vidéo!</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; "><iframe width="560" height="315" src="https://www.youtube.com/embed/ze1yngvRzV8?si=EGxCCV8PRajaMHyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+</div>
+<p class=utexte>Plus généralement, si $f$ est de classe $C^k$ sur un ouvert $\mathcal U$, on peut calculer ses dérivées
+partielles dans n'importe quel ordre.</p>
+<p class=untexte><span class=grastheo>Opérations sur les fonctions de classe $C^k$ : </span></p>
+<div class=liste>
+<ul>
+<li>toute combinaison linéaire de deux fonctions de classe $C^k$ est de classe $C^k$.
+<li>la composée de deux fonctions de classe $C^k$ est de classe $C^k$.
+<li>si $B$ est une application bilinéaire et $f,g$ sont deux fonctions de classe $C^k$, 
+alors $B(f,g)$ est de classe $C^k.$
+</ul>
+</div>
+
+<div class=titrepartie>Vecteur gradient</div>
+<p class=utexte>Dans cette partie, $E$ est un espace euclidien et $f$ est à valeurs dans $\mathbb R$. On rappelle que, pour
+tout forme linéaire $\varphi\in E^*$, il existe un unique $u\in E$ tel que, pour tout $x\in E,$ $\varphi(x)=\langle u,x\rangle.$
+</p>
+<div class=theo><span class=grastheo>Théorème :</span>
+ Si $f$ est différentiable en $a$, alors il existe un unique vecteur $\nabla f(a)\in E$ tel que, pour tout $x\in E$, 
+$df_a(x)=\langle \nabla f(a),x\rangle$. Le vecteur $\nabla f(a)$ s'appelle le <span class=rougedico>vecteur gradient</span> de $f$ en $a$.
+</div>
+<p class=utexte>Si $E$ est muni d'une base orthonormée $(e_1,\dots,e_p),$ alors le vecteur gradient s'écrit 
+$$\nabla f(a)=\sum_{k=1}^p \frac{\partial f}{\partial x_k}(a)e_k.$$
+</p>
+<div class=theo><span class=grastheo>Théorème :</span> Si $f$ est différentiable en $a$ et si $\nabla f(a)\neq 0$, alors l'application $\{u\in E;\ \|u\|=1\}\to \mathbb R$, 
+$u\mapsto D_u f(a)=df_a(u)$ admet un maximum en unique vecteur $u_0$ qui est le vecteur unitaire colinéaire et de même sens que $\nabla f(a)$.
+</div>
+
+<div class=titrepartie>Vecteur tangent</div>
+<p class=utexte>
+Soit $X$ une partie de $E$, $x$ un point de $X$ et $v$ un vecteur de $E$. 
+On dit que $v$ est <span class=rougedico>tangent</span> à $X$ en $x$ s'il existe $\veps>0$ et un arc $\gamma:]-\veps,\veps[\to X$
+ dérivable en $0$ et tel que $\gamma(0)=x,\ \gamma'(0)=v$. On notera $T_x X$ l'ensemble des vecteurs tangents à $X.$</p>
+<div class=theo><span class=grastheo>Théorème : </span>
+Soit $g:\mathcal U\to\mathbb R$ de classe $C^1$ et soit 
+$$X=\{x\in\mathcal U:\ g(x)=0\}.$$
+Alors, pour tout $x\in X$ tel que $dg(x)\neq 0,$ on a $T_xX=\ker dg(x).$
+</div>
+<p class=utexte>En particulier, si $E$ est muni d'une structure euclidienne, $T_x X$ 
+est le plan orthogonal à $\nabla g(x)$ : 
+$$T_x X=\{y\in E:\ \langle y-x,\nabla g(x)\rangle=0\}.$$
+</p>
+<p class=utexte>Si $X$ est une partie de $E,$ $x$ un point de $X,$ on appelle <span class=rougedico>espace tangent</span>
+à $X$ en $x$ la partie $x+T_x X.$</p>
+<div class=theo><span class=grastheo>Corollaire :</span> Soit $f:\mathcal U\subset\mathbb R^2\to \mathbb R$ différentiable sur
+ $\mathcal U$ et soit $$X=\{(x,y,z)\in\mathbb R^3;\ (x,y)\in \mathcal U,\ z=f(x,y)\}.$$
+ Soit enfin $(x_0,y_0,z_0)$ un point de $X$. Alors l'espace tangent à $X$ au point $(x_0,y_0,z_0)$ est le plan d'équation
+$$z-z_0=\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0).$$
+</div>
+
+
+<div class=titrepartie>Optimisation - avec la différentielle</div>
+<p class=utexte>On dit que $f:\mathcal U\to\mathbb R$ admet un <span class=rougedico>minimum global</span> en $a\in \mathcal U$ si, 
+pour tout $x\in \mathcal U$, $f(x)\geq f(a)$.
+On dit que $f$ admet un <span class=rougedico>minimum local</span> en $a$ s'il existe $r>0$ tel que, pour tout $x\in \mathcal 
+U\cap B(a,r)$,
+ on a $f(x)\geq f(a)$. Ce minimum local est <span class=rougedico>strict</span>
+ s'il existe $r>0$ tel que, pour tout $x\in\mathcal U\cap B(a,r)$, $x\neq a$, on a $f(x)&gt;f(a).$
+ On définit de la même façon maximum global, maximum local. Un extrémum est un maximum ou un minimum.</p>
+
+<p class=utexte>Si $f:\mathcal U\to\mathbb R$ est différentiable en $a\in\mathcal U$, on dit que $a$ est un <span class=rougedico>point critique</span> de $f$ si $df_a=0$.</p>
+<div class=theo><span class=grastheo>Théorème :</span> Si $f:\mathcal U\to\mathbb R$ admet un extrémum local en $a$ et si $f$ est différentiable en $a$,
+ alors $a$ est un point critique de $f$.
+ </div>
+<p class=utexte>On dispose aussi de résultats permettant d'étudier les extrema d'une restriction de $f$
+à une partie $X$ de $\mathcal U.$</p>
+<div class=theo><span class=grastheo>Proposition :</span> 
+Soit $X$ une partie non vide de $\mathcal U$ et soit $x\in X.$ Si $f:\mathcal U\to\mathbb R$ est de 
+classe $\mathcal C^1$ et si $f_{|X}$ admet en $x$ un extrémum local,
+alors $df(x)$ s'annule en tout vecteur tangent à $X$  en $x.$
+</div>
+<div class=theo><span class=grastheo>Théorème (optimisation sous contrainte) :</span>
+Soit $f,g:\mathcal U\to\mathbb R$ de classe $\mathcal C^1$. On note 
+$$X=\{x\in \mathcal U:\ g(x)=0\}.$$
+Soit $x\in X$ tel que $dg(x)\neq 0$. Si $f_{|X}$ admet un extrémum local en $x,$
+alors il existe $\lambda\in\mathbb R$ tel que $df(x)=\lambda dg(x).$
+ </div>
+<p class=utexte>Le réel $\lambda$ s'appelle un <span class=rougedico>multiplicateur de Lagrange</span>
+associé à la contrainte $g(x)=0$.</p>
+<p class=utexte>Si $E$ est un espace euclidien, la condition nécessaire du théorème précédent exprime que $\nabla f(x)$ et 
+$\nabla g(x)$ sont colinéaires. En particulier, $\nabla f(x)$ appartient à $(T_x X)^\perp$.</p>
+
+<div class=titrepartie>Optimisation - avec les dérivées secondes</div>
+<div class=theo><span class=grastheo>Théorème (formule de Taylor-Young) : </span> 
+Soit $f:\mathcal U\subset\mathbb R^p\to\mathbb R$ de classe $\mathcal C^2$ et $a\in \mathcal U$. Alors, pour tout $h$ tel que $[a,a+h]\subset U$, on a
+
+$$f(a+h)=f(a)+\sum_{i=1}^p h_i\frac{\partial f}{\partial x_i}(a)+\frac 12\sum_{i,j=1}^p h_ih_j\frac{\partial^2 f}{\partial x_i\partial x_j}(a)+o(\|h\|^2).$$
+</div>
+
+
+<p class=utexte>Si $f:\mathcal U\subset\mathbb R^p\to\mathbb R$ est de classe $\mathcal C^2$ et si $a\in \mathcal U$,
+on appelle <span class=rougedico>matrice hessienne</span> de $f$ en $a,$ et on note $H_f(a),$ la matrice
+symétrique d'ordre $p$
+$$\left(\frac{\partial^2 f}{\partial x_i\partial x_j}(a)\right)_{1\leq i,j\leq p}.$$
+La formule de Taylor-Young peut alors se réécrire 
+$$f(a+h)=f(a)+\langle \nabla f(x),h\rangle+\frac 12\langle H_f(x)\cdot h,h+o(\|h\|^2)$$
+ou encore
+$$f(a+h)=f(a)+ \nabla f(x)^Th+\frac 12 h^T H_f(x) h,h\rangle+o(\|h\|^2).$$
+</p>
+
+
+<div class=theo><span class=grastheo>Théorème (condition nécessaire du second ordre) :</span>
+Soit $f:\mathcal U\subset\mathbb R^p\to \mathbb R$ de classe $\mathcal C^2$. Si $f$ admet un minimum local en $a,$
+alors $Hf(a)$ est une matrice symétrique positive.
+</div>
+<p class=utexte>La condition peut encore se reformuler en disant que toutes les valeurs propres de $H_f(a)$ sont positives ou nulles.
+Si $f$ admet un maximum local en $a$, alors $H_f(a)$ est une matrice symétrique négative, c'est-à-dire que toutes ses
+valeurs propres sont négatives ou nulles.</p>
+<div class=theo><span class=grastheo>Théorème (condition suffisante du second ordre) :</span>
+Soit $f:\mathcal U\subset\mathbb R^p\to \mathbb R$ de classe $\mathcal C^2$ et soit $a\in\mathcal U.$ Si $a$ est un point
+critique de $f$ et si $H_f(a)$ est définie positive, alors $f$ admet un minimum local strict en $a.$
+</div>
+<p class=utexte>La condition peut encore se reformuler en disant que toutes les valeurs propres de $H_f(a)$ sont
+strictement positives. Si $a$ est un point critique de $f$ et si $H_f(a)$ est définie négative (c'est-à-dire que
+toutes ses valeurs propres sont strictement négatives), alors $f$ admet un maximum local strict en $a.$
+</p>
+
+
+<div class=theo><span class=grastheo>Théorème (extrema des fonctions de deux variables) : </span> Soit $f:U\subset\mathbb R^2\to\mathbb R$ de classe $\mathcal C^2$ et $a\in U$ tel que $df_a=0$. Posons
+$$r=\frac{\partial^2 f}{\partial x^2}(a),\quad s=\frac{\partial^2 f}{\partial x\partial y}(a),\quad t=\frac{\partial^2 f}{\partial y^2}(a).$$
+Alors
+<div class=liste>
+<ul>
+<li>si $rt-s^2&gt;0$ et $r&gt;0$, $f$ admet un minimum local en $a$;
+<lI>si $rt-s^2&gt;0$ et $r&lt;0$, $f$ admet un maximum local en $a$;
+<li>si $rt-s^2&lt;0$, $f$ n'admet pas d'extremum en $a$;
+<li>si $rt-s^2=0$, on ne peut pas conclure.
+</ul>
+</div>
+</div>
+
+
+
+
+
+
+<div class=cardcours>
+<div class="titrecours">Calcul différentiel</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcours%252Fcalculdiff.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Ffeuillesexo%252Fcalculdiff&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fmethodes%252Fcalculdiff.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcolles%252Fcalculdiff&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fvideos%252Fcalculdiff.html">Vidéos</a>
+    <!-- <li><a href="index.php?action=affiche&quoi=mathspe/quizz/calculdiff.html">Quizz</a> -->
+        <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Foraux%252Fcalculdiff&amp;type=fexo.html">Oraux de concours</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

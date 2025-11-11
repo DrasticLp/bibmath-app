@@ -1,0 +1,286 @@
+:root {
+    --home-color-black: black;
+    --home-color-white: white;
+    --home-color-green: #229222;
+    --home-color-gray:  #bdc3c7;
+}
+
+:root.sombre {
+    --home-color-black: white;
+    --home-color-white: #2d3436;
+    --home-color-green: rgb(29, 125, 28);
+    --home-color-gray: #171717;
+}
+
+#droite {
+    display: none;
+}
+
+#maincentre {
+    display: block;
+}
+
+#gauche {
+    width: 100%;
+}
+
+/* #pubhaute {
+    display: none;
+}*/
+
+#maincentre, #contenugauche {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+
+/* --- */
+
+.content {
+    position: relative;
+    font-size: 1.1em;
+}
+
+@media (max-width: 700px) {
+    .content {
+        font-size: 1em;
+    }
+}
+
+.block {
+    width: 100%;
+    min-height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background: var(--home-color-white);
+
+}
+
+.block.block-white {
+    
+}
+
+.block.block-gray {
+    background: var(--home-color-gray);
+}
+
+
+/* Bloc Contribuer */
+
+#block-contribute {
+    padding: 4rem 2rem;
+    font-size: 1.1em;
+}
+
+#block-contribute .text {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#block-contribute h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#block-contribute p {
+    line-height: 1.5em;
+    margin: 0;
+}
+
+#block-contribute button {
+    background: black;
+    color: white;
+    font-size: inherit;
+    outline: 0;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: .5rem;
+}
+
+.sombre #block-contribute button {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 700px) {
+    #block-contribute {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Bloc Actualités */
+
+#block-news {
+    padding: 2rem;
+}
+
+.news-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: block;
+    
+    padding: 2rem 0;
+    border-top: var(--home-color-gray) 1px solid;
+    color: var(--home-color-black);
+    text-align: left;
+    font-style: normal !important;
+}
+
+.news-date {
+    color: var(--home-color-gray);
+}
+
+.sombre .news-date {
+    color: rgb(239, 239, 239);
+}
+
+.news-body {
+    color: var(--home-color-black);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Bloc Enigme */
+
+#block-enigme {
+    padding: 1rem;
+}
+
+.enigme-list {
+    max-width: 700px;
+    margin: 0 auto;
+	display: block;    
+    padding: 2rem 0;
+    border-top: var(--home-color-gray) 1px solid;
+    color: var(--home-color-black);
+    text-align: left;
+    font-style: normal !important;
+}
+
+#block-enigme .spoiler {
+    border: none;
+    border-radius: 0;
+    background-color: var(--home-color-gray);
+    color: black;
+}
+
+
+/* Bloc Forum */
+
+#block-forum {
+    padding: 2rem 10% 3rem;
+    font-size: 1.1em;
+    color: var(--home-color-black);
+}
+
+.sombre #block-forum {
+    color: var(--home-color-black);
+}
+
+#block-forum h2 {
+    font-size: 1.5em;
+}
+
+#block-forum ul {
+	max-width: 900px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#block-forum ul li a {
+    color: var(--home-color-black) !important;
+    text-decoration: underline;
+}
+
+.sombre #block-forum ul li a {
+    color: var(--home-color-black) !important;
+}
+
+@media (max-width: 700px) {
+
+    #block-forum {
+        padding: 1rem 2rem 1rem;
+    }
+
+    #blockforum ul {
+        gap: .7rem;
+        padding: 0;
+    }
+
+}
+
+/* Bloc Statistiques */
+
+#block-data {
+    padding: 3rem 2rem;
+}
+
+.datas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.data-number {
+    font-size: 2.3em;
+}
+
+.data-title {
+    font-size: 1.2em;
+}
+
+/* Bloc Éphémérides */
+
+#block-ephemeris {
+    padding: 3rem 10% 5rem;
+}
+
+.ephemeris-list .cardephemeride:last-child {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width:729px) {
+
+    #block-ephemeris {
+        padding: 2rem !important;
+    }
+
+
+    .ephemeris-list a {
+        margin-bottom: 1rem;
+    }
+
+    .ephemeris-list a:last-child:not(:first-child) {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #block-ephemeris {
+        padding: 0 .5rem !important;
+    }
+}

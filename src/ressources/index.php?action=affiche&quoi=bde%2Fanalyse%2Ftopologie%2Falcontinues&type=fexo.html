@@ -1,0 +1,511 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Applications linéaires continues</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Applications linéaires continues</h1>
+
+<div class=titrepartie>Applications linéaires continues</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1527"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1527"),	max:5, rating:1.1764705882353, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1527,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application identité <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1527.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1527,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1527','imageenonce1527');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1527"></a><div class=inner id="innerenonce1527">Soit $N_1$ et $N_2$ deux normes sur l'espace vectoriel $E$. Montrer que $N_1$ et $N_2$ sont équivalentes si et seulement si $Id:(E,N_1)\to (E,N_2)$ et $Id:(E,N_2)\to (E,N_1)$ sont continues.</div></div><div class=indication><a href="javascript:showAll('innerindication1527','imageindication1527');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1527"></a><div class=inner id="innerindication1527" style="display:none;">Il s'agit simplement d'une reformulation...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1527','imagecorrige1527',1527);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1527"></a><div class=inner id="innercorrige1527" style="display:none;">Les deux normes sont équivalentes si et seulement s'il existe $a,b&gt;0$ tels que, pour tout $x\in E$, on a $N_1(x)\leq a N_2(x)$ et $N_2(x)\leq bN_1(x)$. Si on réécrit ces deux inégalités sous la forme 
+$$N_1(Id(x))\leq aN_2(x)\textrm{ et }N_2(Id(x))\leq bN_1(x)$$
+alors on en déduit que c'est équivalent à la continuité des deux applications mentionnées dans l'énoncé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1528"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1528"),	max:5, rating:1.2972972972973, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1528,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sont-elles continues? <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1528.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1528,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1528','imageenonce1528');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1528"></a><div class=inner id="innerenonce1528">Déterminer si l'application linéaire $T:(E,N_1)\to (F,N_2)$ est continue dans les cas suivants :
+<ol class="enumeratechiffre">
+<li> $E=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_1=\int_0^1 |f(t)|dt$ et $T:(E,\|.\|_1)\to (E,\|.\|_1),\ f\mapsto fg$ où
+$g\in E$ est fixé.
+<li> $E=\mathbb R[X]$ muni de $\|\sum_{k\geq 0}a_k X^k\|=\sum_{k\geq 0}|a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathbb R_n[X]$ muni de $\|\sum_{k=0}^n a_k X^k\|=\sum_{k=0}^n |a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathbb R[X]$ muni de $\|\sum_{k\geq 0}a_k X^k\|=\sum_{k\geq 0}k!|a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_2=\left(\int_0^1 |f(t)|^2dt\right)^{1/2}$, $F=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_1=\int_0^1 |f(t)|dt$
+et $T:(E,\|.\|_2)\to (F,\|.\|_1),\ f\mapsto fg$ où
+$g\in E$ est fixé.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1528','imageindication1528');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1528"></a><div class=inner id="innerindication1528" style="display:none;"><ol class="enumeratechiffre">
+<li> $g$ est bornée sur $[0,1]$.
+<li> Calculer $T(X^k)$.
+<li> 
+<li> Faire un calcul direct.
+<li> Utiliser l'inégalité de Cauchy-Schwarz.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1528','imagecorrige1528',1528);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1528"></a><div class=inner id="innercorrige1528" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $g$ est continue sur le segment $[0,1]$, elle y est bornée (et atteint ses bornes).
+Posons $M=\max_{t\in[0,1]}|g(t)|$.  Alors on a
+$$\|Tf\|_1=\int_0^1|f(t)g(t)|dt\leq M\int_0^1 |f(t)|dt\leq M\|f\|_1.$$
+Ceci prouve que $T$ est continue.
+<li> Supposons que $T$ est continue. Alors il existe $C&gt;0$ tel que, pour tout $P\in E$,
+on a $\|TP\|\leq C\|P\|$. Soit $n\geq 0$. Pour $P=X^n$, on trouve
+$$TP=nX^{n-1}, \textrm{ d'où }n=\|TP\|\leq C\|P\|=C.$$
+Ceci est impossible car $\mathbb N$ n'est pas majoré. Donc $T$ n'est pas continue.
+<li> On peut utiliser deux arguments différents. On peut d'une part remarquer que $E$ est un espace
+vectoriel de dimension finie, que toute application linéaire entre espaces de dimension finie est continue.
+On peut aussi utiliser un calcul direct. En effet, soit $P(X)=\sum_{k=0}^n a_kX^k\in E$. Alors on a
+\begin{eqnarray*}
+\|TP\|&=&\bigg\|\sum_{k=1}^n ka_kX^{k-1}\bigg\|\\
+&=&\sum_{k=1}^n k |a_k|\\
+&\leq&n\sum_{k=1}^n |a_k|\leq n\|P\|.
+\end{eqnarray*}
+Puisque $n$ ne dépend pas de $P$ (ceci ne dépend que de $E$), on obtient que $T$ est continue.
+<li> On va prouver que $T$ est continue par un calcul direct. Prenons en effet $P=\sum_{k=0}^{+\infty}a_k X^k\in E$ (la
+somme est en fait finie). Alors on a :
+\begin{eqnarray*}
+\|TP\|&=&\bigg\|\sum_{k=0}^{+\infty} (k+1)a_{k+1}X^k\bigg\|\\
+&=&\sum_{k=0}^{+\infty} (k+1)k! |a_{k+1}|=\sum_{k=0}^{+\infty}(k+1)!|a_{k+1}|\\
+&\leq&\sum_{k=1}^{+\infty} k! |a_k|\\
+&\leq&\|P\|.
+\end{eqnarray*}
+Ceci prouve la continuité de $T$.
+<li> On prouve que $T$ est continue en utilisant l'inégalité de Cauchy-Schwarz :
+$$\|Tf\|=\int_{0}^1 |f(t)||g(t)|dt\leq \left(\int_0^1 |f(t)|^2\right)^{1/2}\left(\int_0^1
+|g(t)|^2dt\right)^{1/2}=C\|f\|_2,$$
+avec $$C=\left(\int_0^1 |g(t)|^2 dt\right)^{1/2}.$$
+$C$ est bien un réel fini, car $g$ est continue sur $[0,1]$, donc bornée, et on a $C\leq\|g\|_\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3280"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3280"),	max:5, rating:0.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3280,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Continue pour une norme, mais pas pour une autre <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3280.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3280,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3280','imageenonce3280');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3280"></a><div class=inner id="innerenonce3280">Soit $T:\mathbb R[X]\to\mathbb R[X]$ défini par $T(P)=P'$. &Eacute;tudier la continuité de $T$ lorsque $\mathbb R[X]$ est muni de la norme
+<ol class="enumeratechiffre">
+<li> $N_1(P)=\sum_{k=0}^{+\infty}|P^{(k)}(0)|$;
+<li> $N_2(P)=\sup_{x\in[0,1]}|P(x)|.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3280','imageindication3280');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3280"></a><div class=inner id="innerindication3280" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de majorer $N_1(P)$.
+<li> Que vaut $N_2(X^k)$? et $N_2(T(X^k))$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3280','imagecorrige3280',3280);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3280"></a><div class=inner id="innercorrige3280" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$N_1(T(P))=\sum_{n=0}^{+\infty}|(P')^{(n)}(0)|=\sum_{k=1}^{+\infty}|P^{(k)}(0)|\leq N_1(P).$$
+Ainsi, par la caractéristation de la continuité des applications linéaires, $T$ est continu de $(\mathbb R[X],N_1)$ dans $(\mathbb R[X],N_1)$.
+<li> Pour $k\geq 1,$ considérons $P_k=X^k$. Alors $N_2(P_k)=1.$ D'autre part, 
+$T(P_k)=kX^{k-1}$ et donc $N_2(T(P_k))=k$. Il est donc impossible qu'il existe une constante $C$ telle que $N_2(T(P_k))\leq C N_2(P_k)$ pour tout $k\geq 1$. 
+L'application linéaire $T$ n'est pas continue de $(\mathbb R[X],N_2)$ dans $(\mathbb R[X],N_2)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1529"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1529"),	max:5, rating:1.78125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1529,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications linéaires sur les polynômes <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1529.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1529,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1529','imageenonce1529');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1529"></a><div class=inner id="innerenonce1529">Soit $E=\mathbb R[X]$, muni de la norme $\|\sum_i a_i X^i\|=\sum_i |a_i|$.
+<ol class="enumeratechiffre">
+<li> Est-ce que l'application linéaire $\phi:(E,\|.\|)\to (E,\|.\|)$, $P(X)\mapsto P(X+1)$
+est continue sur $E$?
+<li> Est-ce que l'application linéaire $\psi:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto AP$, où
+$A$ est un élément fixé de $E$,
+est continue sur $E$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1529','imageindication1529');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1529"></a><div class=inner id="innerindication1529" style="display:none;"><ol class="enumeratechiffre">
+<li> Non!
+<li> Oui!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1529','imagecorrige1529',1529);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1529"></a><div class=inner id="innercorrige1529" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons $\phi$ continue. Alors il existe $C\geq 1$ tel que 
+$$\|\phi(P)\|\leq C\|P\|$$
+pour tout polynôme $P$. Prenons le polynôme $P(X)=X^n$. Alors $\|P\|=1$.
+Mais $P(X+1)=(X+1)^n=X^n +nX^{n-1}+\dots$. Ainsi, on obtient
+$$n\leq \|P(X+1)\|\leq C,$$
+ce qui impossible si on choisit $n$ assez grand. Ainsi, $\phi$ n'est pas continue.
+<li> &Eacute;crivons $A(X)=\sum_{j=0}^p b_j X^j$ et $P(X)=\sum_{i=0}^n a_i X^i$.
+Alors $AP(X)=\sum_{k=0}^{n+p} c_k X^k$ avec 
+$$c_k=\sum_{i+j=k}a_ib_j.$$
+Notons $M=\max_{j=0,\dots p} |b_j|$. On a donc
+$$|c_k|\leq M\sum_{i=\max(0,k-p)}^{k}|a_i|,$$
+ce qui entraîne
+$$\|AP\|_1\leq M \sum_{k=0}^{n+p}\sum_{i=\max(0,k-p)}^k |a_i|.$$
+Fixons $i_0$ dans $\{0,\dots,n\}$. S'il apparait dans la somme $\sum_{i=\max(k-p,0)}^k |a_i|$,
+c'est que $k-p\leq i_0\leq k$. En particulier, il apparait au plus $k-(k-p)+1=(p+1)$ fois. On en déduit que
+$$\|AP\|_1\leq M(p+1)\|P\|_1,$$
+ce qui prouve que $\psi$ est continue.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1532"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1532"),	max:5, rating:1.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1532,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Jamais continue! <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1532.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1532,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1532','imageenonce1532');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1532"></a><div class=inner id="innerenonce1532">Soit $E=\mathcal C^{\infty}([0,1],\mathbb R)$. On considère l'opérateur de dérivation $D:E\to E$, $f\mapsto f'$.
+Montrer que, quelle que soit la norme $N$ dont on munit $E$, $D$ n'est jamais une application linéaire continue
+de $(E,N)$ dans $(E,N)$.</div></div><div class=indication><a href="javascript:showAll('innerindication1532','imageindication1532');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1532"></a><div class=inner id="innerindication1532" style="display:none;">Quelles sont les valeurs propres et les vecteurs propres de $D$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1532','imagecorrige1532',1532);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1532"></a><div class=inner id="innercorrige1532" style="display:none;">Pour $a\in\mathbb R$, la fonction $f_a(x)=e^{ax}$ est dans $E$, et elle vérifie $Df_a=af_a$.
+Or, si $D$ était continue pour la norme $N$, il existerait une constante $C&gt;0$ telle que
+$$N(D(f_a))\leq C N(f_a)$$
+pour tout $a\in\mathbb R$. On obtiendrait alors que, pour tout $a\in\mathbb R$,
+$$|a|N(f_a)\leq CN(f_a)\implies |a|\leq C.$$
+C'est bien sûr impossible, et $D$ n'est pas continue sur $(E,N)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1536"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1536"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1536,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme d'une application linéaire continue <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1536.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1536,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1536','imageenonce1536');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1536"></a><div class=inner id="innerenonce1536">Soit $E$ un espace vectoriel normé et $\mathcal L_c(E)$ l'ensemble des applications linéaires continues sur $E$. Pour $u\in\mathcal L_c(E)$, on pose 
+$$\|u\|=\sup\{\|u(x)\|;\ \|x\|\leq 1\}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que ceci définit une norme sur $\mathcal L_c(E)$.
+<li> Démontrer que, pour tout $x\in E$ et tout $u\in\mathcal L_c(E)$, on a 
+$$\|u(x)\|\leq \|u\|\times \|x\|.$$
+En déduire que, pour tous  $u,v\in \mathcal L_c(E)$, alors $\|u\circ v\|\leq \|u\|\times \|v\|.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1536','imageindication1536');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1536"></a><div class=inner id="innerindication1536" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour démontrer que $\|u\|=0\implies u=0$, utiliser $x=y/\|y\|$ pour tout $y\neq 0$. Pour l'inégalité triangulaire, utiliser l'inégalité triangulaire de la norme sur $E$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1536','imagecorrige1536',1536);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1536"></a><div class=inner id="innercorrige1536" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $u\in\mathcal L_c(E)$. D'abord, si $u=0$, on a bien $\|u\|=0$. Réciproquement, si $\|u\|=0$, alors $\|u(x)\|=0$ pour tout $x\in E$ tel que $\|x\|=1$. Considérons alors $y\in E$. Si $y=0$, on a bien $u(y)=0$. Si $y\neq 0$, considérons $x=y/\|y\|$. Alors $\|x\|=1$, donc $u(x)=0$, donc par homogénéité de $u$, $u(x)=0$ et $u$ est bien nulle.<br>
+Considérons maintenant $\lambda\in\mathbb R$. Alors 
+$$\{\|\lambda u(x)\|;\ \|x\|=1\}=|\lambda|\times \{\|u(x)\|;\ \|x\|=1\}.$$
+On en déduit que $\|\lambda u\|=|\lambda|\times \|u\|.$<br>
+Finalement, soient $u,v\in\mathcal L_c(E)$. Alors, pour tout $x\in E$ avec $\|x\|=1$, on a 
+$$\|u(x)+v(x)\|\leq \|u(x)\|+\|v(x)\|\leq \|u\|+\|v\|.$$
+Passant au sup sur $x$, on obtient bien que $\|u+v\|\leq \|u\|+\|v\|$. Ainsi, la formule 
+$$\|u\|=\sup\{\|u(x)\|;\ \|x\|\leq 1\}$$
+définit bien une norme sur $\mathcal L_c(E)$.
+<li> Soit $x\in E$. Si $x=0$, la formule est claire sinon posons $y=x/\|x\|$. Alors on a $\|u(y)\|\leq \|u\|$ ce qui implique facilement par homogénéité que $\|u(x)\|\leq \|u\|\times \|x\|$.<br>
+Soit maintenant $u,v\in\mathcal L_c(E)$. Alors, pour tout $x\in E$ avec $\|x\|=1$, on a
+$$\|u(v(x))\|\leq \|u\|\times\|v(x)\|\leq \|u\|\times \|v\|.$$
+Passant au sup en $x$, on en déduit bien que $\|u\circ v\|\leq \|u\|\times \|v\|$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1535"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1535"),	max:5, rating:2.5185185185185, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1535,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1535.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1535,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1535','imageenonce1535');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1535"></a><div class=inner id="innerenonce1535">Soit $E$ un espace vectoriel normé et $u$ un endomorphisme de $E$ vérifiant, pour tout $x\in E$, $\|u(x)\|\leq \|x\|$. Pour tout $n\in\mathbb N$, on pose 
+$$v_n=\frac 1{n+1}\sum_{k=0}^n u^k.$$
+<ol class="enumeratechiffre">
+<li> Simplifer $v_n\circ(u-Id)$.
+<li> Montrer que $\ker(u-Id)\cap\textrm{Im}(u-Id)=\{0\}$.
+<li> On suppose désormais que $E$ est de dimension finie. Démontrer que 
+$$\ker(u-Id)\oplus\textrm{Im}(u-Id)=E.$$
+<li> Soit $p$ la projection sur $\ker(u-Id)$ parallèlement à $\textrm{Im}(u-Id)$. Démontrer que, pour tout $x\in E$, $v_n(x)\to p(x)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1535','imageindication1535');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1535"></a><div class=inner id="innerindication1535" style="display:none;"><ol class="enumeratechiffre">
+<li> Télescopage!
+<li> Prendre $y$ dans l'intersection et calculer de deux façons différentes $v_n(y)$.
+<li> Théorème du rang!
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1535','imagecorrige1535',1535);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1535"></a><div class=inner id="innercorrige1535" style="display:none;"><ol class="enumeratechiffre">
+<li> On a, par télescopage, 
+$$\sum_{k=0}^n u^k(u-Id)=u^{n+1}-Id$$ 
+et donc $v_n\circ(u-Id)=\frac 1{n+1}(u^{n+1}-Id).$ 
+<li> Soit $y\in \ker(u-Id)\cap\textrm{Im}(u-Id)$. Alors il existe $x\in E$ tel que $y=(u-Id)(x)$. 
+On en déduit que $v_n(y)=\frac1{n+1}(u^{n+1}(x)-x)$. Puisque $\|u^{n+1}(x)\|\leq \|x\|$, on obtient que $(v_n(y))$ tend vers 0. Mais d'autre part, on sait aussi que $u(y)=y$, et donc, pour tout entier $n$, on a $v_n(y)=y$. Par unicité de la limite, $y=0$.
+<li> C'est une conséquence immédiate du théorème du rang et du résultat de la question précédente.
+<li> Soit $x\in E$, écrivons $x=y+z$ avec $y\in \ker(u-Id)$ et $z\in \textrm{Im}(u-Id)$. Alors le calcul effectué à la deuxième question montre que $v_n(y)=y$ et que $v_n(z)$ tend vers 0. Ainsi, $(v_n(x))$ tend vers $y$ qui est bien égal à $p(x)$.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Norme des applications linéaires continues</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3272"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3272"),	max:5, rating:0.9375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3272,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Multiplication sur un espace de polynômes <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3272.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3272,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3272','imageenonce3272');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3272"></a><div class=inner id="innerenonce3272">Soit $E=\mathbb R[X]$ muni de la norme 
+$$\left\|\sum_{k\geq 0}a_k X^k\right\|_\infty=\sup_{k\geq 0}|a_k|.$$
+Soit $T:(E,\|\cdot\|_\infty)\to(E,\|\cdot\|_\infty)$ définie par $T(P)=XP.$
+Démontrer que $T$ est continue et calculer sa norme.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3272','imagecorrige3272',3272);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3272"></a><div class=inner id="innercorrige3272" style="display:none;">On remarque d'abord que $T$ est clairement linéaire. De plus, si $P=\sum_{k\geq 0}a_k X^k$, alors $T(P)=\sum_{k\geq 0}a_k X^{k+1}=\sum_{k\geq 1}a_{k-1}X^k.$ On a donc $\|T(P)\|_\infty=\|P\|_\infty.$ Ceci prouve que $T$ est continue et que 
+$\|T\|_{\textrm{op}}=1.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1537"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1537"),	max:5, rating:1.8965517241379, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1537,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La trace <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1537.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1537,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1537','imageenonce1537');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1537"></a><div class=inner id="innerenonce1537">Soit $E=\mathcal M_n(\mathbb R)$ muni de la norme $N$ définie pour tout $A=(a_{i,j})_{1\leq i,j\leq n}$ par $N(A)=\sup_{i=1}^n \big\{\sum_{j=1}^n |a_{i,j}|\}$ (on admet qu'il s'agit d'une norme). Démontrer que l'application trace $\textrm{Tr}:E\to\mathbb R$ est continue, et calculer sa norme. </div></div><div class=indication><a href="javascript:showAll('innerindication1537','imageindication1537');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1537"></a><div class=inner id="innerindication1537" style="display:none;">Pour le calcul de la norme, calculer la trace de $I_n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1537','imagecorrige1537',1537);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1537"></a><div class=inner id="innercorrige1537" style="display:none;">On remarque que l'application trace est linéaire. De plus, soit $A=(a_{i,j})_{1\leq i,j\leq n}$. Alors 
+\begin{eqnarray*}
+|\textrm{Tr}(A)|&\leq&\sum_{i=1}^n |a_{i,i}|\\
+&\leq&\sum_{i=1}^n \sum_{j=1}^n |a_{i,j}|\\
+&\leq&\sum_{i=1}^n N(A)\leq nN(A).
+\end{eqnarray*}
+Ceci prouve que l'application trace est continue et que $\|\textrm{Tr}\|\leq n$. De plus, on a 
+$$\textrm{Tr}(I_n)=n\textrm{ et }N(I_n)=1.$$
+Ainsi, on a exactement $\|\textrm{Tr}\|=n$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1764"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1764"),	max:5, rating:1.6785714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1764,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégration <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1764.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1764,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1764','imageenonce1764');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1764"></a><div class=inner id="innerenonce1764">Soit $E=\mathcal C([0,1])$ muni de $\|\cdot\|_\infty$ et $F=\mathcal C^1([0,1])$ muni de $\|f\|_F=\|f\|_\infty+\|f'\|_\infty$. Soit $T:E\to F$ défini par $Tf(x)=\int_0^x f(t)dt$. Démontrer que $T$ est continue et calculer sa norme.</div></div><div class=indication><a href="javascript:showAll('innerindication1764','imageindication1764');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1764"></a><div class=inner id="innerindication1764" style="display:none;">Pour prouver la continuité, majorer... Pour calculer la norme, calculer $T$ d'une fonction constante.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1764','imagecorrige1764',1764);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1764"></a><div class=inner id="innercorrige1764" style="display:none;">On remarque d'abord que $Tf$, étant une primitive d'une fonction continue, est bien de classe $\mathcal C^1$ donc élément de $F$. De plus, pour tout $x\in [0,1]$, on a 
+$$|Tf(x)|\leq \int_0^x |f(t)|dt\leq x\|f\|_\infty\leq \|f\|_\infty.$$
+De plus, $(Tf)'=f$ et donc $\|(Tf)'\|_\infty=\|f\|_\infty$. On en déduit que 
+$\|Tf\|_F\leq 2\|f\|_\infty$,  ce qui prouve que $T$ est continue et que $\|T\|\leq 2$. <br>
+Nous allons maintenant démontrer que $\|T\|=2$. Puisque $\|(Tf)'\|_\infty=\|f\|_\infty$, il n'y a (jamais) aucune perte dans cette majoration, et on est amené à chercher une fonction $f\in E$ telle que 
+$\left|\int_0^1 f(t)dt\right|=\|f\|_\infty$. Prenons $f=1$. Alors $\|f\|_\infty=1$, $Tf(x)=x$ et donc $\|Tf\|_\infty=1$. Il vient $\|Tf\|_F=2\|f\|_\infty$, et donc on a effectivement $\|T\|=2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater3295"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3295"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3295,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un opérateur sur les fonctions continues <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3295.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(3295,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3295','imageenonce3295');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3295"></a><div class=inner id="innerenonce3295">Soit $E=\mathcal C([0,1],\mathbb R)$ muni de $\|\cdot\|_\infty.$ Pour $f\in E,$  on définit $L(f):[0,1]\to\mathbb R,$ $L(f)(t)=\int_0^1 (t+u)f(u)du.$
+<ol class="enumeratechiffre">
+<li> Justifier que $L$ est un endomorphisme de $E$.
+<li> Démontrer que $L$ est continue et calculer $\|L\|_{\textrm{op}}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3295','imageindication3295');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3295"></a><div class=inner id="innerindication3295" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $L(f)$ est affine!
+<li> Majorer le plus simplement possible pour prouver la continuité. Pour calculer $\|L\|_{\textrm{op}},$ on pourra penser aux fonctions constantes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3295','imagecorrige3295',3295);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3295"></a><div class=inner id="innercorrige3295" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut réécrire autrement $L(f)(t)$ : 
+$$L(f)(t)=\left(\int_0^1 f(u)du\right)t+\int_0^1 uf(u)du.$$
+Ainsi, la fonction $L(f)$ est affine et est bien un élément de $E$. La linéarité de $f\mapsto L(f)$ ne pose pas de problèmes, en utilisant la linéarité de l'intégrale.
+<li> Soit $f\in E$ et $t\in [0,1]$. Alors, par l'inégalité triangulaire
+\begin{align*}
+|Lf(t)|&\leq \int_0^1 |f(u)|du \times |t|+\int_0^1 |u|\cdot |f(u)|du\\
+&\leq \int_0^1 \|f\|_\infty du+\int_0^1 |u|\cdot \|f\|_\infty du\\
+&\leq \|f\|_\infty +\frac 12\|f\|_\infty\\
+&\leq \frac 32\|f\|_\infty.
+\end{align*}
+Ceci prouve que $\|Lf\|_\infty\leq \frac 32\|f\|_\infty$ et donc que $L$ est continue avec $\|L\|_{\textrm{op}}\leq \frac 32.$ De plus, 
+considérons $f=1$. Alors $\|f\|_\infty=1$ et $Lf(t)=t+\frac 12$. En particulier, $\|Lf\|_\infty=\frac 32.$ Ceci prouve que $\|L\|_{\textrm{op}}=\frac 32.$
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3281"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3281"),	max:5, rating:1.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3281,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Normes (subordonnées) équivalentes <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3281.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3281,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3281','imageenonce3281');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3281"></a><div class=inner id="innerenonce3281">Soit $E$ un espace vectoriel normé et soit $\|\cdot\|_1$, $\|\cdot\|_2$ deux normes sur $E$. On note $\|\cdot\|_{\textrm{op},1}$ et $\|\cdot\|_{\textrm{op},2}$ les normes subordonnées sur $\mathcal L_c(E)$ associées à ces deux normes. Démontrer que si $\|\cdot\|_1$ et $\|\cdot\|_2$ sont équivalentes, alors $\|\cdot\|_{\textrm{op},1}$ et $\|\cdot\|_{\textrm{op},2}$ sont équivalentes.</div></div><div class=indication><a href="javascript:showAll('innerindication3281','imageindication3281');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3281"></a><div class=inner id="innerindication3281" style="display:none;">Considérer $T\in\mathcal L_c(E)$, $x\in E$, et majorer $\|Tx\|_1$ par $\|x\|_1,$ mais en passant par $\|\cdot\|_2.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3281','imagecorrige3281',3281);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3281"></a><div class=inner id="innercorrige3281" style="display:none;">Soit $a,b&gt;0$ tels que, pour tout $x\in E,$ on a 
+$$a\|x\|_2\leq \|x\|_1\leq b\|x\|_2.$$
+Fixons $T\in\mathcal L_c(E)$. Alors, pour tout $x\in E$, on a 
+\begin{align*}
+\|Tx\|_1&\leq b\|Tx\|_2\\
+&\leq b\|T\|_{\textrm{op},2}\cdot \|x\|_2\\
+&\leq \frac ba\|T\|_{\textrm{op},2}\cdot \|x\|_1.
+\end{align*}
+Ceci prouve que 
+$$\|T\|_{\textrm{op},1}\leq \frac ba \|T\|_{\textrm{op},2}.$$
+Par symétrie du rôle joué par les deux normes, une inégalité du type 
+$$\|T\|_{\textrm{op},2}\leq c\|T\|_{\textrm{op},1}$$
+est aussi vérifiée (si on reprend les calculs, on trouve que $\frac ab$ convient). Donc les deux normes  $\|\cdot\|_{\textrm{op},1}$ et $\|\cdot\|_{\textrm{op},2}$ sont bien équivalentes.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3273"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3273"),	max:5, rating:2.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3273,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateur de différence <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3273.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3273,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3273','imageenonce3273');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3273"></a><div class=inner id="innerenonce3273">Soit $E$ l'espace vectoriel des suites réelles bornées $(u_n)_{n\in\mathbb N}$ muni de $\|u\|_\infty=\sup_{n\in\mathbb N}|u_n|.$ On définit $T:(E,\|\cdot\|_\infty)\to (E,\|\cdot\|_\infty)$ par $Tu=v$ où, pour tout $n\in\mathbb N,$ $v_n=u_{n+1}-u_n.$ Justifier que $T$ est continue et calculer sa norme subordonnée.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3273','imagecorrige3273',3273);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3273"></a><div class=inner id="innercorrige3273" style="display:none;">La différence de deux suites bornées étant bornée, il est facile de vérifier que $T$ est bien un endomorphisme de $E.$ De plus, soit $u\in E$ et $v=T(u).$ Alors, pour tout $n\in\mathbb N,$ on a 
+$$|v_n|=|u_{n+1}-u_n|\leq |u_{n+1}|+|u_n|\leq 2\|u\|_\infty$$
+et donc $\|T(u)\|_\infty\leq 2\|u\|_\infty.$ Ceci prouve que $T$ est continue et que $\|T\|\leq 2.$ De plus, considérons la suite $(u_n)_{n\in\mathbb N}$ vérifiant $u_0=-1$, $u_1=1$ et $u_n=0$ si $n\geq 2$. Alors, si $v=T(u),$ on a 
+$v_0=2,$ $v_1=-1$ et $v_n=0$ pour $n\geq 2.$ On a donc
+$$\|T(u)\|_\infty=2=2\cdot \|u\|_\infty.$$
+Ainsi, $\|T\|_{\textrm{op}}=2.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3274"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3274"),	max:5, rating:1.84, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3274,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateur de Cesàro <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3274.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3274,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3274','imageenonce3274');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3274"></a><div class=inner id="innerenonce3274">Soit $E$ l'espace vectoriel des suites réelles bornées $(u_n)_{n\in\mathbb N}$ muni de $\|u\|_\infty=\sup_{n\in\mathbb N}|u_n|.$ On définit $T:(E,\|\cdot\|_\infty)\to (E,\|\cdot\|_\infty)$ par $Tu=v$ où, pour tout $n\in\mathbb N,$ $$v_n=\frac{1}{n+1}\sum_{k=0}^n u_{k}.$$
+Justifier que $T$ est continue et calculer sa norme subordonnée.</div></div><div class=indication><a href="javascript:showAll('innerindication3274','imageindication3274');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3274"></a><div class=inner id="innerindication3274" style="display:none;">La majoration de $\|Tu\|_\infty$ se fait tout simplement en prenant l'inégalité triangulaire. Pour calculer la norme de $T$, on pourra considérer une suite constante.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3274','imagecorrige3274',3274);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3274"></a><div class=inner id="innercorrige3274" style="display:none;">D'une part, il est facile de voir que $T$ est linéaire. Ensuite, prenons $u\in E$ et posons $v=T(u).$ Alors, pour tout $n\in\mathbb N$, 
+$$|v_n|=\frac1{n+1}\left|\sum_{k=0}^n u_k\right|\leq \frac1{n+1}\sum_{k=0}^n |u_k|\leq \frac1{n+1}\sum_{k=0}^n \|u\|_\infty=\|u\|_\infty.$$
+Ceci prouve d'une part que $T(u)\in E$ et donc que $T$ est un endomorphisme de $E$ et d'autre part que $T$ est continue avec $\|T\|_{\textrm{op}}\leq 1.$ De plus, si on choisit $u$ la suite constante égale à $1,$ alors $T(u)=u$ et donc 
+$$\|T(u)\|_\infty=1\cdot \|u\|_\infty.$$
+Ceci prouve que $\|T\|_{\textrm{op}}\geq 1$ et finalement que $\|T\|_{\textrm{op}}=1.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3271"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3271"),	max:5, rating:1.9130434782609, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3271,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Normes matricielles <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3271.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3271,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3271','imageenonce3271');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3271"></a><div class=inner id="innerenonce3271">Soit $A\in\mathcal M_{n}(\mathbb R).$ On note $C_1,\dots,C_n$ les colonnes de $A$ et $L_1,\dots,L_n$ les lignes de $A$.
+<ol class="enumeratechiffre">
+<li> On munit $\mathbb R^n$ de la norme $\|\cdot\|_1.$ Démontrer que $\|A\|=\max_{j=1,\dots,n}\|C_j\|_1.$
+<li> On munit $\mathbb R^n$ de la norme $\|\cdot\|_\infty.$ Démontrer que $\|A\|=\max_{i=1,\dots,p}\|L_i\|_1.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3271','imageindication3271');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3271"></a><div class=inner id="innerindication3271" style="display:none;"><ol class="enumeratechiffre">
+<li> Choisir $X\in \mathbb R^n$ et majorer $\|AX\|_1$ en utilisant l'inégalité triangulaire et en permutant les sommes. Ceci donnera une inégalité. Pour prouver l'égalité, choisir $X_0$ tel que $X_0$ a toutes ses composantes nulles sauf une...
+<li> Cette fois, il faut majorer $|(AX)_i|$ pour tout $i=1,\dots,n$. A nouveau, on peut majorer un utilisant l'inégalité triangulaire. Pour prouver l'égalité, on choisit $i_0$ tel que $\|L_{i_0}\|_1$ est maximal, puis $X=(\veps_j)$ avec $\veps_j a_{i_0,j}=|a_{i_0,j}|.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3271','imagecorrige3271',3271);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3271"></a><div class=inner id="innercorrige3271" style="display:none;">On note $A=(a_{i,j})_{1\leq i,j\leq n}.$
+<ol class="enumeratechiffre">
+<li> Soit $X=\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}.$ Alors 
+$AX=\begin{pmatrix}
+\sum_{j=1}^n a_{1,j}x_j\\
+\vdots\\
+\sum_{j=1}^n a_{n,j}x_j
+\end{pmatrix}$
+de sorte que
+\begin{align*}
+\|AX\|_1&=\sum_{i=1}^n \left|\sum_{j=1}^n a_{i,j}x_j\right|\\
+&\leq \sum_{i=1}^n\left(\sum_{j=1}^n |a_{i,j}|\cdot |x_j|\right)\\
+&\leq \sum_{j=1}^n |x_j|\cdot \sum_{i=1}^n |a_{i,j}|\\
+&\leq \sum_{j=1}^n |x_j|\cdot \|C_j\|_1\\
+&\leq \max_{j=1,\dots,n}\|C_j\|_1 \cdot \sum_{j=1}^n |x_j|\\
+&\leq \max_{j=1,\dots,n}\|C_j\|_1 \|X\|_\infty.
+\end{align*}
+Ainsi, on vient de prouver que $\|A\|\leq \max_{j=1,\dots,n}\|C_j\|_1.$ Pour prouver qu'il y a égalité, on considère $j_0\in\{1,\dots,n\}$ tel que 
+$$\|C_{j_0}\|_1=\max_{j=1,\dots,n}\|C_j\|_1.$$
+Soit $X_0$ le vecteur colonne de $\mathbb R^n$ dont toutes les composantes sont nulles sauf la $j_0$-ème qui est égale à $1$. Alors $AX_0=C_{j_0}$ de sorte que 
+$$\|AX_0\|_1=\|C_{j_0}\|_1=\|C_{j_0}\|_1\cdot \|X_0\|_1.$$
+Ainsi, on a prouvé que $\|A\|=\max_{j=1,\dots,n}\|C_j\|_1.$
+<li> On reprend de la même façon, en considérant $X=\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}.$ Cette fois, on doit majorer $\sup_{i=1,\dots,n}|(AX)_i|.$ Mais, pour $i=1,\dots,n,$ 
+\begin{align*}
+|(AX)_i|&=\left|\sum_{j=1}^n a_{i,j}x_j\right|\\
+&\leq \sum_{j=1}^n |a_{i,j}|\cdot |x_j|\\
+&\leq \sum_{j=1}^n |a_{i,j}|\cdot \max_{j=1,\dots,n}|x_j|\\
+&\leq \sum_{j=1}^n |a_{i,j}|\cdot \|X\|_\infty\\
+&\leq \|L_i\|_1\cdot \|X\|_\infty\\
+&\leq \max_{i=1,\dots,n} \|L_i\|_1 \cdot \|X\|_\infty.
+\end{align*}
+Ainsi, $\|AX\|_\infty \leq  \max_{i=1,\dots,n} \|L_i\|_1\cdot \|X\|_\infty$
+et donc $\|A\|\leq \max_{i=1,\dots,n} \|L_i\|_1.$ Réciproquement, soit $i_0\in\{1,\dots,n\}$ tel que $\|L_{i_0}\|_1=\max_{i=1,\dots,n} \|L_i\|_1$ et choisissons $X_0\in\mathbb R^n$ tel que $X_0=(\veps_{j})_{j=1,\dots,n}$ où
+$\veps_{i,j}\in\{-1,+1\}$ est tel que $\veps_{j}a_{i_0,j}=|a_{i_0,j}|.$ Alors
+\begin{align*}
+\|(AX)_{i_0}\|&=\left|\sum_{j=1}^n a_{i_0,j}\veps_j\right|\\
+&= \left|\sum_{j=1}^n |a_{i_0,j}| \right|\\
+&=\sum_{j=1}^n |a_{i_0,j}|\\
+&=\|L_{i_0}\|_1=\max_{i=1,\dots,n}\|L_i\|_1.
+\end{align*}
+Ainsi, $\|AX\|_\infty\geq \max_{i=1,\dots,n}\|L_i\|_1= \max_{i=1,\dots,n}\|L_i\|_1\cdot  \|X\|_\infty.$ Ceci prouve que $\|A\|\geq \max_{i=1,\dots,n}\|L_i\|_1$  et donc on a bien prouvé que
+$$\|A\|=\max_{i=1,\dots,n}\|L_i\|_1.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1530"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1530"),	max:5, rating:2.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1530,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Étude de l'opérateur d'intégration <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1530.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1530,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1530','imageenonce1530');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1530"></a><div class=inner id="innerenonce1530">Soit $E=\mathcal C([0,1],\mathbb R)$ que l'on munit de la norme
+$$\|f\|_1=\int_0^1 |f(t)|dt,\ f\in E.$$
+Soit
+$\phi$ l'endomorphisme de $E$ défini par 
+$$\phi(f)(x)=\int_0^x f(t)dt.$$
+<ol class="enumeratechiffre">
+<li> Justifier la terminologie : "$\phi$ est un endomorphisme de $E$."
+<li> Démontrer que $\phi$ est continue.
+<li> Pour $n\geq 0$, on considère $f_n$ l'élément de $E$ défini par
+$f_n(x)=ne^{-nx}$, $x\in[0,1]$. Calculer $\|f_n\|_1$ et $\|\phi(f_n)\|_1$.
+<li> Déterminer $\|\phi\|_{\textrm{op}}$.
+<li> $\phi$ est-elle injective? surjective?
+<li> Quelles sont les valeurs propres de $\phi?$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1530','imageindication1530');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1530"></a><div class=inner id="innerindication1530" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Montrer que $|\phi(f)(x)|\leq \|f\|_1$.
+<li>
+<li>
+<li> 
+<li> Considérer $f\in E$ tel que $\phi(f)=\lambda f$. Démontrer que $f$ est un multiple d'une fonction exponentielle, puis que $f=0.$ 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1530','imagecorrige1530',1530);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1530"></a><div class=inner id="innercorrige1530" style="display:none;"><ol class="enumeratechiffre">
+<li> $\phi$ est clairement une application linéaire, et il faut juste rappeler que
+$\phi(f)$, comme primitive d'une fonction continue, est elle-même continue (et même $C^1$).
+<li> On a 
+$$|\phi(f)(x)|\leq \int_0^x |f(t)|dt\leq \int_0^1 |f(t)|dt\leq \|f\|_1.$$
+On en déduit que 
+$$\|\phi(f)\|_1\leq \int_0^1 \|f\|_1dt\leq \|f\|_1.$$
+Ainsi, $\phi$ est continue.
+<li> On a $\phi(f_n)(x)=\int_0^x ne^{-nt}dt=1-e^{-nx}$. En particulier,
+$\|f_n\|_1=\phi(f_n)(1)=1-e^{-n}$. De plus,
+$$\|\phi(f_n)\|_1=\int_0^1 (1-e^{-nx})dx=1-\frac{1-e^{-n}}{n}.$$
+<li> D'après la question 2, pour tout $f\in E$, 
+$$\|\phi(f)\|_1\leq \|f\|_1,$$
+et donc $\|\phi\|_{\textrm{op}}\leq 1$. De plus, on a 
+$$\|\phi(f_n)\|_1\leq \|\phi\|_{\textrm{op}} \|f_n\|_1\implies \left(1-\frac{1-e^{-n}}{n}\right) \leq (1-e^{-n}) \|\phi\|_{\textrm{op}}.$$
+Passant à la limite dans cette inégalité, on conclut que $\|\phi\|_{\textrm{op}}\geq 1$, ce qui prouve finalement que
+$\|\phi\|_{\textrm{op}}=1$.
+<li> On commence par remarquer que $\phi$ n'est pas surjective. En effet, $\phi(f)$ est de classe $\mathcal C^1$ pour tout $f\in E$, et il existe des fonctions de $E$ qui ne sont pas $\mathcal C^1$ sur $[0,1]$, par exemple la fonction $x\mapsto\left|x-\frac 12\right|.$ En revanche, $\phi$ est injective. En effet, si $\phi(f)=0,$ alors pour tout $x\in[0,1],$ 
+$$\int_0^x f(t)dt=0.$$
+En dérivant cette égalité, on trouve $f(x)=0$ pour tout $x\in[0,1]$ et donc $f=0.$ 
+<li> Soit $\lambda\in\mathbb R\backslash\{0\}.$ On va démontrer que $\lambda$
+n'est pas une valeur propre de $\phi.$  Si $f\in E$ vérifie $\phi(f)=\lambda f,$ alors pour tout $x\in [0,1],$ 
+$$\int_0^x f(t)dt=\lambda f(x).$$
+Ceci prouve que $f$ est dérivable et en dérivant la relation précédente, on trouve que, pour tout $x\in[0,1],$
+$$f(x)=\lambda f'(x).$$
+Ainsi, il existe $C\in\mathbb R$ tel que $f(x)=Ce^{x/\lambda}$ pour tout $x\in[0,1].$ Mais on doit avoir $f(0)=\phi(f)(0)=0,$ et donc $C=0$. Ainsi, $f=0$ et $\lambda$ n'est pas valeur propre de $f$. On vient donc de prouver que $\phi$ n'admet pas de valeurs propres (ce qui est possible car $E$ est de dimension infinie).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1531"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1531"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1531,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formes linéaires sur les polynômes <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1531.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1531,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1531','imageenonce1531');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1531"></a><div class=inner id="innerenonce1531">On munit $\mathbb R[X]$ de la norme suivante :
+$$\|\sum_{k=0}^n a_k X^k\|=\sup\{|a_k|;\ 0\leq k\leq n\}.$$
+Pour $c\in \mathbb R$, on définit la forme linéaire
+$\phi_c:(\mathbb R[X],\|\cdot\|)\to(\mathbb R,|\cdot|),P\mapsto P(c)$. 
+Pour quelles valeurs de $c$ la forme linéaire $\phi_c$ est-elle continue?
+Dans ce cas, déterminer la norme de $\phi_c$.</div></div><div class=indication><a href="javascript:showAll('innerindication1531','imageindication1531');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1531"></a><div class=inner id="innerindication1531" style="display:none;">Traiter séparément les cas $|c|&lt;1$ et $|c|\geq 1$. On pourra introduire $P_n(X)=1+X+\dots+X^n$
+et $Q_n(X)=1-X+\dots+(-1)^n X^n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1531','imagecorrige1531',1531);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1531"></a><div class=inner id="innercorrige1531" style="display:none;">L'exercice est corrigé en partie dans la vidéo suivante : <br>
+<div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Comment calculer la norme d'une application linéaire continue?</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MXFsurKnR5c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+Supposons d'abord que $|c|&lt;1$. Alors, pour $P=\sum_{k=0}^n a_kX^k$,
+$$|\phi_c(P)|=\left|\sum_{k=0}^n a_k c^k\right|\leq \sum_{k=0}^n |a_k||c|^k\leq \|P\|_\infty\frac{1-|c|^{n+1}}{1-|c|}.$$
+Puisque $|c|&lt;1$, on en déduit que 
+$$|\phi_c(P)|\leq \|P\|\frac{1}{1-|c|}$$
+donc $\phi_c$ est continue et $\|\phi_c\|\leq\frac{1}{1-|c|}$. On va prouver que cette dernière inégalité est en fait une égalité.
+D'abord, si $c\geq 0$, on considère le polynôme $P_n(X)=1+X+\dots+X^n$. Alors 
+$$\phi_c(P_n)=1+c+\dots+c^n=\frac{1-c^{n+1}}{1-c}.$$
+Mais $\|P_n\|=1$, et donc on obtient
+$$\frac{1-c^{n+1}}{1-c}=\|\phi_c(P_n)\|\leq \|\phi_c\|\|P_n\|=\|\phi_c\|.$$
+Faisant tendre $n$ vers $+\infty$, on conclut que $\|\phi_c\|\geq \frac{1}{1-c}$, ce qui donne l'autre inégalité.
+Si maintenant $c&lt;0$, on effectue le même travail avec le polynôme $Q(X)=1-X+X^2+\dots+(-1)^n X^n$.
+Pour $c\geq 1$, on a 
+$\phi_c(P_n)=1+c+\dots+c^n\geq n+1$ alors que $\|P_n\|=1$. L'application $\phi_c$ ne peut pas être continue.
+On a le même résultat si $c\leq -1$, en considérant cette fois $Q_n$. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1533"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1533"),	max:5, rating:1.962962962963, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1533,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateurs positifs <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1533.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1533,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1533','imageenonce1533');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1533"></a><div class=inner id="innerenonce1533">Soit $I=[a,b]$ un intervalle de $\mathbb R$. On munit $\mathcal C(I)$ de la norme
+$\|.\|_\infty$. On dit qu'une forme linéaire $u:\mathcal C(I)\to\mathbb R$
+est positive si $u(f)\geq 0$ pour tout $f\in C(I)$ vérifiant $f(x)\geq 0$ si $x\in I$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour toute forme linéaire $u:\mathcal C(I)\to\mathbb R$ positive, $|u(f)|\leq u(|f|)$. 
+<li> Soit $e$ la fonction définie par $e(x)=1$ pour tout $x\in I$. Déduire de la question précédente
+que toute forme linéaire positive est continue, et calculer $\|u\|$ en fonction de $u(e)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1533','imageindication1533');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1533"></a><div class=inner id="innerindication1533" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser $|f[-f\geq 0$ et $|f|+f\geq 0$.
+<li> Ecrire $|f|\leq \|f\|_\infty e$.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1533','imagecorrige1533',1533);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1533"></a><div class=inner id="innercorrige1533" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que $|f|\geq f$, et donc $|f|-f\geq 0$. On en déduit que $u(|f|)\geq u(f)$.
+De même, on a $|f|\geq -f$, soit $|f|+f\geq 0$ et donc $u(|f|)\geq u(-f)=-u(f)$. Finalement, on obtient bien
+que $|u(f)|\leq u(|f|)$. 
+<li> On sait que $|f(x)|\leq \|f\|_\infty$, ce qui s'écrit encore $\|f\|_\infty e-|f|\geq 0$. Ainsi, on a 
+$$|u(f)|\leq u(|f|)\leq u(\|f\|_\infty e)\leq u(e)\|f\|_\infty.$$
+Ceci prouve que $u$ est continue, avec $\|u\|\leq u(e)$. De plus, pour $f=e$, on a exactement
+$u(f)=u(e) \|e\|_\infty$, ce qui prouve qu'en réalité $\|u\|=u(e)$.
+</ol></div></div></div>
+
+<div class=titrepartie>Applications linéaires continues et propriétés topologiques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1520"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1520"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1520,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Orthogonal d'une partie <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1520.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1520,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1520','imageenonce1520');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1520"></a><div class=inner id="innerenonce1520">Soit $E$ un espace préhilbertien muni de la norme associée au produit scalaire et soit $A\subset E$.
+<ol class="enumeratechiffre">
+<li> Démontrer que l'orthogonal de toute partie $A$ de $E$ est un fermé de $E$.
+<li> Démontrer que $\bar A\subset (A^\perp)^\perp.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1520','imageindication1520');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1520"></a><div class=inner id="innerindication1520" style="display:none;">Voici un énoncé avec des questions intermédiaires pour la première question.
+<ol class="enumeratechiffre">
+<li> Soit $a\in E$. Démontrer que $f_a$ définie par $f_a(x)=\langle x,a\rangle$ est continue.
+<li> En déduire que l'orthogonal de toute partie de $E$ est un fermé de $E$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1520','imagecorrige1520',1520);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1520"></a><div class=inner id="innercorrige1520" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $A^\perp=\{x\in E;\ \forall a\in A,\ \langle x,a\rangle=0\}$. Posons $f_a(x)=\langle x,a\rangle$. Alors $f_a$ est une application linéaire continue : en effet, pour tout $x\in E$, on a d'après l'inégalité de Cauchy-Schwarz :
+$$|\langle x,a\rangle|\leq \|a\|\times \|x\|.$$
+Mais alors, $A^\perp=\bigcap_{a\in A}f_a^{-1}(\{0\})$. Ainsi, $A^\perp$ est un fermé comme intersection (quelconque) de parties fermées de $E$.
+<li> Soit $y\in \bar A.$ Alors il existe une suite $(y_n)$ de $A$ qui converge vers $y.$ Soit $z\in A^\perp.$ Alors $\langle y_n,z\rangle=0.$ Par continuité de $x\mapsto \langle x,z\rangle,$ on obtient $\langle y,z\rangle=0$ et donc $y\in (A^\perp)^\perp.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1501"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1501"),	max:5, rating:2.047619047619, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1501,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des fonctions <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1501.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1501,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1501','imageenonce1501');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1501"></a><div class=inner id="innerenonce1501">Soit $E=\mathcal C([0,1],\mathbb R)$ muni de $\|\cdot\|_\infty$. On pose 
+$$A=\left\{f\in E;\ f(0)=0\textrm{ et }\int_0^1 f(t)dt\geq 1\right\}.$$
+Démontrer que $A$ est une partie fermée de $E$.</div></div><div class=indication><a href="javascript:showAll('innerindication1501','imageindication1501');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1501"></a><div class=inner id="innerindication1501" style="display:none;">Utiliser que $\phi(f)=f(0)$ et $\psi(f)=\int_0^1 f(t)dt$ sont deux formes linéaires continues.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1501','imagecorrige1501',1501);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1501"></a><div class=inner id="innercorrige1501" style="display:none;">Posons, pour $f\in E$, $\phi(f)=f(0)$ et $\psi(f)=\int_0^1 f(t)dt$. Alors $\phi$ et $\psi$ sont deux formes linéaires. De plus, elles sont continues car, pour tout $f\in E$, 
+$$|\phi(f)|\leq \|f\|_\infty$$
+$$|\psi(f)|\leq \int_0^1 |f(t)|dt\leq \int_0^1 \|f\|_\infty dt\leq \|f\|_\infty.$$
+De plus, on a $A=\phi^{-1}(\{0\})\cap \psi^{-1}([1,+\infty[).$
+Comme images réciproques de fermés par une application continue, $\phi^{-1}(\{0\})$ et $\psi^{-1}([1,+\infty[)$ sont fermés. Leur intersection est donc un fermé et $A$ est bien fermé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater1497"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1497"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1497,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Espace vectoriel normé des séries absolument convergentes <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1497.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(1497,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1497','imageenonce1497');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1497"></a><div class=inner id="innerenonce1497">Soit $E$ l'espace vectoriel des suites $(a_n)_{n\geq 1}$ de nombres complexes telle que $\sum_{n\geq 1}|a_n|$ converge. On pose, pour $a=(a_n)\in E$, 
+$$\|a\|=\sum_{n=1}^{+\infty}|a_n|.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $\|\cdot\|$ définit une norme sur $E$.
+<li> On pose $F=\{a\in E;\ \sum_{n\geq 1}a_n=1\}$. $F$ est-il ouvert? fermé? borné?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1497','imageindication1497');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1497"></a><div class=inner id="innerindication1497" style="display:none;"><ol class="enumeratechiffre">
+<li> Suivre la méthode classique.
+<li> Démontrer que $\varphi(a)=\sum_{n\geq 1}a_n$ est une forme linéaire continue.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1497','imagecorrige1497',1497);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1497"></a><div class=inner id="innercorrige1497" style="display:none;"><ol class="enumeratechiffre">
+<li> On suit la méthode classique. Si $a=(a_n)$ et $b=(b_n)$ sont éléments de $E$ et $\lambda\in\mathbb R$, alors on a  pour tout $N$, 
+$$\sum_{n=1}^N |a_n+b_n|\leq \sum_{n=1}^N (|a_n|+|b_n|)\leq \sum_{n=1}^N |a_n|+\sum_{n=1}^N |b_n|\leq \|a\|+\|b\|.$$
+Faisant tendre $N$ vers l'infini, on en déduit que 
+$$\|a+b\|\leq \|a\|+\|b\|.$$
+Une preuve similaire donne $\|\lambda a\|=|\lambda|\times\|a\|$ tandis que si $\|a\|=0$, alors on a nécessairement $0\leq |a_n|\leq \|a\|=0$ pour tout $n\geq 1$ et donc $a=0$.
+<li> Posons $\phi(a)=\sum_{n\geq 1}a_n$. Alors $\phi$ est bien défini sur $E$ (car la convergence absolue entraine la convergence) et $\phi$ est linéaire. Démontrons que $\phi$ est continue. Pour cela, on remarque que 
+$$|\phi(a)|=\left |\sum_{n\geq 1}a_n\right|\leq \sum_{n\geq 1}|a_n|\leq \|a\|.$$
+Ceci démontre que $\phi$ est continue, et comme $F=\phi^{-1}(\{1\})$, $F$ est l'image réciproque d'un fermé par une application continue, donc $F$ est fermé.<br>
+Par ailleurs, $F$ n'est ni ouvert, ni borné. Il n'est pas ouvert, car prenons $a=(1,0,0,\dots)$ qui est un élément de $F$. Alors, pour tout $\delta&gt;0$, $a+\delta a\notin F$, et donc $F$ n'est pas un voisinage de son élément $a$. En particulier, $F$ n'est pas ouvert. $F$ n'est pas non plus borné. En effet, prenons la suite $a( p)=(p+1,-p,0,0,\dots)$. Alors, pour chaque $p$, $a( p)$ est élément de $F$. Or, $\|a(p )|=2p+1\to +\infty$ si $p\to +\infty$. Donc $F$ n'est pas bornée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1534"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1534"),	max:5, rating:2.7777777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1534,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Caractérisation de la continuité des applications linéaires <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1534.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1534,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1534','imageenonce1534');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1534"></a><div class=inner id="innerenonce1534">Soit $E$ un espace vectoriel normé et $u\in\mathcal L(E)$. Démontrer que $u$ est continue si et seulement si $\{x\in E;\ \|u(x)\|=1\}$ est fermé.</div></div><div class=indication><a href="javascript:showAll('innerindication1534','imageindication1534');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1534"></a><div class=inner id="innerindication1534" style="display:none;">Démontrer que si $u$ n'est pas continue, il existe une suite $(y_n)$ de $F$ telle que $y_n\to 0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1534','imagecorrige1534',1534);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1534"></a><div class=inner id="innercorrige1534" style="display:none;">Notons $F=\{x\in E;\ \|u(x)\|=1\}$ et $\mathcal S=\{x\in E;\ \|x\|=1\}$ la sphère de $E$. D'une part, si $u$ est continue, alors $F=u^{-1}(\mathcal S)$ est un fermé car c'est l'image réciproque du fermé $\mathcal S$ par l'application linéaire $u$. Réciproquement, supposons que $u$ ne soit pas continue. Alors il existe une suite $(x_n)$ de $E$, $x_n\neq 0$, telle que $\|u(x_n)\|/\|x_n\|\to+\infty$. Posons $y_n=\frac{x_n}{\|u(x_n)\|}$. Alors $\|y_n\|\to 0$ et $\|u(y_n)\|= 1$. Ainsi, chaque $y_n$ est élément de $F$. Si $F$ était fermé, alors $0$ serait élément de $F$, ce qui n'est pas le cas. Donc $F$ n'est pas fermé, ce qui démontre que $u$ est continue si et seulement si $F$ est fermé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater2283"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2283"),	max:5, rating:2.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2283,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Forme linéaire continue et noyau fermé <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2283.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(2283,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2283','imageenonce2283');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2283"></a><div class=inner id="innerenonce2283">Soit $E$ un espace vectoriel normé (sur $\mathbb R$) et soit $\phi:E\to\mathbb R$ une forme linéaire non identiquement nulle. Le but de l'exercice est de démontrer que $\phi$ est continue si et seulement si le noyau de $\phi$ est fermé.
+<ol class="enumeratechiffre">
+<li> Démontrer le sens direct.
+<li> Réciproquement, on suppose que le noyau de $\phi$, noté $H$, est fermé. On fixe $y\in E$ tel que $\phi(y)=1$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\phi^{-1}(\{1\})$ est fermé.
+<li> En déduire qu'il existe $r&gt;0$ tel que $\bar B(0,r)\cap \phi^{-1}(\{1\})=\varnothing$.
+<li> Démontrer que $x\in \bar B(0,r)\implies |\phi(x)|\leq 1$.
+<li> Conclure.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2283','imageindication2283');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2283"></a><div class=inner id="innerindication2283" style="display:none;"><ol class="enumeratechiffre">
+<li> Image réciproque d'un fermé.
+<li> 
+<ol class="enumeratechiffre">
+<li> Démontrer que $\phi^{-1}(\{1\})$ est un translaté de $\ker\phi$.
+<li>
+<li> Procéder par l'absurde en supposons que $|\phi(x)|&gt;1$ et calculer $\phi(\lambda x)$.
+<li> Raisonner par homogénéité.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2283','imagecorrige2283',2283);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2283"></a><div class=inner id="innercorrige2283" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $\phi$ est continue, alors $\ker\phi=\phi^{-1}(\{0\})$ est fermé comme image réciproque d'un fermé par une application continue.
+<li> 
+<ol class="enumeratechiffre">
+<li> Fixons $y\in E$ tel que $\phi(y)=1$ et notons $H=\ker\phi$. Soit $z\in E$. On a 
+$$\phi(z)=1\iff \phi(z)=\phi(y)\iff \phi(z-y)=0\iff z-y\in H\iff z\in y+H.$$
+Ainsi, $\phi^{-1}(\{1\})=y+H$ est fermé puisque c'est le translaté de $H$ qui est fermé.
+<li>  On sait que  $0\notin \phi^{-1}(\{1\})$ qui est fermé. Il existe donc $r&gt;0$ tel que $\bar B(0,r)\cap \phi^{-1}(\{1\}) \subset B(0,2r)\cap \phi^{-1}(\{1\})=\varnothing$.
+<li> Supposons qu'il existe $x\in \bar B (0,r)$ tel que $|\phi(x)|&gt;1$. Alors $\phi(\lambda x)=\lambda \phi(x)=1$ pour $\lambda=1/\phi(x)\in ]-1,1[$. Mais alors $z=\lambda x\in \bar B(0,r)$ et $\phi(z)=1$, une contradiction.
+<li> Il suffit de raisonner par homogénéité. Si $x\neq 0$, alors $\frac{rx}{\|x\|}\in\bar B(0,r)$ et donc $\left|\phi\left(\frac{rx}{\|x\|}\right)\right|\leq 1$. On en déduit que $|\phi(x)|\leq \frac{\|x\|}r$ et donc que $\phi$ est continue.
+</ol>
+</ol></div></div></div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

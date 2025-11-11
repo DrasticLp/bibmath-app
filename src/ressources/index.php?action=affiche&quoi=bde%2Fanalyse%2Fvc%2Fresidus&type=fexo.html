@@ -1,0 +1,715 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Théorème des résidus - calcul d'intégrales</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Théorème des résidus - calcul d'intégrales</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater767"></span><script>var myRating = raterJs( { element:document.querySelector("#rater767"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(767,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calculs de résidus <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=767.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(767,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce767','imageenonce767');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce767"></a><div class=inner id="innerenonce767">Calculer le résidu aux singularités isolées des fonctions suivantes :
+$$f(z)=\frac{z^2+z+1}{z(z^2+1)^2},\quad g(z)=\frac{z^a}{1-z},\quad h(z)=\log(z).\sin\frac{1}{z-1}.$$
+On prendra la détermination principale des fonctions $z\mapsto z^a$ et $z\mapsto \log(z)$.</div></div><div class=indication><a href="javascript:showAll('innerindication767','imageindication767');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication767"></a><div class=inner id="innerindication767" style="display:none;">Pour $f$ et $g$, il suffit d'effectuer un développement limité au voisinage des singularités
+qui sont des pôles. Pour $h$, c'est plus compliqué car $1$ est une singularité essentielle de $h$.
+Il faut faire le produit des deux développements en série de Laurent et trouver le coefficient
+devant $\frac{1}{z-1}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige767','imagecorrige767',767);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige767"></a><div class=inner id="innercorrige767" style="display:none;">Les pôles de $f$ sont $0$ (pôle simple), $i$ et $-i$ (pôles doubles). On obtient le résidu en
+effectuant un développement limité de $zf(z)$, resp. de $(z-i)^2f(z)$, resp. de $(z+i)^2f(z)$.
+Dans le premier cas, on a 
+$$zf(z)=\frac{z^2+z+1}{(z^2+1)^2}\to_{z\to 0}1.$$
+Le résidu de $f$ en 0 est donc égal à 1. Pour $(z-i)^2f(z)$, il faut faire un développement limité
+jusqu'au premier ordre, et le résidu sera égal au coefficient devant $(z-i)$ (n'oublions pas qu'on divise cette
+fois par $(z-i)^2$). Posant $w=z-i$, on trouve
+\begin{align*}
+(z-i)^2f(z)&=\frac{z^2+z+1}{z(z+i)^2}\\
+&=\frac{w^2+(2i+1)w+i}{(w+i)(w^2+4iw-4)}\\
+&=\frac{i+(2i+1)w+o(w)}{-4i-8w+o(w)}\\
+&\frac{i+(2i+1)w+o(w)}{-4i(1-2iw+o(w))}\\
+&=\frac{i}4\big(i+(2i+1)w+o(w)\big)\big(1+2iw+o(w)\big)\\
+&=-\frac 14\big(1+(2+i)w+o(w)\big).
+\end{align*}
+Le résidu de $f$ en $i$ est donc $-\frac{2+i}{4}$. On en déduit le résidu de $f$ en $-i$ en prenant
+la conjugaison complexe, soit $-\frac{2-i}{4}$.<br>
+La fonction $g$ est définie sur $\mathbb C\backslash (]-\infty,0]\cup\{1\})$. On écrit
+$z^a=e^{a\log z}$. Puisque
+$$(z-1)g(z)=-z^a\to -1,$$
+le résidu de $g$ en 1 est $-1$.<br>
+Le cas de la fonction $h$ est plus compliquée. En effet, $1$ est une singularité essentielle
+de $z\mapsto\sin\frac{1}{z-1}$. Pour obtenir le résidu de $h$ en $1$, on va simplement effectuer
+le produit du développement en série entière de $\log(z)$ en 1 avec le développement en série
+de Laurent de $z\mapsto \sin\frac{1}{z-1}$, et rechercher le coefficient devant $\frac 1{z-1}$.
+Posons $u=z-1$. On a :
+$$\log(1+u)=\sum_{n=0}^{+\infty}\frac{(-1)^n}{n+1}u^{n+1}$$
+$$\sin\frac1u=\sum_{k=0}^{+\infty}\frac{(-1)^k}{(2k+1)!}\frac{1}{u^{2k+1}}.$$
+On effectue le produit de ces deux développements, et on cherche le coefficient devant $\frac 1u$. Il est obtenu
+en effectuant tous les produits des coefficients en $u^{p-1}$ de $\log(1+u)$ par ceux de $u^{-p}$ de $\sin\frac 1u$.
+Ceci n'est possible que si $p$ est de la forme $2k+1$.
+On en déduit que le résidu de $h$ en $1$ est égal à 
+$$\sum_{k=1}^{+\infty}\frac{(-1)^{k-1}}{2k(2k+1)!}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2592"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2592"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2592,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul d'intégrale par la formule des résidus <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2592.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2592,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2592','imageenonce2592');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2592"></a><div class=inner id="innerenonce2592">Pour $R&gt;0$, on note $\gamma_R$ le cercle de centre 0 et de rayon $R$ parcouru une fois dans le sens direct. Calculer selon les valeurs de $R$ l'intégrale
+$$\int_{\gamma_R}\frac{dz}{2z^2-5z+2}\ .$$
+On précisera aussi les valeurs exclues de $R$.</div></div><div class=indication><a href="javascript:showAll('innerindication2592','imageindication2592');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2592"></a><div class=inner id="innerindication2592" style="display:none;">Chercher les singularités de la fonction, puis appliquer la formule des résidus.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2592','imagecorrige2592',2592);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2592"></a><div class=inner id="innercorrige2592" style="display:none;">Posons $u(z)=2z^2-5z+2$ et $f(z)=1/u(z)$. On commence par rechercher les singularités de $f$, c'est-à-dire les racines de $u$. A l'aide du discriminant, il est facile de voir que ces
+racines sont $1/2$ et $2$. Calculons ensuite le résidu de $f$ en $1/2$ et en $2$.
+On a :
+\begin{align*}
+ \textrm{Res}(f,1/2)&=\frac 1{u'(1/2)}=\frac{-1}3\\
+ \textrm{Res}(f,2)&=\frac 1{u'(2)}=\frac{1}3.
+\end{align*}
+Pour calculer l'intégrale demandée, on applique alors la formule des résidus. Les valeurs $R=1/2$ et $R=2$ sont impossibles. On a ensuite, si $R&lt;1/2$, 
+$$\int_{\gamma_R}f(z)dz=0,$$
+si $1/2&lt;R&lt;2$, 
+$$\int_{\gamma_R}f(z)dz=\frac{-2i\pi}3$$
+et enfin, si $R&gt;2$, 
+$$\int_{\gamma_R}f(z)dz=0.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3587"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3587"),	max:5, rating:1.2666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3587,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul simple <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3587.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3587,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3587','imageenonce3587');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3587"></a><div class=inner id="innerenonce3587">Le but de l'exercice est de calculer $\displaystyle \int_{-\infty}^{+\infty}\frac{\cos(x)}{1+x^2}dx$. Pour cela, on considère $R&gt;1$ et $\gamma_R$ le lacet constitué par les deux chemins suivants :
+<ul class="rien">
+<li> le segment $[-R,R]$ paramétré par $\gamma_1(x)=x$ ;
+<li> le demi-cercle supérieur $\mathcal C$ de centre $0$ et de rayon $R,$ paramétré par $\gamma_2(\theta)=Re^{i\theta}$ avec $\theta\in[0,\pi]$
+</ul>
+On pose $\displaystyle I_R=\int_{\gamma_R}\frac{e^{iz}}{1+z^2}dz.$
+<ol class="enumeratechiffre">
+<li> Calculer $I_R$.
+<li> Démontrer que 
+$$I_R=\int_{-R}^R \frac{e^{ix}}{1+x^2}dx+\int_0^{\pi}\frac{iRe^{i\theta+iR\cos(\theta)-R\sin(\theta)}}{1+R^2e^{2i\theta}}d\theta.$$
+<li> En déduire que $\displaystyle \left|I_R-\int_{-R}^R \frac{e^{ix}}{1+x^2}dx\right|\leq \frac{\pi R}{R^2-1}.$
+<li> En déduire la valeur de  $\displaystyle \int_{-\infty}^{+\infty}\frac{\cos(x)}{1+x^2}dx$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3587','imageindication3587');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3587"></a><div class=inner id="innerindication3587" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer le théorème des résidus.
+<li> Utiliser la relation de Chasles, puis calculer chaque intégrale en utilisant le paramétrage donné par l'énoncé.
+<li> Majorer à l'intérieur de l'intégrale. On pourra utiliser l'inégalité triangulaire et $|e^{a+ib}|=e^a$ avec $a,b$ des réels.
+<li> Faire tendre $R$ vers $+\infty$ puis prendre la partie réelle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3587','imagecorrige3587',3587);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3587"></a><div class=inner id="innercorrige3587" style="display:none;">Dans la suite de l'exercice, on va poser 
+$$f(z)=\frac{e^{iz}}{1+z^2}.$$
+<ol class="enumeratechiffre">
+<li> La fonction $f$ est holomorphe sur $\mathbb C\backslash\{\pm i\}.$
+Les points $i$ et $-i$ sont des pôles pour $f$. On remarque que $\textrm{Ind}(i,\gamma_R)=1$ alors que $\textrm{Ind}(-i,R)=0$. D'autre part, en écrivant $f(z)=u(z)/v(z)$ avec $v(z)=1+z^2,$ puisque $v'(i)\neq 0,$ on a 
+$$\textrm{Res}(f,i)=\frac{u(i)}{v'(i)}=\frac{e^{-1}}{2i}.$$
+D'après le théorème des résidus appliqué à $f$ et à l'ouvert étoilé $\mathbb C,$ on a 
+$$I_R=2i\pi \textrm{Res}(f,i)=\pi e^{-1}.$$
+<li> On sait que 
+$$I_R=\int_{[-R,R]}f(z)dz+\int_{\mathcal C}f(z)dz.$$
+On utilise ensuite les paramétrages donnés par l'énoncé. On sait que 
+$$\int_{[-R,R]}f(z)dz=\int_{-R}^R f(\gamma_1(x))\gamma_1'(x)dx=\int_{-R}^R \frac{e^{ix}}{1+x^2}dx$$
+et que, puisque $\gamma_2'(\theta)=Ri\theta e^{i\theta},$
+\begin{align*}
+\int_{\mathcal C}f(z)dz&=\int_0^{\pi}f(\gamma_2(e^{i\theta}))\gamma_2'(e^{i\theta})d\theta\\
+&=\int_0^{\pi}\frac{e^{iRe^{i\theta}}}{1+R^2e^{2i\theta}}Ri\theta e^{i\theta}d\theta\\
+&=\int_0^{\pi}\frac{iRe^{i\theta+iR\cos(\theta)-R\sin(\theta)}}{1+R^2e^{2i\theta}}d\theta.
+\end{align*}
+<li> On commence par remarquer que, pour $\theta\in[0,\pi]$, 
+$$|iRe^{i\theta+iR\cos(\theta)-R\sin(\theta)}|=Re^{-R\sin(\theta)}\leq R$$
+puisque $\sin(\theta)\geq 0.$ D'autre part, 
+$$|1+R^2e^{2i\theta}|\geq R^2-1.$$
+Ainsi, 
+\begin{align*}
+ \left|I_R-\int_{-R}^R \frac{e^{ix}}{1+x^2}dx\right|&\leq
+\left|\int_0^{\pi}\frac{iRe^{i\theta+iR\cos(\theta)-R\sin(\theta)}}{1+R^2e^{2i\theta}}d\theta\right|\\
+&\leq \int_0^{\pi}\left|\frac{iRe^{i\theta+iR\cos(\theta)-R\sin(\theta)}}{1+R^2e^{2i\theta}}\right|d\theta\\
+&\leq \int_0^{\pi}\frac{R}{R^2-1}d\theta\\
+&\leq \frac{\pi R}{R^2-1}.
+\end{align*}
+<li> Les questions précédentes nous disent que 
+$$\left|\pi e^{-1}-\int_{-R}^R \frac{e^{ix}}{1+x^2}dx\right|\leq \frac{\pi R}{R^2-1}.$$
+On fait tendre $R$ vers $+\infty,$ et d'après le théorème des gendarmes, on trouve
+$$\int_{-\infty}^{+\infty}\frac{e^{ix}}{1+x^2}dx=\pi e^{-1}.$$
+Prenant la partie réelle de cette égalité, on trouve
+$$\int_{-\infty}^{+\infty}\frac{\cos(x)}{1+x^2}dx=\pi e^{-1}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater769"></span><script>var myRating = raterJs( { element:document.querySelector("#rater769"),	max:5, rating:1.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(769,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Cosinus et exponentielle <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=769.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(769,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce769','imageenonce769');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce769"></a><div class=inner id="innerenonce769">Soit $R&gt;0$. On note $\gamma_R$ le rectangle de sommets $-R$, $R$, $R+i\pi$ et $-R+i\pi$ parcouru une fois dans le sens direct. 
+On note aussi $\gamma^1_R$ le segment orienté de $-R$ à $R$, $\gamma^2_R$ le segment orienté de $R$ à $R+i\pi$, $\gamma^3_R$ le segment orienté de $R+i\pi$ à $-R+i\pi$ et $\gamma^4_R$
+le segment orienté de $-R+i\pi$ à $-R$.
+
+<ol class="enumeratechiffre">
+<li> Résoudre dans $\mathbb C$ l'équation $e^{2z}=-1$. En déduire les singularités de la fonction 
+$$f(z)=\frac{e^{iz}}{e^z+e^{-z}}$$
+et préciser leur nature.
+<li> Calculer le résidu de $f$ au point $\frac{i\pi}2$.
+<li> Montrer que l'intégrale 
+$$I=\int_{-\infty}^{+\infty}\frac{e^{ix}}{e^x+e^{-x}}\,dx$$
+est convergente.
+<li> Que vaut 
+$\int_{\gamma_R}f(z)\,dz\ ?$
+<li> Exprimer $\int_{\gamma^3_R}f(z)\,dz$ en fonction de $\int_{\gamma^1_R}f(z)\,dz$.
+<li> Montrer que
+$$\lim_{R\to+\infty}\int_{\gamma^2_R}f(z)\,dz=0\ .$$
+On montrerait de même que $\lim_{R\to+\infty}\int_{\gamma^4_R}f(z)\,dz=0$.
+<li> Déduire de ce qui précède que 
+$$\int_{-\infty}^{+\infty}\frac{e^{ix}}{e^x+e^{-x}}\,dx=\int_{-\infty}^{+\infty}\frac{\cos x}{e^x+e^{-x}}\,dx=\frac\pi{e^{\pi/2}+e^{-\pi/2}}\ .$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication769','imageindication769');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication769"></a><div class=inner id="innerindication769" style="display:none;"><ol class="enumeratechiffre">
+ <li> &Eacute;crire $z=a+ib$.
+ <li> Utiliser une formule du cours.
+ <li>
+ <li> Appliquer le théorème des résidus.
+ <li>
+ <li> Majorer par l'inégalité triangulaire.
+ <li> Faire tendre $R$ vers $+\infty$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige769','imagecorrige769',769);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige769"></a><div class=inner id="innercorrige769" style="display:none;"><ol class="enumeratechiffre">
+ <li> &Eacute;crivons $z=a+ib$, de sorte que $e^{2z}=e^{2a}e^{2ib}$. Prenant le module, on obtient $e^{2a}=1$ et donc $a=0$.
+On a ensuite $e^{2ib}=-1=e^{i\pi}$ dont les solutions sont $b=\frac{\pi}2+k\pi$, $k\in\mathbb Z$.
+On en déduit que l'ensemble des solutions est $\left\{i\frac\pi 2+ik\pi;\ k\in\mathbb Z\right\}$. Puisque $e^z+e^{-z}=0$
+si et seulement $e^{2z}=-1$, les singularités de $f$ sont exactement les nombres complexes précédents. Ce sont des pôles, 
+d'ordre 1 puisque $\frac{i\pi}2+ik\pi$ est une racine d'ordre 1 du dénominateur.
+ <li> Notons $u(z)=e^{iz}$ et $v(z)=e^z+e^{-z}$. Alors 
+ $$\textrm{Res}(f)(i\pi/2)=\frac{u(i\pi/2)}{v'(i\pi/2)}=\frac{e^{-\pi/2}}{2i}.$$
+ <li> La fonction $x\mapsto e^x+e^{-x}$ ne s'annulant pas sur $\mathbb R$, la fonction $x\mapsto \frac{e^{ix}}{e^x+e^{-x}}$
+ est continue par morceaux sur $\mathbb R$. De plus, on a 
+ $$\left|\frac{e^{ix}}{e^x+e^{-x}}\right|\leq \frac 1{e^x+e^{-x}}\leq \frac 1{e^x}\leq e^{-x}.$$
+ Puisque la fonction $x\mapsto e^{-x}$ est intégrable au voisinage de $+\infty$, il en est de même de 
+ $x\mapsto \frac{e^{ix}}{e^x+e^{-x}}$. De même, on a 
+  $$\left|\frac{e^{ix}}{e^x+e^{-x}}\right|\leq \frac 1{e^x+e^{-x}}\leq \frac 1{e^{-x}}\leq e^{x}.$$
+ Puisque la fonction $x\mapsto e^{x}$ est intégrable au voisinage de $-\infty$, il en est de même de 
+ $x\mapsto \frac{e^{ix}}{e^x+e^{-x}}$. On en déduit l'intégrabilité de la fonction considérée sur $\mathbb R$.
+ <li> D'après le théorème des résidus, et puisque $i\pi/2$ est le seul résidu de $f$ se trouvant à l'intérieur du contour, on a 
+ $$\int_{\gamma_R}f(z)dz=2i\pi \textrm{Res}(f)(i\pi/2)=\pi e^{-\pi/2}.$$
+ <li> On a
+ \begin{align*}
+  \int_{\gamma_R^3}f(z)dz&=\int_{R}^{-R}\frac{e^{i(x+i\pi)}}{e^{x+i\pi}+e^{-x-i\pi}}dx\\
+  &=\int_{R}^{-R}\frac{e^{-\pi}e^{ix}}{-e^x-e^{-x}}dx\\
+  &=e^{-\pi}\int_{\gamma_R^1}f(z)dz.
+ \end{align*}
+ <li> On a 
+ \begin{align*}
+  \int_{\gamma_R^2}f(z)dz&=\int_{0}^{\pi}\frac{ie^{i(R+it)}}{e^{R+it}+e^{-R-it}}dt\\
+ &=\int_0^{\pi}\frac{ie^{iR}e^{-t}}{e^{it}e^R+e^{-it}e^{-R}}dt.
+ \end{align*}
+ On majore en utilisant l'inégalité triangulaire :
+ \begin{align*}
+  \left|\int_{\gamma_R^2}f(z)dz\right|&\leq \int_0^\pi \frac{e^{-t}}{e^R-e^{-R}}dt\\
+  &\leq \int_0^\pi \frac{1}{e^R-e^{-R}}dt\\
+  &\leq \frac{\pi}{e^R-e^{-R}}.
+ \end{align*}
+ On en déduit le résultat demandé.
+ <li> On a 
+ $$\int_{\gamma_R}f(z)dz=(1+e^{-\pi})\int_{-R}^R \frac{e^{ix}}{e^x+e^{-x}}dx+\int_{\gamma_R^2}f(z)dz+\int_{\gamma_R^4}f(z)dz.$$
+ Faisant tendre $R$ vers $+\infty$ en utilisant le résultat de la question précédente, on a 
+ $$\pi e^{-\pi/2}=(1+e^{-\pi})\int_{-\infty}^{+\infty}\frac{e^{ix}}{e^x+e^{-x}}dx.$$
+ On en déduit que 
+ $$\int_{-\infty}^{+\infty}\frac{e^{ix}}{e^x+e^{-x}}dx=\frac{\pi e^{-\pi/2}}{1+e^{-\pi}}=\frac{\pi}{e^{\pi/2}+e^{-\pi/2}}.$$
+ Prenant la partie réelle de cette égalité, on obtient l'autre résultat demandé.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater768"></span><script>var myRating = raterJs( { element:document.querySelector("#rater768"),	max:5, rating:1.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(768,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux exemples <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=768.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(768,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce768','imageenonce768');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce768"></a><div class=inner id="innerenonce768"><ol class="enumeratechiffre">
+<li> Soit $n\geq 2$ entier. Calculer $I=\int_0^{+\infty}\frac{dx}{1+x^n}$.
+On pourra intégrer sur le bord du compact 
+$K=\{\rho e^{i\theta};\ 0\leq \rho\leq R\textrm{ et }0\leq\theta\leq 2\pi/n\}$.
+<li> Soient $n&gt;2$ un entier et $\alpha$ un réel tel que $n&gt;\alpha+1&gt;0$. Calculer l'intégrale
+$J=\int_0^{+\infty}\frac{x^\alpha}{1+x^n}dx$. On pourra intégrer sur le bord du compact 
+$L=\{\rho e^{i\theta};\ r\leq \rho\leq R\textrm{ et }0\leq\theta\leq 2\pi/n\}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication768','imageindication768');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication768"></a><div class=inner id="innerindication768" style="display:none;">Il s'agit d'appliquer le théorème des résidus. Les intégrales sont convergentes par les hypothèses faites sur
+$\alpha$ et $n$. Le seul pôle est en $e^{i\pi/n}$. On calculera le résidu en ce pôle. 
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige768','imagecorrige768',768);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige768"></a><div class=inner id="innercorrige768" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $\gamma$ le bord du compact $K$ et $f(z)=\frac{1}{1+z^n}$. Le seul pôle
+de $f$ dans $K$ est en $\exp(i\pi/n)$. Le résidu de $f$ en $\exp(i\pi/n)$ 
+est égal à 
+$$\textrm{Res}(f,\exp(i\pi/n))=\frac{1}{n(e^{i\pi/n})^{n-1}}=-\frac{e^{i\pi /n}}{n}$$
+(on a utilisé le fait que, si $f=g/h$ et $a$ est un pôle simple de $f$, alors le résidu
+de $f$ en $a$ est égal à $g(a)/h'(a)$). Par application du théorème des résidus, on a 
+$$I_R=\int_{\gamma}f(z)dz=-\frac{2i\pi\exp(i\pi/n)}{n}.$$
+D'autre part, on découpe $\gamma$ en trois parties, et on a aussi
+\begin{eqnarray*}
+I_R&=&\int_0^R\frac{dx}{1+x^n}+\int_0^{2\pi/n}\frac{iRe^{it}}{1+R^n e^{int}}dt-\int_0^R \frac{\exp(2i\pi/n)}{1+\exp(2i\pi/n)^n x^n}dx\\
+&=&-2i\exp(i\pi/n)\sin\frac\pi n\int_0^R\frac{dx}{1+x^n}+\int_0^{2\pi/n}\frac{iRe^{it}}{1+R^n e^{int}}dt.
+\end{eqnarray*}
+On remarque alors que 
+$$\left|\int_0^{2\pi/n}\frac{iRe^{it}}{1+R^n e^{int}}dt\right|\leq \frac{2\pi R}{n(R^n -1)}\xrightarrow{R\to\infty}0.$$
+On conclut alors facilement que
+$$I=\frac{\pi}{n\sin\frac\pi n}.$$
+<li> D'après les hypothèses, l'intégrale $J$ est convergente. Soit $z^\alpha$ la détermination principale de la fonction
+puissance $\alpha$ et posons $g(z)=\frac{z^\alpha}{1+z^n}$. On applique exactement la même méthode qu'à la question précédente, sachant
+que 
+$$\textrm{Res}(g,\exp(i\pi/n))=\frac{\exp(i\alpha\pi/n)}{n(e^{i\pi/n})^{n-1}}=-\frac{e^{i(\alpha+1)\pi /n}}{n}.$$
+Pour $\rho&gt;0$, on note $J_\rho$ l'intégrale de $g$ le long de $\gamma_\rho(t)=\rho e^{it}$, $0\leq t\leq 2\pi/n$.
+Alors, notant $\Gamma$ le bord de $L$, on a
+$$\int_\Gamma g(z)dz=\int_{r}^R \frac{x^\alpha}{1+x^n}dx+J_R-\exp\left(\frac{2i\pi(\alpha+1)}{n}\right)\int_r^R \frac{x^\alpha}{1+x^n}dx-J_r.$$
+Or,
+$$J_\rho=i\rho^{\alpha+1}\int_0^{2\pi/n}\frac{e^{i(\alpha+1)t}}{\rho^n e^{int}-1}dt,$$
+soit 
+$$|J_\rho|\leq \frac{2\pi}n \frac{\rho^{\alpha+1}}{\big| \rho^n-1\big |}.$$
+On en déduit que $J_\rho\to 0$ si $\rho\to 0$ ou si $\rho\to +\infty$. Raisonnant comme à la question précédente, on conclut
+alors facilement que
+$$J=\frac{\pi}{n\sin\frac{(\alpha+1)\pi}{n}}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater770"></span><script>var myRating = raterJs( { element:document.querySelector("#rater770"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(770,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fractions rationnelles <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=770.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(770,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce770','imageenonce770');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce770"></a><div class=inner id="innerenonce770">Soient $P,Q\in\mathbb R[X]\backslash\{0\}$, tels que $\deg(P)\leq \deg(Q)-2$ et 
+$P$ et $Q$ sont premiers entre eux. On suppose que $Q$ n'a pas de zéros réels, et on note
+$a_1,\dots,a_r$ ses zéros de partie imaginaire strictement positive.
+Prouver que 
+$$\int_{-\infty}^{+\infty}\frac{P(x)}{Q(x)}dx=2i\pi\sum_{k=1}^r \textrm{Res}\left(\frac PQ,a_k\right).$$
+En déduire la valeur de 
+$$\int_{-\infty}^{+\infty}\frac {x(x+1)}{(x^2+1)^2}dx.$$</div></div><div class=indication><a href="javascript:showAll('innerindication770','imageindication770');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication770"></a><div class=inner id="innerindication770" style="display:none;">Appliquer le théorème des résidus au demi-cercle de diamètre $[-R,R]$, contenu dans le demi-plan supérieur.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige770','imagecorrige770',770);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige770"></a><div class=inner id="innercorrige770" style="display:none;">On applique le théorème des résidus au demi-cercle de diamètre $[-R,R]$ contenu dans le demi-plan supérieur.
+Si on note $\gamma_R$ ce contour et $C_R$ le demi-cercle de ce contour, on trouve
+$$2i\pi\sum_{k=1}^r \textrm{Res}\left(\frac PQ,a_k\right)=\int_{\gamma_R}\frac{P(z)}{Q(z)}dz=\int_{-R}^R \frac{P(x)}{Q(x)}dx+\int_{C_R}\frac{P(z)}{Q(z)}dz.$$
+Or, comme $\deg(P)\leq\deg(Q)-2$, il existe une constante $A$ telle que, pour $|z|=R$
+assez grand, $|P(z)/Q(z)|\leq A R^{-2}$. On en déduit
+$$\left|\int_{C_R}\frac{P(z)}{Q(z)}dz\right|\leq \pi R AR^{-2}$$
+et donc $\int_{C_R} \frac{P(z)}{Q(z)}dz$ tend vers 0 lorsque $R$ tend vers
+$+\infty$. On en déduit le résultat. <br>
+Pour $f(z)=\frac{z(z+1)}{(z^2+1)^2}$, le seul pôle de partie imaginaire strictement positive est $i$, et c'est un pôle double. On calcule le résidu de $f$ en $i$, en 
+posant
+$w=z-i$. On a donc 
+\begin{eqnarray*}
+\frac{z(z+1)}{(z^2+1)^2}&=&\frac{(w+i)(w+i+1)}{w^2(w+2i)^2}=\frac{(w+i)(w+i+1)}{(2i)^2 w^2\left(1+\frac w{2i}\right)^2}\\
+&=&\frac{-1}{4w^2}\left((w+i)(w+i+1)\left(1-\frac w i+o(w)\right)\right).
+\end{eqnarray*}
+On s'intéresse au terme en $1/w$. Il est égal à 
+$$\frac{-1}{4}\times \left(i+i+1-\frac{i(i+1)}{i}\right)=\frac{-i}{4}.$$
+L'intégrale recherché est donc égale à $\frac{\pi}{2}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3583"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3583"),	max:5, rating:1.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3583,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul de sommes <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3583.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3583,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3583','imageenonce3583');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3583"></a><div class=inner id="innerenonce3583">Soit $a\in\mathbb R^*$. Le but de l'exercice est de calculer la valeur de $\sum_{n=1}^{+\infty}\frac 1{n^2+a^2}.$ 
+On considère la fonction $f$ définie pour tout $z\in\mathbb C\backslash(\mathbb Z\cup\{\pm ai\})$ par 
+$$f(z)=\frac{\pi\cos(\pi z)}{(z^2+a^2)\sin(\pi z)}.$$
+<ol class="enumeratechiffre">
+<li> Calculer le résidu de $f$ en $n\in\mathbb Z$ et en $\pm ai.$
+<li> Soit $N$ un entier strictement supérieur à $|a|$ et soit $R=N+1/2$. On note $\gamma_R$ le cercle de centre $O$ et de rayon $R.$ Démontrer que 
+$$\sum_{n=-N}^N \frac{1}{n^2+a^2}=\frac{\pi \cosh(\pi a)}{a\sinh(\pi a)}+\frac1{2i\pi}\int_{\gamma_R}f(z)dz.$$
+<li> Démontrer que
+$$\left|\int_{\gamma_R}f(z)dz\right|\leq \frac{2\pi^2 R}{R^2-a^2}\sup_{|z|=R}\left|\frac{\cos(\pi z)}{\sin(\pi z)}\right|.$$
+<li> On admet qu'il existe une constante $C&gt;0$ telle que, pour tout $N\in\mathbb N,$ pour tout $z\in\mathbb C$ avec $|z|=N+\frac 12,$ on a 
+$$\left|\frac{\cos(\pi z)}{\sin(\pi z)}\right|\leq C.$$
+Donner la valeur de $\displaystyle \sum_{n=-\infty}^{+\infty}\frac1{n^2+a^2}.$
+<li> Application (plus dur) : calculer la limite quand $a$ tend vers $0$ de $\displaystyle 
+\frac{\pi \cosh(\pi a)}{a\sinh(\pi a)}-\frac1{a^2}$ et en déduire la valeur de $\displaystyle \sum_{n=1}^{+\infty}\frac 1{n^2}.$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication3583','imageindication3583');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3583"></a><div class=inner id="innerindication3583" style="display:none;"><ol class="enumeratechiffre">
+<li>  
+<li> Appliquer le théorème des résidus.
+<li> Utiliser l'inégalité triangulaire.
+<li> Faire tendre $N$ vers $+\infty.$
+<li> Pour la première partie, faire un développement limité. Pour la seconde, commencer par démontrer la convergence normale sur $[0,+\infty[$ de $a\mapsto \sum_{n=1}^{+\infty}\frac1{n^2+a^2}.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3583','imagecorrige3583',3583);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3583"></a><div class=inner id="innercorrige3583" style="display:none;"><ol class="enumeratechiffre">
+<li> Fixons d'abord $n\in\mathbb Z.$ Posons $u(z)=\frac{\pi\cos(\pi z)}{z^2+a^2}$ et $v(z)=\sin(\pi z)$. Alors $f(z)=u(z)/v(z),$ on a 
+$$u(n)=\frac{\pi \cos(n\pi)}{n^2+a^2}=\frac{(-1)^n\pi}{n^2+a^2}\neq 0,$$
+$$v(n)=0,\ v'(n)=\pi\cos(\pi n)=(-1)^n \pi.$$
+Ainsi, $n$ est un pôle simple de $f$ et 
+$$\textrm{Res}(f,n)=\frac{u(n)}{v'(n)}=\frac 1{n^2+a^2}.$$
+Posons ensuite $u_1(z)=\frac{\pi\cos(\pi z)}{\sin(\pi z)},$ $v_1(z)=z^2+a^2$ de sorte que $f(z)=u_1(z)/v_1(z).$ On a 
+$$u_1(ai)=\frac{\pi\cos(\pi a i)}{\sin(\pi ai)}\neq 0,$$
+$$v_1(ai)=0,\ v_1'(ai)=2ai\neq 0$$
+de sorte que $ai$ est un pôle simple de $f$ et 
+$$\textrm{Res}(f,ai)=\frac{\pi \cos(\pi ai)}{2ai\sin(\pi ai)}.$$
+De même, on trouve que 
+$$\textrm{Res}(f,-ai)=\frac{\pi \cos(\pi ai)}{2ai\sin(\pi ai)}.$$
+On peut simplifier ces deux dernières expressions en remarquant que 
+$\cos(\pi ai)=\cosh(\pi a)$ et $\sin(\pi ai)=i\sinh(\pi a)$ qui donnent
+$$\textrm{Res}(f,\pm ai)=\frac{-\pi \cosh(\pi a)}{2a \sinh(\pi a)}.$$
+<li> On applique le théorème des résidus à la fonction $f$ et au contour $\gamma_R.$ Remarquons que l'on a $\textrm{Ind}(n,\gamma_R)=1$ si $|n|\leq N$ et $0$ sinon, puis que $\textrm{Ind}(\pm ai,\gamma_R)=1.$
+On trouve donc
+$$\frac 1{2i\pi}\int_{\gamma_R}f(z)dz=\sum_{n=-N}^N \frac{1}{n^2+a^2}-2\frac{\pi\cosh(a)}{2a\sinh(a)}$$
+qui est bien le résultat voulu.
+<li> Soit $z\in\mathbb C$ tel que $|z|=R.$ On a alors 
+$$|z^2+a^2|\geq |z|^2-a^2=R^2-a^2,$$
+$$|f(z)|\leq \frac{\pi}{R^2-a^2}\sup_{|z|=R}\left|\frac{\cos(\pi z)}{\sin(\pi z)}\right|.$$
+On en déduit 
+\begin{align*}
+\left|\int_{\gamma_R}f(z)dz\right|&\leq \int_{\gamma_R}|f(z)|dz\\
+&\leq 2\pi R\times  \frac{\pi}{R^2-a^2}\sup_{|z|=R}\left|\frac{\cos(\pi z)}{\sin(\pi z)}\right|.
+\end{align*}
+<li> Si on fait tendre $N$, et donc $R$, vers $+\infty$ dans la formule précédente, on trouve 
+$$\lim_{N\to+\infty}\int_{\gamma_R}f(z)dz=0.$$
+Passant à la limite dans la formule obtenue à partir du théorème des résidus, on obtient 
+$$\sum_{n=-\infty}^{+\infty}\frac1{n^2+a^2}=\frac{\pi \cosh(\pi a)}{a\sinh(\pi a)}.$$
+<li> On commence par effectuer un développement limité. On a
+\begin{align*}
+\pi \cosh(\pi a)&=\pi\left(1+\frac{\pi^2a^2}{2}+o(a^2)\right)\\
+&=\pi+\frac{\pi^3a^2}2+o(a^2)
+\end{align*}
+et 
+$$a\sinh(\pi a)=\pi a^2+\frac{\pi^3a^4}6+o(a^4).$$
+On en déduit 
+\begin{align*}
+\frac{\pi\cosh(\pi a)}{a\sinh(\pi a)}&=\frac{\pi+\frac{\pi^3a^2}2+o(a^2)}{\pi a^2\left(1+\frac{\pi^2a^2}6+o(a^2)\right)}\\
+&=\frac{1}{\pi a^2}\left(\pi+\frac{\pi^3a^2}2+o(a^2)\right)\left(1-\frac{\pi^3 a^2}6+o(a^2)\right)\\
+&=\frac1{a^2}+\frac{\pi^2}3+o(1),
+\end{align*}
+ce qui implique que 
+$$\lim_{a\to 0}\left( \frac{\pi\cosh(\pi a)}{a\sinh(\pi a)}-\frac{1}{a^2}\right)=\frac{\pi^2}3.$$
+Posons ensuite, pour $a\in\mathbb R,$
+$$g(a)=\sum_{n=1}^{+\infty}\frac{1}{n^2+a^2}.$$
+Pour $a\neq 0,$ on a 
+$$f(a)=\frac{1}{a^2}+2g(a)$$
+d'où 
+$$2g(a)=f(a)-\frac 1{a^2}=\frac{\pi\cosh(\pi a)}{a\sinh(\pi a)}-\frac{1}{a^2}.$$
+Or, la série définissant $g$ converge normalement sur $\mathbb R$ : en effet, pour tout $a\in\mathbb R$ et tout $n\geq 1,$ on a
+$$\left|\frac1{n^2+a^2}\right|\leq \frac 1{n^2}$$
+et ceci est le terme général d'une série convergente.
+Puisque $a\mapsto \frac1{n^2+a^2}$ est continue sur $\mathbb R,$ la fonction $g$ est continue sur $\mathbb R,$ en particulier en $0$. En faisant tendre $a$ vers $0$ dans la relation obtenue ci-dessus, et en utilisant le résultat que l'on vient de démontrer, on trouve
+$$\sum_{n=1}^{+\infty}\frac1{n^2}=\frac{\pi^2}6.$$
+Au lieu d'utiliser un argument de convergence uniforme (normale), on aurait aussi pu utiliser un argument de convergence monotone ou de convergence dominée appliqué à la mesure de comptage sur $\mathbb N.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater771"></span><script>var myRating = raterJs( { element:document.querySelector("#rater771"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(771,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale de Fourier <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=771.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(771,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce771','imageenonce771');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce771"></a><div class=inner id="innerenonce771">Soit $F=P/Q$ une fraction rationnelle où $P$ et $Q$ sont deux polynômes premiers entre eux tels que $\deg(P)\leq \deg(Q)-1$
+et $Q$ n'a pas de racines réelles.
+<ol class="enumeratechiffre">
+<li> Justifier la convergence de $\int_{-\infty}^{+\infty}\frac{P(x)}{Q(x)}e^{ix}dx$.
+<li> On note $\gamma_R$ le demi-cercle de centre $O$ et de rayon $R&gt;0$ situé dans le demi-plan $\{\Im m(z)&gt;0\}$,
+orienté positivement. 
+<ol class="enumeratechiffre">
+<li> En utilisant (après l'avoir justifiée) l'inégalité $\sin t\geq\frac{2}\pi t$, valide pour $t\in[0,\pi/2]$,
+démontrer que
+$$\int_0^\pi e^{-r\sin t}rdt\leq \pi.$$
+<li> En déduire que $\lim_{R\to+\infty}\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz=0$.
+<li> Retrouver ce résultat par le théorème de convergence dominée.
+</ol>
+<li> On pose $f(z)=\frac{P(z)}{Q(z)}e^{iz}$ et on note $a_1,\dots,a_p$ les pôles de $f$ de partie imaginaire strictement positive.
+Déduire de la question précédente que
+$$\int_{-\infty}^{+\infty}\frac{P(x)}{Q(x)}e^{ix}dx=2i\pi\sum_{k=1}^p \textrm{Res}(f,a_k).$$
+<li> Application : soit $P(x)=x^3$ et $Q(x)=x^4+5x^2+4=(x^2+1)(x^2+4)$. 
+Calculer les résidus de $f$ en les pôles de partie imaginaire positive. En déduire que
+$$\int_0^{+\infty}\frac{x^3\sin(x)}{x^4+5x^2+4}dx=\pi\left(\frac{2}{3e^2}-\frac{1}{6e}\right).$$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication771','imageindication771');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication771"></a><div class=inner id="innerindication771" style="display:none;"><ol class="enumeratechiffre">
+<li> Intégrer par parties.
+<li> <ol class="enumeratechiffre">
+<li> On majore par une intégrale qui se calcule.
+<li> Paramétrer le cercle, et majorer en module dans l'intégrale.
+<li> 
+</ol>
+<li> Utiliser le théorème des résidus.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige771','imagecorrige771',771);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige771"></a><div class=inner id="innercorrige771" style="display:none;"><ol class="enumeratechiffre">
+<li> On procède comme pour démontrer la convergence de $\int_{1}^{+\infty}\frac{\sin t}{t}dt$, ie on intègre par parties. On a en effet 
+$$\int_0^R \frac{P(x)}{Q(x)}e^{ix}dx=\left[-\frac{P(x)}{Q(x)}ie^{ix}\right]_0^R+i\int_0^R\frac{P'(x)Q(x)-P(x)Q'(x)}{Q^2(x)}e^{ix}dx.$$
+Or, 
+$$\left[-\frac{P(x)}{Q(x)}ie^{ix}\right]_0^R=i\frac{P(0)}{Q(0)}-ie^{iR}\frac{P(R)}{Q(R)}$$
+tend vers $iP(0)/Q(0)$ lorsque $R$ tend vers $+\infty$. De plus, puisque $\deg(P)\leq \deg(Q)-1$, on en déduit que
+$$\deg(P'Q-PQ')\leq 2\deg(Q)-2=\deg(Q^2).$$
+Ainsi, l'intégrale $\int_0^{+\infty}\frac{P'(x)Q(x)-P(x)Q'(x)}{Q^2(x)}e^{ix}dx$ converge absolument.
+<li> <ol class="enumeratechiffre">
+<li> L'inégalité $\sin (t)\geq\frac 2\pi t$ est une conséquence immédiate de la concavité du sinus sur l'intervalle $[0,\pi/2]$.
+De plus, on a par le changement de variables $t\mapsto\pi-t$ sur $[\pi/2,\pi]$
+$$\int_0^\pi e^{-r\sin t}rdt=2\int_0^{\pi/2}e^{-r\sin t}rdt\leq 2\int_0^{\pi/2}e^{-r2t/\pi}rdt.$$
+Il est alors possible de calculer cette intégrale par une intégration par parties, et on trouve
+$$\int_0^{\pi/2}e^{-r2t/\pi}rdt\leq\int_0^{+\infty}e^{-r2t/\pi}rdt=\frac{\pi}2.$$
+<li> On a 
+$$\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz=\int_{0}^{\pi}\frac{P(re^{it})}{Q(re^{it})}e^{ire^{it}}rie^{it}dt$$
+soit
+\begin{eqnarray*}
+\left|\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz\right|&\leq& \int_0^{\pi}\left|\frac {P(re^{it})}{Q(re^{it})}\right|
+e^{\Re(ire^{it})}rdt\\
+&\leq&\int_0^{\pi}\left|\frac{P(re^{it})}{Q(re^{it})}\right|
+e^{-r\sin t}rdt.
+\end{eqnarray*}
+Or, si $\veps&gt;0$ est fixé, il existe $M&gt;0$ tel que $|z|\geq M$ implique $|P(z)/Q(z)|\leq\veps$.
+On en déduit que, si $R\geq M$,
+$$\left|\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz\right|\leq \veps\int_0^\pi e^{-r\sin t}rdt\leq\pi\veps.$$
+<li> On écrit à nouveau 
+$$\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz=\int_0^{\pi}\frac{P(re^{it})}{Q(re^{it})}e^{-r\sin t}rdt.$$
+Il existe une constante $M&gt;0$ telle que, pour tout $r\geq 1,$ pour tout $t\in ]0,\pi[,$ 
+$$\left|\frac{P(re^{it})}{Q(re^{it})}\right|\leq \frac Mr.$$
+Comme $r\sin(t)\geq 0$ pour $r\geq 1$ et $t\in]0,\pi[,$ on obtient 
+$$\left|\frac{P(re^{it})}{Q(re^{it})}e^{-r\sin t}r\right|\leq M,$$
+et les fonctions constantes sont intégrables sur $]0,\pi[$. 
+De plus, pour $t\in]0,\pi[,$ 
+$$\left|\frac{P(re^{it})}{Q(re^{it})}e^{-r\sin t}r\right|\leq Me^{-r\sin(t)}$$
+et cette dernière quantité tend vers $0$ lorsque $r$ tend vers $+\infty$ puisque $\sin(t)&gt;0$. On retrouve donc le résultat demandé en appliquant le théorème de convergence dominée.
+</ol>
+<li> D'après le théorème des résidus, pour $R$ assez grand, on a
+$$\int_{-R}^{R}\frac{P(x)}{Q(x)}e^{ix}dx+\int_{\gamma_R}\frac{P(z)}{Q(z)}e^{iz}dz=2i\pi\sum_{k=1}^p \textrm{Res}(f,a_k).$$
+Il suffit de faire tendre $R$ vers $+\infty$ et d'utiliser le résultat de la question précédente pour en déduire le résultat.
+<li> Les pôles de $f$ de partie imaginaire strictement positive sont $i$ et $2i$. 
+Le calcul du résidu en ces pôles donne
+$$\textrm{Res}(f,i)=\frac{P(i)e^{i\times i}}{Q'(i)}=\frac{-1}{6e}$$
+$$\textrm{Res}(f,2i)=\frac{P(2i)e^{i\times 2i}}{Q'(2i)}=\frac{2}{3e^2}.$$
+On en déduit que
+$$\int_{-\infty}^{+\infty}\frac{x^3e^{ix}}{x^4+5x^2+4}dx=\pi i\left(\frac{2}{3e^2}-\frac{1}{6e}\right),$$
+puis que 
+$$\int_0^{+\infty}\frac{x^3\sin(x)}{x^4+5x^2+4}dx=\frac12\Im m\left(\int_{-\infty}^{+\infty}\frac{x^3e^{ix}}{x^4+5x^2+4}dx\right)$$
+qui donne le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3402"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3402"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3402,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale avec deux exponentielles <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3402.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3402,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3402','imageenonce3402');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3402"></a><div class=inner id="innerenonce3402">Soit $a\in]0,1[$. Calculer 
+$\displaystyle \int_{-\infty}^{+\infty}\frac{e^{ax}}{1+e^x}dx.$</div></div><div class=indication><a href="javascript:showAll('innerindication3402','imageindication3402');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3402"></a><div class=inner id="innerindication3402" style="display:none;">On pourra utiliser le théorème des résidus avec le contour défini par le rectangle 
+de sommets $-R,$ $R$, $R+2i\pi,$ $-R+2i\pi$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3402','imagecorrige3402',3402);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3402"></a><div class=inner id="innercorrige3402" style="display:none;">Posons $f(z)=\frac{e^{az}}{1+e^z}.$ Soit $R\geq 1$ et notons $\gamma_R$ le rectangle
+de sommets $-R,$ $R$, $R+2i\pi,$ $-R+2i\pi$ que l'on oriente dans le sens trigonométrique. On a 
+$$1+e^z=0\iff e^z=-1\iff z=i\pi+2ik\pi.$$
+Ainsi, $f$ est holomorphe à l'intérieur du rectangle sauf au point $i\pi$. 
+En ce point, $e^z+1$ admet une racine simple, et donc $i\pi$ est un pôle simple pour $f.$ 
+&Eacute;crivant $f=u/v,$ le résidu de $f$ en $i\pi$ vaut $u(i\pi)/v'(i\pi)=-e^{ia\pi}.$
+Appliquons le théorème des résidus à $f$ avec le contour $\gamma_R.$
+On trouve 
+$$\int_{\gamma_R}f(z)dz=-2i\pi e^{ia\pi}.$$
+On découpe ensuite l'intégrale sur le contour en quatre morceaux.
+Posons $I_R=\int_{-R}^R f(t)dt,$ $J_R=\int_{-R}^R f(t+2i\pi)dt.$ On a 
+$$\int_{\gamma_R}f(z)dz=I_R-J_r+\int_{0}^{2\pi}f(R+it)dt-\int_{0}^{2\pi}f(-Rit)dt.$$
+On remarque que 
+$$J_R= f(t+2i\pi)dt=\int_{-R}^R e^{2ia\pi}\frac{e^{at}}{1+e^{t}}dt=e^{2ia\pi}I_R.$$
+D'autre part, 
+\begin{align*}
+ \left|\int_0^{2\pi}f(R+it)dt\right|&\leq \int_0^{2\pi}\frac{e^{aR}}{|1+e^{it}e^{R}|}dt\\
+&\leq \int_0^{2\pi} \frac{e^aR}{e^R-1}dt
+\end{align*}
+et il est facile de voir que le membre de droite tend vers $0$ parce que $a\in ]0,1[,$ 
+ou bien en appliquant le théorème de convergence dominée, ou en remarquant que 
+$$\frac{e^{aR}}{e^R-1}\leq Ce^{(a-1)R}$$
+pour une certaine constante $C&gt;0$. De la même façon, on prouve que 
+$$\int_{0}^{2\pi}f(-Rit)dt\xrightarrow{R\to+\infty}0.$$
+Compte tenu de tout cela, faisant tendre $R$ vers $+\infty$ dans le théorème des résidus, on trouve
+$$(1-e^{2ia\pi})\int_{-\infty}^{+\infty}\frac{e^{ax}}{1+x}dx=-2i\pi e^{ia\pi}.$$
+Pour conclure, on remarque que 
+$$1-e^{2ia\pi}=-2i e^{ia\pi}\sin(a\pi).$$
+On a donc finalement
+$$\int_{-\infty}^{+\infty}\frac{e^{ax}}{1+e^x}dx=\frac{\pi}{\sin(\pi a)}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater772"></span><script>var myRating = raterJs( { element:document.querySelector("#rater772"),	max:5, rating:3.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(772,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformées de Fourier <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=772.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(772,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce772','imageenonce772');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce772"></a><div class=inner id="innerenonce772">Soit $U$ le demi-plan supérieur $\{z\in\mathbb C;\ \Im m(z)&gt;0\}$. Soit $f$ une fonction holomorphe dans un voisinage de $U$, sauf
+éventuellement en un ensemble fini $A=\{a_1,\dots,a_r\}$. On suppose enfin que $|f(z)|$ tend vers 0 lorsque $|z|$ tend vers $+\infty$
+et que $\int_{-\infty}^{+\infty}|f(x)|dx$ est convergente. On pose $I=\int_{-\infty}^{+\infty}f(x)e^{i\alpha x}dx$
+pour $\alpha&gt;0$. 
+<ol class="enumeratechiffre">
+<li> Montrer que 
+$$I=2i\pi\sum_{k=1}^r \textrm{Res}\left(f(z)e^{i\alpha z},a_k\right).$$
+<li> En déduire la valeur de $J(x)=\int_0^{+\infty}\frac{\cos (xt)}{1+t^2}dt$ pour $x\in\mathbb R$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication772','imageindication772');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication772"></a><div class=inner id="innerindication772" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer le théorème des résidus au demi-disque de diamètre $[-R,R]$. On pourra utiliser
+$\sin\theta\geq\frac2\pi\theta$ si $\theta\in[0,\pi/2]$.
+<li> Remarquer que la fonction est paire, la calculer en 0, puis écrire
+le cosinus comme une partie réelle d'une exponentielle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige772','imagecorrige772',772);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige772"></a><div class=inner id="innercorrige772" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $g(z)=f(z)e^{i\alpha z}$, et appliquons le théorème des résidus à $g$
+et au contour $\Gamma_R$ constitué par la frontière du demi-disque de diamètre $[-R,R]$ situé dans $U$
+(orienté dans le sens trigonométrique). Soit $C_R$ la partie uniquement constituée par le demi-cercle.
+$$2i\pi\sum_{k=1}^r \textrm{Res}\left(g(z),a_k\right)= \int_{\Gamma_R}g(z)dz=\int_{-R}^R f(x)e^{i\alpha x}dx+
+\int_{C_R}g(z)dz.$$
+Il suffit donc de prouver que l'intégrale de $g$ le long de $C_R$ tend vers 0 lorsque $R$ tend vers l'infini.
+Posons $M(R)=\sup\{|f(z)|;\ |z|=R\}$. On a la majoration
+$$\left|\int_{C_R}g(z)dz\right|\leq \int_0^{\pi}|f(Re^{i\theta})|e^{-\alpha R\sin\theta}Rd\theta\leq RM(R)\int_0^{\pi}e^{-\alpha R\sin\theta}d\theta.$$
+&Eacute;crivant que $\sin\theta\geq\frac2\pi\theta$ si $\theta\in[0,\pi/2]$, on obtient
+$$\left|\int_{C_R}g(z)dz\right|\leq2RM(R)\int_0^{\pi/2}e^{-\alpha R\sin\theta}d\theta\leq 
+2RM(R)\int_0^{\pi/2}e^{-2\alpha R\theta/\pi}d\theta\leq 2RM(R)\times\frac{\pi}{2\alpha R}.$$
+Puisque $M(R)$ tend vers 0 lorsque $R$ tend vers $+\infty$, on obtient bien le résultat voulu.
+<li> La fonction $J$ est paire, et on peut se limiter à $x\geq 0$. En $0$, elle vaut $\pi/2$.
+Pour $x=\alpha&gt;0$, on a
+$$J(x)=\frac12\Re e\left(\int_{-\infty}^{+\infty}\frac{e^{i\alpha t}}{1+t^2}dt\right).$$
+La fonction $t\mapsto\frac{1}{1+t^2}$ vérifie les hypothèses précédentes, et comme
+$$\textrm{Res}\left(\frac{e^{i\alpha z}}{1+z^2},i\right)=\frac{e^{-\alpha}}{2i},$$
+on en déduit $J(x)=\frac{\pi}{2}e^{-\alpha}$. Le calcul du résidu s'effectue en écrivant
+$$\frac{e^{i\alpha z}}{1+z^2}=\frac{e^{i\alpha z}(z+i)^{-1}}{(z-i)},$$
+et en affectant la valeur $i$ au numérateur.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater773"></span><script>var myRating = raterJs( { element:document.querySelector("#rater773"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(773,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale trigonométrique <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=773.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(773,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce773','imageenonce773');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce773"></a><div class=inner id="innerenonce773">En utilisant le théorème des résidus, calculer
+$$I=\int_0^{2\pi}\frac{dt}{a+\sin t},\ a&gt;1.$$</div></div><div class=indication><a href="javascript:showAll('innerindication773','imageindication773');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication773"></a><div class=inner id="innerindication773" style="display:none;">Poser $z=e^{it}$ et écrire $\sin t=\frac{1}{2i}(z-\frac 1z)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige773','imagecorrige773',773);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige773"></a><div class=inner id="innercorrige773" style="display:none;">On pose $z=e^{it}$ de sorte que $\sin(t)=\frac{1}{2i}(z-\frac 1z)$
+et $dz=ie^{it}dt$ ce qui entraîne $dt=-iz^{-1}dz$. On a donc
+$$a+\sin t=\frac{z^2+2iaz-1}{2iz}$$
+et 
+$$I=\int_\Gamma \frac{2iz}{z^2+2iaz-1}\times (-iz^{-1})dz=\int_\Gamma\frac{2}{z^2+2iaz-1}dz$$
+où $\Gamma$ est le cercle unité, orienté positivement. L'équation $z^2+2iaz-1$ a
+pour solutions $p=-ia+i\sqrt{a^2-1}$ et $q=-ia-i\sqrt{a^2-1}$. La seule située dans le disque
+unité est $p$. Comme $f(z)=\frac{2}{(z-p)(z-q)}$, on a
+$$\textrm{Res}(f,p)=\frac{2}{p-q}=\frac{1}{i\sqrt{a^2-1}}.$$
+Il résulte alors immédiatement du théorème des résidus (en fait, de la formule de Cauchy...) que
+$$I=2i\pi \frac{1}{i\sqrt{a^2-1}}=\frac{2\pi}{\sqrt{a^2-1}}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1316"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1316"),	max:5, rating:3.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1316,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formule d'Euler <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1316.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1316,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1316','imageenonce1316');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1316"></a><div class=inner id="innerenonce1316">Le but de l'exercice est de démontrer la formule suivante, due à Euler :
+pour tout $z\neq k\pi$, $k\in\mathbb Z$, 
+$$\textrm{cotan} z=\frac 1z+\sum_{n=1}^{+\infty}\frac{2z}{z^2-n^2\pi^2}.$$
+<ol class="enumeratechiffre">
+<li> Justifier que le membre de droite définit une fonction holomorphe sur $\mathbb C-\pi\mathbb Z$.
+<li> On pose 
+$$F(z)=\textrm{cotan} z-\frac 1z\textrm{ et }G(z)=\frac{uF(z)}{z(z-u)}.$$
+Démontrer que $F$ admet une fausse singularité en $0$. Par quelle valeur peut-on prolonger $F$ holomorphiquement en $0$?
+<li> Quel est le résidu de $F$ en $k\pi$, $k\in\mathbb Z^*$?
+<li> On fixe $u\in\mathbb C\backslash\pi\mathbb Z$ et on pose
+$$G(z)=\frac{uF(z)}{z(z-u)}.$$
+Déduire de la question précédente que 
+\begin{eqnarray*}
+\textrm{Res}(G,0)&=&0\\
+\textrm{Res}(G,u)&=&F(u)\\
+\textrm{Res}(G,k\pi)&=&\frac{u}{k\pi(k\pi-u)}.
+\end{eqnarray*}
+<li> Pour $n\geq 1$, on note $r_n=\frac{\pi}2+n\pi$ et $C_n$ le (bord du) carré de sommets $r_n+ ir_n$, $r_n-ir_n$, $-r_n-ir_n$, $-r_n+ir_n$. Justifier que, si $|u|&lt;r_n$,  
+$$\frac{1}{2i\pi}\int_{C_n}G(z)dz=F(u)-2\sum_{k=1}^n \frac{u}{u^2-k^2\pi^2}.$$
+<li> Vérifier que, si on pose $z=x+iy$, alors
+$$|\textrm{cotan} z|^2=\frac{\cos^2 x+\sinh^2y}{\sin^2 x+\sinh^2 y}.$$
+<li> En déduire l'existence d'une constante $C&gt;0$ telle que, pour tout $n\geq 1$ et tout $z\in C_n$, 
+$$|\textrm{cotan} z|\leq C.$$
+<li> En déduire que $$\lim_{n\to+\infty}\int_{C_n}G(z)dz=0.$$
+<li> Conclure.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1316','imageindication1316');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1316"></a><div class=inner id="innerindication1316" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser un argument de convergence uniforme.
+<li> Développement limité.
+<li> Calcul simple (on a un pôle simple).
+<li> Idem...
+<li> Théorème des résidus.
+<li> &Eacute;crire $\cos x$ en termes d'exponentielle complexe, et développer...
+<li> 
+<li>
+<li>
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1316','imagecorrige1316',1316);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1316"></a><div class=inner id="innercorrige1316" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $K$ un compact de $\mathbb C$ et soit $N$ tel que $N\pi&gt;|z|$ pour tout $z\in K$. On écrit alors 
+$$h(z)=\sum_{n=1}^{+\infty}\frac{z}{z^2-n^2\pi^2}=\sum_{n=1}^N \frac{z}{z^2-n^2\pi^2}+
+\sum_{n=N+1}^{+\infty}\frac{z}{z^2-n^2\pi^2}.$$
+La première somme (finie) définit une fonction holomorphe sur $\mathbb C\backslash \pi\mathbb Z$. La deuxième somme converge normalement sur $K$. En effet, soit $M=\max\{|z|;\ z\in K\}$. Alors on a, pour tout $z\in K$, 
+$$\left| \frac{z}{z^2-n^2\pi^2}\right|\leq \frac{M}{n^2\pi^2-M}.$$
+Le terme de droite étant une série numérique convergente, la série converge normalement, donc uniformément, et elle définit bien une fonction holomorphe sur $K$. Puisque $K$ est arbitraire, on a bien prouvé que $h$ était une fonction holomorphe sur $\mathbb C\backslash\pi\mathbb Z$.
+<li> Au voisinage de $z=0$, on a le développement limité 
+$$z\cos z-\sin z=-\frac{z^3}3+o(z^3)$$
+d'où on tire $\lim_{z\to 0}F(z)=0$. $0$ est bien une fausse singularité pour $F$ qui se prolonge holomorphiquement en posant $F(0)=0$.
+<li> $k\pi$ est un pôle simple pour $F$, on a donc 
+$$\textrm{Res}(F,k\pi)=\frac{\cos(k\pi)}{(\sin)'(k\pi)}=1.$$
+<li> On a toujours affaire à des pôles simples. On a 
+$$\textrm{Res}(G,0)=\lim_{z\to 0}\frac{uF(z)}{z-u}=0,$$
+$$\textrm{Res}(G,u)=\lim_{z\to u}\frac{uF(z)}z=F(u),$$
+$$\textrm{Res}(G,k\pi)=\lim_{z\to k\pi}\frac{u(z-k\pi)F(z)}{z(z-u)}=\frac{u}{k\pi (k\pi-u)}\textrm{Res}(F,k\pi)=\frac{u}{k\pi(k\pi-u)}.$$
+<li> Le théorème des résidus donne 
+$$\frac{1}{2i\pi}\int_{C_n}G(z)dz=\textrm{Res}(G,0)+\textrm{Res}(G,u)+\sum_{k=1}^n \left(\textrm{Res}(G,k\pi)+\textrm{Res}(G,-k\pi)\right).$$
+Or, 
+\begin{eqnarray*}
+\textrm{Res}(G,k\pi)+\textrm{Res}(G,-k\pi)&=&\frac{u}{k\pi(k\pi-u)}-\frac{u}{k\pi(-k\pi-u)}\\
+&=&\frac{-2u}{u^2-k^2\pi^2}.
+\end{eqnarray*}
+<li> Soit $z=x+iy$. Alors,
+\begin{eqnarray*}
+\cos(z)&=&\frac{e^{iz}+e^{-iz}}2\\
+&=&\frac{e^{ix}e^{-y}+e^{-ix}e^y}2\\
+&=&\frac{\cos x(e^{-y}+e^{y})+i\sin(x)(e^{-y}-e^y)}2\\
+&=&\cos(x)\cosh(x)+i\sin(x)\sinh(-y).
+\end{eqnarray*}
+Prenant le module, on trouve :
+\begin{eqnarray*}
+|\cos(z)|^2&=&\cos^2(x)\cosh^2(x)+\sin^2(x)\sinh^2(y)\\
+&=&\cos^2(x)(\cosh^2(y)-\sinh^2(y))+\sinh^2(y)\\
+&=&\cos^2(x)+\sinh^2(y).
+\end{eqnarray*}
+On fait un calcul complètement similaire pour étudier $|\sin(z)|$ et on en déduit le résultat voulu.
+<li> Si $z=x+iy\in C_n$, on distingue deux cas :
+<ol class="enumeratechiffre">
+<li> $|x|=\frac\pi2+n\pi$. On a alors
+$$|\textrm{cotan}^2(z)|=\frac{\sinh^2(y)}{1+\sinh^2(y)}\leq 1.$$
+<li> $|y|=\frac\pi2+n\pi$. On a alors
+$$|\textrm{cotan}^2(z)|\leq \frac{1+\sinh^2(r_n)}{\sinh^2(r_n)}$$
+et cette dernière quantité est majorée (car elle tend vers $1$ si $n$ tend vers $+\infty$).
+</ol>
+<li> Soit $C&gt;0$ tel que $|F(z)|\leq C$ si $z\in C_n$ (un tel $C$ existe d'après la question précédente). On a donc, si $z\in C_n$, et en remarquant qu'alors $|z|\geq r_n$, 
+$$|G(z)|\leq \frac{uC}{r_n(r_n-|u|)}.$$
+Comme le carré a pour périmètre $8r_n$, on en déduit que
+$$\left|\int_{C_n}G(z)dz\right|\leq \frac{8Cr_n}{n\pi (r_n-|u|)}.$$
+Reprenant l'expression de $r_n$, ceci tend bien vers 0 lorsque $n$ tend vers $+\infty$.
+<li> La formule d'Euler est prouvée en passant à la limite dans l'application du théorème des résidus.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater774"></span><script>var myRating = raterJs( { element:document.querySelector("#rater774"),	max:5, rating:4.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(774,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une puissance! <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=774.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(774,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce774','imageenonce774');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce774"></a><div class=inner id="innerenonce774">Soit $\alpha\in]0,1[$ et $0&lt;\veps&lt;1&lt;R$. En appliquant le théorème des résidus au compact 
+$K_{\veps,R}$ délimité par le demi-cercle $\{|z|=\veps,\ \Re e(z)\leq 0\}$,
+les deux segments $I_{\veps,R}^+=[i\veps,i\veps+\sqrt{R^2-\veps^2}]$,
+$I_{\veps,R}^-=[-i\veps,-i\veps+\sqrt{R^2-\veps^2}]$ et l'arc de cercle
+$\Gamma_{\veps,R}=\{Re^{i\theta};\ \theta\in[-\pi,\pi], |\theta|\geq\theta_{\veps,R}\}$,
+où $\theta_{\veps,R}=\arctan(\veps/\sqrt{R^2-\veps^2})$, démontrer que
+$$J_\alpha=\int_{0}^{+\infty}\frac{1}{t^\alpha(1+t)}dt=\frac{\pi}{\sin(\pi\alpha)}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication774','imageindication774');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication774"></a><div class=inner id="innerindication774" style="display:none;">Prendre la détermination de $z^\alpha$ donnée par $z^\alpha=r^\alpha e^{i\alpha\theta}$
+si $z=re^{i\theta}$, $0&lt;\theta&lt;2\pi$. Attention, ce n'est pas la détermination principale
+de la fonction "racine $\alpha$-ième", mais la détermination définie
+sur $\mathbb C\backslash[0,+\infty[$. Appliquer le théorème des résidus et faire tendre
+$\veps$ vers 0 et $R$ vers $+\infty$. Faire attention au comportement de $(-i\veps+t)^{\alpha}$
+lorsque $\veps$ tend vers 0.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige774','imagecorrige774',774);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige774"></a><div class=inner id="innercorrige774" style="display:none;">Le problème vient ici du fait que la fonction $z^\alpha$ n'est pas définie sur $\mathbb C$ tout entier.
+On doit en choisir une détermination appropriée pour le problème considéré. On choisit ici 
+$z^\alpha=r^\alpha e^{i\alpha\theta}$
+si $z=re^{i\theta}$, $0&lt;\theta&lt;2\pi$. Attention, ce n'est pas la détermination principale
+de la fonction "racine $\alpha$-ième", mais la détermination définie
+sur $\mathbb C\backslash[0,+\infty[$. On applique ensuite le théorème des résidus
+au compact $K_{\veps,R}$ et à la fonction $f(z)=\frac{1}{z^\alpha(1+z)}$.
+A l'intérieur du compact considéré, elle admet une singularité en $-1$ dont le résidu
+est
+$$\textrm{Res}(f,-1)=\frac{1}{(-1)^\alpha}=e^{-i\pi\alpha}.$$
+On obtient donc
+$$\int_{\partial K_{\veps,R}}f(z)dz=2i\pi e^{-i\pi\alpha}.$$
+Quand $\veps$ tend vers 0, alors 
+$$\left|\int_{C_\veps}f(z)dz\right|\leq \frac{1}{\veps^\alpha (1-\veps)}\times\pi\veps=\frac{\pi\veps^{1-\alpha}}{1-\veps}$$
+et ceci tend vers 0 quand $\veps$ tend vers 0 puisque $\alpha&lt;1$. D'autre part,
+$$\int_{\Gamma_{\veps,R}}f(z)dz=\int_{\theta_{\veps,R}}^{2\pi\theta_{\veps,R}}iR^{1-\alpha}\frac{e^{i(1-\alpha)\theta}}{1+Re^{i\theta}}d\theta$$
+et on majore ceci en
+$$\left|\int_{\Gamma_{\veps,R}}f(z)dz\right|\leq \int_0^{2\pi}\left|\frac{R^{1-\alpha}}{R-1}\right|d\theta\leq 2\pi \frac{R^{1-\alpha}}{R-1}.$$
+Comme $\alpha&gt;0$, ceci tend vers 0 lorsque $R$ tend vers $+\infty$. Il reste à évaluer les intégrales sur chacun des segments.
+Si $t&gt;0$, alors $(t+i\veps)^{\alpha}$ tend vers $t^\alpha$ tandis que $(t-i\veps)^{\alpha}$ tend
+vers $e^{2i\pi \alpha}t^\alpha$ lorsque $\veps$ tend vers 0 (ici, il faut faire très attention à notre
+choix de la détermination de $z^\alpha$). De plus, pour tout $t&gt;0$ et tout $y\in\mathbb R$, on
+$$|f(t+iy)|\leq \frac{1}{t^\alpha(1+t)}$$
+et cette fonction est intégrable sur $]0,+\infty[$. On peut donc appliquer le théorème
+de convergence dominée et $I^+_{\veps,R}$ tend vers $J_\alpha$ tandis que
+$I_{\veps,R}^-$ tend vers $e^{-2\pi i\alpha}J_\alpha$ lorsque $\veps$ tend vers 0
+et $R$ tend vers $+\infty$. Tenant compte de l'orientation, le passage à la limite
+dans la formule des résidus nous donne
+$$(1-e^{-2i\pi\alpha})J_\alpha=2i\pi e^{-i\pi\alpha}$$
+ce qui donne bien $J_\alpha=\frac{\pi}{\sin\pi\alpha}.$
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater775"></span><script>var myRating = raterJs( { element:document.querySelector("#rater775"),	max:5, rating:4.125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(775,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec un logarithme <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=775.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(775,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce775','imageenonce775');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce775"></a><div class=inner id="innerenonce775">Calculer l'intégrale suivante :
+$$I=\int_0^{+\infty}\frac{\ln^2(t)}{1+t^2}dt.$$</div></div><div class=indication><a href="javascript:showAll('innerindication775','imageindication775');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication775"></a><div class=inner id="innerindication775" style="display:none;">Appliquer le théorème des résidus au compact dont le bord est 
+déterminer par les arcs de cercle $\{|z|=\veps,\ \Im m(z)&gt;0\}$, $\{|z|=R,\ \Im m(z)&gt;0\}$
+et les segments $[\veps,R]$ et $[-R,-\veps]$. On prendra la détermination du logarithme
+sur $\mathbb C\backslash \{iy;\ y&lt;0\}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige775','imagecorrige775',775);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige775"></a><div class=inner id="innercorrige775" style="display:none;">Le problème est double : trouver le bon contour pour appliquer le théorème des résidus, et
+utiliser la bonne détermination du logarithme. On va choisir la détermination du logarithme
+sur $\mathbb C\backslash \{iy;\ y&lt;0\}$, c'est-à-dire que
+$$\log(z)=\ln |z|+i\textrm{arg}(z)$$
+avec $\textrm{arg}(z)\in ]-\pi/2,3\pi/2[$. On applique le théorème
+des résidus à la fonction $f(z)=\log^2(z)/(1+z^2)$ et au compact dont le bord $\gamma_{\veps,R}$ est 
+déterminer par les arcs de cercle $\{|z|=\veps,\ \Im m(z)&gt;0\}$, $\{|z|=R,\ \Im m(z)&gt;0\}$
+et les segments $[\veps,R]$ et $[-R,-\veps]$, avec $0&lt;\veps&lt;1&lt;R$. A l'intérieur de ce compact, la fonction admet une singularité
+en $i$ dont le résidu est donné par
+$$\textrm{Res}(f,i)=\frac{\log^2(i)}{2i}=\frac1{2i}\left(\frac{i\pi}{2}\right)^2=-\frac{\pi^2}{8i}.$$
+On obtient donc
+$$\int_{\gamma_{\veps,R}}f(z)dz=-\frac{\pi^3}{4}.$$
+Sur le segment $[\veps,R]$, l'intégrale vaut
+$$\int_{[\veps,R]}f(z)dz=\int_{\veps}^R\frac{\ln^2(t)}{1+t^2}dt\to\int_0^{+\infty}\frac{\ln^2(t)}{1+t^2}dt.$$
+Remarquons que cette intégrale est bien définie car en 0, la fonction est équivalente 
+à $\ln^2(t)$ et ceci est intégrable, car $\ln^2(t)=_0 o(t^{-1/2})$. Au voisinage de $+\infty$,
+la fonction est intégrable car $f(t)=_{+\infty}o(t^{-3/2})$.\\
+Sur le segment $[-R,-\veps]$, on a $z=te^{i\pi}$
+$$\log(z)=\ln(t)+i\pi$$
+et donc
+$$\int_{[-R,-\veps]}f(z)dz=\int_{\veps}^{R}\frac{\ln^2t}{1+t^2}dt+2i\pi\int_{\veps}^{R} \frac{\ln(t)}{1+t^2}dt-\int_{\veps}^{R} \frac{\pi^2}{1+t^2}dt.$$
+Lorsque $\veps$ tend vers 0 et $R$ tend vers $+\infty$, ceci tend vers
+$$I-2\pi i\int_0^{+\infty}\frac{\ln t}{1+t^2}dt-\frac{\pi^3}{2}.$$
+Sur le cercle de rayon $r$, on a $|\log(z)|\leq \pi+|\ln r|$, et donc, si on intègre $f$ sur le demi-cercle
+$C_r$ de rayon $r$ contenu dans le demi-plan $\Im m(z)\geq 0$, on a la majoration
+$$\left|\int_{C_r}f(z)dz\right|\leq \int_0^{\pi}\frac{|\ln r+\pi|^2}{r^2-1}|ire^{i\theta}|d\theta\leq 2\pi r\frac{\ln^2 r+\pi^2}{r^2-1}.$$
+Pour $r=\veps$, si $\veps\to 0$, ceci tend vers 0 car $\veps\ln^2(\veps)$ tend vers 0. Si $r=R$, alors ceci
+tend aussi vers 0 car $\ln^2(R)/R\to 0$. Finalement, de la formule des résidus, en faisant tendre
+$\veps$ vers 0 et $R$ vers $+\infty$, on obtient
+$$I+I-\frac{\pi^3}{2}+2\pi i\int_{0}^{+\infty}\frac{\ln t}{1+t^2}dt=-\frac{\pi^3}{4}.$$
+Tenant compte des parties réelles, on trouve finalement
+$$I=\frac{\pi^3}{8}.$$
+Par ailleurs, le calcul prouve aussi que
+$$\int_0^{+\infty}\frac{\ln t}{1+t^2}dt=0.$$</div></div></div>
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

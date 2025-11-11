@@ -1,0 +1,500 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Bases de la logique - propositions - quantificateurs</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Flogique.html">Exercices de logique et de théorie des ensembles</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Bases de la logique - propositions - quantificateurs</h1><div class=titrepartie>Opérateurs logiques et tables de vérité</div>    
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2814"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2814"),	max:5, rating:1.26, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2814,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Les cartes <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2814.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2814,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2814','imageenonce2814');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2814"></a><div class=inner id="innerenonce2814">Quatre cartes comportant un chiffre sur une face et une couleur sur l'autre sont disposées à plat sur une table. Une seule face de chaque carte est visible. Les faces visibles sont les suivantes: 5, 8, bleu, vert. Quelle(s) carte(s) devez-vous retourner pour déterminer la véracité de la règle suivante :
+si une carte a un chiffre pair sur une face, alors elle est bleue sur l'autre face. Il ne faut pas retourner de carte inutilement, ni oublier d'en retourner une.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2814','imagecorrige2814',2814);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2814"></a><div class=inner id="innercorrige2814" style="display:none;">Il faut retourner la carte 8 et la carte verte :
+<ul class="rien">
+<li> inutile de retourner la carte 5, on n'a pas de contraintes sur les cartes ayant un chiffre impair sur une face;
+<li> il faut retourner la carte 8, pour vérifier que la couleur sur l'autre face est bleue;
+<li> inutile de retourner la carte bleue, une carte ayant un chiffre pair ou impair sur une face peut être bleue sur l'autre face;
+<li> il faut retourner la carte verte : si le chiffre inscrit sur l'autre face était pair, la règle serait fausse.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2395"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2395"),	max:5, rating:1.4406779661017, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2395,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Autour de l'implication <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2395.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2395,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2395','imageenonce2395');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2395"></a><div class=inner id="innerenonce2395">Trouver des propositions $P$ et $Q$ telles que 
+<ol class="enumeratechiffre">
+<li> $P\implies Q$ est vrai et $Q\implies P$ est vrai.
+<li> $P\implies Q$ est faux et $Q\implies P$ est vrai.
+<li> $P\implies Q$ est faux et $Q\implies P$ est faux.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2395','imagecorrige2395',2395);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2395"></a><div class=inner id="innercorrige2395" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut prendre pour $P$ la proposition "le triangle $ABC$ est rectangle en $A$" et pour $Q$ la proposition "$BC^2=AB^2+AC^2$".
+<li> On peut prendre pour $P$ la proposition $"ABCD$ est un rectangle" et pour $Q$ la proposition "$ABCD$ est un carré".
+<li> On peut prendre pour $P$ la proposition "$ABCD$ est un rectangle" et pour $Q$ la proposition "$ABCD$ est un losange".
+</ol></div></div></div>       
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2397"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2397"),	max:5, rating:1.6782608695652, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2397,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distributivité <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2397.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2397,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2397','imageenonce2397');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2397"></a><div class=inner id="innerenonce2397">Soit $A$, $B$ et $C$ trois propositions. Démontrer que les propositions $A\textrm{ ET }(B\textrm{ OU }C)$ et $(A\textrm{ ET }B)\textrm{ OU }(A\textrm{ ET }C)$ sont équivalentes.</div></div><div class=indication><a href="javascript:showAll('innerindication2397','imageindication2397');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2397"></a><div class=inner id="innerindication2397" style="display:none;">Dresser leurs tables de vérité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2397','imagecorrige2397',2397);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2397"></a><div class=inner id="innercorrige2397" style="display:none;">On va dresser les tables de vérité de ces deux propositions et démontrer que leurs résultats sont identiques.
+$$
+\begin{array}{c|c|c|c|c}
+A&B&C&B\textrm{ OU }C&A\textrm{ ET }(B\textrm{ OU }C)\\
+0&0&0&0&0\\
+0&0&1&1&0\\
+0&1&0&1&0\\
+0&1&1&1&0\\
+1&0&0&0&0\\
+1&0&1&1&1\\
+1&1&0&1&1\\
+1&1&1&1&1\\
+\end{array}
+$$
+$$\begin{array}{c|c|c|c|c}
+A&B&C&A\textrm{ ET }B&A\textrm{ ET }C&(A\textrm{ ET }B)\textrm{ OU }(A\textrm{ ET }C)\\
+0&0&0&0&0&0\\
+0&0&1&0&0&0\\
+0&1&0&0&0&0\\
+0&1&1&0&0&0\\
+1&0&0&0&0&0\\
+1&0&1&0&1&1\\
+1&1&0&1&0&1\\
+1&1&1&1&1&1\\
+\end{array}
+$$
+La lecture de ces deux tables de vérité nous dit bien que les deux propositions sont équivalentes.</div></div></div> 
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2396"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2396"),	max:5, rating:2.3802816901408, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2396,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateur logique universel <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2396.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2396,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2396','imageenonce2396');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2396"></a><div class=inner id="innerenonce2396">On dit d'un opérateur logique qu'il est universel s'il permet de reconstituer tous les autres opérateurs logiques. En pratique, il suffit de vérifier que l'on peut reconstituer les trois opérateurs logiques $\textrm{NON}$, $\textrm{OU}$ et $\textrm{ET}$ pour montrer qu'un opérateur est universel.
+Démontrer que les deux opérateurs suivants sont universels :
+<ol class="enumeratechiffre">
+<li> l'opérateur $\textrm{NAND}$, défini par $A\textrm{ NAND }B=\textrm{NON}(A\textrm{ ET }B)$;
+<li> l'opérateur $\textrm{NOR}$, défini par $A\textrm{ NOR }B=\textrm{NON}(A\textrm{ OU }B)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2396','imageindication2396');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2396"></a><div class=inner id="innerindication2396" style="display:none;">Faire la table de vérité de chaque opérateur, puis commencer par prouver que l'opérateur NON peut être défini à l'aide de NAND (ou de NOR).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2396','imagecorrige2396',2396);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2396"></a><div class=inner id="innercorrige2396" style="display:none;"><ol class="enumeratechiffre">
+<li> On va commencer par réaliser la table de vérité de l'opérateur NAND :
+$$\begin{array}{c|c|c|c}
+A&B&A\textrm{ ET }B&A\textrm{ NAND }B\\
+0&0&0&1\\
+0&1&0&1\\
+1&0&0&1\\
+1&1&1&0
+\end{array}$$
+On prouve ensuite que l'opérateur NON peut être défini à l'aide de NAND. Pour cela, on remarque que $A\textrm{ NAND }A=\textrm{NON }A$ à l'aide de la table de vérité ci-dessus. On en déduit alors que l'opérateur ET peut s'exprimer à l'aide de NAND. En effet, 
+\begin{eqnarray*}
+A\textrm{ ET }B&=&\textrm{NON}(A\textrm{ NAND }B)\\
+&=&(A\textrm{ NAND }B)\textrm{ NAND }(A\textrm{ NAND }B).
+\end{eqnarray*}
+Puisqu'on peut exprimer l'opérateur OU à l'aide des opérateurs ET et NON, on peut retrouver aussi l'opérateur OU uniquement à l'aide de NAND. En effet, on a
+$$A\textrm{ OU }B=\textrm{NON}(\textrm{NON }A\textrm{ ET NON }B).$$
+Remplaçant les NON et le ET par leur formule à l'aide de NAND, on exprimera OU à l'aide de NAND uniquement. On peut aussi remarquer, à l'aide d'une table de vérité, que 
+$$A\textrm{ OU }B=(A\textrm{ NAND }A)\textrm{ NAND }(B\textrm{ NAND }B).$$
+<li> La méthode est similaire. La table de vérité est cette fois
+$$\begin{array}{c|c|c|c}
+A&B&A\textrm{ OU }B&A\textrm{ NOR }B\\
+0&0&0&1\\
+0&1&1&0\\
+1&0&1&0\\
+1&1&1&0
+\end{array}$$
+On remarque ensuite que $A\textrm{ NOR }A=\textrm{NON }A$ à l'aide de la table de vérité ci-dessus. On en déduit alors que l'opérateur OU peut s'exprimer à l'aide de NOR. En effet, 
+\begin{eqnarray*}
+A\textrm{ OU }B&=&\textrm{NON}(A\textrm{ NOR }B)\\
+&=&(A\textrm{ NOR }B)\textrm{ NOR }(A\textrm{ NOR }B).
+\end{eqnarray*}
+Finalement, on a aussi
+$$A\textrm{ ET }B=(A\textrm{ NOR }A)\textrm{ NOR }(B\textrm{ NOR }B).$$
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2406"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2406"),	max:5, rating:1.6271186440678, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2406,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Négation de l'implication <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2406.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2406,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2406','imageenonce2406');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2406"></a><div class=inner id="innerenonce2406">Soit $P$ et $Q$ deux propositions. Montrer que les propositions $\textrm{NON}(P\implies Q)$ et $P\textrm{ ET NON }Q$ sont équivalentes.</div></div><div class=indication><a href="javascript:showAll('innerindication2406','imageindication2406');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2406"></a><div class=inner id="innerindication2406" style="display:none;">&Eacute;tablir leurs tables de vérité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2406','imagecorrige2406',2406);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2406"></a><div class=inner id="innercorrige2406" style="display:none;">Il suffit d'établir les tables de vérité de ces deux propositions et de vérifier qu'elles sont identiques. On a d'une part 
+$$
+\begin{array}{c|c|c|c}
+P&Q&P\implies Q&\textrm{NON }P\implies Q\\
+0&0&1&0\\
+0&1&1&0\\
+1&0&0&1\\
+1&1&1&0\\
+\end{array}
+$$
+et d'autre part
+$$
+\begin{array}{c|c|c|c}
+P&Q&\textrm{ NON Q}&P\textrm{ ET NON } Q\\
+0&0&1&0\\
+0&1&0&0\\
+1&0&1&1\\
+1&1&0&0\\
+\end{array}
+$$
+Les deux propositions sont bien équivalentes!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2161"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2161"),	max:5, rating:1.9152542372881, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2161,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Forme normale conjonctive et disjonctive <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2161.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2161,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2161','imageenonce2161');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2161"></a><div class=inner id="innerenonce2161">&Eacute;crire sous forme normale conjonctive et sous forme normale disjonctive les propositions ci-dessous :
+<ol class="enumeratechiffre">
+<li> $(\lnot p \wedge q) \implies r$;
+<li> $\lnot(p \vee \lnot q) \wedge (s \implies t)$;
+<li> $\lnot(p \wedge q) \wedge (p \vee q)$; 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2161','imageindication2161');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2161"></a><div class=inner id="innerindication2161" style="display:none;">La méthode est de remplacer les symboles $\implies$ and $\iff$ par leur équivalent avec les symboles $\vee,\wedge,\lnot$, d'utiliser les lois de Morgan $\lnot (A \vee B)=\lnot A\wedge \lnot B$ et $\lnot (A \wedge B)=\lnot A\vee \lnot B$, et d'utiliser la distributivité de $\wedge$ par rapport à $\vee$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2161','imagecorrige2161',2161);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2161"></a><div class=inner id="innercorrige2161" style="display:none;">La méthode est de remplacer les symboles $\implies$ and $\iff$ par leur équivalent avec les symboles $\vee,\wedge,\lnot$, d'utiliser les lois de Morgan $\lnot (A \vee B)=\lnot A\wedge \lnot B$ et $\lnot (A \wedge B)=\lnot A\vee \lnot B$, et d'utiliser la distributivité de $\wedge$ par rapport à $\vee$.
+<ol class="enumeratechiffre">
+<li> $(\lnot p \wedge q) \implies r$ est la même chose que $\lnot( \lnot p \wedge q) \vee r$.
+On enlève le non externe, et on trouve $(p \vee \lnot q) \vee r$ soit  $p \vee \lnot q \vee r$. C'est une forme normale à la fois disjonctive et conjonctive.
+<li> On enlève le $\implies$ et on trouve donc $\lnot(p \vee \lnot q) \wedge (\lnot s \vee t)$.
+On enlève ensuite le non et on trouve $\lnot p \wedge q \wedge (\lnot s \vee t)$. Cette formule est déjà sous forme conjonctive. Pour la mettre sous forme disjonctive, il faut utiliser la distributivité, et on trouve :
+$$(\lnot p \wedge q \wedge \lnot s) \vee (\lnot p \wedge q \wedge t).$$
+<li> On enlève le non externe et on trouve $(\lnot p \vee \lnot q) \wedge (p \vee q)$.
+C'est une forme normale conjonctive. Pour obtenir une forme normale disjonctive, il faut encore développer par distributivité du et par rapport au ou. On trouve
+$$(\lnot p \wedge p) \vee (\lnot p \wedge q) \vee (\lnot q \wedge p) \vee (\lnot q \wedge q).$$
+On peut encore simplifier, car $(\lnot p \wedge p)$ est toujours faux et n'intervient pas dans la disjonction. Finalement, on trouve
+$(\lnot p \wedge q) \vee (\lnot q \wedge p)$.
+</ol> </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2586"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2586"),	max:5, rating:1.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2586,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La pluie et le parapluie <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2586.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2586,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2586','imageenonce2586');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2586"></a><div class=inner id="innerenonce2586">"S'il pleut, Abel prend un parapluie. Béatrice ne prend jamais de parapluie s'il ne pleut pas et en prend toujours un quand il pleut". Que peut-on déduire de ces affirmations
+dans les différentes situations ci-dessous? Justifier soigneusement vos réponses en introduisant 3 propositions logiques $p$, $q$ et $r$.
+<ol class="enumeratechiffre">
+ <li> Abel se promène avec un parapluie.
+ <li> Abel se promène sans parapluie.
+ <li> Béatrice se promène avec un parapluie.
+ <li> Béatrice se promène sans parapluie.
+ <li> Il ne pleut pas.
+ <li> Il pleut.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2586','imageindication2586');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2586"></a><div class=inner id="innerindication2586" style="display:none;">Notez $p=$"il pleut", $q=$"Abel a un parapluie" et $r=$"Béatrice a un parapluie". Que signifie l'énoncé sur $p,q,r$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2586','imagecorrige2586',2586);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2586"></a><div class=inner id="innercorrige2586" style="display:none;">Notons $p=$"il pleut", $q=$"Abel a un parapluie" et $r=$"Béatrice a un parapluie". L'énoncé nous dit que $p\implies q$ et que $p\iff r$.
+<ol class="enumeratechiffre">
+ <li> Dans cette situation, on nous dit que $q$ est vraie. On ne peut rien conclure.
+ <li> non $q$ est vraie. Or, on sait (contraposée de $p\implies q$) que (non $q\implies$ non $p$). Donc il ne pleut pas.
+ <li> $r$ est vraie, et $r$ équivaut à $p$. Donc il pleut et Abel a son parapluie.
+ <li> non $r$ est vraie et non $r$ équivaut à non $p$ donc il ne pleut pas.
+ <li> non $p$ est vraie et non $p$ équivaut à non $r$ donc Béatrice se promène sans parapluie.
+ <li> $p$ est vraie or $p\implies q$ et $p\iff r$ donc Abel et Béatrice ont tous deux leur parapluie.
+</ol></div></div></div>
+
+<div class=titrepartie>Conditions nécessaires, conditions suffisantes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2390"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2390"),	max:5, rating:1.4390243902439, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2390,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nécessaire ou suffisante? <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2390.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2390,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2390','imageenonce2390');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2390"></a><div class=inner id="innerenonce2390">On rappelle qu'un entier $p$ divise $n$, et on note $p|n$, s'il existe un entier relatif $k$ tel que $n=k\times p$.
+<ol class="enumeratechiffre">
+<li> Est-ce que $6|n$ est une condition nécessaire à ce que $n$ soit pair?
+<li> Est-ce que $6|n$ est une condition suffisante à ce que $n$ soit pair?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2390','imageindication2390');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2390"></a><div class=inner id="innerindication2390" style="display:none;"><ol class="enumeratechiffre">
+<li> Trouver un contre-exemple.
+<li> Prouver le.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2390','imagecorrige2390',2390);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2390"></a><div class=inner id="innercorrige2390" style="display:none;">Notons $A$ la proposition "$6|n$" et $B$ la proposition "$n$ est pair". Alors $A\implies B$. En effet, si $6|n$, alors il existe un entier $k$ tels que $n=6\times k$ et donc $n=2\times (3k)$ est pair. En revanche, la réciproque est fausse. En effet, $4$ est pair mais $6$ ne divise pas 4. On en déduit que 
+<ol class="enumeratechiffre">
+<li> $6|n$ n'est pas une condition nécessaire à ce que $n$ soit pair ($4$ est un contre-exemple).
+<li> $6|n$ est une condition suffisante à ce que $n$ soit pair.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2391"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2391"),	max:5, rating:1.4642857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2391,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver des conditions nécessaires <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2391.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2391,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2391','imageenonce2391');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2391"></a><div class=inner id="innerenonce2391">Trouver des conditions nécessaires (pas forcément suffisantes) à chacune des propositions suivantes :
+<ol class="enumeratechiffre">
+<li> Avoir son bac.
+<li> Le point $A$ appartient au segment $[BC]$.
+<li> Le quadrilatère $ABCD$ est un rectangle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2391','imagecorrige2391',2391);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2391"></a><div class=inner id="innercorrige2391" style="display:none;"><ol class="enumeratechiffre">
+<li> Avoir passé l'examen.
+<li> Les points $A,B$ et $C$ sont alignés.
+<li> $ABCD$ est un parallélogramme.
+</ol>
+Les trois conditions précédentes sont des conditions nécessaires mais non suffisantes (pourquoi?). On peut en imaginer bien d'autres...</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2392"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2392"),	max:5, rating:1.6315789473684, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2392,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver des conditions suffisantes <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2392.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2392,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2392','imageenonce2392');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2392"></a><div class=inner id="innerenonce2392">Trouver des conditions suffisantes (pas forcément nécessaires) à chacune des propositions suivantes :
+<ol class="enumeratechiffre">
+<li> Avoir son bac.
+<li> Le point $A$ appartient au segment $[BC]$.
+<li> Le quadrilatère $ABCD$ est un rectangle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2392','imagecorrige2392',2392);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2392"></a><div class=inner id="innercorrige2392" style="display:none;"><ol class="enumeratechiffre">
+<li> Avoir plus que $12$ en moyenne.
+<li> $A$ est le milieu de $[BC]$.
+<li> Les diagonales de $ABCD$ ont même longueur et se coupent en leur milieu.
+</ol>
+Les deux premières conditions sont des conditions suffisantes, mais non nécessaires (pourquoi?). En revanche, la troisième condition est une condition nécessaire et suffisante. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2394"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2394"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2394,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Condition nécessaire, suffisante, pour avoir un rectangle <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2394.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2394,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2394','imageenonce2394');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2394"></a><div class=inner id="innerenonce2394">Soit la proposition $P$ : "Le quadrilatère $ABCD$ est un rectangle" et les propositions
+<ol class="enumeratechiffre">
+<li> $Q1$ : "Les diagonales de $ABCD$ ont même longueur"
+<li> $Q2$ : "$ABCD$ est un carré"
+<li> $Q3$ : "$ABCD$ est un parallélogramme ayant un angle droit"
+<li> $Q4$ : "Les diagonales de $ABCD$ sont médiatrices l'une de l'autre"
+<li> $Q5$ : "Les diagonales de $ABCD$ ont même milieu".
+</ol>
+Dire si chacune des propositions $Q_1$, $Q_2$, $Q_3$, $Q_4$, $Q_5$ est pour $P$ une condition nécessaire non suffisante, une condition suffisante non nécessaire, une condition nécessaire et suffisante, ou ni l'un ni l'autre.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2394','imagecorrige2394',2394);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2394"></a><div class=inner id="innercorrige2394" style="display:none;"><ol class="enumeratechiffre">
+<li> $Q_1$ est une condition nécessaire non suffisante (elle le serait si on ajoutait que les diagonales ont même milieu).
+<li> $Q_2$ est une condition suffisante non nécessaire (tous les rectangles ne sont pas des carrés!).
+<li> $Q_3$ est une condition nécessaire et suffisante.
+<li> $Q_4$ n'est ni une condition nécessaire, ni une condition suffisante ($Q_4$ caractérise les losanges).
+<li> $Q_5$ est une condition nécessaire non suffisante (elle le serait si on ajoutait que les diagonales ont même longueur).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2519"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2519"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2519,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Beaucoup de bruit pour rien... <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2519.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2519,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2519','imageenonce2519');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2519"></a><div class=inner id="innerenonce2519">Parmi toutes les propositions suivantes, regrouper par paquets celles qui sont équivalentes : 
+<ol class="enumeratechiffre">
+ <li> Tu auras ton examen si tu travailles régulièrement.
+ <li> Pour avoir son examen, il faut travailler régulièrement.
+ <li> Si tu ne travailles pas régulièrement, tu n'auras pas ton examen.
+ <li> Il est nécessaire de travailler régulièrement pour avoir son examen.
+ <li> Pour avoir son examen, il suffit de travailler régulièrement.
+ <li> Ne pas travailler régulièrement entraîne un échec à l'examen.
+ <li> Si tu n'as pas ton examen, c'est que tu n'as pas travaillé régulièrement.
+ <li> Travail régulier implique réussite à l'examen.
+ <li> On ne peut avoir son examen qu'en travaillant régulièrement
+ </ol></div></div><div class=indication><a href="javascript:showAll('innerindication2519','imageindication2519');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2519"></a><div class=inner id="innerindication2519" style="display:none;">Noter $P$ la proposition "Avoir son examen" et $Q$ la proposition "Travailler régulièrement". &Eacute;crire les propositions sous la forme $P\implies Q$ ou $Q\implies P$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2519','imagecorrige2519',2519);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2519"></a><div class=inner id="innercorrige2519" style="display:none;">Notons $P$ la proposition "Avoir son examen" et $Q$ la proposition "Travailler régulièrement". Nous allons écrire les propositions sous la forme $P\implies Q$ ou $Q\implies P$.
+<ol class="enumeratechiffre">
+<li> La proposition est clairement $Q\implies P$.
+<li> La proposition est $P\implies Q$.
+<li> La proposition est $\bar Q\implies \bar P$. C'est une proposition équivalente à sa contraposée, $P\implies Q$.
+<li> Même signification que 2., $P\implies Q$.
+<li> Cette fois, on a $Q\implies P$.
+<li> La proposition est $\bar Q\implies \bar P$, qui est équivalente à $P\implies Q$.
+<li> Cette fois, on a $\bar P\implies \bar Q$, qui est équivalente à $Q\implies P$.
+<li> Tout simplement, $Q\implies P$.
+<li> C'est la même chose que 2, à savoir $P\implies Q$.
+</ol>
+Les propositions 1, 5, 7 et 8 sont donc équivalentes, et les proposition 2, 3, 4, 6 et 9 le sont également.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater2393"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2393"),	max:5, rating:3.3214285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2393,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Qui est suffisant à qui??? <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2393.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(2393,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2393','imageenonce2393');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2393"></a><div class=inner id="innerenonce2393">Soit $A$, $B$ et $C$ trois propositions. Si on admet que $(A\implies B)\implies C$ est vrai, qui est, avec certitude, nécessaire à qui? Qui est suffisant à qui?</div></div><div class=indication><a href="javascript:showAll('innerindication2393','imageindication2393');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2393"></a><div class=inner id="innerindication2393" style="display:none;">Construire la table de vérité de $(A\implies B)\implies C$. Ne garder que les lignes où cette proposition est vraie. Dans ces lignes, est-ce que, dès que $A$ est vraie, alors $B$ est vraie???</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2393','imagecorrige2393',2393);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2393"></a><div class=inner id="innercorrige2393" style="display:none;">Construisons la table de vérité de $(A\implies B)\implies C$ :
+$$\begin{array}{c|c|c|c|c}
+A&B&A\implies B&C&(A\implies B)\implies C\\
+0&0&1&0&0\\
+0&1&1&0&0\\
+1&0&0&0&1\\
+1&1&1&0&0\\
+0&0&1&1&1\\
+0&1&1&1&1\\
+1&0&0&1&1\\
+1&1&1&1&1\\
+\end{array}$$
+Les valeurs de vérité de $A$, $B$ et $C$ qui sont possibles correspondent aux valeurs des lignes 3,5,6,7,8, celles pour laquelle $(A\implies B)\implies C$ est vrai. On en déduit alors que :
+<ul class="rien">
+<li> On ne peut pas être sûr que $A$ est suffisant à $B$. Par exemple, dans la troisième ligne, $A$ est vrai, $B$ est faux, et pourtant $(A\implies B)\implies C$ est vrai. Symétriquement, on ne peut pas être sûr que $B$ est nécessaire à $A$.
+<li> De même, on ne peut pas être sûr que $A$ est suffisant à $C$ (ligne 3), que $B$ est suffisant à $A$ (ligne 6), que $C$ est suffisant à $A$ (ligne 5), que $C$ est suffisant à $B$ (ligne 5).
+<li> En revanche si $B$ est vrai, et puisque $(A\implies B)\implies C$ est vrai , on ne peut être que dans les lignes 6 ou 8 de la table de vérité, pour lesquelles $C$ est automatiquement vrai. Dès que $B$ est vrai, alors $C$ est vrai. Autrement dit, $B$ est une condition suffisante pour que $C$ soit vrai. Symétriquement, $C$ est une condition nécessaire pour que $B$ soit vrai.</div></div></div>
+
+<div class=titrepartie>Quantificateurs</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater469"></span><script>var myRating = raterJs( { element:document.querySelector("#rater469"),	max:5, rating:1.9694323144105, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(469,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vraies ou fausses <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=469.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(469,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce469','imageenonce469');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce469"></a><div class=inner id="innerenonce469">Déterminer parmi les propositions suivantes lesquelles sont vraies :
+<ol class="enumeratechiffre">
+<li> 136 est un multiple de 17 et 2 divise 167.
+<li> 136 est un multiple de 17 ou 2 divise 167.
+<li> $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+<li> $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+<li> $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+<li> $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+<li> $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+<li> $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+<li> $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+<li> $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige469','imagecorrige469',469);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige469"></a><div class=inner id="innercorrige469" style="display:none;"><ol class="enumeratechiffre">
+<li> Cette propositions est fausse, car 2 ne divise pas 167.
+<li> Cette proposition est vraie, car 136 est un multiple de 17.
+<li> Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+<li> Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+<li> Cette proposition est vraie, par exemple car il s'agit de la négation de la proposition 3, qui est fausse.
+<li> Cette assertion est fausse. Si on considère $x$ n'importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+<li> Cette assertion est fausse. Prenons n'importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n'est pas possible, car le $x$ que l'on choisit devrait convenir à toute valeur de $z$,
+ce qui n'est pas possible car il suffit de considérer un $z$ différent de $xy$.
+<li> Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+<li> L'assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+<li> Cette assertion est "évidemment" vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater3511"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3511"),	max:5, rating:2.1090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3511,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Négation et valeur de vérité <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3511.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(3511,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3511','imageenonce3511');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3511"></a><div class=inner id="innerenonce3511">Pour les 4 propositions suivantes, écrire leur négation, et déterminer si elles sont vraies ou fausses.
+<ol class="enumeratechiffre">
+<li> $\exists x\in \mathbb R,\ \forall y\in\mathbb R,\ x+y\geq 0$ ;
+<li> $\forall x\in \mathbb R,\ \forall y\in\mathbb R,\ x+y\geq 0$ ;
+<li> $\exists x\in \mathbb R,\ \exists y\in\mathbb R,\ x+y\geq 0$ ;
+<li> $\forall x\in \mathbb R,\ \exists y\in\mathbb R,\ x+y\geq 0$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3511','imagecorrige3511',3511);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3511"></a><div class=inner id="innercorrige3511" style="display:none;">En appliquant les règles usuelles, les négations sont respectivement :
+<ol class="enumeratechiffre">
+<li> $\forall x\in \mathbb R,\ \exists y\in\mathbb R,\ x+y&lt; 0$ ;
+<li> $\exists x\in \mathbb R,\ \exists y\in\mathbb R,\ x+y&lt;0$ ;
+<li> $\forall x\in \mathbb R,\ \forall y\in\mathbb R,\ x+y&lt;0$ ;
+<li> $\exists x\in\mathbb R,\ \forall y\in\mathbb R,\ x+y&lt;0$.
+</ol>
+On remarque ensuite que 
+<ol class="enumeratechiffre">
+<li> La proposition 1 est fausse. En effet, quelque soit le $x$ choisi, je peux trouver $y$, par exemple $y=-x-1,$ tel que $x+y&lt;0$ (on vient donc de prouver que la négation de 1 est vraie).
+<li> La proposition 2 est fausse. On peut prendre le contre-exemple $x=y=-1$.
+<li> La proposition 3 est vraie. On peut choisir $x=y=1$.
+<li> La proposition 4 est vraie. Si je considère n'importe quel $x\in\mathbb R,$ il suffit de prendre $y=-x+1$ pour que $x+y=1\geq 0.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3512"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3512"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3512,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vrai ou faux - et négation <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3512.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3512,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3512','imageenonce3512');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3512"></a><div class=inner id="innerenonce3512">On considère la proposition $P$ suivante : 
+$$"\forall n\in\mathbb N,\ \exists k\in\mathbb N,\ n=k^2+1".$$
+<ol class="enumeratechiffre">
+<li> &Eacute;crire la négation de $P$.
+<li> $P$ est-elle vraie ou fausse ?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3512','imagecorrige3512',3512);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3512"></a><div class=inner id="innercorrige3512" style="display:none;"><ol class="enumeratechiffre">
+<li> En suivant les règles usuelles, la négation de P est la proposition :
+$$"\exists n\in\mathbb N\ \forall k\in\mathbb N,\ n\neq k^2+1".$$
+<li> La propriété $P$ est fausse. En effet, si je choisis $n=3,$ alors pour tout $k\in\mathbb N,$ $3\neq k^2+1$. C'est clairement vrai si $k=0$ ou $k=1,$ et si $k\geq 2,$ alors $k^2+1\geq 5.$ Ainsi, la négation de $P$ est vraie, donc $P$ est fausse.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater470"></span><script>var myRating = raterJs( { element:document.querySelector("#rater470"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(470,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nier des assertions avec quantificateurs <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=470.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(470,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce470','imageenonce470');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce470"></a><div class=inner id="innerenonce470">Soit $f:\mathbb R\to\mathbb R$ une fonction. Nier les assertions suivantes :
+<ol class="enumeratechiffre">
+<li> $\forall x\in \mathbb R,\ f(x)\neq 0$.
+<li> $\forall M&gt;0,\ \exists A&gt;0,\ \forall x\geq A,\ f(x)&gt;M$.
+<li> $\forall x\in \mathbb R,\ (f(x)&gt;0\implies x\leq 0)$.
+<li> $\forall \veps&gt;0,\ \exists \eta&gt;0, \forall (x,y)\in I^2,\ \big(|x-y|\leq \eta\implies |f(x)-f(y)|\leq\veps\big).$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige470','imagecorrige470',470);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige470"></a><div class=inner id="innercorrige470" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Correction vidéo de l'exercice</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ONTiHXFmsM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> $\exists x\in\mathbb R,\ f(x)=0$.
+<li>  $\exists M&gt;0,\ \forall A&gt;0,\ \exists x\geq A,\ f(x)\leq M$.
+<li> $\exists x\in\mathbb R,\ f(x)&gt;0\textrm{ et }x&gt;0$.
+<li> $\exists \veps&gt;0,\ \forall \eta&gt;0,\ \exists (x,y)\in I^2, |x-y|\leq \eta\textrm{ et } |f(x)-f(y)|&gt;\veps$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater471"></span><script>var myRating = raterJs( { element:document.querySelector("#rater471"),	max:5, rating:2.030303030303, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(471,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vraies ou fausses <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=471.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(471,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce471','imageenonce471');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce471"></a><div class=inner id="innerenonce471">Soit $n$ un entier naturel non nul. On note $C_n$ la courbe d'équation $y=(1+x)^n$ et $D_n$ la droite d'équation $y=1+nx$.
+<ol class="enumeratechiffre">
+<li> Rappeler l'équation de la tangente à $C_n$ au point $A$ de $C_ n$ d'abscisse 0.
+<li> Tracer (par exemple à l'aide d'un logiciel) $C_n$ et $D_n$ lorsque $n=2,3$.
+<li> En vous aidant du graphique pour obtenir une conjecture, démontrer si les propositions suivantes sont vraies ou fausses.
+<ol class="enumeratechiffre">
+<li> $\forall n\in\mathbb N^*,\ \forall x\in\mathbb R,\ (1+x)^n\geq 1+nx$;
+<li> $\forall n\in\mathbb N^*,\ \forall x\in\mathbb R_+,\ (1+x)^n \geq 1+nx$;
+<li> $\exists n\in\mathbb N^*,\ \forall x\in\mathbb R,\ (1+x)^n =1+nx$;
+<li> $\forall n\in\mathbb N^*,\ \exists x\in\mathbb R,\ (1+x)^n=1+nx$;
+<li> $\exists n\in\mathbb N^*,\ \forall x\in\mathbb R^*,\ (1+x)^n&gt;1+nx$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication471','imageindication471');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication471"></a><div class=inner id="innerindication471" style="display:none;"><ol class="enumeratechiffre">
+<li> Reprenez votre cours de lycée!
+<li> 
+<li> En vous aidant du graphique pour obtenir une conjecture, démontrer si les propositions suivantes sont vraies ou fausses.
+<ol class="enumeratechiffre">
+<li> Faux.
+<li> Vrai.
+<li> Vrai.
+<li> Vrai.
+<li> Vrai.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige471','imagecorrige471',471);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige471"></a><div class=inner id="innercorrige471" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après le cours de lycée, l'équation de la tangente au point $A$ de coordonnée $(0,1)$ est $y=1+nx$.
+<li> 
+<li> 
+<ol class="enumeratechiffre">
+<li> C'est faux, par exemple si $n=3$ et $x=-4$.
+<li> C'est vrai. Il y a plusieurs façons de démontrer cela. La plus facile est d'étudier la fonction 
+$f(x)=(1+x)^n-(1+nx)$ sur $[0,+\infty[$. On peut aussi utiliser la formule du binôme de Newton.
+<li> C'est vrai : $n=1$ convient.
+<li> C'est vrai : prendre $x=0$.
+<li> C'est vrai : prendre $n=2$, car $(1+x)^2=1+2x+x^2&gt;1+2x$ si $x\neq 0$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater467"></span><script>var myRating = raterJs( { element:document.querySelector("#rater467"),	max:5, rating:2.093023255814, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(467,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du texte aux quantificateurs <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=467.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(467,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce467','imageenonce467');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce467"></a><div class=inner id="innerenonce467">Soit  $f:\mathbb R\to\mathbb R$ une fonction. 
+Exprimer à l'aide de quantificateurs les assertions suivantes :
+<ol class="enumeratechiffre">
+<li> $f$ est constante;
+<li> $f$ n'est pas constante;
+<li> $f$ s'annule;
+<li> $f$ est périodique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige467','imagecorrige467',467);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige467"></a><div class=inner id="innercorrige467" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut l'écrire sous la forme : 
+$\exists C\in\mathbb R$, $\forall x\in\mathbb R$, $f(x)=C$; une autre écriture possible est $\forall x,y\in\mathbb R,\ f(x)=f(y)$.
+<li> Si on nie l'assertion précédente, on trouve $\forall C\in\mathbb R,$ $ \exists x\in\mathbb R$, $f(x)\neq C$. Si on nie la seconde, on trouve $\exists x,y\in\mathbb R,\ f(x)\neq f(y)$.
+<li> $\exists x\in\mathbb R,\ f(x)=0$;
+<li> $\exists T\in\mathbb R^*$, $\forall x\in\mathbb R$, $f(x+T)=f(x)$.
+</ol></div></div></div>      
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater468"></span><script>var myRating = raterJs( { element:document.querySelector("#rater468"),	max:5, rating:2.2068965517241, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(468,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du quantificateur au texte <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=468.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(468,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce468','imageenonce468');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce468"></a><div class=inner id="innerenonce468">Soit $f:\mathbb R\to\mathbb R$ une fonction. &Eacute;noncer en langage courant les assertions suivantes écrites à l'aide de quantificateurs. Peut-on trouver
+une fonction qui satisfait cette assertion? Qui ne la satisfait pas?
+<ol class="enumeratechiffre">
+<li> $\forall x\in \mathbb R,\ \exists y\in \mathbb R,\ f(x)&lt; f(y);$
+<li> $\forall x\in\mathbb R,\ \exists T\in\mathbb R,\ f(x)=f(x+T);$
+<li> $\forall x\in\mathbb R,\ \exists T\in\mathbb R^*,\ f(x)=f(x+T);$
+<li> $\exists x\in\mathbb R,\ \forall y\in\mathbb R,\ y=f(x).$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige468','imagecorrige468',468);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige468"></a><div class=inner id="innercorrige468" style="display:none;"><ol class="enumeratechiffre">
+<li> $f$ n'admet pas de maximum. Par exemple, $f(x)=x$ satisfait cette assertion.
+$f(x)=\sin x$ ne satisfait pas cette assertion.
+<li> Toute fonction vérifie cette assertion, il suffit de prendre $T=0$.
+<li> Toutes les valeurs de $f$ sont prises au moins deux fois. $f(x)=\sin x$ est un exemple de fonctions vérifiant
+cette assertion, $f(x)=x$ un contre-exemple.
+<li> Cette assertion est absurde, car elle signifierait qu'il existe un réel $x$ tel que $f(x)$ prenne toutes les valeurs réelles possibles.
+Aucune fonction ne satisfait cette assertion.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater472"></span><script>var myRating = raterJs( { element:document.querySelector("#rater472"),	max:5, rating:2.1642857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(472,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limites de validité d'une proposition <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=472.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(472,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce472','imageenonce472');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce472"></a><div class=inner id="innerenonce472">Déterminer les réels $x$ pour lesquels l'assertion suivante est vraie :
+$$\forall y\in[0,1],\ x\geq y\implies x\geq 2y.$$</div></div><div class=indication><a href="javascript:showAll('innerindication472','imageindication472');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication472"></a><div class=inner id="innerindication472" style="display:none;">Séparer en 4cas : $x\geq 2$, $x\in]0,2[$ et $x= 0$ et $x&lt;0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige472','imagecorrige472',472);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige472"></a><div class=inner id="innercorrige472" style="display:none;">On sépare en 4 cas :
+<ol class="enumeratechiffre">
+<li> $x\geq 2$. Alors, pour tout $y\in[0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont vraies.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+<li> $x&lt;0$. Alors, pour tout $y\in [0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont fausses.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+<li> $x\in]0,2[$. On peut alors trouver un réel $y\in[0,1]$ tel que $2y&gt;x$ et $x\geq y$. En effet,
+$x/2\in ]0,1[$ et il suffit de choisir $x/2&lt;y&lt;\min(1,x)$. Dans ce cas, $x\geq y$ est vraie et $x\geq 2y$ est fausse.
+L'assertion est fausse.
+<li> Si $x=0$, alors les assertions $x\geq y$ et $x\geq 2y$ sont ou bien simultanément fausses
+(lorsque $y\in]0,1]$), ou bien simultanément vraies. L'assertion est donc vraie.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2588"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2588"),	max:5, rating:1.9466666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2588,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une proposition sur les fonctions <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2588.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2588,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2588','imageenonce2588');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2588"></a><div class=inner id="innerenonce2588">Soit $f:\mathbb R\to\mathbb R$ une fonction. On considère la proposition $p$ suivante :
+$$p=(\exists t\in\mathbb R,\ \forall x\in\mathbb R,\ f(x)&lt;t).$$
+<ol class="enumeratechiffre">
+ <li> &Eacute;crire la négation de $p$.
+ <li> Donner un exemple de fonction $f$ qui vérifie $p$; un exemple qui ne vérifie pas $p$.
+ <li> Parmi les propositions ci-dessous, déterminer celles qui sont équivalentes à $p$, celles qui sont toujours vraies, celles qui sont toujours fausses, et celles pour lesquelles on ne peut rien dire.
+ <ol class="enumeratechiffre">
+ <li> $p_1=(\exists x\in\mathbb R,\ \forall t\in\mathbb R,\ f(t)&lt;x);$
+ <li> $p_2=(\exists t\in\mathbb R,\ \forall x\in\mathbb R,\ f(t)&lt;x);$
+ <li> $p_3=(\forall t\in\mathbb R,\ \exists x\in\mathbb R,\ f(x)&lt;t);$
+ <li> $p_4=(\forall t\in\mathbb R,\ \exists x\in\mathbb R,\ f(t)&lt;x).$
+ </ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2588','imagecorrige2588',2588);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2588"></a><div class=inner id="innercorrige2588" style="display:none;"><ol class="enumeratechiffre">
+ <li> On a 
+ $$\textrm{non }p=(\forall t\in\mathbb R,\ \exists x\in\mathbb R,\ f(x)\geq t).$$
+ <li> La proposition $p$ signifie que la fonction $f$ est majorée. Elle est vérifiée par exemple si $f(x)=\sin(x)$. Il suffit de choisir $t=2$. Elle n'est pas vérifiée par la fonction $f(x)=x$.
+Sinon, il existerait $t\in\mathbb R$ tel que, pour tout $x\in\mathbb R$, $x&lt;t$. Cela ne fonctionne pas avec $x=t+1$.
+<li> 
+<ol class="enumeratechiffre">
+<li> $p_1$ est équivalente à $p$ : en effet, les variables $x$ et $t$ sont muettes, on peut les échanger!
+<li> $p_2$ est toujours fausse : pour n'importe quel $t\in\mathbb R$, si on choisit $x=f(t)-1$, on n'a pas $f(t)&lt;x$.
+<li> $p_3$ n'est ni toujours vraie, ni toujours fausse. Elle est vraie pour $f(x)=x$ : pour tout $t\in\mathbb R$, si on choisit $x=t-1$, on a bien $f(x)&lt;t$. 
+Elle est fausse pour $f(x)=x^2$ : si on choisit $t=-1$, il est impossible de trouver $x\in\mathbb R$ avec $x^2&lt; -1$. De plus, $p_3$ n'est pas équivalente à $p$ car la fonction $f(x)=x$ vérifie $p_3$ mais pas $p$.
+<li> $p_4$ est toujours vraie : pour n'importe quel $t\in\mathbb R$, si je choisis $x=f(t)+1$, j'ai bien $f(t)&lt;x$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater3525"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3525"),	max:5, rating:2.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3525,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Proposition vraie ou fausse ? <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3525.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(3525,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3525','imageenonce3525');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3525"></a><div class=inner id="innerenonce3525">Soit $\mathcal P$ la propriété : 
+$$"\exists a\in ]-\infty,0[,\ \forall x\in [-1,+\infty[,\ x&gt;a\implies \left[\left(x^2&gt;\frac{a^2}4\right)\textrm{ ou }(x\leq 0)\right]".$$
+<ol class="enumeratechiffre">
+<li> &Eacute;crire la négation de $\mathbb P$.
+<li> La proposition $\mathcal P$ est-elle vraie ? Justifier.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3525','imageindication3525');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3525"></a><div class=inner id="innerindication3525" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder mécaniquement.
+<li> Prouver que la négation de $\mathcal P$ est vraie.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3525','imagecorrige3525',3525);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3525"></a><div class=inner id="innercorrige3525" style="display:none;"><ol class="enumeratechiffre">
+<li> En utilisant les règles usuelles, la négation de $\mathcal P$ est :
+$$\forall a\in]-\infty,0[,\ \exists x\in [-1,+\infty[,\ x&gt;a\textrm{ et }
+\left[\left(x^2\leq \frac{a^2}4\right)\textrm{ et }(x&gt;0)\right]$$
+ce qu'on peut simplifier (en enlevant les parenthèses superflues) 
+$$\forall a\in]-\infty,0[,\ \exists x\in [-1,+\infty[,\ x&gt;a\textrm{ et }
+\left(x^2\leq \frac{a^2}4\right)\textrm{ et }(x&gt;0).$$
+<li> On va prouver que la négation de $\mathcal P$ est vraie. Pour cela, on considère $a&lt;0$ et on pose $x=-a/2$. Alors on a bien $x&gt;0$ et a fortiori $x&gt;a$.
+De plus, $\displaystyle x^2=\frac {a^2} 4\leq \frac {a^2} 4.$ Ainsi, la négation de $\mathcal P$ est vraie, et donc $\mathcal P$ est fausse.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

@@ -1,0 +1,546 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Support d'une distribution, opérations</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Support d'une distribution, opérations</h1>
+<div class=titrepartie>Dérivées de distribution</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2455"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2455"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2455,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Premières dérivées <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2455.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2455,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2455','imageenonce2455');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2455"></a><div class=inner id="innerenonce2455"><ol class="enumeratechiffre">
+<li> Soit $T_1$ la distribution associée à la fonction $f(x)=\textrm{signe}(x)$.
+Calculer la dérivée de $T_1$.
+<li> Soit $T_2$ la distribution associée à la fonction $g(x)=|x|$. Calculer la dérivée de $T_2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2455','imageindication2455');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2455"></a><div class=inner id="innerindication2455" style="display:none;">Calculer les dérivées en appliquant la définition. On arrive à une intégrale qu'il sera utile de partager en deux. Pour la deuxième question, faire une intégration par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2455','imagecorrige2455',2455);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2455"></a><div class=inner id="innercorrige2455" style="display:none;"><ol class="enumeratechiffre">
+<li> Prenons $\varphi\in\mathcal D(\mathbb R)$. On a
+$$\langle T_1',\varphi\rangle=-\langle T_1,\varphi'\rangle=\int_{-\infty}^0\varphi'(x)dx-\int_0^{+\infty}\varphi'(x)dx=2\varphi(0).$$
+Ainsi, $T_1'=2\delta_0$.
+<li> Prenons $\varphi\in\mathcal D(\mathbb R)$. On a
+$$\langle T_2',\varphi\rangle=-\langle T_2,\varphi'\rangle=\int_{-\infty}^0x\varphi'(x)dx-\int_0^{+\infty}x\varphi'(x)dx.$$
+On exprime alors chacune de ces intervalles à l'aide d'une intégration par parties. Par exemple, on a
+$$\int_0^{+\infty}x\varphi'(x)dx=\left[x\varphi(x)\right]_0^{+\infty}-\int_0^{+\infty}\varphi(x)dx=-\int_0^{+\infty}\varphi(x)dx.$$
+On a de même
+$$\int_{-\infty}^0x\varphi'(x)dx=-\int_{-\infty}^{0}\varphi(x)dx$$
+soit 
+$$\langle T_2',\varphi\rangle=-\int_{-\infty}^{0}\varphi(x)dx+\int_0^{+\infty}\varphi(x)dx.$$
+Ainsi, $T_2'$ est la distribution associée à la fonction $u=\mathbf 1_{[0,+\infty[}-\mathbf 1_{]-\infty,0]}.$ 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2507"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2507"),	max:5, rating:1.55, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2507,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivée de $\ln|x|$ <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2507.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2507,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2507','imageenonce2507');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2507"></a><div class=inner id="innerenonce2507">Déterminer la dérivée de la distribution associée à $\ln|x|$.</div></div><div class=indication><a href="javascript:showAll('innerindication2507','imageindication2507');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2507"></a><div class=inner id="innerindication2507" style="display:none;">Couper l'integrale en deux, et intégrer par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2507','imagecorrige2507',2507);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2507"></a><div class=inner id="innercorrige2507" style="display:none;">Soit $\varphi\in\mathcal D(\mathbb R)$ et $a&gt;0$ tel que le support de $\varphi$ soit contenu dans $[-a,a]$. Notons $T$ la distribution associée à la fonction $\ln|x|$. Alors 
+\begin{eqnarray*}
+\langle T',\varphi\rangle&=&-\langle T,\varphi'\rangle\\
+&=&-\int_{-a}^a \varphi'(x)\ln |x|dx\\
+&=&-\lim_{\veps\to 0}\left(\int_{-a}^{-\veps}\varphi'(x)\ln(-x)dx+\int_{\veps}^a \varphi'(x)\ln(x)dx\right)\\
+\end{eqnarray*}
+Mais, 
+$$\int_{\veps}^a \varphi'(x)\ln(x)dx=\left[\varphi(x)\ln(x)\right]_{\veps}^a -\int_{\veps}^a \frac{\varphi(x)}{x}dx=-\varphi(\veps)\ln(\veps)-\int_{\veps}^a \frac{\varphi(x)}{x}dx.$$
+et 
+$$\int_{-a}^{-\veps} \varphi'(x)\ln(-x)dx=\left[\varphi(x)\ln(-x)\right]_{-a}^{-\veps} -\int_{-a}^{-\veps} \frac{\varphi(x)}{x}dx=\varphi(-\veps)\ln(\veps)-\int_{-a}^{-\veps} \frac{\varphi(x)}{x}dx.$$
+Maintenant, 
+$$\big(\varphi(-\veps)-\varphi(\veps)\big)\ln(\veps)=\left(\varphi(0)-\veps\varphi'(0)-\varphi(0)-\veps\varphi'(0)+o(\veps)\right)\ln(\veps)=-2\varphi'(0)\veps\ln(\veps)+o\big(\veps\ln(\veps)\big).$$
+Mais comme $\veps\ln(\veps)\to 0$ quand $\veps\to0$, on conclut finalement que 
+$$\langle T',\varphi\rangle=\lim_{\veps\to 0}\left(\int_{-a}^{-\veps} \frac{\varphi(x)}{x}dx+\int_{\veps}^a \frac{\varphi(x)}{x}dx\right)=\langle\textrm{vp}\frac 1x,\varphi\rangle.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2461"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2461"),	max:5, rating:1.45, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2461,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivation et suite de distributions <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2461.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2461,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2461','imageenonce2461');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2461"></a><div class=inner id="innerenonce2461">Montrer que si $(T_n)$ est une suite de distributions qui converge vers $T$, alors $(T_n')$ converge vers $T'$.</div></div><div class=indication><a href="javascript:showAll('innerindication2461','imageindication2461');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2461"></a><div class=inner id="innerindication2461" style="display:none;">Appliquer la définition.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2461','imagecorrige2461',2461);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2461"></a><div class=inner id="innercorrige2461" style="display:none;">Soit $\phi\in\mcd(\mtr)$. On a :
+$$\langle T_n',\phi\rangle=-\langle T_n,\phi'\rangle\to -\langle T,\phi'\rangle=\langle T',\phi\rangle.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2464"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2464"),	max:5, rating:0.88888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2464,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivées de Dirac <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2464.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2464,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2464','imageenonce2464');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2464"></a><div class=inner id="innerenonce2464">Calculer explicitement $\langle x^\alpha \partial^\beta\delta_p,\phi\rangle$ pour tout $\phi\in\mcd(\mtr^n)$,
+où $\alpha$ et $\beta$ sont des entiers et $\delta_p$ 
+est la masse de Dirac au point $p\in\mtr$. Quel est le support de $x^\alpha\partial^\beta\delta_p$?</div></div><div class=indication><a href="javascript:showAll('innerindication2464','imageindication2464');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2464"></a><div class=inner id="innerindication2464" style="display:none;">Appliquer les définitions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2464','imagecorrige2464',2464);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2464"></a><div class=inner id="innercorrige2464" style="display:none;">On a 
+$$\langle x^\alpha\partial^\beta \delta_p,\phi\rangle =\langle \partial^\beta \delta_p,x^\alpha\phi\rangle=(-1)^{\beta}\langle \delta_p,\partial^\beta(x^\alpha\phi)\rangle,$$
+$$\partial^\beta(x^\alpha\phi)=\sum_{k=0}^{\min(\alpha,\beta)}\binom \beta k\alpha\dots(\alpha-k+1)x^{\alpha-k}\partial^{\beta-k}\phi.$$
+Donc,
+$$\langle x^\alpha \partial^\beta\delta_p,\phi\rangle =(-1)^\beta\sum_{k=0}^{\min(\alpha,\beta)}
+\binom\beta k\alpha\dots(\alpha-k+1)p^{\alpha-k}\partial^{\beta-k}\phi(p).$$
+En particulier, le support est $\{p\}$ si $p\neq 0$, il est vide si $p=0$ et $\alpha&gt;\beta$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2466"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2466"),	max:5, rating:1.3529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2466,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Formule des sauts <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2466.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2466,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2466','imageenonce2466');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2466"></a><div class=inner id="innerenonce2466">Soit $f$ une fonction définie sur $]a,b[$ de classe $C^1$ par morceaux. Soit $a=a_0&lt;a_1&lt;\dots&lt;a_N=b$ une
+subdivision adaptée à $f$, c'est-à-dire que $f$ se prolonge en une fonction de classe $C^1$ sur chaque $[a_i,a_{i+1}]$. Montrer que l'on a :
+$$(T_f)'=T_{f'}+\sum_{i=1}^{N-1}\left(f(a_i+0)-f(a_i-0)\right)\delta_{a_i},$$
+où $f'$ est la dérivée usuelle de $f$, définie hors des points $a_i$, et $f(a_i\pm0)$ sont les limites à
+droite et à gauche de $f$ en $a_i$ (les distributions sont considérées
+comme éléments de $\mcd'(]a,b[)$.</div></div><div class=indication><a href="javascript:showAll('innerindication2466','imageindication2466');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2466"></a><div class=inner id="innerindication2466" style="display:none;">Découper l'intégrale et intégrer par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2466','imagecorrige2466',2466);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2466"></a><div class=inner id="innercorrige2466" style="display:none;">Par définition, on a 
+$$\langle (T_f)',\phi\rangle =-\langle T_f,\phi'\rangle=-\int_a^b f(x)\phi'(x)dx.$$
+On découpe l'intégrale, et on effectue dans chaque intervalle $]a_i,a_{i+1}[$ une intégration par parties.
+On obtient d'abord des intégrales, qui à nouveau regroupées donne le terme en $\langle T_{f'},\phi\rangle$.
+Les termes constants correspondent exactement aux masses de Dirac!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2465"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2465"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2465,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Primitive <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2465.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2465,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2465','imageenonce2465');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2465"></a><div class=inner id="innerenonce2465"><ol class="enumeratechiffre">
+<li> Soit $I$ un intervalle ouvert de $\mtr$. Montrer que toute distribution sur $I$ admet une primitive.
+<li> Soit $T\in\mcd'(\mtr)$ vérifiant $T'=0$. Montrer que $T$ est la distribution associée à une fonction constante.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2465','imagecorrige2465',2465);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2465"></a><div class=inner id="innercorrige2465" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $T\in\mcd'(I)$ et $S$ une éventuelle primitive de $T$. Prenons $\phi\in\mcd(I)$. On doit alors
+avoir
+$$\langle T,\phi\rangle=\langle S',\phi\rangle =-\langle S,\phi'\rangle.$$
+$S$ est donc déterminé sur les dérivées d'éléments de $\mcd(I)$. La situation serait
+parfaite si toute fonction de $\mcd(I)$ était la dérivée d'une fonction de $\mcd(I)$, mais malheureusement 
+ce n'est pas le cas. Cela n'est vrai que pour les fonctions d'intégrale nulle sur $I$. Qu'à cela ne tienne!
+Rédigeons donc proprement. On a le résultat suivant :
+<div class=citation>
+Soit $u\in\mcd(I)$. Il existe $v\in\mcd(I)$ tel que $v'=u$ si et seulement si $\int_{\mtr}u=0$.
+Dans ce cas, $v$ est unique (et est donnée par la formule $v(x)=\int_{-\infty}^x u(t)dt$).
+</div>
+Le but, étant donnée une fonction $\psi\in\mcd(I)$, est de se ramener à une fonction qui est la dérivée
+d'une fonction test. Pour cela, on fixe $\theta\in\mcd(I)$ tel que $\int_\mtr\theta=1$. On a alors 
+le résultat suivant :
+<div class=citation>
+Soit $\psi\in\mcd(I)$. Il existe un unique $\phi\in\mcd(I)$ tel que
+$$\psi=(\int_\mtr \psi)\theta+\phi'.$$
+</div>
+En effet, il suffit d'appliquer le résultat précédent à la fonction $u=\psi-(\int_\mtr\psi)\theta$. 
+Supposons maintenant qu'il existe $S\in\mcd'(I)$ tel que $S'=T$. Soit $\psi\in\mcd(I)$, et $\phi\in\mcd(I)$
+la fonction qui lui est uniquement associée par le procédé précédent. On a :
+\begin{eqnarray*}
+\langle S,\psi\rangle&=&\langle S,(\int\psi)\theta\rangle+\langle S,\phi'\rangle\\
+&=&\langle S,\theta\rangle \int\psi -\langle T,\phi\rangle.
+\end{eqnarray*}
+On a donc $\langle S,\psi\rangle=C\int_\mtr\psi-\langle T,\phi\rangle$. Passons à la synthèse.
+On pose $S_0$ la forme linéaire définie sur $\mcd(I)$ par
+$$\langle S_0,\psi\rangle=-\langle T,\phi\rangle,$$
+où $\phi$ est associée à $\psi$. Il faut vérifier que $S_0$ est continue, ce qu'on laisse au lecteur!
+Il faut aussi vérifier que $S_0'=T$. Mais pour $u\in\mcd(I)$, on a 
+$$\langle S_0',u\rangle=-\langle S_0,u'\rangle.$$
+Soit $v$ l'unique fonction de $\mcd(I)$ telle que 
+$$u'=(\int_\mtr u')\theta+v'.$$
+$u$ étant à support compact, $\int_\mtr u'=0$, et donc $u'=v'$. Par unicité de $v$, on en déduit que $u=v$.
+On a donc
+$$\langle S_0',u\rangle=-\langle S_0,u'\rangle=\langle T,v\rangle=\langle T,u\rangle$$
+ce qui prouve que $S_0'=T$. En outre, la partie "analyse" de la preuve garantit que toute primitive de
+$T$ s'écrit $S=S_0+C$.
+<li> On applique simplement le résultat de la question précédente, en remarquant que $S_0=0$ : les seules distributions
+dont la dérivée est nulle sur un intervalle sont les distributions associées aux fonctions constantes.
+</ol></div></div></div>
+
+<div class=titrepartie>Support d'une distribution</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2462"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2462"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2462,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nulle sur le support, et pourtant... <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2462.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2462,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2462','imageenonce2462');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2462"></a><div class=inner id="innerenonce2462">Donner un exemple de distribution $T\in\mcd'(\mtr)$ et de fonction $\varphi\in\mcd(\mtr)$ telle que $supp(T)=\{0\}$,
+$\varphi(0)=0$ et $\langle T,\varphi\rangle\neq 0$. Plus généralement, si $T\in\mcd'(\mtr)$ et $\psi\in\mcd(\mtr)$,
+quelle condition faut-il sur $T$ et $\psi$ pour que $\langle
+T,\psi\rangle =0$?
+Quelle condition donner à $\psi_1,\psi_2\in\mcd(\mtr)$ pour que
+$\langle T,\psi_1\rangle=\langle T,\psi_2\rangle$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2462','imageindication2462');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2462"></a><div class=inner id="innerindication2462" style="display:none;">Considérer la dérivée de la masse de Dirac en $0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2462','imagecorrige2462',2462);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2462"></a><div class=inner id="innercorrige2462" style="display:none;">Prenons pour $T$ la dérivée de la masse de Dirac $\delta_0'$ et pour $\varphi$ une fonction de $\mcd(\mtr)$ telle que $\varphi(0)=0$
+et $\varphi'(0)\neq 0$. Alors $\langle T,\varphi\rangle=-\varphi'(0)\neq 0$. Plus généralement, 
+on a $\langle T,\psi\rangle =0$ dès que $\psi$ est nulle au voisinage
+du support de $T$, c'est-à-dire que les supports de $T$ et $\psi$
+sont disjoints. On a $\langle T,\psi_1\rangle=\langle T,\psi_2\rangle$
+dès que $\psi_1$ et $\psi_2$ sont égales au voisinage du support de $T$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2467"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2467"),	max:5, rating:2.2941176470588, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2467,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Support et produit <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2467.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2467,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2467','imageenonce2467');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2467"></a><div class=inner id="innerenonce2467">Soit $T$ une distribution sur $\mtr^n$ et $f$ une fonction $\mathcal C^\infty$ sur $\mtr^n$.
+<ol class="enumeratechiffre">
+<li> Montrer que si $fT=0$, alors le support de $T$ est inclus dans $Z(f)=\left\{x\in\mtr^n,\ f(x)=0\right\}$.
+<li> En prenant $T=\delta'\in\mcd'(\mtr)$, montrer que la réciproque est fausse.
+<li> Déterminer les fonction $f$ de classe $\mathcal C^\infty$ telles que $f\delta'=0$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2467','imagecorrige2467',2467);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2467"></a><div class=inner id="innercorrige2467" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $\phi\in\mcd(\mtr^n)$ à support dans $Z(f)^c$. Alors $\phi/f$ est aussi dans $\mcd(\mtr)$, et on a 
+$$\langle T,\phi\rangle = \langle fT,\phi/f\rangle=0.$$
+$T$ s'annule sur l'ouvert $Z(f)^c$ et donc le support de $T$ est inclus dans $Z(f)$.
+<li> Prenons $f(x)=x$. On a bien $supp(T)\subset Z_f$. Mais,
+$$\langle x\delta',\phi\rangle =\langle \delta',x\phi\rangle=\phi(0),$$
+ce qui prouve bien que $x\delta'$ n'est pas la distribution nulle.
+<li> On a 
+$$\langle f\delta',\phi\rangle=-f'(0)\phi(0)-f(0)\phi'(0),$$
+et ceci est identiquement nulle si, et seulement si, $f(0)=f'(0)=0$. 
+Cela revient à dire que $f$ s'ecrit $f(x)=x^2g(x)$ où $g$ est une autre fonction $C^\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2468"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2468"),	max:5, rating:2.4666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2468,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Support réduit à un point <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2468.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2468,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2468','imageenonce2468');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2468"></a><div class=inner id="innerenonce2468">Soit $T\in\mcd(\mtr)$ tel que $supp(T)=\{0\}$.
+<ol class="enumeratechiffre">
+<li> Justifier que $T$ est d'ordre fini. Dans la suite, on notera $m$ son ordre.
+<li> Soit $\phi\in\mcd(\mtr)$ telle que $\phi(x)=o(x^m)$ au voisinage de 0. Soit $\rho$
+une fonction plateau valant 1 au voisinage de 0, et 0 hors de $]-1,1[$. On note
+$\rho_r(x)=\rho(x/r)$. 
+<ol class="enumeratechiffre">
+<li> Montrer que si $l\leq m$, alors $\sup_{|x|\leq r}|(\rho_r\phi)^{(l)}(x)|\to_{r\to 0}0$.
+<li> En déduire que $\langle T,\phi\rangle =0$.
+</ol>
+<li> Soit $\phi\in\mcd(\mtr)$. Montrer que $\phi$ s'écrit
+$$\phi(x)=\sum_{k=0}^m \frac{\phi^{(k)}(0)}{k!}x^k+\psi(x),$$
+où $\psi$ est une fonction de classe $C^\infty$ telle que $\psi(x)=o(x^m)$.
+<li> En déduire l'existence de complexes $a_0,\dots,a_m$ tels que, pour tout $\phi\in\mcd(\mtr)$,
+$$\langle T,\phi\rangle =\sum_{0\leq k\leq m}a_k\phi^{(k)}(0).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2468','imageindication2468');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2468"></a><div class=inner id="innerindication2468" style="display:none;"><ol class="enumeratechiffre">
+<li> Comment est le support de $T$?
+<li> Appliquer la formule de Leibniz.
+<li>
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2468','imagecorrige2468',2468);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2468"></a><div class=inner id="innercorrige2468" style="display:none;"><ol class="enumeratechiffre">
+<li> $T$ est à support compact, donc d'ordre fini.
+<li> <ol class="enumeratechiffre">
+<li> La formule de Leibniz donne
+$$(\rho_r \phi)^{(l)}=\sum_{k=0}^l \binom l k \rho_r^{(l-k)}(x)\phi^{(k)}(x).$$
+Maintenant, la condition sur $f$ fait que $\phi^{(k)}(x)=o(x^{m-k})$ (ceci peut se démontrer par exemple avec l'unicité des développements
+limités et la formule de Taylor-Young). D'autre part,
+$$\rho_r^{(l-k)}(x)=\frac{1}{r^{l-k}}\rho^{(l-k)}(x/r).$$
+Pour tout $\veps&gt;0$, on a donc, dès que $r$ est assez petit et $|x|\leq r$,
+$$|f^{(k)}(x)\rho_r^{(l-k)}(x)|\leq \veps \frac{r^{m-k}}{r^{l-k}}\|\rho^{(l-k)}\|_\infty\leq \veps\|\rho^{(l-k)}\|_\infty.$$
+Ceci garantit le résultat de l'énoncé.
+<li> Puisque $T$ est de support $\{0\}$ et que $\rho_r$ vaut 1 au voisinage de $0$, on a quel que soit $r&gt;0$
+$$\langle T,\phi\rangle =\langle T,\rho_r\phi\rangle.$$
+Maintenant, $T$ est d'ordre $m$ et $\rho_r\phi$ est à support dans $[-r,r]\subset[-1,1]$ (compact fixe!).
+Le résultat que l'on vient de démontrer assure que $\lim_{r\to 0}|\langle T,\rho_r\phi\rangle|=0$.
+</ol>
+<li> Il suffit d'appliquer la formule de Taylor avec reste intégral!
+<li> Prenons $\phi$ dans $\mcd(\mtr)$ et appliquons la décomposition obtenue à la question précédente. Il faut prendre
+garde à ce que les fonctions que l'on introduit ne sont plus à support compact.
+Toutefois, si $\rho$ est la fonction plateau évoquée
+précédemment, $\rho\phi$ est à support compact, $\phi$ et $\rho\phi$ sont égales au voisinage de 0,
+et donc
+$$\langle T,\phi\rangle=\langle T,\rho \phi\rangle=\sum_{k=0}^m \frac{\phi^{(k)}(0)}{k!}\langle T,\rho x^k\rangle
++\langle T,\rho\psi\rangle.$$
+On obtient alors le résultat en remarquant que $\langle T,\rho \psi\rangle=0$ d'après la question 2 et en posant $a_k=\langle T,\rho x^k\rangle/k!$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2470"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2470"),	max:5, rating:3.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2470,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2470.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2470,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2470','imageenonce2470');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2470"></a><div class=inner id="innerenonce2470">Soit $T$ l'application linéaire de $\mcd(\mtr^2)$ dans $\mtc$
+définie
+par $$\langle T,\phi\rangle=\int_{\mtr}\phi(x,-x)dx.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $T\in\mcd'(\mtr^2)$. Quel est son ordre?
+<li> Déterminer le support de $T$. En déduire qu'il n'existe pas de
+fonctions continues sur $\mtr^2$ telle que $T$ soit la distribution
+associée à cette fonction.
+<li> Calculer au sens des distributions
+$$\frac{\partial T}{\partial x}-\frac{\partial T}{\partial y}.$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2470','imagecorrige2470',2470);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2470"></a><div class=inner id="innercorrige2470" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $K$ un compact de $\mtr^2$ et $\phi\in\mcd(\mtr^2)$ à
+support dans $K$. Posons $K_1=\{x\in\mtr;\ (x,-x)\in K\}$, qui est
+compact car $K$ l'est.
+$$|\langle T,\phi\rangle|\leq \left(\int_{K_1}dx\right)\sup_{(x,y)\in K}
+|\varphi(x,y)|.$$
+Ainsi, $T$ est une distribution sur $\mtr^2$ d'ordre 0.
+<li> Montrons que le support de $T$ est la droite $D=\{(x,-x);\
+x\in\mtr\}$
+de $\mtr^2$. D'abord, prenons $\phi\in\mcd(\mtr^2)$ à support contenu
+dans $\mtr^2\backslash D$.  Alors, $\phi(x,-x)=0$ pour tout $x$ dans
+$\mtr$ et donc $\langle T,\phi\rangle=0$. Réciproquement, prouvons que
+tout point $M_0=(x_0,-x_0)$ est dans le support de $T$. Pour cela, il
+suffit de prouver que pour tout $\veps&gt;0$, il existe
+$\phi\in\mcd(\mtr^2)$ à support dans $B(M_0,\veps)$ tel que $\langle
+T,\phi\rangle\neq 0$. On choisit pour $\phi$ une fonction positive, à
+support dans $B(M_0,\veps)$, et
+égale à 1 sur $B(M_0,\veps/2)$. Alors $V=\{x\in\mtr;\ (x,-x)\in
+B(M_0,\veps/2)\}$ a une mesure de Lebesgue strictement positive, et donc
+$$\langle T,\phi\rangle \geq m(V)&gt;0.$$
+$T$ n'est donc pas la distribution associée à une fonction continue, car le support d'une telle distribution serait ou bien $\varnothing$ (si $T=0$), ou contiendrait au moins un ouvert de $\mathbb R^2$.
+<li> Posons $\psi(x)=\phi(x,-x)$. Alors $\psi'(x)=\left(\frac{\partial
+\phi}{\partial x}-\frac{\partial \phi}{\partial y}\right)(x,-x),$
+ce qui donne:
+$$\left\langle \left(\frac{\partial T}{\partial x}-\frac{\partial
+T}{\partial y}\right),\phi\right\rangle=-\int_{\mtr}\left(\frac{\partial
+\phi}{\partial x}-\frac{\partial \phi}{\partial
+y}\right)(x,-x)dx=[\psi]_{-\infty}^{+\infty}=0,$$
+car $\phi$ donc $\psi$ est à support compact.
+</ol></div></div></div>
+
+<div class=titrepartie>Equations sur les distributions</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2463"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2463"),	max:5, rating:2.7777777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2463,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'équation $xT=1$ <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2463.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2463,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2463','imageenonce2463');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2463"></a><div class=inner id="innerenonce2463"><ol class="enumeratechiffre">
+<li> Montrer que $x \textrm{vp}(1/x)=1$.
+<li> Soit $u\in\mcd'(\mtr)$ telle que $xu=0$.
+<ol class="enumeratechiffre">
+<li> Soit $\phi\in\mcd(\mtr)$ telle que $\phi(0)\neq 0$. Démontrer qu'il existe une constante $C_\phi$ telle que, pour
+toute fonction $\eta\in\mcd(\mtr)$ égale à 1 sur le support de $\phi$,
+alors $$C_\phi=\langle u,\eta\rangle.$$
+<li> Montrer que si $\phi$ et $\psi$ sont deux fonctions de
+$\mcd(\mtr)$ telles que $\phi(0)\neq 0$ et $\psi(0)\neq 0$, alors
+$C_\phi=C_\psi$.
+<li> En déduire toutes les solutions de $xu=0$.
+</ol>
+<li> Résoudre l'équation $xu=1$.
+<li> Soit $T\in\mcd'(\mtr)$. Montrer que si $(\sin x)T=0$ si, et
+seulement si, il existe une suite $(c_n)$ telle que
+$T=\sum_{n=-\infty}^{+\infty}c_n\delta_{n\pi}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2463','imageindication2463');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2463"></a><div class=inner id="innerindication2463" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la définition!
+<li> Décomposer une fonction test en $\phi(t)=\phi(0)\eta+t\psi(t)$. 
+<li> Ecrire $1=x\textrm{vp}(1/x)$.
+<li> Procéder par localisation autour de chaque $n\pi$, puis recoller à l'aide d'une partition de l'unité.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2463','imagecorrige2463',2463);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2463"></a><div class=inner id="innercorrige2463" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que ceci correspond ici à la multiplication d'une distribution par une fonction $C^\infty$.
+On a donc, pour $\phi\in\mcd(\mtr)$, 
+$$\langle x\textrm{vp}(1/x),\phi\rangle=\langle \textrm{vp}(1/x),x\phi\rangle=\lim_{\veps\to 0}\int_{|x|\geq\veps} \frac{x\phi(x)}{x}dx,$$
+ce qui donne bien le résultat.
+<li> <ol class="enumeratechiffre">
+<li>
+L'idée est qu'on connait la valeur de $u$ sur les fonctions qui
+s'écrivent $x\varphi$, avec $\varphi\in\mcd(\mtr)$. On s'y ramène en
+décomposant $\phi(x)$ en $\phi(x)=\phi(0)+x\varphi(x)$ où $\varphi$
+est de classe $C^\infty$. Multipliant par la fonction $\eta$ donnée
+par l'énoncé, on obtient :
+$$\phi=\phi(0)\eta+x\varphi\eta.$$
+Si on applique $u$, on trouve :
+$$\langle u,\phi\rangle=\phi(0)\langle u,\eta\rangle+\langle
+xu,\varphi\eta\rangle.$$
+On obtient finalement
+$$\langle u,\eta\rangle=\frac{\langle u,\phi\rangle}{\phi(0)},$$ 
+quantité qui est donc indépendante de $\eta$.
+<li> Soit $\eta$ une fonction de $\mcd(\mtr)$ valant 1 à la fois sur
+le support de $\phi$ et de $\psi$. Alors on a :
+$$C_\phi=\langle u,\eta\rangle=C_\psi,$$
+ce qui prouve le résultat.
+<li> Notons $C$ la valeur commune de tous les $C_\phi$, pour $\phi(0)\neq 0$. Le calcul effectué ci-dessus prouve
+que $\langle u,\phi\rangle = C\phi(0)=C\langle
+\delta_0,\phi\rangle$. Le résultat reste vérifié si $\phi(0)=0$, car
+les deux membres sont nuls. Une distribution vérifiant $xu=0$ s'écrit
+donc $C\delta_0$. La réciproque est clairement vraie!
+</ol>
+<li>
+Ecrivons $1=x\textrm{vp}(1/x)$, ce qui fait que l'équation se réécrit 
+$$x(u-\textrm{vp}(1/x))=0,$$
+ce qui entraîne alors $u=\textrm{vp}(1/x)+C\delta_0$.
+<li> On note $O_n=]-3\pi/4+n\pi,3\pi/4+n\pi[$, de telle sorte que $(O_n)_{n\in\mtz}$ est un recouvrement
+localement fini de $\mtr$. Soit $(\chi_n)$ une partition de l'unité associée, et décomposons $\phi$
+en $\phi=\sum_{n\in\mtz} \phi(x)\chi_n=\sum_{n\in\mtz}\phi_n$. D'après la formule de Taylor avec reste intégral,
+chaque $\phi_n$ s'écrit $\phi_n(x)=\phi(n\pi)+(x-n\pi)\psi_n(x)$, où $\psi_n$ est de classe $C^\infty$. 
+Remarquons encore que $x\mapsto (x-n\pi)/\sin(x)$ est de classe $C^\infty$ sur $O_n$. On note $\theta_n$ cettefonction. On peut alors écrire 
+$$\phi_n(x)=\phi_n(x)\eta_n(x)=\phi(n\pi)\eta_n(x)+\sin(x)\theta_n(x)\eta_n(x),$$
+où $\eta_n$ est une fonction plateau valant $1$ sur $O_n$ et à support dans $]-\pi+n\pi,\pi+n\pi[$. On obtient alors, puisque $(\sin x)T=0$, $\langle T,\sin(x)\theta_n\eta_n\rangle=0$ et donc 
+$$\langle T,\phi\rangle=\sum_{n\in\mtz}\langle T,\eta_n\rangle\phi(n\pi),$$
+ce qui prouve le résultat demandé avec $c_n=\langle T,\eta_n\rangle$. La réciproque est immédiate!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2450"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2450"),	max:5, rating:3.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2450,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2450.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2450,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2450','imageenonce2450');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2450"></a><div class=inner id="innerenonce2450">On rappelle que les distributions $T\in\mathcal D(\mathbb R)$ vérifiant $xT=0$ sont les distributions $c\delta_0$, $c\in\mathbb R$.
+<ol class="enumeratechiffre">
+<li> Pour tout $k\geq 0$, résoudre l'équation $xT=\delta_0^{(k)}$.
+<li> Résoudre l'équation $x^2 T=\delta_0$.
+<li> Plus généralement, pour tout $n\geq 1$, résoudre l'équation $x^n T=\delta_0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2450','imageindication2450');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2450"></a><div class=inner id="innerindication2450" style="display:none;"><ol class="enumeratechiffre">
+<li> Chercher une solution particulière sous la forme $c\delta_0^{(k+1)}$.
+<li> &Eacute;crire $x^2 T=\delta_0\iff x(xT)=\delta_0$ et utiliser (deux fois) le résultat précédent.
+<li> Démontrer par récurrence que les solutions sont les distributions
+$$T=\frac{(-1)^n}{n!}\delta_0^{(n)}+c_{n-1}\delta_0^{(n-1)}+\dots+c_0\delta_0,$$
+où $c_0,\dots,c_{n-1}\in\mathbb R$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2450','imagecorrige2450',2450);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2450"></a><div class=inner id="innercorrige2450" style="display:none;"><ol class="enumeratechiffre">
+<li> On commencer par rechercher une solution particulière sous la forme $c\delta_0^{(k+1)}$. En effet, pour tout $\varphi\in\mathcal D(\mathbb R)$, 
+\begin{eqnarray*}\langle cx\delta_0^{(k+1)},\varphi\rangle &=&
+c\langle \delta_0^{(k+1)},x\varphi\rangle\\
+&=& (-1)^{k+1}c\langle \delta_0, (x\varphi)^{(k+1)}\rangle\\
+&=& (-1)^{k+1}c\langle \delta_0, x\varphi^{(k+1)}+(k+1)\varphi^{(k)}\rangle\\
+&=&(-1)^{k+1}(k+1)c\varphi^{(k)}(0)\\
+&=&-(k+1)c\langle \delta_0^{(k)},\varphi\rangle.
+\end{eqnarray*}
+Ainsi, la distribution $T_0=\frac{-1}{k+1}\delta_0^{(k)}$ est une solution particulière de l'équation. Soit maintenant $T$ une autre solution de l'équation. Alors $x(T-T_0)=0$ et donc il existe $c\in\mathbb R$ tel que $T=T_0+c\delta$. Les solutions de l'équations sont donc les distributions
+$$T=\frac{-1}{k+1}\delta_0^{(k)}+c\delta_0,\ c\in\mathbb R.$$
+<li> Posons $S=xT$. L'équation $x^2T=\delta$ est équivalente à $xS=\delta$, donc les solutions sont les distributions $S=-\delta_0'+c\delta_0$. Il faut ensuite résoudre l'équation $xT=-\delta_0'+c\delta_0$, dont les solutions sont, d'après la question précédente, les distributions $T=\frac 12\delta_0''+c_1\delta_0'+c_0\delta_0$, $c_1=-c$, $c_0\in\mathbb R$. Finalement, si $c$ parcourt $\mathbb R$, alors $c_1$ parcourt $\mathbb R$ et les solutions de l'équation $x^2T=\delta_0$ sont les distributions $\frac12 \delta_0''+c_1\delta_0'+c_0\delta_0$, $c_0,c_1\in\mathbb R$.
+<li> La réponse aux deux questions précédentes suggère que les solutions de l'équation $x^n T=\delta_0$ sont les distributions
+$$T=\frac{(-1)^n}{n!}\delta_0^{(n)}+c_{n-1}\delta_0^{(n-1)}+\dots+c_0\delta_0,\ c_0,\dots,c_{n-1}\in\mathbb R.$$
+Démontrons par récurrence cette propriété. Elle est vraie si $n=1$ ou $n=2$. Supposons qu'elle est vraie pour $n\geq 1$ et démontrons-la pour $n+1$. Posons $S=x T$. Alors l'équation $x^{n+1}T=\delta_0$ devient $x^n S=\delta_0$. Par hypothèse de récurrence, il existe $d_0,\dots,d_{n-1}$ des réels tels que 
+$$S=\frac{(-1)^n}{n!}\delta_0^{(n)}+d_{n-1}\delta_0^{(n-1)}+\cdots+d_0\delta_0.$$
+On résout ensuite l'équation 
+$$xT=\frac{(-1)^n}{n!}\delta_0^{(n)}+d_{n-1}\delta_0^{(n-1)}+\cdots+d_0\delta_0$$ 
+à l'aide de la première question. On trouve que 
+$$T=\frac{(-1)^{n+1}}{(n+1)!}\delta_0^{(n+1)}-\frac{d_{n-1}}n\delta_0^{(n)}-\cdots-\frac{d_0}{1}\delta_0'+c\delta_0,\ c\in\mathbb R.$$
+En posant $c_k=-d_{k-1}/k$ pour $k=1,\dots,n$ et $c_0=c$ (de sorte que les $c_i$ décrivent bien $\mathbb R$), on prouve bien que la propriété est vraie au rang $n+1$. Ainsi, par le principe de récurrence, la propriété est démontrée pour tout entier $n$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater2471"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2471"),	max:5, rating:3.3125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2471,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distributions homogènes <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2471.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(2471,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2471','imageenonce2471');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2471"></a><div class=inner id="innerenonce2471">Une distribution $T\in\mcd(\mtr^n)$ est dite homogène de degré $p\in\mtr$ si, pour tout $\lambda&gt;0$ 
+et tout $\phi\in\mcd(\mtr^n)$, on a l'égalité
+\begin{eqnarray}\label{EQHOMO1}
+\langle T,\phi_\lambda\rangle=\lambda^{-n-p}\langle T,\phi\rangle,
+\end{eqnarray}
+où $\phi_\lambda\in\mcd(\mtr^n)$ est définie par $\phi_\lambda(x)=\phi(\lambda x)$.
+<ol class="enumeratechiffre">
+<li> Montrer que la masse de Dirac en 0 est homogène de degré $-n$. Montrer que sur $\mtr$, la distribution $\textrm{vp}(1/x)$
+est homogène de degré $-1$.
+<li> Déterminer les distributions homogènes de degré $-1$ sur $\mtr$ dont le support est $\{0\}$ (on rappelle 
+qu'une distribution dont le support est $\{0\}$ est combinaison linéaire de dérivées de masses de Dirac en 0).
+<li> Dans le cas où $T$ est une distribution associée à une fonction $f$ de classe $\mathcal C^\infty$, quelle propriété
+vérifie $f$ lorsque $T$ est homogène de degré $p$?
+<li> Montrer que la dérivée d'une distribution homogène est encore homogène. 
+<li> Montrer qu'une distribution est homogène de degré $p$ si et seulement si
+$$\sum_{i=1}^n x_i\frac{\partial T}{\partial x_i}=pT.$$
+On pourra utiliser le fait que si $\phi\in\mcd(\mtr^n)$ alors $\frac{\phi_\lambda-\phi}{\lambda-1}$
+converge dans $\mcd(\mtr)$ vers $\sum_{j=1}^n\frac{\partial \phi}{\partial x_j}$ lorsque $\lambda$ tend vers 1.
+<li> En déduire toutes les distributions homogènes sur $\mtr$ de degré $2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2471','imageindication2471');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2471"></a><div class=inner id="innerindication2471" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire le calcul.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2471','imagecorrige2471',2471);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2471"></a><div class=inner id="innercorrige2471" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$\langle \delta_0,\phi_\lambda\rangle = \langle \delta_0,\phi\rangle(=\phi(0)).$$
+Ceci assure que $\delta_0$ est homogène de degré $-n$. Pour la valeur principale,
+\begin{eqnarray*}
+\langle \textrm{vp}(1/x),\phi_\lambda\rangle&=&\lim_{\veps\to 0}\int_{|x|\geq\veps}\frac{\phi(\lambda x)}{x}dx\\
+&=&\lim_{\veps\to 0}\int_{|\lambda u|\geq \veps}\frac{\phi(u)}{u}du\\
+&=&\langle \textrm{vp}(1/x),\phi\rangle.
+\end{eqnarray*}
+On en déduit que $\textrm{vp}(1/x)$ est bien homogène de degré $-1$.
+<li> Soit $R=\sum_{k=0}^d a_k\delta^{(k)}$ une telle distribution. Remarquons que $R$ est invariante par homothétie.
+D'autre part, on a 
+$$\langle \delta^{(k)},\phi_\lambda\rangle=(\lambda)^k\langle\delta^{(k)},\phi\rangle.$$
+$R$ est invariante par homothétie si et seulement si $R=C\delta_0$.
+<li> Lorsque $T=T_f$, on a, pour tout $\phi\in\mcd(\mtr^n)$,
+$$\int_{\mtr^n}f(x)\phi(\lambda x)dx=\int_{\mtr^n}\lambda^{-n-p}f(x)\phi(x)dx.$$
+Le changement de variables $y=\lambda x$ donne 
+$$\lambda^{-n}\int_{\mtr^n}f(y/\lambda)\phi(y)dy=\int_{\mtr^n}\lambda^{-n-p}f(x)\phi(x)dx.$$
+Ceci étant vérifié pour toute fonction $\phi$ dans $\mcd(\mtr^n)$, on en déduit que, 
+pour tout $y$, on a $f(y/\lambda)=\lambda^{-p}f(y)$, ou encore $f(\lambda x)=\lambda^p f(x)$ (ce qui correspond
+à la définition classique d'une fonction homogène).
+<li> On a 
+$$\langle T',\phi_\lambda\rangle=-\lambda\langle T,(\phi')_\lambda\rangle=-\lambda^{-n-p+1}\langle T,\phi'\rangle=\lambda^{-n-p+1}\langle T',\phi\rangle,$$
+ce qui prouve que $T'$ est homogène de degré $p-1$.
+<li> Supposons $T$ homogène de degré $p$. Pour $\lambda\neq 1$, on a alors 
+$$\langle T,\frac{\phi_\lambda-\phi}{\lambda-1}\rangle =\frac{\lambda^{n-p}-1}{\lambda-1}\langle T,\phi\rangle.$$
+On fait tendre $\lambda$ vers 1 dans l'égalité ci-dessus. En utilisant le rappel de l'énoncé, on trouve :
+$$\langle T,\sum_{j=1}^n x_j\frac{\partial \phi}{\partial x_j}\rangle=(-n-p)\langle T,\phi\rangle.$$
+En utilisant les définitions de la dérivée d'une distribution et de la multiplication par une fonction $C^\infty$,
+on trouve
+$$(-n-p)\langle T,\phi\rangle=-\langle \sum_{j=1}^n \frac{\partial(x_j T)}{\partial x_j},\phi\rangle.$$
+Développant la dérivée du membre de droite, on trouve le résultat souhaité.<br>
+Réciproquement, soit $T$ une distribution telle que 
+$$\sum_{i=1}^n x_i\frac{\partial T}{\partial x_i}=pT.$$
+On pose $f(\lambda)=\langle T,\phi_\lambda\rangle$. Comme précédemment, on trouve 
+$$f'(\lambda)=\langle T,\sum_{j=1}^n x_j \frac{\partial \phi}{\partial x_j}(\lambda x)\rangle.$$
+Ainsi,
+$$f'(\lambda)=\frac{1}{\lambda}\langle T,\sum_{j=1}^n x_j\partial_j\phi_\lambda\rangle=-\frac{n}{\lambda}\langle T,\phi_\lambda\rangle-\frac{1}{\lambda}\langle\sum_{j=1}^nx_j\partial_jT,\phi_\lambda\rangle.$$
+Finalement, on obtient $\lambda f'(\lambda)=-(n+p)f(\lambda)$. On a donc $f(\lambda)=C\lambda^{-n-p}$ pour un réel $C$.
+Il suffit de prendre ensuite $\lambda=1$ pour obtenir la valeur de $C$ et le résultat.
+<li> La question précédente assure que $T$ est homogène de degré 2 sur $\mtr$ si et seulement si elle vérifie
+l'équation différentielle 
+$$xT'-2T=0.$$
+On résout cette équation différentielle d'abord en recherchant les fonctions $C^\infty$ solutions de
+$$xu'-2u=0.$$
+Il faut résoudre l'équation sur chaque intervalle $\mtr_+^*$ et $\mtr_-^*$, où on trouve que les solutions
+sont de la forme $u(x)=C_1x_+^2$ (resp. $u(x)=C_2x_-^2$). Soit maintenant $T$ une distribution solution de l'équation 
+différentielle. On note $T_1$ sa restriction à $\mcd(\mtr_+^*)$ (resp. $T_2$ sa restriction à $\mcd(\mtr_-^*)$).
+On pose ensuite $S_1=\frac{T_1}{x_+^2}$, qui est distribution sur $\mcd(\mtr_+^*)$ car sur cet intervalle,
+la fonction $x\mapsto \frac{1}{x_+^2}$ est de classe $C^\infty$. La formule de Leibniz donne alors
+$S_1'=0$. On en déduit l'existence d'une constante $C_1$ telle que $S_1=C_1$, ce qui donne $T_1=C_1 x_+^2$.
+De même, de $S_2'=0$, on déduit l'existence d'une constante $C_2$ telle que $T_2=C_2 x_-^2$. Posons
+enfin $S=T-C_1x_+^2-C_2x_-^2$. Le support de $S$ est contenu dans $\{0\}$, et donc $S$ s'écrit 
+$$S=\sum_{k=0}^m a_k\delta_0^{(k)}.$$
+Un calcul facile montre que 
+$$x(\delta^{(k)})'=-(k+1)\delta^{(k)}.$$
+On a donc 
+$$xS'-2S=\sum_{k=0}^m [-(k+1)-2]a_k\delta^{(k)}_0=0.$$
+Ceci n'est possible que si tous les $a_k$ sont nuls! Les distributions homogènes de degré 2 sur $\mtr$ sont donc
+les distributions associées aux fonctions localement intégrables
+$$C_1x_+^2+C_2x_-^2.$$
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Equations différentielles et distributions</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2448"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2448"),	max:5, rating:3.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2448,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du premier ordre! <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2448.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2448,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2448','imageenonce2448');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2448"></a><div class=inner id="innerenonce2448"><ol class="enumeratechiffre">
+<li> Résoudre dans $\mathcal D(\mathbb R)$ l'équation $T'=0$ (on pourra utiliser que si $\varphi_0$ est une fonction de $\mathcal D(\mathbb R)$ satisfaisant $\int_{\mathbb R}\varphi_0(x)dx=1$, pour tout $\varphi\in\mathcal D(\mathbb R)$, il existe un unique $\psi\in\mathcal D(\mathbb R)$ et un unique $c\in\mathbb R$ tel que $\varphi=\psi'+c\varphi_0$).
+<li> En déduire toutes les solutions de l'équation différentielle $T'-aT=0$, où $a\in\mathbb R$.
+<li> Résoudre l'équation différentielle $T'+T=H$, où $H$ est la fonction de Heaviside.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2448','imageindication2448');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2448"></a><div class=inner id="innerindication2448" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la formule donnant la dérivée d'une distribution.
+<li> Copier la preuve de la résolution des équations différentielles linéaires pour les fonctions.
+<li> Chercher une solution particulière sous la forme $fH$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2448','imagecorrige2448',2448);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2448"></a><div class=inner id="innercorrige2448" style="display:none;"><ol class="enumeratechiffre">
+<li> Utilisons les notations de l'énoncé, et remarquons que $c=\int_{\mathbb R}\varphi(x)dx$ puisque $\int_{\mathbb R}\psi'(x)dx=0$ (la fonction $\psi$ étant à support compact). On a alors 
+\begin{eqnarray*}
+\langle T,\varphi\rangle&=&\langle T,\psi'\rangle+c\langle T,\varphi_0\rangle\\
+&=&-\langle T',\psi\rangle+c\langle T,\varphi_0\rangle\\
+&=&c\langle T,\varphi_0\rangle
+\end{eqnarray*}
+Notons $C=\langle T,\varphi_0\rangle$ (qui ne dépend pas de $\varphi$). Alors on a 
+$$\langle T,\varphi\rangle=C\langle 1,\varphi\rangle$$
+et donc $T$ est la distribution associée à une fonction constante $C$. Réciproquement, toute distribution associée à une fonction constante est aussi solution de cette équation.
+<li> Posons $S=e^{-at}T$. Alors 
+$$S'=-ae^{-at}T+e^{-at}T'=e^{-at}(T'-aT).$$
+Ainsi, si $T$ est solution de l'équation différentielle $T'-aT=0$, $S'=0$ et $S$ est la distribution associée à une fonction constante. Ainsi, $T=Ce^{at}$. Réciproquement, la distribution associée à $Ce^{at}$ est solution de l'équation différentielle.
+<li> Comme pour les équations différentielles ordinaires, la solution d'une équation différentielle avec second membre s'écrit comme somme d'une solution de l'équation homogène et d'une solution particulière. La forme du second membre nous incite à chercher une solution particulière sous la forme $fH$, où $f$ est une fonction et $H$ est la fonction de Heaviside. On a alors
+\begin{eqnarray*}
+\langle T'_{fH},\varphi\rangle&=&-\langle T_{fH},\varphi'\rangle\\
+&=&-\int_{0}^{+\infty}f(x)\varphi'(x)dx\\
+&=&-\left[f(x)\varphi(x)\right]_0^{+\infty}+\int_0^{+\infty}f'(x)\varphi(x)\\
+&=&f(0)\varphi(0)+\langle T_{f'H},\varphi\rangle\\
+&=&\langle f\delta_0, \varphi\rangle+\langle T_{f'H},\varphi\rangle
+\end{eqnarray*}
+Ainsi, on a prouvé (pourvu que $f$ soit de classe $\mathcal C^1$ pour pouvoir faire l'intégration par parties) que 
+$$T_{fH}'=f\delta_0+T_{f'H}.$$
+Pour que $T_{fH}$ soit une solution de $T'+T=H$, il faut donc que $f(0)=0$ et que, pour tout $x&gt;0$, $f'(x)+f(x)=1$. La résolution de cette équation différentielle donne $f(x)=1-e^{-x}$. On vérifie alors (tous les calculs précédents pouvaient être réalisés au brouillon, ils ne servent qu'à rechercher une solution particulière) que la distribution associée à $(1-e^{-t})H(t)$ est solution particulière de l'équation $T'+T=H$. Les solutions de cette équation sont donc les distributions associées aux fonctions $Ce^{-t}+H(t)(1-e^{-t})$. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2469"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2469"),	max:5, rating:4.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2469,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux équations différentielles <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2469.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2469,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2469','imageenonce2469');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2469"></a><div class=inner id="innerenonce2469">Résoudre, dans $\mcd'(\mtr)$, les équations différentielles suivantes :
+<ol class="enumeratechiffre">
+<li> $2xT'-T=\delta_0$,
+<li> $xT'+T=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2469','imageindication2469');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2469"></a><div class=inner id="innerindication2469" style="display:none;">Rechercher d'abord les solutions de l'équation homogène, et chercher les solutions de classe $C^\infty$. On doit
+résoudre l'équation sur chacun des intervalles $\mtr_+^*$ et $\mtr_-^*$. Considérer la restriction d'une distribution
+solution à un de ces intervalles. Montrer qu'elle coïncide avec l'une des fonctions $L^1$ isolées précédemment....
+Faire la différence entre la distribution et sa restriction. Quel est son support?
+Puis chercher une solution particulière de l'équation avec second membre.
+(de même type que le second membre).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2469','imagecorrige2469',2469);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2469"></a><div class=inner id="innercorrige2469" style="display:none;"><ol class="enumeratechiffre">
+<li> On copie la démarche de résolution des équations différentielles linéaires réelles. Résolvons donc d'abord
+l'équation sans second membre $2xT'-T=0$. L'idée est de rechercher d'abord les solutions localement intégrables de 
+l'équation $2xu'-u=0$. Maintenant, l'équation est singulière en $0$, et on l'étudie donc sur $\mtr^*_+$ et sur $\mtr_-^*$.
+Sur chacun de ces intervalles, on trouve que $u(x)=C\sqrt{|x|}$. On note $x_+=\max(x,0)$ et $x_-=\max(-x,0)$.
+Les distributions associées aux la fonctions localement intégrables $C_1\sqrt{x_+}+C_2\sqrt{x_-}$ sont donc solution
+sur $\mtr^*$. On vérifie aussi qu'elles sont solutions sur $\mtr$. D'autre part, soit $T$
+une distribution solution de l'équation différentielle (appartenant à $\mcd'(\mtr)$). On note $T_1$ sa restriction 
+à $\mcd(\mtr_+^*)$. Soit $S_1=\frac{T_1}{\sqrt{x}}$. La formule de Leibniz donne 
+$$S_1'=\frac{T_1'}{\sqrt{x}}-\frac{T_1}{2x\sqrt{x}}=\frac{2x T_1'-T_1}{2x\sqrt{x}}=0.$$
+Puisque $S_1$ est définie sur un intervalle (à savoir $\mtr_+^*$), il existe une constante
+$C_1$ telle que $S_1=C_1$, ce qui entraîne $T_1=C_1\sqrt{x_+}$. De même, en notant $T_2$ la restriction
+de $T$ à $\mtr_-^*$, il existe une constante $C_2$ telle que $T_2=C_2\sqrt{x_-}$. On note enfin
+$S$ la distribution $T-C_1\sqrt{x_+}-C_2\sqrt{x_-}$. On vérifie aisément que le support de $S$ est contenu dans $\{0\}$.
+ $S$ est donc une combinaison linéaire de dérivées de masses
+de Dirac en $0$. Posons donc $R=\sum_{k=0}^p a_k\delta^{(k)}$, qui doit vérifier $2xR'-R=0$. Un calcul facile montre que,
+si $\phi\in\mcd(\mtr)$, et $k\geq 1$, on a 
+\begin{eqnarray*}
+\langle 2x\left(\delta^{(k)}\right)',\phi\rangle&=&-\langle \delta^{(k)},(2x\phi)'\rangle\\
+&=&-\langle \delta^{(k)},2\phi\rangle-\langle\delta^{(k)},2x\phi'\rangle\\
+&=&2(-1)^{k+1}\left(2\phi^{(k)}(0)+(2x\phi')^{(k)}(0)\right)\\
+&=&2(-1)^{k+1}(k+1)\phi^{(k)}(0).
+\end{eqnarray*}
+En particulier, ceci prouve que $2xR'-R=\sum_{k=0}^p (2(-1)^{k+1}(k+1)-1)a_k\delta^{(k)}$, et donc $2xR'-R=0$ si
+et seulement si $R=0$. Reste à traiter maintenant l'équation avec second membre. La forme de ce second membre
+nous pousse à rechercher une solution qui soit combinaison linéaire de dérivées de masses de Dirac en 0,
+et le calcul précédent nous montre que l'on peut en fait se contenter d'une masse de Dirac simplement.
+Plus précisément, on doit avoir $(2\times(-1)\times(-1)-1)a_0=1$, ce qui donne $a_0=-1/3$.
+Finalement, on a prouvé que les solutions de l'équation de départ sont 
+$$C_1\sqrt{x_+}+C_2\sqrt{x_-}-\frac{1}{3}\delta_0.$$
+<li> Le plus facile est ici de remarquer que $(xT)'=xT'+T$. L'équation se transforme donc en $(xT)'=0$. 
+Ceci entraîne l'existence d'une constante $C\in\mtr$ telle que $xT=C$. $C\textrm{vp}(1/x)$ étant solution de cette équation,
+celle-ci est équivalente à $x(T-C\textrm{vp}(1/x))=0$, et l'on obtient l'existence de $\gamma$ telle que $T$
+ s'écrive
+ $$T=C\textrm{vp}(1/x)+\gamma\delta_0.$$
+Réciproquement, toute distribution de cette forme est solution de l'équation différentielle.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

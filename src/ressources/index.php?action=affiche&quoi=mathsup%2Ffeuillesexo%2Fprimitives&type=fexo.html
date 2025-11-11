@@ -1,0 +1,597 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Calcul de primitives</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Calcul de primitives</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater431"></span><script>var myRating = raterJs( { element:document.querySelector("#rater431"),	max:5, rating:1.9516129032258, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(431,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Reconnaissance de formes <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=431.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(431,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce431','imageenonce431');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce431"></a><div class=inner id="innerenonce431">Déterminer une primitive des fonctions suivantes sur l'intervalle considéré :
+\begin{array}{lll}
+\mathbf 1.\ f(x)=(3x-1)(3x^2-2x+3)^3,\ I=\mathbb R&\quad&\mathbf 2.\ f(x)=\frac{1-x^2}{(x^3-3x+2)^3},\ I=]-\infty,-2[\\
+\mathbf 3.\ f(x)=\frac{(x-1)}{\sqrt{x(x-2)}},\ I=]-\infty,0[&&\mathbf 4.\ f(x)=\frac{1}{x\ln(x^2)},\ I=]1,+\infty[.
+\end{array}</div></div><div class=indication><a href="javascript:showAll('innerindication431','imageindication431');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication431"></a><div class=inner id="innerindication431" style="display:none;">Reconnaitre une forme usuelle (du type $u^n u'$,....)</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige431','imagecorrige431',431);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige431"></a><div class=inner id="innercorrige431" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $u(x)=3x^2-2x+3$, de sorte que $u'(x)=6x-2=2(3x-1)$. On a donc
+$$f(x)=\frac 12\times u'(x)u(x)^3.$$
+Une primitive de $f$ est donc la fonction 
+$$F(x)=\frac 18(3x^2-2x+3)^4.$$
+<li> Posons $u(x)=x^3-3x+2$ de sorte que $u'(x)=3x^2-3=-3(1-x^2)$. On en déduit que 
+$$f(x)=\frac{-1}3\times\frac{u'(x)}{u(x)^3}.$$
+Une primitive de $f$ est donc la fonction 
+$$F(x)=\frac{1}6\times\frac{1}{(x^3-3x+2)^2}.$$
+<li> Posons $u(x)=x(x-2)=x^2-2x$. On a $u'(x)=2x-2=2(x-1)$. On en déduit que 
+$$f(x)=\frac 12\times\frac{u'(x)}{\sqrt{u(x)}}.$$
+Une primitive de $f$ est donc la fonction
+$$F(x)=\sqrt{x^2-2x}.$$
+On peut remarquer que $x^2-2x&gt;0$ sur $]-\infty,0[$.
+<li> On peut commencer par écrire que $\ln(x^2)=2\ln x$. On a alors
+$$f(x)=\frac{1}{2}\times \frac{u'(x)}{u(x)},$$
+avec $u(x)=\ln x$. On en déduit qu'une primitive de $f$ est donnée par
+$$F(x)=\frac 12\ln (\ln x).$$
+ATTENTION!!! Je reçois beaucoup de messages me disant que le résultat précédent est faux et qu'une primitive est la fonction 
+$$G(x)=\frac12\ln (\ln(x^2)).$$
+Mais 
+$$G(x)=\frac12\ln(2\ln(x))=\frac{\ln 2}2+\frac 12\ln(\ln x)=F(x)+C$$
+où $C$ est une constante. Donc les deux réponses sont valables!
+</ol></div></div></div>
+<div class=titrepartie>Intégration par parties</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater397"></span><script>var myRating = raterJs( { element:document.querySelector("#rater397"),	max:5, rating:1.7840909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(397,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégration par parties - Niveau 1 <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=397.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(397,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce397','imageenonce397');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce397"></a><div class=inner id="innerenonce397">Calculer les intégrales suivantes :
+$$\mathbf{1.}\quad I=\int_0^1 xe^xdx\quad\quad\mathbf{2.}\quad J=\int_1^e x^2\ln xdx$$</div></div><div class=indication><a href="javascript:showAll('innerindication397','imageindication397');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication397"></a><div class=inner id="innerindication397" style="display:none;"><ol class="enumeratechiffre">
+<li> Poser $u(x)=x$ et $v'(x)=e^x$.
+<li> Poser $u(x)=\ln x$ et $v'(x)=x^2$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige397','imagecorrige397',397);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige397"></a><div class=inner id="innercorrige397" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Corrigé de l'exercice en vidéo</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p3ozQ9JlmG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> On intègre par parties en posant :
+$$\begin{array}{rclcrcl}
+u(x)&=&x&\quad&u'(x)&=&1\\
+v'(x)&=&e^x&\quad&v(x)&=&e^x.
+\end{array}$$
+On obtient donc 
+$$\int_0^1 xe^x dx=1e^1-0e^0-\int_0^1 e^xdx.$$
+Comme on sait calculer cette dernière intégrale, on trouve finalement
+$$\int_0^1 xe^x dx=e-e+1=1.$$
+<li> On intègre par parties en posant :
+$$\begin{array}{rclcrcl}
+u(x)&=&\ln x&\quad&u'(x)&=&\frac 1x\\
+v'(x)&=&x^2&\quad&v(x)&=&\frac{x^3}3.
+\end{array}$$
+On obtient donc 
+\begin{eqnarray*}
+J&=&\left[\frac{x^3}3\ln x\right]_1^e-\frac 13\int_1^ex^2dx\\
+&=&\frac{e^3}3-\frac19(e^3-1)\\
+&=&\frac{2e^3+1}9.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater398"></span><script>var myRating = raterJs( { element:document.querySelector("#rater398"),	max:5, rating:1.6823529411765, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(398,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégration par parties - Niveau 2 <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=398.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(398,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce398','imageenonce398');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce398"></a><div class=inner id="innerenonce398">Déterminer une primitive des fonctions suivantes :
+$$\mathbf{1.}\quad x\mapsto\arctan(x)\quad\quad\mathbf{2.}\quad x\mapsto (\ln x)^2\quad\quad\mathbf{3.} x\mapsto \sin(\ln x).$$</div></div><div class=indication><a href="javascript:showAll('innerindication398','imageindication398');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication398"></a><div class=inner id="innerindication398" style="display:none;">Pour chacune des 3 fonctions $f$, on pourra l'écrire sous la forme $1\times f.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige398','imagecorrige398',398);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige398"></a><div class=inner id="innercorrige398" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $x\mapsto \arctan x$ étant continue sur $\mathbb R$, elle admet 
+une primitive sur cet intervalle. On intègre par parties en posant :
+$$\begin{array}{rclcrcl}
+u(x)&=&\arctan x&\quad&u'(x)&=&\frac{1}{x^2+1}\\
+v'(x)&=&1&\quad&v(x)&=&x
+\end{array}$$
+de sorte que
+$$\int \arctan t dt=x\arctan x-\int \frac{t}{t^2+1}dt.$$
+La primitive que l'on doit encore rechercher est de la forme $g'/g$, et donc
+$$\int \arctan t dt=x\arctan x -\frac12\ln(x^2+1).$$
+<li> La fonction $x\mapsto (\ln x)^2$ étant continue sur $]0,+\infty[$, elle admet des primitives
+sur cet intervalle. On se restreint à cet intervalle et on intègre par parties en posant :
+$$\begin{array}{rclcrcl}
+u(x)&=&(\ln x)^2&\quad&u'(x)&=&2\frac{\ln x }x\\
+v'(x)&=&1&\quad&v(x)&=&x
+\end{array}$$
+de sorte que
+$$\int (\ln t)^2dt=x(\ln x)^2-2\int \ln tdt.$$
+Une primitive de $x\mapsto \ln x$ étant $x\mapsto x\ln x-x$ (résultat qui se retrouve en intégrant par parties),
+on trouve finalement qu'une primitive de $x\mapsto(\ln x)^2$ est
+$$x\mapsto x(\ln x)^2-2x\ln x+2x.$$
+<li> On va intégrer par parties deux fois. On travaille sur l'intervalle $]0,+\infty[$, là où la fonction
+est bien définie et continue. On pose alors :
+$$\begin{array}{rclcrcl}
+u(x)&=&\sin(\ln x)&\quad&u'(x)&=&\frac1x\cos(\ln x)\\
+v'(x)&=&1&\quad&v(x)&=&x
+\end{array}$$
+de sorte que
+$$\int \sin(\ln x)dx=x\sin(\ln x)-\int\cos(\ln x).$$
+On intègre une deuxième fois par parties en posant
+$$\begin{array}{rclcrcl}
+u_1(x)&=&\cos(\ln x)&\quad&u_1'(x)&=&-\frac1x\sin(\ln x)\\
+v_1'(x)&=&1&\quad&v_1(x)&=&x
+\end{array}$$
+de sorte que
+$$\int \cos(\ln x)dx=x\cos(\ln x)+\int\sin(\ln x).$$
+En mettant tout cela ensemble, on trouve
+$$\int \sin(\ln x)dx=x\sin(\ln x)-x\cos(\ln x)-\int\sin(\ln x)$$
+soit
+$$\int\sin(\ln x)dx=\frac x2\big(\sin(\ln x)-\cos(\ln x)\big).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater399"></span><script>var myRating = raterJs( { element:document.querySelector("#rater399"),	max:5, rating:2.4810126582278, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(399,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégration par parties - Niveau 3 <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=399.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(399,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce399','imageenonce399');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce399"></a><div class=inner id="innerenonce399">Calculer les intégrales suivantes :
+$$\mathbf{1.}\quad I=\int_1^2\frac{\ln(1+t)}{t^2}dt\quad \mathbf{2.}\quad J=\int_0^1 x(\arctan x)^2dx\quad\quad\mathbf{3.}\quad K=\int_0^1 \frac{x\ln x}{(x^2+1)^2}dx$$</div></div><div class=indication><a href="javascript:showAll('innerindication399','imageindication399');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication399"></a><div class=inner id="innerindication399" style="display:none;"><ol class="enumeratechiffre">
+<li> Intégrer par parties, puis réaliser une décomposition en éléments simples.
+<li> Intégrer par parties (deux fois). Un bon choix d'une primitive peut simplifier les calculs.
+<li> Intégrer par parties entre $a&gt;0$ et $1$. Faire tendre $a$ vers 0 tout à la fin...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige399','imagecorrige399',399);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige399"></a><div class=inner id="innercorrige399" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par intégrer par parties en posant $u'(t)=\frac 1{t^2}$ et $v(t)=\ln(1+t)$, ce qui donne $u(t)=-\frac1t$ et $v'(t)=\frac1{1+t}.$ On obtient donc
+$$I=\left[-\frac{\ln(1+t)}{t}\right]_1^2+\int_{1}^2\frac{dt}{t(t+1)}=-\frac{\ln(3)}2+\ln(2)+\int_1^2 \frac{dt}{t(t+1)}.$$
+On calcule la dernière intégrale en réalisant une décomposition en éléments simples. Plus précisément, on remarque que 
+$$\frac{1}{t(t+1)}=\frac 1t-\frac{1}{t+1}.$$
+Ainsi il vient
+$$\int_1^2 \frac{dt}{t(t+1)}=\left[\ln(t)-\ln(t+1)\right]_1^2=2\ln(2)-\ln(3).$$
+Finalement, on trouve
+$$I=-\frac{3\ln(3)}2+3\ln(2).$$
+<li> On intègre par parties, en posant $u'(x)=x$ et $v(x)=(\arctan x)^2$. On a $v'(x)=\frac{2\arctan(x)}{x^2+1}$, et ceci 
+nous incite à considérer comme primitive de $u'$ la fonction $u(x)=\frac{1}2(x^2+1)$, ce qui va simplifier les calculs.
+On obtient alors 
+$$J=\frac12\big[(x^2+1)(\arctan x)^2\big]_0^1 -\int_0^1 \arctan xdx.$$
+On calcule la dernière intégrale en réalisant à nouveau une intégration par parties, et on trouve :
+\begin{eqnarray*}
+J&=&\frac{\pi^2}{16}-\big[x\arctan x\big]_0^1 +\int_0^1 \frac{x}{x^2+1}dx\\
+&=&\frac{\pi^2}{16}-\frac{\pi}4+\frac12\big[\ln( x^2+1)\big]_0^1\\
+&=&\frac{\pi^2}{16}-\frac{\pi}4+\frac12\ln 2.
+\end{eqnarray*}
+<li> La fonction $f:x\mapsto \frac{x\ln x}{(x^2+1)^2}$ est continue sur $]0,1]$, et elle tend vers 0 en 0.
+On peut donc la prolonger par continuité à $[0,1]$ en posant $f(0)=0$, ce qui donne un sens à $K$.<br>
+Pour calculer cette intégrale, on va intégrer par parties entre $a&gt;0$ et $1$, pour ne pas être gêné par
+les problèmes en 0. On pose donc $K(a)=\int_a^1 \frac{x\ln x}{(x^2+1)^2}$, puis :
+$$\begin{array}{rcr}
+u(x)=(\ln x)&\quad&v'(x)=\frac{x}{(x^2+1)^2}\\
+u'(x)=\frac1x&\quad &v(x)=-\frac{1}{2(x^2+1)}
+\end{array}$$
+ce qui donne
+$$K(a)=\left[-\frac{\ln x}{2(x^2+1)}\right]_a^1 +\frac12\int_a^1 \frac{dx}{x(x^2+1)}.$$
+De plus,
+$$\frac{1}{x(x^2+1)}=\frac1x-\frac x{x^2+1}$$
+de sorte que
+$$\int_a^1 \frac{dx}{x(x^2+1)}=\left[\ln x-\frac{1}2\ln(x^2+1)\right]_a^1=-\frac{1}2\ln 2-\ln(a)+\frac12\ln(1+a^2).$$
+On obtient donc que
+$$K(a)=\frac{\ln a}{2(a^2+1)}-\frac{\ln 2}4-\frac{\ln a}2+\frac{1}4\ln(1+a^2).$$
+Reste à faire tendre $a$ vers 0. Pour cela, on factorise par $\ln a$, et on trouve
+$$K(a)=\frac{-a^2\ln(a)}{2(a^2+1)}-\frac{\ln 2}4+\frac14\ln(1+a^2).$$
+Comme $a^2\ln(a)$ tend vers 0 lorsque $a$ tend vers 0, de même que $\ln(1+a^2)$, on conclut finalement que
+$$K=-\frac{\ln 2}4.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater402"></span><script>var myRating = raterJs( { element:document.querySelector("#rater402"),	max:5, rating:2.0877192982456, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(402,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Primitive d'une puissance du logarithme <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=402.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(402,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce402','imageenonce402');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce402"></a><div class=inner id="innerenonce402">Pour $n\geq 1$, donner une primitive de $\ln^n x$.</div></div><div class=indication><a href="javascript:showAll('innerindication402','imageindication402');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication402"></a><div class=inner id="innerindication402" style="display:none;">Deviner le résultat sur les premiers termes par une intégration par parties, puis prouver le résultat par récurrence.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige402','imagecorrige402',402);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige402"></a><div class=inner id="innercorrige402" style="display:none;">Notons $f_n$ une telle primitive. Intégrant par parties (en dérivant $\ln^n x$ et en intégrant $1$), on trouve
+$$f_n=\int \ln^n xdx=x\ln^{n}x-nf_{n-1}.$$
+On itère alors les intégrations par parties, pour trouver
+\begin{eqnarray*}
+f_n&=&x\ln^{n}x-nx\ln^{n-1}x+n(n-1)f_{n-2}\\
+&=&x\ln^{n}x-nx\ln^{n-1}x+n(n-1)x\ln^{n-2}x-n(n-1)(n-2)f_{n-3}\\
+&\vdots&\vdots\\
+&=&\sum_{k=0}^{n}(-1)^k n(n-1)\dots(n-k+1)x\ln^{n-k}x\\
+&=&\sum_{k=0}^n (-1)^k \frac{n!}{(n-k)!}x\ln^{n-k} x.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater400"></span><script>var myRating = raterJs( { element:document.querySelector("#rater400"),	max:5, rating:2.0701754385965, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(400,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite d'intégrales <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=400.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(400,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce400','imageenonce400');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce400"></a><div class=inner id="innerenonce400">Soient $(\alpha,\beta,n)\in\mathbb R^2\times\mathbb N$. Calculer
+$$\int_\alpha^\beta(t-\alpha)^n (t-\beta)^n dt.$$</div></div><div class=indication><a href="javascript:showAll('innerindication400','imageindication400');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication400"></a><div class=inner id="innerindication400" style="display:none;">Faire $n$ intégrations par parties successives.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige400','imagecorrige400',400);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige400"></a><div class=inner id="innercorrige400" style="display:none;">On pose, pour $(\alpha,\beta,n,m)\in\mathbb R^2\times\mathbb N^2$,
+$$I_{m,n}=\int_\alpha^\beta (t-\alpha)^m(t-\beta)^n dt.$$
+On intègre par parties pour obtenir une relation entre $I_{m,n}$ et $I_{m-1,n+1}$, et on trouve
+\begin{eqnarray*}
+I_{m,n}&=&\left[(t-\alpha)^m\frac{(t-\beta)^{n+1}}{n+1}\right]_\alpha^\beta-\frac m{n+1}\int_{\alpha}^\beta (t-\alpha)^{m-1}(t-\beta)^{n+1}dt\\
+&=&-\frac{m}{n+1}I_{m-1,n+1}.
+\end{eqnarray*}
+D'autre part, pour tout $p\in\mathbb N$, on a 
+$$I_{0,p}=\int_{\alpha}^\beta (t-\beta)^pdt=-\frac{(\alpha-\beta)^{p+1}}{p+1}.$$
+Une récurrence immédiate donne alors
+$$I_{m,n}=(-1)^{m+1}\frac{m(m-1)\dots 1}{(n+1)(n+2)\dots(n+m)}\frac{(\alpha-\beta)^{m+n+1}}{m+n+1}.$$
+En particulier, l'intégrale recherché vaut $I_{n,n}$, c'est-à-dire
+$$I_{n,n}=(-1)^{n+1}\frac{n!}{(n+1)\dots(2n)}\frac{(\alpha-\beta)^{2n+1}}{2n+1}=(-1)^{n+1}\frac{(\alpha-\beta)^{2n+1}}{(2n+1)\binom{2n}{n}}.$$</div></div></div>
+
+<div class=titrepartie>Changement de variables</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater393"></span><script>var myRating = raterJs( { element:document.querySelector("#rater393"),	max:5, rating:2.135593220339, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(393,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Changements de variables - Niveau 1 <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=393.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(393,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce393','imageenonce393');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce393"></a><div class=inner id="innerenonce393">En effectuant le changement de variables demandé, calculer les intégrales suivantes :
+<ol class="enumeratechiffre">
+<li> $\displaystyle \int_1^4\frac{1-\sqrt t}{\sqrt t}dt$ en posant $x=\sqrt t$;
+<li> $\displaystyle \int_0^{\pi}\frac{\sin t}{1+\cos^2 t}dt$ en posant $x=\cos t$;
+<li> $\displaystyle \int_1^e \frac{dt}{2t\ln (t)+t}$ en posant $x=\ln t$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication393','imageindication393');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication393"></a><div class=inner id="innerindication393" style="display:none;">Faire le changement de variables demandé (en suivant la méthode décrite dans la vidéo au début de la correction). Une fois le changement de variable effectué, on doit trouver une intégrale facile à calculer.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige393','imagecorrige393',393);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige393"></a><div class=inner id="innercorrige393" style="display:none;">Avant de commencer, on pourra consulter la vidéo suivante, qui présente comment calculer une intégrale en effectuant un changement de variables.
+<div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Comment calculer une intégrale en effectuant un changement de variables?</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe
+ width="560" height="315" src="https://www.youtube.com/embed/LsKa-u1ZkZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> La fonction $t\mapsto \sqrt t$ est une fonction de classe $C^1$ définie sur $[1,4]$ et à valeurs dans $[1,2]$. Posons $x=\sqrt t$. Lorsque $t=1$, $x=1$ et lorsque $t=4$, $x=2$. Lorsqu'on dérive l'égalité $x=\sqrt t$, alors on obtient $dx=\frac{dt}{2\sqrt t}$. On a donc 
+$$\frac{1-\sqrt t}{\sqrt t}dt=2(1-\sqrt t)\frac{dt}{2\sqrt t}=2(1-x)dx.$$
+On en déduit que
+\begin{eqnarray*}
+\int_1^4\frac{1-\sqrt t}{\sqrt t}dt&=&\int_1^2 2(1-x)dx\\
+&=&\left[2x-x^2\right]_1^2\\
+&=&-1.
+\end{eqnarray*}
+Remarquons qu'on aurait pu aussi calculer cette intégrale en écrivant 
+$$\frac{1-\sqrt t}{\sqrt t}=\frac{1}{\sqrt t}-1.$$
+<li> La fonction $t\mapsto \cos(t)$ est une fonction de classe $C^1$ sur $[0,\pi]$, avec $\cos(0)=1$ et $\cos(\pi)=-1$. Posons $x=\cos(t)$ de sorte que pour $t=0$, $x=1$ et pour $t=\pi$, $x=-1$. De plus, en dérivant, on trouve $dx=-\sin(t)dt$ et donc 
+$$\frac{\sin(t)}{1+\cos^2 (t)}dt=-\frac{dx}{1+x^2}.$$
+On en déduit que 
+\begin{align*}
+\int_0^{\pi} \frac{\sin(t)}{1+\cos^2 (t)}dt&=\int_{1}^{-1}\frac{-1}{1+x^2}dx\\
+&=\int_{-1}^1 \frac{dx}{1+x^2}\\
+&=\left[\arctan(x)\right]_{-1}^1\\
+&=\frac\pi4+\frac\pi4=\frac\pi2.
+\end{align*}
+Remarquons qu'on aurait aussi pu calculer cette intégrale en écrivant la fonction sous la forme $u'(t)/(1+u(t)^2)$, avec $u(t)=\cos(t)$.
+<li> La fonction $t\mapsto\ln t$ est de classe $C^1$ sur $[1,e]$. Posons $x=\ln t$ de sorte que pour $t=1$, on a $x=0$ et pour $t=e$, on a $x=1$.
+En dérivant, on trouve $dx=\frac{dt}{t}$. On a donc 
+$$\frac{dt}{2t\ln(t)+t}=\frac{dt}t\times\frac1{2\ln(t)+1}=\frac{dx}{2x+1}.$$
+On en conclut que 
+\begin{align*}
+\int_1^e\frac{1}{2t\ln(t)+t}dt&=\int_0^{1}\frac{1}{2x+1}dx\\
+&=\left[\frac 12\ln(2x+1)\right]_0^{1}\\
+&=\frac{\ln(3)}2.
+\end{align*} 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater394"></span><script>var myRating = raterJs( { element:document.querySelector("#rater394"),	max:5, rating:1.7659574468085, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(394,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Changements de variables - Niveau 2 <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=394.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(394,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce394','imageenonce394');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce394"></a><div class=inner id="innerenonce394">En effectuant le changement de variables indiqué, calculer les intégrales suivantes :
+<ol class="enumeratechiffre">
+<li>  $\displaystyle \int_0^1\frac{dt}{1+e^t}$ en posant $x=e^t$;
+<li> $\displaystyle \int_1^3\frac{\sqrt t}{t+1}dt$ en posant $x=\sqrt t$;
+<li> $\displaystyle \int_{-1}^1 \sqrt{1-t^2}dt$ en posant $t=\sin\theta$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication394','imageindication394');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication394"></a><div class=inner id="innerindication394" style="display:none;"><ol class="enumeratechiffre">
+<li> Le changement de variables nous amène à calculer $\int_1^e \frac{dx}{x+1}$. Pour cela, on pourra écrire $\frac 1{x(x+1)}=\frac1x-\frac 1{x+1}$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige394','imagecorrige394',394);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige394"></a><div class=inner id="innercorrige394" style="display:none;">Avant de commencer, on pourra consulter la vidéo suivante, qui présente comment calculer une intégrale en effectuant un changement de variables.
+<div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Comment calculer une intégrale en effectuant un changement de variables?</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe
+ width="560" height="315" src="https://www.youtube.com/embed/LsKa-u1ZkZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> La fonction $t\mapsto e^t$ est de classe $C^1$ sur $[0,1]$, à valeurs dans $[1,e]$. Posons $x=e^t$, de sorte que pour $t=0$ on a $x=1$ et pour $t=1$, on a $x=e$. En dérivant, on a de plus $dx=e^t dt$ et donc $dt=\frac{dx}{e^t}=\frac{dx}x$. Ainsi,
+$$\frac{dt}{e^t+1}=\frac{1}{x(x+1)}.$$
+Il vient
+$$\int_0^1\frac{dt}{1+e^t}=\int_1^{e}\frac{dx}{x(1+x)}.$$
+On calcule cette dernière intégrale en remarquant que $\frac{1}{x(x+1)}=\frac 1x-\frac1{x+1}$, d'où l'on tire 
+\begin{align*}
+\int_0^1\frac{dt}{1+e^t}&=\int_1^e\left(\frac 1x-\frac1{x+1}\right)dx\\
+&=\left[\ln(x)-\ln(x+1)\right]_1^e\\
+&=1+\ln(2)-\ln(e+1).
+\end{align*}
+<li> La fonction $t\mapsto \sqrt{t}$ est de classe $C^1$ sur $[1,3]$ avec pour image $[1,\sqrt 3]$. Posons $x=\sqrt t$ de sorte que, lorsque $t=1$, on a $x=1$ et lorsque $t=3$, on a $x=\sqrt 3$. En dérivant, on trouve
+$dx=\frac{dt}{2\sqrt t}$ de sorte que $dt=2xdx$. Ainsi, 
+$$\frac{\sqrt t}{t+1}dt=\frac{x}{x^2+1}\cdot 2xdx=2\frac{x^2}{x^2+1}dx.$$
+On va calculer l'intégrale résultant du changement de variables en remarquant que 
+$$\frac{x^2}{x^2+1}=\frac{x^2+1-1}{x^2+1}=1-\frac{1}{x^2+1}.$$
+Finalement, on trouve que 
+\begin{align*}
+\int_1^3\frac{\sqrt t}{t+1}dt&=2\int_{1}^{\sqrt 3}\frac{x^2}{x^2+1}dx\\
+&=2\int_1^{\sqrt 3} dx-2\int_1^{\sqrt 3}\frac{dx}{1+x^2}\\
+&=2\left(\sqrt 3-1-\arctan(\sqrt 3)+\arctan 1\right)\\
+&=2\left(\sqrt 3-1-\frac{\pi}3+\frac{\pi}4\right)\\
+&=2\sqrt 3-2-\frac\pi 6.
+\end{align*}
+<li> La fonction $\theta\mapsto \sin(\theta)$ est de classe $C^1$ sur $[-\pi/2;\pi/2]$, à valeurs dans $[-1,1]$. Si on pose $t=\sin\theta$, on a en dérivant $dt=\cos(\theta)d\theta$. De plus, pour $\theta=-\pi/2$, on a $t=-1$ et pour $\theta=\pi/2$, on a $t=1$. On a donc 
+$$\sqrt{1-x^2}dx=\sqrt{1-\sin^2\theta}\cos(\theta)d\theta=|\cos\theta|\cdot\cos(\theta)d\theta=\cos^2(\theta)$$
+car $\cos(\theta)\geq 0$ puisque $\theta\in[-\pi/2,\pi/2]$. Il vient 
+\begin{align*}
+\int_{-1}^1 \sqrt{1-x^2}dx&=\int_{-\pi/2}^{\pi/2}\cos^2(\theta)d\theta\\ 
+&=\int_{-\pi/2}^{\pi/2}\left(\frac{1+\cos(2\theta)}{2}\right)d\theta\\
+&=\frac\pi2+\left[\frac{\sin(2\theta)}{4}\right]_{-\pi/2}^{\pi/2}\\
+&=\frac\pi2.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater392"></span><script>var myRating = raterJs( { element:document.querySelector("#rater392"),	max:5, rating:1.71875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(392,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction avec un axe de symétrie <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=392.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(392,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce392','imageenonce392');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce392"></a><div class=inner id="innerenonce392">Soit $f:[a,b]\to\mathbb R$ continue telle que, pour tout $x\in[a,b]$, on a 
+$f(a+b-x)=f(x)$. Montrer que
+$$\int_a^b xf(x)dx=\frac{a+b}2\int_a^b f(x)dx.$$
+En déduire la valeur de $I=\int_0^\pi \frac{x\sin x}{1+\cos^2x }dx$.</div></div><div class=indication><a href="javascript:showAll('innerindication392','imageindication392');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication392"></a><div class=inner id="innerindication392" style="display:none;">Faire le changement de variables $u=a+b-x$ dans l'intégrale de gauche.
+Pour le calcul de l'intégrale, on se ramène à calculer $\int_0^{\pi}\frac{\sin x}{1+\cos^2 x}dx$,
+que l'on traite à l'aide du changement de variables $u=\cos x$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige392','imagecorrige392',392);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige392"></a><div class=inner id="innercorrige392" style="display:none;">La fonction $x\mapsto (a+b-x)$ est une bijection continue strictement décroissante de $[a,b]$ sur lui-même,
+envoyant $a$ en $b$ et $b$ en $a$. Effectuant le changement de variables $u=a+b-x$, on trouve donc
+\begin{eqnarray*}
+\int_a^b xf(x)dx&=&-\int_{b}^a(a+b-u)f(a+b-u)du\\
+&=&\int_{a}^b (a+b-u)f(u)du\\
+&=&(a+b)\int_a^b f(x)dx-\int_a^b xf(x)dx.
+\end{eqnarray*}
+Ceci donne le résultat demandé.<br>
+Pour l'application, posons $a=0$, $b=\pi$ et $f(x)=\frac{\sin x}{1+\cos^2 x}$.
+Alors $f(\pi-x)=f(x)$ et donc, d'après le résultat précédent, on a 
+$$I=\frac{\pi}2\int_0^\pi \frac{\sin x}{1+\cos^2 x}dx.$$
+On calcule cette intégrale en effectuant le changement de variables
+$u=\cos x$. En effet, la fonction $x\mapsto\cos x$ réalise une bijection
+de l'intervalle $[0,\pi]$ sur l'intervalle $[-1,1]$. De $du=-\sin x dx$, on déduit
+\begin{eqnarray*}
+I&=&\frac{\pi}{2}\int_{1}^{-1}\frac{-du}{1+u^2}\\
+&=&\frac{\pi}{2}\int_{-1}^1 \frac{du}{1+u^2}\\
+&=&\frac{\pi}2\big(\arctan(1)-\arctan(-1)\big)\\
+&=&\frac{\pi^2}4.
+\end{eqnarray*}</div></div></div>
+
+<div class=titrepartie>Fractions rationnelles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater432"></span><script>var myRating = raterJs( { element:document.querySelector("#rater432"),	max:5, rating:2.0405405405405, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(432,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fraction rationnelle avec décomposition en éléments simples <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=432.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(432,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce432','imageenonce432');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce432"></a><div class=inner id="innerenonce432">Soit $f(x)=\frac{5x^2+21x+22}{(x-1)(x+3)^2}$, $x\in ]1,+\infty[$.
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe trois réels $a$, $b$ et $c$ tels que
+$$\forall x\in ]1,+\infty[,\ f(x)=\frac a{x-1}+\frac b{x+3}+\frac c{(x+3)^2}.$$
+<li> En déduire la primitive de $f$ sur $]1,+\infty[$ qui s'annule en 2.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication432','imageindication432');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication432"></a><div class=inner id="innerindication432" style="display:none;"><ol class="enumeratechiffre">
+<li> Mettre tout au même dénominateur, et procéder par identification.
+<li> Intégrer chaque "élément simple", et ajuster la constante.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige432','imagecorrige432',432);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige432"></a><div class=inner id="innercorrige432" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut tout mettre au même dénominateur, et procéder par identification. En effet, on a 
+\begin{eqnarray*}
+\frac{a}{x-1}+\frac{b}{x+3}+\frac c{(x+3)^2}&=&
+\frac{a(x+3)^2+b(x-1)(x+3)+c(x-1)}{(x-1)(x+3)^2}\\
+&=&\frac{x^2(a+b)+x(6a+2b+c)+(9a-3b-c)}{(x-1)(x+3)^2}.
+\end{eqnarray*}
+L'égalité demandée sera vérifiée dès que 
+$$\left\{
+\begin{array}{rcl}
+a+b&=&5\\
+6a+2b+c&=&21\\
+9a-3b-c&=&22
+\end{array}\right.$$
+On résout ce système en commençant par remarquer que $a=5-b$. Il est donc successivement équivalent à 
+$$\left\{
+\begin{array}{rcl}
+a&=&5-b\\
+-4b+c&=&-9\\
+-12b-c&=&-23
+\end{array}\right.$$
+$$\iff\left\{
+\begin{array}{rcl}
+a&=&5-b\\
+c&=&-9+4b\\
+-16b&=&-32
+\end{array}\right.$$
+On trouve finalement comme unique solution $a=3$, $b=2$ et $c=-1$, de sorte que 
+$$f(x)=\frac{3}{x-1}+\frac{2}{x+3}-\frac1{(x+3)^2}.$$
+<li> On intègre chacun des éléments simples de la décomposition précédente, en tenant compte du fait que l'on travaille sur l'intervalle $]1,+\infty[$. Les primitives de $f$ sur cet intervalle sont donc les fonctions
+$$F(x)=3\ln(x-1)+2\ln(x+3)+\frac{1}{x+3}+d.$$
+La primitive qui s'annule en $2$ et celle pour laquelle $d$ vérifie l'équation 
+$$3\ln(1)+2\ln 5+\frac 15+d=0.$$
+La primitive de $f$ sur l'intervalle $]1,+\infty[$ qui s'annule en 2 est donc la fonction $F$ définie par
+$$F(x)=3\ln(x-1)+2\ln(x+3)+\frac{1}{x+3}-2\ln 5-\frac 15.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater434"></span><script>var myRating = raterJs( { element:document.querySelector("#rater434"),	max:5, rating:0.88571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(434,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Primitive de fractions rationnelles <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=434.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(434,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce434','imageenonce434');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce434"></a><div class=inner id="innerenonce434">Donner une primitive des fonctions suivantes :
+$$
+\begin{array}{lcl}
+\displaystyle \mathbf{1.}\quad x\mapsto \frac{1}{x^2+4}&\quad\quad&\displaystyle \mathbf{2.}\quad x\mapsto\frac{1}{x^2+4x+5}\\
+\displaystyle \mathbf{3.}\quad x\mapsto \frac{1}{1-x^2}
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication434','imageindication434');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication434"></a><div class=inner id="innerindication434" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaitre une primitive.
+<li> &Eacute;crire le dénominateur sous forme canonique.
+<li> Factoriser le dénominateur!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige434','imagecorrige434',434);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige434"></a><div class=inner id="innercorrige434" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque simplement que $x^2+4=x^2+2^2$. Une primitive de $x\mapsto \frac{1}{x^2+4}$ est donc $\frac 12\arctan\left(\frac x2\right)$.
+<li> On écrit le dénominateur sous forme canonique, $x^2+4x+5=(x+2)^2+1$. La méthode précédente donne
+$$\int\frac{dx}{x^2+4x+5}=\arctan(x+2).$$
+<li> Le dénominateur se factorise en $(1-x)(1+x)=-(x-1)(x+1)$. On sait donc qu'il existe $a,b\in\mathbb R$ tels que 
+$$\frac{1}{1-x^2}=\frac{a}{x-1}+\frac{b}{x+1}.$$ En mettant tout au même dénominateur et en procédant par identification, on trouve
+$$a=-1/2,\ b=1/2.$$
+Une primitive de $\frac{1}{1-x^2}$ est donc $\frac 12\ln|x+1|-\frac 12\ln |x-1|$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater662"></span><script>var myRating = raterJs( { element:document.querySelector("#rater662"),	max:5, rating:2.2631578947368, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(662,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=662.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(662,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce662','imageenonce662');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce662"></a><div class=inner id="innerenonce662">Donner une primitive des fonctions suivantes :
+$$
+\begin{array}{lcl}
+\displaystyle \mathbf{1.}\quad x\mapsto \frac{3x+2}{x^2+x+1}&\quad\quad&\displaystyle 
+\mathbf{2.}\quad x\mapsto \frac{2x}{x^2-x+1}\\
+\displaystyle \mathbf{3.}\quad x\mapsto \frac{2x+1}{x^2+x-3}
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication662','imageindication662');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication662"></a><div class=inner id="innerindication662" style="display:none;">Pour chacun des 3 exemples, commencer par faire apparaître au numérateur la dérivée du dénominateur.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige662','imagecorrige662',662);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige662"></a><div class=inner id="innercorrige662" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par faire apparaître au numérateur la dérivée du dénominateur.
+$$\frac{3x+2}{x^2+x+1}=\frac{3}2\times\frac{2x+1}{x^2+x+1}+\frac12\times\frac{1}{x^2+x+1}.$$
+On intègre alors. Pour la première partie, c'est facile, car :
+$$\int\frac{2x+1}{x^2+x+1}dx=\ln|x^2+x+1|.$$
+Pour la seconde, on se ramène à écrire le dénominateur sous la forme $X^2+\omega^2$, ce qui nécessite en plus un changement de variables.
+Ici, on a $x^2+x+1=\left(x+\frac12\right)^2+\frac34$ soit, avec le changement de variables $u=x+1/2$,
+$$\int \frac{dx}{x^2+x+1}=\int\frac{du}{u^2+\left(\frac{\sqrt 3}2\right)^2}=\frac{2}{\sqrt 3}\arctan\left(\frac{2u}{\sqrt 3}\right)=\frac{2}{\sqrt 3}\arctan\left(\frac{2x+1}{\sqrt 3}\right).$$
+Finalement, une primitive de la fonction recherchée est
+$$x\mapsto \frac32\ln|x^2+x+1|+\frac{1}{\sqrt 3}\arctan\left(\frac{2x+1}{\sqrt 3}\right).$$
+<li> On procède exactement comme à la question précédente : 
+$$\frac{2x}{x^2-x+1}=\frac{2x-1}{x^2-x+1}+\frac{1}{\left(x-\frac 12\right)^2+\frac{3}4}.$$
+Une primitive de la fonction recherchée est donc 
+$$x\mapsto \ln |x^2-x+1|+\frac2{\sqrt 3}\arctan\left(\frac 2{\sqrt 3}\times\left(x-\frac 12\right)\right).$$
+<li> Ici, il n'y a rien à faire car le numérateur est déjà la dérivée du dénominateur! Une primitive de la fonction recherchée est donc tout simplement 
+$$x\mapsto \ln |x^2+x-3|.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater436"></span><script>var myRating = raterJs( { element:document.querySelector("#rater436"),	max:5, rating:2.9, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(436,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Grande puissance <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=436.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(436,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce436','imageenonce436');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce436"></a><div class=inner id="innerenonce436">Pour tout $n\in\mathbb N^*$, on pose
+$$I_n=\int_0^1\frac{dx}{(x^2+1)^n}.$$
+<ol class="enumeratechiffre">
+<li> Exprimer $I_{n+1}$ en fonction de $I_n$ pour tout $n\in\mathbb N^*$.
+<li> En déduire la valeur de $I_3$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication436','imageindication436');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication436"></a><div class=inner id="innerindication436" style="display:none;">Effectuer une intégration par parties à partir de $I_n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige436','imagecorrige436',436);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige436"></a><div class=inner id="innercorrige436" style="display:none;">Une intégration par parties donne, en posant $u(x)=(x^2+1)^{-n}$ et $v'(x)=1$, 
+$$I_n=\left[\frac{x}{(x^2+1)^n}\right]_0^1 +2n\int_0^1 \frac{x^2}{(x^2+1)^{n+1}}dx=\frac{1}{2^n}+2n\int_0^1 \frac{x^2}{(x^2+1)^{n+1}}dx.$$
+Or,
+$$\int_0^1 \frac{x^2}{(x^2+1)^{n+1}}dx=\int_0^1\frac{x^2+1}{(x^2+1)^{n+1}}dx-\int_0^1 \frac{1}{(x^2+1)^{n+1}}dx=I_n-I_{n+1}.$$
+Regroupant les termes, on trouve 
+$$2nI_{n+1}=(2n-1)I_n+\frac1{2^n}\iff I_{n+1}=\frac{2n-1}{2n}I_n+\frac{1}{n2^{n+1}}.$$
+Sachant que 
+$$I_1=\left[\arctan x\right]_0^1=\frac\pi4,$$ on trouve
+$$I_2=\frac{\pi}8+\frac14\textrm{ et }I_3=\frac{3\pi}{32}+\frac14.$$</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Exponentielles, trigonométriques, abéliennes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater437"></span><script>var myRating = raterJs( { element:document.querySelector("#rater437"),	max:5, rating:1.4242424242424, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(437,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle * polynôme * trigonométrique <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=437.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(437,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce437','imageenonce437');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce437"></a><div class=inner id="innerenonce437">Calculer l'intégrale :
+$$\int_0^\pi x^2e^x \cos xdx.$$</div></div><div class=indication><a href="javascript:showAll('innerindication437','imageindication437');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication437"></a><div class=inner id="innerindication437" style="display:none;">Remplacer $\cos x$ par $e^{ix}$ puis intégrer par parties.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige437','imagecorrige437',437);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige437"></a><div class=inner id="innercorrige437" style="display:none;">Notons $I$ l'intégrale.  $I$ est égale à $\Re e(J)$ avec $J=\int_0^\pi x^2e^{(1+i)x}dx$ 
+(on a posé $\cos x=\Re e(e^{ix})$). En intégrant par parties, on trouve
+\begin{eqnarray*}
+J&=&\left[\frac{x^2e^{(1+i)x}}{1+i}\right]_0^\pi-\frac{2}{1+i}\int_0^\pi xe^{(1+i)x}dx\\
+&=&-\frac{\pi^2e^\pi}{1+i}-\frac{2}{1+i}\int_0^\pi xe^{(1+i)x}dx.
+\end{eqnarray*}
+On fait une deuxième intégration par parties pour calculer cette dernière intégrale, et on trouve
+\begin{eqnarray*}
+\int_0^\pi xe^{(1+i)x}dx&=&\left[\frac{xe^{(1+i)x}}{1+i}\right]_0^\pi-\frac{1}{1+i}\int_0^\pi e^{(1+i)x}dx\\
+&=&-\frac{\pi e^{\pi}}{1+i}-\frac{1}{(1+i)^2}\left[e^{(1+i)x}\right]_0^\pi\\
+&=&-\frac{\pi e^{\pi}}{1+i}+\frac{i}2(-1-e^{\pi}).
+\end{eqnarray*}
+Regroupant tous les termes, et multipliant par la quantité conjuguée au dénominateur, on trouve :
+$$J=-\pi^2e^\pi\frac{1-i}2-i\pi e^\pi -\frac{1+i}2(-1-e^\pi),$$
+soit
+$$I=\frac12+\frac{1-\pi^2}2e^{\pi}.$$
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater439"></span><script>var myRating = raterJs( { element:document.querySelector("#rater439"),	max:5, rating:1.96, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(439,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Puissances et produits <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=439.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(439,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce439','imageenonce439');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce439"></a><div class=inner id="innerenonce439">Donner une primitive des fonctions suivantes :
+$$\mathbf 1.\ x\mapsto\sin^5x\ \ \quad\mathbf2.\ x\mapsto\cos^4 x\sin^2 x\ \ \quad\mathbf3.\ x\mapsto \cos(3x)\cos^3x.$$</div></div><div class=indication><a href="javascript:showAll('innerindication439','imageindication439');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication439"></a><div class=inner id="innerindication439" style="display:none;">Linéariser l'expression.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige439','imagecorrige439',439);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige439"></a><div class=inner id="innercorrige439" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+\begin{eqnarray*}
+\sin^5 x&=&\left(\frac{e^{ix}-e^{-ix}}{2i}\right)^5\\
+&=&\frac{1}{2^5 i}\left(e^{5ix}-e^{-5ix}-5e^{3ix}+5e^{-3ix}+10e^{ix}-10e^{-ix}\right)\\
+&=&\frac{\sin(5x)}{16}-\frac{5\sin(3x)}{16}+\frac{5\sin(x)}{8}.
+\end{eqnarray*}
+Une primitive de la fonction recherchée est donc la fonction
+$$x\mapsto \frac{-\cos(5x)}{80}+\frac{5\cos(3x)}{48}-\frac{5\cos(x)}{8}.$$
+<li> On écrit, pour éviter le calcul d'un produit, $\cos^4 x\sin^2 x=\cos^4 x-\cos^6 x$.
+Or,
+\begin{eqnarray*}
+\cos^4 x&=&\left(\frac{e^{ix}+e^{-ix}}2\right)^4\\
+&=&\frac{1}{2^4}\left(e^{i4x}+e^{-i4x}+4e^{2ix}+4e^{-2ix}+6\right)\\
+&=&\frac{1}{2^4}\left(2\cos(4x)+8\cos(2x)+6\right).
+\end{eqnarray*}
+De même, on trouve
+$$\cos^6 x=\frac{1}{2^6}\big(2\cos (6x)+12\cos (4x)+30\cos (2x)+20\big).$$
+On a donc 
+$$\cos^4 x-\cos^6 x=-\frac{1}{32}\cos(6x)-\frac1{16}\cos(4x)+\frac1{32}\cos(2x)+\frac1{16}.$$
+Une primitive de la fonction étudiée est donc la fonction
+$$x\mapsto \frac{-1}{192}\sin(6x)-\frac{1}{64}\sin(4x)+\frac{1}{64}\sin(2x)+\frac{x}{16}.$$
+<li> On commence par linéariser $\cos^3 x$ en $\big(\cos(3x)+3\cos(x)\big)/4$.
+Avec la formule 
+$$\cos p\cos q=\frac12\big(\cos(p+q)+\cos(p-q)\big)$$
+on trouve finalement
+\begin{eqnarray*}
+\int \cos(3x)\cos^3x&=&\frac18\int \big(1+\cos(6x)+3\cos(4x)+3\cos(2x)\big)dx\\
+&=&\frac x8+\frac{\sin(6x)}{48}+\frac{3\sin(4x)}{32}+\frac{3\sin(2x)}{16}+C.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater440"></span><script>var myRating = raterJs( { element:document.querySelector("#rater440"),	max:5, rating:1.625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(440,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale trigonométrique - 1 <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=440.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(440,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce440','imageenonce440');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce440"></a><div class=inner id="innerenonce440">Calculer les intégrales suivantes :
+$$\mathbf{1.}\ \int_0^{\pi/4}\frac{\sin^3(t)}{1+\cos^2 t}dt\quad\quad\mathbf{2.}\ \int_{\pi/3}^{\pi/2}\frac{dx}{\sin x}\quad\quad\mathbf{3.}\ \int_0^{\pi/3}\big(1+\cos(x)\big)\tan(x)dx.$$</div></div><div class=indication><a href="javascript:showAll('innerindication440','imageindication440');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication440"></a><div class=inner id="innerindication440" style="display:none;">Faire le changement de variables $u=\cos(t)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige440','imagecorrige440',440);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige440"></a><div class=inner id="innercorrige440" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $u=\cos t$, de sorte que $du=-\sin t  dt$. Il vient
+$\sin^3 dt=(\sin^2 t)\sin t dt=-(1-u^2)du$. De plus,
+pour $t=0$, $u=1$ et pour $t=\pi/4$, $u=\sqrt 2/2$. L'intégrale est donc égale à
+\begin{align*}
+I&=-\int_1^{\sqrt 2/2}\frac{1-u^2}{1+u^2}du\\
+&=\int_{\sqrt 2/2}^1 \frac{1-u^2}{1+u^2}du\\
+&=-\int_{\sqrt 2/2}^1du+\int_{\sqrt 2/2}^1 \frac{2}{u^2+1}du\\
+&=-1+\frac{\sqrt 2}{2}+\frac\pi2-2\arctan(\sqrt 2/2).
+\end{align*}
+<li> Là aussi, le meilleur changement de variables est $u=\cos x$, de sorte que $du=-\sin x dx$. Pour le faire
+apparaitre dans l'intégrale, on écrit :
+\begin{eqnarray*}
+\int_{\pi/3}^{\pi/2}\frac{dx}{\sin x}&=&\int_{\pi/3}^{\pi/2}\frac{\sin x}{1-\cos^2 x}dx\\
+&=&\int_{1/2}^0\frac{-du}{1-u^2}\\
+&=&\frac12\int_0^{1/2}\left(\frac{1}{u-1}-\frac{1}{u+1}\right)du\\
+&=&\frac12\left[\ln\left|\frac{u-1}{u+1}\right|\right]_0^{1/2}\\
+&=&\frac12\ln 3.
+\end{eqnarray*}
+<li> C'est encore le même changement de variables qui est le meilleur!
+\begin{eqnarray*}
+\int_0^{\pi/3}\big(1+\cos(x)\big)\tan(x)dx&=&\int_{1/2}^1\frac{1+u}{u}du\\
+&=&\big[u+\ln u\big]_{1/2}^1\\
+&=&\frac12+\ln 2.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater443"></span><script>var myRating = raterJs( { element:document.querySelector("#rater443"),	max:5, rating:1.35, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(443,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrales abéliennes - 1 <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=443.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(443,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce443','imageenonce443');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce443"></a><div class=inner id="innerenonce443">Déterminer une primitive des fonctions suivantes :
+$$\begin{array}{lcl}
+\displaystyle \mathbf{1.}\quad x\mapsto \frac{1}{1-\sqrt{x+2}}\quad\quad&\mathbf{2.}\displaystyle \quad x\mapsto \frac{1}{(1-x^2)\sqrt{1-x^2}}\\
+\displaystyle \mathbf{3.}\quad x\mapsto\sqrt{\frac{x-1}{x+1}}.
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication443','imageindication443');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication443"></a><div class=inner id="innerindication443" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire le changement de variables $u=\sqrt {x+2}$.
+<li> Faire le changement de variables $u=\cos\theta$.
+<li> Faire le changement de variables $u=\sqrt{\frac{x-1}{x+1}}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige443','imagecorrige443',443);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige443"></a><div class=inner id="innercorrige443" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction est définie et continue sur $[-2,+\infty[\backslash\{-1\}$. Le calcul sera donc valable sur les intervalles
+$[-2,-1[$ et $]-1,+\infty[$. On effectue le changement de variables $u=\sqrt{x+2}$, puisque la fonction $x\mapsto \sqrt{x+2}$ est bijective et $C^\infty$
+sur $]-2,+\infty[$, de sorte que $du=\frac{1}{2\sqrt{x+2}}dx=\frac{dx}{2u}$. On en déduit :
+\begin{eqnarray*}
+\int\frac{dx}{1-\sqrt{x+2}}dx&=&\int\frac{2u}{1-u}du\\
+&=&2\int \left(\frac{1}{1-u}-1\right)du\\
+&=&2\big(-\ln|1-u|-u\big)+C\\
+&=&-2\ln\big|1-\sqrt{x+2}\big|-2\sqrt{x+2}+C.
+\end{eqnarray*}
+<li> La fonction est définie sur $]-1,1[$, et on effectue le changement de variables $x=\sin u$, avec $u\in[-\pi/2,\pi/2]$, de sorte que $dx=\cos u du$. On trouve :
+\begin{eqnarray*}
+\int\frac{dx}{(1-x^2)\sqrt{1-x^2}}&=&\int \frac{\cos u}{\cos^2 u\cos u}du\\
+&=&\int\frac{du}{\cos^2 u}\\
+&=&\tan(u)+C\\
+&=&\frac{\sin u}{\cos u}+C\\
+&=&\frac{x}{\sqrt{1-x^2}}+C.
+\end{eqnarray*}
+<li> On pose $u=\sqrt{\frac{x-1}{x+1}}$, de sorte que $x=\frac{u^2+1}{1-u^2}$ et $dx=\frac{4u}{(1-u^2)^2}$. On en déduit
+\begin{eqnarray*}
+\int\sqrt{\frac{x-1}{x+1}}dx&=&\int\frac{4u^2}{(1-u^2)^2}du\\
+&=&\int\left(\frac{1}{u-1}+\frac{1}{(u-1)^2}-\frac{1}{u+1}+\frac{1}{(u+1)^2}\right)du\\
+&=&-\frac{1}{u-1}+\ln|u-1|-\frac{1}{u+1}-\ln|1+u|+C\\
+&=&-\frac{1}{\sqrt{\frac{x-1}{x+1}}-1}+\ln\left|\sqrt{\frac{x-1}{x+1}}-1\right|-\frac{1}{\sqrt{\frac{x-1}{x+1}}+1}-\ln\left|1+\sqrt{\frac{x-1}{x+1}}\right|+C\\
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater664"></span><script>var myRating = raterJs( { element:document.querySelector("#rater664"),	max:5, rating:3.3529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(664,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une racine carrée <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=664.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(664,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce664','imageenonce664');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce664"></a><div class=inner id="innerenonce664">On se propose de calculer $I=\int_1^{5/2}\sqrt{-x^2+2x+8}dx$.
+<ol class="enumeratechiffre">
+<li> Mettre le trinôme sous forme canonique.
+<li> En effectuant deux changements de variable, calculer la valeur de $I$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication664','imageindication664');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication664"></a><div class=inner id="innerindication664" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Le premier changement de variables pourra être $u=(x-1)/3$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige664','imagecorrige664',664);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige664"></a><div class=inner id="innercorrige664" style="display:none;"><ol class="enumeratechiffre">
+<li> On a tout simplement :
+$$-x^2+2x+8=-(x^2-2x-8)=-\big( (x-1)^2-9\big)=9-(x-1)^2.$$
+<li> On a 
+\begin{eqnarray*}
+I&=&\int_1^{5/2}\sqrt{9-(x-1)^2}dx\\
+&=&3\int_1^{5/2}\sqrt{1-\left(\frac{x-1}3\right)^2}dx
+\end{eqnarray*}
+On pose alors $u=\frac{x-1}3$ de sorte de se ramener à une intégrale du type $\int\sqrt{1-u^2}du$, que l'on sait calculer. On a $dx=3du$, et le changement de variables est affine, donc bijectif. On en déduit que
+\begin{eqnarray*}
+I&=&9\int_0^{1/2}\sqrt{1-u^2}du
+\end{eqnarray*}
+On pose ensuite $u=\sin t$. La fonction $\sin$ réalisant une bijection de l'intervalle $[0,\pi/6]$ sur l'intervalle $[0,1/2]$, on en déduit que
+\begin{eqnarray*}
+I&=&9\int_0^{\pi/6}\sqrt{1-\sin^2 t}\cos tdt\\
+&=&9\int_0^{\pi/6}\cos^2(t)dt\\
+&=&\frac 92\int_0^{\pi/6}\big(1+\cos(2t)\big)dt\\
+&=&\frac 92\left[t+\frac12\sin(2t)\right]_0^{\pi/6}\\
+&=&\frac{3\pi}4+\frac{9\sqrt 3}8.
+\end{eqnarray*}
+</ol></div></div></div>
+
+
+
+<div class=titrepartie>Consulter aussi</div><div class=liste><ul><li><a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse%252Fintegration%252Fintegration-calcul&amp;type=fexo.html">D'autres calculs</a></li></ul></div></article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

@@ -1,0 +1,839 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Variables aléatoires : convergence et théorèmes limites</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fproba.html">Exercices de dénombrement - probabilités - statistiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Variables aléatoires : convergence et théorèmes limites</h1>
+<div class=titrepartie>Diverses notions de convergence</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2046"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2046"),	max:5, rating:1.304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2046,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite de variables aléatoires <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2046.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2046,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2046','imageenonce2046');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2046"></a><div class=inner id="innerenonce2046">Pour tout entier naturel $n$ non nul, on considère la fonction $f_n$ définie par $$f_n(x)=\mathbf 1_{\mathbb
+R_+}(x)n^2x\exp(-n^2x^2/2).$$
+<ol class="enumeratechiffre">
+<li> Montrer que $f_n$ est la densité d'une variable aléatoire.
+<li> Soit $(X_n)$ une suite de variables aléatoires telle que, pour tout entier $n\geq 1$, $X_n$ admet pour densité $f_n$. Démontrer que la suite $(X_n)$
+converge en probabilité vers une variable aléatoire $X$ que l'on précisera.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2046','imageindication2046');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2046"></a><div class=inner id="innerindication2046" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Appliquer la définition pour démontrer que $(X_n)$ converge en probabilité vers la variable aléatoire nulle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2046','imagecorrige2046',2046);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2046"></a><div class=inner id="innercorrige2046" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que $f_n$ est positive et continue. De plus, pour tout $x&gt;0$, 
+$$\int_{-\infty}^x f_n(t)dt=\int_0^x n^2t\exp(-n^2t^2/2)dt=\left[-\exp(-n^2t^2/2)\right]_0^x=1-\exp(-n^2x^2/2).$$
+Faisant tendre $x$ vers $+\infty$, on en déduit que
+$$\int_{-\infty}^{+\infty}f(t)dt=1,$$
+ce qui achève de prouver que $f_n$ est une densité de probabilité.
+<li> Soit $\veps&gt;0$. On a 
+\begin{eqnarray*}
+P(|X_n|\geq\veps)&=&\int_{\veps}^{+\infty}n^2 t\exp(-n^2t^2/2)dt\\
+&=&\left[-\exp(-n^2t^2/2)\right]_\veps^{+\infty}\\
+&=&\exp(-n^2\veps^2/2).
+\end{eqnarray*}
+Lorsque $n\to+\infty$, ceci tend vers 0. On en déduit que $(X_n)$ converge en probabilité vers la variable aléatoire
+nulle ($X=0$).
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2047"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2047"),	max:5, rating:2.5357142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2047,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérations et convergence en probabilité <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2047.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2047,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2047','imageenonce2047');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2047"></a><div class=inner id="innerenonce2047">Soit $(X_n)$ une suite de variables aléatoires réelles définies sur $(\Omega,\mathcal A,P)$ convergeant en probabilité vers $X$.
+Soit $Y$ une variable aléatoire définie sur $(\Omega,\mathcal A,P)$.
+<ol class="enumeratechiffre">
+<li> Soit $\veps&gt;0$. Démontrer qu'il existe $n_0\in\mathbb N$ et $M&gt;0$ tel que 
+$$\forall n\geq n_0,\ P(|X_n|\geq M)+P(|X|\geq M)+P(|Y|\geq M)\leq\veps.$$
+ <li> Démontrer que $YX_n$ converge en probabilité vers $YX$.
+<li> Soit $f:\mathbb R\to\mathbb R$ une fonction uniformément continue. Démontrer que $(f(X_n))$ converge en probabilité
+vers $f(X)$.
+<li> Soit $f:\mathbb R\to\mathbb R$ une fonction continue. Démontrer que $(f(X_n))$ converge en probabilité
+vers $f(X)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2047','imageindication2047');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2047"></a><div class=inner id="innerindication2047" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $|X_n|$ est grand, ou bien $|X_n-X|\geq 1$, ou bien $|X|$ est grand lui aussi.
+<li> Découper $\{|YX_n-YX|\geq \veps\}$ en $\{|Y|\geq M\}\cup \{|Y|\leq M\textrm{ et }|X_n-X|\geq\veps/M\}.$
+<li> Il suffit juste d'écrire la définition d'uniforme continuité.
+<li> Se ramener à la question précédente, à l'aide du théorème de Heine et de la première question.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2047','imagecorrige2047',2047);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2047"></a><div class=inner id="innercorrige2047" style="display:none;"><ol class="enumeratechiffre">
+<li> D'abord, on peut trouver un réel $M_1$ tel que $ P(|X|\geq M_1)+P(|Y|\geq M_1)\leq\veps/3$.
+Ensuite, il existe $n_0\in\mathbb N$ tel que, pour $n\geq n_0$, on a 
+$P(|X_n-X|\geq 1)\leq \veps/3$. Posons $M=M_1+1$ et
+considérons l'événement $|X_n|\geq M$. Si $|X_n|\geq M$, alors ou bien $|X_n-X|\geq 1$,
+ou bien $|X_n-X|&lt;1$ mais dans ce cas $|X|&gt;M_1$. On en déduit que, pour $n\geq n_0$, 
+$$P(|X_n|\geq M)\leq P(|X_n-X|\geq 1)+P(|X|\geq M)\leq \frac{\veps}3+\frac{\veps}3=2\veps/3,$$
+ce qui entraîne le résultat voulu.
+<li> On fixe $\veps&gt;0$ et soit $M$ la constante donnée par la question précédente. 
+Soit également $a&gt;0$.
+Remarquons que si $|Y|\leq M$ et $|YX_n-YX|\geq a$, alors nécessairement $|X_n-X|\geq a/M$.
+Il vient 
+$$\{|YX_n-YX|\geq a\}\subset \{|Y|\geq M\}\cup \{|Y|\leq M\textrm{ et }|X_n-X|\geq a/M\}$$
+soit 
+$$P(|YX_n-YX|\geq a)\leq P(|Y|\geq M)+P(|Y|\leq M\textrm{ et }|X_n-X|\geq a/M).$$
+Mais $P(|Y|\geq M)\leq \veps$ et, pour $n$ assez grand, par convergence en probabilité,
+$P(|X_n-X|\geq a/M)\leq\veps$. On a donc bien, pour $n$ assez grand,
+$$P(|YX_n-YX|\geq a)\leq2\veps$$
+ce qui prouve la convergence en probabilité de la suite $(YX_n)$ vers $YX$.
+<li> Soit $a&gt;0$. Par uniforme continuité de $f$, il existe $\eta&gt;0$ tel que 
+$$|x-y|&lt;\eta\implies |f(x)-f(y)|&lt;a.$$ On en déduit que
+$$\{|f(X_n)-f(X)|\geq a\}\subset \{|X_n-X|\geq\eta\}.$$
+Mais $P(|X_n-X|\geq\eta)$ tend vers 0, ce qui prouve la convergence en probabilité
+de $(f(X_n))$ vers $f(X)$. 
+<li> On fixe $\veps&gt;0$ et soit $M$ la constante donnée par la première question.
+Soit également $a&gt;0$. On va se ramener à l'uniforme continuité
+de $f$ sur le segment $[-M,M]$. Pour cela, on remarque que
+\begin{eqnarray*}
+|f(X_n)-f(X)|\geq a&\subset&\{|X|\geq M\}\cup\{|X_n|\geq M\}\cup\\
+&&\quad\{|X_n|\leq M\textrm{ et }|X|\leq M\textrm{ et }|f(X_n)-f(X)|\geq a\}.
+\end{eqnarray*}
+Par le théorème de Heine, $f$ est uniformément continue sur le segment $[-M,M]$. Ainsi, il existe $\eta&gt;0$ tel que, 
+$$x,y\in[-M,M]\textrm{ et }|x-y|&lt;\eta\implies |f(x)-f(y)|&lt;a.$$
+Comme à la question précédente, ceci entraine que 
+$$\{|X_n|\leq M\textrm{ et }|X|\leq M\textrm{ et }|f(X_n)-f(X)|\geq a\}\subset\{|X_n-X|\geq\eta\}.$$
+Par convergence en probabilité de la suite $(X_n)$ vers $X$, on en déduit l'existence de $n_1$ tel que,
+pour $n\geq n_1$, on a :
+$$P(|X_n-X|\geq\eta)\leq\veps.$$
+Finalement, pour $n\geq\max(n_0,n_1)$, on trouve
+$$P(|f(X_n)-f(X)|\geq a)\leq P(|X|\geq M)+P(|X_n|\geq M)+P(|X_n-X|\geq \eta)\leq 2\veps.$$
+Ainsi, la suite $(f(X_n))$ converge en probabilité vers $f(X)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2048"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2048"),	max:5, rating:2.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2048,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Maximum de lois uniformes <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2048.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2048,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2048','imageenonce2048');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2048"></a><div class=inner id="innerenonce2048">Soit $(U_n)$ une suite de variables aléatoires indépendantes suivant toutes la loi uniforme sur $[0,1]$. 
+On note $M_n=\max(U_1,\dots,U_n)$ et $X_n=n(1-M_n)$. 
+<ol class="enumeratechiffre">
+<li> Quelle est la fonction de répartition de $X_n$?
+<li> &Eacute;tudier la convergence en loi de la suite $(X_n)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2048','imageindication2048');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2048"></a><div class=inner id="innerindication2048" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par la fonction de répartition de $U_n$.
+<li> Faire tendre $n$ vers $+\infty$...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2048','imagecorrige2048',2048);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2048"></a><div class=inner id="innercorrige2048" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par déterminer la fonction de répartion de $M_n$. 
+Puisque $M_n$ est à valeurs dans $[0,1]$, il est clair que si $x\leq 0$, on a $P(M_n\leq x)=0$ et si 
+$x\geq 1$, on a $P(M_n\leq x)=1$. Prenons maintenant $x\in]0,1[$. Alors :
+$$M_n\leq x\iff \forall i\in\{1,\dots,n\},\ U_i\leq x.$$
+Puisque les variables aléatoires $(U_i)_{1\leq i\leq n}$ sont indépendantes, on en déduit que
+$$P(M_n\leq x)=\prod_{i=1}^n P(U_i\leq x)=x^n.$$
+Pour obtenir la fonction de répartition de $X_n$, on remarque que 
+$$X_n\leq x\iff M_n\geq 1-\frac xn,$$
+d'où 
+$$P\left(X_n\leq x\right)=1-P\left(M_n\leq 1-\frac xn\right).$$
+De plus, 
+$$1-\frac xn\in[0,1]\iff x\in[0,n].$$
+On en déduit que la fonction de répartition de $(X_n)$ est donnée par
+$$F_{X_n}(x)=\left\{
+\begin{array}{ll}
+0&\textrm{ si }x\leq 0\\
+1-\left(1-\frac xn\right)^n&\textrm{ si }0\leq x\leq n\\
+1&\textrm{ si }x\geq n.
+\end{array}\right.$$
+<li> On va étudier, à $x$ fixé, la limite de $F_{X_n}(x)$. D'abord, pour $x\leq 0$, il est clair
+que $\lim_n F_{X_n}(x)=0$. Maintenant, pour $x\geq 0$, dès que $n$ est assez grand, on a $x\leq n$
+et donc
+$$F_{X_n}(x)=1-\left(1-\frac xn\right)^n.$$
+Or, en passant à l'exponentielle, on sait que 
+$$\lim_{n\to+\infty}\left(1-\frac xn\right)^n=e^{-x}.$$
+On en déduit que $F_{X_n}(x)$ tend vers $F(x)$ défini par
+$$F(x)=\left\{
+\begin{array}{ll}
+0&\textrm{ si }x\leq 0\\
+1-e^{-x}&\textrm{ si }x\geq 0.
+\end{array}\right.$$
+On en déduit que $(X_n)$ converge en loi vers la loi exponentielle de paramètre $1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2049"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2049"),	max:5, rating:2.0909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2049,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence en loi et en probabilité pour une suite de variables à densité <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2049.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2049,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2049','imageenonce2049');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2049"></a><div class=inner id="innerenonce2049">Soit $n$ un entier naturel non-nul et soit $a$ un réel. On considère la fonction $f_n$
+définie sur $\mathbb R$ par $f_n(x)=\frac{an}{\pi(1+n^2x^2)}.$
+<ol class="enumeratechiffre">
+ <li> Déterminer $a$ pour que $f_n$ soit une densité de variable aléatoire.
+ <li> Soit $(X_n)$ une suite de variables aléatoires telle que chaque $X_n$
+admet pour densité $f_n$. &Eacute;tudier l'existence de moments pour $X_n$.
+<li> &Eacute;tudier la convergence en loi de la suite $(X_n)$.
+<li> &Eacute;tudier la convergence en probabilité de la suite $(X_n)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2049','imageindication2049');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2049"></a><div class=inner id="innerindication2049" style="display:none;"><ol class="enumeratechiffre">
+ <li> Il faut et il suffit qu'une intégrale soit égale à $1$.
+ <li> La fonction $xf_n$ est-elle intégrable?
+<li> &Eacute;tudier la limite ponctuelle de la fonction de répartition. Elle doit donner
+une fonction très simple.
+<li> Revenir à la définition de la convergence en probabilité pour prouver que $(X_n)$ converge en probabilité vers $0$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2049','imagecorrige2049',2049);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2049"></a><div class=inner id="innercorrige2049" style="display:none;"><ol class="enumeratechiffre">
+ <li> $f_n$ étant continue et positive, elle sera une densité de variable aléatoire si et seulement si
+$$\int_{-\infty}^{+\infty}f_n(x)dx=1.$$
+Or, effectuant le changement de variables $u=nx$, on a
+$$\int_{-\infty}^{+\infty}\frac{an}{\pi(1+n^2x^2)}dx=\int_{-\infty}^{+\infty}\frac{a}{\pi(1+u^2)}du=\frac{a}\pi\left[\arctan(u)\right]_{-\infty}^{+\infty}=\frac{a}\pi\times\pi=a.$$
+$f_n$ est donc une densité de variable aléatoire si et seulement si $a=1$.
+ <li> On a $xf_n(x)\sim_{+\infty}\frac 1{\pi n x}$ dont l'intégrale est divergente au voisinage de $+\infty$, et qui est une fonction positive.
+ Ainsi, la variable aléatoire $X_n$ n'admet pas d'espérance, ni aucun autre moment.
+<li> Notons $F_n$ la fonction de répartion de $X_n$, définie par
+$$F_n(x)=\int_{-\infty}^x f_n(t)dt=\frac{1}{\pi}\left(\arctan(nx)+\frac\pi 2\right).$$
+Si $x&lt;0$, $\arctan(nx)\to-\pi/2$, et donc $F_n(x)\to 0$.
+Si $x&gt;0$, $\arctan(nx)\to\pi/2$ et donc $F_n(x)\to 1$. Soit maintenant $X$ une variable aléatoire
+identiquement nulle. Sa fonction de répartition $F_X$ vérifie
+$F_X(x)=0$ si $x&lt;0$ et $F_X(x)=1$ si $x\geq 0$. Autrement dit, en tout point de continuité
+de $F_X$, la suite $(F_n(x))$ converge vers $F_X(x)$. C'est exactement la définition
+de la convergence en loi de la suite $(X_n)$ vers $X$.
+<li> On va prouver que $(X_n)$ converge en probabilité vers $0$. Pour cela, on revient à la définition et on fixe $\veps&gt;0$. On doit prouver que $\lim_n P(|X_n|\geq\veps)=0$. Utilisons la densité pour calculer cette probabilité. Puisque la densité est une fonction paire, il faut en réalité démontrer que 
+$$\int_{\veps}^{+\infty}\frac{n}{\pi(1+n^2x^2)}dx\to 0.$$
+Faisant le changement de variables $u=nx$, on a 
+$$\int_{\veps}^{+\infty}\frac{n}{\pi(1+n^2x^2)}dx=\int_{n\veps}^{+\infty}\frac{du}{\pi(1+u^2)}.$$
+Ceci tend bien vers 0 lorsque $n$ tend vers $+\infty$ car c'est le reste d'une intégrale impropre convergente.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2050"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2050"),	max:5, rating:2.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2050,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi de Gumbel <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2050.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2050,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2050','imageenonce2050');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2050"></a><div class=inner id="innerenonce2050">On dit qu'une variable aléatoire $Y$ suit une loi de Gumbel si elle
+admet pour densité $f(x)=e^{-x-e^{-x}}$.
+<ol class="enumeratechiffre">
+ <li> Vérifier que $f$ est une densité, et calculer la fonction de répartition de $Y$.
+<li> Soit $(X_n)$ une suite de variables aléatoires indépendantes identiquement distribuées
+de loi exponentielle de paramètre 1. On pose $M_n=\max(X_1,\dots,X_n)$.
+Démontrer que la suite $(M_n-\ln n)$ converge en loi vers $Y$ suivant une loi de Gumbel.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2050','imageindication2050');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2050"></a><div class=inner id="innerindication2050" style="display:none;"><ol class="enumeratechiffre">
+ <li> $f$ est de la forme $u'e^u$.
+<li> Déterminer la fonction de répartition de $M_n$, puis de $M_n-\ln n$. Appliquer
+ensuite la définition de la convergence en loi.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2050','imagecorrige2050',2050);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2050"></a><div class=inner id="innercorrige2050" style="display:none;"><ol class="enumeratechiffre">
+ <li> On doit démontrer que $\int_{\mathbb R}f(x)dx=1$. Pour cela, il suffit de remarquer que $f$ est de la forme $f(x)=u'(x)\exp(u(x))$, avec $u(x)=-e^{-x}$. On en 
+déduit
+$$\int_{-\infty}^{+\infty}f(x)dx=\left[e^{-e^{-x}}\right]_{-\infty}^{+\infty}=1-0=1.$$
+Plus généralement, la fonction de répartition est donnée par 
+$$F_Y(t)=\int_{-\infty}^t f(u)du=e^{-e^{-t}}.$$
+<li> On note $F_n$ la fonction de répartition de $M_n$ et $G_n$ la fonction de répartition de $M_n-\ln n$. Puisque
+$$P(M_n\leq t)=P(M_n-\ln n\leq t-\ln n),$$
+il est clair que $G_n(t)=F_n(t+\ln n)$. De plus, par indépendance des variables $(X_n)$, on a 
+\begin{eqnarray*}
+P(M_n\leq t)&=&P\big((X_1\leq t)\cap (X_2\leq t)\cap\dots\cap (X_n\leq t)\big)\\
+&=&P(X_1\leq t)\dots P(X_n\leq t)\\
+&=&(1-e^{-t})^n \mathbf 1_{[0,+ \infty]}(t).
+\end{eqnarray*}
+On en déduit que $G_n(t)=0$ si $t&lt;-\ln n$, et si $t&gt;-\ln n$, 
+$$G_n(t)=\left(1-e^{-t-\ln n}\right)^n=\left(1-\frac{e^{-t}}{ n}\right)^n.$$
+Pour obtenir la convergence en loi, il faut et il suffit de prouver que pour tout réel $t$, on a 
+$G_n(t)$ qui converge vers $F_Y(t)$. Mais, si $n$ est assez grand,
+\begin{eqnarray*}
+ G_n(t)&=&\left(1-\frac{e^{-t}}{n}\right)^n=\exp\left(n\ln \left(1-\frac{e^{-t}}{ n}\right)\right)\\
+&=&\exp(-\exp(-t)+o(1))\to F_Y(t).
+\end{eqnarray*}
+On obtient effectivement le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2051"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2051"),	max:5, rating:1.9473684210526, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2051,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quand la convergence en loi entraîne la convergence en probabilité <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2051.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2051,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2051','imageenonce2051');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2051"></a><div class=inner id="innerenonce2051">Soit $(X_n)$ une suite de variables aléatoires qui converge en loi vers
+une variable aléatoire $X$ constante égale à $a$. Démontrer que
+la suite $(X_n)$ converge aussi en probabilité vers $X$.</div></div><div class=indication><a href="javascript:showAll('innerindication2051','imageindication2051');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2051"></a><div class=inner id="innerindication2051" style="display:none;">Se ramener aux fonctions de répartitions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2051','imagecorrige2051',2051);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2051"></a><div class=inner id="innercorrige2051" style="display:none;">Soit $\veps&gt;0$. On doit
+prouver que $P(|X_n-a|&gt;\veps)\to 0$. Mais, 
+$$P(|X_n-a|&gt;\veps)=1-P(|X_n-a|\leq\veps)$$
+et 
+$$P(X_n\in[a-\veps,a+\veps])\geq P(X_n\in]a-\veps/2,a+\veps])=F_{X_n}(a+\veps)-F_{X_n}(a-\veps/2).$$
+On a donc
+$$P(|X_n-a|&gt;\veps)\leq 1-F_{X_n}(a+\veps)+F_{X_n}(a-\veps/2).$$
+Or, $F_X$ est égale à $0$ sur $]-\infty,a[$, et égale à 1 sur $[a,+\infty[$.
+En particulier, $F_X$ est continue en $a+\veps$ et $a-\veps/2$, et donc
+$$F_{X_n}(a+\veps)\to F_X(a+\veps)=1\textrm{ et }F_{X_n}(a-\veps/2)\to F_X(a-\veps/2)=0.$$
+On en déduit bien le résultat voulu.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2052"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2052"),	max:5, rating:1.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2052,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum de Bernoulli <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2052.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2052,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2052','imageenonce2052');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2052"></a><div class=inner id="innerenonce2052">Soit $\lambda&gt;0$. Pour tout entier $n\geq\lambda$, on fixe $(X_i^n)_{i\geq 1}$ une suite de variables aléatoires indépendantes
+de Bernoulli de paramètre $p_n=\lambda/n$. On considère alors la variable aléatoire 
+$$N_n=\frac 1n\inf\{i\geq 1;\ X_i^n=1\}.$$
+Démontrer que la suite $(N_n)$ converge en loi vers une variable aléatoire réelle de loi exponentielle de paramètre $\lambda$.</div></div><div class=indication><a href="javascript:showAll('innerindication2052','imageindication2052');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2052"></a><div class=inner id="innerindication2052" style="display:none;">Quelle est la loi de $nN_n$? Sa fonction caractéristique? En déduire la convergence en loi.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2052','imagecorrige2052',2052);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2052"></a><div class=inner id="innercorrige2052" style="display:none;">$n N_n$ modélise le temps d'attente du premier succès dans un schéma de Bernoulli avec probabilité de succès $\lambda/n$. On en déduit que $n N_n$ suit une loi géométrique de paramètre $\frac\lambda n$.  La fonction caractéristique de $N_n$ est donc :
+$$\phi_{N_n}(t)=\frac{\frac \lambda ne^{i\frac tn}}{1-\left(1-\frac\lambda n\right)e^{i\frac tn}}.$$
+On va chercher la limite de $\phi_{N_n}(t)$ lorsque $n$ tend vers $+\infty$. Pour cela, on effectue un développement limité. En effet, 
+$$\frac\lambda ne^{i\frac tn}=\frac{\lambda}n+o\left(\frac 1n\right)$$
+et 
+\begin{eqnarray*}
+1-\left(1-\frac\lambda n\right)e^{i\frac tn}&=&1-\left(1-\frac\lambda n\right)\left(1+\frac{it}n+o\left(\frac 1n\right)\right)\\
+&=&1-1+\frac\lambda n-\frac{it}n+o\left(\frac 1n\right)\\
+&=&\frac{\lambda-it}n+o\left(\frac 1n\right).
+\end{eqnarray*}
+Ainsi, 
+$$\phi_{N_n}(t)\to \frac\lambda{\lambda-it},$$
+qui est la fonction caractéristique d'une loi exponentielle de paramètre $\lambda$. Ainsi, $(N_n)$ converge en loi vers une variable aléatoire suivant une loi exponentielle de paramètre $\lambda$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2053"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2053"),	max:5, rating:2.2941176470588, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2053,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence de la loi binomiale vers la loi de Poisson <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2053.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2053,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2053','imageenonce2053');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2053"></a><div class=inner id="innerenonce2053">Soit $(X_n)$ une suite de variables aléatoires vérifiant une loi binomiale $\mathcal B(n,p_n)$,
+avec $np_n\to\lambda&gt;0$. Démontrer que $(X_n)$ converge en loi vers une variable aléatoire
+$X$ suivant une loi de Poisson $\mathcal P(\lambda)$.</div></div><div class=indication><a href="javascript:showAll('innerindication2053','imageindication2053');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2053"></a><div class=inner id="innerindication2053" style="display:none;">Prouver la convergence des fonctions caractéristiques.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2053','imagecorrige2053',2053);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2053"></a><div class=inner id="innercorrige2053" style="display:none;">Notons $\phi_{X_n}$ la fonction caractéristique de $X_n$, 
+et $\phi_X$ la fonction caractéristique de $X$. On va démontrer que
+pour chaque $t\in\mathbb R$, on a $\phi_{X_n}(t)\to\phi_X(t)$. Rappelons que
+\begin{eqnarray*}
+ \phi_{X_n}(t)&=&\left(p_n\exp(it)+(1-p_n)\right)^n\\
+\phi_X(t)&=&\exp\left(\lambda\big(\exp(it)-1\big)\right).
+\end{eqnarray*}
+On écrit 
+\begin{eqnarray*}
+ \phi_{X_n}(t)&=&\left(1+p_n\big(\exp(it)-1\big)\right)^n\\
+&=&\exp\left(n\log\left(1+p_n\big(\exp(it)-1\big)\right)\right)\\
+&=&\exp\left(np_n\big(\exp(it)-1\big)+o(np_n)\right)\\
+&\to&\exp\left(\lambda\big(\exp(it)-1\big)\right).
+\end{eqnarray*}
+On a bien convergence de $\phi_{X_n}(t)$ vers $\phi_X(t)$.</div></div></div>
+
+<div class=titrepartie>Approximation de la loi binomiale par la loi de Poisson</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2039"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2039"),	max:5, rating:0.73333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2039,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Location de voitures <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2039.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2039,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2039','imageenonce2039');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2039"></a><div class=inner id="innerenonce2039">Une société de location de voitures a calculé que la probabilité qu'une de ses voitures louée ait un accident est égale à $0,2\%$. On suppose que les accidents sont indépendants les uns des autres. Chaque jour, 1000 voitures de la société sont en circulation.  On note $N$ le nombre de voitures accidentées.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $N$?
+<li> Donner une valeur approchée de la probabilité pour qu'il y ait au moins 5 voitures accidentées dans la journée.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2039','imageindication2039');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2039"></a><div class=inner id="innerindication2039" style="display:none;"><ol class="enumeratechiffre">
+<li> Loi binomiale.
+<li> Approcher par une loi de Poisson.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2039','imagecorrige2039',2039);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2039"></a><div class=inner id="innercorrige2039" style="display:none;"><ol class="enumeratechiffre">
+<li> On reconnait le schéma d'une loi binomiale (somme de $1000$ variables aléatoires indépendant de Bernoulli de paramètre 0,002). Ainsi, $N$ suit une loi binomiale de paramètres $1000$ et $0,002$.
+<li> On a $1000\geq 30$, $p=0,002\leq 0,1$ et $1000\times 0,002=2&lt;15$. On est donc dans les conditions où on peut approcher la loi binomiale par une loi de Poisson de paramètre $2$. On a donc
+$$P(N\leq 4)\simeq e^{-2}\left(2^0+2^1+\frac{2^2}{2!}+\frac{2^3}{3!}+\frac{2^4}{4!}\right)=7e^{-2}\simeq 0,95.$$
+Ainsi, $P(N\geq 5)=1-P(N\leq 4)=0,05$. Il y a une probabilité d'environ 0,05 pour qu'il y ait au moins 5 voitures accidentées dans la journée (ce qui est beaucoup! les données initiales sont sans doute fausses!)
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2299"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2299"),	max:5, rating:1.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2299,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transmission en réseau <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2299.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2299,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2299','imageenonce2299');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2299"></a><div class=inner id="innerenonce2299"><ol class="enumeratechiffre">
+<li> Soit $X$ une variable aléatoire suivant une loi de Poisson de paramètre $\lambda$. Calculer $P(X=0\ |\  X\textrm{ est pair})$.
+<li> 
+2. Application : Une ligne de transmission entre émetteur et récepteur
+transporte des données représentées par 1024 octets (soit 8 192 bits). La
+probabilité que la transmission d’un bit soit erronée est estimée à $10^{-5}$
+et on admet que les erreurs sont indépendantes les unes des autres. On
+contrôle la qualité de la transmission avec un calcul de parité
+sur le nombre de 1 envoyés :
+<ul class="rien">
+<li>  si il y a un nombre impair d’erreurs, un message d’erreur apparaît.
+<li> sinon, c’est à dire si il y a un nombre pair d’erreurs, la transmission
+est acceptée.
+</ul>
+Calculer la probabilité qu’il n’y ait aucune erreur sachant que la transmission
+est acceptée.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2299','imageindication2299');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2299"></a><div class=inner id="innerindication2299" style="display:none;">On pourra considérer X la variable aléatoire associant à
+chaque envoi de données, le nombre d’erreurs lors de la transmission,
+c’est à dire le nombre de bits parmi les 8 192 dont la transmission est
+erronée.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2299','imagecorrige2299',2299);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2299"></a><div class=inner id="innercorrige2299" style="display:none;"><ol class="enumeratechiffre"> 
+<li> On a 
+$$P(X=0\ |\ X \textrm{ pair})=\frac{P(X=0\cap X\textrm{ pair})}{P(X\textrm{ pair})}=\frac{P(X=0)}{P(X\textrm{ pair})}.$$
+Or $P(X = 0) = e^{-\lambda}$ et $$P(X\textrm{ pair})=\sum_{k\in\mathbb N}P(X=2k)=\sum_{k\in\mathbb N}{e^{-\lambda}}\frac{\lambda^{2k}}{(2k)!}=e^{-\lambda}\cosh(\lambda).$$
+Finalement, on trouve
+$$P(X=0\ |\ X \textrm{pair})=\frac 1{\cosh(\lambda)}.$$
+<li> Par indépendance des erreurs sur chaque bit, le nombre
+total d’erreur suit une loi Binomiale $\mathcal B(n, p)$ avec $n = 8192$ et $p = 10^{-5}$.
+On approche cette loi par une loi de Poisson de paramètre $\lambda=np = 0, 08192$.
+D’après la question précédente, la probabilité qu’il n’y ait aucune erreur
+sachant que la transmission est acceptée est environ
+$$P(X=0\ |\ X \textrm{pair})=\frac 1{\cosh(0, 08192)}\simeq  0, 997.$$
+C’est donc un test facile et efficace!
+</ol></div></div></div>
+
+<div class=titrepartie>Loi des grands nombres</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2041"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2041"),	max:5, rating:1.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2041,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une variante de la loi faible des grands nombres <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2041.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2041,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2041','imageenonce2041');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2041"></a><div class=inner id="innerenonce2041">Soit $(X_n)_{n\geq 1}$ une suite de variables aléatoires deux à deux indépendantes. On suppose que chaque $X_n$ suit une loi de Bernoulli de paramètre $p_n$. On note $S_n=X_1+\dots+X_n$ et on souhaite démontrer que, pour tout $\veps&gt;0$, 
+$$\lim_{n\to+\infty}P\left(\left|\frac {S_n}n-\frac 1n\sum_{k=1}^n p_k\right|\geq \veps\right)=0.$$
+<ol class="enumeratechiffre">
+<li> Pourquoi ne peut-on pas appliquer directement la loi faible des grands nombres?
+<li> Quelle est l'espérance de $S_n$? Sa variance? Démontrer que $V(S_n)\leq n$.
+<li> En déduire le résultat.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2041','imageindication2041');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2041"></a><div class=inner id="innerindication2041" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser l'indépendance.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2041','imagecorrige2041',2041);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2041"></a><div class=inner id="innercorrige2041" style="display:none;"><ol class="enumeratechiffre">
+<li> On ne peut appliquer directement la loi faible des grands nombres car les $X_n$ n'ont pas forcément la même loi (il faudrait que tous les $p_n$ soient égaux).
+<li> Par linéarité de l'espérance, on sait que
+$$E(S_n)=\sum_{k=1}^n E(X_k)=\sum_{k=1}^n p_k$$
+et de l'indépendance des $X_n$, on tire
+$$V(S_n)=\sum_{k=1}^n V(X_k)=\sum_{k=1}^n p_k(1-p_k).$$
+Puisque $p_k(1-p_k)\leq 1$ (et même $\leq 1/4$), on a 
+$$V(S_n)\leq n.$$
+<li> On va copier la preuve de la loi faible des grands nombres en appliquant l'inégalité de Bienaymé-Tchebychev. Ainsi,
+$$P(|S_n-E(S_n)|\geq a)\leq \frac{V(S_n)}{a^2}\leq \frac{n}{a^2}.$$
+Or, 
+$$\left|\frac {S_n}n-\frac 1n\sum_{k=1}^n p_k\right|\geq \veps\iff |S_n-E(S_n)|\geq n\veps.$$
+En appliquant l'inégalité précédente avec $a=n\veps$, on trouve
+$$0\leq P\left(\left|\frac {S_n}n-\frac 1n\sum_{k=1}^n p_k\right|\geq \veps\right)\leq\frac 1{n\veps^2}.$$
+Par le théorème des gendarmes, on obtient le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1290"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1290"),	max:5, rating:2.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1290,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un problème chinois! <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1290.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1290,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1290','imageenonce1290');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1290"></a><div class=inner id="innerenonce1290">On suppose qu'à la naissance, la probabilité qu'un nouveau-né soit un garçon est égale à $1/2$. On suppose que
+tous les couples ont des enfants jusqu'à obtenir un garçon. On souhaite évaluer la proportion de garçons dans une génération
+de cette population. On note $X$ le nombre d'enfants d'un couple pris au hasard dans la population.
+<ol class="enumeratechiffre">
+<li> Donner la loi de la variable aléatoire $X$.
+<li> On suppose qu'une génération en âge de procréer est constituée de $N$ couples, et on note $X_1,\cdots,X_N$ le nombre d'enfants respectif de chaque couple. On note enfin $P$ la proportion de garçons issus de cette génération. 
+Exprimer $P$ en fonction de $X_1,\dots,X_N$.
+<li> Quelle est la limite de $P$ lorsque $N$ tend vers l'infini. Qu'en pensez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1290','imageindication1290');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1290"></a><div class=inner id="innerindication1290" style="display:none;"><ol class="enumeratechiffre">
+<li> Loi géométrique.
+<li> 
+<li> Appliquer la loi forte des grands nombres.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1290','imagecorrige1290',1290);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1290"></a><div class=inner id="innercorrige1290" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ est le temps d'attente du premier "succès" (avoir un garçon), avec probabilité de succès égale à 1/2.
+On en déduit que $X$ suit une loi géométrique de paramètre 1/2. En particulier,
+$\mathbb P(X=k)=2^{-k}$.
+<li> Le nombre d'enfants total est $X_1+\dots+X_N$, et le nombre de garçons est $N$. Ainsi, la proportion $P$ de garçons est $N/(X_1+\cdots+X_N)$.
+<li> Les variables aléatoires $X_i$ sont intégrables, identiquement distribuées, et deux à deux indépendantes. D'après la loi forte des grands nombres, presque sûrement, 
+$$\frac{N}{X_1+\dots+X_N}=\frac{1}{\frac{X_1+\cdots+X_N}N}\to \frac{1}{E(X_1)}=1/2.$$
+Ainsi, malgré cette politique nataliste, on n'observe pas de déséquilibre entre les filles et les garçons.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater2054"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2054"),	max:5, rating:3.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2054,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Marche aléatoire non symétrique <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2054.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(2054,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2054','imageenonce2054');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2054"></a><div class=inner id="innerenonce2054">Soient $(X_n)_{n\geq 1}$ une suite de variables aléatoires indépendantes vérifiant 
+$$P(X_n=1)=p,\ P(X_n=-1)=1-p=q\textrm{ avec }p\neq\frac 12.$$
+On pose 
+$$S_n=\sum_{i=1}^n X_i,\quad A_n=\{S_n=0\}.$$
+<ol class="enumeratechiffre">
+<li> Que représente l'événement $\limsup A_n$?
+<li> Démontrer, en utilisant une loi des grands nombres, que $P(\limsup A_n)=0$.
+<li> Quel autre théorème aurait-on pu utiliser pour prouver ce résultat? Le faire! On pourra utiliser
+que $p(1-p)&lt;1/4$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2054','imageindication2054');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2054"></a><div class=inner id="innerindication2054" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Il faut utiliser la loi forte des grands nombres.
+<li> On peut utiliser le lemme de Borel-Cantelli. Le calcul de $P(A_n)$ est similaire au calcul effectué pour obtenir
+la loi binomiale.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2054','imagecorrige2054',2054);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2054"></a><div class=inner id="innercorrige2054" style="display:none;"><ol class="enumeratechiffre">
+<li> L'événement $\limsup A_n$ signifie que la marche aléatoire revient infiniment souvent en $0$, c'est-à-dire que $S_n=0$ une infinité de fois.
+<li> D'après la loi forte des grands nombres, presque sûrement $\frac{S_n}n \to E(X_1)=2p-1\neq 0$. Ceci entraîne que, presque sûrement, 
+$S_n\to+\infty$. Or, 
+$$\{S_n=0\textrm{ infiniment souvent}\} \subset \overline{\{S_n\to+\infty\}}.$$
+On a donc
+$$0\leq P(\limsup A_n)\leq 1-P(\{S_n\to+\infty\})=0.$$
+<li> Il aurait également été possible d'utiliser le théorème de Borel-Cantelli. Pour cela, il suffit de prouver que $\sum_{n\geq 0}P(A_n)&lt;+\infty$. Mais si $n$ est impair, $P(A_n)=0$ car $S_n$ est un nombre impair. Si $n=2k$ est pair, alors $S_{2k}=0$ si et seulement si, on peut trouver $k$ valeurs de $X_n$ valant $1$ et $k$ valant $-1$. On en déduit
+$$P(A_{2k})=\binom{2k}{k}p^kq^k.$$
+Mais $\binom{2k}{k}\leq 2^{2k}$. D'où
+$$P(A_{2k})\leq \big(4p(1-p)\big)^{k}:=\rho^{2k}$$
+et $0\leq \rho&lt;1$ puisque $p(1-p)&lt;1/4$. La série $\sum_{n\geq 1}P(A_n)$ converge et donc $P(\limsup A_n)=0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2056"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2056"),	max:5, rating:3.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2056,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2056.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2056,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2056','imageenonce2056');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2056"></a><div class=inner id="innerenonce2056">Soit $(X_n)$ une suite de variables aléatoires indépendants de même loi et de carré intégrable.
+On note $m$ leur espérance commune.
+&Eacute;tudier la convergence presque sûre de la suite 
+$$S_n=\frac{X_1X_2+X_2X_3+\dots+X_{n-2}X_{n-1}+X_{n-1}X_n}{n}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication2056','imageindication2056');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2056"></a><div class=inner id="innerindication2056" style="display:none;">Appliquer la loi des grands nombres à 
+$$\frac{X_1X_2+X_3X_4+\dots}{2n}...$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2056','imagecorrige2056',2056);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2056"></a><div class=inner id="innercorrige2056" style="display:none;">On ne peut pas appliquer directement la loi des grands nombres à la suite $(X_iX_{i+1})$ car ces variables
+ne sont pas indépendantes. On va coupler les choses deux par deux. En effet, supposons (sans perte de généralité)
+que $n=2p$ est pair et écrivons :
+$$T_p=\frac{X_1X_2+X_3X_4+\dots+X_{2p-1}X_{2p}}{p}$$
+$$U_p=\frac{X_2X_3+X_4X_5+\dots+X_{2p-2}X_{2p-1}}{p}.$$
+On peut appliquer la loi des grands nombres à $(T_p)$ et $(U_p)$ qui convergent presque sûrement vers
+$E(X_1X_2)=E(X_1)E(X_2)=m^2$. De plus, on a 
+$$S_n=\frac{1}{2}T_p+\frac{1}{2}U_p.$$
+Ainsi, $(S_n)$ converge aussi presque sûrement vers $m^2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2055"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2055"),	max:5, rating:3.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2055,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi forte pour des variables non indépendantes <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2055.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2055,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2055','imageenonce2055');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2055"></a><div class=inner id="innerenonce2055">Soit $(X_k)$ une suite de variables aléatoires indépendantes définies sur $(\Omega,\mathcal A,P)$, suivant une loi uniforme sur $[0,1]$. 
+On pose, pour tout $j\geq 1$, $Z_j=X_jX_{j+1}$.
+<ol class="enumeratechiffre">
+<li> Calculer $\textrm{Var}(Z_j)$ et $\textrm{Cov}(Z_j,Z_{j+i})$ pour $i\geq 1$.
+<li> En déduire que $$\frac 1n\sum_{j=1}^n Z_j\xrightarrow[L^2(\Omega)]{n\to+\infty}\frac 14.$$
+<li> Les variables aléatoires $(Z_j)_{j\geq 1}$ sont-elles indépendantes? Et les variables $(Z_{2k})_{k\geq 1}$?
+<li> Déduire de la question précédente que
+ $$\frac 1n\sum_{j=1}^n Z_j\xrightarrow[ps]{n\to+\infty}\frac 14.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2055','imageindication2055');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2055"></a><div class=inner id="innerindication2055" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser l'indépendance des $X_j$. 
+<li> Développer l'intégrale au carré pour faire apparaitre les quantités de la première question.
+<li>
+<li> Couper la somme en deux en tenant compte des termes pairs et impairs.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2055','imagecorrige2055',2055);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2055"></a><div class=inner id="innercorrige2055" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque les $(X_n)$ sont indépendantes, on a 
+$$E(Z_j)=E(X_j)E(X_{j+1})=\frac 14.$$
+De même, on a 
+$$E(Z_j^2)=E(X_j^2)E(X_{j+1}^2)=\frac 19.$$
+Il vient $\textrm{Var}(Z_j)=\frac 19-\frac1{16}=\frac 7{144}:=a$. On remarque ensuite que, si $i\geq 2$, et puisque les variables aléatoires $(X_k)$ sont indépendantes, les variables aléatoires $Z_j$ et $Z_{j+i}$, qui ne font intervenir que des produits de $X_k$ avec des indices différents, sont indépendantes. On en conclut que $\textrm{Cov}(Z_j,Z_{j+i})=0$. Il reste donc à traiter le cas $i=1$. On a alors
+$$E(Z_{j}Z_{j+1})=E(X_j)E(X_{j+1}^2)E(X_{j+2})=\frac{1}{12}.$$
+D'autre part,
+$$E(Z_j)E(Z_{j+1})=\frac{1}{16}.$$
+On conclut que
+$$\textrm{Cov}(Z_j,Z_{j+1})=\frac{1}{12}-\frac1{16}=\frac{1}{48}:=b.$$
+<li> On va calculer
+$$E\left(\left(\frac 1n\sum_{j=1}^n Z_j-\frac 14\right)^2\right)=\frac1{n^2}E\left(\left(\sum_{j=1}^n \left(Z_j-\frac 14\right)\right)^2\right)$$
+et démontrer que cette quantité tend vers 0. Mais $\frac14=E(Z_j)$, et on doit calculer
+\begin{eqnarray*}
+E\left(\left(\sum_{j=1}^n (Z_j-E(Z_j))\right)^2\right)&=&\sum_{j=1}^n \textrm{Var}(Z_j)+2\sum_{1\leq i&lt;j\leq n}\textrm{Cov}(Z_j,Z_{j+i}).
+\end{eqnarray*}
+En utilisant le résultat de la question précédente, on en déduit que
+\begin{eqnarray*}
+E\left(\left(\frac 1n\sum_{j=1}^n Z_j-\frac 14\right)^2\right)&=&\frac{1}{n^2}\times na+\frac2{n^2}\sum_{i=1}^{n-1}\textrm{Cov}(Z_j,Z_{j+1})\\
+&=&\frac{a}{n}+\frac{b(n-1)}{n^2}.
+\end{eqnarray*}
+Ceci tend bien vers 0.
+<li> La suite $(Z_j)$ n'est pas une suite de variables aléatoires indépendantes, par exemple car la covariance de $Z_1$ et $Z_2$ est non-nulle. La suite $(Z_{2k})$ est une suite de variables aléatoires indépendantes, en raisonnant comme à la première question.
+<li> Notons $S_n=\sum_{j=1}^n Z_j$. Il suffit de démontrer que $S_{2n}/2n$ et $S_{2n+1}/(2n+1)$ convergent presque sûrement vers $1/4$. Nous ne traiterons que le premier cas. On sépare les termes pairs et les termes impairs dans $S_{2n}$ :
+$$S_{2n}=\sum_{j=1}^{n}Z_{2j}+\sum_{j=1}^{n}Z_{2j-1}.$$
+Mais la suite $(Z_{2j})$ est une suite de variables aléatoires indépendantes identiquement distribuées de $L^1$. D'après la loi forte des grands nombres, on déduit que 
+$$\frac{1}{n}\sum_{j=1}^n Z_{2j}$$
+converge presque sûrement vers $E(Z_2)=\frac 14$. Le même raisonnement fonctionne pour la deuxième preuve, et on trouve bien que 
+$S_{2n}/2n$ converge presque sûrement vers $\frac 14$.
+</ol>
+</div></div></div>	
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Théorème limite central</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2057"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2057"),	max:5, rating:1.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2057,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fournisseur d'accès <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2057.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2057,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2057','imageenonce2057');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2057"></a><div class=inner id="innerenonce2057">Un fournisseur d'accès à Internet met en place un point local d'accès, qui dessert $5000$ abonnés. A instant donné, 
+chaque abonné a une probabilité égale à 20\% d'être connecté. Les comportements des abonnés sont supposés indépendants les uns des autres.
+<ol class="enumeratechiffre">
+<li> On note $X$ la variable aléatoire égale au nombre d'abonnés connectés à un instant $t$. Quelle est la loi de $X$? Quelle est son espérance, son écart-type?
+<li> On pose $Y=\frac{X-1000}{\sqrt{800}}$. Justifier précisément qu'on peut approcher la loi de $Y$ par la loi normale $\mathcal{N}(0,1)$. 
+<li> Le fournisseur d'accès souhaite savoir combien de connexions simultanées le point d'accès doit pouvoir gérer pour que sa probabilité d'être saturé à un instant donné soit inférieure à $2,5\%$.
+En utilisant l'approximation précédente, proposer une valeur approchée de ce nombre de connexions.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2057','imageindication2057');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2057"></a><div class=inner id="innerindication2057" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaitre le schéma d'une loi binomiale.
+<li> C'est le théorème limite central.
+<li> On cherche $N$ tel que $P(X\geq N)\leq 0,025.$ Traduire cette information sur $Y$, et appliquer l'approximation précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2057','imagecorrige2057',2057);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2057"></a><div class=inner id="innercorrige2057" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ compte le nombre de succès lors de la réalisation de 5000 épreuves aléatoires indépendantes, dont la probabilité de réalisation de chacune est 0,2. $X$
+suit donc une loi binomiale $\mathcal{B}(5000,0.2)$. Son espérance vaut $5000\times 0,2=1000$, sa variance $5000\times 0,2\times 0,8=800$.
+<li> On est dans les conditions d'application du théorème limite central (ou du théorème de De Moivre-Laplace).
+<li> On cherche $N$ tel que $P(X\geq N)\leq 0,025.$ Mais on a :
+$$X\geq N\iff Y\geq \frac{N-1000}{\sqrt{800}}$$
+et donc 
+$$P(X\geq N)\leq 0,025 \iff P\left(Y\geq \frac{N-1000}{\sqrt{800}}\right)\leq 0,025.$$
+Il faut trouver un entier $N$ de sorte que cette inégalité soit vérifiée. 
+Une possibilité est d'utiliser une table de la loi normale. En 
+notant $\phi$ la fonction de répartition de la loi normale, on a en effet :
+\begin{eqnarray*}
+P\left(Y\geq \frac{N-1000}{\sqrt{800}}\right)\leq 0,025&\iff&1-\phi\left(\frac{N-1000}{\sqrt{800}}\right)\leq 0,025\\
+&\iff&\phi\left(\frac{N-1000}{\sqrt{800}}\right)\geq 0,975\geq \phi(1,96)\\
+\end{eqnarray*}
+Cette condition sera réalisée dès que :
+$$\frac{N-1000}{\sqrt{800}}\geq 1,96\iff N\geq 1056$$
+(rappelons que $N$ est entier, et que $1,96\times\sqrt{800}\simeq 55,4$).<br>
+Une autre possibilité est d'utiliser la symétrie de la loi normale centrée réduite et d'utiliser les valeurs connues. En effet, on a 
+\begin{eqnarray*}
+P(Y\geq a)&=&\frac12 \times\big(P(Y\geq a)+P(Y\leq -a)\big)\\
+&=&\frac 12\big(1-P(|Y|\leq a)\big).
+\end{eqnarray*}
+Ainsi, on a 
+$$P(Y\geq a)\geq 0,025\iff P(|Y|\leq a)\leq 0,05.$$
+On sait que ceci est vérifiée pour $a\simeq 1,96$ et donc il suffit d'avoir, comme précédemment,
+$$a=\frac{N-1000}{\sqrt{800}}\geq 1,96\iff N\geq 1056.$$
+Le point d'accès doit donc pouvoir gérer au moins 1056 connexions simultanées - ce qui est finalement assez peu!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2170"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2170"),	max:5, rating:3.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2170,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pièces défectueuses <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2170.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2170,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2170','imageenonce2170');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2170"></a><div class=inner id="innerenonce2170">Une usine fabrique des pièces dont une proportion inconnue $p$ est défectueuse, et on souhaite trouver une valeur approchée de $p$. On effectue un prélèvement de $n$ pièces. On suppose que le prélèvement se fait sur une population très grande, et donc qu'il peut s'apparenter à une suite de $n$  tirages indépendants avec remise. On note $X_n$ la variable aléatoire égale au nombre de pièces défectueuses et on souhaite quantifier le fait que $X_n/n$ approche $p$.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $X_n$? Sa moyenne? Sa variance?
+<li> Démontrer que, pour tout $\veps&gt;0$, $P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac 1{4n\veps^2}.$
+<li> En déduire une condition sur $n$ pour que $X_n/n$ soit une valeur approchée de $p$ à $10^{-2}$ près avec une probabilité supérieure ou égale à $95\%$. 
+<li> Répondre à la question précédente en utilisant cette fois une approximation de $X_n$ par le théorème de de Moivre-Laplace. Qu'en pensez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2170','imageindication2170');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2170"></a><div class=inner id="innerindication2170" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours.
+<li> Appliquer l'inégalité de Bienaymé-Tchebychev à $X_n$.
+<li> 
+<li> Traduire $\left|\frac{X_n}n-p\right|\leq \veps$ par une condition sur 
+$\left|\frac{X_n-np}{\sqrt{np(1-p)}}\right|.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2170','imagecorrige2170',2170);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2170"></a><div class=inner id="innercorrige2170" style="display:none;"><ol class="enumeratechiffre">
+<li> $X_n$ est la somme de $n$ variables aléatoires de Bernoulli indépendantes de paramètre $p$. Ainsi, $X_n$ suit une loi binomiale $\mathcal B(n,p)$. On en déduit que 
+$$E(X_n)=np\textrm{ et }V(S_n)=np(1-p).$$
+<li> Appliquons l'inégalité de Bienaymé-Tchebychev à $X_n$. On a donc
+$$P(|X_n-E(X_n)|\geq a)\leq \frac{V(X_n)}{a^2}.$$
+Or, 
+$$\left|\frac{X_n}n-p\right|\geq\veps\iff |X_n-np|\geq n\veps\iff |X_n-E(X_n)|\geq n\veps.$$
+On applique donc l'inégalité de Bienaymé-Tchebychev avec $a=n\veps$ et on trouve que
+$$P\left(\left|\frac{X_n}n-p\right|\geq\veps\right)\leq\frac {p(1-p)}{n\veps^2}.$$
+Mais sur $[0,1]$, la fonction $x\mapsto x(1-x)$ admet un maximum égal à $1/4$ (et atteint en $1/2$). On en déduit le résultat voulu. On pouvait aussi remarquer que c'est directement le résultat qui conduit à la loi faible des grands nombres.
+<li> On cherche $n$ tel que $P\left(\left|\frac{X_n}n-p\right|&lt;10^{-2}\right)\geq 0,95$ soit encore, en passant à l'événement contraire $P\left(\left|\frac{X_n}n-p\right|\geq 10^{-2}\right)\leq 0,05$. Il suffit donc de choisir $n$ tel que $\frac{1}{4n10^{-4}}\leq 0,05$ soit $n\geq 5\cdot 10^4$.
+<li> On a 
+\begin{eqnarray*}
+\left|\frac{X_n}n-p\right|\leq\veps&\iff& \left | \frac{X_n-np}{n}\right|\leq \veps\\
+&\iff&\left|\frac{X_n-np}{\sqrt{np(1-p)}}\right|\leq \frac{\veps \sqrt n}{\sqrt {p(1-p)}}.
+\end{eqnarray*}
+Par le théorème de de Moivre-Laplace, la loi de $\frac{X_n-np}{\sqrt{np(1-p)}}$ peut être approché par la loi d'une variable aléatoire suivant une loi normale centrée réduite. En particulier, ici, on a 
+$$P\left(\left|\frac{X_n-np}{\sqrt{np(1-p)}}\right|\leq \frac{\veps \sqrt n}{\sqrt{ p(1-p)}}\right)\simeq P\left(|Z|\leq \frac{\veps \sqrt n}{\sqrt{p(1-p)}}\right)$$
+où $Z$ suit une loi normale centrée réduite. On cherche donc $n$ de sorte que 
+$$P\left(|Z|\leq \frac{10^{-2} \sqrt n}{\sqrt {p(1-p)}}\right)\geq 0,95.$$
+Or, on sait que pour $u=1,96$, on a 
+$$P(-u\leq Z\leq u)\geq 0,95.$$
+Il suffit donc que $n$ vérifie
+$$\frac{10^{-2} \sqrt n}{\sqrt{ p(1-p)}}\geq 1,96\iff n\geq (1,96)^2\cdot 10^{4}\cdot p(1-p).$$
+En utilisant à nouveau le fait que $p(1-p)\leq 1/4$, on obtient donc
+qu'il suffit d'avoir l'inégalité suivante :
+$$n\geq 0,96\cdot 10^4.$$
+C'est une valeur sensiblement inférieure à celle trouvée précédemment, ce qui n'est pas illogique car le théorème limite central est bien plus fin que l'inégalité de Bienaymé-Tchebychev. Cela dit, son application est basée ici sur une approximation que l'on ne maitrise pas.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater2058"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2058"),	max:5, rating:1.0625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2058,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La cantine! <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2058.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(2058,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2058','imageenonce2058');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2058"></a><div class=inner id="innerenonce2058">Lors de la construction d'un collège accueillant 500 élèves, il est prévu la construction d'une cantine comprenant deux salles, chacune
+disposant de $N$ places. On fait l'hypothèse que chaque élève qui mange choisit au hasard et de façon équiprobable l'une des deux salles, indépendamment les uns des autres.
+Déterminer la valeur de $N$ à prévoir pour que la probabilité que chaque élève trouve une place dans la salle qu'il a choisie soit supérieure à 0,99.</div></div><div class=indication><a href="javascript:showAll('innerindication2058','imageindication2058');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2058"></a><div class=inner id="innerindication2058" style="display:none;">Noter $X$ la variable aléatoire correspondant au nombre d'élèves choisissant la première salle.
+Quelle contrainte doit vérifier $X$? Quelle est la loi de $X$? Comment approcher $X$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2058','imagecorrige2058',2058);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2058"></a><div class=inner id="innercorrige2058" style="display:none;">On note $X$ la variable aléatoire correspondant au nombre d'élèves choisissant la première salle.
+Alors tous les élèves trouvent une place si $X\leq N$ et si $500-X\leq N$, soit 
+$$500-N\leq X\leq N.$$
+De plus, $X$ suit une loi binomiale $\mathcal B(500,1/2)$. On a $500&gt;30$ et $n\times 1/2\times\left(1-\frac 12\right)\geq 5$. On est donc dans les conditions
+où on peut approcher la loi de $X$ par la loi normale $\mathcal N\left(500\times \frac12,\sqrt{500\times \frac12\times \frac 12}\right)$ ie $\mathcal N(250,\sqrt{125})$.
+Posons 
+$$Y=\frac{X-250}{\sqrt{125}}.$$
+On peut considérer que $Y$ suit une loi normale $\mathcal N(0,1)$, et on cherche $N$ tel que 
+$$P\left(\frac{500-N-250}{\sqrt{125}}\leq Y\leq\frac{N-250}{\sqrt{125}}\right)\geq 0,99.$$
+Or, 
+\begin{eqnarray*}
+P\left(\frac{500-N-250}{\sqrt{125}}\leq Y\leq\frac{N-250}{\sqrt{125}}\right)&=&P\left(\frac{250-N}{\sqrt{125}}\leq Y\leq\frac{N-250}{\sqrt{125}}\right)
+\end{eqnarray*}
+C'est une valeur bien connue des tables de la loi normale qui dit que, si $u=2,58$, alors 
+$$P(-u\leq Y\leq u)\geq 0,99.$$
+Il suffit donc que 
+$$\frac{N-250}{\sqrt{125}}\geq 2,58$$ 
+soit $N\geq 279$. Si on ne connait pas la valeur de $u$ précédente, il est possible de la retrouver à partir de la table de la loi normale, en remarquant que
+\begin{eqnarray*}
+P\left(\frac{500-N-250}{\sqrt{125}}\leq Y\leq\frac{N-250}{\sqrt{125}}\right)&=&P\left(\frac{250-N}{\sqrt{125}}\leq Y\leq\frac{N-250}{\sqrt{125}}\right)\\
+&=&\phi\left(\frac{N-250}{\sqrt{125}}\right)-\phi\left(\frac{250-N}{\sqrt{125}}\right)\\
+&=&2\phi\left(\frac{N-250}{\sqrt{125}}\right)-1.
+\end{eqnarray*}
+où $\phi$ désigne la fonction de répartition de la loi normale $\mathcal N(0,1)$. On cherche donc $N$ tel que 
+$$2\phi\left(\frac{N-250}{\sqrt{125}}\right)-1\geq 0,99\iff \phi\left(\frac{N-250}{\sqrt{125}}\right)\geq 0,995\simeq \phi(2,575).$$
+Ceci est vérifié dès que $\frac{N-250}{\sqrt{125}}\geq 2,575$, c'est-à-dire dès que $N\geq 279$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2059"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2059"),	max:5, rating:1.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2059,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Saturation de standard <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2059.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2059,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2059','imageenonce2059');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2059"></a><div class=inner id="innerenonce2059">Une entreprise compte 300 employés. Chacun d'eux téléphone en moyenne 6 minutes par heures. Quel est le nombre de lignes
+que l'entreprise doit installer pour que la probabilité que toutes les lignes soient utilisées au même instant soit au plus égale à 0,025. On pourra utiliser une approximation
+de la loi d'une certaine variable aléatoire.</div></div><div class=indication><a href="javascript:showAll('innerindication2059','imageindication2059');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2059"></a><div class=inner id="innerindication2059" style="display:none;">Noter $N$ le nombre de lignes installées, et $X$ le nombre d'employés qui téléphonent à l'instant $t$. On cherche $N$ tel que $P(X\geq N)\leq 0,025$.
+Quelle est la loi suivie par $X$? Par quelle loi peut-on l'approcher?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2059','imagecorrige2059',2059);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2059"></a><div class=inner id="innercorrige2059" style="display:none;">On note $N$ le nombre de lignes installées, et $X$ le nombre d'employés qui téléphonent à l'instant $t$. On cherche $N$ tel que $P(X\geq N)\leq 0,025.$
+La probabilité pour qu'un employé téléphone à l'instant $t$ est $6/60=1/10$. Les appels des employés étant supposés indépendants, $X$ suit la loi binomiale $\mathcal{B}(300,1/10)$.
+L'espérance de $X$ vaut $30$, et l'écart-type $\sqrt{27}$. Posons $X^*=\frac{X-30}{\sqrt{27}}$. Par le théorème Central-Limit, on peut considérer que $X$ suit la loi normale $\mathcal{N}(0,1)$.
+On note $\phi$ la fonction de répartition de la loi normale. On a :
+\begin{eqnarray*}
+P(X\geq N)\leq 0,025&\iff& P\left(X^*\geq\frac{N-30}{\sqrt{27}}\right)\leq 0,025\\
+&\iff&1-\phi\left(\frac{N-30}{\sqrt{27}}\right)\leq 0,025\\
+&\iff&\phi\left(\frac{N-30}{\sqrt{27}}\right)\geq 0,975=\phi(1,96)\\
+&\iff&\frac{N-30}{\sqrt{27}}\geq 1,96\\
+&\iff&N\geq 41.
+\end{eqnarray*}
+Il faut installer au moins $41$ lignes!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2061"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2061"),	max:5, rating:2.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2061,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Surréservation aérienne <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2061.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2061,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2061','imageenonce2061');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2061"></a><div class=inner id="innerenonce2061">Il arrive assez souvent que le nombre de réservations pour une liaison aérienne soit supérieur au nombre de passagers se présentant effectivement le jour du vol.
+Cela est dû à des empêchements imprévisibles de certains passagers et à une politique systématique de certains d'entre eux
+qui réservent des places sur plusieurs vols de façon à choisir au dernier moment celui qui leur convient le mieux (en raison de la concurrence, et selon les tarifs choisis, les compagnies ne pénalisent pas les clients qui se désistent et ne font payer effectivement que ceux qui embarquent).
+Pour compenser ce phénomène, une compagnie aérienne exploitant un avion de 300 places décide de faire de la surréservation (surbooking) en prenant
+pour chaque vol un nombre $n&gt;300$ de réservations. S'il se présente plus de 300 passagers à l'embarquement, les 300 premiers arrivés prennent leur vol et les autres sont dédommagés financièrement.
+<ol class="enumeratechiffre">
+<li> On considère que les passagers sont mutuellement indépendants et que la probabilité de désistement de chacun d'eux est $10\%$. On note $n$ le nombre de réservations prises par la compagnie pour un vol donné et $S_n$ le nombre (aléatoire) de passagers se
+présentant à l'embarquement pour ce vol. Donner la loi de $S_n$, $E(S_n)$ et $V(S_n)$.
+<li> Le directeur commercial de la compagnie aimerait connaitre la valeur maximale de $n$ telle que $P(S_n\leq 300)\geq 0,99$.
+En utilisant le théorème limite central (ou théorème de De Moivre-Laplace), proposez une solution approchée de ce problème. On pourra s'aider d'une table de la loi normale.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2061','imageindication2061');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2061"></a><div class=inner id="innerindication2061" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaitre le schéma d'une loi binomiale.
+<li> On note $Y_n=\frac{S_n-0,9n}{0,3\sqrt{n}}$. Par le théorème Central-Limit, on peut approcher $Y_n$ par la loi normale réduite centrée 
+$\mathcal{N}(0,1)$. Exprimer la condition $S_n\leq 300$ par $Y_n\leq f(n)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2061','imagecorrige2061',2061);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2061"></a><div class=inner id="innercorrige2061" style="display:none;"><ol class="enumeratechiffre">
+<li> $S_n$ compte le nombre de succès de réalisations de $n$ expériences aléatoires, la probabilité de succès de chacune étant $9/10$.
+On en déduit que $S_n$ suit une loi binomiale $\mathcal{B}(n,9/10)$. En utilisant les formules du cours, on a :
+$$E(S_n)=0,9n\textrm{ et }V(S_n)=0,09n.$$ 
+<li> On note $Y_n=\frac{S_n-0,9n}{0,3\sqrt{n}}$. Remarquons que 
+$$S_n\leq 300\iff Y_n\leq \frac{1000}{\sqrt{n}}-3\sqrt{n}.$$
+Le théorème central limite justifie que l'on peut approcher la loi de $Y_n$ par la loi normale réduite $\mathcal{N}(0,1)$.
+On note $\phi$ la fonction de répartition de la loi normale. On a l'approximation :
+$$P\left(Y_n\leq \frac{1000}{\sqrt{n}}-3\sqrt{n}\right)\simeq \phi\left(\frac{1000}{\sqrt{n}}-3\sqrt{n}\right).$$
+Or, une table de la loi normale nous dit que :
+$$\phi(2,4)\geq 0,99.$$
+La fonction de répartition étant croissante, il suffit que :
+$$\frac{1000-3n}{\sqrt{n}}\geq 2,4.$$
+On obtient l'équation :
+$$-3n-2,4\sqrt{n}+1000\geq 0.$$
+En posant $x=\sqrt{n}$, on a une fonction du second degré à étudier (trouver le plus grand $x$ pour lequel elle est positive), ce qui à ce stade ne devrait plus poser trop de problèmes.
+Le plus grand $n$ pour lequel cette quantité est positive est $319$. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater2062"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2062"),	max:5, rating:3.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2062,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Drôle de limite <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2062.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(2062,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2062','imageenonce2062');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2062"></a><div class=inner id="innerenonce2062">En appliquant le théorème limite central à une suite de variables aléatoires indépendantes $(X_n)$ suivant toutes
+une loi de Poisson $\mathcal P(1)$, démontrer que 
+$$e^{-n}\sum_{k=0}^n \frac{n^k}{k!}\to \frac12.$$</div></div><div class=indication><a href="javascript:showAll('innerindication2062','imageindication2062');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2062"></a><div class=inner id="innerindication2062" style="display:none;">Quelle est la loi de $X_1+\dots+X_n$? On a $P(X\leq 0)=1/2$ si $X\sim \mathcal N(0,1)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2062','imagecorrige2062',2062);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2062"></a><div class=inner id="innercorrige2062" style="display:none;">Il est facile de vérifier que $X_1+\dots+X_n$ suit une loi de Poisson $\mathcal P(n)$. Ceci
+peut se constater par exemple en calculant les fonctions caractéristiques (quand on fait une somme
+de deux variables aléatoires indépendantes, la fonction caractéristique de la somme est le produit des fonctions caractéristiques).
+Ainsi, $S_n=X_1+\dots+X_n\sim \mathcal P(n)$. De plus, d'après le théorème limite central, 
+$$P\left(\frac{S_n-n}{\sqrt n}\leq 0\right)\to P(X\leq 0)=\frac 12,$$
+où $X$ suit une loi normale $\mathcal N(0,1)$. De plus, on a
+$$P\left(\frac{S_n-n}{\sqrt n}\leq 0\right)=P(S_n\leq n)=\sum_{k=0}^n P(S_n=k)=e^{-n}\sum_{k=0}^n \frac{n^k}{k!}.$$
+On a donc démontré le résultat voulu.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2063"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2063"),	max:5, rating:3.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2063,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Optimalité d'une égalité grâce au théorème limite central <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2063.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2063,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2063','imageenonce2063');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2063"></a><div class=inner id="innerenonce2063">On peut démontrer que, si des variables aléatoires indépendantes $X_i$, $i\geq 1$, prennent leurs valeurs dans $[-1,1]$ et sont centrées, alors on a 
+$$\mathbb P\left(\left|n^{-1/2}\sum_{i=1}^n X_i\right|\geq a\right)\leq 2\exp\left(-\frac{a^2}2\right)$$
+pour tout $n\geq 1$ et tout $a\geq 0$.
+On souhaite démontrer que le facteur $-\frac 12$ intervenant dans l'exponentielle est optimal. Pour cela, on suppose qu'il existe $A&gt;0$
+et $\kappa\in\mathbb R$ tels que, pour toute suite de variables aléatoires indépendantes
+$X_i$ à valeurs dans $[-1,1]$ et centrées, pour tout $n\geq 1$ et tout $a&gt;0$, 
+$$\mathbb P\left(\left|n^{-1/2}\sum_{i=1}^n X_i\right|\geq a\right)\leq A\exp\left(-\kappa a^2\right).$$
+Par ailleurs, on introduit
+$$\varphi(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\textrm{ et }\phi(x)=\int_{-\infty}^{x}\varphi(t)dt$$
+la densité et la fonction de répartition de la loi normale de moyenne 0 et de variance 1. On pose aussi 
+$F(x)=\int_{x}^{+\infty}e^{-t^2/2}dt$ et $G(x)=\int_{x}^{+\infty}\frac1{t^2}e^{-t^2/2}dt$.
+<ol class="enumeratechiffre">
+ <li> Démontrer que $G(x)=_{+\infty}o\big(F(x)\big)$.
+<li> Démontrer que 
+$$1-\phi(x)\sim_{x\to+\infty}\frac{ \varphi(x)}x.$$
+<li> On suppose que les $(X_i)$ sont identiquement distribuées et vérifient $P(X_i=1)=P(X_i=-1)=1/2$. Démontrer que $\kappa\leq1/2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2063','imageindication2063');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2063"></a><div class=inner id="innerindication2063" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Intégrer par parties pour se ramener à la question précédente.
+<li> Appliquer le théorème limite central.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2063','imagecorrige2063',2063);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2063"></a><div class=inner id="innercorrige2063" style="display:none;"><ol class="enumeratechiffre">
+<li> Ou bien on connait très bien son cours, et dans ce cas on sait que si $f(x)=o\big(g(x)\big)$
+au voisinage de $+\infty$, et si l'intégrale $\int_{a}^{+\infty}g(t)dt$ converge, alors
+$$\int_x^{+\infty}f(t)dt=_{+\infty}o\left(\int_x^{+\infty}g(t)dt\right).$$
+Ce résultat s'applique immédiatement ici. Ou bien on ne connait pas ce résultat, et on le 
+redémontre dans le cas qui nous intéresse. Ici, il est clair que 
+$$\frac1{t^2}e^{-t^2/2}=_{+\infty}o\left(e^{-t^2/2}\right).$$
+Fixons $\veps&gt;0$. Il existe donc $a&gt;0$ tel que, pour tout $t\geq a$, on a 
+$$0\leq \frac1{t^2}e^{-t^2/2}\leq \veps e^{t^2/2}.$$
+Par intégration, pour tout $x\geq a$, on a 
+$$0\leq G(x)\leq \veps F(x).$$
+C'est bien que $G(x)=_{+\infty}o(F(x)).$
+<li> Puisque $\varphi$ est la densité de la loi normale centrée réduite, on a 
+$$1-\phi(x)=\int_{x}^{+\infty}\varphi(x)dx=\frac{F(x)}{\sqrt{2\pi}}.$$
+On va intégrer par parties pour se ramener à la question précédente.
+En effet,
+\begin{eqnarray*}
+ F(x)&=&\int_x^{+\infty}\frac1t te^{-t^2/2}dt\\
+&=&\left[-\frac 1te^{-t^2/2}\right]_x^{+\infty}-\int_x^{+\infty}\frac{1}{t^2}e^{-t^2/2}dt\\
+&=&\frac 1xe^{-x^2/2}-G(x).
+\end{eqnarray*}
+Comme $G$ est négligeable devant $F$ au voisinage de $+\infty$, on en déduit que 
+$$F(x)\sim_{+\infty}\frac{e^{-x^2/2}}{x}$$
+ce qui, divisant le tout par $\sqrt{2\pi}$, donne bien le résultat.
+<li> Pour ces variables, la variance vaut 1 et le théorème limite central dit que 
+$$\mathbb P\left(\left|n^{-1/2}\sum_{i=1}^n X_i\right|\geq a\right)\to_{n\to+\infty}\int_{-\infty}^a \varphi(t)dt+\int_{a}^{+\infty}\varphi(t)dt.$$
+Par symétrie de la loi normale, et par l'hypothèse faite, on en déduit que pour tout $a&gt;0$, on a 
+$$A\exp\left(-\kappa a^2\right)\geq 2(1-\phi(a)).$$
+Utilisons l'équivalent trouvé à la question précédente. On en déduit qu'il existe une constante $C$ telle que, pour de grandes valeurs de $a$,
+$$\exp(-\kappa a^2)\geq C\frac{\exp(-a^2/2)}a.$$
+Ceci entraîne que $\kappa\leq 1/2$.
+</ol></div></div></div>    
+
+<div class=titrepartie>Lemmes de Borel-Cantelli</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater2608"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2608"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2608,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux piles consécutifs <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2608.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(2608,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2608','imageenonce2608');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2608"></a><div class=inner id="innerenonce2608">On lance une infinité de fois une pièce de monnaie parfaitement équilibrée. Montrer qu'avec probabilité 1, on obtiendra une infinité de fois deux piles consécutifs.</div></div><div class=indication><a href="javascript:showAll('innerindication2608','imageindication2608');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2608"></a><div class=inner id="innerindication2608" style="display:none;">Introduire les événements $B_n$ : "on obtient pile au $2n$-ième lancer et pile au $(2n+1)$-ième lancer".</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2608','imagecorrige2608',2608);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2608"></a><div class=inner id="innercorrige2608" style="display:none;">Introduisons les événements $B_n$ : "on obtient pile au $2n$-ième lancer et pile au $(2n+1)$-ième lancer". Alors les événements $B_n$ sont indépendants, et $P(B_n)=\frac 14$. Ainsi, $\sum_{n\geq 1}P(B_n)=+\infty$. D'après le lemme de Borel-Cantelli, avec une probabilité égale à 1, une infinité d'événements $B_n$ seront réalisés.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater2609"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2609"),	max:5, rating:2.3571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2609,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence presque sûre d'une suite de variables aléatoires suivant une loi exponentielle <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2609.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(2609,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2609','imageenonce2609');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2609"></a><div class=inner id="innerenonce2609">Soit $(X_n)_{n\geq 2}$ une suite de variables aléatoires indépendantes, suivant toutes une loi exponentielle de paramètre 1. Pour $a&gt;0$ et $n\geq 2$, on note $A_{n,a}$ l'événement $A_{n,a}=\left\{\frac{X_n}{\ln n}\geq a\right\}$.
+<ol class="enumeratechiffre">
+<li> Calculer $P(A_{n,a})$.
+<li> On note 
+$$A_a=\limsup_{n\to+\infty}A_{n,a}=\bigcap_{n\geq 2}\bigcup_{k\geq n}A_{k,a}.$$
+Démontrer que $P(A_a)=0$ si $a&gt;1$ et que $P(A_a)=1$ si $a\leq 1$.
+<li> Justifier que pour tout $a&gt;0$, 
+$$\left\{\limsup_{n\to+\infty}\frac{X_n}{\ln n}&gt;a\right\}\subset A_a\subset \left\{\limsup_{n\to+\infty}\frac{X_n}{\ln n}\geq a\right\}.$$
+<li> En déduire que 
+$$\limsup_{n\to+\infty}\frac{X_n}{\ln n}=1\textrm{ presque sûrement.}$$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication2609','imageindication2609');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2609"></a><div class=inner id="innerindication2609" style="display:none;"><ol class="enumeratechiffre">
+<li> Simple calcul d'intégrale.
+<li> Appliquer le lemme de Borel-Cantelli.
+<li>
+<li> Appliquer la question précédente avec $a=1$, puis avec une suite $(a_N)$ qui décroît vers 1.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2609','imagecorrige2609',2609);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2609"></a><div class=inner id="innercorrige2609" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit d'un simple calcul d'intégrale : 
+\begin{align*}
+P\left(\frac{X_n}{\ln n}\geq a\right)&=P(X_n&gt;a\ln n)\\
+&=\int_{a\ln n}^{+\infty}e^{-t}dt\\
+&=\frac 1{n^a}.
+\end{align*}
+<li> Si $a&gt;1$, la série $\sum_n P\left(\frac{X_n}{\ln n}&gt;a\right)$ est convergente. Par le lemme de Borel-Cantelli, on a $P(A_a)=0$. Si $0&lt;a\leq 1$, la série $\sum_n P\left(\frac{X_n}{\ln n}&gt;a\right)$ est au contraire divergente. Puisque les événéments $A_{n,a}$ sont indépendants, le lemme de Borel-Cantelli nous dit que $P(A_a)=1$. Observez bien dans quel cas la condition d'indépendance doit être utilisée!
+<li> D'une part, si $\omega\in A_a$, pour tout $n\in\mathbb N$, il existe $k\geq n$ tel que $X_k(\omega)\geq a\ln(k)$. Ceci entraîne que 
+$$A_a\subset \left\{\limsup_{n\to+\infty}\frac{X_n}{\ln n}\geq a\right\}.$$
+D'autre part, si $\omega\in \left\{\limsup_{n\to+\infty}\frac{X_n}{\ln n}&gt;a\right\}$, alors il existe $\delta&gt;0$ tel que, pour tout $n\in\mathbb N$, il existe $k\geq n$ de sorte que $\frac{X_k(\omega)}{\ln k}\geq a+\delta$ et donc $\omega\in A_a$. Ceci démontre l'autre inclusion.
+<li> Choisissons $a&gt;1$. D'après l'inclusion ci-dessus, on a
+$$\limsup_{n\to+\infty}\frac{X_n}{\ln n}\leq a\textrm{ presque sûrement}.$$
+Choisissant $(a_N)$ une suite décroissant vers $1$, on en déduit que 
+$$\mathbb P\left(\bigcap_{N\in\mathbb N^*}\left\{\limsup_{n\to\infty}\frac{X_n}{\ln n}\leq a_N\right\}\right)=1,$$
+et par conséquent 
+$$\limsup_{n\to+\infty}\frac{X_n}{\ln n}\leq 1\textrm{ presque sûrement}.$$
+Par ailleurs, en choisissant $a=1$ et en utilisant les deux questions précédentes, on trouve aussi
+$$\limsup_{n\to+\infty}\frac{X_n}{\ln n}\geq 1\textrm{ presque sûrement}.$$
+D'où le résultat.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater2066"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2066"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2066,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Compensation <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2066.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(2066,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2066','imageenonce2066');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2066"></a><div class=inner id="innerenonce2066">On considère une épreuve ayant $r$ issues équiprobables. Par exemple, pour un lancer de pièces de monnaies, $r=2$, pour un lancer de dés, $r=6$. On répète de façon indépendante cette épreuve. On note $A_n$ l'événement : "au cours des $nr$ premières épreuves,
+chacune des $r$ issues distinctes se produit exactement $n$ fois". Lorsque l'événement $A_n$ se produit, on dit qu'il y a compensation exacte.
+<ol class="enumeratechiffre">
+<li> Calculer $p_n=P(A_n)$.
+<li> En utilisant la formule de Stirling, déterminer un équivalent de $p_n$.
+<li> En déduire que si $r\geq 4$, presque sûrement, il n'y a qu'un nombre fini de compensations exactes.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2066','imageindication2066');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2066"></a><div class=inner id="innerindication2066" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li>
+<li> Utiliser le lemme de Borel-Cantelli!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2066','imagecorrige2066',2066);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2066"></a><div class=inner id="innercorrige2066" style="display:none;"><ol class="enumeratechiffre">
+<li> Prenons une liste d'issues $(i_1,\dots,i_{nr})$. Ces issues sont toutes équiprobables, de probabilité $\left(\frac 1r\right)^{nr}$. On souhaite compter le nombre d'issues comportant exactement $r$ fois l'issue 1, $r$ fois l'issue $2$, etc....
+Pour l'issue 1, on doit choisir parmi les $nr$ positions les $n$ positions où l'on place l'issue $1$. Il y a donc $\binom{nr}n$ choix. Ce choix ayant été effectué, on doit choisir pour l'issue 2 parmi les $(n-1)r$ positions restantes où placer l'issue $2$. Il y a donc $\binom{(n-1)r}{n}$ choix. On continue ainsi pour chaque issue, et on trouve finalement que 
+\begin{eqnarray*}
+p_n&=&\binom{nr}n\times\binom{(n-1)r}{n}\times\cdots\times\binom{2n}n\times\left(\frac 1r\right)^{nr}\\
+&=&\frac{(nr)!}{(n!)^r}\left(\frac 1r\right)^{rn}.
+\end{eqnarray*}
+<li> D'après la formule de Stirling,
+$$p_n\sim_{+\infty}\frac{(nr)^{nr}e^{-nr}\sqrt{2\pi nr}}{n^{nr}e^{-nr}(2\pi n)^{r/2}}\left(\frac{1}n\right)^{nr}=\frac{K}{n^{(r-1)/2}}.$$
+<li> Il s'agit de démontrer que $P(\limsup_n A_n)=0$. D'après le lemme de Borel-Cantelli, il suffit de démontrer
+que $\sum_n P(A_n)&lt;+\infty$. Mais si $r\geq 4$, $(r-1)/2=3/2&gt;1$ et $\sum_n p_n$ est convergente. D'où le résultat.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater2067"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2067"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2067,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Convergence presque sûre <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2067.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(2067,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2067','imageenonce2067');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2067"></a><div class=inner id="innerenonce2067">Soient $(X_n)$ une suite de variables aléatoires réelles et $(a_n)$ une suite de réels positifs tels que $\sum_n a_n&lt;\infty$ et $\sum_n P(|X_{n+1}-X_n|&gt;a_n)&lt;+\infty$. Montrer que $(X_n)$ converge presque sûrement.</div></div><div class=indication><a href="javascript:showAll('innerindication2067','imageindication2067');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2067"></a><div class=inner id="innerindication2067" style="display:none;">Appliquer le théorème de Borel-Cantelli aux événements $|X_{n+1}-X_n|&gt;a_n$.
+On pourra ensuite démontrer que la suite $(X_n)$ est presque sûrement une suite de Cauchy.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2067','imagecorrige2067',2067);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2067"></a><div class=inner id="innercorrige2067" style="display:none;">Notons $A_n$ l'événement $|X_{n+1}-X_n|&gt;a_n$ de sorte que $\sum_n P(A_n)&lt;+\infty$. D'après le lemme de Borel-Cantelli (partie qui ne nécessite pas que les événements $A_n$ soient indépendants), on sait que $P(\limsup_n A_n)=0$. Notons $B=\liminf_n \overline{A_n}$, de sorte que $P(B)=1$. Ainsi, si $\omega\in B$, il existe $n_0$ tel que, pour tout $n\geq n_0$, on a 
+$$|X_{n+1}(\omega)-X_n(\omega)|\leq a_n.$$
+Pour $q&gt;p\geq n_0$, on a alors, d'après l'inégalité triangulaire,
+$$|X_q(\omega)-X_p(\omega)|\leq a_p+\dots+a_{q-1}.$$
+On fixe maintenant $\veps&gt;0$. Puisque la série $\sum_n a_n$ converge, on peut trouver $n_1$ tel que, si $q&gt;p\geq n_1$, on a 
+$$ a_p+\dots+a_{q-1}\leq\veps.$$
+Ainsi, si $q&gt;p\geq \max(n_0,n_1)$, on a
+$$|X_q(\omega)-X_p(\omega)|\leq\veps.$$
+La suite $(X_n(\omega))$ est de Cauchy, donc elle converge. Ceci est vrai pour tout $\omega\in B$, donc presque sûrement.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater2068"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2068"),	max:5, rating:3.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2068,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme qui converge presque sûrement? <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2068.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(2068,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2068','imageenonce2068');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2068"></a><div class=inner id="innerenonce2068">Soit $(X_n)$ une suite de variables aléatoires indépendantes vérifiant $P(X_n=1)=1/2$ et $P(X_n=-1)=1/2$. On pose $S_n=\sum_{k=1}^n k^{-1/2}X_k$.
+<ol class="enumeratechiffre">
+<li> Calculer la fonction caractéristique de $X_n$.
+<li> En déduire la fonction caractéristique $\phi_{S_n}$ de $S_n$.
+<li> Démontrer que, pour $t\neq 0$, $\phi_{S_n}(t)$ tend vers 0.
+<li> Démontrer que, pour tout $t\in\mathbb R$,
+$$|\phi_{S_{n+p}-S_n}(t)-1|\leq |t|+2P(|S_{n+p}-S_n|\geq 1).$$
+<li> En déduire l'existence d'une sous-suite $(n_k)_{k\geq 1}$ telle que, pour tout $k\geq 1$,
+$$P(|S_{n_{k+1}}-S_{n_k}|\geq 1)\geq 1/4.$$
+<li> Démontrer que la suite $(S_n)$ est presque sûrement divergente.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2068','imageindication2068');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2068"></a><div class=inner id="innerindication2068" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la définition.
+<li> Utiliser l'indépendance.
+<li> Démontre que le logarithme tend vers $-\infty$.
+<li> Poser $A=\{|S_{n+p}-S_n|\geq 1\}$ et couper l'intégrale suivant $A$ et $\bar A$.
+<li>  Il suffit de démontrer que, pour tout $n\in\mathbb N$, il existe $p&gt;0$ tel que 
+$$P(|S_{n+p}-S_n|\geq 1)\geq\frac14.$$
+<li> Appliquer le lemme de Borel-Cantelli.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2068','imagecorrige2068',2068);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2068"></a><div class=inner id="innercorrige2068" style="display:none;"><ol class="enumeratechiffre">
+<li> Par définition, 
+$$\phi_{X_n}(t)=\frac12\left(e^{it}+e^{-it}\right)=\cos(t).$$
+<li> Les variables aléatoires $(X_n)$ étant indépendantes, il vient
+$$\phi_{S_n}(t)=\prod_{k=1}^n \phi_{k^{-1/2}X_k}(t)=\prod_{k=1}^n\phi_{X_k}(k^{-1/2}t)=\prod_{k=1}^n\cos(k^{-1/2}t).$$
+<li> On va transformer le produit en somme en passant au logarithme. Ainsi, on va démontrer (ce qui est équvalent, par composition, au résultat demandé), que $\ln \phi_{S_n}(t)$ tend
+vers $-\infty$. Mais,
+$$\ln\phi_{S_n}(t)=\sum_{k=1}^n \ln\big(\cos(k^{-1/2}t)\big).$$
+Or, 
+$$\cos(k^{-1/2}t)=1-\frac{t^2}{2k}+o\left(\frac 1k\right),$$
+et donc, par composition des développements limités (on rappelle que $t\neq 0$),
+$$\ln\big(\cos(k^{-1/2}t)\big)\sim_{k\to+\infty}\frac{-t^2}{2k}.$$
+Par comparaison de séries, on a bien que $\sum_{k=1}^n \ln\big(\cos(k^{-1/2}t)\big)$
+tend vers $-\infty$ si $n$ tend vers $+\infty$, ou encore que $\phi_{S_n}(t)$ tend vers 0.
+<li> On pose $A=\{|S_{n+p}-S_n|\geq 1\}$ et on écrit que 
+$$|\phi_{S_{n+p}-S_n}(t)-1|\leq \int_A|e^{it(S_{n+p}(\omega)-S_n(\omega))}-1|dP(\omega)+
+ \int_{\bar A}|e^{it(S_{n+p}(\omega)-S_n(\omega))}-1|dP(\omega).$$
+Sur $A$, on ne peut guère mieux majorer ce qui se trouve à l'intérieur de l'intégrale que par 2. 
+Ceci donne le terme $2P(|S_{n+p}-S_n|\geq 1)$. En revanche, si $\omega\in\bar A$, on a 
+$$|e^{it(S_{n+p}(\omega)-S_n(\omega))}-1|=|e^{it(S_{n+p}(\omega)-S_n(\omega))}-e^{it0}|\leq |t|$$
+par l'inégalité des accroissements finis. Ceci donne l'autre partie de l'inégalité, puisque $P(\bar A)\leq 1$.
+<li> Il suffit de démontrer que, pour tout $n\in\mathbb N$, il existe $p&gt;0$ tel que 
+$$P(|S_{n+p}-S_n|\geq 1)\geq\frac14.$$
+La construction de la suite $(n_k)$ se fait en effet aisément par récurrence à partir de cette propriété. Si cette propriété est fausse, il existe $n\in\mathbb N$ tel que, pour tout $p&gt;0$ et tout $t\in\mathbb R$, on a 
+$$|\phi_{S_{n+p}-S_n}(t)-1|\leq |t|+\frac 12.$$
+Mais, par indépendance des variables aléatoires,
+$$\phi_{S_{n+p}-S_n}=\frac{\phi_{S_{n+p}}}{\phi_{S_n}}.$$
+On fait tendre $p$ vers $+\infty$ et donc, pour $t\neq 0$, on a
+$$1\leq |t|+\frac 12.$$
+Si $0&lt;t&lt;1/2$, c'est impossible!
+<li> On va appliquer le lemme de Borel-Cantelli. Posons en effet 
+$$A_k=\{|S_{n_{k+1}}-S_{n_k}|\geq 1\}.$$
+On a $P(A_k)\geq 1/4$, de sorte que $\sum_k P(A_k)=+\infty$. De plus, les événements $A_k$ sont indépendants, car ils font intervenir des éléments de la suite $(X_n)$ disjoints. Par le lemme de Borel-Cantelli, on a $P(\limsup_k A_k)=1$. Mais si $\omega\in\limsup_k A_k$, 
+alors $|S_{n_{k+1}}(\omega)-S_{n_k}(\omega)|\geq 1$ pour une infinité de valeurs de $k$, et donc la suite $(S_n(\omega))$ ne converge pas puisqu'elle ne vérifie pas le critère de Cauchy.
+</ol></div></div></div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

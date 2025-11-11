@@ -1,0 +1,595 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Espaces de Hilbert</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Espaces de Hilbert</h1>
+<div class=titrepartie>Projection et orthogonalité</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1983"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1983"),	max:5, rating:1.1176470588235, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1983,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection sur un sous-espace <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1983.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1983,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1983','imageenonce1983');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1983"></a><div class=inner id="innerenonce1983">Pour tout entier $N\in\mtn$, on note $M_N$ le sous-espace vectoriel de $\ell^2(\mtn,\mtc)$ formé des suites
+$(x_n)_{n\in\mtn}$ telles que $\sum_{n=0}^N x_n=0$.
+<ol class="enumeratechiffre">
+<li> Montrer que l'application $(x_n)_n\mapsto \sum_{k=0}^N x_k$ est linéaire continue de $\ell^2(\mtn,\mtc)$ dans $\mtc$.
+Que peut-on en déduire sur $M_N$? Conclure que $\ell^2(\mtn,\mtc)=M_N\oplus M_N^\perp$.
+<li> Soit $E=\{(y_n)_n\textrm{ telles que, pour }0\leq i&lt;j\leq N,\textrm{ on ait }y_i=y_j\textrm{ et }y_n=0\textrm{ pour }n&gt;N\}.$
+<ol class="enumeratechiffre">
+<li> Montrer que l'orthogonal $M_N^\perp$ de $M_N$ contient $E$.
+<li> Montrer que $M_N^\perp=E$ (remarquer que, pour $0\leq i&lt;j\leq N$, la suite $(x_n)$ telle que
+$x_i=1$, $x_j=-1$ et $x_n=0$ si $n\neq i$ et $n\neq j$ appartient à $M_N$).
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1983','imageindication1983');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1983"></a><div class=inner id="innerindication1983" style="display:none;"><ol class="enumeratechiffre">
+<li> Majorer $|T(x)|$ par $C\|x\|$ en utilisant l'inégalité de Cauchy-Schwarz.
+<li> <ol class="enumeratechiffre">
+<li> 
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1983','imagecorrige1983',1983);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1983"></a><div class=inner id="innercorrige1983" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $T$ cette application. On a 
+$$|T(x)|\leq\sum_{n=0}^N |x_n|\leq \|x\|_2\left(\sum_{n=0}^N 1^2\right)^{1/2}\leq (N+1)^{1/2}\|x\|_2$$
+où le point crucial est l'inégalité de Cauchy-Schwarz. $T$ est donc continue, et $M_N$ est un sous-espace fermé
+de l'espace de Hilbert $\ell^2(\mtn,\mtc)$. On en déduit le résultat demandé.
+<li> <ol class="enumeratechiffre">
+<li> Soit $x\in M_N$ et $y\in E$. On a 
+$$\langle x,y\rangle = \sum_{k=0}^N x_k\overline{y_k}=\overline{y_0}\sum_{k=0}^N x_k=0.$$
+<li> Il faut montrer l'inclusion contraire. Prenons donc $y\in M_N^\perp$, et soit $x$ la suite donnée par l'énoncé, membre
+de $M_N$, avec $i=0$ et $0&lt;j\leq N$. On a 
+$$\langle x,y\rangle = y_0-y_j=0,$$
+ce qui prouve que $y_j=y_0$ pour $j=0,\dots,N$. D'autre part, pour $j&gt;N$, on considère la suite $x$ tel que $x_j=1$ 
+et $x_k=0$ pour $k\neq j$. Le produit scalaire de $y$ avec cette suite donne $y_j=0$, ce qui prouve que $y\in E$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1984"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1984"),	max:5, rating:2.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1984,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection sur la boule <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1984.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1984,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1984','imageenonce1984');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1984"></a><div class=inner id="innerenonce1984">Soit $H$ un espace de Hilbert (réel). Déterminer une expression de la projection sur la boule unité fermée de $H$.</div></div><div class=indication><a href="javascript:showAll('innerindication1984','imageindication1984');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1984"></a><div class=inner id="innerindication1984" style="display:none;">Faire un dessin en dimension deux pour deviner la formule. Puis utiliser la caractérisation du projeté en fonction du
+produit scalaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1984','imagecorrige1984',1984);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1984"></a><div class=inner id="innercorrige1984" style="display:none;">Notons $B$ la boule unité fermée de $H$. Il faut d'abord faire un dessin en dimension deux pour comprendre à quoi doit être égale cette projection. On se rend assez vite
+compte que l'on doit avoir $Px=x$ si $x$ est dans $B$, et $Px=x/\|x\|$ si $x\notin B$. C'est clair si $x$ est dans $B$ car un point de l'ensemble
+se projette dans lui-même. Si $x\notin B$, pour prouver que $Px=x/\|x\|$, il suffit de prouver que, pour tout $z\in B$, on a 
+$$\langle z-\frac x{\|x\|},x-\frac{x}{\|x\|}\rangle\leq 0.$$
+Mais ceci suit du calcul suivant :
+\begin{eqnarray*}
+\langle z-\frac x{\|x\|},x-\frac{x}{\|x\|}\rangle&=&\langle z,x\rangle-\|x\|-\langle z,\frac x{\|x\|}\rangle+1\\
+&=&(\|x\|-1)\left(\langle z,\frac x{\|x\|}\rangle-1\right).
+\end{eqnarray*}
+Puisque $x\notin B$, on a $\|x\|-1\geq 0$ et puisque $z\in B$, on a $\left|\langle z,\frac x{\|x\|}\rangle\right|\leq 1$. On a donc bien démontré
+la propriété voulue.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1985"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1985"),	max:5, rating:2.5238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1985,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de la projection <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1985.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1985,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1985','imageenonce1985');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1985"></a><div class=inner id="innerenonce1985">Soit $H=\ell^2(\mtn,\mtr)$ (espace de Hilbert réel). On note $C=\{x=(x_n)\in H;\ \forall n\in\mtn,\ x_n\geq 0\}.$
+<ol class="enumeratechiffre">
+<li> Démontrer que $C$ est convexe fermé.
+<li> Déterminer la projection sur ce convexe $C$.
+<li> Reprendre la question précédente avec $H=\ell^2(\mtn,\mtc)$ et $C=\{x=(x_n)\in H;\ \forall n\in\mtn,\ x_n\in\mathbb R_+\}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1985','imageindication1985');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1985"></a><div class=inner id="innerindication1985" style="display:none;"><ol class="enumeratechiffre">
+<li> Facile!
+<li> Faire un dessin avec simplement deux coordonnées, pour deviner la formule. Une fois cette formule devinée,
+il faut prouver qu'il s'agit bien de la projection. Pour cela, utiliser la caractérisation de la projection en terme de produits scalaires.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1985','imagecorrige1985',1985);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1985"></a><div class=inner id="innercorrige1985" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'appliquer la définition pour montrer que $C$ est convexe. D'autre part, $C$ est fermé : si $(x^p)$ est une suite de $C$ qui converge vers $x\in H$,
+et si $x^p_n\geq 0$, on a clairement par passage à la limite $x_n\geq 0$, et donc $x\in C$.
+<li> Soit $x\in\ell^2$. Il faut deviner la formule pour $P_C(x)$. Une façon de s'en sortir est de faire un dessin
+en dimension $2$ et d'essayer de deviner ainsi quelle est la formule pour $P_C(x)$. En dimension $2,$ $C$ correspond simplement au quart de plan en haut à droite.
+Il y a 4 cas différents pour déterminer la projection de $x$, en fonction de sa position dans l'un ou l'autre des demi-plans.
+C'est ainsi que l'on est conduit à poser $P_C(x)=(y_n)$, où $y_n=x_n$ si $x_n\geq 0$, et $y_n=0$ sinon.
+Pour prouver qu'il s'agit bien de la projection de $x$ sur $C$, il suffit de vérifier que, pour tout $z$ de $C$, on a :
+$$&lt;x-y,z-y&gt;\leq 0.$$
+Mais, 
+$$&lt;x-y,z-y&gt;=\sum_{n\geq 0}(x_n-y_n)(z_n-y_n).$$
+Or, à $n\geq 0$ fixé, deux cas sont possibles :
+<ul class="rien">
+<li> Soit $x_n\geq 0$, et dans ce cas $x_n-y_n=0$.
+<li> Soit $x_n\leq 0$, mais alors $y_n=0$, et donc $(x_n-y_n)(z_n-y_n)\leq 0$.
+</ul>
+Dans tous les cas, on a $(x_n-y_n)(z_n-y_n)\leq 0$, ce qui prouve que $&lt;x-y,z-y&gt;\leq 0$.
+<li> Il faut légèrement adapter pour le cas complexe. Il faut et il suffit cette fois que $y=P_C(x)$ vérifie pour tout $z$ de $C$
+$$\Re e(&lt;x-y,z-y&gt;)=\Re e\left(\sum_{n\geq 0}(x_n-y_n)\overline{(z_n-y_n)}\right)\leq 0.$$
+Dans tous les cas, $z_n-y_n$ est réel, et donc 
+$$\Re e(&lt;x-y,z-y&gt;)=\sum_{n\geq 0}(z_n-y_n)\left(\Re e(x_n)-y_n\right).$$
+On est alors conduit à poser $y_n=\Re e(x_n)$ si $\Re e(x_n)\geq 0$ et $y_n=0$ sinon. On obtient bien que la quantité précédente est négative.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1986"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1986"),	max:5, rating:1.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1986,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Propriétés de la projection sur un sous-espace fermé <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1986.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1986,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1986','imageenonce1986');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1986"></a><div class=inner id="innerenonce1986">Soit $H$ un espace de Hilbert, et $F$ un sous-espace vectoriel fermé de $H$, non réduit à $\{0\}$. On note $p$ la projection orthogonale de $H$
+sur $F$. Démontrer que :
+<ol class="enumeratechiffre">
+<li> $p\circ p=p$.
+<li> $\forall (x,y)\in H^2,\ \langle p(x),y\rangle=\langle x,p(y)\rangle$.
+<li> $\|p\|=1$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1986','imageindication1986');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1986"></a><div class=inner id="innerindication1986" style="display:none;"><ol class="enumeratechiffre">
+<li> Cas particulier d'un résultat général sur les projections.
+<li> Décomposer $x$ en $p(x)+z$, où $z$ est orthogonal à $F$. Faire de même pour $y$ et calculer les produits scalaires.
+<li> Utiliser le théorème de Pythagore.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1986','imagecorrige1986',1986);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1986"></a><div class=inner id="innercorrige1986" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est clair que si $z\in F$, on a $p(z)\in F$. On en déduit que $p(p(x))=p(x)$ pour tout $x$ de $H$.
+<li> Décomposons $x$ en $p(x)+x_1$, où $x_1$ est orthogonal à $F$, et $y$ en $p(y)+y_1$. On a alors :
+$$&lt;p(x),y&gt;=&lt;p(x),p(y)&gt;+&lt;p(x),y_1&gt;=&lt;p(x),p(y)&gt;$$
+où la dernière inégalité vient de ce que $y_1$ est orthogonal à $F$ tout entier, et donc en particulier à $p(x)$. La même égalité
+est vraie, pour les mêmes raisons, pour $&lt;x,p(y)&gt;$.
+<li> D'après le théorème de Pythagore, on a :
+$$\|p(x)\|^2+\|x-p(x)\|^2=\|x\|^2.$$
+Ceci entraîne 
+$$\|p(x)\|\leq \|x\|,$$
+et donc $\|p\|\leq 1$. Maintenant, puisque $F$ n'est pas réduit à $\{0\}$, il existe $x$ dans $F$ de norme 1. Pour ce $x$, on a $\|p(x)\|=\|x\|=1$,
+ce qui prouve que $\|p\|=1$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1987"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1987"),	max:5, rating:1.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1987,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distance à un sous-espace fermé <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1987.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1987,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1987','imageenonce1987');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1987"></a><div class=inner id="innerenonce1987">Soit $H$ un espace de Hilbert, et $F$ un sous-espace fermé de $H$, non réduit à $\{0\}$. On note $p$ la projection orthogonale de $H$
+sur $F$. Si $x$ est un élément de $H$, on appelle distance de $x$ à $F$ la quantité 
+$$d(x,F)=\inf\{\|x-y\|;\ y\in F\}.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $d(x,F)=\|x-p(x)\|.$
+<li> Montrer que $d(x,F)=\max\{|&lt;x,z&gt;|;\ z\in F^\perp \textrm{ et }\|z\|=1\}.$
+<li> On suppose dans cette question que $F$ est un sous-espace de dimension finie, et on note $(e_1,\dots,e_n)$ une base orthonormale de $F$.
+<ol class="enumeratechiffre">
+<li> Quel résultat du cours assure l'existence d'une telle base orthonormale?
+<li> Déterminer en fonction de $e_1,\dots,e_n$, l'expression de $p(x)$.
+<li> En déduire la valeur de :
+$$\inf\left\{\int_0^1|t^2-at-b|^2dt;\ a\in\mtr,\ b\in\mtr\right\}.$$
+</ol>
+<li> On suppose désormais que $F$ est un sous-espace de dimension infinie. Justifier que $F$ possède une base hilbertienne, puis exprimer $p(x)$ en fonction de cette base.
+<li> On suppose désormais que $H=\ell^2(\mtn,\mtc)$. Pour $n$ un entier fixé, on pose 
+$$M=\left\{x\in H;\ \sum_{k=0}^n x_k=0\right\}.$$
+Vérifier que $M$ est un sous-espace fermé de $H$. Chercher un sous-espace $N$ tel que $M\oplus N=H$. Donner la distance de 
+l'élément $(1,0,0,\dots)$ à $M$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1987','imageindication1987');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1987"></a><div class=inner id="innerindication1987" style="display:none;"><ol class="enumeratechiffre">
+<li> Décomposer $x$ en $p(x)+x_1$, où $x_1$ est orthogonal à $F$. Utiliser le théorème de Pythagore.
+<li> Il faut toujours passer par $x_1$... on pourra démontrer pour une des deux inégalités l'inégalité de Cauchy-Schwarz.
+<li> <ol class="enumeratechiffre">
+<li> C'est du cours!
+<li> Utiliser la caractérisation du projeté orthogonal sur un sous-espace fermé. On pourra comme toujours s'aider d'un dessin
+en dimension 2 ou 3!!!
+<li> Introduire l'espace préhilbertien $C([0,1],\mtr)$ muni du produit scalaire 
+$$&lt;f,g&gt;=\int_0^1f(t)g(t)dt.$$
+Interpréter alors le problème de minimisation comme un problème de projection...puis utiliser les questions précédentes. On
+pourra aussi utiliser le procédé d'orthonormalisation de Schmidt pour construire une base orthonormale du sous-espace.
+</ol>
+<li> C'est exactement la même chose que dans la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1987','imagecorrige1987',1987);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1987"></a><div class=inner id="innercorrige1987" style="display:none;"><ol class="enumeratechiffre">
+<li> D'abord, puisque $p(x)\in F$, il est clair que l'on a :
+$$\|x-p(x)\|\geq d(x,F).$$
+D'autre part, considérons $y\in F$, et décomposons $x$ en $x=p(x)+x_1$, où $x_1$ est orthogonal à $F$. On a alors :
+\begin{eqnarray*}
+\|x-y\|^2&=&&lt;p(x)-y+x_1,p(x)-y+x_1&gt;\\
+&=&&lt;p(x)-y,p(x)-y&gt;+2\Re\left(&lt;p(x)-y,x_1\right)+&lt;x_1,x_1&gt;\\
+&=&\|p(x)-y\|^2+\|x_1\|^2.
+\end{eqnarray*}
+Maintenant, on a $\|x_1\|^2=\|x-p(x)\|^2$ d'après le théorème de Pythagore, et donc $\|x-y\|\geq \|x-p(x)\|$.
+<li> D'abord, en gardant les mêmes notations, on a 
+$$&lt;x,x_1&gt;=&lt;p(x)+x_1,x_1&gt;=&lt;x_1,x_1&gt;=d(x,F)^2.$$
+On en déduit que 
+$$\langle x,\frac{x_1}{\|x_1\|}\rangle=\frac{d(x,F)^2}{\|x_1\|}=d(x,F),$$
+ce qui démontre une première inégalité. D'autre part, soit $y\in F^\perp$, avec $\|y\|=1$, on a :
+$$\langle x,y\rangle=\langle p(x),y\rangle+\langle x_1,y\rangle=\langle x_1,y\rangle,$$
+d'où on déduit par l'inégalité de Cauchy-Schwarz 
+$$|&lt;x,y&gt;|\leq  \|x_1\|=d(x,F),$$
+ce qui démontre la deuxième inégalité.
+<li> <ol class="enumeratechiffre">
+<li> Le procédé d'orthonormalisation de Schmidt par exemple...
+<li> Rappelons ce qui caractérise $p(x)$ : $p(x)$ est le seul élément de $F$ tel que $x-p(x)$ soit orthogonal à tous les éléments de $F$. Raisonnons par analyse-synthèse. $p(x)$ se décompose
+dans la base orthonormée de $F$ en 
+$$p(x)=\alpha_1 e_1+\dots+\alpha_n e_n.$$
+Maintenant, $x-p(x)$ est orthogonal à $e_1$, puisqu'il est orthogonal à $F$. On a donc :
+$$&lt;x-p(x),e_1&gt;=0=&lt;x,e_1&gt;-&lt;p(x),e_1&gt;=&lt;x,e_1&gt;-\alpha_1.$$
+On voit que nécessairement $\alpha_1=&lt;x,e_1&gt;$, et par un raisonnement similaire, on doit avoir $\alpha_k=&lt;x,e_k&gt;$, ce qui nous conduit à poser 
+$$p(x)=&lt;x,e_1&gt;e_1+\dots+&lt;x,e_n&gt;e_n.$$
+Réciproquement, on vérifie facilement que $p(x)$ ainsi défini est élément de $F$, et que $x-p(x)$ est orthogonal à tout élement de $F$.
+<li> Introduisons $H=L^2([0,1])$ (on pourrait aussi considérer simplement $C([0,1])$), muni du produit scalaire 
+$$&lt;f,g&gt;=\int_0^1f(t)g(t)dt.$$
+Posons $F$ le sous-espace vectoriel des fonctions polynômiales de degré $\leq 1$. Le problème de minimisation peut aussi s'interpréter 
+comme la recherche de $d(t^2,F)$. On applique alors les méthodes mises en valeur dans l'exercice. On commence par chercher $(e_1,e_2)$ une
+base orthonormée de $F$. On peut choisir $e_1(t)=1$, qui est déjà un vecteur normé. Pour $e_2$, on commence d'abord par chercher $f_2$ sous la forme
+$$f_2(t)=t+\alpha e_1(t)=t+\alpha,$$
+de sorte que $f_2$ soit orthogonal au vecteur précédent construit. On a donc :
+$$&lt;f_2,e_1&gt;=\int_0^1 (t+\alpha)dt=\frac{1}{2}+\alpha=0.$$
+On a donc $f_2=t-1/2$, et il suffit maintenant de normaliser ce vecteur :
+$$e_2=\frac{f_2}{\|f_2\|}=2\sqrt{3}t-\sqrt{3}.$$
+On calcule ensuite la projection de $t^2$ sur $F$, en utilisant :
+$$&lt;t^2,e_1&gt;=\frac{1}{3},$$
+$$&lt;t^2,e_2&gt;=\frac{\sqrt{3}}{6}.$$
+On en déduit :
+$$p(t^2)=\frac{1}{3}+\frac{\sqrt{3}}{6}\left(\sqrt{3}(2t-1)\right))=t-\frac{1}{6}.$$
+Le minimum est donc atteint pour $a=1$ et $b=-1/6$. Il ne reste plus qu'à calculer la dernière intégrale qui fait $1/180$.
+</ol>
+<li> $F$ possède une base hilbertienne, car il est lui-même un espace de Hilbert, en tant que sous-espace fermé (donc complet)
+d'un espace de Hilbert. Si $(e_n)_{n\in I}$ désigne une base hilbertienne de $F$, le même raisonnement que précédemment montre que
+$$p(x)=\sum_{n\in I}&lt;x,e_n&gt;e_n.$$
+<li> D'une part, $M$ est clairement un sous-espace vectoriel de $H$, et il est fermé (caractérisation par les suites, ou bien 
+noyau d'une application linéaire continue). Posons ensuite $N$ le sous-espace vectoriel engendré par $(1,1,1\dots,1,0,0,\dots)$. On pourra vérifier qu'il
+convient. Enfin, pour calculer la distance de $(1,0,0,\dots)$ à $M$, il suffit de déterminer sa projection sur $M$. Mais $x$ se décompose alors en
+$$x=p(x)+k(1,1,\dots,1,0,\dots).$$
+Prenant la somme des n premiers termes de chaque membre, on trouve que $k=\frac{1}{n+1}$. Il vient finalement :
+$$d(x,M)=\|\frac{1}{n+1}(1,1,1,\dots,0,\dots)\|=\frac{\sqrt{n+1}}{n+1}.$$
+</ol></div></div></div>
+
+<div class=titrepartie>L'espace $\ell^2$</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1988"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1988"),	max:5, rating:1.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1988,rating); this.setRating(rating);   this.disable();    done();     }});</script> - $\ell^2(\mathbb N)$ et $\ell^2(I)$ <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1988.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1988,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1988','imageenonce1988');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1988"></a><div class=inner id="innerenonce1988">On rappelle que l'espace $\ell^2(I,\mtc)$ est l'ensemble des familles $x=(x_\alpha)_{\alpha\in I}$, indexées par $I$, 
+et telles que :
+$$\|x\|=\sup\left\{\left(\sum_{\alpha\in F}|x_\alpha|^2\right)^{1/2};\ F\subset I\textrm{ fini}\right\}&lt;+\infty.$$
+Montrer que dans le cas où $I=\mtn$, on a en fait :
+$$\|x\|=\left(\sum_{n\geq 0}|x_n|^2\right)^{1/2}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication1988','imageindication1988');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1988"></a><div class=inner id="innerindication1988" style="display:none;">Procéder en utilisant une double inégalité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1988','imagecorrige1988',1988);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1988"></a><div class=inner id="innercorrige1988" style="display:none;">Fixons $\veps&gt;0$. Par définition de la borne supérieure, il existe $F\subset\mtn$ fini tel que :
+$$\|x\|-\veps\leq \left(\sum_{n\in F}|x_n|^2\right)^{1/2}.$$
+Soit $n_0$ le plus grand élément de $F$ (qui est fini). Puisque $F\subset\{0,\dots,n_0\}$, on a :
+$$\|x\|-\veps\leq \left(\sum_{n=0}^{n_0}|x_n|^2\right)^{1/2}\leq \left(\sum_{n\geq0}|x_n|^2\right)^{1/2}.$$
+Puisque cette inégalité est vérifiée pour tout $\veps&gt;0$, on en déduit :
+$$\|x\|\leq\left(\sum_{n\geq 0}|x_n|^2\right)^{1/2}.$$
+Réciproquement, on fixe toujours $\veps&gt;0$, et soit $n_0$ tel que :
+$$\left(\sum_{n\geq 0}|x_n|^2\right)^{1/2}-\veps\leq \left(\sum_{n=0}^{n_0}|x_n|^2\right)^{1/2}.$$
+En prenant $F=\{0,\dots,n_0\}$, on obtient :
+$$\left(\sum_{n\geq 0}|x_n|^2\right)^{1/2}-\veps\leq \left(\sum_{n\in F}|x_n|^2\right)^{1/2}\leq \|x\|.$$
+Faisant tendre $\veps$ vers 0, on obtient l'autre inégalité $\left(\sum_{n\geq 0}|x_n|^2\right)^{1/2}\leq \|x\|.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1989"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1989"),	max:5, rating:1.2857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1989,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Quelques suites de suites <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1989.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1989,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1989','imageenonce1989');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1989"></a><div class=inner id="innerenonce1989">Dire si les suites suivantes sont convergentes dans $\ell^2$, et si c'est le cas, calculer leur limite.
+<ol class="enumeratechiffre">
+<li> $x(n)=(\frac{1}{n},0,0,0,\dots)$,
+<li> $x(n)=(1,1/2,1/3,\dots,1/n,0,0,\dots)$,
+<li> $x(n)=(1,1/\sqrt{2},1/\sqrt{3},\dots,1/\sqrt{n},0,0,\dots)$,
+<li> $x(n)_m=1$ si $n=m$, 0 sinon,
+<li> $x(n)_m=\frac{1}{m}+\frac{1}{nm^3}$,
+<li> $x(n)_m=\frac{1}{m}+\frac{1}{nm^{1/3}}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1989','imageindication1989');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1989"></a><div class=inner id="innerindication1989" style="display:none;">Parmi les différentes méthodes, on peut citer le fait de regarder la norme de $\|x_n\|$, ou que la convergence dans $\ell^2$ entraîne la convergence pour chaque rang.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1989','imagecorrige1989',1989);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1989"></a><div class=inner id="innercorrige1989" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $\|x(n)\|=1/n$ : la suite $(x(n))$ converge vers 0.
+<li> Rappelons que si $x$ et $y$ sont deux éléments de $l^2$, on a :
+$$|x_m-y_m|\leq\|x-y\|.$$
+On en déduit que si la suite $(x(n))_{n\geq 1}$ converge vers $x$ dans $\ell^2$, alors pour chaque $m$, la suite $(x(n)_m)_{n\geq 1}$ converge vers $x_m$.
+Cette propriété permet de deviner la limite des suites de $\ell^2$. On pose ici $x=(1,1/2,1/3,\dots,1/n,1/n+1,\dots)$. On a
+$$\|x-x(n)\|^2=\sum_{k&gt;n}\frac{1}{k^2},$$
+et cette quantité tend vers 0 comme reste d'une série convergente.
+<li> On remarque que $\|x(n)\|^2=\sum_{k=1}^n\frac{1}{k}$, et ceci tend vers $+\infty$ (c'est la somme partielle d'une série
+à termes positifs divergente). La suite $(x(n))$ n'est pas convergente.
+<li> Il est facile de vérifier que pour $n\neq p$, on a exactement :
+$$\|x(n)-x(p)\|=\sqrt{2}.$$
+La suite $(x(n))$ ne peut pas converger car elle n'est pas de Cauchy.
+<li> On pose $x$ l'élément de $\ell^2$ défini par $x_m=1/m$. On a :
+$$\|x(n)-x\|=\frac{1}{n}\left(\sum_{m\geq 1}\frac{1}{m^6}\right)^{1/2}\to 0.$$
+<li> Cette suite n'est pas dans $\ell^2$, elle ne peut donc pas converger!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1990"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1990"),	max:5, rating:2.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1990,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Compacité <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1990.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1990,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1990','imageenonce1990');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1990"></a><div class=inner id="innerenonce1990">Prouver que la boule unité fermée de $\ell^2(\mtn,\mtc)$ n'est pas compacte.</div></div><div class=indication><a href="javascript:showAll('innerindication1990','imageindication1990');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1990"></a><div class=inner id="innerindication1990" style="display:none;">Trouver une famille de vecteurs unitaires qui n'admet pas de sous-suite convergente.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1990','imagecorrige1990',1990);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1990"></a><div class=inner id="innercorrige1990" style="display:none;">On considère $e_n=(0,\dots,0,1,0,\dots)$ où le 1 est en $n-$ième position. La suite $(e_n)_{n\geq 0}$ est 
+une suite de la boule unité fermée de $\ell^2$. Nous allons prouver qu'elle n'admet pas de sous-suite convergente. Il suffit en fait
+de remarquer que, pour $p\neq q$, on a 
+$$\|e_p-e_q\|=\sqrt{2}.$$
+Aucune sous-suite de $\ell^2(\mtn,\mtc)$ ne pourra être de Cauchy et donc converger.
+Ce résultat est un cas particulier du théorème de Riesz qui dit que la boule unité fermée d'un espace vectoriel normé de dimension
+infinie n'est jamais compacte.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1991"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1991"),	max:5, rating:2.3076923076923, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1991,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Complétude <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1991.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1991,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1991','imageenonce1991');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1991"></a><div class=inner id="innerenonce1991">On se propose de démontrer que l'espace $\ell^2(\mtn,\mtr)$ est complet pour la norme usuelle issue du produit scalaire,
+$$\|x\|=\left(\sum_{k=0}^{+\infty}|x_k|^2\right)^{1/2}.$$
+ Soit $(v(n))_{n\geq 0}$ une suite de Cauchy 
+d'éléments de $\ell^2(\mtn,\mtr)$. Etant donné $\veps&gt;0$, il existe donc $N(\veps)\in\mtn$ tel que, si $n,l\geq N(\veps)$, alors :
+$$\|v(n)-v(l)\|\leq\veps.$$
+<ol class="enumeratechiffre">
+<li> Montrer que l'on a alors, pour tout $k\in\mtn$ et tous $n,l\geq N(\veps)$
+$$|v(n)_k-v(l)_k|\leq\veps.$$
+<li> Montrer que $\lim_{n\to\infty}v(n)_k=v_k$ existe pour tout $k\in\mtn$.
+<li> Montrer qu'il existe $K\in\mtn$ tel que
+$$\left(\sum_{k\geq K}v(N(\veps))^2_k\right)^{1/2}\leq\veps.$$
+<li> Montrer que pour tout $L\geq K$, on a
+$$\left(\sum_{L\geq k\geq K}v_k^2\right)^{1/2}\leq2\veps.$$
+<li> En déduire que l'on a $v\in\ell^2(\mtn)$, que 
+$$\lim_{n\to\infty}\|v(n)-v\|=0$$
+et donc que l'espace $\ell^2(\mtn)$ est complet pour la norme $\|\cdot\|$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1991','imageindication1991');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1991"></a><div class=inner id="innerindication1991" style="display:none;"><ol class="enumeratechiffre">
+<li> Majorer le terme général par la somme de la série.
+<li> Utiliser le fait que $\mtr$ est complet.
+<li> Conséquence immédiate de la définition.
+<li> Utiliser l'inégalité de Minkowski.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1991','imagecorrige1991',1991);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1991"></a><div class=inner id="innercorrige1991" style="display:none;">Cet exercice constitue les premières questions d'un sujet d'Agrégation Interne. Le corrigé est une transcription de celui que l'on peut
+trouver dans le rapport du jury.
+<ol class="enumeratechiffre">
+<li> Pour tout $k\in\mtn$, on a 
+$$|v(n)_k-v(l)_k|\leq\|v(n)-v(l)\|,$$
+d'où le résultat si $n,l\geq N(\veps).$
+<li> La suite $(v(n)_k)_{n\geq 0}$ est de Cauchy dans $\mtr$ qui est complet, donc elle converge.
+<li> C'est une conséquence immédiate du fait que $v(N(\veps))\in\ell^2(\mtn)$.
+<li> Pour tout $n\geq N(\veps)$, et tout $L\geq K$, on a d'après l'inégalité de Minkowski
+$$\left(\sum_{L\geq k\geq K}v(n)_k^2\right)^{1/2}\leq\left(\sum_{L\geq k\geq K}(v(n)_k-v(N(\veps))_k)^2\right)^{1/2}+\left(
+\sum_{L\geq k\geq K}v(N(\veps))^2_k\right)^{1/2}$$
+et donc 
+$$\left(\sum_{L\geq k\geq K}v(n)_k^2\right)^{1/2}\leq \|v(n)-v(N(\veps))\|+\veps\leq 2\veps.$$
+En passant à la limite en $n$, ce qui est autorisé à gauche car on a simplement une somme finie, on en déduit 
+$$\left(\sum_{L\geq k\geq K}v_k^2\right)^{1/2}2\leq \veps.$$
+<li> D'après la question précédente, la série 
+$$\sum_{k\geq 1}v_k^2$$
+est convergente (elle est de Cauchy). Donc $v=(v_k)\in\ell^2(\mtn)$. Si $K\geq 0$, et $n,l\geq N(\veps)$, on a :
+$$\left(\sum_{k\leq K}(v(n)_k-v(l)_k)^2\right)^{1/2}\leq\veps$$
+donc en passant à la limite en $n$, on a 
+$$\left(\sum_{k\leq K}(v_k-v(l)_k)^2\right)^{1/2}\leq\veps,$$
+puis en passant à la limite en $K$,
+$$\|v-v(l)\|\leq\veps$$
+pour tout $l\geq N(\veps)$, ce qui montre que la suite $v(n)$ converge vers $v$ dans $\ell^2(\mtn)$ et donc que cet espace est complet.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Opérateurs et adjoints</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1993"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1993"),	max:5, rating:1.2727272727273, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1993,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Adjoint, noyau, et orthogonalité <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1993.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1993,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1993','imageenonce1993');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1993"></a><div class=inner id="innerenonce1993">Soit $H$ un espace de Hilbert, et $T$ une application linéaire continue sur $H$. Montrer les relations suivantes :
+<ul class="rien">
+<li> $\ker(T^*)=\text{Im}(T)^\perp$.
+<li> $\text{Im}(T^*)\subset \ker(T)^\perp$.
+</ul></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1993','imagecorrige1993',1993);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1993"></a><div class=inner id="innercorrige1993" style="display:none;"><ul class="rien">
+<li> Soit $x\in \ker(T^*)$. Prenons $y\in \text{Im}(T)$. $y$ peut s'écrire $y=Tz$. On a alors :
+$$&lt;y,x&gt;=&lt;Tz,x&gt;=&lt;z,T^*x&gt;=0.$$
+Réciproquement, si $x\in \text{Im}(T)^\perp$, pour tout $y\in H$, on a 
+$$&lt;T^*x,y&gt;=&lt;x,Ty&gt;=0.$$
+$T^*x$ est orthogonal à tous les vecteurs de l'espace : on en déduit que $T^*x=0$.
+<li> Prenons $y\in \text{Im}(T^*)$, $y=T^*x$ avec $x\in H$. Si $z\in \ker(T)$, on a 
+$$&lt;y,z&gt;=&lt;T^*x,z&gt;=&lt;x,Tz&gt;=0,$$
+et donc $y\in \ker(T)^\perp$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1992"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1992"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1992,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de quelques adjoints <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1992.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1992,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1992','imageenonce1992');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1992"></a><div class=inner id="innerenonce1992"><ol class="enumeratechiffre">
+<li> Soit $(\alpha_n)_{n\in\mtn}$ une suite bornée de nombres complexes et $T$ l'application linéaire de $\ell^2=\ell^2(\mtn,\mtc)$ dans lui-même
+définie par $T(x)=(\alpha_nx_n)_{n\in\mtn}$, pour $x=(x_n)_{n\in\mtn}\in\ell^2$. Vérifier que $T$ est continue, et calculer son adjoint.
+<li> Soit $S$ l'application de $\ell^2=\ell^2(\mtn,\mtc)$ dans lui-même définie par $S(x)=(0,x_0,x_1,\dots)$. Vérifier que $S$ est continue
+et calculer son adjoint.
+<li> Soit $H=L^2([0,1],\mtc)$ muni du produit scalaire usuel, et $K:[0,1]\times[0,1]\to\mtc$ une fonction continue. Pour $x\in[0,1]$, on pose 
+$$Tf(x)=\int_0^1K(x,y)f(y)dy.$$
+Vérifier que $T$ est une application linéaire continue, et calculer son adjoint.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1992','imageindication1992');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1992"></a><div class=inner id="innerindication1992" style="display:none;">Pour ces 3 exemples, il faut toujours partir de la relation fondamentale qui définit l'opérateur adjoint, à savoir 
+$$&lt;Tx,y&gt;=&lt;x,T^*y&gt;.$$
+Suivant les cas, on pourra prendre des valeurs de $x$ particulières, ou bien prendre le cas général.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1992','imagecorrige1992',1992);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1992"></a><div class=inner id="innercorrige1992" style="display:none;"><ol class="enumeratechiffre">
+<li> On note $\|\alpha\|_\infty=\sup\{|\alpha_n|;\ n\in\mtn\}$. On a :
+$$\|Tx\|^2=\sum_{n\geq 0}|\alpha_n|^2|x_n|^2\leq \|\alpha\|_\infty^2\|x\|^2,$$
+ce qui prouve que $T$ est continue avec $\|T\|\leq \|\alpha\|_\infty$.
+Fixons $y\in\ell^2$. $T^*(y)$ est l'unique élément de $\ell^2$ défini par :
+$$&lt;x,T^*(y)&gt;=&lt;Tx,y&gt;\ \textrm{pour tout }x\in\ell^2.$$
+Or, 
+$$&lt;Tx,y&gt;=\sum_{n\geq 0}\alpha_n x_n\overline{y_n}=\sum_{n\geq 0}x_n\overline{\overline{\alpha_n}y_n},$$
+ce qui prouve que 
+$$T^*(y)=\left(\overline{\alpha_n}y_n\right)_{n\geq 0}.$$
+<li> Il est clair que dans ce cas on a $\|S(x)\|=\|x\|$ ($S$ est une isométrie). D'autre part,
+si $y\in\ell^2$, et si on note $S^*(y)=(z_n)_{n\geq 0}$, on a :
+$$&lt;Sx,y&gt;=&lt;x,S^*y&gt;=\sum_{n\geq 1}x_{n-1}\overline{y_n}=\sum_{n\geq 0}x_n\overline{y_{n+1}}.$$
+On doit donc avoir $(S^*y)_n=y_{n+1}$, c'est-à-dire encore $S^*(y)=(y_1,y_2,\dots)$.
+<li> Notons $\|K\|_\infty=\sup\{|K(x,y)|;\ (x,y)\in[0,1]^2\}$ (qui existe et est fini car $K$ est continue sur le compact $[0,1]^2$).
+On a alors :
+\begin{eqnarray*}
+\|Tf\|^2&=&\int_{0}^1 \left|\int_0^1 K(x,y)f(y)dy\right|^2dx\\
+&\leq&\int_0^1\left(\int_0^1 |K(x,y)||f(y)|dy\right)^2dx\\
+&\leq&\|K\|_\infty^2 \int_0^1\left(\int_0^1|f(y)|dy\right)^2dx\\
+&\leq&\|K\|_\infty^2 \int_0^1\int_0^1|f(y)|^2dydx\textrm{ (Cauchy-Schwarz)}\\
+&\leq&\|K\|_\infty^2 \|f\|^2,
+\end{eqnarray*}
+ce qui prouve que $T$ est continu. Pour le calcul de l'adjoint, comme à l'accoutumée, on fixe $g\in L^2$, et pout tout $f\in L^2$, on a :
+$$&lt;Tf,g&gt;=\int_0^1 \int_0^1 K(x,y)f(y)\overline{g(x)}dxdy.$$
+Par le théorème de Fubini (pourquoi peut-on l'appliquer?), cela donne 
+\begin{eqnarray*}
+&lt;Tf,g&gt;&=&\int_0^1 f(y) \left(\int_0^1 K(x,y)\overline{g(x)}dx\right)dy\\
+&=&\int_0^1 f(y)\overline{\int_0^1 \overline{K(x,y)}g(x)dx}dy.
+\end{eqnarray*}
+On en déduit que :
+$$T^*(g)(y)=\int_0^1 \overline{K(x,y)}g(x)dx.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1994"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1994"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1994,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un opérateur d'intégration <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1994.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1994,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1994','imageenonce1994');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1994"></a><div class=inner id="innerenonce1994">Soit $H=L^2([0,1])$. Pour $f\in H$, on pose 
+$$Tf(x)=\int_0^x f(t)dt.$$
+<ul class="rien">
+<li> Montrer que $T$ est un opérateur continu sur $H$.
+<li> Calculer l'adjoint de $T$.
+</ul></div></div><div class=indication><a href="javascript:showAll('innerindication1994','imageindication1994');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1994"></a><div class=inner id="innerindication1994" style="display:none;"><ul class="rien">
+<li> Utiliser notamment l'inégalité de Cauchy-Schwarz.
+<li> Utiliser la fonction caractéristique des intervalles pour se ramener à des intégrales sur $[0,1]$, et utiliser le théorème de Fubini.
+</ul></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1994','imagecorrige1994',1994);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1994"></a><div class=inner id="innercorrige1994" style="display:none;"><ul class="rien">
+<li> On a :
+\begin{eqnarray*}
+\|Tf\|^2&=&\int_0^1\left|\int_0^xf(t)dt\right|^2dx\\
+&=&\int_0^1\left|\int_0^x|f(t)|\times 1dt\right|^2dx\\
+&\leq&\int_0^1\left(\int_0^x|f(t)|^2dt\right)xdx\textrm{ (Cauchy-Schwarz)}\\
+&\leq&\int_0^1\int_0^1|f(t)|^2dtdx\\
+&\leq&\|f\|^2,
+\end{eqnarray*}
+ce qui prouve que $T$ est continue, avec $\|T\|\leq 1$. 
+<li> Toute l'astuce, pour se ramener à des intégrales sur $[0,1]$, consiste à écrire 
+$$\int_0^xf(t)dt=\int_0^1 f(t)1_{[0,x]}(t)dt.$$
+On a :
+\begin{eqnarray*}
+&lt;Tf,g&gt;&=&\int_0^1\int_0^1 f(t)1_{[0,x]}(t)g(x)dtdx\\
+&=&\int_0^1f(t)\left(\int_0^1 1_{[0,x]}(t)g(x)dx\right)dt\textrm{ (Fubini)}.
+\end{eqnarray*}
+On peut appliquer le théorème de Fubini car 
+\begin{align*}
+\int_0^1 \int_0^1 |f(t)|\cdot |g(x)|dxdt&=\left(\int_0^1 |f(t)|dt\right)\left(\int_0^1 |g(x)|dx\right)\\
+&\leq \left(\int_0^1 |f(t)|^2dt\right)\left(\int_0^1 |g(x)|^2dx\right)\\
+&&lt;+\infty
+\end{align*}
+où on a à nouveau appliqué l'inégalité de Cauchy-Schwarz.
+On a donc :
+$$T^*(g)(t)=\int_0^1 1_{[0,x]}(t)g(x)dx.$$
+Cette expression n'est pas tout à fait satisfaisante : on peut la simplifier en remarquant que 
+$$0\leq t\leq x\iff t\leq x\leq 1.$$
+On a donc :
+$$T^*(g)(t)=\int_t^1g(x)dx.$$
+</ul>
+Remarquons qu'on a calculé ici l'adjoint en supposant travailler sur l'espace réel $L^2([0,1])$, mais si on travaillait sur l'espace complexe, on obtiendrait le même résultat.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1995"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1995"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1995,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de représentation de Riesz <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1995.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1995,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1995','imageenonce1995');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1995"></a><div class=inner id="innerenonce1995">Soit $E$ l'espace préhilbertien des suites complexes $(u_n)_{n\in\mtn}$ satisfaisant 
+$$\exists N\in\mtn,\ \forall n\geq N,\ u_n=0$$
+muni du produit scalaire $\dis \langle u,v\rangle = \sum_{n=0}^{+\infty}u_n\overline{v_n}.$
+<ol class="enumeratechiffre">
+<li> Montrer que l'application $\phi:E\to\mtc$ définie par $\phi(u)=\sum_{n=1}^{+\infty}\frac{u_n}{n}$ est une forme 
+linéaire continue sur $E$.
+<li> Existe-t-il un élément $a$ de $E$ tel que, pour tout $u$ de $E$, on ait $\phi(u)=\langle u,a\rangle$?
+<li> Que peut-on en déduire sur $E$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1995','imageindication1995');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1995"></a><div class=inner id="innerindication1995" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer l'inégalité de Cauchy-Schwarz!
+<li> Montrer que si un tel élément existe, on a forcément $a_k=1/k$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1995','imagecorrige1995',1995);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1995"></a><div class=inner id="innercorrige1995" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'appliquer l'inégalité de Cauchy-Schwarz. On a en effet :
+$$\left|\sum_{n=1}^{+\infty}\frac{u_n}{n}\right|\leq\left(\sum_{n=1}^{+\infty}|u_n|^2\right)^{1/2}\left(\sum_{n=1}^{+\infty}\frac{1}{n^2}\right)^{1/2}.$$
+Ceci entraîne que $\phi$ est continue (elle est clairement linéaire) et que $\|\phi\|\leq \left(\sum_{n=1}^{+\infty}\frac{1}{n^2}\right)^{1/2}.$
+<li> Supposons qu'il existe un tel élément $a=(a_n)$. Appliquant $\phi$ au $k$-ième élément de la base canonique de $\ell^2$ $e_k=(0,\dots,0,1,0,\dots)$,
+on obtient $a_k=\frac{1}{k}$ pour $k\geq 1$. Cette suite n'est pas dans $E$.
+<li> $E$ n'est pas complet, car la réponse à la question précédente va à l'encontre du théorème de représentation de Riesz.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1996"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1996"),	max:5, rating:3.125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1996,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateurs de Hilbert-Schmidt <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1996.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1996,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1996','imageenonce1996');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1996"></a><div class=inner id="innerenonce1996">Soit $H$ un espace de Hilbert de dimension infinie, $(e_n)$, $(f_n)$, $(g_n)$ trois bases hilbertiennes de $H$,
+et $T$ un opérateur linéaire continu sur $H$.
+<ol class="enumeratechiffre">
+<li> Montrer que, dans $\mtr_+\cup\{+\infty\}$, $\sum_{n=0}^{+\infty}\|T(e_n)\|^2=\sum_{p=0}^{+\infty}\|T^* g_p\|^2$.
+<li> En déduire que $\sum_{n=0}^{+\infty}\|T e_n\|^2=\sum_{n=0}^{+\infty} \|T f_n\|^2$.<br>
+On fixe désormais une base hilbertienne $(e_n)$ de $H$.
+On dira que $T\in\mcl(H)$ est un opérateur de Hilbert-Schmidt si $$\sum_{n=0}^{+\infty}\|T e_n\|^2&lt;+\infty.$$
+Par la question précédente, cette propriété ne dépend pas de la base hilbertienne choisie. On note $HS(H)$
+l'ensemble des opérateurs de Hilbert-Schmidt sur $H$, et pour $T\in HS(H)$, on note 
+$$\|T\|_2=\left(\sum_{n=0}^{+\infty}\|Te_n\|^2\right)^{1/2}.$$
+<li> Montrer que $\|T\|\leq \|T\|_2$, et que $HS(H)\neq \mcl(H)$.
+<li> Montrer que $HS(H)$ muni de la norme $\|.\|_2$ est un espace de Hilbert (on précisera le produit
+scalaire associé). Pour démontrer la complétude, on remarquera qu'une suite de Cauchy pour $HS(H)$ muni de $\|.\|_2$ est
+aussi une suite de Cauchy pour $\mcl(H)$ muni de $\|.\|$. On rappelle que $\mcl(H)$ muni de $\|.\|$ est complet.
+<li> Soit $T\in HS(H)$. On note $P_n$ le projecteur orthogonal sur $\vect(e_0,\dots,e_n)$. Montrer que, pour tout $n$,
+$T\circ P_n\in HS(H)$ et que $\|T-T\circ P_n\|_2\to 0$. En déduire que les opérateurs de rang fini sont denses dans $HS(H)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1996','imageindication1996');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1996"></a><div class=inner id="innerindication1996" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer $\|T e_n\|$ en utilisant la décomposition dans la base hilbertienne $(g_p)$.
+<li> Par symétrie du rôle des bases hilbertiennes!
+<li> Cauchy-Schwarz!
+<li> Tout est dit dans l'énoncé!
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1996','imagecorrige1996',1996);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1996"></a><div class=inner id="innercorrige1996" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $(g_p)$ est une base hilbertienne de $H$,
+$$\|Te_n\|^2=\sum_{p=0}^{+\infty}|\langle Te_n,g_p\rangle|^2=\sum_{p=0}^{+\infty}|\langle e_n,T^* g_p\rangle|^2.$$
+On somme ceci sur $n$, puis on échange les deux sommations (c'est licite, car tous les termes sont positifs). On obtient
+$$\sum_{n=0}^{+\infty}\|T e_n\|^2=\sum_{p=0}^{+\infty}\sum_{n=0}^{+\infty}|\langle e_n,T^* g_p\rangle|^2.$$
+Utilisant cette fois que $(e_n)$ est une base hilbertienne de $H$, on a 
+$$\sum_{n=0}^{+\infty}|\langle e_n,T^* g_p\rangle|^2=\|T^* g_p\|^2$$
+ce qui donne le résultat.
+<li> On peut très bien remplacer $(e_n)$ par $(f_n)$ dans les calculs précédents, et on a 
+$$\sum_{n=0}^{+\infty}\| T f_n\|^2=\sum_{p=0}^{+\infty}\|T^* g_p\|^2=\sum_{n=0}^{+\infty}\|T e_n\|^2.$$
+<li> Prenons $x$ dans $H$, que l'on décompose en $x=\sum_{n=0}^{+\infty}\langle x,e_n\rangle e_n$. On a :
+$$\|Tx\|\leq \sum_{n=0}^{+\infty}|\langle x,e_n\rangle|\|T e_n\|.$$
+Il suffit alors d'appliquer l'inégalité de Cauchy-Schwarz pour obtenir
+$$\|Tx\|\leq \|T\|_2\|x\|,$$
+ce qui assure $\|T\|\leq\|T\|_2$. Par ailleurs, l'identité de $H$ n'est pas un opérateur de Hilbert-Schmidt (pour cet opérateur,
+on a $\|T e_n\|=1$).
+<li> Si $S$ et $T$ sont dans $HS(H)$, le produit scalaire associé à la norme est défini par 
+$$\langle S,T\rangle =\sum_{n=0}^{+\infty}\langle Se_n,Te_n\rangle$$
+(ceci nous est par exemple suggéré par les formules de polarisation). $HS(H)$ est alors muni d'une structure d'espace
+préhilbertien. Prenons $(T_n)$ une suite de Cauchy de $HS(H)$. L'inégalité $\|T_n-T_p\|\leq \|T_n-T_p\|_2$ assure
+que $(T_n)$ est une suite de Cauchy de $\mcl(H)$ qui est un espace complet. Il existe donc $T\in\mcl(E)$ tel que
+$\|T_n-T\|\to 0$. Reste à voir que $T$ est de Hilbert-Schmidt, et que $\|T_n-T\|_2\to 0$. Fixons $\veps&gt;0$. Il existe
+$N\in\mtn$ tel que, pour $p,q\geq N$, pour tout $M\geq 1$, on ait
+$$\sum_{n=0}^M \|T_p e_n -T_q e_n\|^2\leq\|T_p-T_q\|_2^2\leq\veps^2.$$
+On fait tendre $q$ vers plus l'infini dans cette somme finie, pour obtenir 
+$$\sum_{n=0}^M\|T_p e_n-T e_n\|^2\leq \veps^2.$$
+On fait ensuite tendre $M$ vers l'infini, et on obtient 
+$$\|T_p-T\|_2\leq\veps.$$
+Ceci entraîne à la fois que $T$ est dans $HS(H)$ et est la limite dans cet espace de $(T_n)$.
+<li> Remarquons d'abord que $T\circ P_n$ est un opérateur de rang fini, son image étant engendrée
+par $T(e_0),\dots, T(e_n)$. D'autre part,
+$$\sum_{k=0}^{+\infty}\|T\circ P_n(e_k)\|^2=\sum_{k=0}^n \|T(e_k)\|^2,$$
+ce qui assure que $T\circ P_n$ est un opérateur de Hilbert-Schmidt. Enfin, on a 
+$$\|T-T\circ P_n\|_2^2=\sum_{k=n+1}^{+\infty}\|T e_n\|^2,$$
+et cette quantité tend vers 0 lorsque $n$ va vers l'infini!
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Polynômes orthogonaux</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1997"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1997"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1997,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Résultats généraux sur les opérateurs orthogonaux <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1997.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1997,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1997','imageenonce1997');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1997"></a><div class=inner id="innerenonce1997">On désigne par $I=]a,b[$ un intervalle de $\mtr$ - éventuellement, $a=-\infty$ ou $b=+\infty$, et par $p$ une fonction
+continue strictement positive, $p:]a,b[\to\mtr$, telle que, pour tout $n\in\mtn$, $\int_a^b t^n p(t)dt$ converge.
+On note $\mu$ la mesure sur $I$ admettant $p$ pour densité par rapport à la mesure de Lebesgue et $H=L^2(\mu)$. $H$ est donc l'ensemble des (classes de) fonctions
+de $I$ dans $\mtr$ telles que :
+$$\|f\|_2^2:=\int_a^b |f(t)|^2p(t)dt&lt;+\infty.$$
+$H$ est muni du produit scalaire
+$$&lt;f,g&gt;=\int_a^b f(t)g(t)p(t)dt,$$
+qui lui donne une structure d'espace de Hilbert.
+<ol class="enumeratechiffre">
+<li> Montrer qu'il existe une unique suite de polynômes $(P_n)_{n\in\mtn}$ telle que chaque $P_n$ est unitaire, et pour $n\neq m$,
+$&lt;P_n,P_m&gt;=0$. Cette suite est appelée suite de polynômes orthogonaux pour le poids $p$ sur $]a,b[$.
+<li> On suppose dans cette question seulement que $I=[0,1]$ et $p(t)=1$ pour tout $t\in[0,1]$. On rappelle le théorème de Weierstrass suivant :
+toute fonction continue sur un segment est limite uniforme sur ce segment d'une suite de fonctions polynômes. On note enfin $U_n=\frac{P_n}{\|P_n\|}$.
+Prouver que $(U_n)$ est une base hilbertienne de $H$.
+<li> On revient dans le cas général. Montrer qu'il existe deux suites $(\lambda_n)_{n\in\mtn}$ et $(\mu_n)_{n\in\mtn}$ telles que :
+$$\forall n\in\mtn,\ P_{n+2}=(X+\lambda_n)P_{n+1}+\mu_n P_n.$$
+Quel est le signe de $\mu_n$?
+<li> On veut montrer que pour tout $n\geq 1$, $P_n$ possède $n$ racines simples dans $]a,b[$. On suppose le contraire, et on note $\alpha_1,\dots,\alpha_p$ les racines de multiplicité impaire de $P_n$. Soit $Q(X)=(X-\alpha_1)\dots (X-\alpha_p)$.
+Justifier que $QP_n$ est de signe constant. Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1997','imageindication1997');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1997"></a><div class=inner id="innerindication1997" style="display:none;"><ol class="enumeratechiffre">
+<li> Construire la suite par récurrence.
+<li> Il suffit de prouver que l'espace vectoriel des polynômes est dense. Utiliser d'abord que les fonctions continues sont denses dans $L^2([0,1])$,
+puis utiliser le théorème de Weierstrass.
+<li> Ecrire 
+$$P_{n+2}-XP_{n+1}=\lambda_nP_{n+1}+\mu_n P_n+\sum_{i=0}^{n-1}\beta_i P_i.$$
+Calculer ensuite le produit scalaire avec les $P_i$.
+<li> Il faut d'abord factoriser $P$. On montrera ensuite que le produit scalaire $&lt;P,Q&gt;$ ne peut être nul.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1997','imagecorrige1997',1997);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1997"></a><div class=inner id="innercorrige1997" style="display:none;"><ol class="enumeratechiffre">
+<li> On construit la suite de polynômes $(P_n)$ par récurrence :
+<ul class="rien">
+<li> Nécessairement, on a $P_0=1$.
+<li> Supposons $P_0,\dots,P_{n-1}$ construits, et montrons comment définir $P_n$ de manière unique. Remarquons que par définition, $\vect(P_0,\dots,P_{n-1})=\mtr_{n-1}[X]$.
+$P_n$ est donc nécessairement orthogonal à $\mtr_{n-1}[X]$. On note $F$ l'orthogonal de $\mtr_{n-1}[X]$ dans $\mtr_n[X]$. On a la somme
+directe orthogonale
+$$\mtr_n[X]=F\oplus^\perp \mtr_{n-1}[X].$$
+Maintenant, $F$ est nécessairement de dimension 1, et est le sous-espace vectoriel engendré par un certain $A_n$. On a donc $P_n=\lambda A_n$. Maintenant,
+le fait que $P_n$ est unitaire fixe $\lambda$ de manière unique. Réciproquement, $P_n$ ainsi défini est bien unitaire et est orthogonal aux autres $P_m$.
+</ul>
+<li> Il est d'abord clair que $(U_n)_{n\geq 1}$ est une famille orthonormale. Il suffit donc de prouver que l'espace vectoriel engendré par les $U_n$ qui n'est autre que l'ensemble des polynômes
+est dense dans $H$. Fixons $f\in L^2([0,1])$ et $\veps&gt;0$. Par des propriétés bien connues de $L^2([0,1])$, il existe une fonction $g$ continue sur $[0,1]$ telle que
+$$\|f-g\|_2\leq\veps.$$
+D'autre part, d'après le théorème de Weierstrass, il existe un polynôme $P$ tel que $\|g-P\|_\infty\leq\veps$. Utilisant l'inégalité triangulaire
+et le fait que $\|g-P\|_2\leq \|g-P\|_\infty$, on obtient que 
+$$\|f-P\|_2\leq 2\veps,$$
+ce qui prouve la densité des polynômes dans $L^2([0,1])$.
+<li> Puisque $P_{n+2}$ et $XP_{n+1}$ sont tous deux unitaires de degré $n+2$, $P_{n+2}-XP_{n+1}$ est un polynôme de degré $n+1$. On peut donc écrire :
+$$P_{n+2}-XP_{n+1}=\lambda_nP_{n+1}+\mu_n P_n+\sum_{i=0}^{n-1}\beta_i P_i.$$
+On calcule alors le produit scalaire de $P_{n+2}-XP_{n+1}$ avec $P_i$, pour $i\leq n-1$. On a :
+$$&lt;P_{n+2},P_i&gt;=0,$$
+d'après les relations d'orthogonalité sur la suite. D'autre part, il est clair d'après la définition que $&lt;xf,g&gt;=&lt;f,xg&gt;$.
+On a donc :
+$$&lt;XP_{n+1},P_i&gt;=&lt;P_{n+1},XP_i&gt;=0$$
+car $XP_i$ est de degré inférieur ou égal à $n$.
+De l'autre côté de l'inégalité, on trouve exactement $\beta_i\|P_i\|_2^2$, ce qui entraîne que $\beta_i=0$. Pour obtenir le signe de $\mu_n$, on calcule le produit scalaire avec $P_n$, et on trouve :
+$$\mu_n=-\frac{&lt;XP_{n+1},P_n&gt;}{\|P_n\|^2}.$$
+En outre, $&lt;XP_{n+1},P_n&gt;=&lt;P_{n+1},XP_n&gt;$ et $XP_n=P_{n+1}+Q_n$, où le degré de $Q_n$ est inférieur ou égal à $n$. On obtient donc :
+$$\mu_n=-\frac{\|P_{n+1}\|^2}{\|P_n\|^2}.$$
+$\mu_n$ est négatif.
+<li> C'est très classique, mais difficile la première fois! Supposons que $P_n$ n'admet pas $n$ racines simples dans $]a,b[$. On note $\alpha_1,\dots,\alpha_p$ les racines de multiplicité impaire de $P_n$ dans $]a,b[$, avec nécessairement $p&lt;n$. On note $2m_i+1$ leur multiplicité respective.
+$P_n$ se factorise en $P_n(X)=(X-\alpha_1)^{2m_1+1}\dots (X-\alpha_p)^{2m_p+1}R(X)$, où le polynôme $R$ garde un signe constant sur $]a,b[$.
+On a donc :
+$$P_nQ(X)=(X-\alpha_1)^{2m_1+2}\dots (X-\alpha_p)^{2m_p+2}R(X),$$
+et cette fonction garde un signe constant sur $]a,b[$. Il en est de même de la fonction continue $P_nQp(x)$. Comme cette fonction continue n'est pas identiquement nulle sur $]a,b[$, on en déduit que
+$$&lt;P_n,Q&gt;\neq 0.$$
+Mais $Q$ est un polynôme de degré inférieur strict à $n$, et ceci contredit le fait que $P_n$ est orthogonal à tous ces polynômes.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

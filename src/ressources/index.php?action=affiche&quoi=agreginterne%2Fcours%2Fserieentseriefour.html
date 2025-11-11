@@ -1,0 +1,227 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Résumé de cours : Séries entières, séries de Fourier</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=agreginterne%252Findex.html">Documents pour l'agrégation interne</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Résumé de cours : Séries entières, séries de Fourier</h1>
+<div class=titrepartie>Série entière - rayon de convergence</div>
+<div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Cours sur le rayon de convergence d'une série entière</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xpMXbGrcT7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<p class=utexte>
+On appelle <span class=rougedico>série entière</span> toute série de fonctions de la forme $\sum_{n}a_nz^n$ où $(a_n)$ est une suite de nombres complexes et où $z\in\mathbb C$. 
+</p>
+<div class=theo><span class=grastheo>Lemme d'Abel :</span> Si la suite $(a_nz_0^n)$ est bornée, alors pour tout $z\in\mathbb C$ avec $|z|<|z_0|$, la série $\sum_n a_n z^n$ 
+est absolument convergente.</div>
+<p class=utexte>On appelle <span class=rougedico>rayon de convergence</span> de la série entière 
+$$R=\sup\{\rho\geq 0;\ (a_n\rho^n)\textrm{ est bornée}\}\in \mathbb R_+\cup\{+\infty\}.$$
+<div class=theo><span class=grastheo>Proposition :</span> Soit $\sum_n a_nz^n$ une série entière de rayon de convergence $R$. Alors, pour tout $z\in \mathbb C$,
+<div class=liste>
+<ul>
+<li>si $|z|&lt;R$, la série $\sum_n a_nz^n$ converge absolument;
+<li>si $|z|>R$, la série $\sum_n a_nz^n$ diverge grossièrement (son terme général ne tend pas vers 0);
+<li>si $|z|=R$, alors on ne peut pas conclure en général.
+</ul>
+</div>
+</div>
+<p class=utexte>Le disque ouvert $D(0,R)$ est alors appelé <span class=rougedico>disque ouvert de convergence</span> de la série entière.
+<div class=theo><span class=grastheo>Corollaire (convergence normale) :</span> Soit $\sum_n a_nz^n$ une série entière de rayon de convergence $R>0$ et soit
+$r\in ]0,R[$. Alors la série $\sum_n a_nz^n$ converge normalement sur le disque fermé $D(0,r)$. En particulier, la somme de la série entière est continue sur son disque ouvert de convergence.</div>
+<p class=utexte>Pour calculer le rayon de convergence d'une série entière, on utilise souvent la règle de d'Alembert pour les séries dont l'énoncé est le suivant :
+<div class=theo><span class=grastheo>Règle de d'Alembert :</span> Soit $(u_n)$ une suite de réels strictement positifs. Si $u_{n+1}/u_n$ tend vers $\ell$, alors
+<div class=liste>
+<ul>
+<li>si $\ell>1$, la série $\sum_n u_n$ diverge grossièrement;
+<li>si $\ell&lt;1$, la série $\sum_n u_n$ converge absolument.
+</ul>
+</div>
+</div>
+Lorsqu'on applique cette règle à une série entière $\sum_n a_nz^n$ en posant $u_n=|a_nz^n|$, on obtient que si $|a_{n+1}|/|a_n|$ converge vers $\ell$,
+alors le rayon de convergence de la série entière est $1/\ell$. 
+
+<div class=titrepartie>Opérations sur les séries entières</div>
+<p class=utexte>
+On considère $\sum_n a_n z^n$ et $\sum_n b_nz^n$ deux séries entières de rayon de convergence respectifs $R_a$ et $R_b$.</p>
+<div class=liste>
+<ul>
+<li><span class=grastheo>Comparaison des rayons de convergence</span> : si $a_n=O(b_n)$, alors $R_a\geq R_b$. En particulier, si $a_n\sim b_n$, alors $R_a=R_b$.
+<li><span class=grastheo>Rayon de convergence de la série dérivée</span> : le rayon de convergence 
+de $\sum_n na_nz^{n-1}$ est égal au rayon de convergence de $\sum_n a_nz^n$.
+<li><span class=grastheo>Somme de deux séries entières</span> : le rayon de convergence de la série somme $\sum_n (a_n+b_n)z^n$ vérifie $R\geq \min(R_a,R_b)$. De plus, pour tout $z\in\mathbb C$ avec $|z|<\min(R_a,R_b)$, alors
+$$\sum_{n\geq 0} (a_n+b_n)z^n=\sum_{n\geq 0} a_n z^n+\sum_{n\geq 0}b_nz^n.$$
+</ul>
+</div>
+<p class=utexte>On appelle <span class=rougedico>série entière produit</span> de $\sum_n a_nz^n$ et de $\sum_n b_nz^n$ la série entière $\sum_n c_nz^n$ avec $c_n=\sum_{k=0}^n a_k b_{n-k}$.</p>
+<div class=theo><span class=grastheo>Proposition :</span> Le rayon de convergence $R$ de la série produit $\sum_n c_nz^n$ de $\sum_n a_nz^n$ et $\sum_n b_nz^n$ 
+vérifie $R\geq  \min(R_a,R_b)$. De plus, pour tout $z\in\mathbb C$ avec $|z|<\min(R_a,R_b)$, alors
+$$\sum_{n\geq 0} c_nz^n=\left(\sum_{n\geq 0} a_n z^n\right)\times\left(\sum_{n\geq 0}b_nz^n\right).$$
+</div>
+
+
+<div class=titrepartie>Régularité, cas de la variable réelle</div>
+<p class=utexte>
+On s'intéresse désormais au cas où la variable ne peut plus prendre que des valeurs réelles, et nous noterons désormais les 
+séries entières $\sum_n a_n x^n$. On s'intéresse à la régularité de la série entière à l'intérieur de son intervalle de convergence $]-R,R[$.</p>
+<div class=theo><span class=grastheo>Théorème (intégration d'une série entière) :</span> Soit $f(x)=\sum_{n\geq 0}a_nx^n$ une série entière de rayon de convergence $R>0$ et soit $F$
+une primitive de $f$. Alors, pour tout $x\in ]-R,R[$,
+$$F(x)=F(0)+\sum_{n\geq 0}\frac{a_n}{n+1}x^{n+1}.$$
+</div>
+<div class=theo><span class=grastheo>Théorème (dérivation terme à terme) :</span> Soit $f(x)=\sum_{n\geq 0}a_nx^n$ une série entière de rayon de convergence $R>0$. Alors $f$ est de classe $\mathcal C^\infty$ sur $]-R,R[$. De plus, pour tout $x\in]-R,R[$ et tout $k\geq 0$, on a 
+$$f^{(k)}(x)=\sum_{n\geq k}n(n-1)\cdots(n-k+1)a_n x^{n-k}.$$
+</div>
+<div class=theo><span class=grastheo>Théorème (expression des coefficients d'une série entière) :</span> Soit $f(x)=\sum_{n\geq 0}a_nx^n$ une série entière de rayon de convergence $R>0$. Alors, pour tout $n\geq 0$, 
+$$a_n=\frac{f^{(n)}(0)}{n!}.$$
+</div>
+<div class=theo><span class=grastheo>Corollaire :</span> Si $f(x)=\sum_{n\geq 0}a_nx^n$ et $g(x)=\sum_{n\geq 0} b_nx^n$ coïncident sur un voisinage de $0$, alors pour tout $n\geq 0$, $a_n=b_n$.
+</div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Cas de la variable complexe</div>
+<div class=theo><span class=grastheo>Théorème (dérivabilité de la variable complexe) :</span> Soit $f(z)=\sum_{n\geq 0}a_nz^n$ une série entière de rayon de convergence $R>0$. Alors, pour tout $z_0\in D(0,R)$, 
+$$\lim_{h\to 0}\frac{f(z_0+h)-f(z_0)}{h}=\sum_{n\geq 1}n a_n z_0^{n-1}.$$
+</div>
+
+<div class=titrepartie>Développements en série entière</div>
+<p class=utexte>Soit $I$ un intervalle contenant $0$ et $f:I\to\mathbb R$. 
+On dit que $f$ est développable en série entière en 0 s'il existe $r>0$ et une suite $(a_n)$ tels que, pour tout $x\in ]-r,r[$, on ait 
+$f(x)=\sum_{n\geq 0}a_n x^n$. En particulier, une fonction développable en série entière en $0$ est de classe $\mathcal C^\infty$ au voisinage de $0$.</p>
+
+<p class=utexte>Une combinaison linéaire de fonctions développables en série entière est développable en série entière. 
+Le produit de deux fonctions développables en série entière est développable en série entière.
+Il en est de même de la dérivée ou d'une primitive d'une fonction développable en série entière.</p>
+
+<div class=theo><span class=grastheo>Corollaire :</span> Soit $I$ un intervalle contenant $0$ et $f:I\to\mathbb R$. Si $f$ est développable en série entière en $0$, alors il existe $r>0$ tel que, 
+pour tout $x\in ]-r,r[$, 
+$$f(x)=\sum_{n\geq 0}\frac{f^{(n)}(0)}{n!} x^n.$$
+</div>
+
+<div class=titrepartie>Développements en séries entières usuels</div>
+
+\begin{eqnarray*}
+e^x&=&\sum_{n\geq 0}\frac{x^n}{n!},\ R=+\infty\\
+\cos x&=&\sum_{n\geq 0}\frac{(-1)^n x^{2n}}{(2n)!},\ R=+\infty\\
+\sin x&=&\sum_{n\geq 0}\frac{(-1)^n x^{2n+1}}{(2n+1)!},\ R=+\infty\\
+\cosh x&=&\sum_{n\geq 0}\frac{x^{2n}}{(2n)!},\ R=+\infty\\
+\sinh x&=&\sum_{n\geq 0}\frac{ x^{2n+1}}{(2n+1)!},\ R=+\infty\\
+\frac{1}{1-x}&=&\sum_{n\geq 0}x^n,\ R=1\\
+\ln(1+x)&=&\sum_{n\geq 1}\frac{(-1)^{n+1}}{n}x^n,\ R=1\\
+\arctan(x)&=&\sum_{n\geq 0}\frac{(-1)^n}{2n+1}x^{2n+1},\ R=1\\
+(1+x)^\alpha&=&1+\sum_{n\geq 1}\frac{\alpha(\alpha-1)\cdots (\alpha-n+1)}{n!}x^n,\ R=1\\
+\end{eqnarray*}
+
+
+<div class=titrepartie>Séries de Fourier</div>
+<p class=utexte>On considère $f:\mathbb R\to\mathbb R$ une fonction continue par morceaux et $2\pi$-périodique.
+On appelle <span class=rougedico>coefficients de Fourier exponentiels</span> de $f$ la suite $(c_n(f))_{n\in\mathbb Z}$ définie par
+$$c_n(f)=\frac1{2\pi}\int_0^{2\pi}f(t)e^{-int}dt.$$
+On appelle <span class=rougedico>coefficients de Fourier trigonométriques</span> de $f$ les deux suites $(a_n(f))_{n\geq 0}$ et $(b_n(f))_{n\geq 1}$ définies par 
+$$a_0(f)=\frac1{2\pi}\int_0^{2\pi}f(t)dt$$
+$$a_n(f)=\frac1{\pi}\int_0^{2\pi}f(t)\cos(nt)dt,\ n\geq 1$$
+$$b_n(f)=\frac 1{\pi}\int_0^{2\pi}f(t)\sin(nt),\ n\geq 1.$$
+On appelle <span class=rougedico>série de Fourier</span> de $f$ la série de fonctions
+$$S(t)=\sum_{n=-\infty}^{+\infty}c_n(f)e^{int}=a_0(f)+\sum_{n\geq 1}\big(a_n(f)\cos(nt)+b_n(f)\sin(nt)\big).$$
+Les sommes partielles de cette série seront notées 
+$$S_n(f)(t)=\sum_{k=-n}^n c_k(f)e^{ikt}=a_0(f)+\sum_{k=1}^n\big(a_k(f)\cos(kt)+b_k(f)\sin(kt)\big).$$
+</p>
+
+<div class=titrepartie>Théorèmes de convergence ponctuelle</div>
+<div class=theo><span class=grastheo>Théorème de Jordan-Dirichlet : </span> Soit $f$ une fonction $\mathcal C^1$ par morceaux et $2\pi$-périodique. Alors, pour tout $x\in\mathbb R$, $S_n(f)(x)$ converge vers 
+$$\frac{f(x+0)+f(x-0)}2$$
+où $f(x+0)$ (resp. $f(x-0)$) désigne la limite à droite (à gauche) de $f$ en $x$.
+</div>
+<div class=theo><span class=grastheo>Théorème de convergence normale : </span> Soit $f$ une fonction continue, $\mathcal C^1$ par morceaux et $2\pi$-périodique. Alors la série de Fourier de $f$ converge normalement vers $f$.
+</div>
+
+<div class=titrepartie>Théorèmes de convergence en moyenne de Cesàro</div>
+<div class=theo><span class=grastheo>Théorème de Féjer : </span> Soit $f$ une fonction continue et $2\pi$-périodique.
+ Alors les moyennes de Cesàro de la série de Fourier de $f$ convergent uniformément vers $f$.
+</div>
+<p class=utexte>
+Autrement dit, si on note
+$$C_n(f)=\frac{S_0(f)+S_1(f)+\dots+S_n(f)}{n+1}$$
+alors
+$$\lim_{n\to+\infty}\|f-C_n(f)\|_\infty=0.$$
+</p>
+<div class=theo><span class=grastheo>Corollaire (théorème de Weierstrass) : </span> Les polynômes trigonométriques sont denses dans l'ensemble des fonctions continues et $2\pi$-périodiques : pour toute fonction $f$ continue et $2\pi$-périodique, pour tout $\veps>0$, il existe un polynôme trigonométrique $P$ tel que 
+$$\|f-P\|_\infty\leq\veps.$$
+</div>
+
+<div class=titrepartie>Théorèmes de convergence en moyenne quadratique</div>
+<p class=utexte>On définit un produit scalaire sur l'espace $E$ des fonctions continues $2\pi$-périodiques par 
+$$\langle f,g\rangle=\frac1{2\pi}\int_0^{2\pi}f(t)\overline{g(t)}dt.$$
+Les fonctions $(e^{inx})$ forment une suite orthonormée pour ce produit scalaire. Nous noterons 
+$\|\cdot\|_2$ la norme associée à ce produit scalaire (norme de la convergence en moyenne quadratique).</p>
+<p class=utexte>Notons $\mathcal P_n$ l'ensemble des polynômes trigonométriques de degré inférieur ou égal à $n$, 
+$\mathcal P_n=\textrm{vect}(e^{ikt};\ -n\leq k\leq n)$. Si $f\in E$, alors $S_n(f)$ est le projeté orthogonal de $f$ sur $\mathcal P_n$. 
+Par conséquent, $S_n(f)$ est la meilleure approximation de $f$ dans $\mathcal P_n$ pour la norme $\|\cdot\|_2$ :
+$$\|f-S_n(f)\|_2=\inf\big\{\|f-P\|_2;\ P\in \mathcal P_n\big\}.$$
+</p>
+<div class=theo><span class=grastheo>Théorème de Parseval : </span> Si $f$ est continue par morceaux et $2\pi$-périodique, alors 
+$$\|f-S_n(f)\|_2\to 0.$$
+En particulier, on a 
+\begin{eqnarray*}
+\frac 1{2\pi}\int_{0}^{2\pi}|f(t)|^2dt&=&\sum_{n\in\mathbb Z}|c_n(f)|^2\\
+&=&|a_0(f)|^2+\frac 12\sum_{n\geq 1}\left(|a_n(f)|^2+|b_n(f)|^2\right).
+\end{eqnarray*}
+</div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

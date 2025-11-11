@@ -1,0 +1,418 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rudiments de logique</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Rudiments de logique</h1>
+<div class=titrepartie>Quantificateurs</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater469"></span><script>var myRating = raterJs( { element:document.querySelector("#rater469"),	max:5, rating:1.9694323144105, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(469,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vraies ou fausses <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=469.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(469,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce469','imageenonce469');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce469"></a><div class=inner id="innerenonce469">Déterminer parmi les propositions suivantes lesquelles sont vraies :
+<ol class="enumeratechiffre">
+<li> 136 est un multiple de 17 et 2 divise 167.
+<li> 136 est un multiple de 17 ou 2 divise 167.
+<li> $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+<li> $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+<li> $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+<li> $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+<li> $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+<li> $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+<li> $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+<li> $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige469','imagecorrige469',469);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige469"></a><div class=inner id="innercorrige469" style="display:none;"><ol class="enumeratechiffre">
+<li> Cette propositions est fausse, car 2 ne divise pas 167.
+<li> Cette proposition est vraie, car 136 est un multiple de 17.
+<li> Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+<li> Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+<li> Cette proposition est vraie, par exemple car il s'agit de la négation de la proposition 3, qui est fausse.
+<li> Cette assertion est fausse. Si on considère $x$ n'importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+<li> Cette assertion est fausse. Prenons n'importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n'est pas possible, car le $x$ que l'on choisit devrait convenir à toute valeur de $z$,
+ce qui n'est pas possible car il suffit de considérer un $z$ différent de $xy$.
+<li> Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+<li> L'assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+<li> Cette assertion est "évidemment" vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater470"></span><script>var myRating = raterJs( { element:document.querySelector("#rater470"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(470,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nier des assertions avec quantificateurs <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=470.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(470,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce470','imageenonce470');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce470"></a><div class=inner id="innerenonce470">Soit $f:\mathbb R\to\mathbb R$ une fonction. Nier les assertions suivantes :
+<ol class="enumeratechiffre">
+<li> $\forall x\in \mathbb R,\ f(x)\neq 0$.
+<li> $\forall M&gt;0,\ \exists A&gt;0,\ \forall x\geq A,\ f(x)&gt;M$.
+<li> $\forall x\in \mathbb R,\ (f(x)&gt;0\implies x\leq 0)$.
+<li> $\forall \veps&gt;0,\ \exists \eta&gt;0, \forall (x,y)\in I^2,\ \big(|x-y|\leq \eta\implies |f(x)-f(y)|\leq\veps\big).$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige470','imagecorrige470',470);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige470"></a><div class=inner id="innercorrige470" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Correction vidéo de l'exercice</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ONTiHXFmsM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> $\exists x\in\mathbb R,\ f(x)=0$.
+<li>  $\exists M&gt;0,\ \forall A&gt;0,\ \exists x\geq A,\ f(x)\leq M$.
+<li> $\exists x\in\mathbb R,\ f(x)&gt;0\textrm{ et }x&gt;0$.
+<li> $\exists \veps&gt;0,\ \forall \eta&gt;0,\ \exists (x,y)\in I^2, |x-y|\leq \eta\textrm{ et } |f(x)-f(y)|&gt;\veps$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater471"></span><script>var myRating = raterJs( { element:document.querySelector("#rater471"),	max:5, rating:2.030303030303, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(471,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vraies ou fausses <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=471.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(471,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce471','imageenonce471');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce471"></a><div class=inner id="innerenonce471">Soit $n$ un entier naturel non nul. On note $C_n$ la courbe d'équation $y=(1+x)^n$ et $D_n$ la droite d'équation $y=1+nx$.
+<ol class="enumeratechiffre">
+<li> Rappeler l'équation de la tangente à $C_n$ au point $A$ de $C_ n$ d'abscisse 0.
+<li> Tracer (par exemple à l'aide d'un logiciel) $C_n$ et $D_n$ lorsque $n=2,3$.
+<li> En vous aidant du graphique pour obtenir une conjecture, démontrer si les propositions suivantes sont vraies ou fausses.
+<ol class="enumeratechiffre">
+<li> $\forall n\in\mathbb N^*,\ \forall x\in\mathbb R,\ (1+x)^n\geq 1+nx$;
+<li> $\forall n\in\mathbb N^*,\ \forall x\in\mathbb R_+,\ (1+x)^n \geq 1+nx$;
+<li> $\exists n\in\mathbb N^*,\ \forall x\in\mathbb R,\ (1+x)^n =1+nx$;
+<li> $\forall n\in\mathbb N^*,\ \exists x\in\mathbb R,\ (1+x)^n=1+nx$;
+<li> $\exists n\in\mathbb N^*,\ \forall x\in\mathbb R^*,\ (1+x)^n&gt;1+nx$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication471','imageindication471');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication471"></a><div class=inner id="innerindication471" style="display:none;"><ol class="enumeratechiffre">
+<li> Reprenez votre cours de lycée!
+<li> 
+<li> En vous aidant du graphique pour obtenir une conjecture, démontrer si les propositions suivantes sont vraies ou fausses.
+<ol class="enumeratechiffre">
+<li> Faux.
+<li> Vrai.
+<li> Vrai.
+<li> Vrai.
+<li> Vrai.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige471','imagecorrige471',471);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige471"></a><div class=inner id="innercorrige471" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après le cours de lycée, l'équation de la tangente au point $A$ de coordonnée $(0,1)$ est $y=1+nx$.
+<li> 
+<li> 
+<ol class="enumeratechiffre">
+<li> C'est faux, par exemple si $n=3$ et $x=-4$.
+<li> C'est vrai. Il y a plusieurs façons de démontrer cela. La plus facile est d'étudier la fonction 
+$f(x)=(1+x)^n-(1+nx)$ sur $[0,+\infty[$. On peut aussi utiliser la formule du binôme de Newton.
+<li> C'est vrai : $n=1$ convient.
+<li> C'est vrai : prendre $x=0$.
+<li> C'est vrai : prendre $n=2$, car $(1+x)^2=1+2x+x^2&gt;1+2x$ si $x\neq 0$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater467"></span><script>var myRating = raterJs( { element:document.querySelector("#rater467"),	max:5, rating:2.093023255814, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(467,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du texte aux quantificateurs <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=467.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(467,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce467','imageenonce467');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce467"></a><div class=inner id="innerenonce467">Soit  $f:\mathbb R\to\mathbb R$ une fonction. 
+Exprimer à l'aide de quantificateurs les assertions suivantes :
+<ol class="enumeratechiffre">
+<li> $f$ est constante;
+<li> $f$ n'est pas constante;
+<li> $f$ s'annule;
+<li> $f$ est périodique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige467','imagecorrige467',467);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige467"></a><div class=inner id="innercorrige467" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut l'écrire sous la forme : 
+$\exists C\in\mathbb R$, $\forall x\in\mathbb R$, $f(x)=C$; une autre écriture possible est $\forall x,y\in\mathbb R,\ f(x)=f(y)$.
+<li> Si on nie l'assertion précédente, on trouve $\forall C\in\mathbb R,$ $ \exists x\in\mathbb R$, $f(x)\neq C$. Si on nie la seconde, on trouve $\exists x,y\in\mathbb R,\ f(x)\neq f(y)$.
+<li> $\exists x\in\mathbb R,\ f(x)=0$;
+<li> $\exists T\in\mathbb R^*$, $\forall x\in\mathbb R$, $f(x+T)=f(x)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater468"></span><script>var myRating = raterJs( { element:document.querySelector("#rater468"),	max:5, rating:2.2068965517241, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(468,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Du quantificateur au texte <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=468.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(468,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce468','imageenonce468');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce468"></a><div class=inner id="innerenonce468">Soit $f:\mathbb R\to\mathbb R$ une fonction. &Eacute;noncer en langage courant les assertions suivantes écrites à l'aide de quantificateurs. Peut-on trouver
+une fonction qui satisfait cette assertion? Qui ne la satisfait pas?
+<ol class="enumeratechiffre">
+<li> $\forall x\in \mathbb R,\ \exists y\in \mathbb R,\ f(x)&lt; f(y);$
+<li> $\forall x\in\mathbb R,\ \exists T\in\mathbb R,\ f(x)=f(x+T);$
+<li> $\forall x\in\mathbb R,\ \exists T\in\mathbb R^*,\ f(x)=f(x+T);$
+<li> $\exists x\in\mathbb R,\ \forall y\in\mathbb R,\ y=f(x).$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige468','imagecorrige468',468);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige468"></a><div class=inner id="innercorrige468" style="display:none;"><ol class="enumeratechiffre">
+<li> $f$ n'admet pas de maximum. Par exemple, $f(x)=x$ satisfait cette assertion.
+$f(x)=\sin x$ ne satisfait pas cette assertion.
+<li> Toute fonction vérifie cette assertion, il suffit de prendre $T=0$.
+<li> Toutes les valeurs de $f$ sont prises au moins deux fois. $f(x)=\sin x$ est un exemple de fonctions vérifiant
+cette assertion, $f(x)=x$ un contre-exemple.
+<li> Cette assertion est absurde, car elle signifierait qu'il existe un réel $x$ tel que $f(x)$ prenne toutes les valeurs réelles possibles.
+Aucune fonction ne satisfait cette assertion.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater472"></span><script>var myRating = raterJs( { element:document.querySelector("#rater472"),	max:5, rating:2.1642857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(472,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limites de validité d'une proposition <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=472.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(472,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce472','imageenonce472');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce472"></a><div class=inner id="innerenonce472">Déterminer les réels $x$ pour lesquels l'assertion suivante est vraie :
+$$\forall y\in[0,1],\ x\geq y\implies x\geq 2y.$$</div></div><div class=indication><a href="javascript:showAll('innerindication472','imageindication472');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication472"></a><div class=inner id="innerindication472" style="display:none;">Séparer en 4cas : $x\geq 2$, $x\in]0,2[$ et $x= 0$ et $x&lt;0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige472','imagecorrige472',472);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige472"></a><div class=inner id="innercorrige472" style="display:none;">On sépare en 4 cas :
+<ol class="enumeratechiffre">
+<li> $x\geq 2$. Alors, pour tout $y\in[0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont vraies.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+<li> $x&lt;0$. Alors, pour tout $y\in [0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont fausses.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+<li> $x\in]0,2[$. On peut alors trouver un réel $y\in[0,1]$ tel que $2y&gt;x$ et $x\geq y$. En effet,
+$x/2\in ]0,1[$ et il suffit de choisir $x/2&lt;y&lt;\min(1,x)$. Dans ce cas, $x\geq y$ est vraie et $x\geq 2y$ est fausse.
+L'assertion est fausse.
+<li> Si $x=0$, alors les assertions $x\geq y$ et $x\geq 2y$ sont ou bien simultanément fausses
+(lorsque $y\in]0,1]$), ou bien simultanément vraies. L'assertion est donc vraie.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Raisonnement par l'absurde</div>
+
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater473"></span><script>var myRating = raterJs( { element:document.querySelector("#rater473"),	max:5, rating:1.5514018691589, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(473,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Corps de nombres <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=473.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(473,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce473','imageenonce473');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce473"></a><div class=inner id="innerenonce473">On rappelle que $\sqrt 2$ est un nombre irrationnel.
+<ol class="enumeratechiffre">
+<li> Démontrer que si $a$ et $b$ sont deux entiers relatifs tels que $a+b\sqrt 2=0$, alors $a=b=0$.
+<li> En déduire que si $m,n,p$ et $q$ sont des entiers relatifs, alors 
+$$m+n\sqrt 2=p+q\sqrt 2\iff (m=p\textrm{ et }n=q).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication473','imageindication473');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication473"></a><div class=inner id="innerindication473" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par l'absurde.
+<li> Il s'agit de faire une double implication.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige473','imagecorrige473',473);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige473"></a><div class=inner id="innercorrige473" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonnons par l'absurde. Supposons que $a+b\sqrt 2=0$ sans que $a=b=0$. Alors, nécessairement $b\neq 0$ car si $b=0$ alors on devrait aussi avoir $a=0$, ce qui est contraire à l'hypothèse $(a,b)\neq (0,0)$. Mais alors, on a $\sqrt 2=\frac {-a}b\in\mathbb Q$ ce qui est faux. L'hypothèse de départ est donc fausse, et on a $a=b=0$.
+<li> D'une part, si $m=p$ et $n=q$, alors $m+n\sqrt 2=p+q\sqrt 2$. Réciproquement, supposons que $m+n\sqrt 2=p+q\sqrt 2$. Alors on a aussi
+$$(m-p)+(n-q)\sqrt 2=0.$$
+Le résultat de la question précédent nous dit que $m-p=0$ et que $n-q=0$, soit encore $m=p$ et $n=q$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater474"></span><script>var myRating = raterJs( { element:document.querySelector("#rater474"),	max:5, rating:1.8997555012225, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(474,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Principe des tiroirs <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=474.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(474,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce474','imageenonce474');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce474"></a><div class=inner id="innerenonce474">Démontrer que si vous rangez $(n+1)$ paires de chaussettes dans $n$ tiroirs distincts, alors il
+y a au moins un tiroir contenant au moins $2$ paires de chaussettes.</div></div><div class=indication><a href="javascript:showAll('innerindication474','imageindication474');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication474"></a><div class=inner id="innerindication474" style="display:none;">Raisonnement par l'absurde.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige474','imagecorrige474',474);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige474"></a><div class=inner id="innercorrige474" style="display:none;">On va faire un raisonnement par l'absurde. Supposons que tous les tiroirs contiennent au plus une paire de chaussettes. Alors il y aura au plus 
+$1+1+\dots+1=n$ paires de chaussettes, ce qui contredit qu'il y en a $(n+1)$. Donc un tiroir contient au moins deux paires de chaussettes.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater475"></span><script>var myRating = raterJs( { element:document.querySelector("#rater475"),	max:5, rating:1.8458781362007, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(475,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombres dans un intervalle <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=475.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(475,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce475','imageenonce475');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce475"></a><div class=inner id="innerenonce475">Soit $n\geq 1$ un entier naturel. On se donne $n+1$ réels $x_0,x_1,\dots,x_n$ de $[0,1]$
+vérifiant $0\leq x_0\leq x_1\leq\dots\leq x_n\leq 1$. On veut démontrer par l'absurde la
+propriété suivante : il y a deux de ces réels dont la distance est inférieure ou égale à $1/n$.
+<ol class="enumeratechiffre">
+<li> Ecrire à l'aide de quantificateurs et des valeurs $x_i-x_{i-1}$ une formule logique équivalente
+à la propriété.
+<li> Ecrire la négation de cette formule logique.
+<li> Rédiger une démonstration par l'absurde de la propriété (on pourra montrer que
+$x_n-x_0&gt;1$).
+<li> Donnez-en une preuve en utilisant le principe des tiroirs.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige475','imagecorrige475',475);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige475"></a><div class=inner id="innercorrige475" style="display:none;"><ol class="enumeratechiffre">
+<li> La traduction immédiate de la propriété est :
+$$\exists(i,j)\in\{0,\dots,n\}^2,\ (i&lt;j)\textrm{ et } (x_j-x_i\leq 1/n).$$
+Pour utiliser simplement les valeurs $x_i-x_{i-1}$, il suffit
+de remarquer que si deux nombres sont distants de moins de $1/n$, alors
+il y aura deux nombres consécutifs qui seront distants de moins de $1/n$.
+Ceci signifie :
+$$\exists i\in\{1,\dots,n\},\ x_i-x_{i-1}\leq 1/n.$$
+<li> Le contraire de cette assertion est donc :
+$$\forall i\in\{1,\dots,n\},\ x_i-x_{i-1}&gt;1/n.$$
+<li> Supposons la propriété de l'exercice fausse, c'est-à-dire que
+$$\forall i\in\{1,\dots,n\},\ x_i-x_{i-1}&gt;1/n.$$
+En écrivant 
+$$x_n-x_0=(x_n-x_{n-1})+(x_{n-1}-x_{n-2})+\dots+(x_2-x_1)+(x_1-x_0)$$
+on a donc, en utilisant la propriété précédente :
+$$x_n-x_0&gt;n\times \frac{1}{n}=1.$$
+C'est absurde. La propriété initiale est donc vraie.
+<li> On considère les $n$ intervalles $I_1=[0,1/n[$,
+$I_2=[1/n,2/n[$,...,$I_n=[(n-1)/n,1]$ (qui correspondent si
+l'on veut à $n$ tiroirs). On veut y placer $(n+1)$ points
+(les chaussettes!). Il faut obligatoirement qu'il y ait deux points
+dans le même intervalle. Ces deux points seront distants de moins de $1/n$.
+Bien sûr, le principe des tiroirs se démontre aussi à l'aide d'un raisonnement par l'absurde.
+</ol></div></div></div>
+
+<div class=titrepartie>Raisonnement par contraposée</div>
+
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater476"></span><script>var myRating = raterJs( { element:document.querySelector("#rater476"),	max:5, rating:1.6772486772487, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(476,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pair/impair <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=476.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(476,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce476','imageenonce476');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce476"></a><div class=inner id="innerenonce476">Soit $n$ un entier. &Eacute;noncer et démontrer la contraposée de la proposition suivante :
+<div class=citation>
+Si $n^2$ est impair, alors $n$ est impair.
+</div>
+A-t-on démontré la proposition initiale?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige476','imagecorrige476',476);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige476"></a><div class=inner id="innercorrige476" style="display:none;">La contraposée de la proposition est : si $n$ est pair, alors $n^2$ est pair.
+Démontrons cela. Si $n$ est pair, alors il s'écrit $2k$ où $k$ est un autre entier.
+Mais alors $n^2$ s'écrit $(2k)^2=4k^2=2(2k^2)$ et est donc pair. Par le principe
+de contraposition, on a démontré la proposition de l'énoncé.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater477"></span><script>var myRating = raterJs( { element:document.querySelector("#rater477"),	max:5, rating:1.8054054054054, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(477,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Divisibilité par 8 <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=477.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(477,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce477','imageenonce477');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce477"></a><div class=inner id="innerenonce477">Le but de cet exercice est de démontrer par contraposition la propriété suivante, pour $n\in\mtn^*$ :
+<div class=citation>
+Si l'entier $(n^2-1)$ n'est pas divisible par 8, alors l'entier $n$ est pair.
+</div>
+<ol class="enumeratechiffre">
+<li> Ecrire la contraposée de la proposition précédente.
+<li> En remarquant qu'un entier impair $n$ s'écrit sous la forme $n=4k+r$ avec $k\in\mtn$ et $r\in\{1,3\}$
+(à justifier), prouver la contraposée.
+<li> A-t-on démontré la propriété de l'énoncé?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige477','imagecorrige477',477);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige477"></a><div class=inner id="innercorrige477" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $n$ est impair, alors $n^2-1$ est divisible par 8.
+<li> Prenons $n$ un entier impair. $n$ s'écrit donc $2l+1$
+où $l$ est un entier. Si $l$ est pair, $l=2k$ et donc $n=4k+1$.
+Si $l$ est impair, $l=2k+1$ et donc $n=4k+3$. Dans tous les cas,
+on a donc $n=4k+r$ avec $k\in\mtn$ et $r\in\{1,3\}$. On passe au carré :
+$$n^2-1=(4k+r)^2-1=16k^2+8kr+r^2-1=8(2k^2+kr)+r^2-1.$$
+Or, si $r=1$, $r^2-1=0$ et $n^2-1$ est divisible par 8.
+Si $r=3$, $r^2-1=8$ et $n^2-1$ est aussi divisible par 8.
+<li> Par le principe de contraposition, oui!
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Raisonnement par récurrence</div>
+
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater478"></span><script>var myRating = raterJs( { element:document.querySelector("#rater478"),	max:5, rating:2.1041666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(478,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pour se mettre en confiance... <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=478.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(478,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce478','imageenonce478');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce478"></a><div class=inner id="innerenonce478">Démontrer que, pour tout $n\in\mathbb N^*$, on a $2^{n-1}\leq n!\leq n^n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige478','imagecorrige478',478);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige478"></a><div class=inner id="innercorrige478" style="display:none;">On va procéder par récurrence sur $n\in\mathbb N^*$.
+On considère la propriété $\mathcal P(n)="2^{n-1}\leq n!\leq n^n"$. $\mathcal P(1)$
+est vérifiée, puisque $2^0=1!=1^1=1$. Supposons maintenant que $\mathcal P(n)$ est vraie
+pour un certain $n\in\mathbb N^*$ et prouvons que $\mathcal P(n+1)$ est vraie. 
+On commence par prouver l'inégalité de gauche. On remarque d'abord que, puisque 
+$n\geq 1$, on a $2\leq n+1$ d'où l'on déduit
+$$2^n=2\times 2^{n-1}\leq 2\times n!\leq (n+1)\times n!\leq (n+1)!$$
+Pour l'inégalité de droite, on part de l'hypothèse de récurrence et on multiplie par $(n+1)$, pour obtenir 
+$$(n+1)!\leq (n+1)n^n.$$
+Or, $n\leq n+1$ et donc $n^n\leq (n+1)^n$. On en déduit que 
+$$(n+1)!\leq (n+1)\times (n+1)^n=(n+1)^{n+1}.$$
+$\mathcal P(n+1)$ est donc vérifiée, ce qui prouve, par récurrence, l'inégalité voulue pour tout $n\in\mathbb N^*$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater479"></span><script>var myRating = raterJs( { element:document.querySelector("#rater479"),	max:5, rating:1.7530120481928, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(479,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limite de validité <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=479.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(479,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce479','imageenonce479');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce479"></a><div class=inner id="innerenonce479">Pour $n\in\mtn$, on considère la propriété suivante :
+$$P_n:\ 2^n&gt;n^2.$$
+<ol class="enumeratechiffre">
+<li> Montrer que l'implication $P_n\implies P_{n+1}$ est vraie pour $n\geq 3$.
+<li> Pour quelles valeurs de $n$ la propriété $P_n$ est vraie?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige479','imagecorrige479',479);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige479"></a><div class=inner id="innercorrige479" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $n\geq 3$ tel que $P_n$ est vraie. On a alors 
+$$2^{n+1}=2\times 2^n&gt; 2n^2.$$
+Il suffit donc de montrer que $2n^2\geq (n+1)^2\iff n^2-2n-1\geq 0$.
+On calcule le discriminant de ce dernier polynôme, on fait son tableau
+de signes et on s'aperçoit qu'il est toujours positif pour $n\geq 3$.
+Ceci montre bien $P_{n+1}$.
+<li> Il faut faire attention, car $P_3$ est fausse!
+On ne peut donc pas en déduire que $P_n$ est vraie pour $n\geq 3$.
+D'ailleurs, $P_4$ est fausse, mais $P_5$ est vraie. Par le principe de récurrence,
+$P_n$ est vraie pour $n\geq 5$. Pour les premières valeurs de $n$, on constate
+également que $P_0$ et $P_1$ sont vraies.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater480"></span><script>var myRating = raterJs( { element:document.querySelector("#rater480"),	max:5, rating:2.1377245508982, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(480,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Plusieurs paramètres? <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=480.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(480,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce480','imageenonce480');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce480"></a><div class=inner id="innerenonce480">On souhaite démontrer par récurrence que pour tout entier naturel $n$ et pour tout réel $x&gt;-1$,
+on a $(1+x)^n\geq 1+nx$. 
+<ol class="enumeratechiffre">
+<li> La récurrence porte-t-elle sur $n$? Sur $x$? Sur les deux?
+<li> &Eacute;noncer l'hypothèse de récurrence.
+<li> Vérifier que $(1+nx)(1+x)=1+(n+1)x+nx^2$.
+<li> Rédiger la démonstration.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige480','imagecorrige480',480);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige480"></a><div class=inner id="innercorrige480" style="display:none;"><ol class="enumeratechiffre">
+<li> La récurrence ne peut porter que sur un seul paramètre, entier de surcroît. Elle porte donc
+sur $n$.
+<li> $P_n :$ Pour tout $x&gt;-1$, $(1+x)^n\geq 1+nx$.
+<li> Vérification immédiate en développant.
+<li> Initialisation : Montrons que $P_0$ est vraie. Soit $x&gt;-1$. On a 
+$$(1+x)^0=1 \geq 1+0x$$
+ce qui prouve bien $P_0$.<br>
+Hérédité : Soit $n\in\mathbb N$ telle que $P_n$ vraie et prouvons $P_{n+1}$. Soit $x&gt;-1$.
+On a
+$$(1+x)^{n+1}=(1+x)^n(1+x)\geq (1+nx)(1+x)$$
+cette dernière inégalité provenant du fait que $P_n$ est vraie et que $1+x&gt;0$ puisque $x&gt;-1$. On en déduit que 
+$$(1+x)^{n+1}\geq 1+(n+1)x+nx^2\geq 1+(n+1)x$$
+puisque $nx^2\geq 0$.<br>
+On peut en fait rédiger cette récurrence de deux façons différentes : comme on l'a fait ci-dessus, en mettant le quantificateur portant sur $x$ dans l'hypothèse de récurrence $P_n$. Il faut alors bien prendre garde que dans la phase d'initialisation et celle d'héridité, il faut commencer par "soit $x&gt;-1$". On peut aussi choisir de fixer $x&gt;-1$ avant la récurrence, et de travailler avec ce $x&gt;-1$ fixé. L'hypothèse de récurrence devient $Q_n: (1+x)^n\geq 1+nx$, et dans les phases d'initialisation et d'hérédité, il faut supprimer la phrase "Soit $x&gt;-1$."
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater481"></span><script>var myRating = raterJs( { element:document.querySelector("#rater481"),	max:5, rating:1.7397260273973, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(481,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite doublement récurrente <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=481.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(481,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce481','imageenonce481');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce481"></a><div class=inner id="innerenonce481">On considère la suite $(a_n)_{n\in\mathbb N}$ définie par 
+$$\left\{
+\begin{array}{l}
+a_0=a_1=1\\
+\forall n\in\mathbb N^*,\ a_{n+1}=a_n+\frac 2{n+1}a_{n-1}.
+\end{array}\right.
+$$
+Démontrer que, pour tout $n\in\mathbb N^*$, $1\leq a_n\leq n^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication481','imageindication481');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication481"></a><div class=inner id="innerindication481" style="display:none;">Procéder par récurrence double.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige481','imagecorrige481',481);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige481"></a><div class=inner id="innercorrige481" style="display:none;">On va procéder par récurrence double. Posons, pour $n\geq 1$, la propriété $P_n$ suivante :
+$$P_n:\ 1\leq a_{n}\leq n^2\textrm{ et }1\leq a_{n+1}\leq (n+1)^2.$$
+Initialisation : $P_1$ est vraie. En effet, on a $1\leq a_1=1\leq 1^2$ et, puisque $a_2=a_0+a_1=2$, on a aussi $1\leq a_2\leq 2^2$.<br>
+Hérédité : soit $n\geq 2$ un entier tel que $P_n$ est vraie, et prouvons $P_{n+1}$. On a déjà 
+$1\leq a_{n+1}\leq (n+1)^2$. D'autre part, on a 
+$$a_{n+2}\geq a_{n+1}\geq 1$$ 
+et 
+$$a_{n+2}\leq (n+1)^2+\frac{2}{n+2}n^2=\frac{(n+1)^2(n+2)+2n^2}{n+2}=\frac{n^3+6n^2+5n+2}{n+2}.$$
+Mais, 
+$$(n+2)^2=\frac{(n+2)^3}{n+2}=\frac{n^3+6n^2+12n+8}{n+2}\geq \frac{n^3+6n^2+5n+2}{n+2}.$$
+On a bien prouvé que $P_{n+1}$ est vraie.<br>
+Par récurrence double, $P_n$ est vraie pour tout entier $n\geq 2$. Donc pour tout $n\geq 1$, on a
+$$1\leq a_n\leq n^2.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater482"></span><script>var myRating = raterJs( { element:document.querySelector("#rater482"),	max:5, rating:2.5271317829457, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(482,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une décomposition des entiers <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=482.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(482,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce482','imageenonce482');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce482"></a><div class=inner id="innerenonce482">Démontrer que tout entier $n\in\mathbb N^*$ peut s'écrire de façon unique 
+sous la forme $n=2^p(2q+1)$ où $(p,q)\in\mathbb N$.</div></div><div class=indication><a href="javascript:showAll('innerindication482','imageindication482');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication482"></a><div class=inner id="innerindication482" style="display:none;">Pour l'existence, procéder par récurrence forte.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige482','imagecorrige482',482);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige482"></a><div class=inner id="innercorrige482" style="display:none;">On va prouver l'existence par récurrence forte. Le résultat est en effet vrai pour $n=1$,
+il suffit de prendre $p=q=0$. Supposons maintenant que tout entier inférieur ou égal à $n-1$ vérifie cette propriété,
+et prouvons qu'elle est encore vérifiée pour $n$. On distingue alors deux cas :
+<ol class="enumeratechiffre">
+<li> ou bien $n$ est pair : dans ce cas, $n=2m$, et $m\in\{1,\dots,n-1\}$. On peut lui appliquer l'hypothèse de
+récurrence, et donc $m$ s'écrit $m=2^a(2b+1)$, avec $a,b\in\mathbb N$. Mais alors $n=2^{a+1}(2b+1)$, et
+donc l'existence est démontrée avec $p=a+1$ et $q=b$. 
+<li> ou bien $n$ est impair : alors $n=2m+1=2^0(2m+1)$, et la proposition est démontrée pour $p=0$ et $q=m$.
+</ol>
+Ainsi, l'existence de la décomposition est établie pour tout entier $n\in\mathbb N^*$. <br>
+Prouvons désormais l'unicité. Supposons que $n=2^p(2q+1)=2^a(2b+1)$. Si $p\geq a$, alors 
+$2^{p-a}(2q+1)=2b+1$ et le terme de droite est impair. Celui de gauche l'est aussi, et donc $p=a$.
+On en déduit donc que $q=b$ également, ce qui prouve l'unicité.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater483"></span><script>var myRating = raterJs( { element:document.querySelector("#rater483"),	max:5, rating:2.0564516129032, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(483,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une décomposition des entiers <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=483.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(483,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce483','imageenonce483');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce483"></a><div class=inner id="innerenonce483">Démontrer que tout entier $n\geq 1$ peut s'écrire comme somme de puissances de 2 toutes distinctes.</div></div><div class=indication><a href="javascript:showAll('innerindication483','imageindication483');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication483"></a><div class=inner id="innerindication483" style="display:none;">Procéder par récurrence forte sur $n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige483','imagecorrige483',483);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige483"></a><div class=inner id="innercorrige483" style="display:none;">On va procéder par récurrence forte sur $n$. La propriété est vraie pour $n=1$, puisqu'on peut alors écrire $1=2^0$.
+Soit $n\geq 2$ et supposons la propriété vraie pour tous les entiers inférieurs stricts à $n$. Si $n$ est pair, alors $n=2m$ et 
+$m$ s'écrit comme somme de puissances de 2 toutes distinctes, $m=2^{p_1}+\dots+2^{p_r}$. Alors 
+$n=2^{p_1+1}+\dots+2^{p_r+1}$ s'écrit aussi comme somme de puissances de 2 toutes distinctes. Si $n$ est impair,
+alors $n-1=2m$ est pair. $m$ s'écrit à nouveau $m=2^{p_1}+\dots+2^{p_r}$, où les $p_i$ sont tous différents. Mais alors,
+$$n=1+2m=2^0+2^{p_1+1}+\dots+2^{p_r+1}$$
+s'écrit bien comme somme de puissances de 2 toutes distinctes.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater484"></span><script>var myRating = raterJs( { element:document.querySelector("#rater484"),	max:5, rating:1.4259259259259, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(484,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Récurrence un peu compliquée <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=484.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(484,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce484','imageenonce484');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce484"></a><div class=inner id="innerenonce484">Soit $A$ une partie de $\mathbb N^*$ possédant les trois propriétés suivantes :
+<ol class="enumeratechiffre">
+ <li> $1\in A$;
+<li> $\forall n\in\mathbb N^*,\ n\in A\implies 2n\in A$;
+<li> $\forall n\in\mathbb N^*,\ n+1\in A\implies n\in A$.
+</ol>
+Démontrer que $A=\mathbb N^*$.</div></div><div class=indication><a href="javascript:showAll('innerindication484','imageindication484');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication484"></a><div class=inner id="innerindication484" style="display:none;">Remarquer d'abord que si $p\in A$, alors tout l'intervalle $\{1,\dots,p\}$ est contenu dans $A$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige484','imagecorrige484',484);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige484"></a><div class=inner id="innercorrige484" style="display:none;">Remarquons d'abord que si $p\in A$, alors tout l'intervalle $\{1,\dots,p\}$ est contenu dans $A$ à cause de la propriété 3 : en effet, si on applique la propriété 3 avec $n=p-1$, on obtient que $p-1\in A$, puis $p-2\in A$. Il faut faire une récurrence (décroissante) finie pour prouver que tout l'intervalle $\{1,\dots,p\}$ est inclus dans $A$.<br>
+ Supposons ensuite que $A\neq\mathbb N^*$, et notons $p$ le plus petit entier de $\mathbb N^*$ qui n'est pas dans $A$. Alors, $p&gt;1$, et donc $p-1\geq 1$. Or, $p-1\in A$ et donc $2(p-1)\in A$. Mais $2(p-1)\geq p$ puisque $p\geq 2$. Par la remarque faite au début, on en déduit que $p\in A$, une contradiction.</div></div></div>
+
+<div class=titrepartie>Raisonnement par disjonction de cas</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2400"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2400"),	max:5, rating:1.9162303664921, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2400,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une inégalité <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2400.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2400,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2400','imageenonce2400');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2400"></a><div class=inner id="innerenonce2400">Démontrer que, pour tout $x\in\mathbb R$, $|x-1|\leq x^2-x+1$.</div></div><div class=indication><a href="javascript:showAll('innerindication2400','imageindication2400');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2400"></a><div class=inner id="innerindication2400" style="display:none;">Séparer les cas $x\geq 1$ et $x&lt;1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2400','imagecorrige2400',2400);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2400"></a><div class=inner id="innercorrige2400" style="display:none;">La difficulté de l'exercice vient du fait que la valeur absolue a deux expressions distinctes suivant le signe de la quantité à l'intérieur. Ceci nous incite à raisonner par disjonction de cas. 
+<ul class="rien">
+<li> Si $x\leq 1$, alors $x-1\leq 0$ et $|x-1|=1-x$. On doit alors démontrer que, si $x\leq 1$, on a $1-x\leq x^2-x+1$. &Eacute;tudions donc le signe du trinôme 
+$$P(x)=x^2-x+1-(1-x)=x^2\geq 0.$$
+La propriété est vraie si $x\leq 1$.
+<li> Si $x\geq 1$, alors $x-1\geq 0$ et $|x-1|=x-1$. On doit alors démontrer que, si $x\geq 1$, on a $x-1\leq x^2-x+1$. &Eacute;tudions donc le signe du trinôme
+$$Q(x)=x^2-x+1-(x-1)=x^2-2x+2=(x-1)^2+1\geq 0.$$
+La propriété est donc vraie si $x\geq 1$.
+</ul>
+En conclusion, la propriété est vraie pour tout $x\in\mathbb R$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2399"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2399"),	max:5, rating:2.1512605042017, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2399,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Reste dans la division par quatre d'une somme de deux carrés  <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2399.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2399,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2399','imageenonce2399');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2399"></a><div class=inner id="innerenonce2399">Démontrer que si $n$ est la somme de deux carrés, alors le reste de la division euclidienne de $n$ par 4 est toujours différent de $3$.</div></div><div class=indication><a href="javascript:showAll('innerindication2399','imageindication2399');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2399"></a><div class=inner id="innerindication2399" style="display:none;">&Eacute;crire $n=a^2+b^2$, et raisonner suivant la parité de $a$ et $b$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2399','imagecorrige2399',2399);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2399"></a><div class=inner id="innercorrige2399" style="display:none;">On écrit $n=a^2+b^2$, et on raisonne suivant la parité de $a$ et de $b$ :
+<ul class="rien">
+<li> Si $a$ et $b$ sont tous les deux pairs, alors $a=2k$ et $b=2\ell$, $n=4(k^2+\ell^2)$ est divisible par 4 : la propriété est vraie.
+<li> Si $a$ est pair et $b$ est impair, alors $a=2k$ et $b=2\ell+1$. Alors $n=4k^2+4\ell^2+4l+1=4(k^2+\ell^2+\ell)+1$. Le reste de la division de $n$ par $4$ sera égal à 1. La propriété est vraie dans ce cas. Le cas $a$ impair et $b$ pair est symétrique.
+<li> Si $a$ est impair et $b$ est impair, alors $a=2k+1$, $b=2\ell+1$ et $n=4k^2+4k+1+4\ell^2+4\ell+1=4(k^2+k+\ell^2+\ell)+2$. Le reste de la division de $n$ par $4$ sera égal à 2. La propriété est vraie dans ce cas.
+</ul>
+Ainsi, dans tous les cas, la propriété est vraie. Ce raisonnement par disjonction de cas est particulièrement utile en arithmétique, en particulier lorsqu'on utilise l'outil des congruences.</div></div></div>
+
+<div class=titrepartie>Raisonnement par analyse/synthèse</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater2401"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2401"),	max:5, rating:1.9304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2401,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation avec des racines carrées <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2401.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(2401,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2401','imageenonce2401');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2401"></a><div class=inner id="innerenonce2401">Déterminer les réels $x$ tels que $\sqrt{2-x}=x$.</div></div><div class=indication><a href="javascript:showAll('innerindication2401','imageindication2401');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2401"></a><div class=inner id="innerindication2401" style="display:none;">Raisonner par analyse-synthèse en donnant des conditions nécessaires que $x$ doit vérifier, puis en démontrant que ces conditions sont suffisantes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2401','imagecorrige2401',2401);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2401"></a><div class=inner id="innercorrige2401" style="display:none;">On va raisonner par analyse-synthèse. <br>
+Analyse : Imaginons que $x$ soit une solution de cette équation. Alors il est déjà clair que $x\in ]-\infty,2]$, sinon la racine carrée n'aurait pas de sens. On doit aussi avoir $x\geq 0$, car la racine carrée est positive et donc $x\in [0,2]$. &Eacute;levons ensuite l'équation au carré. Si $x$ est solution, alors $2-x=x^2$ (on a bien ici simplement une implication, pas une condition nécessaire et suffisante!), c'est-à-dire $x^2+x-2=0$. La résolution de cette équation du second degré donne $x_1=1$ et $x_2=-2$. Seul $x_1$ est dans l'intervalle $[0,2].$ Donc la seule solution possible est $1.$<br>
+Synthèse : Prouvons que $x=1$ est solution de l'équation. C'est presque évident, car $\sqrt{2-1}=1$.<br>
+Conclusion : la seule solution de l'équation est $1$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2402"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2402"),	max:5, rating:2.3860759493671, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2402,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation fonctionnelle <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2402.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2402,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2402','imageenonce2402');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2402"></a><div class=inner id="innerenonce2402">Déterminer toutes les fonctions $f:\mathbb R\to\mathbb R$ telles que, pour tous $x,y\in\mathbb R$, 
+$$f(x)\times f(y)-f(x\times y)=x+y.$$</div></div><div class=indication><a href="javascript:showAll('innerindication2402','imageindication2402');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2402"></a><div class=inner id="innerindication2402" style="display:none;">Raisonner par analyse-synthèse, et commencer par déterminer $f(0)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2402','imagecorrige2402',2402);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2402"></a><div class=inner id="innercorrige2402" style="display:none;">On va raisonner par analyse-synthèse en déterminant des conditions nécessaires sur $f$ pour vérifier cette équation, puis en vérifiant que ces conditions sont suffisantes.
+<ul class="rien">
+<li> Analyse : soit $f$ une fonction vérifiant cette équation. Alors, choisissant $x=y=0$, on obtient $f(0)^2-f(0)=0$, ce qui entraîne $f(0)=0$ ou $f(0)=1$. Choisissant ensuite $x=1$ et $y=0$, on a $f(1)f(0)-f(0)=1$, ce qui interdit $f(0)=0$. On a donc $f(0)=1$ (et aussi $f(1)=2$). Enfin, fixant $y=0$, on obtient que pour tout $x\in\mathbb R$, on a $f(x)=x+1$. On a donc prouvé que si $f$ est solution de l'équation, alors, pour tout $x\in\mathbb R$, $f(x)=x+1$. 
+<li> Synthèse : réciproquement, considérons la fonction $f$ définie par $f(x)=x+1$. Alors, pour tous $x,y\in\mathbb R$, on a
+$$f(x)\times f(y)=(x+1)(y+1)=xy+x+y+1$$
+et 
+$$f(xy)=xy+1$$
+ce qui prouve bien que $f$ est solution de l'équation.
+</ul>
+En conclusion, l'équation admet une solution unique : la fonction $f$ donné par $f(x)=x+1$.</div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

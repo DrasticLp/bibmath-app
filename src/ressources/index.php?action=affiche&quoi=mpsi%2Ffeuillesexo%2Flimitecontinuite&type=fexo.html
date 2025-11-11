@@ -1,0 +1,822 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math Sup : Limite de fonctions - Continuité</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math Sup : Limite de fonctions - Continuité</h1>
+<div class=titrepartie>Limites en un point - aspect pratique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater205"></span><script>var myRating = raterJs( { element:document.querySelector("#rater205"),	max:5, rating:1.7857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(205,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de limites <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=205.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(205,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce205','imageenonce205');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce205"></a><div class=inner id="innerenonce205">&Eacute;tudier les limites suivantes :
+$$\begin{array}{lcl}
+\displaystyle \mathbf 1.\ \frac{1}{1-x}-\frac{2}{1-x^2}\textrm{ en 1}&&\displaystyle \mathbf 2.\frac{\sqrt x-1}{x-1}\textrm{ en 1}\\
+\displaystyle \mathbf 3.\ \frac{x^3+x+5}{5x^3+7x^2+8}\textrm{ en }+\infty&&
+\displaystyle \mathbf 4.\ \sqrt{x^2+2x}-x\textrm{ en }+\infty\\
+\displaystyle \mathbf 5.\ x^5e^{-x^2}\textrm{ en }+\infty&&\displaystyle \mathbf 6.\ \frac{x+\cos x}{x+\sin x}\textrm{ en }+\infty\\
+\displaystyle \mathbf 7.\ \frac{x\ln x+7}{x^2+4}\textrm{ en }+\infty&&\displaystyle \mathbf 8. \frac{4\sin^2 x+3\cos(5x)}{x}\textrm{ en }+\infty.
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication205','imageindication205');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication205"></a><div class=inner id="innerindication205" style="display:none;">Utiliser les techniques usuelles : mise en facteur du terme dominant, utilisation des limites classiques et des comparaisons entre logarithmes et exponentielles...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige205','imagecorrige205',205);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige205"></a><div class=inner id="innercorrige205" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit, pour $x\neq 1,$
+$$\frac1{1-x}-\frac2{1-x^2}=\frac1{1-x}\left(1-\frac{2}{1+x}\right)=\frac{x-1}{(1-x)(1+x)}=\frac{-1}{1+x}.$$
+On a levé l'indéterminée, et la limite recherchée vaut donc $-1/2$.
+<li> L'astuce est de remarquer que $x-1=(\sqrt x-1)(\sqrt x+1)$ pour pouvoir simplifier numérateur et dénominateur.
+On trouve donc
+$$\frac{\sqrt x-1}{x-1}=\frac1{\sqrt x+1}$$
+et la limite recherchée vaut donc 1/2.
+<li> On met en facteur le terme dominant au numérateur ($x^3$) et au dénominateur ($5x^3$). Après simplification, on trouve :
+$$\frac{x^3+x+5}{5x^3+7x^2+8}=\frac{1}{5}\times \frac{1+\frac{1}{x^2}+\frac{5}{x^2}}{1+\frac{7}{5x}+\frac{8}{5x^3}}$$
+est la limite recherchée est $1/5$.
+<li> On utilise la quantité conjuguée :
+$$\sqrt{x^2+2x}-x=\frac{x^2+2x-x^2}{\sqrt{x^2+2x}+x}=\frac{2x}{x\sqrt{1+2/x}+x}=\frac{2}{\sqrt{1+2/x}+1}.$$
+La limite recherchée est égale à 2/2=1.
+<li> On utilise le changement de variables $u=x^2$. Il vient
+$$\lim_{x\to+\infty}x^5e^{-x^2}=\lim_{u\to+\infty}u^{5/2}e^{-u}.$$
+Par comparaison de la fonction exponentielle et des fonctions puissance, cette limite vaut $0$.
+<li> On met en facteur le terme dominant : 
+$$\frac{x+\cos x}{x+\sin x}=\frac{x\left(1+\frac{\cos x}x\right)}{x\left(1+\frac{\sin x}x\right)}=
+\frac{1+\frac{\cos x}x}{1+\frac{\sin x}x}.$$
+Mais on a 
+$$-\frac 1x\leq \frac{\sin x}x\leq \frac 1x$$
+et donc $\lim_{x\to+\infty}\frac{\sin x}x=0$. De même, $\lim_{x\to+\infty}\frac{\cos x}x=0$. On en déduit que 
+$$\lim_{x\to+\infty}\frac{x+\cos x}{x+\sin x}=1.$$
+<li> On met de même en facteur le terme dominant au numérateur et au dénominateur : 
+$$\frac{x\ln x+7}{x^2+4}=\frac{x\ln x\left(1+\frac{7}{x\ln x}\right)}{x^2\left(1+\frac 4{x^2}\right)}=
+\frac{\ln x}{x}\times\frac{1+\frac{7}{x\ln x}}{1+\frac 4{x^2}}.$$
+Or, on sait que $\lim_{x\to+\infty}\frac{\ln x}x=0$. On en déduit que
+$$\lim_{x\to+\infty}\frac{x\ln x+7}{x^2+4}=0.$$
+<li> On va majorer et conclure par le théorème des gendarmes : pour $x&gt;0$, 
+$$\left|\frac{4\sin^2 x+3\cos(5x)}{x}\right|\leq \frac{4\sin^2 x+3|\cos(5x)|}x\leq \frac 7{x}.$$
+Par majoration, la limite recherchée est 0.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater206"></span><script>var myRating = raterJs( { element:document.querySelector("#rater206"),	max:5, rating:2.0606060606061, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(206,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calculs de limites <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=206.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(206,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce206','imageenonce206');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce206"></a><div class=inner id="innerenonce206">&Eacute;tudier les limites suivantes :
+$$\begin{array}{lcl}
+\displaystyle \mathbf 1.\ \frac{e^{3x}+2x+7}{e^x+e^{-x}}\textrm{ en }+\infty&&\displaystyle \mathbf 2.\ 
+\frac{\sqrt{1+x}-\left(1+\frac x2\right)}{x^2}\textrm{ en }0\\
+\displaystyle \mathbf 3.\ \frac{\sqrt{x+\sqrt{x+\sqrt x}}}{\sqrt{x+1}}\textrm{ en }+\infty&&
+\displaystyle \mathbf 4.\ \frac{\sqrt{2x^2+5x+9}-3}{x}\textrm{ en }0\\
+\displaystyle \mathbf 5.\ \sqrt{x+\sqrt x}-\sqrt x\textrm{ en }+\infty
+\end{array}$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige206','imagecorrige206',206);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige206"></a><div class=inner id="innercorrige206" style="display:none;"><ol class="enumeratechiffre">
+<li> On factorise par le terme dominant au numérateur et au dénominateur, et on trouve
+$$\frac{e^{3x}+2x+7}{e^x+e^{-x}}=\frac{e^{3x}}{e^x}\times \frac{1+2xe^{-3x}+7e^{-3x}}{1+e^{-2x}}=e^{2x}\times \frac{1+2xe^{-3x}+7e^{-3x}}{1+e^{-2x}}.$$
+Par comparaison des fonctions puissance et exponentielle, on a $\lim_{+\infty}xe^{-3x}=0$ et donc
+la fonction tend vers $+\infty$ en $+\infty$.
+<li> On va multiplier par la quantité conjuguée au numérateur et au dénominateur. On trouve
+$$\frac{\sqrt{1+x}-\left(1+\frac x2\right)}{x^2}=\frac{1+x-\left(1+\frac x2\right)^2}{x^2\times\left(\sqrt{1+x}+\left(1+\frac x2\right)\right)}=\frac{-1}{4\left(\sqrt{1+x}+\left(1+\frac x2\right)\right)}.$$
+On en déduit que la limite recherchée vaut $-\frac 18$.
+<li> On met en facteur le terme dominant et on trouve, pour $x&gt;0$ (attention au calcul au numérateur!)
+$$\frac{\sqrt{x+\sqrt{x+\sqrt x}}}{\sqrt{x+1}}=\frac{\sqrt{1+\sqrt{\frac 1x+\sqrt{\frac 1{x^3}}}}}{\sqrt{1+\frac 1x}}.$$
+On a levé la forme indéterminée, et la limite recherchée vaut donc 1.
+<li> On a une forme indéterminée du type $0/0$. On la lève en multipliant par la quantité conjuguée :
+$$\frac{\sqrt{2x^2+5x+9}-3}{x}=\frac{2x^2+5x+9-9}{x\left(\sqrt{2x^2+5x+9}+3\right)}=\frac{2x+5}{\sqrt{2x^2+5x+9}+3}.$$
+La limite recherchée est donc $5/6$.
+<li> On utilise (bien sûr!) la quantité conjuguée, qui donne
+$$\sqrt{x+\sqrt x}-\sqrt x=\frac{\sqrt x}{\sqrt{x+\sqrt x}+\sqrt x}.$$
+En mettant en facteur $\sqrt x$ au numérateur et au dénominateur, on obtient
+$$\sqrt{x+\sqrt x}-\sqrt x=\frac{1}{\sqrt{1+\sqrt\frac 1x}+1}.$$
+La forme n'est plus indéterminée, et la limite recherchée est $1/2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater214"></span><script>var myRating = raterJs( { element:document.querySelector("#rater214"),	max:5, rating:2.046875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(214,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec la partie entière <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=214.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(214,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce214','imageenonce214');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce214"></a><div class=inner id="innerenonce214">&Eacute;tudier les limites à droite en 0 des fonctions suivantes :
+$$f:x\mapsto \left\lfloor\frac 1x\right\rfloor,\ g:x\mapsto x\left\lfloor\frac 1x\right\rfloor,\ h:x\mapsto x^2\left\lfloor\frac 1x\right\rfloor.$$</div></div><div class=indication><a href="javascript:showAll('innerindication214','imageindication214');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication214"></a><div class=inner id="innerindication214" style="display:none;">C'est facile si on encadre $\lfloor 1/x\rfloor $ par la définition de la partie entière.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige214','imagecorrige214',214);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige214"></a><div class=inner id="innercorrige214" style="display:none;">Par définition de la partie entière, on sait que 
+$$\frac 1x-1&lt; \left\lfloor\frac 1x\right\rfloor\leq \frac 1x.$$
+L'inégalité de gauche suffit, par comparaison, à dire que $\lim_{0^+} f=+\infty$. Si on multiplie maintenant les inégalités
+par $x&gt;0$, on trouve
+$$1-x\leq g(x)\leq 1,$$
+ce qui prouve, toujours par le théorème d'encadrement, que $\lim_{0^+}g=1$. Enfin, puisque $h=xg$, on trouve aussi
+que $\lim_{0^+}h=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater3210"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3210"),	max:5, rating:1.5846153846154, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3210,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Prolongement par continuité et limites usuelles? <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3210.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(3210,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3210','imageenonce3210');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3210"></a><div class=inner id="innerenonce3210">Les fonctions suivantes sont-elles prolongeables par continuité à $\mathbb R$ tout entier?
+<ol class="enumeratechiffre">
+<li> $f(x)=\exp(-1/x^2)$ si $x\neq 0$;
+<li> $g(x)=\exp(-1/x)$ si $x\neq 0$;
+<li> $h(x)=\sin(x+1)\ln|1+x|$ si $x\neq -1$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3210','imagecorrige3210',3210);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3210"></a><div class=inner id="innercorrige3210" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $x\to 0$, alors $-1/x^2\to -\infty$. Puisque $\lim_{X\to -\infty}\exp(X)=0$, on en déduit par le théorème de composition des limites que $\lim_{x\to 0}f(x)=0.$ Ainsi, on peut prolonger $f$ par continuité en $0$ en posant $f(0)=0$.
+<li> Si $x\to 0^+$, le même raisonnement s'appliquer et $\lim_{x\to 0^+}g(x)=0$. Mais si $x\to 0^-,$ alors $-1/x\to+\infty.$ Puisque $\lim_{X\to+\infty}\exp(X)=+\infty$, on en déduit que $\lim_{x\to 0^-}g(x)=+\infty.$
+Ainsi, on ne peut pas prolonger $g$ par continuité en $0$.
+<li> Par les théorèmes généraux, $h$ est continue sur $\mathbb R\backslash\{-1\}$. Par ailleurs, 
+posant $u=x+1$, on a 
+$$\lim_{x\to -1}h(x)=\lim_{u\to 0}\sin(u)\ln|u|=\lim_{u\to 0}\frac{\sin u}{u}\times u\ln|u|=1\times 0=0.$$
+Ainsi, on peut prolonger par continuité $h$ en $-1$ en posant $h(-1)=0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater217"></span><script>var myRating = raterJs( { element:document.querySelector("#rater217"),	max:5, rating:1.6101694915254, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(217,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Prolongement par continuité et fonctions trigonométriques <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=217.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(217,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce217','imageenonce217');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce217"></a><div class=inner id="innerenonce217">Dire si les fonctions suivantes sont prolongeables par continuité à $\mathbb R$ tout entier :
+<ol class="enumeratechiffre">
+<li> $f(x)=\sin(1/x)$ si $x\neq 0$;
+<li> $g(x)=\sin(x)\sin(1/x)$ si $x\neq 0$;
+<li> $h(x)=\cos(x)\cos(1/x)$ si $x\neq 0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication217','imageindication217');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication217"></a><div class=inner id="innerindication217" style="display:none;">Pour $f$ et $h$, considérer deux suites $(u_n)$ et $(v_n)$ tendant vers 0 et telles que
+$f(u_n)$ et $f(v_n)$ n'ont pas la même limite.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige217','imagecorrige217',217);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige217"></a><div class=inner id="innercorrige217" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est un grand classique! Observez le tracé de la fonction pour comprendre
+qu'il est impossible de la prolonger par continuité en $0$.
+<div class=equation><img src="bde_images/sin(1surx).png" width="60%" /></div>
+En effet, aussi près que l'on veut de $0$, la fonction va prendre les valeurs $0$, $1$ et $-1$. Précisément, on va considérer les deux suites $$u_n=\frac{1}{2n\pi}\textrm{ et }v_n=\frac{1}{2n\pi+\pi/2}.$$
+Alors les suites $(u_n)$ et $(v_n)$ convergent vers 0. Cependant, 
+$$f(u_n)=\sin(2n\pi)=0$$
+tandis que
+$$f(v_n)=\sin(2n\pi+\pi/2)=1.$$
+Ainsi, $(f(u_n))$ converge vers $0$ et $(f(v_n))$ converge vers $1.$ $f$ n'admet pas de limite en $0$
+et n'est donc pas prolongeable par continuité en ce point.
+<li> Par les théorèmes généraux, $g$ est continue sur $\mathbb R^*$. De plus, on a
+$$|g(x)|\leq |\sin x||\sin(1/x)|\leq |x|\times 1\leq |x|.$$
+Par le théorème d'encadrement, $\lim_{x\to 0}g(x)=0$. On peut donc prolonger $g$ par continuité en 0
+en posant $g(0)=0$. Ici, la discontinuité de $\sin(1/x)$ en $0$ est "mangée" par le facteur $\sin(x)$.
+<li> En remplaçant $\sin$ par $\cos$, le procédé précédent ne fonctionne plus puisque
+$\cos(0)\neq 0$. On va prouver qu'on ne peut pas prolonger $h$ par continuité en 0. Pour cela, on considère les deux suites
+$$u_n=\frac{1}{2n\pi}\textrm{ et }v_n=\frac{1}{2n\pi+\pi/2}.$$
+Alors les suites $(u_n)$ et $(v_n)$ convergent vers 0. Cependant, 
+$$h(u_n)=\cos(u_n)\cos(2n\pi)=\cos(u_n)\to 1$$
+tandis que
+$$h(v_n)=\cos(v_n)\cos(2n\pi+\pi/2)=0.$$
+Ainsi, $(h(u_n))$ converge vers 1 et $(h(v_n))$ converge vers 0 : $h$ n'admet pas de limite en 0
+et n'est donc pas prolongeable par continuité en ce point.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater218"></span><script>var myRating = raterJs( { element:document.querySelector("#rater218"),	max:5, rating:1.5058823529412, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(218,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indicatrice de $\mathbb Q$ <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=218.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(218,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce218','imageenonce218');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce218"></a><div class=inner id="innerenonce218">Soit $f:\mathbb R\to\mathbb R$ la fonction définie par 
+$$f(x)=\left\{
+\begin{array}{ll}
+1&\textrm{si }x\in\mathbb Q\\
+0&\textrm{si }x\notin \mathbb Q.
+\end{array}\right.$$
+Montrer que $f$ est discontinue en tout point.</div></div><div class=indication><a href="javascript:showAll('innerindication218','imageindication218');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication218"></a><div class=inner id="innerindication218" style="display:none;">$\mathbb Q$ et $\mathbb R\backslash \mathbb Q$ sont denses dans $\mathbb R$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige218','imagecorrige218',218);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige218"></a><div class=inner id="innercorrige218" style="display:none;">Puisque $\mathbb Q$ et $\mathbb R\backslash \mathbb Q$ sont denses dans $\mathbb R$, on peut trouver pour chaque
+$a\in\mathbb R$ une suite $(u_n)$ de $\mathbb Q$ et une suite $(v_n)$ de $\mathbb R\backslash\mathbb Q$ telles que
+$u_n\to a$ et $v_n\to a$. Mais, pour chaque $n$, on a $f(u_n)=1$ et $f(v_n)=0$. Les suites $(f(u_n))$ et
+$(f(v_n))$ ne convergent pas vers la même limite alors que $(u_n)$ et $(v_n)$ convergent toutes les deux vers $a$.
+Ainsi, $f$ n'est pas continue en $a$.</div></div></div>
+
+<div class=titrepartie>Limites en un point - aspect théorique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater209"></span><script>var myRating = raterJs( { element:document.querySelector("#rater209"),	max:5, rating:1.5294117647059, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(209,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bien comprendre la définition <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=209.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(209,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce209','imageenonce209');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce209"></a><div class=inner id="innerenonce209"><ol class="enumeratechiffre">
+<li> &Eacute;crire, à l'aide de quantificateurs, la proposition suivante : $f$ ne tend pas vers $+\infty$ en $+\infty$.
+<li> Soit $f:\mathbb R\to\mathbb R$. On suppose que $f$ admet une limite $\ell$ en $+\infty$, avec $\ell&gt;0$. Démontrer qu'il existe un réel $A&gt;0$ tel que, pour tout $x\geq A$, $f(x)&gt;0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication209','imageindication209');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication209"></a><div class=inner id="innerindication209" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Appliquer la définition avec $\veps=\ell/2$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige209','imagecorrige209',209);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige209"></a><div class=inner id="innercorrige209" style="display:none;"><ol class="enumeratechiffre">
+<li> $\exists M&gt;0,\ \forall A&gt;0,\ \exists x\geq A,\ f(x)\leq M$.
+<li> On va appliquer la définition de limite avec $\veps=\ell/2$. Il existe donc $A&gt;0$ tel que, pour tout $x\geq A$, on a
+$$|f(x)-\ell |\leq \frac{\ell}2.$$
+On en déduit que 
+$$-\frac{\ell}2\leq f(x)-\ell\leq \frac{\ell}2$$
+ce qui implique 
+$$f(x)\geq\frac{\ell}2&gt;0.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3206"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3206"),	max:5, rating:1.5192307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3206,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une fonction lipschitzienne est continue <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3206.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3206,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3206','imageenonce3206');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3206"></a><div class=inner id="innerenonce3206">Soit $I$ un intervalle, $k&gt;0$ et $f:I\to\mathbb R$ vérifiant :
+$$\forall (x,y)\in I^2,\ |f(x)-f(y)|\leq k|x-y|.$$
+Démontrer que $f$ est continue sur $I$.</div></div><div class=indication><a href="javascript:showAll('innerindication3206','imageindication3206');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3206"></a><div class=inner id="innerindication3206" style="display:none;">Revenir à la définition. Si on a fixé $x_0$ et $\veps&gt;0$, le réel $\eta=\veps/k$ pourrait être d'un grand secours...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3206','imagecorrige3206',3206);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3206"></a><div class=inner id="innercorrige3206" style="display:none;">On va prouver la continuité de $f$ en revenant à la définition. Soit $x_0\in I$ et $\veps&gt;0$. Posons $\eta=\veps/k$ et soit $x\in I$ tel que $|x-x_0|\leq \eta.$
+Alors 
+$$|f(x)-f(x_0)|\leq k |x-x_0|\leq k\eta=\veps.$$
+C'est bien que $f$ est continue en $x_0$. Remarquons que $\eta$ ne dépend pas de $x_0$. En réalité, on a démontré un petit peu plus que la continuité de $f$ sur $I$ : on a démontré sa continuité uniforme.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater210"></span><script>var myRating = raterJs( { element:document.querySelector("#rater210"),	max:5, rating:1.9259259259259, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(210,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Valeur absolue <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=210.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(210,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce210','imageenonce210');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce210"></a><div class=inner id="innerenonce210">Démontrer que si une fonction $f:\mathbb R\to\mathbb R$ est continue en $x_0$, alors $|f|$ est continue en $x_0$. Démontrer que la réciproque est fausse.</div></div><div class=indication><a href="javascript:showAll('innerindication210','imageindication210');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication210"></a><div class=inner id="innerindication210" style="display:none;">Appliquer la définition de la continuité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige210','imagecorrige210',210);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige210"></a><div class=inner id="innercorrige210" style="display:none;">On va vérifier par la définition que $|f|$ est continue en $x_0$. Pour cela, soit $\veps&gt;0$. Puisque $f$ est continue en $x_0$, il existe $\eta&gt;0$ tel que, si $|x-x_0|&lt;\eta$, alors $|f(x)-f(x_0)|&lt;\veps$. Mais, par l'inégalité triangulaire, 
+$$\big| |f(x)|-|f(x_0)|\big|\leq |f(x)-f(x_0)| &lt;\veps.$$
+Ainsi, $|f|$ est continue en $x_0$. On aurait pu aussi utiliser que $|f|=|\cdot|\circ f$, et utiliser le fait que la composée de deux fonctions continues est continue.<br>
+La réciproque est fausse. Considérons par exemple $f$ définie par $f(x)=-1$ si $x\leq 0$ et $f(x)=1$ si $x&gt;0$. Alors $f$ n'est pas continue en $0$. En revanche, $|f|=1$ est une fonction constante, et donc $|f|$ est continue.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater211"></span><script>var myRating = raterJs( { element:document.querySelector("#rater211"),	max:5, rating:1.7209302325581, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(211,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inf et sup <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=211.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(211,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce211','imageenonce211');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce211"></a><div class=inner id="innerenonce211">Soient $f,g:\mathbb R\to\mathbb R$ deux fonctions continues.
+Montrer que $\inf(f,g)$ et $\sup(f,g)$ sont continues.</div></div><div class=indication><a href="javascript:showAll('innerindication211','imageindication211');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication211"></a><div class=inner id="innerindication211" style="display:none;">Fixer un $x_0\in\mathbb R$ et partager l'étude en 3 cas, suivant la position
+de $f(x_0)$ par rapport à $g(x_0)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige211','imagecorrige211',211);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige211"></a><div class=inner id="innercorrige211" style="display:none;">Il y (au moins) deux façons de résoudre cet exercice. La première est d'utiliser un marteau. On a en effet 
+$$\inf(f,g)=\frac{f+g-|f-g|}{2}\textrm{ et }\sup(f,g)=\frac{f+g+|f-g|}{2}.$$
+Puisque $f,g$ et $|.|$ sont trois fonctions continues, il en est de même de $\inf(f,g)$ et de $\sup(f,g)$. 
+On peut aussi procéder à la main (c'est plus instructif). Pour simplifier les notations, on pose $h=\inf(f,g)$. On $x_0\in\mathbb R$ et on va prouver que $h$ est continue en $x_0$. Soit $\veps&gt;0$. On distingue 3 cas :
+<ol class="enumeratechiffre">
+<li> Si $f(x_0)&lt;g(x_0)$, on pose $\delta=\inf(\veps,(g(x_0)-f(x_0))/2)$. Puisque $f$ est continue en $x_0,$ il existe $\eta_1&gt;0$ tel que 
+$$|x-x_0|&lt;\eta_1\implies |f(x)-f(x_0)|&lt;\delta.$$
+Puisque $g$ est continue en $x_0,$ il existe $\eta_2&gt;0$ tel que 
+$$|x-x_0|&lt;\eta_2\implies |g(x)-g(x_0)|&lt;\delta.$$
+Posons $\eta=\min(\eta_1,\eta_2)&gt;0$. On a donc, pour $|x-x_0|&lt;\eta,$ 
+$$|f(x)-f(x_0)|&lt;\delta\textrm{ et }|g(x)-g(x_0)|&lt;\delta.$$
+En particulier, pour tout $x\in[x_0-\eta,x_0+\eta]$, on a 
+$$f(x)\leq f(x_0)+\delta\leq g(x_0)-\delta\leq g(x).$$
+Ainsi, $h(x)=f(x)$, et 
+$$|h(x)-h(x_0)|=|f(x)-f(x_0)|&lt;\delta\leq\veps.$$
+Ceci prouve que $h$ est continue en $x_0$.
+<li> Si $f(x_0)&gt;g(x_0)$, on effectue le même raisonnement en échangeant les rôles joués par $f$ et $g$.
+<li> Si $g(x_0)=f(x_0)$, alors c'est presque plus simple. On sait qu'il existe $\eta&gt;0$ tel que,
+pour $|x-x_0|&lt;\eta$, on a
+$$|f(x)-f(x_0)|&lt;\veps\textrm{ et }|g(x)-g(x_0)|&lt;\veps$$
+soit,
+$$|f(x)-h(x_0)|&lt;\veps\textrm{ et }|g(x)-h(x_0)|&lt;\veps.$$
+Puisqu'on a toujours $h(x)=f(x)$ ou $h(x)=g(x)$, on trouve
+$$|h(x)-h(x_0)|&lt;\veps$$
+ce qui prouve la continuité de $h$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater212"></span><script>var myRating = raterJs( { element:document.querySelector("#rater212"),	max:5, rating:1.265306122449, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(212,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction périodique ayant une limite en $+\infty$ <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=212.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(212,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce212','imageenonce212');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce212"></a><div class=inner id="innerenonce212">Soit $f:\mathbb R\to\mathbb R$ périodique et admettant une limite finie $l$ en $+\infty$. Montrer que $f$ est constante.</div></div><div class=indication><a href="javascript:showAll('innerindication212','imageindication212');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication212"></a><div class=inner id="innerindication212" style="display:none;">Fixer $x_0\in\mathbb R$ et considérer $f(x_0+nT)$, où $T$ est une période de $f$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige212','imagecorrige212',212);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige212"></a><div class=inner id="innercorrige212" style="display:none;">Soit $T&gt;0$ une période de $f$ et $x_0\in\mathbb R$. La suite $(x_0+nT)$ tend vers $+\infty$. Puisque $f$ admet
+une limite $l$ en $+\infty$, la suite $(f(x_0+nT))$ tend vers $l$. Or, par $T$-périodicité, on sait que
+$$f(x_0+nT)=f(x_0)\textrm{ pour tout }n\geq 1.$$
+Par passage à la limite, on obtient $f(x_0)=l$ et donc la fonction $f$ est constante égale à $l$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3057"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3057"),	max:5, rating:2.3947368421053, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3057,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Plus petite période <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3057.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3057,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3057','imageenonce3057');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3057"></a><div class=inner id="innerenonce3057">Soit $f:\mathbb R\to\mathbb R$ une fonction continue périodique non constante. On veut prouver que $f$ admet une plus petite période, c'est-à-dire qu'il existe $T&gt;0$ tel que 
+<ul class="rien">
+<li> $f(x+T)=f(x)$ pour tout $x\in\mathbb R$
+<li> pour tout $0&lt;\tau&lt;T$, il existe $x\in\mathbb R$ avec $f(x+\tau)\neq f(x)$. 
+</ul>
+On pose 
+$$A=\{\tau&gt;0:\ \forall x\in\mathbb R,\ f(x+\tau)=f(x)\}.$$
+<ol class="enumeratechiffre">
+<li> Justifier que $A$ admet une borne inférieure que l'on notera $T$.
+<li> Démontrer que $T&gt;0$.
+<li> Démontrer que $T$ est une période pour $f$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3057','imageindication3057');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3057"></a><div class=inner id="innerindication3057" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Raisonner par l'absurde et utiliser que $f$ n'est pas constante et est continue.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3057','imagecorrige3057',3057);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3057"></a><div class=inner id="innercorrige3057" style="display:none;"><ol class="enumeratechiffre">
+<li> $A$ est une partie de $\mathbb R$ non vide (puisque $f$ est périodique) et minorée par $0$. Elle admet donc une borne inférieure.
+<li> Soit $x\neq y$ tel que $f(x)\neq f(y)$. Soit $\veps=|f(y)-f(x)|&gt;0$. Alors il existe $\delta&gt;0$ tel que pour tout $z\in \mathbb R$, $|y-z|&lt;\delta$ entraîne $|f(y)-f(z)|&lt;\veps$. Supposons que $T=0$. Alors il existe $\tau\in A$ tel que $0&lt;\tau&lt;\delta$. Mais alors, il existe un entier $n\in\mathbb Z$ tel que $x+n\tau\leq y&lt;x+(n+1)\tau$, et donc $|y-(x+n\tau)|&lt;\delta$. On en déduit que 
+$$|f(y)-f(x)|=|f(y)-f(x+n\tau)|&lt;\veps=|f(y)-f(x)|,$$
+une contradiction. On a donc $T&gt;0$.
+<li> Fixons $x\in\mathbb R$ et soit $(\tau_k)$ une suite d'éléments de $A$ qui converge vers $T$. Puisque $f(x+\tau_k)=f(x)$, la continuité de $f$ en $x+T$ entraîne que $f(x+T)=f(x)$. Ainsi, $T$ est bien une période de $f$, et par construction, c'est la plus petite période de $f$.
+</ol></div></div></div>
+
+<div class=titrepartie>Prolongements d'identité et équations fonctionnelles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater202"></span><script>var myRating = raterJs( { element:document.querySelector("#rater202"),	max:5, rating:1.1612903225806, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(202,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Prolongement d'identités <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=202.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(202,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce202','imageenonce202');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce202"></a><div class=inner id="innerenonce202">Soient $f,g:\mathbb R\to\mathbb R$ continues.
+<ol class="enumeratechiffre">
+<li> On suppose que, pour tout $x\in\mathbb Q$, on a $f(x)&lt;g(x)$.
+<ol class="enumeratechiffre">
+<li> Montrer que $f(x)\leq g(x)$ pour tout $x\in\mathbb R$.
+<li> Montrer que l'on n'a pas nécessairement une inégalité stricte dans la question précédente.
+</ol>
+<li> On suppose désormais que, pour tout $x,y\in\mathbb Q$ avec $x&lt;y$, on a $f(x)&lt;f(y)$. Montrer que $f$ est strictement croissante.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication202','imageindication202');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication202"></a><div class=inner id="innerindication202" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> $\mathbb Q$ est dense dans $\mathbb R$.
+<li> Prendre $g=0$ et $f&gt;0$, sauf en un point irrationnel.
+</ol>
+<li> Intercaler des rationnels entre deux nombres quelconques.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige202','imagecorrige202',202);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige202"></a><div class=inner id="innercorrige202" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> Soit $x\in\mathbb R$. Il existe une suite de rationnels $(u_n)$ qui converge vers $x$. Le passage
+à la limite dans $f(u_n)&lt;g(u_n)$ donne $f(x)\leq g(x)$.
+<li> Prenons $f=0$ et $g(x)=|x-\sqrt 2|$. Alors $g(x)&gt;0=f(x)$ pour tout $x\neq\sqrt 2$, en particulier
+pour tout $x\in\mathbb Q$, et pourtant $f(\sqrt 2)=g(\sqrt 2)=0$.
+</ol>
+<li> Soient $x&lt;y$. On peut trouver des rationnels $a$ et $b$ tels que $x&lt;a&lt;b&lt;y$. Soit ensuite une suite de rationnels
+$(x_n)$ qui converge vers $x$ et $(y_n)$ une suite de rationnels qui converge vers $y$. Pour $n$ assez grand, on a
+$x_n\leq a$, donc $f(x_n)\leq f(a)$ et par passage à la limite $f(x)\leq f(a)$. De même, on a
+$f(b)\leq f(y)$. On obtient l'inégalité stricte en écrivant 
+$$f(x)\leq f(a)&lt;f(b)\leq f(y),$$
+qui est vraie car $a&lt;b$ et $a,b$ sont deux rationnels.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater203"></span><script>var myRating = raterJs( { element:document.querySelector("#rater203"),	max:5, rating:1.7666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(203,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation fonctionnelle <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=203.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(203,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce203','imageenonce203');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce203"></a><div class=inner id="innerenonce203">Soit $f$ une application de $\mathbb R$ dans $\mathbb R$ continue en 0, et vérifiant $f(2x)=f(x)$ pour tout
+réel $x$. Montrer que $f$ est constante. Comment généraliser ce résultat si $f$ vérifie $f(ax+b)=f(x)$ pour
+des réels $a$ et $b$ donnés avec $|a|\neq 1$?</div></div><div class=indication><a href="javascript:showAll('innerindication203','imageindication203');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication203"></a><div class=inner id="innerindication203" style="display:none;">Démontrer que $f(x)=f(x/2^n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige203','imagecorrige203',203);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige203"></a><div class=inner id="innercorrige203" style="display:none;">Soit $x\in\mathbb R$ et $(x_n)$ la suite définie par $x_n=x/2^n$.
+Alors $x_n=2x_{n+1}$, et donc on a $f(x_n)=f(x_{n+1})$. Ainsi, on obtient que
+pour tout entier $n$, on a $f(x_n)=f(x)$. Or, la suite $(x_n)$ tend vers 0, 
+et $f$ est continue en 0. On en déduit que $f(x_n)\to f(0)$, et donc que $f(x)=f(0)$.
+Comme $x$ est arbitraire, $f$ est bien constante égale à $f(0)$.<br>
+Si $f$ vérifie la relation $f(ax+b)=f(x)$, alors soit $l$ la solution
+de $al+b=l$, soit $l=\frac{b}{1-a}$ (on a $a\neq 1$). Si $f$ est continue en $l$,
+alors $f$ va être constante. En effet, la transformation $x\mapsto ax+b$ est une 
+homothétie de centre $l$ et de rapport $a$. On peut faire le même travail avec cette homothétie
+qu'avec l'homothétie $x\mapsto 2x$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater204"></span><script>var myRating = raterJs( { element:document.querySelector("#rater204"),	max:5, rating:1.5277777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(204,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation fonctionnelle <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=204.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(204,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce204','imageenonce204');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce204"></a><div class=inner id="innerenonce204">Soit $f:\mathbb R\to\mathbb R$ continue telle que, 
+$$\forall (x,y)\in\mathbb R^2,\ f(x+y)=f(x)+f(y).$$
+<ol class="enumeratechiffre">
+<li> Déterminer $f(0)$.
+<li> Démontrer que $f$ est impaire.
+ <li> Démontrer que, pour tout $n\geq 1$ et tout $x\in\mathbb R$, $f(nx)=nf(x)$.
+ <li> Démontrer que, pour tout $n\in\mathbb Z$ et tout $x\in\mathbb R$, $f(nx)=nf(x)$.
+<li> Démontrer que pour tout nombre rationnel $r=\frac{p}q$ et pour tout $x\in\mathbb R$, on a 
+$$f\left(\frac pq x\right)=\frac pqf(x)$$
+(on pourra écrire $p=q\times\frac pq$).
+<li> Conclure qu'il existe $a\in\mathbb R$ tel que, pour tout $x\in\mathbb R$, $f(x)=ax$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige204','imagecorrige204',204);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige204"></a><div class=inner id="innercorrige204" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $f(0)=0$. Ceci découle de $f(0)=f(0+0)=2f(0)\implies f(0)=0$.
+<li> Soit $x\in\mathbb R.$ On applique la propriété vérifiée par $f$ à $x$ et à $y=-x.$ Utilisant que $f(0)=0$, on trouve 
+$$0=f(x)+f(-x)\implies f(-x)=-f(x).$$
+<li> On remarque d'abord que $f(2x)=2f(x)$, puis, par récurrence sur $n$, que $f(nx)=nf(x)$. En effet, si la
+propriété est vraie au rang $n$, alors on a 
+$$f\big((n+1)x\big)=f(nx+x)=f(nx)+f(x)=(n+1)f(x).$$
+<li> Soit $n$ est un entier négatif. Alors $-n$ est un entier positif et donc
+$$f(-nx)=-nf(x).$$
+Puisque $f$ est impaire, 
+$$f(nx)=-f(-nx)=nf(x).$$
+<li> 
+Soit maintenant $r=p/q$ un rationnel.
+Pour calculer $f(rx)$, l'astuce est d'écrire
+$$f\left(q\times \frac{p}{q} x\right)=qf\left(\frac{p}{q} x\right)$$
+d'une part et
+$$f\left(q\times \frac{p}{q}x\right)=f(px)=pf(x)$$
+d'autre part. De la sorte, on a $f(rx)=rf(x)$.
+<li> Posons $a=f(1)$. Alors on vient de prouver
+que $f(x)=xf(1)$ pour tout $x\in\mathbb Q$. Soit $x\in\mathbb R$ et $(x_n)$ une suite de rationnels tendant vers $x$.
+Le passage à la limite dans $f(x_n)=x_nf(1)$ (licite car $f$ est continue) donne $f(x)=xf(1)$. Comme une telle fonction vérifie l'équation fonctionnelle, 
+on vient de prouver que les fonctions continues vérifiant $f(x+y)=f(x)+f(y)$ pour tous $x,y\in\mathbb R$ sont
+exactement les fonctions linéaires.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3207"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3207"),	max:5, rating:2.1153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3207,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation fonctionnelle <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3207.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3207,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3207','imageenonce3207');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3207"></a><div class=inner id="innerenonce3207">On cherche à déterminer toutes les fonctions continues $f:\mathbb R\to\mathbb R$  vérifiant, pour tout $x\in\mathbb R$, $f(2x)-f(x)=x.$
+<ol class="enumeratechiffre">
+<li> Soit $f$ une telle fonction. Démontrer que, pour tout $x\in\mathbb R$ et pour tout $n\geq 1$, on a 
+$$f(x)-f(x/2^n)=\sum_{k=1}^n\frac{x}{2^k}.$$
+<li> Répondre au problème posé.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3207','imageindication3207');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3207"></a><div class=inner id="innerindication3207" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> Raisonner par analyse synthèse. On pourra faire tendre $n$ vers $+\infty$ dans l'égalité précédente en utilisant la somme d'une suite géométrique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3207','imagecorrige3207',3207);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3207"></a><div class=inner id="innercorrige3207" style="display:none;"><ol class="enumeratechiffre">
+<li> On va procéder par récurrence. Pour $n\geq 1$ et $x\in\mathbb R$, on note $\mathcal P(n)$ la propriété 
+$$\mathcal P(n)="f(x)-f(x/2^n)=\sum_{k=1}^n\frac{x}{2^k}".$$
+Initialisation : la propriété est vraie pour $n=1$. En effet, il s'agit de la propriété vérifiée par $f$ mais appliquée en $x/2$.<br>
+Hérédité : soit $n\geq 1$ tel que $\mathcal P(n)$ est vraie, et prouvons que $\mathcal P(n+1)$ est vraie. Alors, appliquant la propriété vérifiée par $f$ avec $x/2^n$, on a 
+$$f(x/2^n)-f(x/2^{n+1})=\frac{x}{2^{n+1}}.$$
+Or, on sait que 
+$$f(x)-f(x/2^n)=\sum_{k=1}^n\frac{x}{2^k}.$$
+En effectuant la somme de ces deux égalités, on trouve
+$$f(x)-f(x/2^{n+1})=\sum_{k=1}^n\frac{x}{2^k}+\frac{x}{2^{n+1}}=
+\sum_{k=1}^{n+1}\frac{x}{2^k}.$$
+Donc $\mathcal P(n+1)$ est vraie.<br>
+Conclusion : Par le principe de récurrence, $\mathcal P(n)$ est vraie pour tout entier $n\geq 1$.<br>
+On peut aussi éviter la récurrence en procédant par télescopage. En effet, pour tout $x\in\mathbb R,$ pour tout $n\geq 1$ et pour tout $k\in\{1,\dots,n\},$ on a 
+$$f\left(\frac{x}{2^{k-1}}\right)-f\left(\frac x{2^k}\right)=\frac x{2^k}.$$
+On somme ensuite cette égalité pour $k$ allant de $1$ à $n$, et le terme de gauche se simplifie par télescopage.
+<li> On va procéder par analyse-synthèse. Soit $f$ une fonction vérifiant cette propriété. Alors, pour tout $x\in\mathbb R$ et tout $n\geq 1$, on a 
+$$f(x)-f(x/2^n)=\sum_{k=1}^n\frac{x}{2^k}=x\sum_{k=1}^n \frac1{2^k}=x\frac{\frac 12-\frac 1{2^{n+1}}}{1-\frac 12}=x\left(1-\frac 1{2^n}\right).$$
+On fait alors tendre $n$ vers $+\infty$. D'une part, puisque $f$ est continue en $0$ et que $x/2^n\to 0$ si $n\to+\infty,$
+ on sait que $f(x/2^n)$ tend vers $f(0)$. D'autre part, $1-\frac{1}{2^n}\to 1$ si $x$ tend vers $0$. On en déduit que pour tout $x\in\mathbb R$, on a 
+$$f(x)-f(0)=x.$$
+Ainsi, si $f$ est solution, il existe $a\in\mathbb R$ tel que $f(x)=x+a.$<br>
+Réciproquement, on vérifie très facilement qu'une fonction $f$ définie par $f(x)=x+a,$ avec $a\in\mathbb R,$ est solution du problème.
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Théorème des valeurs intermédiaires - aspect pratique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater3205"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3205"),	max:5, rating:1.3793103448276, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3205,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Combien de solutions? <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3205.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(3205,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3205','imageenonce3205');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3205"></a><div class=inner id="innerenonce3205">Soit $f$ la fonction définie sur $\mathbb R$ par $f(x)=x^3-3x^2-1$. Discuter, suivant la valeur de $a\in\mathbb R$, le nombre de solutions de l'équation $f(x)=a$.</div></div><div class=indication><a href="javascript:showAll('innerindication3205','imageindication3205');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3205"></a><div class=inner id="innerindication3205" style="display:none;">Commencer par étudier la fonction, et ensuite s'aider du tableau de variations pour faire la discussion.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3205','imagecorrige3205',3205);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3205"></a><div class=inner id="innercorrige3205" style="display:none;">La fonction $f$ est dérivable sur $\mathbb R$ et sa dérivée est $f'(x)=3x^2-6x=3x(x-2).$ On en déduit le tableau de variations suivant : 
+<div class=equation><img src="bde_images/tvi1.png" width="60%" /></div>
+On peut alors amorcer la discussion suivant les valeurs de $a$ :
+<ul class="rien">
+<li> Si $a&gt;-1$, puisque $f(x)\leq -1$ si $x\in ]-\infty,2]$, il n'y a pas
+de solutions à l'équation $f(x)=a$ dans cet intervalle. D'autre part, $f$ est continue strictement croissante sur $]2,+\infty[$, et $a\in ]f(2),\lim_{+\infty}f[=]-5,+\infty[$. Il y a donc une solution unique dans l'intervalle $]2,+\infty[$ à l'équation $f(x)=a$, et donc aussi une solution unique sur $\mathbb R.$
+<li> Si $a=-1$, on fait le même raisonnement, en remarquant qu'il n'y a pas de solutions dans $]-\infty,0[$ ni dans $]0,2[$. En revanche, on a aussi $f(0)=-1$. L'équation $f(x)=-1$ admet donc $2$ solutions.
+<li> Si $a\in ]-5,-1[$, alors par le même argument que précédemment (stricte monotonie et valeur ou limite aux bornes), on constate que l'équation $f(x)=a$ admet une solution unique sur chacun des intervalles $]-\infty,0[$, $]0,2[$ et $]2,+\infty[$. Il y a donc trois solutions à l'équation $f(x)=a$ sur $\mathbb R.$
+<li> Si $a&lt;-5$, alors il ne peut pas y avoir de solutions dans l'intervalle $[0,+\infty[$ et puisque $f$ est strictement croissante, continue sur $]-\infty,0[$ avec $\lim_{-\infty}f=-\infty$ et $f(0)=-1$, l'équation $f(x)=a$ admet une solution unique dans $]-\infty,0[$.
+<li> Enfin, si $a=-5$, on trouve deux solutions, l'une dans $]-\infty,0[$, et aussi $2$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater223"></span><script>var myRating = raterJs( { element:document.querySelector("#rater223"),	max:5, rating:1.1891891891892, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(223,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Racines <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=223.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(223,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce223','imageenonce223');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce223"></a><div class=inner id="innerenonce223">Montrer que l'équation $x^3+x^2-4x+1=0$ admet au moins trois solutions distinctes dans $\mathbb R$.
+En utilisant l'algorithme de dichotomie, donner un encadrement d'amplitude inférieur à $10^{-1}$ de chacune de ces racines.</div></div><div class=indication><a href="javascript:showAll('innerindication223','imageindication223');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication223"></a><div class=inner id="innerindication223" style="display:none;">Calculer $f(0)$, $f(1)$ avec $f(x)=x^3+x^2-4x+1$, puis appliquer le théorème des valeurs intermédiaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige223','imagecorrige223',223);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige223"></a><div class=inner id="innercorrige223" style="display:none;">Posons $f(x)=x^3+x^2-4x+1$.
+Remarquons que $f(0)=1&gt;0$ et que $f(1)=-1&lt;0$. De plus, $\lim_{-\infty}f=-\infty$ et $\lim_{+\infty}f=+\infty$.
+On va donc appliquer trois fois le théorème des valeurs intermédiaires :
+<ul class="rien">
+<li> On a $0\in f(]-\infty,0[)$, et donc par le théorème des valeurs intermédiaires appliqué
+à la fonction continue $f$, il existe $x_1\in ]-\infty,0[$ tel que $f(x_1)=0$.
+<li> On a $0\in f(]0,1[)$, et donc par le théorème des valeurs intermédiaires appliqué à $f$,
+il existe $x_2\in]0,1[$ tel que $f(x_2)=0$.
+<li> On a $0\in f(]1,+\infty[)$, et donc par le théorème des valeurs intermédiaires appliqué à $f$,
+il existe $x_3\in]1,+\infty[$ tel que $f(x_3)=0$.
+</ul>
+Puisque $x_1&lt;0&lt;x_2&lt;1&lt;x_3$, on a bien trouvé trois racines distinctes à l'équation. En fait, comme on a affaire à un polynôme de degré 3, il ne peut pas avoir plus de 3 racines, et on a trouvé toutes ses racines.<br>
+On va maintenant encadrer ces racines. Pour cela on va utiliser la méthode de dichotomie. Commençons par $x_2$, dont on sait déjà
+qu'elle est comprise entre 0 et 1. On calcule successivement les valeurs suivantes
+$$
+\begin{array}{c|c}
+x&f(x)\\
+0,5	&-0,625\\
+0,25	&0,078125\\
+0,375&	-0,306640625\\
+0,3125&	-0,121826172\\
+\end{array}.$$
+On en déduit que $0,25&lt;x_2&lt;0,3125$. Pour $x_3$, on commence par remarquer que $f(1)=-1&lt;0&lt;f(2)=5$. $x_3$ est donc localisé dans l'intervalle $[1,2]$.
+La méthode de dichotomie donne cette fois :
+$$
+\begin{array}{c|c}
+x&f(x)\\
+1,5	&0,625\\
+1,25	&-0,484375\\
+1,375&	-0,009765625\\
+1,4375&	0,286865234\\
+\end{array}.$$
+On en déduit que $1,375&lt;x_3&lt;1,4375$. Maintenant, pour $x_1$, il faut d'abord tatonner un encadrement grossier. On a $f(-2)=5&gt;0&gt;f(-3)=-5$. On applique donc la méthode de dichotomie entre $-2$ et $-3$. On trouve
+$$
+\begin{array}{c|c}
+x&f(x)\\
+-2,5	&1,625\\
+-2,75	& -1,234375\\
+-2,625&	0,302734375\\
+-2,6875&	-0,438232422\\
+\end{array}
+$$
+On en déduit que $-2,6875&lt;x_1&lt;-2,625$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater3184"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3184"),	max:5, rating:2.1935483870968, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3184,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3184.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(3184,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3184','imageenonce3184');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3184"></a><div class=inner id="innerenonce3184">On considère l'équation $(E_a)$, d'inconnue $x&gt;0$, 
+$$\ln(x)=ax.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que si $a\leq 0$, l'équation $(E_a)$ admet une unique solution et que cette solution appartient à $]0,1]$.
+<li> Démontrer que si $a\in ]0,1/e[$, l'équation $(E_a)$ admet exactement deux solutions.
+<li> Démontrer que si $a=1/e$, l'équation $(E_a)$ admet une unique solution dont on précisera la valeur. 
+<li> Démontrer que si $a&gt;1/e$, l'équation $(E_a)$ n'admet pas de solution.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3184','imageindication3184');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3184"></a><div class=inner id="innerindication3184" style="display:none;">Il faut étudier la fonction $f(x)=\ln(x)-ax$....</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3184','imagecorrige3184',3184);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3184"></a><div class=inner id="innercorrige3184" style="display:none;">Dans toute la suite, on va poser $f(x)=\ln(x)-ax$, définie pour $x&gt;0$. 
+Chercher une solution de $(E_a)$, c'est chercher un zéro de $f$. Remarquons d'abord que la fonction $f$ est continue sur $]0,+\infty[$ et que $\lim_{x\to 0^+}f(x)=-\infty$. De plus, $f$ est dérivable sur $]0,+\infty[$ et pour tout $x&gt;0$, on a 
+$$f'(x)=\frac 1x-a.$$
+On a $f'(x)=0\iff x=1/a$. Si $a\leq 0$, la fonction $f$ est strictement croissante sur $]0,+\infty[$. Si $a&gt;0$, la fonction $f$ est strictement croissante sur $]0,1/a[$ et strictement décroissante sur $]1/a,+\infty[$.
+<ol class="enumeratechiffre">
+<li> Si $a\leq 0$, alors la fonction $f$ est strictement croissante sur $]0,+\infty[$ et de plus $\lim_{x\to+\infty}f(x)=+\infty$ (ce n'est pas une forme indéterminée). La fonction $f$ réalise donc une bijection de $]0,+\infty[$ sur $\mathbb R$, et l'équation $f(x)=0$ admet une unique solution dans $]0,+\infty[$. On peut même préciser l'emplacement de ce zéro. En effet, $f(1)=-a\geq 0$, et donc $0\in ]\lim_{x\to 0^+}f(x),f(1)]$. On en déduit que la solution à $(E_a)$ est dans l'intervalle $]0,1]$.
+<li> Si $a&gt;0$, on a $\lim_{x\to+\infty}f(x)=-\infty$ par croissance comparée de la fonction logarithme et des fonctions puissance. On a donc le tableau de variations suivant pour la fonction $f$ : 
+<div class=equation><img src="bde_images/equationtvi.png" width="75%" /></div>
+Supposons maintenant $a\in ]0,1/e[$. Par continuité et stricte monotonie, $f$ réalise une bijection de $]0,1/a]$ sur $]-\infty,f(1/a)]=]-\infty,\ln(1/a)-1]$ et de $[1/a,+\infty[$ sur $]-\infty;\ln(1/a)-1]$. 
+Puisque $a&lt;1/e$, $\ln(1/a)&gt;1$ et on trouve bien deux solutions à l'équation $f(x)=0$ : l'une dans l'intervalle $]0,1/a[$ et l'autre dans l'intervalle $]1/a,+\infty[$. 
+<li> Si $a=1/e$, alors $f$ admet un maximum en $e$ qui vaut $0$. La fonction étant strictement croissante sur $]0,1/e[$ et strictement décroissante sur $]1/e,+\infty[$, l'équation $(E_a)$ admet pour unique solution $e$.
+<li> Si $a&gt;1/e$, alors $f$ admet un maximum en $1/a$ et $f(1/a)=-\ln(a)-1&lt;0$. Ainsi, l'équation $(E_a)$ n'admet pas de solutions.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2864"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2864"),	max:5, rating:1.4444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2864,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une infinité de solutions <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2864.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2864,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2864','imageenonce2864');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2864"></a><div class=inner id="innerenonce2864">Démontrer que l'équation $\cos x=\frac 1x$ admet une infinité de solutions dans $\mathbb R_+^*$.</div></div><div class=indication><a href="javascript:showAll('innerindication2864','imageindication2864');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2864"></a><div class=inner id="innerindication2864" style="display:none;">Considérer $f(x)=\cos x-\frac 1x$ et appliquer le théorème des valeurs intermédiaires dans des intervalles bien choisis. Il faudra bien sûr utiliser la $2\pi$-périodicité de $\cos x$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2864','imagecorrige2864',2864);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2864"></a><div class=inner id="innercorrige2864" style="display:none;">Posons, pour $x&gt;0$, $f(x)=\cos x-\frac 1x$. Alors $f$ est continue sur $]0,+\infty[$. Soit $k\geq 1$ un entier. Alors on a 
+$$f(2k\pi)=1-\frac{1}{2k\pi}\geq 0$$
+alors que
+$$f(2k\pi+\pi)=-1-\frac{1}{2k\pi+\pi}\leq 0.$$
+Par le théorème des valeurs intermédiaires, il existe un réel $x_k$ dans l'intervalle $[2k\pi,2k\pi+\pi]$ tel que $f(x_k)=0$. On a clairement $x_k&lt;2(k+1)\pi\leq x_{k+1}$. Ainsi, les réels $x_k$ sont deux à deux disjoints et l'équation admet une infinité de solutions.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater2880"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2880"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2880,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application à l'étude de fonctions <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2880.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(2880,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2880','imageenonce2880');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2880"></a><div class=inner id="innerenonce2880">Soit $g$ la fonction définie sur $\mathbb R$ par $g(x)=2x^3-3x^2-1$.
+<ol class="enumeratechiffre">
+<li> Dresser le tableau de variations de $g$.
+<li> Montrer que l'équation $g(x)=0$, avec $x\in\mathbb R$, admet une unique solution $\alpha$. Donner un encadrement de $\alpha$ à $10^{-1}$ près.
+<li> Déterminer le signe de $g(x)$ sur $\mathbb R$.
+<li> Soit $f$ la fonction définie sur $]-1;+\infty[$ par 
+$$f(x)=\frac{1-x}{x^3+1}.$$
+Calculer $f'(x)$ puis exprimer le en fonction de $g$, pour $x\in]-1;+\infty[$.
+<li> En déduire le signe de $f'$, puis les variations de $f$ sur $]-1;+\infty[$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2880','imageindication2880');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2880"></a><div class=inner id="innerindication2880" style="display:none;"><ol class="enumeratechiffre">
+<li> Dériver $g$.
+<li> S'appuyer sur le tableau de variations et sur le théorème des valeurs intermédiaires.
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2880','imagecorrige2880',2880);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2880"></a><div class=inner id="innercorrige2880" style="display:none;"><ol class="enumeratechiffre">
+<li> On calcule la dérivée de $g$. On trouve $g'(x)=6x^2-6x=6x(x-1)$. Ainsi, on a $g'(x)&lt;0$ sur $]0;1[$ et $g'(x)&gt;0$ sur $]-\infty;0[\cup]1;+\infty[$. On sait aussi que
+$$\lim_{x\to-\infty}g(x)=\lim_{x\to-\infty}2x^3=-\infty,\quad \lim_{x\to+\infty}g(x)=\lim_{x\to+\infty}2x^3=+\infty.$$
+On en déduit le tableau de variations suivant pour $g$ :
+<div class=equation><img src="bde_images/applietudefonction1.png"></div>
+<li> La fonction $g$ est croissante sur $]-\infty;0]$ et donc pour tout $x\in]-\infty;0]$, on a $g(x)\leq g(0)=-1$. La fonction $g$ est décroissante sur l'intervalle $[0;1]$ et donc pour tout $x\in [0;1]$, on a $g(x)\leq g(0)=-1$. Enfin, la fonction $g$ est continue et strictement croissante sur $[1;+\infty[$.
+Puisque $g(1)=-2$ et $\lim_{x\to+\infty}g(x)=+\infty$ et que $0\in [-2;+\infty[$, l'équation $g(x)=0$ admet une unique solution $\alpha$ dans $[1;+\infty[$. Comme elle n'a pas de solutions dans $]-\infty;-2]$, c'est la seule solution dans $\mathbb R$ tout entier. Notons la $\alpha$. Du fait que $g(2)=3&gt;0$ alors que $g(1)&lt;0$, on sait que $\alpha\in[1;2]$. On en trouve une valeur approchée par exemple par balayage. On trouve $\alpha\simeq 1,\!7$, à $10^{-1}$ près.
+<li> D'après l'étude précédente (et le tableau de variations), on a $g(x)\leq 0$ si $x\leq \alpha$ et $g(x)\geq 0$ si $x\geq\alpha$.
+<li> Remarquons d'abord que le dénominateur s'annule uniquement en $-1$. La fonction $f$ est bien définie et dérivable sur $]-1;+\infty[$ et sa dérivée vérifie
+$$f'(x)=\frac{-(x^3+1)-(1-x)(3x^2)}{(x^3+1)^2}=\frac{2x^3-3x^2-1}{(x^3+1)^2}=\frac{g(x)}{(1+x^3)^2}.$$
+<li> Ainsi, $f'$ est du même signe que $g$ et $f$ est décroissante sur $]-1;\alpha]$, puis croissante sur $[\alpha;+\infty[$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater221"></span><script>var myRating = raterJs( { element:document.querySelector("#rater221"),	max:5, rating:2.3928571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(221,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le cycliste <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=221.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(221,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce221','imageenonce221');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce221"></a><div class=inner id="innerenonce221">Un cycliste parcourt 30 km en une heure. Démontrer qu'il existe un intervalle de temps de 10 minutes tel
+que le cycliste a parcouru 5 km. Existe-t-il toujours un intervalle de temps de 40 minutes durant lequel il aura parcouru 20km?</div></div><div class=indication><a href="javascript:showAll('innerindication221','imageindication221');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication221"></a><div class=inner id="innerindication221" style="display:none;">Soit $f$ la fonction qui représente la distance parcourue par le cycliste en fonction du temps. Quelle propriété veut-on prouver sur $f$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige221','imagecorrige221',221);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige221"></a><div class=inner id="innercorrige221" style="display:none;">Notons $f$ la fonction qui représente la distance parcourue par le cycliste en fonction du temps (exprimé en minutes). $f$ est une fonction continue, $f(0)=0$ et $f(60)=30$. On veut prouver qu'il existe un intervalle de temps de 10 minutes tel que le cycliste a parcouru 5 km. Autrement dit, on veut trouver $x$ dans $[0,50]$ tel que $f(x+10)-f(x)=5$. Supposons qu'un tel $x$ n'existe pas. Par le théorème des valeurs intermédiaires, on sait alors que :
+<ul class="rien">
+<li> ou bien, pour tout $x\in [0,50]$, on a $f(x+10)-f(x)&gt;5$. 
+<li> ou bien, pour tout $x\in [0,50]$, on a $f(x+10)-f(x)&lt;5$.
+</ul>
+Dans le premier cas, on a 
+\begin{eqnarray*}
+f(60)&=&f(60)-f(50)+f(50)-f(40)+f(40)-f(30)+f(30)-f(20)+f(20)-f(10)+f(10)-f(0)\\
+&&gt;&6\times 5\\
+&&gt;&30.
+\end{eqnarray*}
+ce qui est une contradiction. Dans le second cas, on trouverait $f(60)&lt;30$, ce qui constitue également une contradiction. L'hypothèse formulée est donc fausse : il existe $x\in [0,50]$ tel que $f(x+10)-f(x)=5$.<br>
+Dans un intervalle de 40 minutes, cela devient faux. Supposons par exemple que le cycliste parcourt 15 kms pendant les 10 premières minutes, se repose pendant 40 minutes, puis parcourt les 15 derniers kilomètres pendant les 10 dernières minutes. Alors, si on prend un intervalle de temps de 40 minutes :
+<ul class="rien">
+<li> ou bien il contient une partie des 10 premières minutes, mais alors il ne comprend aucune partie des 10 dernières minutes, et dans ce cas la distance parcourue est inférieure à 15km.
+<li> ou bien il contient une partie des 10 dernières minutes, mais alors il ne comprend aucune partie des 10 premières minutes, et dans ce cas la distance parcourue est inférieure à 15km.
+<li> ou bien c'est l'intervalle "central", et dans ce cas la distance parcourue est nulle.
+</ul>
+Dans tous les cas, on ne peut pas trouver d'intervalle de temps de 40 minutes durant lequel il aura parcouru 20km.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater233"></span><script>var myRating = raterJs( { element:document.querySelector("#rater233"),	max:5, rating:1.5666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(233,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Non continue et vérifie pourtant la propriété des valeurs intermédiaires <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=233.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(233,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce233','imageenonce233');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce233"></a><div class=inner id="innerenonce233">On considère la fonction $f$ définie sur $[0,1]$ par
+$$f(x)=\left\{\begin{array}{ll}
+               0&\textrm{si }x=0\\
+\sin\left(\frac 1x\right)&\textrm{sinon.}
+              \end{array}
+\right.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que la fonction $f$ n'est pas continue en 0.
+<li> On souhaite prouver que $f$ vérifie la propriété des valeurs intermédiaires, c'est-à-dire que pour tous réels $a&lt;b$, et pour tout $y$ compris entre $f(a)$ et $f(b)$, il existe $c\in]a,b[$ tel que
+$y=f(c)$. 
+<ol class="enumeratechiffre">
+<li> Traiter le cas $a&gt;0$.
+<li> Si $a=0$, justifier l'existence de $d\in ]a,b[$ tel que $f(d)=f(0)$. Conclure.
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication233','imageindication233');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication233"></a><div class=inner id="innerindication233" style="display:none;">Pour démontrer qu'elle n'est pas continue, utiliser des suites. Pour la question 2, se ramener à utiliser le théorème des valeurs intermédiaires sur un intervalle où la fonction est continue.
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige233','imagecorrige233',233);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige233"></a><div class=inner id="innercorrige233" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour prouver que $f$ n'est pas continue en $0,$ il suffit de trouver une suite $(u_n)$ qui converge vers $0,$ mais telle que $(f(u_n))$ ne converge pas vers $f(0)=0$. Ici, $u_n=\frac{1}{2n\pi+\pi/2}$ convient, puisque $f(u_n)=1$ pour tout entier $n$.
+Question bonus : si on n'avait pas posé $f(0)=0$, sauriez-vous prouver que $f$ ne peut pas se prolonger par continuité en $0$?
+<li> 
+<ol class="enumeratechiffre">
+<li> Si $a\neq 0$, on peut directement appliquer le théorème des valeurs intermédiaires à $f$ qui est continue sur $[a,b]$.
+<li> Si $a=0$, soit $n\geq 1$ tel que $\frac1{n\pi}&lt;b$. Posons $d=1/n\pi$. Alors $f(d)=0=f(0)$, et cette fois on peut appliquer le théorème des valeurs intermédiaires sur l'intervalle $[d,b]$ pour démontrer que toute valeurs comprise entre $0=f(a)=f(d)$ et $f(b)$ est prise par $f$. 
+</ol>
+</ol></div></div></div>
+
+<div class=titrepartie>Théorème des valeurs intermédiaires - aspect théorique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater3208"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3208"),	max:5, rating:1.2857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3208,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynôme de degré impair <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3208.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(3208,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3208','imageenonce3208');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3208"></a><div class=inner id="innerenonce3208">Démontrer que tout polynôme de degré impair admet au moins une racine.</div></div><div class=indication><a href="javascript:showAll('innerindication3208','imageindication3208');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3208"></a><div class=inner id="innerindication3208" style="display:none;">Théorème des valeurs intermédiaires!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3208','imagecorrige3208',3208);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3208"></a><div class=inner id="innercorrige3208" style="display:none;">Soit $f$ un tel polynôme. Alors $f$ est une fonction continue. De plus, écrivons $f(x)=a_n x^n+\cdots+a_0$. Alors si $a_n&gt;0$, on a $\lim_{-\infty}f=-\infty$ et $\lim_{+\infty}f=+\infty$. Si $a_n&lt;0$, alors $\lim_{-\infty}f=+\infty$
+et $\lim_{+\infty}f=-\infty.$ Dans tous les cas, on peut appliquer le théorème des valeurs intermédiaires pour conclure que l'équation $f(x)=0$ admet toujours au moins une solution.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater220"></span><script>var myRating = raterJs( { element:document.querySelector("#rater220"),	max:5, rating:1.6969696969697, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(220,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Carré égal à 1 <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=220.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(220,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce220','imageenonce220');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce220"></a><div class=inner id="innerenonce220">Soit $f:\mathbb R\to\mathbb R$ continue telle que, pour tout $x\in\mathbb R$, on a $f(x)^2=1$.
+Démontrer que $f=1$ ou $f=-1$.</div></div><div class=indication><a href="javascript:showAll('innerindication220','imageindication220');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication220"></a><div class=inner id="innerindication220" style="display:none;">Ce n'est pas complètement évident, il faut utiliser le théorème des valeurs intermédiaires en procédant par l'absurde.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige220','imagecorrige220',220);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige220"></a><div class=inner id="innercorrige220" style="display:none;">Ce que donne immédiatement l'énoncé est 
+$$\forall x\in\mathbb R,\ f(x)=1\textrm{ ou }f(x)=-1.$$
+On veut prouver que 
+$$(\forall x\in\mathbb R,\ f(x)=1)\ \textrm{ ou } (\forall x\in\mathbb R,\ f(x)=-1).$$
+Ce n'est pas la même chose : pensons à la fonction identiquement égale à $-1$ sur 
+$]-\infty,0]$ et égale à $1$ sur $[0,+\infty[$. <br>
+Supposons donc que la deuxième propriété est fausse. Il existe donc $x_0\in\mathbb R$ tel que $f(x_0)=1$ et il existe $x_1\in\mathbb R$ tel que $f(x_1)=-1$. Par le théorème des valeurs intermédiaires, il existe $y$ tel que $f(y)=0$. Ceci contredit que $(f(y))^2=1$.  Donc la deuxième propriété est vraie.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater224"></span><script>var myRating = raterJs( { element:document.querySelector("#rater224"),	max:5, rating:1.9259259259259, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(224,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre fini de valeurs <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=224.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(224,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce224','imageenonce224');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce224"></a><div class=inner id="innerenonce224">Que dire d'une fonction $f:I\to\mathbb R$, où $I$ est un intervalle, continue,
+et ne prenant qu'un nombre fini de valeurs?</div></div><div class=indication><a href="javascript:showAll('innerindication224','imageindication224');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication224"></a><div class=inner id="innerindication224" style="display:none;">Montrer qu'elle est constante en utilisant le théorème des valeurs intermédiaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige224','imagecorrige224',224);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige224"></a><div class=inner id="innercorrige224" style="display:none;">On va démontrer qu'elle est constante en faisant un raisonnement par l'absurde et en utilisant le théorème des valeurs intermédiaires.
+Supposons en effet qu'il existe $a&lt;b$ dans $I$ tel que $f(a)\neq f(b)$. Par le théorème des valeurs
+intermédiaires, toute valeur de $[f(a),f(b)]$ (ou $[f(b),f(a)]$ si $f(b)&lt;f(a)$) est prise par $f$
+dans $[a,b]$. Comme cet intervalle contient un nombre infini de points, on obtient une contradiction.
+Donc, pour tous $a,b\in I$, on a $f(a)=f(b)$. Autrement dit, $f$ est constante.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater227"></span><script>var myRating = raterJs( { element:document.querySelector("#rater227"),	max:5, rating:1.5151515151515, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(227,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Barycentre <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=227.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(227,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce227','imageenonce227');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce227"></a><div class=inner id="innerenonce227">Soit $f:[a,b]\to \mathbb R$ une fonction continue, et soient $p,q$ deux réels strictement positifs.
+Démontrer qu'il existe $c\in[a,b]$ tel que 
+$pf(a)+qf(b)=(p+q)f(c).$</div></div><div class=indication><a href="javascript:showAll('innerindication227','imageindication227');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication227"></a><div class=inner id="innerindication227" style="display:none;">Se ramener au théorème des valeurs intermédiaires.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige227','imagecorrige227',227);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige227"></a><div class=inner id="innercorrige227" style="display:none;">Le réel $\frac{p}{p+q}f(a)+\frac{q}{p+q}f(b)$ est clairement un réel de l'intervalle $[f(a),f(b)]$ (ou $[f(b),f(a)]$ si $f(b)&lt;f(a)$),
+puisqu'il s'écrit $\lambda f(a)+(1-\lambda)f(b)$, avec $\lambda\in[0,1]$ qui est égal à 
+$\frac{p}{p+q}$. Puisque la fonction $f$ est continue, par le théorème des valeurs intermédiaires, on peut
+trouver $c\in[a,b]$ tel que 
+$$f(c)=\frac{p}{p+q}f(a)+\frac q{p+q}f(b).$$
+Multipliant par $p+q$, c'est exactement le résultat voulu.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater225"></span><script>var myRating = raterJs( { element:document.querySelector("#rater225"),	max:5, rating:1.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(225,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Point fixe <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=225.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(225,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce225','imageenonce225');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce225"></a><div class=inner id="innerenonce225">Soit $f:[0,1]\to[0,1]$ une fonction continue. Démontrer que $f$ admet toujours au moins un point fixe.</div></div><div class=indication><a href="javascript:showAll('innerindication225','imageindication225');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication225"></a><div class=inner id="innerindication225" style="display:none;">Appliquer le théorème des valeurs intermédiaires à $g(x)=f(x)-x$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige225','imagecorrige225',225);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige225"></a><div class=inner id="innercorrige225" style="display:none;">Posons $g(x)=f(x)-x$. $g$ est une fonction continue. Puisque $f(0)\geq 0$
+et $f(1)\leq 1$, on a $g(0)\geq 0$ et $g(1)\leq 0$. Par le théorème des valeurs intermédiaires,
+il existe $c\in[0,1]$ tel que $g(c)=0$. En particulier, $f(c)=c$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater2691"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2691"),	max:5, rating:1.2592592592593, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2691,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite définie implicitement <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2691.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(2691,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2691','imageenonce2691');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2691"></a><div class=inner id="innerenonce2691">Soit $a,b\in\mathbb R$ avec $a&lt;b$ et soit $f\in\mathcal C([a,b[,\mathbb R)$ une fonction strictement croissante sur $[a,b[$ et vérifiant $f(a)\leq 0$, $\lim_{x\to b}f(x)=+\infty$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\in\mathbb N$, l'équation $f(x)=n$ admet une unique solution $x_n\in[a,b[$.
+<li> &Eacute;tudier la monotonie de la suite $(x_n)$.
+<li> &Eacute;tudier la convergence de la suite $(x_n)$ et déterminer sa limite éventuelle.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2691','imageindication2691');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2691"></a><div class=inner id="innerindication2691" style="display:none;"><ol class="enumeratechiffre">
+<li> Théorème des valeurs intermédiaires.
+<li> Comparer $f(x_n)$ et $f(x_{n+1})$.
+<li> Démontrer que $(x_n)$ converge. Que se passe-t-il si sa limite est différente de $b$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2691','imagecorrige2691',2691);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2691"></a><div class=inner id="innercorrige2691" style="display:none;"><ol class="enumeratechiffre">
+<li> L'existence d'une solution vient du théorème des valeurs intermédiaires appliquée à la fonction continue $f$ sur l'intervalle $[a,b[$, l'unicité vient de la stricte croissance de $f$.
+<li> Soit $n\in\mathbb N$. On a $f(x_n)=n&lt;n+1=f(x_{n+1})$. Puisque $f$ est croissante, ceci entraîne que $x_n\leq x_{n+1}$, et donc que $(x_n)$ est croissante.
+<li> La suite $(x_n)$ est croissante, et majorée par $b$. Elle est donc convergente. Notons $\ell$ sa limite, $\ell\in [a,b]$. Si $\ell&lt;b$, alors puisque $(x_n)$ est croissante, on a pour tout entier $n$, $x_n\leq \ell$. Puisque $f$ est croissante, on a de plus $n=f(x_n)\leq f(\ell)$. Ceci est une contradiction (le membre de gauche tend vers $+\infty$ si $n$ tend vers $+\infty$). On en déduit que $\ell=b$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater3059"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3059"),	max:5, rating:2.7647058823529, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3059,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions qui commutent <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3059.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(3059,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3059','imageenonce3059');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3059"></a><div class=inner id="innerenonce3059">Soit $f,g:[0,1]\to[0,1]$ deux fonctions continues telles que $g\circ f=f\circ g$. On veut démontrer qu'il existe un réel $c$ tel que $f(c)=g(c)$. On rappelle que $f$ admet un point fixe $s\in[0,1]$. On définit par récurrence une suite $(u_n)$ par $u_0=s$ et $u_{n+1}=g(u_n)$.
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\geq 0$, $u_n$ est un point fixe de $f$. 
+<li> On suppose que la suite $(u_n)$ est monotone. Démontrer le résultat.
+<li> On suppose que la suite $(u_n)$ n'est pas monotone. 
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe $u,v\in[0,1]$ tels que $(f-g)(u)\cdot (f-g)(v)\leq 0$.
+<li> Conclure.
+</ol>
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication3059','imageindication3059');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3059"></a><div class=inner id="innerindication3059" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> La suite $(u_n)$ est convergente.
+<li> <ol class="enumeratechiffre">
+<li> Si une suite n'est pas monotone, il existe $n\neq m$ tels que $(u_n-u_{n+1})(u_m-u_{m+1})\leq 0$.
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3059','imagecorrige3059',3059);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3059"></a><div class=inner id="innercorrige3059" style="display:none;"><ol class="enumeratechiffre">
+<li> On va procéder par récurrence sur $n$. Pour $n\geq 0$, notons $\mathcal P_n$ la propriété "$f(u_n)=u_n$".<br>
+Initialisation : Par définition, $u_0=s$ est un point fixe de $f$, donc $\mathcal P_0$ est vraie.<br>
+Hérédité : Soit $n\in\mathbb N$ tel que $\mathcal P_n$ est vraie. Alors on  a
+$$f(u_{n+1})=f\circ g(u_n)=g\circ f(u_n)=g(u_n)=u_{n+1}.$$
+Donc $\mathcal P_{n+1}$ est vraie.<br>
+Conclusion : Par le principe de récurrence, la propriété $\mathcal P_n$ est vraie pour tout entier $n\geq 0$.
+<li> La suite $(u_n)$ est convergente, puisqu'elle est monotone et bornée. Notons $c$ sa limite. Alors on a, par continuité de $g$ en $c$, $g(c)=c$. De plus, on sait que $f(u_n)=u_n$. Puisque $f$ est continue en $c$, on a $f(c)=c=g(c)$.
+<li> <ol class="enumeratechiffre">
+<li> Puisque la suite $(u_n)$ n'est pas monotone, il existe deux entiers distincts $n$ et $m$ tels que $u_{n+1}-u_n\leq 0$ et $u_{m+1}-u_m\geq 0$. On en déduit que 
+$$(u_n-u_{n+1})(u_m-u_{m+1})\leq 0.$$
+Mais, 
+$$u_n-u_{n+1}=f(u_n)-g(u_n)=(f-g)(u_n)$$
+et 
+$$u_m-u_{m+1}=f(u_m)-g(u_m)=(f-g)(u_m).$$
+On en déduit le résultat en posant $u=u_n$ et $v=u_m$.
+<li> Il suffit d'appliquer le théorème des valeurs intermédiaires à la fonction $f-g$ entre $u$ et $v$ pour en déduire qu'elle s'annule en $c\in[0,1]$, c'est-à-dire que $f(c)=g(c)$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater232"></span><script>var myRating = raterJs( { element:document.querySelector("#rater232"),	max:5, rating:2.92, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(232,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une drôle de propriété! <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=232.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(232,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce232','imageenonce232');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce232"></a><div class=inner id="innerenonce232">Soit $f$ une fonction continue sur un segment $[a,b]$.
+On suppose que $f$ vérifie la propriété suivante : 
+pour tous les points $c&lt;d$ de l'intervalle, il existe $e$ compris entre $c$ et $d$ tel que $f(e)=f(a)$ ou $f(e)=f(b)$. Montrer que $f$ est constante.</div></div><div class=indication><a href="javascript:showAll('innerindication232','imageindication232');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication232"></a><div class=inner id="innerindication232" style="display:none;">Remarquer que $f$ ne peut prendre que deux valeurs.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige232','imagecorrige232',232);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige232"></a><div class=inner id="innercorrige232" style="display:none;">Soit $c$ un réel quelconque intervalle de l'intervalle $]a,b[$. Soit $d_n$ une suite de l'intervalle qui tend vers $c$ par valeur supérieure.
+ D'après l'hypothèse, il existe $c\leq e_n\leq d_n$ tel que $f(e_n)=f(a)$ ou $f(e_n)=f(b)$.
+  Maintenant, par le théorème des gendarmes, on constate que $e_n$ tend vers $c$, et par continuité de $f$ en $c$,
+   $f(e_n)$ tend vers $f(c)$. Ainsi, on a obligatoirement $f(c)=f(a)$ ou $f(c)=f(b)$. 
+   Ainsi, $f$ ne peut prendre que deux valeurs : $f(a)$ et $f(b)$.
+Or, d'après le théorème des valeurs intermédiaires, une fonction continue qui ne peut prendre qu'un nombre fini de valeurs est constante.
+ Donc $f$ est constante.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater226"></span><script>var myRating = raterJs( { element:document.querySelector("#rater226"),	max:5, rating:2.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(226,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Point fixe <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=226.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(226,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce226','imageenonce226');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce226"></a><div class=inner id="innerenonce226">Soit $f:\mathbb R_+\to \mathbb R_+$ continue. On suppose que $x\mapsto \frac{f(x)}x$ admet une limite
+finie $l&lt;1$ en $+\infty$. Démontrer que $f$ admet un point fixe.</div></div><div class=indication><a href="javascript:showAll('innerindication226','imageindication226');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication226"></a><div class=inner id="innerindication226" style="display:none;">Appliquer le théorème des valeurs intermédiaires à $x\mapsto \frac{f(x)}x$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige226','imagecorrige226',226);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige226"></a><div class=inner id="innercorrige226" style="display:none;">On distingue deux cas. D'une part, si $f(0)=0$, alors $0$ est un point fixe de $f$.
+Dans le cas où $f(0)\neq 0$, posons $g(x)=\frac{f(x)}x$. $g$ est définie, continue sur $]0,+\infty[$ et $\lim_{0^+}g=+\infty$. 
+D'autre part, $\lim_{+\infty}g=l&lt;1$. Par le théorème des valeurs intermédiaires, il existe $a\in ]0,+\infty[$ tel que $g(a)=1$.
+Mais alors, on a $f(a)=a$ et $a$ est un point fixe de $f$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater3209"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3209"),	max:5, rating:3.1904761904762, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3209,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Mêmes limites donc non injective! <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3209.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(3209,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3209','imageenonce3209');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3209"></a><div class=inner id="innerenonce3209">Soit $f:\mathbb R\to\mathbb R$ une fonction continue telle que $\lim_{-\infty}f=\lim_{+\infty}f.$ Démontrer que $f$ n'est pas injective. </div></div><div class=indication><a href="javascript:showAll('innerindication3209','imageindication3209');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3209"></a><div class=inner id="innerindication3209" style="display:none;">Procéder par l'absurde en supposant que $f$ est injective. Considérer $c&lt;d$ tel que $f(c)&lt;f(d)$. Démontrer que pour tout $x\geq d$, $f(x)\geq f(d).$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3209','imagecorrige3209',3209);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3209"></a><div class=inner id="innercorrige3209" style="display:none;">Supposons par l'absurde que $f$ est injective. Soit $c&lt;d$. Alors $f(c)\neq f(d).$ Pour fixer les idées, on va supposer que $f(c)&lt;f(d)$. Alors 
+<ul class="rien">
+<li> d'une part, pour tout $x&gt;d,$ on a $f(x)\geq f(d).$ Si ce n'était pas le cas, il existerait $x_0&gt;d$ avec $f(x_0)&lt;f(d).$ Considérons $y$ tel que $y&gt;\max(f(c),f(x_0))$ et $y&lt;f(d).$ Par le théorème des valeurs intermédiaires appliqué entre $d$ et $x_0$, il existe $x_1\in ]d,x_0[$ tel que $y=f(x_1).$ De même, d'après le théorème des valeurs intermédiaires appliqué à $f$ entre $c$ et $d$, il existe $x_2\in]c,d[$ tel que $f(x_2)=y$. Mais alors $x_1&lt;d&lt;x_2$ et $f(x_1)=f(x_2)$. Ceci contredit que $f$ est injective.
+<li> d'autre part, pour tout $x&lt;c$, on a $f(x)\leq f(c),$ en utilisant un raisonnement tout à fait similaire. 
+</ul>
+Mais alors, on a $\lim_{x\to+\infty}f(x)\geq f(d)$ et $\lim_{x\to-\infty}f(x)\leq f(c)$. Puisque $f(c)&lt;f(d)$, ceci contredit que $\lim_{+\infty}f=\lim_{-\infty}f.$ L'hypothèse de départ était donc fausse, et $f$ n'est pas injective.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater234"></span><script>var myRating = raterJs( { element:document.querySelector("#rater234"),	max:5, rating:2.1176470588235, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(234,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Valeurs intermédiaires? <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=234.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(234,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce234','imageenonce234');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce234"></a><div class=inner id="innerenonce234">Soit $f$ une fonction continue sur $[0,1]$, à valeurs dans $\mathbb R$, et telle que $f(0)=f(1)$.
+<ol class="enumeratechiffre">
+ <li> Montrer que pour tout entier $n\geq 2$, il existe $c_n\in\left[0,1-\frac 1n \right]$ tel que 
+$$f(c_n)=f\left(c_n+\frac 1n\right).$$ 
+<li> Montrer que si l'on remplace $1/n$ par un réel $\alpha\in]0,1[$ tel que $1/\alpha$ n'est pas un entier, le résultat précédent n'est plus vrai.
+On pourra considérer la fonction $f$ définie sur $[0,1]$ par
+$$f(x)=\cos\left(\frac{2\pi x}\alpha\right)-x\left(\cos\left(\frac{2\pi}{\alpha}\right)-1\right).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication234','imageindication234');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication234"></a><div class=inner id="innerindication234" style="display:none;"><ol class="enumeratechiffre">
+ <li> On pourra considérer la fonction $f_n$ définie sur $[0,1-1/n]$ par 
+$$f_n(x)=f\left(x+\frac 1n\right)-f(x)$$
+et écrire $f(1)-f(0)$ en fonction de $f_n$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige234','imagecorrige234',234);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige234"></a><div class=inner id="innercorrige234" style="display:none;"><ol class="enumeratechiffre">
+ <li> On  considère la fonction $f_n$ définie sur $[0,1-1/n]$ par 
+$$f_n(x)=f\left(x+\frac 1n\right)-f(x).$$
+On écrit alors que 
+$$0=f(1)-f(0)=\sum_{k=0}^{n-1}f_n\left(\frac kn\right).$$
+Le point clé est de remarquer que tous les $f_n(k/n)$ ne peuvent pas être tous strictement positifs ou tous strictement négatifs. Mais alors, on peut trouver un entier $k$ dans $\{0,\dots,n-2\}$ tel que $f_n(k/n)\leq 0$ et $f_n((k+1)/n)\geq 0$, ou bien
+$f_n(k/n)\geq 0$ et $f_n((k+1)/n)\leq 0$ (seriez-vous capable de démontrer cela formellement?). 
+Il suffit alors d'appliquer le théorème des valeurs intermédiaires à $f_n$ entre les points $k/n$ 
+et $(k+1)/n$.
+<li> C'est nettement plus facile, car on nous donne la fonction. On remarque d'abord que $f(0)=f(1)=1$. Par ailleurs, s'il existait $x\in[0,1-\alpha]$ avec $f(x)=f(x+\alpha)$, on obtiendrait après simplifications :
+$$\cos\left(\frac{2\pi}\alpha\right)=1.$$
+Ceci n'est pas possible si $1/\alpha$ n'est pas un entier.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater3058"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3058"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3058,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tout intervalle dans l'image est l'image d'un intervalle! <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3058.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(3058,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3058','imageenonce3058');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3058"></a><div class=inner id="innerenonce3058">Soit $f:\mathbb R\to\mathbb R$ une fonction continue, et soit $\alpha&lt;\beta$
+des réels avec $\alpha,\beta\in f(\mathbb R)$. Démontrer qu'il existe $a&lt;b$ tel que $f([a,b])=[\alpha,\beta]$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3058','imagecorrige3058',3058);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3058"></a><div class=inner id="innercorrige3058" style="display:none;">On commence par considérer $c$ et $d$ des réels tels que $f(c)=\alpha$ et 
+$f(d)=\beta$. On peut supposer $c&lt;d$. Posons 
+\begin{align*}
+A&=\{x\leq d:\ f(x)\leq \alpha\}\\
+B&=\{x\geq a:\ f(x)\geq\beta\}.
+\end{align*}
+Alors $A$ est non vide (il contient $c$), majorée (par $d$), donc il possède une borne supérieure que nous allons noter $a$. De plus, il existe une suite $(x_n)$ d'éléments de $A$ tels que $(x_n)$ converge vers $a$. Puisque $f(x_n)\leq \alpha$, on en déduit par continuité de $f$ en $a$ que $f(a)\leq\alpha$. <br>
+De la même façon, $B$ admet une borne inférieure, notée $b$, qui vérifie $f(b)\geq \beta$ et $a\leq b$. Par le théorème des valeurs intermédiaires, on sait que $[\alpha,\beta]\subset f([a,b])$. <br>
+Le choix spécifique de $a$ et de $b$ va nous prouver l'inclusion réciproque. En 
+effet, si $x\in]a,d]$, alors $f(x)&gt;\alpha$. De même, si $x\in [c,b[$, $f(x)&lt;\beta$. Ainsi, si $x\in ]a,b[$, on a $f(x)\in ]\alpha,\beta[$. Par passage à la limite (mais en approchant cette fois $a$ par valeur supérieure), on a enfin $f(a)=\alpha$ et $f(b)=\beta$, ce qui achève de prouver l'inclusion réciproque. </div></div></div>
+
+<div class=titrepartie>Théorème des bornes atteintes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>36</span> <span id="rater2868"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2868"),	max:5, rating:1.65, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2868,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart36 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart36" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2868.html"> [Signaler une erreur]</a><a id=exo36 href="javascript:ajouteexo(2868,36,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2868','imageenonce2868');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2868"></a><div class=inner id="innerenonce2868">Soit $f$ la fonction définie sur $\mathbb R$ par $f(x)=(x^4+3x^2)e^{-x^2}$.
+<ol class="enumeratechiffre">
+ <li> Déterminer la limite de $f$ en $+\infty$, en $-\infty$.
+ <li> Démontrer qu'il existe un réel $A&gt;0$ tel que, pour tout $x\geq A$, on a $|f(x)|\leq 1$.
+ <li> Démontrer qu'il existe un réel $B&lt;0$ tel que, pour tout $x\leq B$, on a $|f(x)|\leq 1$.
+ <li> Démontrer que la fonction $f$ est bornée sur $\mathbb R$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2868','imageindication2868');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2868"></a><div class=inner id="innerindication2868" style="display:none;"><ol class="enumeratechiffre">
+ <li> Faire le changement de variables $u=x^2$.
+ <li> Appliquer la définition de la limite.
+ <li> Appliquer la définition de la limite.
+ <li> Utiliser que $f$ est continue sur le segment $[B,A]$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2868','imagecorrige2868',2868);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2868"></a><div class=inner id="innercorrige2868" style="display:none;"><ol class="enumeratechiffre">
+ <li> Posons $u=x^2$. Quand $x$ tend vers $+\infty$ ou vers $-\infty$, $u$ tend vers $+\infty$.
+De plus, on a alors $f(x)=u^2e^{-u}+3ue^{-u}$. Par croissance comparée, on sait que 
+$\lim_{u\to+\infty}u^2e^{-u}=0$ et que $\lim_{u\to+\infty}ue^{-u}=0$, et donc par composition
+des limites
+$$\lim_{x\to +\infty} f(x)=\lim_{x\to-\infty}f(x)=0.$$
+<li> Il s'agit ici simplement d'écrire la définition de la limite en $+\infty$, appliquée pour $\veps=1$.
+<li> Il s'agit ici simplement d'écrire la définition de la limite en $-\infty$, appliquée pour $\veps=1$.
+<li> On sait que $f$ est continue. Ainsi, $f$ est bornée sur le segment $[B,A]$ : il existe un réel
+$M&gt;0$ tel que $|f(x)|\leq M$ pour tout $x\in [B,A]$. En posant $C$ le maximum de $1$ et de $M$, on 
+pour tout $x\in\mathbb R$, $|f(x)|\leq C$ et donc $f$ est bornée sur $\mathbb R$.
+</ol>
+En réalité, cette méthode prouve le résultat général suivant : si $f$ est une fonction continue sur $\mathbb R$ admettant une limite finie en $+\infty$ et en $-\infty$, alors $f$ est bornée sur $\mathbb R$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>37</span> <span id="rater229"></span><script>var myRating = raterJs( { element:document.querySelector("#rater229"),	max:5, rating:2.15, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(229,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalités strictes <a id=heart37 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart37" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=229.html"> [Signaler une erreur]</a><a id=exo37 href="javascript:ajouteexo(229,37,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce229','imageenonce229');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce229"></a><div class=inner id="innerenonce229">Soit $f,g:[a,b]\to\mathbb R$ continues telles que $f(x)&gt;g(x)$ pour tout $x\in[a,b]$.
+<ol class="enumeratechiffre">
+<li> Montrer qu'il existe $\delta&gt;0$ tel que $f(x)\geq g(x)+\delta$ pour tout $x\in[a,b]$.
+<li> On suppose de plus que $g(x)&gt;0$ pour tout $x\in[a,b]$. Montrer qu'il existe $k&gt;1$ tel que
+$f(x)\geq kg(x)$ pour tout $x\in[a,b]$.
+<li> Les résultats restent-ils vrais si on remplace le segment $[a,b]$ par $\mathbb R$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication229','imageindication229');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication229"></a><div class=inner id="innerindication229" style="display:none;">Tout dépend du théorème suivant : une fonction continue sur un segment est bornée
+et atteint ses bornes. On appliquera le théorème à 
+<ol class="enumeratechiffre">
+<li> $f-g$;
+<li> $f/g$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige229','imagecorrige229',229);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige229"></a><div class=inner id="innercorrige229" style="display:none;">Tout dépend du théorème suivant : une fonction continue sur un segment est bornée
+et atteint ses bornes.
+<ol class="enumeratechiffre">
+<li> Soit $h=f-g$. Alors $h$ est continue et strictement positive sur $[a,b]$. Il existe un point 
+$c\in[a,b]$ tel que $h(c)\leq h(x)$ pour tout $x\in[a,b]$. Mais alors, $h(c)&gt;0$ et 
+$$f(x)-g(x)\geq h(c)$$
+pour tout $x\in[a,b]$. On obtient le résultat avec $\delta=h(c)$.
+<li> On reprend le même raisonnement avec $h=f/g$. Alors $h$ est continue
+sur $[a,b]$ et $h(x)&gt;1$ pour tout $x\in[a,b]$. Soit $c\in[a,b]$ tel que 
+$$h(c)\leq h(x)$$
+pour tout $x\in[a,b]$. Alors $h(c)&gt;1$ et $\frac{f(x)}{g(x)}\geq h(c)$ pour tout 
+$x\in[a,b]$. On obtient le résultat en posant $k=h(c)$.
+<li> Non! Par exemple, pour le premier cas, il suffit de considérer une fonction strictement positive qui admet une limite nulle en $+\infty$, par exemple $\exp(-x)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>38</span> <span id="rater228"></span><script>var myRating = raterJs( { element:document.querySelector("#rater228"),	max:5, rating:2.3548387096774, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(228,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec une limite en l'infini <a id=heart38 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart38" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=228.html"> [Signaler une erreur]</a><a id=exo38 href="javascript:ajouteexo(228,38,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce228','imageenonce228');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce228"></a><div class=inner id="innerenonce228">Soit $f:[0,+\infty[\to\mathbb R$ continue admettant une limite (finie) en $+\infty$. Montrer que $f$ est bornée sur $[0,+\infty[$.</div></div><div class=indication><a href="javascript:showAll('innerindication228','imageindication228');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication228"></a><div class=inner id="innerindication228" style="display:none;">Découper $[0,+\infty[$ en deux : une partie $[A,+\infty[$ où $f$ est bornée car $f$ admet une limite en $+\infty$,
+et $[0,A]$ où $f$ est bornée (pourquoi?)</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige228','imagecorrige228',228);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige228"></a><div class=inner id="innercorrige228" style="display:none;">Soit $a=\lim_{+\infty} f$. Appliquons la définition de la limite pour $\veps=1$. Il existe $A&gt;0$ tel que,
+pour tout $x\geq A$, on a $|f(x)-a|\leq 1$. En particulier, pour $x\in[A,+\infty[$, on a $|f(x)|\leq |a|+1$.
+De plus, $f$ est continue sur le segment $[0,A]$. Elle y est bornée. Soit $M_0$ tel que $|f(x)|\leq M_0$
+pour tout $x\in[0,A]$. Alors, en posant $M=\max(M_0,|a|+1)$, on a $|f(x)|\leq M$ pour tout $x\in[0,+\infty[$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>39</span> <span id="rater231"></span><script>var myRating = raterJs( { element:document.querySelector("#rater231"),	max:5, rating:2.6086956521739, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(231,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum <a id=heart39 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart39" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=231.html"> [Signaler une erreur]</a><a id=exo39 href="javascript:ajouteexo(231,39,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce231','imageenonce231');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce231"></a><div class=inner id="innerenonce231">Soit $f:\mathbb R\to\mathbb R$ une fonction continue telle que 
+$\lim_{-\infty}f=\lim_{+\infty}f=+\infty$. Démontrer que $f$ admet un minimum sur $\mathbb R$.</div></div><div class=indication><a href="javascript:showAll('innerindication231','imageindication231');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication231"></a><div class=inner id="innerindication231" style="display:none;">Les ingrédients sont la définition des limites en $\pm\infty$ et le fait qu'une fonction continue sur un segment y admet
+un minimum.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige231','imagecorrige231',231);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige231"></a><div class=inner id="innercorrige231" style="display:none;">Le résultat qui va nous fournir l'existence du minimum est le fait que toute fonction continue sur un segment y admet
+un minimum. C'est le fait que $f$ admet des limites en $\pm\infty$ valant $+\infty$ qui va nous permettre de nous ramener à un segment.
+Pour cela, on commence par traduire avec des quantificateurs les propriétés $\lim_{-\infty}f=\lim_{+\infty}f=+\infty$ : 
+$$\forall A\in\mathbb R,\ \exists M_1&gt;0,\ \forall x\geq M_1,\ f(x)\geq A.$$
+$$\forall A\in\mathbb R,\ \exists M_2&lt;0,\ \forall x\leq M_2,\ f(x)\geq A.$$
+On espère alors appliquer le théorème précédent dans l'intervalle $[M_2,M_1]$. Il y a encore deux problèmes à régler, qui ne sont pas indépendants.
+Il reste alors à donner une valeur à $A$ qui assure que le minimum de $f$ est bien atteint dans $[M_2,M_1]$. Choisissons par exemple $A=f(0)$. Pour cette valeur de $A$, la définition de la limite donne des réels $M_1$ et $M_2$. La fonction $f$ est continue sur $[M_2,M_1]$. Il existe donc 
+$x_0\in[M_2,M_1]$ tel que, pour tout $x\in[M_2,M_1]$, on a $f(x)\geq f(x_0)$. 
+En particulier, $0\in [M_2,M_1]$ et donc $f(0)\geq f(x_0)$.
+D'autre part, si $x&gt;M_1$ ou si $x&lt;M_2$, on a
+$f(x)\geq A=f(0)\geq f(x_0)$. Ainsi, $f$ atteint bien son minimum sur $\mathbb R$ en $x_0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>40</span> <span id="rater2604"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2604"),	max:5, rating:2.9130434782609, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2604,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Infinité d'antécédents <a id=heart40 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart40" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2604.html"> [Signaler une erreur]</a><a id=exo40 href="javascript:ajouteexo(2604,40,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2604','imageenonce2604');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2604"></a><div class=inner id="innerenonce2604">Soit $f:\mathbb R_+\to\mathbb R$ une fonction continue surjective. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $0$ admet un nombre infini d'antécédents.
+<li> Plus généralement, démontrer que tout réel admet un nombre infini d'antécédents.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2604','imageindication2604');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2604"></a><div class=inner id="innerindication2604" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par l'absurde. Considérer le plus grand des antécédents, notons le $A$, et étudier $f([0,A])$ et $f(]A,+\infty[)$.
+<li> Se ramener au cas précédent.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2604','imagecorrige2604',2604);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2604"></a><div class=inner id="innercorrige2604" style="display:none;"><ol class="enumeratechiffre">
+<li> On raisonne par l'absurde et on suppose que $0$ admet un nombre fini d'antécédents. Notons $A$ le plus grand de ces antécédents. Alors $0$ n'est pas dans l'image de $]A,+\infty[$ par $f$. Par le théorème des valeurs intermédiaires, ceci entraine que $f(]A,+\infty[)\subset ]0,+\infty[$ ou $f(]A,+\infty[)\subset ]-\infty,0[$. Supposons par exemple que $f(]A,+\infty[)\subset ]0,+\infty[$. On sait aussi d'autre part que l'image du segment $[0,A]$ par $f$ est un segment $[m,M]$. Mais ainsi, on a prouvé que $f(\mathbb R_+)\subset [m,M]\cup ]0,+\infty[$. Cet ensemble ne peut pas être égal à $\mathbb R$ (on ne s'approche jamais de $-\infty$) et donc ceci contredit que $f$ est surjective.
+<li> Fixons $y\in\mathbb R$. On se ramène à la question précédente en posant $g(x)=f(x)-y$ qui reste surjective.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>41</span> <span id="rater2879"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2879"),	max:5, rating:3.0952380952381, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2879,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le maximum d'une fonction est continue <a id=heart41 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart41" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2879.html"> [Signaler une erreur]</a><a id=exo41 href="javascript:ajouteexo(2879,41,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2879','imageenonce2879');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2879"></a><div class=inner id="innerenonce2879">Soit $f:\mathbb R_+\to\mathbb R$ une fonction continue. On peut donc définir, pour tout $x\geq 0$, 
+$\displaystyle F(x)=\max_{t\in [0,x]}f(t).$
+Démontrer que la fonction $F$ est continue.</div></div><div class=indication><a href="javascript:showAll('innerindication2879','imageindication2879');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2879"></a><div class=inner id="innerindication2879" style="display:none;">Démontrer la continuité en $x_0$ en séparant le cas où $F(x_0)=f(x_0)$ du cas où $F(x_0)&gt;f(x_0)$. Dans ce dernier cas, on pourra montrer que $F$ est constante au voisinage de $x_0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2879','imagecorrige2879',2879);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2879"></a><div class=inner id="innercorrige2879" style="display:none;">Soit $x_0\in\mathbb R_+$. On va supposer que $x_0&gt;0$ mais le cas $x_0=0$ se traiterait de la même façon. Soit aussi $\veps&gt;0$. On va montrer que $F$ est continue en $x_0$ en séparant deux cas :
+<ol class="enumeratechiffre">
+<li> soit $F(x_0)=f(x_0)$ (autrement dit, $f$ atteint son maximum sur l'intervalle $[0,x_0]$ en $x_0$). Alors, par continuité de $f$ en $x_0$, il existe $\eta&gt;0$ tel que $|x-x_0|\leq \eta\implies |f(x)-f(x_0)|\leq \veps.$
+Soit $x\in \mathbb R_+$ tel que $|x-x_0|\leq \eta$. 
+<ul class="rien">
+<li> si $x&lt;x_0$, alors on a $F(x)\leq F(x_0)$ et aussi
+$$F(x)\geq f(x)\geq f(x_0)-\veps\geq F(x_0)-\veps.$$
+<li> si $x\geq x_0$, alors on a $F(x)\geq F(x_0)$. De plus, si $y\in [0,x_0]$, on a $f(y)\leq F(x_0)$ et si $y\in [x_0,x]\subset[x_0,x_0+\eta]$, on a 
+$$f(y)\leq f(x_0)+\veps=F(x_0)+\veps.$$
+On en déduit que
+$$F(x)=\sup_{y\in[0,x]}f(y)\leq F(x_0)+\veps.$$
+</ul>
+Dans les deux cas, on a démontré que
+$$F(x_0)-\veps\leq F(x)\leq F(x_0)+\veps$$
+ce qui prouve la continuité de $F$ en $x_0$.
+<li> soit $f(x_0)&lt;F(x_0)$. Alors on pose $\delta=F(x_0)-f(x_0)$. La continuité de $f$ en $x_0$ nous donne l'existence de $\eta&gt;0$ tel que 
+$$|x-x_0|\leq\eta\implies |f(x)-f(x_0)|\leq \delta.$$
+Remarquons que, pour tout $y\in [x_0-\eta,x_0+\eta]$, on a
+$$f(y)\leq f(x_0)+\delta\leq F(x_0).$$
+En particulier, on a $F(x_0)=f(x_1)$ pour $x_1\in[0,x_0-\eta]$, et on obtient que, pour tout $x\in [x_0-\eta,x_0+\eta]$, 
+$$F(x)=F(x_0).$$
+Ceci achève la preuve de la continuité de $F$.
+</ol></div></div></div>
+
+<div class=titrepartie>Fonctions continues injectives - fonctions réciproques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>42</span> <span id="rater235"></span><script>var myRating = raterJs( { element:document.querySelector("#rater235"),	max:5, rating:1.2692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(235,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction réciproque et parité <a id=heart42 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart42" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=235.html"> [Signaler une erreur]</a><a id=exo42 href="javascript:ajouteexo(235,42,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce235','imageenonce235');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce235"></a><div class=inner id="innerenonce235">Démontrer que la fonction réciproque d'une fonction impaire bijective $f:\mathbb R\to\mathbb R$ est impaire. Que dire pour une fonction paire?</div></div><div class=indication><a href="javascript:showAll('innerindication235','imageindication235');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication235"></a><div class=inner id="innerindication235" style="display:none;">Utiliser les définitions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige235','imagecorrige235',235);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige235"></a><div class=inner id="innercorrige235" style="display:none;">Soit $y=f(x)\in\mathbb R$. Alors, $f(-x)=-y$, et donc 
+$$f^{-1}(-y)=-x=-f^{-1}(y).$$
+C'est bien que $f^{-1}$ est impaire.  En revanche, une fonction paire n'est jamais bijective (car elle n'est pas injective). 
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>43</span> <span id="rater236"></span><script>var myRating = raterJs( { element:document.querySelector("#rater236"),	max:5, rating:2.5483870967742, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(236,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Symétrie par rapport à la première bissectrice <a id=heart43 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart43" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=236.html"> [Signaler une erreur]</a><a id=exo43 href="javascript:ajouteexo(236,43,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce236','imageenonce236');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce236"></a><div class=inner id="innerenonce236">Soit $f:\mathbb R\to\mathbb R$ dont la courbe représentative $\mathbf C$ est symétrique par rapport à la première bissectrice du repère.
+<ol class="enumeratechiffre">
+<li> Démontrer que pour tout $x\in\mathbb R$, on a $f(f(x))=x$.
+<li> Démontrer que si $\mathbf C$ n'est pas la première bissectrice du repère, alors $f$ n'est pas croissante.
+<li> En déduire, si on suppose de plus que $f$ est continue, qu'elle est strictement décroissante.
+<li> Donner un exemple de fonction non décroissante dont la courbe représentative $\mathbf C$ est symétrique par rapport à la première bissectrice (sans être celle-ci).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication236','imageindication236');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication236"></a><div class=inner id="innerindication236" style="display:none;"><ol class="enumeratechiffre">
+<li> Quel est le symétrique de $(x,f(x))$? Il appartient  à $\mathbb C$ donc...
+<li> Raisonner par l'absurde.
+<li> Utiliser le fait que $f$ est injective.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige236','imagecorrige236',236);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige236"></a><div class=inner id="innercorrige236" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in\mathbb R$. Du fait que $\bf C$ est symétrique par rapport à la première bissectrice, il existe $a\in\mathbb R$ tel que $(f(x),x)=(a,f(a))$. Mais alors, $f(f(x))=f(a)=x$.
+<li> Supposons $f$ croissante. Puisque la courbe représentative de $f$ n'est pas la première bissectrice, il existe $a\in\mathbb R$ avec $f(a)\neq a$.
+Si $f(a)&gt;a$, alors $f\circ f(a)\geq f(a)&gt;a$, ce qui contredit la question précédente. De même, si $f(a)&lt;a$, alors $f\circ f(a)\leq f(a)&lt;a$. L'hypothèse émise est donc absurde. 
+<li> $f$ est injective. En effet, si $f(a)=f(b)$, alors $a=f(f(a))=f(f(b))=b$. Mais une fonction injective continue est nécessairement strictement monotone. Comme d'après la question précédente $f$ ne peut pas être croissante, elle est nécessairement strictement décroissante.
+<li> Bien sûr, il faut choisir une fonction qui n'est pas continue en $0$. La fonction $f(x)=\frac 1x$, si $x\neq 0$, et $f(0)=0$, convient. Cette fonction, qui est décroissante sur $]0,+\infty[$ ou sur $]-\infty,0[$, n'est pas décroissante sur $\mathbb R$ tout entier.
+</ol></div></div></div>
+
+<div class=cardcours>
+<div class="titrecours">Limites de fonctions - Continuité</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcours%252Flimitecontinuite.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Ffeuillesexo%252Flimitecontinuite&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fmethodes%252Flimitecontinuite.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcolles%252Flimitecontinuite&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fvideos%252Flimitecontinuite.html">Vidéos</a> 
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fquizz%252Flimitecontinuite.html">Quizz</a>
+</ul>
+</div>	
+</div>
+</div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

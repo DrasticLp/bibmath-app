@@ -1,0 +1,388 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Transformée de Fourier de distributions</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Transformée de Fourier de distributions</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2482"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2482"),	max:5, rating:0.85714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2482,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformée de Fourier d'une distribution homogène <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2482.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2482,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2482','imageenonce2482');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2482"></a><div class=inner id="innerenonce2482">Soit $T\in\mcs'(\mtr^n)$ homogène de degré $\lambda\in\mtr$, ie 
+$$\langle T,\varphi_t\rangle=t^{-(n+\lambda)}\langle T,\varphi\rangle$$
+pour tout $\varphi\in\mcs(\mtr^n)$ et tout $t&gt;0$, où $\varphi_t(x)=\varphi(tx)$.
+Montrer que $\hat{T}$ est homogène d'un degré que l'on précisera.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2482','imagecorrige2482',2482);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2482"></a><div class=inner id="innercorrige2482" style="display:none;">Comme souvent pour les transformées de Fourier de distribution, tout se ramène aux transformées de Fourier de
+fonction de $\mcs(\mtr^n)$. On a en effet 
+\begin{eqnarray*}
+\mathcal{F}(\varphi_t)(x)&=&\int_{\mtr^n}\varphi(ty)e^{-2\pi i y.x}dy\\
+&=& t^{-n}\int_{\mtr^n}\varphi(u)e^{-2\pi i u.(x/t)}du\\
+&=&t^{-n}\mathcal{F}(\varphi)(x/t)
+\end{eqnarray*}
+Il vient
+\begin{eqnarray*}
+\langle \hat{T},\varphi_t\rangle&=&\langle T,\mathcal{F}{\varphi_t}\rangle\\
+&=&t^{-n}\langle T,(\mathcal{F}{\varphi})_{1/t}\rangle\\
+&=&t^{-n}t^{n+\lambda}\langle T,\mathcal{F}(\varphi)\rangle\\
+&=&t^{\lambda}\langle \hat{T},\varphi\rangle.
+\end{eqnarray*}
+Il suffit ensuite de remarquer que $\lambda=-(n+\mu)$ avec $\mu=-n-\lambda$ pour conclure
+que $\hat{T}$ est homogène de degré $-n-\lambda$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2484"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2484"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2484,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distributions harmoniques <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2484.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2484,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2484','imageenonce2484');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2484"></a><div class=inner id="innerenonce2484">Soit $T\in S'(\mtr^2)$ telle que $\Delta T=0$.
+<ol class="enumeratechiffre">
+<li> Montrer que $\supp(\hat{T})\subset\{0\}$.
+<li> Conclure que les seules fonctions $u$ de classe $C^2$ telles que $\Delta u=0$ et $u$ est à croissance
+modérée sont polynômiales.
+<li> Retrouver le théorème de Liouville.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2484','imageindication2484');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2484"></a><div class=inner id="innerindication2484" style="display:none;"><ol class="enumeratechiffre">
+<li> Prendre la transformation de Fourier de l'expression précédente.
+<li> Si le support d'une distribution est inclus dans $\{0\}$, cette distribution est combinaison linéaire de dérivées de masses de Dirac en $0$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2484','imagecorrige2484',2484);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2484"></a><div class=inner id="innercorrige2484" style="display:none;"><ol class="enumeratechiffre">
+<li>  Prenons la transformée de Fourier de l'expression précédente, on obtient 
+$$(x^2+y^2)\hat{T}=0.$$
+Si $\phi$ est une fonction test à support dans $\mtr^2\backslash\{0\}$, alors on a
+$$\langle \hat{T},\phi\rangle = \langle (x^2+y^2)\hat{T},\phi/(x^2+y^2)\rangle =0,$$
+ce qui prouve l'assertion sur le support.
+<li> Si $u$ est une fonction à croissance modérée harmonique, la distribution associée $T_u$
+est-elle aussi harmonique, et elle est tempérée. On en déduit que le support de $\hat{T_u}$
+est $\{0\}$. Ceci entraîne que $\hat{T_u}=\sum_{k=0}^N a_k\delta_0^{(k)}$. Prenant la transformée
+de Fourier inverse, on obtient que $T_u$ est la distribution associée à un polynôme,
+ce qui prouve que $u$ est un polynôme (l'égalité de deux distributions associées à des fonctions
+entraîne l'égalité presque-partout de ces fonctions, et donc l'égalité partout quand il s'agit
+de fonctions continues).
+<li> Si $u$ est une fonction entière bornée, alors elle est harmonique et à croissance modérée,
+donc elle est polynômiale. Mais les seules polynômes bornés sont les constantes. On retrouve bien le théorème de Liouville.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2483"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2483"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2483,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformée de Fourier de la distribution valeur principale <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2483.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2483,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2483','imageenonce2483');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2483"></a><div class=inner id="innerenonce2483"><ol class="enumeratechiffre">
+<li> Montrer que la distribution $\textrm{vp}(1/x)$ est une distribution tempérée.
+On pourra remarquer que, pour tout $\phi$ de $\mcd(\mtr)$, on a
+$$\langle\textrm{vp}(1/x),\phi\rangle=\int_{-1}^1\frac{\phi(x)-\phi(0)}{x}dx+\int_{|x|\geq 1}\frac{\phi(x)}{x}dx.$$
+<li> Calculer sa transformée de Fourier. On pourra utiliser que, pour tout $\phi$ de $\mcs(\mtr)$, on a
+$$\langle\textrm{vp}(1/x),\phi\rangle=\lim_{R\to+\infty}\int_{-R}^R\frac{1}{2}\frac{\phi(\omega)-\phi(-\omega)}{\omega}d\omega.$$
+<li> En déduire une distribution $T$ telle que $\hat{T}=H$, où $H$ est la fonction de Heaviside.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2483','imageindication2483');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2483"></a><div class=inner id="innerindication2483" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2483','imagecorrige2483',2483);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2483"></a><div class=inner id="innercorrige2483" style="display:none;"><ol class="enumeratechiffre">
+<li> Prouvons d'abord la formule donnée :
+$$\langle\textrm{vp}(1/x),\phi\rangle=\lim_{\veps\to 0}\int_{\veps\leq|x|\leq 1}\frac{\phi(x)}{x}dx+\int_{|x|\geq 1}\frac{\phi(x)}{x}dx.$$
+Dans la première intégrale, on retranche $\phi(0)$ (ce qui est possible car son intégrale sur $[-1,-\veps]\cup[\veps,1]$
+est nulle. Mais alors, la fonction $(\phi(x)-\phi(0))/x$ est intégrable au voisinage de 0 (elle se prolonge par continuité).
+D'où la formule, qui fait apparaître $\textrm{vp}(1/x)$ comme somme de deux distributions. La deuxième donne clairement
+une distribution tempérée (car elle est associée à une fonction intégrable à croissance modérée). Pour la première,
+il suffit de remarquer que, d'après l'inégalité des accroissements finis,
+$$\left|\int_{-1}^1\frac{\phi(x)-\phi(0)}{x}dx\right|\leq 2 \sup_{u\in[-1,1]}|\phi'(u)|\leq 2\|\phi\|_1.$$
+Ceci garantit là encore qu'il s'agit d'une distribution tempérée. On va donc pouvoir calculer la transformée de
+Fourier de $\textrm{vp}(1/x)$. 
+<li> Prouvons d'abord la formule énoncée. Si $\phi\in\mathcal D(\mathbb R)$, alors 
+$$\langle \textrm{vp}(1/x),\phi\rangle=\lim_{R\to+\infty}\lim_{\veps\to 0}
+\int_{-R}^{-\veps}\frac{\phi(x)}xdx+\int_{\veps}^R\frac{\phi(x)}xdx.$$
+En effectuant le changement de variables $u=-x$ dans les deux intégrales (et en revenant à la notation avec un $x$), on a aussi
+$$\langle \textrm{vp}(1/x),\phi\rangle=-\lim_{R\to+\infty}\lim_{\veps\to 0}
+\int_{-R}^{-\veps}\frac{\phi(-x)}xdx+\int_{\veps}^R\frac{\phi(-x)}xdx.$$
+En sommant ces deux identités, on a 
+$$2\langle\textrm{vp}(1/x),\phi\rangle=\lim_{R\to+\infty}\lim_{\veps\to 0}
+\int_{-R}^{-\veps}\frac{\phi(x)-\phi(-x)}xdx+\int_{\veps}^R\frac{\phi(x)-\phi(-x)}xdx.$$
+Puisque $x\mapsto\frac{\phi(x)-\phi(-x)}{x}$ se prolonge par continuité en $0$, on a donc 
+$$2\langle\textrm{vp}(1/x),\phi\rangle=\lim_{R\to+\infty}\int_{-R}^R \frac{\phi(x)-\phi(-x)}xdx.$$
+Le résultat reste vrai pour $\phi\in\mathcal S(\mathbb R)$, par densité de $\mathcal D(\mathbb R)$ dans $\mathcal S(\mathbb R)$.
+On a alors,
+pour $\phi\in\mcs(\mtr)$ :
+\begin{eqnarray*}
+\langle \textrm{vp}(1/x),\hat{\phi}\rangle&=&\lim_{R\to+\infty}\int_{-R}^R\int_\mtr \phi(t)\left(\frac{e^{-i2\pi xt}-e^{i2\pi xt}}{2x}\right)dtdx\\
+&=&-i \lim_{R\to+\infty}\int_{-R}^R \int_{\mtr}\phi(t) \frac{\sin(2\pi xt)}{x}dt dx.
+\end{eqnarray*}
+Remarquons que la fonction $(t,x)\mapsto \phi(t)\frac{\sin(2\pi xt)}{x}$ est intégrable sur $\mtr\times [-R,R]$,
+et que l'on peut donc intervertir l'ordre d'intégration. De plus, 
+si $g_R(t)=\int_{-R}^R \frac{\sin(2\pi x t)}{x}dx\phi(t)$, alors 
+$$|g_R(t)|\leq M|\phi(t)|,$$
+où la constante $M$ vient du fait que $\lim_{R\to+\infty}\int_{-R}^R \frac{\sin(2\pi x t)}{x}dx$ existe. Le théorème de convergence
+dominée nous permer de rentrer la limite dans la première intégrale, ce qui donne :
+\begin{eqnarray*}
+\langle \textrm{vp}(1/x),\hat{\phi}\rangle=-i\int_{\mtr}\phi(t)\lim_{R\to +\infty}\int_{-R}^R \frac{\sin(2\pi x t)}{x}dx dt
+\end{eqnarray*}
+Faisant le changement de variables $u=2\pi t x$ dans l'intégrale, et sachant que $\int_0^{+\infty}\frac{\sin y}{y}=\frac{\pi}{2}$,
+on a trouvé que 
+\begin{eqnarray*}
+\langle \textrm{vp}(1/x),\hat{\phi}\rangle=-i\pi\int_0^{+\infty}\phi(t)dt+i\pi\int_{-\infty}^0\phi(t)dt.
+\end{eqnarray*}
+La transformée de Fourier de $\textrm{vp}(1/x)$ est donc la fonction 
+$$x\mapsto -i\pi\textrm{signe}(x).$$
+<li> Il suffit de remarquer que $H(x)=\frac{1+\textrm{signe}(x)}{2}$.
+Posons alors $T=\frac{1}{2\pi}\left(\pi\delta+i\textrm{vp}(1/x)\right)$. La transformée de Fourier de $T$ est exactement 
+$H$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2485"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2485"),	max:5, rating:3.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2485,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformée de Fourier de la fonction de Heaviside <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2485.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2485,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2485','imageenonce2485');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2485"></a><div class=inner id="innerenonce2485"><ol class="enumeratechiffre">
+<li> Soit $\alpha&gt;0$. Calculer la limite dans $\mcs'(\mtr)$ de la distribution $\frac{1}{x-i\alpha\veps}$ quand $\veps\to 0^+$.
+<li> Déterminer la transformée de Fourier de la fonction $H(x)e^{-\lambda x}$, où $\lambda&gt;0$ et $H$ est la fonction
+de Heaviside.
+<li> En déduire la transformée de Fourier de $H$.
+<li> Retrouver la transformée de Fourier de $\textrm{vp}(1/x)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2485','imagecorrige2485',2485);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2485"></a><div class=inner id="innercorrige2485" style="display:none;"><ol class="enumeratechiffre">
+<li> Visiblement, le problème est en 0, on va donc découper entre ce qui se passe en 0 et ce qui se passe
+un peu plus loin. On a donc
+$$\int_{\mtr}\frac{\phi(x)}{x-i\alpha\veps}dx=\int_{-1}^1\frac{\phi(x)}{x-i\alpha\veps}dx+\int_{|x|\geq 1}\frac{\phi(x)}{x-i\alpha\veps}dx.$$
+Dans la dernière intégrale, on peut appliquer sans problème le théorème de convergence dominée pour $\veps\to 0$. La 
+première se réécrit ainsi :
+$$\int_{-1}^1\frac{\phi(x)}{x-i\alpha\veps}dx=\int_{-1}^1\frac{\phi(x)-\phi(0)}{x-i\alpha\veps}dx+\phi(0)\int_{-1}^1\frac{1}{x-i\alpha\veps}.$$
+Là encore, on a enlevé le problème qu'il y avait dans la première intégrale, et il est possible de faire tendre
+$\veps$ vers 0. Pour la deuxième intégrale, il suffit d'effectuer le calcul
+\begin{eqnarray*}
+\int_{-1}^1\frac{1}{x-i\alpha\veps}dx&=&\int_{-1}^1\frac{x+i\alpha\veps}{x^2+\alpha^2\veps^2}dx\\
+&=&i\alpha\veps\left[\frac{1}{\alpha\veps}\arctan(x/\alpha\veps)\right]_{-1}^1\\
+&=&i\pi.
+\end{eqnarray*}
+Mettant cela bout à bout, on obtient que la limite dans $\mcs'(\mtr)$ de la distribution demandée est 
+$$i\pi\delta_0+\textrm{vp}(1/x).$$
+<li> La fonction est intégrable, il suffit de calculer sa transformée de Fourier comme fonction de $L^1$. On a 
+\begin{eqnarray*}
+\hat{f}(\xi)&=&\int_0^{+\infty}e^{-\lambda t}e^{-2\pi i \xi t}dt\\
+&=&\left[\frac{1}{-\lambda-2\pi i\xi} e^{-\lambda t-2\pi i \xi t}\right]_0^{+\infty}\\
+&=&\frac{1}{\lambda+2\pi i\xi}
+\end{eqnarray*}
+<li> Si on fait tendre $\lambda$ vers $0$, le théorème de convergence dominée assure que dans $\mcs'(\mtr)$,
+la distribution $H(x)e^{-\lambda x}$ converge vers $H$. La transformation de Fourier étant continue, il suffit 
+de déterminer la limite de $\frac{1}{\lambda+2\pi i x}$ (au sens de $\mcs'(\mtr)$).
+Mais on réécrit cela en 
+$$\frac{1}{2i\pi}\frac{1}{x-i\frac\lambda {2\pi}}.$$
+Lorsque $\lambda$ tend vers 0, ceci converge d'après la première question vers
+$$\frac{1}{2i\pi}\left(i\pi \delta_0+\textrm{vp}(1/x)\right).$$
+La transformée de Fourier de $H$ est donc
+$$\frac{1}{2}\delta_0-\frac{i}{2\pi}\textrm{vp}(1/x).$$
+<li> On réapplique la transformée de Fourier à la formule précédente. Il vient
+$$2i\pi(H-\frac{1}{2})=\mathcal{F}(\textrm{vp}).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2486"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2486"),	max:5, rating:4.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2486,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Peigne de Dirac <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2486.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2486,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2486','imageenonce2486');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2486"></a><div class=inner id="innerenonce2486">Dans cet exercice, on prendra pour simplifier les énoncés la normalisation suivante pour la transformée
+de Fourier :
+$$\hat{\phi}(x)=\int_\mtr e^{-2i\pi x y}\phi(y)dy.$$
+On considère la distribution
+$P=\sum_{j\in\mtz}\delta_j\in\mcd'(\mtr)$, où $\delta_j$ représente la
+masse de Dirac au point $j\in\mtz$. On l'appelle le peigne de Dirac.
+<ol class="enumeratechiffre">
+<li> Montrer que $P$ est périodique de période 1, i.e. montrer que 
+$$\forall\phi\in\mcd(\mtr),\ \langle P,\tau_1\phi\rangle=\langle
+P,\phi\rangle\textrm{ où }\tau_1\phi(x)=\phi(x+1).$$
+<li> Montrer que $P$ est la dérivée, au sens des distributions, de la
+distribution $E:=\sum_{j\in\mtz}F_j$, où $F_j(x)=j 1_{[j,j+1[}(x)$. En
+déduire que $P$ est une distribution tempérée.
+<li> Montrer que la transformée de Fourier $\hat{P}$ de $P$ est
+également périodique de période 1.
+<li> On pose $u(x)=e^{2i\pi x}$. Montrer que
+$\phi\in\mcd(\mtr)\implies \langle u\hat{P},\phi\rangle=\langle
+\hat{P},\phi\rangle$.
+<li> Soit $T\in\mcd'(\mtr)$ une distribution telle que
+$(u-1)T=0$. Montrer que $T=\sum_{j\in\mtz}a_j\delta_j$.
+<li> Déduire des questions précédentes que
+$\hat{P}=\sum_{j\in\mtz}a_j\delta_j$, puis que $\forall j\in\mtz, a_j=a$.
+<li> Appliquant $\hat{P}$ à la fonction $\phi(y)=e^{-\pi y^2}$,
+montrer que $a=1$, donc que $\hat{P}=P$ (on pourra utiliser que $\hat{\phi}=\phi$).
+<li> En déduire la formule sommatoire de Poisson : pour tout
+$\phi\in\mathcal{S}(\mtr)$, 
+$$\sum_{j\in\mtz}\phi(j)=\sum_{j\in\mtz}\hat{\phi}(j).$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2486','imagecorrige2486',2486);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2486"></a><div class=inner id="innercorrige2486" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons, pour $\phi\in\mcd(\mtr)$, $\psi(x)=\phi(x+1)$. Il vient,
+les sommes étant finies
+$$\langle P,\psi\rangle=\sum_{j\in\mtz}\psi(j)=\sum_{j\in\mtz}\phi(j+1)=\sum_{j\in\mtz}\phi(j).$$
+<li> Remarquons d'abord que $E$ est une distribution, car c'est une
+fonction bornée sur les intervalles compacts donc dans
+$L^1_{\textrm{loc}}(\mtr)$. D'autre part, il est facile de voir que
+$E$ est à croissance lente, car on a par exemple 
+$$\int_{\mtr} \frac{|E(x)|}{(1+|x|)^3}dx&lt;+\infty.$$
+Ainsi, $E$ est une distribution tempérée.
+D'autre part,
+$F_j(x)=j(H_j(x)-H_{j+1}(x))$ où $H_j(x)=1_{]j,+\infty]}$ est une
+translatée de la
+fonction de Heaviside. Il vient
+$F_j'=j(\delta_j-\delta_{j+1})$. Prenons maintenant
+$\phi\in\mcd(\mtr)$, et soit $n$ tel que
+$\supp(\phi)\subset[-n,n]$. On a 
+$$\langle E',\phi\rangle=-\langle
+E,\phi'\rangle=-\langle\sum_{j=-n}^n F_j,\phi'\rangle=\sum_{j=-n}^n
+\langle F_j',\phi\rangle=\sum_{j=-n}^n j(\phi(j)-\phi(j+1)).$$
+La série est ``télescopique'', et utilisant le fait qu'en $n$ et $-n$,
+$\phi$ s'annule, on obtient
+$$\langle E',\phi\rangle=\langle
+\sum_{j\in\mtz}\delta_j,\phi\rangle=\langle P,\phi\rangle.$$
+On obtient donc que $E'=P$, et puisque $E$ est tempérée, $P$ l'est aussi.
+<li> On a 
+$$\langle \hat{P},\phi\rangle=\langle
+P,\hat{\phi}\rangle=\sum_{j\in\mtz}\hat{\phi}(j).$$
+De même,
+$$\langle
+\hat{P},\tau_{1}\phi\rangle=\sum_{j\in\mtz}\hat{\tau_1\phi}(j).$$
+Remarquons maintenant que 
+$$\hat{\tau_1\phi}(j)=\int_{\mtr}e^{-2i\pi j
+x}\phi(x+1)dx=\int_{\mtr}e^{-i2\pi j (x-1)}\phi(x)dx=\hat{\phi}(j)$$
+puisque $e^{-2i\pi j}=1$. Ceci donne le résultat.
+<li> Soit $\phi\in\mcd(\mtr)$. On a 
+$$\langle u\hat{P},\phi\rangle=\langle P,\widehat{u\phi}\rangle=\langle P,\tau_1\hat{\phi}\rangle=\langle P,\hat{\phi}\rangle=\langle \hat{P},\phi\rangle.$$
+<li> Prenons $\phi$ à support dans $]j-1,j+1[$. L'idée est de
+``factoriser'' $\phi(x)$ par $u(x)-1$. Pour cela, il suffit de
+remarquer que 
+$$\psi(x)=\frac{\phi(x)-\phi(0)}{u(x)-1}$$ est de classe
+$C^\infty$ sur $]-1,1[$ (en effet, $u(x)-1=xv(x)$ où $v$ est $C^\infty$ et ne
+s'annule pas en 0). Pour la rendre à support compact, on va multiplier
+par une fonction plateau en considérant $\eta$ à support dans
+$]-3/4,3/4[$, et en remarquant que l'on a 
+$$\phi(x)=\eta(x)(u(x)-1)\psi(x)+\eta(x)\phi(0).$$
+Puisque $(u-1)T=0$, on obtient 
+$$\langle T,\phi\rangle=\langle (u-1)T,\eta\psi\rangle+\langle
+T,\eta\rangle\phi(0)=a_0\phi(0)$$
+en posant $a_0=\langle \delta_0,\phi\rangle.$
+Pour passer au résultat global, le plus commode est d'utiliser une
+partition de l'unité $(\eta_k)$ associée au recouvrement ouvent
+$]k-3/4,k+3/4[$. En posant $\phi_k=\eta_k\phi$, on a
+$\phi=\sum_{k\in\mtz}\phi_k$, et $\phi(k)=\phi_k(k)$. Maintenant, en
+appliquant le raisonnement précédent à $\phi_k$, on sait qu'il existe
+une constante $a_k$ telle que $\langle T,\phi_k\rangle
+=a_k\phi_k(k)=a_k\phi(k)$. Ceci prouve le résultat!
+<li> $\hat{P}$ vérifie l'équation $(u-1)\hat{P}=0$ d'où l'existence
+des $a_j$. Prenons maintenant $\phi$ dans $\mcd(]j-1,j+1[)$. Il vient 
+$$\langle \hat{P},\phi\rangle = a_j\phi(j)=\langle
+\hat{P},\tau_1\phi\rangle =a_{j-1}\phi(j)$$
+puisque $\tau_1\phi$ est à support dans $]j-2,j[$. On a donc pour tout
+$j\in\mtz$ $a_j=a_{j-1}$, et donc $a_j=a_0=a$.
+<li> Pour cette fonction, $\phi=\hat{\phi}$, et donc 
+$$\langle \hat{P},\phi\rangle=a\sum_{j\in\mtz}\phi(j)=\langle
+P,\hat{\phi}\rangle=\sum_{j\in\mtz}\hat{\phi}(j).$$
+Comme $\hat{\phi}=\phi$ et bien sûr $\sum_{j}\hat{\phi}(j)&gt;0$, on en
+déduit que $a=1$.
+<li> Il s'agit simplement d'écrire que $\langle P,\phi\rangle=\langle
+\hat{P},\phi\rangle$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2487"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2487"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2487,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux méthodes <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2487.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2487,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2487','imageenonce2487');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2487"></a><div class=inner id="innerenonce2487">Démontrer que, dans $\mcs'(\mtr)$, on a 
+$$\lim_{\lambda\to+\infty}e^{i\lambda x}\textrm{vp}(1/x)=i\pi\delta_0.$$
+<ol class="enumeratechiffre">
+<li> Directement.
+<li> En utilisant la transformée de Fourier.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2487','imagecorrige2487',2487);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2487"></a><div class=inner id="innercorrige2487" style="display:none;"><ol class="enumeratechiffre">
+<li> Prenons $\phi\in\mcs(\mtr)$. Comme souvent, on écrit 
+$$\langle e^{i\lambda x}\textrm{vp}(1/x),\phi\rangle=\lim_{\veps\to 0}\int_{\veps\leq|x|\leq 1}\frac{e^{i\lambda x}\phi(x)}{x}dx+\int_{|x|\geq 1}\frac{\phi(x)e^{i\lambda x}}{x}dx.$$
+La deuxième intégrale ne pose pas de problèmes : il suffit d'appliquer
+le théorème de Riemann-Lebesgue pour obtenir qu'elle tend vers 0 si
+$\lambda$ tend vers $+\infty$. Pour la première,
+on retire ce qui pose problème :
+$$\int_{\veps\leq |x|\leq 1}\frac{e^{i\lambda
+x}\phi(x)}{x}dx=\int_{\veps\leq |x|\leq 1}\frac{e^{i\lambda
+x}\phi(x)-e^{i\lambda x}\phi(0)}{x}dx+\phi(0)\int_{\veps\leq |x|\leq 1}\frac{e^{i\lambda x}}{x}dx.$$
+La fonction dans la première intégrale est cette fois intégrable en
+0. On a donc
+$$\lim_{\veps\to 0}\int_{\veps\leq |x|\leq 1}\frac{e^{i\lambda
+x}\phi(x)-e^{i\lambda x}\phi(0)}{x}dx=\int_{|x|\leq 1}\frac{e^{i\lambda
+x}\phi(x)-e^{i\lambda x}\phi(0)}{x}dx,$$
+et on peut à nouveau appliquer le lemme de
+Riemann-Lebesgue. Pour la seconde, on écrit $e^{i\lambda
+x}=\cos(\lambda x)+i\sin(\lambda x)$. Or, la fonction $x\mapsto
+\frac{\cos(\lambda x)}{x}$ est impaire, et son intégrale sur
+$[-1,-\veps]\cup[-\veps,1]$ est donc nulle. D'autre part, $x\mapsto
+\frac{\sin(\lambda x)}{x}$ est intégrable en 0, d'où il vient
+finalement :
+$$\lim_{\lambda\to+\infty}\langle e^{i\lambda
+x}\textrm{vp}(1/x),\phi\rangle=\lim_{\lambda\to+\infty}\phi(0)\int_{-1}^1\frac{\sin(\lambda
+x)}{x}dx.$$
+On conclut alors en effectuant la changement
+de variable $u=\lambda x$ et en utilisant le fait que
+$\int_0^{+\infty}\frac{\sin x}{x}=\frac{\pi}{2}$.
+On obtient donc $$\lim_{\lambda\to+\infty}e^{i\lambda x}\textrm{vp}(1/x)=i\pi\delta_0.$$
+<li> On a
+\begin{eqnarray*}
+\langle \mathcal{F}(e^{i\lambda x}\textrm{vp}(1/x)),\phi\rangle&=&\langle e^{i\lambda x}\textrm{vp}(1/x),\hat{\phi}\rangle\\
+&=&\langle\textrm{vp}(1/x),e^{i\lambda x}\hat{\phi}\rangle.
+\end{eqnarray*}
+Maintenant, on utilise que
+$$\hat{\phi\left(.+\frac{\lambda}{2\pi}\right)}(x)=e^{i\lambda x}\hat{\phi}(x).$$
+Utilisant alors le fait que la transformée de Fourier de $\textrm{vp}(1/x)$ est donnée par $-i\pi\textrm{signe}(x)$,
+on obtient
+\begin{eqnarray*}
+\langle \mathcal{F}(e^{i\lambda x}\textrm{vp}(1/x)),\phi\rangle&=&i\pi\int_{-\infty}^0\phi(x+\lambda/2\pi)-i\pi\int_0^{+\infty}\phi(x+\lambda/2\pi)dx.
+\end{eqnarray*}
+On effectue le changement de variables $u=x+\lambda/2\pi$, et on
+utilise le théorème de convergence dominée pour obtenir que :
+$$\lim_{\lambda\to+\infty}\mathcal{F}(e^{i\lambda x}\textrm{vp}(1/x))=i\pi.$$
+Il suffit ensuite de prendre la transformée de Fourier inverse pour
+retrouver le résultat donné par l'autre méthode!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2488"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2488"),	max:5, rating:4.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2488,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Distribution nulle <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2488.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2488,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2488','imageenonce2488');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2488"></a><div class=inner id="innerenonce2488"><ol class="enumeratechiffre">
+<li> Soit $f\in\mcc^\infty(\mtr^2)$ et $y\in\mtr$ fixé. Pour $h\neq 0$, on pose
+$g_h(x)=\frac{f(x,y+h)-f(x,y)}{h}$. Prouver que $g$ converge dans $\mcc^{\infty}(\mtr^2)$ 
+vers $\frac{\partial f}{\partial y}$.
+<li> On considère de plus $T\in\mathcal{E}'(\mtr)$. Démontrer que la fonction
+$F(y)=\langle T_x,f(x,y)\rangle$ est $\mcc^\infty$. Calculer $F^{(n)}(y)$.
+<li> On suppose que $\langle T,x^n\rangle=0$ et soit $G$ tel que $\hat{T}=T_G$.
+Que vaut $G^{(n)}(0)$? En déduire que $T$ est nulle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2488','imagecorrige2488',2488);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2488"></a><div class=inner id="innercorrige2488" style="display:none;"><ol class="enumeratechiffre">
+<li> On applique la formule de Taylor avec reste intégral à 
+$u=\frac{\partial^k f}{\partial x^k}$. On a :
+$$u(x,y+h)-u(x)=h\frac{\partial u}{\partial x}(x,y)+\int_0^1 (1-s)h^2\frac{\partial^2 g}{\partial x^2}(x,y+sh)dx.$$
+On obtient 
+$$\left|\frac{u(x,y+h)-u(x)}{h}-\frac{\partial u}{\partial x}(x,y)\right|\leq C|h|\sup_{|y'-y|\leq 1}
+\left|\frac{\partial^2 g}{\partial x^2}(x,z')\right|.$$
+Cette inégalité montre que $\frac{u(x,y+h)-u(x)}{h}-\frac{\partial u}{\partial x}(x,y)$
+converge uniformément sur les compacts vers 0, ce qui est le résultat souhaité.
+<li> On a $\frac{F(y+h)-F(y)}{h}=\left\langle T_x,\frac{f(x,y+h)-f(x,y)}{h}\right\rangle\to \langle T_x,\frac{\partial f}{\partial y}(x,y)\rangle.$
+Par récurrence, on obtient que $F$ est $\mcc^\infty$ avec $F^{(n)}(y)=\langle T_x,\frac{\partial f}{\partial y}\rangle$.
+<li> D'après le cours, $G$ s'étend en une fonction entière définie sur $\mtc$ et on a 
+$$G(z)=\langle T_x,e^{-ixz}\rangle.$$
+Si on admet que ce qui a été fait pour le cas complexe peut aussi se faire pour le cas réel 
+(ce n'est pas difficile, il suffit de remarquer que si $z=u+iv$, $\frac{\partial}{\partial z}=\frac{1}{2}
+\left(\frac{\partial }{\partial u}.
++i\frac{\partial }{\partial v}\right)$), alors 
+la question précédente nous montre que $\hat{G}^{(n)}(0)=(-i)^n\langle T_x,x^n\rangle=0$.
+Ainsi, $G$ est la fonction nulle, donc $\hat{T}=0$ et $T=0$.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

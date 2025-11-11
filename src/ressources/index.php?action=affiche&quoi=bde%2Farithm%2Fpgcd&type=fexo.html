@@ -1,0 +1,489 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -pgcd, ppcm, nombres premiers entre eux</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Farithm.html">Exercices d'arithmétique</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - pgcd, ppcm, nombres premiers entre eux</h1><div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater692"></span><script>var myRating = raterJs( { element:document.querySelector("#rater692"),	max:5, rating:1.09375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(692,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pour bien commencer... <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=692.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(692,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce692','imageenonce692');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce692"></a><div class=inner id="innerenonce692"><ol class="enumeratechiffre">
+<li> Quels sont les diviseurs positifs communs à $390$ et $525$?
+<li> Calculer $(3^{123}-5)\wedge 25$.
+<li> Soit $n\in\mathbb Z$. Démontrer que $6|n(n+1)(n+2)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication692','imageindication692');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication692"></a><div class=inner id="innerindication692" style="display:none;"><ol class="enumeratechiffre">
+<li> Chercher le pgcd de ces deux nombres.
+<li> Pourquoi le pgcd de ces deux nombres est $1,$ $5$ ou $25$ ?
+Pourquoi est-ce forcément $1$ ?
+<li> Démontrer que $2|n(n+1)(n+2)$ et $3|n(n+1)(n+2)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige692','imagecorrige692',692);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige692"></a><div class=inner id="innercorrige692" style="display:none;"><ol class="enumeratechiffre">
+<li> En utilisant l'algorithme d'Euclide par exemple, on trouve que le pgcd de $390$ et $525$ est égal à $15.$ Les diviseurs communs de $390$ et $525$ sont les diviseurs de $15.$ Ces diviseurs (positifs) sont donc $1,\ 3,\ 5$ et $15$.
+<li> Notons $d$ le pgcd à calculer. Puisqu'il divise les deux nombres, il divise
+$25$ et $d$ est donc égal à $1$, $5$ ou $25$. S'il est égal à $5$ ou $25$,
+ceci signifie que $5$ divise $3^{123}-5$. Mais alors, puisque
+$5$ divise $-5$, ceci entrainerait encore que $5$ divise $3^{123}$, ce
+qui n'est pas vrai. Donc $d=1$.
+<li> $n$ et $n+1$ sont deux entiers consécutifs. L'un des deux au moins
+est pair, et donc $2|n(n+1)(n+2)$. De même, $n$, $n+1$ et $n+2$ sont trois entiers consécutifs.
+L'un au moins est un multiple de $3,$ et donc $3|n(n+1)(n+2)$. Par le théorème de Gauss,
+puisque $2$ et $3$ sont premiers entre eux,
+$6|n(n+1)(n+2)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater693"></span><script>var myRating = raterJs( { element:document.querySelector("#rater693"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(693,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des équations de Bezout <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=693.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(693,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce693','imageenonce693');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce693"></a><div class=inner id="innerenonce693">Résoudre les équations suivantes dans $\mathbb Z^2$ :
+<ol class="enumeratechiffre">
+<li> $2x+5y=3$;
+<li> $323x-391y=612$;
+<li> $162x+207y=27$;
+<li> $221x+247y=15$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication693','imageindication693');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication693"></a><div class=inner id="innerindication693" style="display:none;"><ol class="enumeratechiffre">
+<li> Chercher une solution particulière, puis déterminer toutes les solutions en retranchant cette solution particulière et en utilisant le théorème de Gauss.
+<li> Commencer par chercher le pgcd de 323 et 391. Puis simplifier l'équation en 
+la divisant par ce pgcd. Procéder alors comme d'ordinaire.
+<li> Exactement comme ci-dessus.
+<li> Il y a un piège!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige693','imagecorrige693',693);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige693"></a><div class=inner id="innercorrige693" style="display:none;"><ol class="enumeratechiffre">
+<li> Commençons par remarquer que $2\wedge 5=1$ et donc, d'après le théorème de Bézout, l'équation admet toujours une solution. Ici, il est facile de remarquer que $(-1,1)$ est une solution particulière de l'équation. Considérons maintenant un couple d'entiers $(x,y)\in\mathbb Z^2$ tel que $2x+5y=3$. Alors, puisque $2\times(-1)+5\times 1=3$, on en déduit en soustrayant ces deux équations que 
+$$2(x+1)+5(y-1)=0\iff 2(x+1)=-5(y-1).$$
+On a donc $2|-5(y-1)$ et donc, puisque $2\wedge 5=1$, le théorème de Gauss assure que $2|y-1$. On en déduit l'existence de $k\in\mathbb Z$ tel que $y=1+2k$. Si on reporte ceci dans l'équation $2(x+1)=-5(y-1)$, on trouve que $x=-1-5k$. Réciproquement, tout couple d'entiers de la forme $(-1-5k,1+2k)$ avec $k\in\mathbb Z$ est solution de l'équation. Ainsi, on a prouvé que l'ensemble des solutions est 
+$$\mathcal S=\{(-1-5k,1+2k);\ k\in\mathbb Z\}.$$
+<li> On commence par rechercher le pgcd de 323 et 391 en appliquant par exemple l'algorithme d'Euclide.
+On a :
+\begin{eqnarray*}
+391&=&323\times 1+68\\
+323&=&68\times 4+51\\
+68&=&51\times 1+17\\
+51&=&17\times 3
+\end{eqnarray*}
+Ainsi, le pgcd de 391 et 323 est 17. On vérifie que 17 divise 612, car $612=17\times 36$. 
+D'autre part, $391=17\times 23$ et $323=17\times 19$. L'équation est donc équivalente à
+$$19x-23y=36.$$
+D'après le théorème de Bezout, puisque 19 et 23 sont premiers entre eux,
+on sait qu'il existe $(x_0,y_0)$ solution de $19x-23y=1$.
+Multipliant tout par 36, $(36x_0,36y_0)$ est solution de l'équation.<br>
+Soit $(x,y)$ une solution de l'équation. Alors on a 
+$$19(x-36x_0)-23(y-36y_0)=0.$$
+Ainsi, $19$ divise $23(y-36y_0)$. Mais puisque $19$ et $23$ sont premiers entre eux,
+$19$ divise $(y-36y_0)$ et donc il existe un entier $k$ tel que
+$y=36y_0+19k$. Reportant cela dans l'équation, on trouve que
+$x=36x_0+23k$. Réciproquement, il est facile de vérifier que
+tout couple $(36x_0+23k,36y_0+19k)$ est solution. Il
+suffit donc de déterminer un couple $(x_0,y_0)$.<br>
+On applique une nouvelle fois l'algorithme 
+d'Euclide :
+\begin{eqnarray*}
+23&=&19+4\\
+19&=&4\times 4+3\\
+4&=&3+1
+\end{eqnarray*}
+soit, en remontant les calculs :
+$$1=4-(19-4\times 4)=5\times 4-19=5\times(23-19)-19=5\times 23-6\times 19.$$
+On peut donc prendre $x_0=-6$ et $y_0=-5$. L'ensemble des solutions de l'équation est donc
+$$\{(-216+23k,-180+19k),\ k\in\mathbb Z\}.$$
+<li> On procède exactement comme ci-dessus, cette fois-ci, $162\wedge 207=9$ et on peut simplifier par $9$. On trouve que l'ensemble des solutions est 
+$$\{(27-23k,-21+18k);\ k\in\mathbb Z\}.$$
+<li> Le pgcd de $221$ et $247$ est 13. Or, $13$ ne divise pas 15. L'équation n'admet donc pas de solutions!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3165"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3165"),	max:5, rating:1.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3165,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Irrationnalité d'un quotient de logarithmes  <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3165.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3165,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3165','imageenonce3165');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3165"></a><div class=inner id="innerenonce3165">Soit $a,b\geq 2$ deux entiers premiers entre eux. Démontrer que $\ln(a)/\ln(b)$ est irrationnel.</div></div><div class=indication><a href="javascript:showAll('innerindication3165','imageindication3165');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3165"></a><div class=inner id="innerindication3165" style="display:none;">Procéder par l'absurde.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3165','imagecorrige3165',3165);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3165"></a><div class=inner id="innercorrige3165" style="display:none;">Supposons que $\ln(a)/\ln(b)$ est rationnel et soit $p,q\geq 1$ avec $p\wedge q=1$ tel que $\frac{\ln(a)}{\ln(b)}=\frac pq$. Ceci entraîne que $\ln(a^q)=\ln(b^p)$ et donc, par injectivité de la fonction $\ln$, que $a^q=b^p$. 
+Ainsi, $a|b^p$. Mais ceci contredit que $a\wedge b=1$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater694"></span><script>var myRating = raterJs( { element:document.querySelector("#rater694"),	max:5, rating:1.8235294117647, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(694,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rationnels qui sont entiers <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=694.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(694,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce694','imageenonce694');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce694"></a><div class=inner id="innerenonce694">Soient $a$ et $b$ deux rationnels tels que $a+b$ et $a\times b$ sont des entiers. Prouver que $a$ et $b$ sont des entiers.</div></div><div class=indication><a href="javascript:showAll('innerindication694','imageindication694');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication694"></a><div class=inner id="innerindication694" style="display:none;">&Eacute;crire $a$ et $b$ sous forme de fraction irréductible et commencer, en utilisant $a+b$, par démontrer que les dénominateurs sont égaux.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige694','imagecorrige694',694);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige694"></a><div class=inner id="innercorrige694" style="display:none;">Remarquons d'abord que si $a$ ou $b$ est nul, c'est trivial. On suppose donc que $a\neq 0$ et $b\neq 0$, et on écrit ces réels sous forme de fraction
+irréductible, $a=\frac{p_1}{q_1}$ et $b=\frac{p_2}{q_2}$, avec $q_1,q_2&gt;0$ et $p_1\wedge q_1=1$, $p_2\wedge q_2=1$. On a alors 
+$$a+b=\frac{p_1q_2+p_2q_1}{q_1q_2}\in\mathbb Z.$$
+On en déduit que $q_1|(p_1q_2+p_2q_1)$. Or, on sait déjà que $q_1|p_2q_1$. On a donc $q_1|p_1q_2$. De plus, puisque $q_1\wedge p_1=1$, le théorème de Gauss
+nous dit que $q_1|q_2$. Par symétrie, on a aussi $q_2|q_1$, et donc $q_1=q_2=q$. Le produit $ab$ vaut alors
+$$ab=\frac{p_1p_2}{q^2},$$
+et donc $q|p_1p_2$. Ceci implique (toujours par le lemme de Gauss) que $q|p_1$ et comme $q\wedge p_1=1$, on a $q\wedge p_1=q=1$.
+Ainsi, $a$ et $b$ sont des entiers.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater695"></span><script>var myRating = raterJs( { element:document.querySelector("#rater695"),	max:5, rating:1.9666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(695,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme et produit <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=695.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(695,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce695','imageenonce695');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce695"></a><div class=inner id="innerenonce695"><ol class="enumeratechiffre">
+<li> Démontrer que si deux entiers relatifs sont premiers entre eux, leur somme et leur produit sont premiers entre eux. La réciproque est-elle vraie?
+<li> Démontrer que l'on ne change pas le pgcd de deux entiers en multipliant l'un d'entre eux par un entier premier avec l'autre.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication695','imageindication695');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication695"></a><div class=inner id="innerindication695" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer que $a+b$ est premier avec $a$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige695','imagecorrige695',695);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige695"></a><div class=inner id="innercorrige695" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $a$ et $b$ ces deux entiers. Si $d\geq 1$ divise $a$ et $a+b$, alors il divise également $b=(a+b)-a$. Mais puisque $a\wedge b=1$, on en déduit que $d=1$ et donc que $a+b$ et $a$ sont premiers entre eux. De même, $a+b$ et $b$ sont premiers entre eux. On en déduit que $(a+b)\wedge ab=1$. La réciproque est elle aussi vraie. En effet, si $a+b$ et $ab$ sont premiers entre eux, et si $d\geq 1$ divise $a$ et $b$, alors il divise $a+b$ et $ab$ et donc $d=1$ : $a$ et $b$ sont premiers entre eux.
+<li> Notons $a$ et $b$ ces deux entiers et soit $c$ tel que $a\wedge c=1$. Il s'agit de démontrer que $a\wedge b=a\wedge (bc)$. Clairement, tout diviseur de $a$ et $b$ est aussi un diviseur de $a$ et de $bc$, et donc $a\wedge b|a\wedge (bc)$. Réciproquement, si $d|bc$ et $d|a$, puisque $a$ et $c$ sont premiers entre eux et que $d|a$, on a $d\wedge c=1$ et donc, par le théorème de Gauss, $d|b$. Ainsi, $d|a\wedge b$ et donc $a\wedge (bc)|a\wedge b$. Par conséquent, ces deux pgcd sont égaux.<br>
+Remarquons que l'on aurait également pu procéder en utilisant une décomposition en facteurs premiers de tous ces entiers et en utilisant le calcul du pgcd à l'aide des valuations $p$-adiques. En effet, notons 
+$$a=p_1^{\alpha_1}\dots p_r^{\alpha_r},\ b=p_1^{\beta_1}\dots p_r^{\beta_r},\ c=p_1^{\gamma_1}\dots p_r^{\gamma_r}.$$
+On note aussi
+$$a\wedge b=p_1^{\delta_1}\dots p_r^{\delta_r}\textrm{ et }a\wedge(bc)=p_1^{\eta_1}\dots p_r^{\eta_r}$$
+avec $\delta_j=\min(\alpha_j,\beta_j)$ et $\eta_j=\min(\alpha_j,\gamma_j+\beta_j)$.
+L'hypothèse $a\wedge c=1$ nous dit que $\min(\alpha_j,\gamma_j)=0$ pour tout $j$, et on cherche
+à prouver que $\delta_j=\eta_j$ pour tout $j$. Si $\gamma_j=0$, c'est clair. Sinon, on a $\alpha_j=0$ et donc $\delta_j=\eta_j=0$. Ainsi, on a bien $a\wedge (bc)=a\wedge b$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2213"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2213"),	max:5, rating:2.047619047619, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2213,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Points à coordonnées entières sur une droite rationnelle <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2213.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2213,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2213','imageenonce2213');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2213"></a><div class=inner id="innerenonce2213">Le plan est muni d'un repère $(O,\vec i,\vec j)$. On considère 4 entiers relatifs non nuls $m,n,p$ et $q$ tels que $\textrm{pgcd}(m,n)=\textrm{pgcd}(p,q)=1$. Le but de l'exercice est de déterminer une condition nécessaire et suffisante portant sur $m,n,p,q$ pour que la droite $\Delta$ d'équation $y=\frac mn x-\frac pq$ comporte au moins un point dont les coordonnées sont deux entiers relatifs.
+<ol class="enumeratechiffre">
+<li> On suppose dans cette question que la droite $\Delta$ comporte un point de coordonnées $(x_0,y_0)$ où $x_0$, $y_0$ sont des entiers relatifs.
+<ol class="enumeratechiffre">
+<li> Démontrer que $q$ divise le produit $np$.
+<li> En déduire que $q$ divise $n$.
+</ol>
+<li> Réciproquement, on suppose que $q$ divise $n$ et on souhaite trouver un couple $(x_0,y_0)$ d'entiers relatifs tels que $y_0=\frac mnx_0-\frac pq$. 
+<ol class="enumeratechiffre">
+<li> On pose $n=qr$, où $r$ est un entier relatif non nul. Démontrer que l'on peut trouver deux entiers relatifs $u$ et $v$ tels que $qru-mv=1$.
+<li> En déduire qu'il existe un couple $(x_0,y_0)$ d'entiers relatifs tels que $y_0=\frac mn x_0-\frac pq$.
+</ol>
+<li> On donne l'algorithme suivant : 
+<pre><code class="language-python">Variables : 
+  m,n,p,q entiers relatifs non nuls tels que pgcd(m,n)=pgcd(p,q)=1
+  x entier naturel
+Algorithme
+  Si q divise n alors
+     x prend la valeur 0
+     Tant que (mx/n - p/q) n'est pas un entier et (-mx/n-p/q) n'est pas un entier faire
+         x prend la valeur x+1
+     Fin Tant Que
+     Si (mx/n-p/q) est entier alors Afficher x, mx/n-p/q
+     Sinon Afficher -x,-mx/n-p/q
+     Fin Si
+  Sinon Afficher "Pas de solutions"
+  Fin Si.
+</code></pre>
+Justifier que cet algorithme se termine. Que permet-il d'obtenir?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2213','imageindication2213');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2213"></a><div class=inner id="innerindication2213" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> Remarquer que le nombre $ny_0-mx0$ est un entier relatif.
+<li> Théorème de Gauss.
+</ol>
+<li> 
+<ol class="enumeratechiffre">
+<li> Théorème de Bézout.
+<li> Chercher $x_0$ et $y_0$ de sorte que $(x_0,y_0)$ soit solution de 
+$$\frac{-np}q=ny_0-mx_0.$$
+</ol>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2213','imagecorrige2213',2213);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2213"></a><div class=inner id="innercorrige2213" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> Multiplions la relation $y_0=\frac mn x_0-\frac pq$ par $n$. On obtient 
+$$ny_0-mx_0=\frac{-pn}q.$$
+Mais $ny_0-mx_0$ est un entier relatif que nous notons $r$. Donc $q(-r)=pn$, ce qui dit bien que $q$ divise le produit $pn$.
+<li> Puisque $q$ et $p$ sont premier entre eux, ceci est une conséquence du théorème de Gauss.
+</ol>
+<li> 
+<ol class="enumeratechiffre">
+<li> Puisque $m$ et $n$ sont premiers entre eux, le théorème de Bézout nous dit qu'il existe deux entiers $u$ et $v$ tels que $nu-mv=1$. Remplaçant $n$ par $qr$, on obtient le résultat voulu.
+<li> Multiplions l'équation précédente par $\frac{-np}{q}=-pr$. On trouve
+$$\frac{-np}q=-pqr^2 u-(-prmv)=n(-pru)-m(-prv).$$ Posons alors $x_0=-prv$ et $y_0=-pru$. $x_0$ et $y_0$ sont bien deux entiers naturels. De plus, ils satisfont 
+$$\frac{-np}{q}=ny_0-mx_0$$
+équation qui est équivalente à 
+$$y_0=\frac mn x_0-\frac pq.$$
+Le point de coordonnées $(x_0,y_0)$ est donc bien un élément de $\Delta$.
+</ol>
+<li> L'algorithme permet de déterminer s'il y a un point à coordonnées entières sur la droite $\Delta$ et, le cas échéant, d'afficher les coordonnées d'un de ces points. Pour cela, il commence par étudier la condition nécessaire et suffisante d'appartenance d'un tel point en étudiant si $q$ divise $n$. Ensuite, si $q$ divise $n$, il regarde s'il existe un point à coordonnées entières sur $\Delta$ dont l'abscisse est 0, puis $\pm 1$, puis $\pm 2$. L'algorithme va terminer puisqu'on sait qu'un tel point existe et que toutes les valeurs successives possibles des abscisses sont prises. De plus, l'algorithme va produire un point à coordonnées entières $(x_0,y_0)$ sur $\Delta$ avec $|x_0|$ minimum.
+</ol></div></div></div>       
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2382"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2382"),	max:5, rating:1.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2382,rating); this.setRating(rating);   this.disable();    done();     }});</script> - G-Schreiber <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2382.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2382,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2382','imageenonce2382');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2382"></a><div class=inner id="innerenonce2382">La machine allemande G-Schreiber était une machine à chiffrer utilisée par l'Allemagne pendant la Seconde Guerre Mondiale. Elle était constituée (entre autres) de dix roues comprenant respectivement 47, 53, 59, 61, 64, 65, 67, 69, 71 et 73 positions. A chaque fois qu'un caractère était tapé, il était chiffré à l'aide d'un algorithme un peu compliqué utilisant la position des roues, puis toutes les roues tournaient d'une position. Combien fallait-il taper de caractères pour revenir à la position initiale des roues?</div></div><div class=indication><a href="javascript:showAll('innerindication2382','imageindication2382');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2382"></a><div class=inner id="innerindication2382" style="display:none;">Les nombres de position de chaque roue, 47, 53, 59, 61, 64, 65, 67, 69, 71 et 73, sont des nombres premiers entre eux</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2382','imagecorrige2382',2382);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2382"></a><div class=inner id="innercorrige2382" style="display:none;">Les nombres de position de chaque roue, 47, 53, 59, 61, 64, 65, 67, 69, 71 et 73, sont des nombres premiers entre eux. Avant de revenir à la position initiale, il faut que chaque roue ait fait un ou plusieurs tours complets. Ainsi, il faut que le nombre de caractères entré soit un multiple de 47, et un multiple de 53, etc... Puisque les nombres sont premiers entre eux, le plus petit nombre de caractères à entrer avant de revenir à la position initiale, qui est le plus petit multiple commun de 47, 53, 59, 61, 64, 65, 67, 69, 71 et 73, est :
+$$47\times 53\times  59\times  61\times 64\times 65\times 67\times 69\times 71\times 73.$$
+Ce nombre vaut $893 622 318 929 520 969$ : c'est énorme!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater696"></span><script>var myRating = raterJs( { element:document.querySelector("#rater696"),	max:5, rating:2.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(696,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un calcul <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=696.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(696,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce696','imageenonce696');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce696"></a><div class=inner id="innerenonce696">Calculer le pgcd de $2^{445}+7$ et $15$.</div></div><div class=indication><a href="javascript:showAll('innerindication696','imageindication696');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication696"></a><div class=inner id="innerindication696" style="display:none;">Calculer la congruence modulo 15 de $2^{445}+7$, puis appliquer l'algorithme d'Euclide.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige696','imagecorrige696',696);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige696"></a><div class=inner id="innercorrige696" style="display:none;">On va appliquer l'algorithme d'Euclide. Pour cela, on cherche la congruence modulo 15
+de $2^{445}+7$. Or, $2^4\equiv 1\ [15]$. On remarque ensuite que $445=4*111+1$.
+Ainsi, $2^{445}=2\times (2^{4})^{111}\equiv 2\times1\ [15]$. D'où on déduit finalement
+$$2^{445}+7\equiv 9\ [15].$$
+Ainsi, appliquant l'algorithme d'Euclide, le pgcd cherché est aussi le pgcd de 9 et 15, c'est-à-dire 3.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater706"></span><script>var myRating = raterJs( { element:document.querySelector("#rater706"),	max:5, rating:1.8529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(706,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calculs de pgcd <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=706.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(706,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce706','imageenonce706');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce706"></a><div class=inner id="innerenonce706">Soient $n\in\mathbb Z$. Calculer les pgcd suivants :
+$$\begin{array}{lll}
+\mathbf 1.\ (n^2+n)\wedge (2n+1)&\quad\quad&\mathbf  2.\ (15n^2+8n+6)\wedge(30n^2+21n+13)\\
+\end{array}
+$$
+</div></div><div class=indication><a href="javascript:showAll('innerindication706','imageindication706');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication706"></a><div class=inner id="innerindication706" style="display:none;">On pourra utiliser une astuce (relation entre $n^2+n$ et $2n+1$ par exemple) ou l'algorithme d'Euclide.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige706','imagecorrige706',706);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige706"></a><div class=inner id="innercorrige706" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que $4(n^2+n)=(2n+1)^2-1$. Ainsi, si $d|(n^2+n)$ et $d|2n+1$, $d|1$. On a donc $(n^2+n)\wedge (2n+1)=1$.
+<li> Rappelons que si $a=bq+r$, on a $a\wedge b=b\wedge r$ et que $a\wedge b=a\wedge (a-b)$ (on écrit $a=b+(a-b)$).
+Ainsi, on trouve ici
+$$30n^2+21n+13=2(15n^2+8n+6)+5n+1,\ \ \ 15n^2+8n+6=3n(5n+1)+5n+6.$$
+On a donc
+\begin{eqnarray*}
+(30n^2+21n+13)\wedge (15n^2+8n+6)&=&(15n^2+8n+6)\wedge (5n+1)\\
+&=&(5n+1)\wedge (5n+6)\\
+&=&(5n+1)\wedge 5\\
+&=&1.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater697"></span><script>var myRating = raterJs( { element:document.querySelector("#rater697"),	max:5, rating:3.304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(697,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bezout à coefficients positifs <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=697.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(697,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce697','imageenonce697');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce697"></a><div class=inner id="innerenonce697">Soient $a,b&gt;0$ deux entiers premiers entre eux et $x&gt;ab$. Montrer que l'équation
+$au+bv=x$ admet une solution $(u,v)$ telle que $u,v\in\mathbb N$.</div></div><div class=indication><a href="javascript:showAll('innerindication697','imageindication697');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication697"></a><div class=inner id="innerindication697" style="display:none;">Résoudre l'équation $au+bv=x$ dans $\mathbb Z^2$. 
+Les solutions sont les couples $(u_k,v_k)$ de la forme $u_k=u_0+kb$, $v_k=v_0-ka$.
+Considérer $k$ tel que $u_{k-1}\leq 0&lt;u_k$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige697','imagecorrige697',697);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige697"></a><div class=inner id="innercorrige697" style="display:none;">L'équation $au+bv=x$ a toujours une solution $(u_0,v_0)$ dans $\mathbb Z^2$
+d'après le théorème de Bezout. De plus, l'ensemble des solutions est constitué par
+les couples $(u_k,v_k)$ avec $u_k=u_0+kb$, $v_k=v_0-ka$, $k\in\mathbb Z$. Puisque $(u_k)_{k\in\mathbb Z}$ 
+est croissante, tend vers $-\infty$ en $-\infty$ et vers $+\infty$ en $+\infty$, il existe
+un entier $k$ tel que $u_{k-1}\leq 0\leq u_k$. Montrons que $v_k\geq 0$. Pour cela, on écrit
+$$x=au_k+bv_k=a(u_{k-1}+b)+bv_k$$
+soit 
+$$bv_k=x-ab-au_{k-1}.$$
+Puisque $x-ab\geq 0$ et $au_{k-1}\leq 0$, on en déduit $bv_k\geq 0$, ou encore $v_k\geq 0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2332"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2332"),	max:5, rating:2.2702702702703, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2332,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pile de livres <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2332.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2332,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2332','imageenonce2332');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2332"></a><div class=inner id="innerenonce2332">J'ai une pile de livres. Lorsque je les range par 10, il m'en reste 3. Lorsque je les range par 17, il m'en reste 2. Quel est le nombre minimum de livres que je possède? Quels sont tous les nombres possibles?</div></div><div class=indication><a href="javascript:showAll('innerindication2332','imageindication2332');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2332"></a><div class=inner id="innerindication2332" style="display:none;">Se ramener à résoudre une équation de Bézout...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2332','imagecorrige2332',2332);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2332"></a><div class=inner id="innercorrige2332" style="display:none;">Soit $N$ le nombre de livres. L'information que l'on donne est que le reste dans la division euclidienne de $N$ par $10$ (respectivement par $17$) vaut $3$ (respectivement $2$). Ainsi, il existe $a$ et $b$ des entiers naturels tels que $N=10a+3$ et $N=17b+2$. Faisant la différence, on trouve que $(a,b)$ est une solution de l'équation de Bézout $17b-10a=1$. <br>
+On résoud cette équation. Le couple $(a,b)=(5,3)$ est solution, et donc les couples solutions sont les couples $(a,b)$ avec $a=5+17k$ et $b=3+10k$, avec $k\in\mathbb N$ (il n'y a pas de $-$ car l'équation de Bézout comporte déjà un $-$). Ainsi, si $N$ est le nombre de livres, il existe $k\in\mathbb N$ (car le nombre de livres est positif!) tel que $N=53+170k$. <br>
+Réciproquement, on vérifie que $53+170k= 10\times (17k+5)+3=17\times(10k+3)+2$. Le nombre minimal de livres possible est 53, les nombres possibles sont ceux de la forme $53+170k$ avec $k\in\mathbb N$. Bien sûr, le nombre minimal de livres possibles aurait pu être trouvé à l'aide d'un tableur.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3342"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3342"),	max:5, rating:2.1428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3342,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Bézout au restaurant <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3342.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3342,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3342','imageenonce3342');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3342"></a><div class=inner id="innerenonce3342">Un groupe d'amis a mangé au restaurant. Ils avaient le choix entre le menu du jour à 24 euros et le menu gastronomique à 45 euros. L'addition s'élevant à 903 euros, ils cherchent à retrouver le nombre de fois que chaque menu a été choisi. On note $a$ le nombre de menus du jour et $b$ le nombre de menus gastronomiques choisis. Donner toutes les possibilités pour le couple $(a,b)$.</div></div><div class=indication><a href="javascript:showAll('innerindication3342','imageindication3342');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3342"></a><div class=inner id="innerindication3342" style="display:none;">Il faut résoudre l'équation de Bézout $24a+45b=903,$ en cherchant les couples $(a,b)$ solutions qui sont toujours positifs. En écrivant $a$ et $b$ en fonction d'un paramètre $k$, les conditions $a\geq 0$ et $b\geq 0$ vont donner un encadrement de $k$ qui ne va pas laisser beaucoup de possibilités!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3342','imagecorrige3342',3342);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3342"></a><div class=inner id="innercorrige3342" style="display:none;">Les entiers naturels $a$ et $b$ sont solutions de l'équation $24a+45b=903.$ 
+Remarquons que le pgcd de $24$ et $45$ est $3.$ L'équation est donc équivalente à $8a+15b=301.$ On cherche tous les couples $(a,b)\in\mathbb N^2$ solutions de cette équation. On commence par trouver $a_0$ et $b_0$ tel que $8a_0 +15b_0=1.$
+Il n'est peut-être pas la peine d'utiliser l'algorithme d'Euclide ici, car on remarque facilement que 
+$$8\times 2+15\times (-1)=1.$$
+On en déduit que 
+$$8\times 602+15\times (-301)=301.$$
+On sait aussi que $(a,b)$ vérifie
+$$8a+15b=301.$$
+En faisant la différence des deux équations, on trouve
+$$8\times (a-602)+15\times (b+301)=0\iff 8\times (a-602)=-15\times(b+301).$$
+On a donc $8|15\times(b+301)$ et puisque $8$ et $15$ sont premiers entre eux, on a finalement $8|b+301.$ Ainsi, il existe $k\in\mathbb Z$ tel que $b=-301+8k.$
+Si on reporte ceci dans l'équation $a-602=-15\times (b+301),$ on trouve
+$a=602-15k.$<br>
+On veut maintenant $b\geq 0.$ Ceci implique $-301+8k\geq 0$ ou encore $k\geq 38.$ 
+On veut aussi $a\geq 0$, ce qui revient à dire $602-15k\geq 0$ ou encore $k\leq 40.$ Finalement, on trouve 3 couples de solutions : 
+$$(32,3),\ (17,11)\textrm{ et }(2,19).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater698"></span><script>var myRating = raterJs( { element:document.querySelector("#rater698"),	max:5, rating:2.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(698,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le magicien des mathématiques <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=698.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(698,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce698','imageenonce698');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce698"></a><div class=inner id="innerenonce698">Bonjour, je suis le magicien des mathématiques.
+Je vais deviner votre date de naissance.<br> 
+Prenez votre jour de naissance. Multipliez le par 31.<br>
+Prenez votre mois de naissance. Multiplier le par 12.<br>
+Ajoutez ces deux nombres. Combien trouvez-vous? 811 vous me dites?<br>
+Et bien vous êtes né un 25 mars! <br>
+En plus, c'est vrai. Mais comment a-t-il fait?</div></div><div class=indication><a href="javascript:showAll('innerindication698','imageindication698');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication698"></a><div class=inner id="innerindication698" style="display:none;">Trouver une équation de Bezout à résoudre, et expliquer pourquoi on peut la résoudre "plus vite" dans ce cas.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige698','imagecorrige698',698);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige698"></a><div class=inner id="innercorrige698" style="display:none;">En notant $j$ le jour de naissances et $m$ le mois de naissances, on doit résoudre
+$$12m+31j=811.$$
+C'est une équation de Bézout, qu'on peut résoudre "naïvement", mais c'est bien sûr impossible de tête.
+L'idée est que l'on sait que m est forcément compris entre 1 et 12.
+On regarde la congruence modulo 31, et on obtient $12m\equiv 811\ [31] \equiv 5\ [31]$.
+Mais, pour $m$ allant de $1$ à $12$, les entiers $12m$ ont des congruences
+modulo 31 différentes les unes des autres. Ainsi, on trouve dans l'ordre
+$12, 24, 5, 17, 29, 10, 22, 3, 15, 27, 8, 20$. Ceci nous donne immédiatement $m=3$,
+puis, en retournant à l'équation $12m+31j=811$, $j=25$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater699"></span><script>var myRating = raterJs( { element:document.querySelector("#rater699"),	max:5, rating:2.2333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(699,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas de solutions rationnelles <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=699.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(699,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce699','imageenonce699');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce699"></a><div class=inner id="innerenonce699">Montrer que l'équation $x^3-x^2+x+1=0$ n'a pas de solutions dans $\mathbb Q$.</div></div><div class=indication><a href="javascript:showAll('innerindication699','imageindication699');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication699"></a><div class=inner id="innerindication699" style="display:none;">Raisonner par l'absurde et imaginer qu'une solution
+$x=p/q$ existe, avec $p\wedge q=1$. Remettre tout au même dénominateur, et montrer que $q=1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige699','imagecorrige699',699);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige699"></a><div class=inner id="innercorrige699" style="display:none;">Admettons qu'il existe une solution rationnelle $x=p/q$, avec $p\wedge q=1$ et $q&gt;0$. Alors, 
+remplaçant $x$ par $p/q$ dans l'équation et multipliant tout par $q^3$, on obtient :
+$$p^3-p^2q+pq^2+q^3=0.$$
+Puisque $q|p^2q+pq^2+q^3$, on obtient $q|p^3$ et donc $q=1$ puisque $p$ et $q$ sont
+premiers entre eux. En effectuant le même raisonnement avec $p$, on obtient $p=\pm 1$.
+Or $1$ et $-1$ ne sont pas solutions de l'équation. Il y a donc contradiction.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater700"></span><script>var myRating = raterJs( { element:document.querySelector("#rater700"),	max:5, rating:2.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(700,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Termes consécutifs d'une suite <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=700.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(700,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce700','imageenonce700');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce700"></a><div class=inner id="innerenonce700">Soit $(u_n)$ la suite d'entiers définie par $u_0=14$ et $u_{n+1}=5u_n-6$. Démontrer que le pgcd de deux termes
+consécutifs de la suite est constant. Préciser sa valeur.</div></div><div class=indication><a href="javascript:showAll('innerindication700','imageindication700');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication700"></a><div class=inner id="innerindication700" style="display:none;">Démontrer que le pgcd de $u_n$ et $u_{n+1}$ est dans $\{1,2,3,6\}$. Puis démontrer que $3$ ne divise aucun
+$(u_n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige700','imagecorrige700',700);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige700"></a><div class=inner id="innercorrige700" style="display:none;">De la relation $u_{n+1}=5u_n-6$, on tire que tout diviseur commun de $u_n$ et de $u_{n+1}$ divise aussi 6.
+Ainsi, le pgcd de $u_n$ et $u_{n+1}$ ne peut qu'être un élément de $\{1,2,3,6\}$. Par ailleurs, on va démontrer par
+récurrence sur $n$ que 2 divise $u_n$ et que $3$ ne divise pas $u_n$. C'est bien le cas pour $u_0=14$, et considérons $n\in\mathbb N$ tel que $2$ divise $u_n$ et $3$ ne divise pas $u_n$. Alors,  $2|5u_n$ et $2$ divise
+$6$, donc $2$ divise $u_{n+1}=5u_n-6$. De plus, si on avait $3|u_{n+1}$, alors $3|u_{n+1}+6$ et donc  $3|5u_{n}$. De plus, par le théorème de Gauss, puisque $3\wedge
+5=1$, on tire $3|u_{n}$, ce qui est une contradiction.<br>
+Ainsi, pour tout entier $n$, on a prouvé que $2|u_n$ et $3$ ne divise pas $u_n$. Ainsi, si $d_n$ est le pgcd de $u_n$ et $u_{n+1}$, $2|d_n$ et $3$ ne divise pas $d_n$. Puisque l'on sait déjà que $d_n\in\{1,2,3,6\}$, on a nécessairement $d_n=2$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2279"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2279"),	max:5, rating:1.875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2279,rating); this.setRating(rating);   this.disable();    done();     }});</script> - pgcd et somme ou produit prescrits <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2279.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2279,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2279','imageenonce2279');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2279"></a><div class=inner id="innerenonce2279"><ol class="enumeratechiffre">
+<li> Déterminer les couples d'entiers naturels de pgcd 18 et de somme 360.
+<li> Déterminer les couples d'entiers naturels de pgcd 18 et de produit 6480.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2279','imageindication2279');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2279"></a><div class=inner id="innerindication2279" style="display:none;">&Eacute;crire $x=18x'$ et $y=18y'$ avec $x'\wedge y'=1$. On trouve une équation facile pour $x'+y'$ (ou pour $x'y'$) qu'on peut résoudre de façon exhaustive en tenant bien compte du fait que $x'$ et $y'$ sont premiers entre eux.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2279','imagecorrige2279',2279);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2279"></a><div class=inner id="innercorrige2279" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(x,y)$ un tel couple d'entiers naturels. On écrit que $x=18x'$ et $y=18y'$ avec $x'\wedge y'=1$. Puisque $x+y=360$, on doit avoir $x'+y'=20$. Si $x'=1$, alors $y'=19$ et cette solution convient car $1$ et $19$ sont premiers entre eux. Si $x'=2$, alors $y'=18$ et cette solution ne convient pas car $2$ et $18$ ne sont pas premiers entre eux. On peut continuer ainsi à chercher de façon exhaustive toutes les solutions, et on trouve que les couples qui conviennent correspondent à $x'=1,3,7,9,11,13,17,19$. Les couples solutions sont donc :
+$$(18,342),\ (54,306)\, (126,234),\ (162,198)$$
+ainsi que les couples symétriques.
+<li> On procède exactement de la même façon, et cette fois on a l'équation $x'y'=20$. Les solutions qui vérifient en outre que $x'\wedge y'=1$ correspondent à $x'=1,4,5$ et $20$. Les couples solutions sont donc
+$$(18,360),\ (72,90),\ (90,72),\ (360,18).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2642"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2642"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2642,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application à une preuve d'irrationalité <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2642.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2642,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2642','imageenonce2642');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2642"></a><div class=inner id="innerenonce2642"><ol class="enumeratechiffre">
+<li> Soit $a$ et $b$ deux entiers non nuls premiers entre eux. Démontrer que $a^2$ et $b^2-a^2$ sont premiers entre eux.
+<li> Soit $n$ un entier naturel non nul. Démontrer que $\sqrt{\frac n{n+2}}$ est irrationnel.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2642','imageindication2642');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2642"></a><div class=inner id="innerindication2642" style="display:none;"><ol class="enumeratechiffre">
+<li> Considérer $p$ un diviseur premier de $a^2$ et $b^2-a^2$.
+<li> Raisonner par l'absurde, bien sûr!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2642','imagecorrige2642',2642);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2642"></a><div class=inner id="innercorrige2642" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $a^2$ et $b^2-a^2$ ne sont pas premiers entre eux, ils admettent un diviseur premier $p$ commun. Mais $p|a^2$ et $p|b^2-a^2$ donc $p$ divise $b^2$. Mais puisque $p$ est premier, si $p|a^2$, on a $p|a$ et $p|b$. On a trouvé un diviseur commun à $a$ et $b$ différent de $\pm 1$. Ceci contredit que $a$ et $b$ sont premiers entre eux, et donc $a^2$ et $b^2-a^2$ sont premiers entre eux.
+<li> On raisonne par l'absurde et on suppose que $\sqrt{\frac n{n+2}}$ est un nombre rationnel. Il existe donc deux entiers $a$ et $b$ premiers entre eux tels que $\sqrt{\frac n{n+2}}=\frac a b$. Mettant cette égalité au carré, et après quelques calculs simples, on trouve
+$$n(b^2-a^2)=2a^2.$$
+Or, d'après la première question, $a^2$ et $b^2-a^2$ sont premiers entre eux. Puisque $a^2$ divise $n(b^2-a^2)$, il suit du lemme de Gauss que $a^2$ divise $n$. On peut donc écrire $n=ka^2$, avec $k$ un entier non nul, et après simplification, on trouve que 
+$$k(b^2-a^2)=2.$$
+Mais $b\geq a+1$, et donc $b^2-a^2\geq (a+1)^2-a^2=2a+1\geq 3$. Ainsi, $k(b^2-a^2)\geq 3$ ne peut pas être égal à $2$. On a une contradiction et $\sqrt{\frac n{n+2}}$ est irrationel. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater701"></span><script>var myRating = raterJs( { element:document.querySelector("#rater701"),	max:5, rating:2.4347826086957, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(701,rating); this.setRating(rating);   this.disable();    done();     }});</script> - pgcd et ppcm imposés <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=701.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(701,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce701','imageenonce701');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce701"></a><div class=inner id="innerenonce701"><ol class="enumeratechiffre">
+<li> Résoudre le système
+$$\left\{
+\begin{array}{rcl}
+x\wedge y&=&18\\
+x\vee y&=&540
+\end{array}\right.$$
+avec $(x,y)\in\mathbb N^2$.
+<li> Généralisation : trouver une condition nécessaire et suffisante sur $d$ et $m$
+pour qu'il existe $(x,y)\in\mathbb N^2$ tels que $x\wedge y=d$ et $x\vee y=m$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication701','imageindication701');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication701"></a><div class=inner id="innerindication701" style="display:none;">On écrira $x=dx'$, $y=dy'$ avec $x'\wedge y'=1$. En particulier, $x'\vee y'=x'y'$.
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige701','imagecorrige701',701);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige701"></a><div class=inner id="innercorrige701" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit $x=18x'$, $y=18y'$ avec $x'\wedge y'=1$. En particulier, on a
+ $$x\vee y=(18x')\vee (18y')=18(x'\vee y')=18x'y'$$
+puisque $x'$ et $y'$ sont premiers entre eux. Ainsi, le système revient à trouver les couples $(x',y')$ d'entiers premiers entre eux
+pour lesquels $x'y'=30$. On trouve les couples $(30,1), (15,2), (10,3), (6,5)$ et leurs symétriques.
+Les couples $(x,y)$ recherchés sont donc $(540,18), (270,36), (180,54), (108,90)$ et leurs symétriques.
+<li> Une condition nécessaire est clairement que $d|m$ (le pgcd divise toujours le ppcm). Réciproquement, si $m=kd$, en
+écrivant comme précédemment $x=dx'$, $y=dy'$ avec $x'\wedge y'=1$, le système se réduit
+à l'équation $x'y'=k$. Elle admet toujours des solutions entières, par exemple le couple $(k,1)$.
+Le système admet donc une solution si et seulement si $d|m$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater702"></span><script>var myRating = raterJs( { element:document.querySelector("#rater702"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(702,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation avec pgcd et ppcm <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=702.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(702,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce702','imageenonce702');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce702"></a><div class=inner id="innerenonce702">Trouver tous les couples d'entiers $(x,y)\in\mathbb N^2$ tels que $x\vee y+11(x\wedge y)=203$.</div></div><div class=indication><a href="javascript:showAll('innerindication702','imageindication702');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication702"></a><div class=inner id="innerindication702" style="display:none;">&Eacute;crire $x=dx'$, $y=dy'$ avec $x'\wedge y'=1$. On obtient $d|203=7\times 29$.
+Que peut valoir $d$? Etudier tous les cas.
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige702','imagecorrige702',702);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige702"></a><div class=inner id="innercorrige702" style="display:none;">On pose $d=x\wedge y$ et on écrit $x=dx'$, $y=dy'$ et $x'\wedge y'=1$. L'équation devient
+$$d(x'y'+11)=203=7\times 29.$$
+On a donc $d=1,7,29$ ou $203$ et on sépare les cas.
+<ul class="rien">
+<li> Les cas $d=29$ et $d=203$ ne conduisent pas à une solution, puisqu'on a alors $x'y'=7-11&lt;0$ ou $x'y'=1-11&lt;0$, ce
+qui est impossible puisque $x'$ et $y'$ sont positifs.
+<li> Pour $d=1$, on a $x'y'=192=2^6\times 3$. Puisque $x'\wedge y'=1$, on obtient que $(x',y')$ est un des couples
+$(192,1)$, $(3,2^6)$, $(2^6,3)$ ou $(1,192)$.
+<li> Pour $d=7$, on a $x'y'=18=2\times 3^2$. Puisque $x'\wedge y'=1$, on obtient que $(x',y')$ est un des couples
+$(18,1)$, $(2,9)$, $(9,2)$ ou $(1,18)$.
+</ul>
+En remultipliant par $d$, on trouve que l'ensemble des solutions est constitué par les couples $(1,192)$, $(3,64)$,
+$(7,126)$, $(14,63)$ et leurs symétriques.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater703"></span><script>var myRating = raterJs( { element:document.querySelector("#rater703"),	max:5, rating:2.258064516129, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(703,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Liens entre deux pgcd <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=703.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(703,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce703','imageenonce703');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce703"></a><div class=inner id="innerenonce703">Soient $a,m,n\in\mathbb N^*$ avec $a\geq 2$ et $m\leq n$. On note $d=(a^n-1)\wedge (a^m-1)$ et $r$ le reste dans la division euclidienne de $n$ par $m$.
+<ol class="enumeratechiffre">
+<li> Montrer que $a^n\equiv a^r\ [a^m-1]$.
+<li> En déduire que $d=(a^r-1)\wedge (a^m-1)$, puis que $d=a^{n\wedge m}-1$.
+<li> A quelle condition $a^m-1|a^n-1$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication703','imageindication703');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication703"></a><div class=inner id="innerindication703" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $a^n-a^r=a^r\big((a^m)^q-1)$ puis utiliser une identité remarquable.
+<li> Faire l'algorithme d'Euclide sur les exposants de $a$.
+<li> $b|c\iff b\wedge c=b$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige703','imagecorrige703',703);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige703"></a><div class=inner id="innercorrige703" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit  $n=mq+r$ puis
+\begin{eqnarray*}
+a^n-a^r&=&a^r\left(a^{mq}-1\right)=a^r\left(\left(a^m\right)^q-1\right)\\
+&=&a^r\left(a^m-1\right)\left(a^{m(q-1)}+a^{m(q-2)}+\dots+1\right).
+\end{eqnarray*}
+Donc $a^m-1$ divise $a^n-a^r$, ce qui donne le résultat.
+<li> De la relation précédente, on tire
+$$\left(a^n-1\right)-\left(a^r-1\right)=Q\left(a^m-1\right)$$
+où $Q\in\mathbb N$. Ainsi, si $s$ divise $a^r-1$ et $a^m-1$, il divise $a^n-1$.
+Réciproquement si $s$ divise $a^n-1$ et $a^m-1$, alors il divise $a^r-1$.
+Ainsi, $d=(a^m-1)\wedge (a^r-1)$ (on utilise ici le même raisonnement
+que pour prouver que si $a=bq+c$, alors $a\wedge b=b\wedge c$). Mais,
+poursuivant les divisions euclidiennes successives, en notant $(r_k)$ la suite 
+des restes obtenus, on a $d=(a^{r_k}-1)\wedge (a^{r_{k+1}}-1)$, jusqu'à ce que
+$a^{r_{k+1}}=1$, c'est-à-dire $r_{k+1}=0$. On a donc $d=a^{r_{k_0}}-1$, où $r_{k_0}$ est le dernier reste non-nul 
+dans l'algorithme d'Euclide, c'est-à-dire que $r_{k_0}$ est  le pgcd de $n$ et $m$.
+<li> On a la suite d'équivalences :
+\begin{eqnarray*}
+a^m-1|a^n-1&\iff&d=a^m-1 \\
+&\iff&n\wedge m=m\\
+&\iff&m|n.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater684"></span><script>var myRating = raterJs( { element:document.querySelector("#rater684"),	max:5, rating:2.7333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(684,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Irrationalité de $\sqrt 2$ <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=684.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(684,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce684','imageenonce684');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce684"></a><div class=inner id="innerenonce684">Le but de cet exercice est de démontrer que $\sqrt 2$ est irrationnel en utilisant l'algorithme d'Euclide. 
+On raisonne par l'absurde et on suppose qu'il existe deux entiers strictement positifs $a$ et $b$ tels que $\sqrt
+2=a/b$. On pose $c=\sqrt 2+1$. 
+<ol class="enumeratechiffre">
+<li> Vérifier que $a=b+\frac bc$, puis que $c=2+\frac 1c$.
+<li> Démontrer que $\frac bc$ est un entier, et qu'il est égal au reste $r_1$ de la division euclidienne de $a$ par
+$b$. Quel est le quotient $q_1$ de cette division?
+<li> Montrer que dans la division euclidienne de $b$ par $r_1$, le quotient est $q_2=2$ et le reste est
+$r_2=\frac{r_1}c$.
+<li> Soit $n$ un entier supérieur ou égal à 2. Démontrer que l'algorithme d'Euclide appliqué au couple $(a,b)$ comporte
+au moins $n$ étapes, que le $n$-ième quotient est $q_n=2$, et que le $n$-ième reste est $r_n=\frac{r_{n-1}}c$.
+<li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication684','imageindication684');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication684"></a><div class=inner id="innerindication684" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la quantité conjuguée.
+<li> 
+<li> 
+<li> Raisonner par récurrence.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige684','imagecorrige684',684);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige684"></a><div class=inner id="innercorrige684" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit de simples vérifications utilisant la quantité conjuguée. Par exemple, on a 
+\begin{eqnarray*}
+b+\frac bc&=&b\times\frac{1+c}c\\
+&=&b\times \frac{2+\sqrt 2}{\sqrt 2+1}\\
+&=&b\times \frac{(2+\sqrt 2)(\sqrt 2-1)}{1}\\
+&=&b\sqrt 2.
+\end{eqnarray*} 
+<li> $\frac bc$ est un entier comme différence de deux entiers $(a-b=b/c)$. De plus, $0&lt;\frac bc&lt;b$ et $a=b+\frac bc$. 
+Par unicité de la division euclidienne, $\frac bc$ est donc le reste de la division euclidienne de $a$ par $b$, le quotient étant $q_1=1$.
+<li> La propriété sera vérifiée si on arrive à prouver que 
+$$b=2r_1+\frac{r_1}c,$$
+le même raisonnement que le précédent assurant alors que $\frac{r_1}c$ est un entier et est le reste de la division
+euclidienne de $b$ par $r_1$. Mais cette inégalité est équivalente à 
+$$b=2\frac bc+\frac{b}{c^2}\iff c=2+\frac 1c.$$
+On a justement démontré cette propriété à la première question.
+<li> On va raisonner par récurrence sur $n$. On note $P_n$ la propriété : "la division euclidienne de $a$ par $b$
+comporte au moins $n$ étapes, le $n$-ième quotient est $2$ et le $n-$ième reste est $r_n=\frac{r_{n-1}}c$. On vient de
+voir à la question précédente que $P_2$ est vraie. On suppose que $P_n$ est vraie, et prouvons $P_{n+1}$. On a 
+$$r_{n-2}=2r_{n-1}+r_n\textrm{ avec }r_n=\frac{r_{n-1}}c.$$
+$r_n$ est donc non-nul, et la division euclidienne de $a$ par $b$ va comporter donc une $n+1$-ème étape. 
+Celle-ci s'écrit 
+$$r_{n-1}=q_{n+1}r_{n}+r_{n+1}.$$
+On cherche à prouver que $q_{n+1}=2$ et $r_{n+1}=\frac{r_{n}}c$. Par unicité de la division euclidienne, il suffit de
+prouver que 
+$$r_{n-1}=2 r_n+\frac{r_n}{c}.$$
+&Eacute;crivant $r_{n-1}=c r_n$ et simplifiant par $r_n$, on voit que ceci se ramène à prouver que
+$$c=2+\frac 1c$$
+et on sait que ceci est vrai. $P_{n+1}$ est donc vérifiée, et par récurrence, $P_n$ est vraie pour tout entier $n$.
+<li> Si l'hypothèse était vraie, la division euclidienne de $a$ par $b$ devrait comporter un nombre fini d'étapes. Or,
+on vient de prouver à la question précédente que ce n'est pas le cas. L'hypothèse de départ est donc fausse, et $\sqrt
+2$ est un irrationnel.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2744"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2744"),	max:5, rating:4.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2744,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Meilleur couple de Bézout <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2744.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2744,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2744','imageenonce2744');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2744"></a><div class=inner id="innerenonce2744">Soit $a,b$ deux entiers naturels avec $2&lt;b&lt;a$ et $a$ et $b$ premiers entre eux. Démontrer 
+qu'il existe un unique couple $(u,v)\in\mathbb Z^2$ tels que $au+bv=1$ avec $2|u|\leq b$ et $2|v|&lt;a$.</div></div><div class=indication><a href="javascript:showAll('innerindication2744','imageindication2744');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2744"></a><div class=inner id="innerindication2744" style="display:none;">On rappelle que, si $(u_0,v_0)$ est une solution particulière de l'équation de Bézout,
+alors l'ensemble des solutions est $\mathcal S=\{(u_0-kb,v_0+ka):\ k\in\mathbb Z\}$.
+Pour fabriquer la meilleure solution, on pourra considérer le plus grand entier $k$ tel que
+$v_0+ka\leq a/2$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2744','imagecorrige2744',2744);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2744"></a><div class=inner id="innercorrige2744" style="display:none;">Le point de départ de cet exercice est la description de l'ensemble des solutions de l'équation de Bézout.
+Si $(u_0,v_0)$ est une solution particulière, alors l'ensemble des solutions est 
+$\mathcal S=\{(u_0+kb,v_0-ka):\ k\in\mathbb Z\}$. Démontrons d'abord l'unicité d'une solution $(u,v)$ telle 
+que $2|u|\leq b$ et $2|v|&lt;a$. Si $(u,v)$ et $(u',v')$ sont deux solutions vérifiant cette condition,
+alors on sait que $v-v'$ est un multiple de $a$. En outre, $|v-v'|\leq |v|+|v'|&lt;\frac a2+\frac a2=a$. Ainsi,
+on a nécessairement $v=v'$ et donc $u=u'$.<br>
+
+Démontrons maintenant l'existence d'une telle solution. Soit 
+$$A=\{k\in\mathbb Z:\ v_0+ka\leq a/2\}.$$
+Alors $A$ est une partie de $\mathbb Z$ non-vide et majorée. Elle possède donc un plus grand élément $\ell$, et on note
+$u=u_0-\ell b$ et $v=v_0+\ell a$. Alors on sait que $v=v_0+\ell a\leq a/2$ et $v=v_0+(\ell+1)a&gt;a/2$.
+Cette dernière inégalité donne
+$$v=v_0+\ell a&gt;\frac{a}{2}-a&gt;-\frac a2.$$
+Ainsi, on a $|v|\leq a/2$. Il faut encore démontrer qu'on ne peut pas avoir égalité, c'est-à-dire, puisqu'on a déjà obtenu $v&gt;-a/2$, qu'on
+ne peut pas avoir $v=a/2$. Si c'était le cas, puisque $a&gt;2$, on aurait $v&gt;1$, et l'égalité $au+bv=1$ s'écrirait encore $2vu+bv=1$. Ainsi, $v|1$ ce qui contredit $v&gt;1$. 
+On a bien démontré que $|v|&lt;a/2$. <br>
+D'autre part, on a $au=1-bv$ et donc
+$$a|u|\leq 1+b|v|.$$
+Ceci entraîne que 
+$$2a|u|\leq 2+2b|v|=2-b+b(2|v|+1)\leq 0+ab$$
+ce qui donne $|u|\leq b/2$. </div></div></div>
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

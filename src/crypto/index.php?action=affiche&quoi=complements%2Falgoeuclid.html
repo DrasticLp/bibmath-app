@@ -1,0 +1,140 @@
+<!doctype html><html lang="fr"<head><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta charset="utf-8"><meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="L'algorithme d'Euclide étendu"><meta name="viewport" content="width=device-width, initial-scale=1"><title>L'algorithme d'Euclide étendu</title><link type="text/css" href="css/cryptostyle.css" rel="stylesheet" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({  tex2jax: {inlineMath: [['$','$']]} });</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/javascript" src="common/fonctions.js"></script><script src="common/spoiler.js"></script></head><body><header id="bandeau"><div id="bandeaucentre"><span id=bandeaulogo>Cryptographie et codes secrets</span><span id=bandeaumilieu><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" title="Consulter notre page Facebook">
+	<img src="img/fb.png" /></a></span><div id=bandeaurecherche><form id="formrech" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></form></div></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()">
+	<img src="img/menumobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="img/deletemobile.png">
+	</a></span><span class="itembandeaumobile">Cryptographie!</span></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site">
+	<img src="img/forumgrand.png" /></a></span>
+	<span class="itembandeaumobilesansbordure"><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" 
+	title="Consulter notre page Facebook"><img src="img/fbmobile.png" /></a></span>
+	<span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()">
+	<img src="img/loupemobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()">
+	<img src="img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><section id="listemenuhaut"><span id="menu0" class="item"><a href="Analyse.class.html">Accueil</a></span><span id="menu1" class="itemselectionne"><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Findex.html">Méthodes anciennes</a></span><span id="menu2" class="item"><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findex.html">Les 2 guerres</a></span><span id="menu3" class="item"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Méthodes modernes</a></span><span id="menu4" class="item"><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=chasseur/index">Chasseurs de codes</a></span><span id="menu5" class="item"><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><span id="menu6" class="item"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Compléments</a></span><span id="menu7" class="item"><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><span id="menu8" class="item"><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="Analyse.class.html">Accueil</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme0"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert0"  style="display:none;"/></div></div><div class="itemmenumobileselectionne"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(1);">Méthodes anciennes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme1"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert1"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=substi%252Findex.html">Substitution monoalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=poly%252Findex.html">Substitution polyalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fpolygraphiqueindex.html">Chiffres polygraphiques</a></span></div><div class="sousitemmenumobile"><span><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=ancienne/homophoneindex">Chiffres homophones</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Ftranspoindex.html">Transposition</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fsurchiffrement.html">Surchiffrement</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(2);">Les 2 guerres</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme2"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert2"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexpremguerre.html">Première Guerre Mondiale</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexsecguerre.html">Deuxième Guerre Mondiale</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(3);">Méthodes modernes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme3"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert3"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Préambule</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclesecrete.html">Clé secrète</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclepublique.html">Clé publique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexprotocole.html">Protocoles</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexconcret.html">Mises en oeuvre</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexfutur.html">Futur</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(4);">Chasseurs de codes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme4"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert4"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findextheorie.html">Quelques principes</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexvaincre.html">Quelques cas concrets</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexoutils.html">Outils</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexenigmes.html">Enigmes</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme5"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert5"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(6)">Compléments</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme6"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert6"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile6"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexfigures.html">Portraits</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexmaths.html">Compléments mathématiques</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexinfo.html">Compléments informatique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexclasse.html">En classe</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme7"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert7"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme8"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert8"  style="display:none;"/></div></div></nav></div><div id="main"><div style="width:100%"><div id="pubhaut"></div></div><div id="maincentre"><div id="gauche"><article id="contenugauche"><div class="chemin"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Le plan de la partie : compléments</a> &gt; </div><h1>L'algorithme d'Euclide étendu</h1>
+<SCRIPT language=JavaScript>
+
+/* Simule le iquo de Maple! */
+function iquo(a,b)
+{
+  return ( Math.floor(a/b));
+}
+
+
+function calcul(a,b)
+{
+  r=a;r1=b;
+  u=1;u1=0;
+  v=0;v1=1;
+  while (r1!=0)
+  {
+	q=iquo(r,r1);
+	aux=r;r=r1;r1=aux-r1*q;
+	aux=u;u=u1;u1=aux-u1*q;
+	aux=v;v=v1;v1=aux-v1*q;
+  }
+  if (v>0) {return(r+"="+u+"x"+a+"+"+v+"x"+b);}
+	else {return(r+"="+u+"x"+a+v+"x"+b);}
+}
+
+function clepriv(p,q,e)
+{
+  prod=p*q;
+  prodm=(p-1)*(q-1);			
+  r=(p-1)*(q-1);
+  rsauv=r;
+  r1=e;
+  u=1;u1=0;
+  v=0;v1=1;
+  while (r1!=0)
+  {
+	q=iquo(r,r1);
+	aux=r;r=r1;r1=aux-r1*q;
+	aux=u;u=u1;u1=aux-u1*q;
+	aux=v;v=v1;v1=aux-v1*q;
+  }
+  if (r!=1) {return(e+" n'est pas premier avec "+prodm);}
+    else return("("+(prod)+","+((v+prodm)%prodm)+")");
+}	
+  
+
+function clepub(p,q,e)
+{ 
+  return("("+(p*q)+","+e+")");
+}
+</SCRIPT>
+<div class=titrepartie>Description</div>
+&nbsp;&nbsp;<font size=+2>Q</font>uel est le plus grand diviseur commun (=pgcd) de 126 et 462? On apprend au collège à calculer ce  pgcd en décomposant les 2 nombres en produits de facteurs premiers, et en réunissant les facteurs en commun. Cette méthode n'est plus envisageable quand les entiers deviennent grands (plusieurs centaines de chiffres décimaux), car la factorisation est un problème difficile. On calcule donc le pgcd en appliquant l'algorithme d'Euclide, qui repose sur la constation suivante :
+<div class=theo>
+Si $a$ et $b$ sont deux entiers avec par exemple $a\geq b$, si $r$ est le reste dans la division de $a$ par $b$, alors $\textrm{pgcd}(a,b)=\textrm{pgcd}(b,r)$. 
+</div>
+</blockquote>
+On effectue donc des divisions euclidiennes, jusqu'à ce qu'on trouve un reste nul. Le dernier reste non nul est le pgcd de a et b.<br>
+<u>Ex :</u> On souhaite calculer le pgcd de 255 et 141.
+<dl>
+<dd>255=1&times;141+114
+<dd>141=1&times;114+27
+<dd>114=4&times;27+6
+<dd>27=4&times;6+3
+<dd>6=2&times;3+0
+</dl>
+Le pgcd de 255 et 141 est donc 3.</p>
+&nbsp;&nbsp;<font size=+2>L'</font>algorithme d'Euclide permet aussi de calculer les coefficients de Bezout de a et b (on l'appelle algorithme d'Euclide étendu). Rappelons que si d est le PGCD de a et b, il existe des entiers u et v tels que au+bv=d. L'algorithme d'Euclide permet de calculer ces coefficients u et v. Pour cela, il suffit de remonter les calcules, en exprimant le pgcd d en fonction des autres nombres.<br>
+<u>Ex :</u> Pour 255 et 141, on élimine tout ce qui n'est pas ni 255, ni 141, ni 3.
+<dl>
+<dd>27=4&times;6+3
+<dd>114=4&times;27+6&nbsp;&nbsp;&nbsp;<font color=red>&times;(-4)</font> (on élimine les 6).
+<dd>141=1&times;114+27&nbsp;&nbsp;&nbsp;<font color=red>&times;17</font> (on élimine les 27, il y en a 1 à gauche, et -16 à droite).
+<dd>255=1&times;141+114&nbsp;&nbsp;&nbsp;<font color=red>&times;(-21)</font> (on élimine les 114).
+</dl>
+On somme tout, on regroupe, et on trouve :
+<center>38&times;141-21&times;255=3</center></p><br>
+<div class=titrepartie>Exemple :</div>
+<FORM>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=1 border=0>
+  <TR>
+   
+    <TD bgColor=#66FF99>Premier nombre :</TD>
+    <TD bgColor=#66FF99><input name=prem  size=50 value=141></TD></TR>
+  <TR>
+    <TD bgColor=#ffff99>Deuxième nombre :</TD>
+    <TD bgcolor=#ffff99><input name=second  size=50 value=255></td></tr>
+  
+  <TR bgColor=#ffff99 >
+    <TD > <INPUT onclick="sortie.value=calcul(prem.value,second.value)" type=button value=Calculer></td><td><TEXTAREA name=sortie rows=1 cols=50></TEXTAREA></td></tr></table></center></FORM></p><br>
+
+<BR>
+
+<div class=titrepartie>Application au calcul de la clé secrète du RSA :</div>
+&nbsp;&nbsp;<font size=+2>R</font>appelons (voir <a href="index.php%3Faction=affiche&amp;quoi=moderne%252Frsa.html">cette page</a>) la génération des clés dans le RSA. On choisit p et q deux nombres premiers, on pose n=pq, et on choisit e tel que e est premier avec le produit (p-1)(q-1) (e porte le nom d'exposant public). La clé publique est le couple (n,e). Comme e est premier avec (p-1)(q-1), il existe des entiers d et k tels que ed+k(p-1)(q-1)=1. Le couple (n,d) est la clé secrète. Le formulaire suivant permet, connaissant
+p, q et e, de fabriquer la clé secrète (n,e) et la clé privée (n,d). Le calcul de d se fait en utilisant l'algorithme d'Euclide étendu.</p>
+<FORM>
+<CENTER>
+
+  
+<table cellspacing=2 cellpadding=1 size=400><tr>
+<tr  bgcolor=#66FF99>
+<td>p=<input name=p size=5 value=71></td><td>q=<input name=q size=5 value=131>&nbsp;&nbsp;e=<input name=e size=5 value=3>&nbsp;&nbsp;<input type=button value=Calculer! onclick="pub.value=clepub(p.value,q.value,e.value);priv.value=clepriv(p.value,q.value,e.value)"></tr><tr>
+ <TD bgColor=#ffff99>Clé publique (n,e) :</TD>
+    <TD bgcolor=#ffff99><input name=pub  size=50></td></tr>
+  
+  <TR bgColor=#33CCFF ><TD bgColor=#33CCFF>Clé privée (n,d) :</TD>
+    <TD bgcolor=#33CCFF><input name=priv  size=50></td></tr>
+   </table>
+   </center></FORM></p><br>
+
+</article></div><aside id="droite"><div id="pubdroite"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5238512654171693"
+     data-ad-slot="3610567220"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside></div></div><footer id="pied"><div id="piedcentre"><section id="listepied"><span class="item"><a href="contact.php%3Forigine=erreur.html">Signaler une erreur, une faute d'orthographe</a></span><span class="item"><a href="contact.php%3Forigine=contribuer.html">Contribuer au site</a></span><span class="item"><a href="credits.php.html">Crédits</a></span></section></div></footer><footer id="piedmobile"><span class="item"><script language="JavaScript1.1"> <!-- 
+	hsh = new Date();
+      hsd = document;
+      hsi = '<a href="http://www.xiti.com/xiti.asp?s=65164"'
+      hsi += ' TARGET="_top"><img width="80" height="15" border=0 '
+      hsi += 'src="http://logv17.xiti.com/oco.xiti?s=65164'
+      hsi += '&p=&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+      if(parseFloat(navigator.appVersion)>=4)
+            {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+      hsd.writeln(hsi + '&ref=' + hsd.referrer.replace('&', '$') + ' " title="Mesurez votre audience"></a>');//-->  
+      </script></span><span class="item"><a href="contact.php%3Forigine=mobile.html">Nous contacter</a></span></footer></body><script type="text/javascript" src="common/scrolling.js"></script></html>   

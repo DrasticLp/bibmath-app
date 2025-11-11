@@ -1,0 +1,131 @@
+<!doctype html><html lang="fr"<head><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta charset="utf-8"><meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Le chiffre RSA"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Le chiffre RSA</title><link type="text/css" href="css/cryptostyle.css" rel="stylesheet" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({  tex2jax: {inlineMath: [['$','$']]} });</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/javascript" src="common/fonctions.js"></script><script src="common/spoiler.js"></script></head><body><header id="bandeau"><div id="bandeaucentre"><span id=bandeaulogo>Cryptographie et codes secrets</span><span id=bandeaumilieu><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" title="Consulter notre page Facebook">
+	<img src="img/fb.png" /></a></span><div id=bandeaurecherche><form id="formrech" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></form></div></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()">
+	<img src="img/menumobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="img/deletemobile.png">
+	</a></span><span class="itembandeaumobile">Cryptographie!</span></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site">
+	<img src="img/forumgrand.png" /></a></span>
+	<span class="itembandeaumobilesansbordure"><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" 
+	title="Consulter notre page Facebook"><img src="img/fbmobile.png" /></a></span>
+	<span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()">
+	<img src="img/loupemobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()">
+	<img src="img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><section id="listemenuhaut"><span id="menu0" class="item"><a href="Analyse.class.html">Accueil</a></span><span id="menu1" class="itemselectionne"><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Findex.html">Méthodes anciennes</a></span><span id="menu2" class="item"><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findex.html">Les 2 guerres</a></span><span id="menu3" class="item"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Méthodes modernes</a></span><span id="menu4" class="item"><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=chasseur/index">Chasseurs de codes</a></span><span id="menu5" class="item"><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><span id="menu6" class="item"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Compléments</a></span><span id="menu7" class="item"><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><span id="menu8" class="item"><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="Analyse.class.html">Accueil</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme0"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert0"  style="display:none;"/></div></div><div class="itemmenumobileselectionne"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(1);">Méthodes anciennes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme1"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert1"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=substi%252Findex.html">Substitution monoalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=poly%252Findex.html">Substitution polyalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fpolygraphiqueindex.html">Chiffres polygraphiques</a></span></div><div class="sousitemmenumobile"><span><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=ancienne/homophoneindex">Chiffres homophones</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Ftranspoindex.html">Transposition</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fsurchiffrement.html">Surchiffrement</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(2);">Les 2 guerres</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme2"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert2"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexpremguerre.html">Première Guerre Mondiale</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexsecguerre.html">Deuxième Guerre Mondiale</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(3);">Méthodes modernes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme3"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert3"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Préambule</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclesecrete.html">Clé secrète</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclepublique.html">Clé publique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexprotocole.html">Protocoles</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexconcret.html">Mises en oeuvre</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexfutur.html">Futur</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(4);">Chasseurs de codes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme4"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert4"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findextheorie.html">Quelques principes</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexvaincre.html">Quelques cas concrets</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexoutils.html">Outils</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexenigmes.html">Enigmes</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme5"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert5"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(6)">Compléments</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme6"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert6"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile6"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexfigures.html">Portraits</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexmaths.html">Compléments mathématiques</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexinfo.html">Compléments informatique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexclasse.html">En classe</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme7"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert7"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme8"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert8"  style="display:none;"/></div></div></nav></div><div id="main"><div style="width:100%"><div id="pubhaut"></div></div><div id="maincentre"><div id="gauche"><article id="contenugauche"><div class="chemin"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Le plan de la partie : méthodes modernes de cryptographie</a> &gt; </div><h1>Le chiffre RSA</h1><div class=titrepartie>Description</div>
+      <P><BR>
+      <p><img src="moderne/images/adironlen.jpg" align=right>&nbsp;&nbsp;<font size="+2">L</font>a méthode de cryptographie RSA a été inventée en 1977 par Ron Rivest, Adi Shamir et Len Adleman, à la suite de la découverte de la cryptographie à clé publique par Diffie et Hellman. Le RSA est encore le système cryptographique à clé publique le plus utilisé de nos jours. Il est intéressant de remarquer que son invention est fortuite : au départ, Rivest, Shamir et Adleman voulaient prouver que tout système à clé publique possède une faille.</p>
+<b>Principe de fonctionnement :</b>
+&nbsp;&nbsp;Si Bob souhaite recevoir des messages en utilisant le RSA, il procède de la façon suivante :
+<ol>
+<li><b><font color=#AF000>Création des clés :</b></font> Bob crée 4 nombres p,q, e et d :
+<ul>
+<li>p et q sont deux grands nombres premiers distincts. Leur génération se fait au hasard, en utilisant un algorithme de <a href="index.php%3Faction=affiche&amp;quoi=complements%252Fgdspremiers.html">test de primalité</a> probabiliste.
+<li>e est un entier premier avec le produit (p-1)(q-1).
+<li>d est tel que ed=1 modulo (p-1)(q-1). Autrement dit, ed-1 est un multiple de (p-1)(q-1). On peut fabriquer d à partir de e, p et q, en utilisant <a href="index.php%3Faction=affiche&amp;quoi=complements%252Falgoeuclid.html">l'algorithme d'Euclide</a>.
+</ul>
+<li><font color=#AF000><b>Distribution des clés :</b></font> Le couple (n,e) constitue la clé publique de Bob. Il la rend disponible par exemple en la mettant dans un annuaire. Le couple (n,d) constitue sa clé privée. Il la garde secrète.
+<li><font color=#AF000><b>Envoi du message codé :</b></font> Alice veut envoyer un message codé à Bob. Elle le représente sous la forme d'un ou plusieurs entiers M compris entre 0 et n-1. Alice possède la clé publique (n,e) de Bob. Elle calcule C=M<sup>e</sup> mod n. C'est ce dernier nombre qu'elle envoie à Bob.
+<li><font color=#AF000><b>Réception du message codé</b></font> : Bob reçoit C, et il calcule grâce à sa clé privée D=C<sup>d</sup> (mod n). D'après un théorème du mathématicien Euler, D=M<suP>de</sup>=M (mod n). Il a donc reconstitué le message initial.
+</ol></p>
+<div class=titrepartie>Création d'une clé RSA :</div>
+<center><applet
+  codebase = "moderne/images"
+  code     = "makecle.class.html"
+  width    = "650"
+  height   = "200"
+  hspace   = "0"
+  vspace   = "0"
+  align    = "middle"
+></applet></center></p><br></p>
+<div class=titrepartie>Le RSA est-il sûr?</div> 
+
+ 
+      &nbsp;&nbsp;<font size="+2">L</font>a sécurité du RSA repose sur le fait que, connaissant $n$, $e$, et $M^e\mod n$, il est très difficile de retrouver $M$
+      si l'on ne connait pas $d$. On dit que le problème de calcul du logarithme discret est difficile modulo $n$. En réalité,
+      la seule méthode que l'on connaisse (mais peut-être un service secret en a découvert une autre) 
+      est de retrouver l'exposant secret $d$ en factorisant $n$ en le produit  $p\times q$. C'est pour cela que l'on dit
+que la sécurité de RSA repose sur la difficulté de factoriser de grands entiers en produits de deux facteurs premiers.</p>
+&nbsp;&nbsp;<font size=+2>A</font>insi, la majeure partie des attaques sur la partie théorique du RSA reposent sur des tentatives de factorisation d'entiers.
+Pour le moment, cela reste un problème très difficile pour lequel on ne connait pas d'algorithmes efficaces. Le tableau suivant résume quelques records de factorisation d'entiers.</P>
+<center>
+<TABLE align=center cellspacing=0 cellpadding=4 border=1>
+<tr>
+<td bgcolor=#FAFAFF align=center>Nb de chiffres de $n$</td>
+<td bgcolor=#AAFFCC align=center>Taille en bits</td>
+<td bgcolor=#FFFFAA align=center>Date de factorisation</td>
+</tr>
+<tr>
+<td bgcolor=#FAFAFF align=center>232</td>
+<td bgcolor=#AAFFCC align=center>768</td>
+<td bgcolor=#FFFFAA align=center>2009</td>
+</tr>
+<tr>
+<td bgcolor=#FAFAFF align=center>200</td>
+<td bgcolor=#AAFFCC align=center>664</td>
+<td bgcolor=#FFFFAA align=center>2005</td>
+</tr>
+<tr>
+<td bgcolor=#FAFAFF align=center>174</td>
+<td bgcolor=#AAFFCC align=center>576</td>
+<td bgcolor=#FFFFAA align=center>2003</td>
+</tr>
+<tr>
+<td bgcolor=#FAFAFF align=center>155</td>
+<td bgcolor=#AAFFCC align=center>512</td>
+<td bgcolor=#FFFFAA align=center>1999</td>
+</tr>
+</table>
+</center>
+</p>      
+Ce tableau montre que les progrès sont lents, mais réels. Et l'on sait factoriser en 2009 des clés de 768 bits, alors que c'était une longueur de clé encore très utilisée au 
+début des années 2000. En 2012, l'usage des clés de 1024 bits est déconseillé,  on conseille une clé de 2048 bits pour une usage privé, et une clé de 4096 bits minimum pour un usage sensible.</p>
+<img src="moderne/images/atom.gif" align=right>&nbsp;&nbsp;<font size=+2>S</font>i l'on ne sait pas factoriser actuellement de grands entiers, la situation pourrait changer dans un futur plus ou moins proche si l'on arrive à construire des ordinateurs quantiques. On dispose en effet pour ces opérateurs de méthodes performantes de factorisation. Bien sûr, il reste la difficulté technique à réaliser de tels ordinateurs, dont on ne sait pas si elle sera surmontée un jour, de sorte que pour le moment, on sait factoriser avec les prototypes actuels 15=3&times;5!</p>
+&nbsp;&nbsp;<font size=+2>E</font>n réalité, le plus gros risque que l'on court avec RSA, comme avec de nombreux systèmes cryptographiques, c'est de mal l'utiliser. Voyons ainsi une faille relative au fonctionnement de ce chiffre. Imaginons qu'Alice veuille envoyer le même message $M$ à $k$ personnes. Ces destinataires possèdent
+des clés publiques $(N_1,e),\dots,(N_k,e)$, avec le même exposant $e$. Ce n'est pas du tout une hypothèse farfelue, le choix $e=3$ est par exemple un exemple courant. 
+Elle calcule donc $C_i=M^e\mod N_i$ et envoie ce nombre à tous les destinataires. Bob, qui écoute les conversations, est donc en possession de $C_1,\dots,C_k$,
+$N_1,\dots,N_k$ et $e$. On fait encore une hypothèse supplémentaire, celle que les $N_i$ soient premiers entre eux deux à deux. Là encore, c'est une hypothèse raisonnable.
+Les $N_i$ étant fabriqués à partir de deux très grands nombres premiers choisis au hasard, il est très peu vraisemblable qu'on ait choisi deux fois le même.</p>
+&nbsp;&nbsp;<font size=+2>B</font>ob peut alors appliquer le <a href="index.php%3Faction=affiche&amp;quoi=complements%252Fresteschinois.html">théorème des restes chinois</a>. 
+Posons $N=N_1\times\dots \times N_k$. Ce théorème dit que l'on peut trouver un entier $C&lt;N$ tel que $C=C_i\mod\ N_i$ pour chaque $i=1,\dots k$. De plus, cet
+entier $C$ se calcule très facilement à l'aide de l'algorithme d'Euclide. 
+De la sorte, on a $C=M^e\mod N_i$ pour chaque $i$, c'est-à-dire encore $C=M^e\mod N$. Maintenant, puisque $M$ est inférieur à chaque $N_i$, et que $e$ est inférieur à $d$,
+$M^e$ est inférieur à $N=N_1\times\dots \times N_d$. Autrement dit, on n'a pas seulement l'égalité $C=M^e\mod N$, mais on a l'égalité <i>en tant qu'entiers</i>
+$C=M^e$. Il est maintenant très facile de retrouver $M$ car il s'agit de prendre une racine dans $\mathbb N$, et non une racine modulo $N$!</p>
+&nbsp;&nbsp;<font size=+2>I</font>l existe beaucoup d'autres attaques du même genre sur le RSA. La conclusion sur la sécurité est donc de dire que, si la taille
+de la clé est suffisante (ce n'est pas toujours le cas, par exemple les premières cartes bleues avaient une clé de 320 bits seulement!), le RSA est sûr si on 
+fait très attention au protocole. Mais cela, c'est une constante dans l'histoire de la cryptographie...
+<div class=titrepartie>Une autre histoire de la cryptographie à clé publique…</div>
+&nbsp;&nbsp;<font size=+2>L'</font>histoire a retenu les noms de Diffie, Hellman, Rivest, Shamir et Adleman comme inventeurs de la cryptographie à clé publique, vers 1976, 1977. En réalité, elle avait été découverte quelques années auparavant dans les bureaux du Government Communications Headquarters (GCHQ), le service de renseignements du gouvernement britannique. L'histoire commence vers la fin des années 1960, quand l'armée britannique, avec la miniaturisation des radios, et la réduction de leur coût,
+comprend qu'elle va pouvoir équiper chaque soldat avec cet équipement. Il deviendra alors nécessaire de chiffrer un nombre considérable de communications,
+et le principal problème reste la distribution des clés. James Ellis, un des cryptographes du GCHQ, est chargé de remédier à ce problème. 
+Il fait le même cheminement que Diffie et Hellman, et découvre le principe de la cryptographie à clé publique. Comme Diffie et Hellman,
+il peine à trouver une fonction concrète pour mettre en oeuvre le protocole, et c'est un autre membre du GCHQ, Clifford Cocks, 
+qui réussit à faire le pas décisif en 1973. Et ce qu'il invente est exactement la cryptographie RSA!</p>
+&nbsp;&nbsp;<font size=+2>L'</font>histoire n'est pas tout à fait fini, car ces découvertes font débat au sein du GCHQ. Malcolm Williamson, notamment,
+cherche une faille dans le protocole. Ses recherches le mènent, en 1975, à découvrir le protocole d'échange de clés de Diffie et Hellman, quelques mois
+avant ceux-ci. Tenus au secret, Ellis, Cocks et Williamson ne purent jamais révélés leurs inventions, et le gouvernement britannique ne fit pas
+breveter le système RSA, au contraire de la société américaine RSA Security fondée par Ronald Rivest, Adi Shamir et Leonard Adleman.
+Les documents de l'époque étant encore protégés par le secret-défense, on ne sait pas exactement ce qui le GHCQ de cette découverte. 
+Et si elle était connue de la NSA dès le début des années 1980, elle ne fut rendue publique qu'en 1997, quand les enjeux n'étaient plus importants.</p>
+&nbsp;&nbsp;<font size=+2>C'</font>est au moins la troisième fois que des britanniques firent une grande découverte cryptographique qui ne fut pas rendue publique
+immédiatement et qui fut redécouverte peu après par d'autres. La première fois, ce fut Charles Babbage qui avait découvert vers 1854 comment vaincre le chiffre
+de Vigenère. Ceci fut redécouvert en 1863 par Kasiski, à qui on attribue souvent la paternité de la méthode de Babbage pour vaincre le chiffre de Vigenère.
+La seconde fois se produisit lors de la Seconde Guerre Mondiale, lorsque les hommes et femmes de Bletchey Park parvenaient à vaincre le chiffre
+des machines allemandes Enigma. Ce qu'ils avaient inventé alors, menés par Alan Türing, était le premier ordinateur programmable. Ses plans furent détruits,
+et en 1946, des américains construisirent l'ENIAC, qui fut longtemps considéré comme le premier ordinateur de l'histoire.</p>
+&nbsp;&nbsp;<font size=+2>B</font>ien sûr, ceci n'enlève absolument rien au mérite de Diffie, Hellman, Rivest, Shamir et Adleman. Leurs découvertes furent
+faites complètement indépendamment.
+<div class=titrepartie>Consulter aussi</div><div class=liste><ul><li><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Fclepub.html">Principes généraux de la cryptographie à clé publique</a></li><li><a href="index.php%3Faction=affiche&amp;quoi=complements%252Fentiersmod.html">Les entiers modulo n</a></li><li><a href="index.php%3Faction=affiche&amp;quoi=complements%252Falgoeuclid.html"> L'algorithme d'Euclide et son application aux calculs des clés secrètes du RSA</a></li><li><a href="index.php%3Faction=affiche&amp;quoi=complements%252Fgdspremiers.html">Comment fabriquer de grands nombres premiers?</a></li></ul></div></article></div><aside id="droite"><div id="pubdroite"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5238512654171693"
+     data-ad-slot="3610567220"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside></div></div><footer id="pied"><div id="piedcentre"><section id="listepied"><span class="item"><a href="contact.php%3Forigine=erreur.html">Signaler une erreur, une faute d'orthographe</a></span><span class="item"><a href="contact.php%3Forigine=contribuer.html">Contribuer au site</a></span><span class="item"><a href="credits.php.html">Crédits</a></span></section></div></footer><footer id="piedmobile"><span class="item"><script language="JavaScript1.1"> <!-- 
+	hsh = new Date();
+      hsd = document;
+      hsi = '<a href="http://www.xiti.com/xiti.asp?s=65164"'
+      hsi += ' TARGET="_top"><img width="80" height="15" border=0 '
+      hsi += 'src="http://logv17.xiti.com/oco.xiti?s=65164'
+      hsi += '&p=&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+      if(parseFloat(navigator.appVersion)>=4)
+            {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+      hsd.writeln(hsi + '&ref=' + hsd.referrer.replace('&', '$') + ' " title="Mesurez votre audience"></a>');//-->  
+      </script></span><span class="item"><a href="contact.php%3Forigine=mobile.html">Nous contacter</a></span></footer></body><script type="text/javascript" src="common/scrolling.js"></script></html>   

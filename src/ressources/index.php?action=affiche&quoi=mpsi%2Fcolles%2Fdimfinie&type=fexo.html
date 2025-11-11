@@ -1,0 +1,295 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Préparer sa kholle : espaces vectoriels de dimension finie</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Préparer sa kholle : espaces vectoriels de dimension finie</h1><div class=titrepartie>L'exercice qu'il faut savoir faire</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater866"></span><script>var myRating = raterJs( { element:document.querySelector("#rater866"),	max:5, rating:1.6111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(866,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Supplémentaire <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=866.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(866,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce866','imageenonce866');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce866"></a><div class=inner id="innerenonce866">Soient $F, G$ les sous-espaces vectoriels de $\mathbb R^4$ suivants : <br>
+$ F=\{ (x,y,z,t)\in \mathbb R^4 \ \vert \ x+y+z=0 \text{ et } 2x+y+z-t=0 \} $, <br>
+$ G = \textrm{vect}\{ (1,-2,1,1),(1,2,-3,1),(5,-3,-2,5)\}\subset \mathbb R^4 $.
+<ol class="enumeratechiffre">
+ <li> Calculer la dimension de $F$.
+ <li> Montrer que $G\subset F$ et conclure que $G=F$.
+ <li> Déterminer un supplémentaire de $F$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication866','imageindication866');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication866"></a><div class=inner id="innerindication866" style="display:none;"><ol class="enumeratechiffre">
+ <li> Chercher une base de $F$.
+ <li> Les vecteurs engendrant $G$ doivent être contenus dans $F$.
+ <li> Utiliser le théorème de la base incomplète.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige866','imagecorrige866',866);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige866"></a><div class=inner id="innercorrige866" style="display:none;"><ol class="enumeratechiffre">
+<li> On va déterminer une base de $F$. Pour cela, on écrit que 
+\begin{eqnarray*}
+(x,y,z,t)\in F&\iff& 
+\left\{\begin{array}{rcl}
+x+y+z&=&0\\
+2x+y+z-t&=&0\\
+\end{array}\right.
+\\
+&\iff& \left\{\begin{array}{rcl}
+x+y+z&=&0\\
+x-t&=&0\\
+\end{array}\right.
+\\
+&\iff& \left\{\begin{array}{rcl}
+x&=&x\\
+y&=&-x-z\\
+z&=&z\\
+t&=&x\\
+\end{array}\right.
+\end{eqnarray*}
+On en déduit qu'une base de $F$ est donnée par les vecteurs $u_1=(1,-1,0,1)$ et $u_2=(0,-1,1,0)$ et donc que $F$ est de dimension 2.
+<li> On commence par vérifier que les vecteurs qui engendrent $G$, à savoir $(1,-2,1,1),(1,2,-3,1)$ et $(5,-3,-2,5)$
+sont éléments de $F$, ce qui est très facile en utilisant les équations de $F$. Ceci prouve alors que $G\subset F$.
+Pour prouver que $G=F$, il suffit de prouver que $\dim F=\dim G$. Mais $F$ a pour dimension 2, et $G$ est de dimension
+supérieure ou égale à 2 car les deux vecteurs $(1,-2,1,1)$ et $(1,2,-3,1)$ ne sont pas colinéaires. Comme $G\subset F$,
+on sait que la dimension de $G$ est inférieure ou égale à la dimension de $F$. On trouve finalement que $\dim F=\dim
+G=2$, et puisque $G\subset F$, ceci entraine $F=G$.
+<li> En utilisant le théorème de la base incomplète, on va trouver deux vecteurs $u_3$ et $u_4$ de sorte
+que $(u_1,u_2,u_3,u_4)$ soit une base de $\mathbb R^4$. Alors, $H=\textrm{vect}(u_3,u_4)$ sera un supplémentaire de $F$ dans
+$\mathbb R^4$. D'après le théorème de la base incomplète, on sait qu'on peut choisir les vecteurs $u_3$ et $u_4$ parmi les
+vecteurs de la base canonique. On vérifie facilement ici que $u_3=e_1$ et $u_4=e_4$ conviennent. Donc
+$H=\textrm{vect}(e_1,e_4)$ est un supplémentaire de $F$ dans $\mathbb R^4$.
+</ol></div></div></div>
+
+<div class=titrepartie>L'exercice standard</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater867"></span><script>var myRating = raterJs( { element:document.querySelector("#rater867"),	max:5, rating:1.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(867,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exercice de synthèse <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=867.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(867,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce867','imageenonce867');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce867"></a><div class=inner id="innerenonce867">On considère dans $\mathbb R^4$ :
+$$\begin{array}{llll}
+v_1=(1,2,0,1)&v_2=(1,0,2,1)&v_3=(2,0,4,2)\\
+w_1=(1,2,1,0)&w_2=(-1,1,1,1)&w_3=(2,-1,0,1)&w_4=(2,2,2,2).
+\end{array}$$
+<ol class="enumeratechiffre">
+<li> Montrer que $(v_1,v_2)$ est libre et que $(v_1,v_2,v_3)$ est liée.
+<li> Montrer que $(w_1,w_2,w_3)$ est libre et que $(w_1,w_2,w_3,w_4)$ est liée.
+<li> Montrer que $(v_1,v_2,w_1,w_2)$ est libre.
+<li> Soit $F$ le sous-espace vectoriel de $\mathbb R^4$ engendré par $(v_1,v_2,v_3)$.
+<ol class="enumeratechiffre">
+<li> Déterminer une base de $F$.
+<li> Donner un supplémentaire de $F$.
+</ol>
+<li> Soit $G$ le sous-espace vectoriel engendré par 
+$(w_1,w_2,w_3,w_4)$. Déterminer une base de $G$.
+<li><ol class="enumeratechiffre">
+<li> A l'aide des bases trouvées en 4. et 5. construire
+un système générateur de $F+G$.
+<li> En déduire que $F+G=\mathbb R^4$.
+</ol>
+<li><ol class="enumeratechiffre">
+<li> Montrer que $v_1+v_2$ est dans $F\cap G$.
+<li> Calculer la dimension de $F\cap G$.
+<li> Donner une base de $F\cap G$.
+</ol>
+<li> $F$ et $G$ sont-ils supplémentaires?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication867','imageindication867');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication867"></a><div class=inner id="innerindication867" style="display:none;"><ol class="enumeratechiffre">
+<li> $v_3=2v_2$.
+<li> Méthode classique... ou $w_4=w_1+w_2+w_3$.
+<li> Toujours pareil...
+<li><ol class="enumeratechiffre">
+<li> Utiliser la question 1.
+<li> Utiliser la question 3.
+</ol>
+<li> Utiliser la question 2.
+<li><ol class="enumeratechiffre">
+<li> Un système générateur de $F+G$ est obtenu en faisant la réunion d'un système générateur
+de $F$ et d'un système générateur de $G$.
+<li> Utiliser la question 3.
+</ol>
+<li><ol class="enumeratechiffre">
+<li> Facile!
+<li> Utiliser un théorème du cours.
+<li> Il suffit de trouver un système libre de $F\cap G$ comportant le même nombre
+de vecteurs que la dimension de $F\cap G$.
+</ol>
+<li> Utiliser la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige867','imagecorrige867',867);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige867"></a><div class=inner id="innercorrige867" style="display:none;"><ol class="enumeratechiffre">
+<li> $v_1$ et $v_2$ ne sont pas proportionnels, donc la famille $(v_1,v_2)$ est libre.
+En revanche, $v_3=2v_2$ et donc $(v_1,v_2,v_3)$ est liée.
+<li> Soit $aw_1+bw_2+cw_3=0$. On trouve le système
+$$\left\{
+\begin{array}{rcl}
+a-b+2c&=&0\\
+2a+b-c&=&0\\
+a+b&=&0\\
+b+c&=&0
+\end{array}\right.\iff
+\left\{
+\begin{array}{rcl}
+a-b+2c&=&0\\
+3b-5c&=&0\\
+2b-2c&=&0\\
+b+c&=&0
+\end{array}\right.$$
+Les deux dernières équations donnent immédiatement $b=c=0$ et en revenant à la première on obtient aussi $a=0$.
+Ainsi, la famille $(w_1,w_2,w_3)$ est libre. &Eacute;tudions maintenant
+$aw_1+bw_2+cw_3+dw_4=0$. On trouve le système
+$$\left\{
+\begin{array}{rcl}
+a-b+2c+2d&=&0\\
+2a+b-c+2d&=&0\\
+a+b+2d&=&0\\
+b+c+2d&=&0
+\end{array}\right.\iff
+\left\{
+\begin{array}{rcl}
+a-b+2c+2d&=&0\\
+3b-5c-2d&=&0\\
+2b-2c&=&0\\
+b+c+2d&=&0
+\end{array}\right.$$
+$$\iff
+\left\{
+\begin{array}{rcl}
+a+b+2d&=&0\\
+-2b-2d&=&0\\
+c&=&b\\
+2b+2d&=&0
+\end{array}\right.$$
+La seconde et la dernière équation sont identiques, et on trouve que le système est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+a&=&b\\
+b&=&b\\
+c&=&b\\
+d&=&-b
+\end{array}\right.$$
+Ainsi, $w_1+w_2+w_3-w_4=0$ : la famille $(w_1,w_2,w_3,w_4)$ est liée. Bien sûr, on pouvait remarquer dès le départ
+que $w_4=w_1+w_2+w_3\dots$.
+<li> On résout toujours l'équation $av_1+bv_2+cw_1+dw_2=0$ et on prouve que $a=b=c=d=0$.
+Le détail des calculs est laissé au lecteur courageux...
+<li><ol class="enumeratechiffre">
+<li> $(v_1,v_2,v_3)$ est une famille génératrice de $F$ mais ce n'est pas une base de $F$ car elle n'est pas libre.
+Puisque $v_3$ est combinaison linéaire de $v_1$ et $v_2$, la famille $(v_1,v_2)$ engendre aussi $F$. Elle est libre : c'est une
+base de $F$.
+<li> Puisque $(v_1,v_2,w_1,w_2)$ est une famille libre de 4 vecteurs dans un espace de dimension 4,
+c'est une base de $\mathbb R^4$. Si $F_0$ est le sous-espace vectoriel engendré par $w_1$ et $w_2$,
+alors $F_0$ est un supplémentaire de $F$. En effet, $F\cap F_0=\{0\}$, puisqu'un élément $x$ 
+de $F\cap F_0$ s'écrit à la fois $x=av_1+bv_2=av_1+bv_2+0w_1+0w_2$ et $x=cw_1+dw_2=0v_1+0v_2+cw_1+dw_2$
+ce qui entraine, par unicité de l'écriture dans une base, $a=b=c=d=0$ et $x=0$. De plus, 
+$\dim(F\oplus F_0)=\dim(F)+\dim(F_0)=4$, et donc $F\oplus F_0$ est un sous-espace de $\mathbb R^4$ de
+dimension 4 : $F\oplus F_0=\mathbb R^4$.
+</ol>
+<li> En raisonnant comme à la question précédente, mais en utilisant cette fois le résultat
+de la question 2. on trouve que $(w_1,w_2,w_3)$ est une base de $G$.
+<li><ol class="enumeratechiffre">
+<li> Un système générateur de $F+G$ est obtenu en faisant la réunion d'un système générateur
+de $F$ et d'un système générateur de $G$. La famille
+$(v_1,v_2,v_3,w_1,w_2,w_3,w_4)$ est donc un système générateur de $F+G$.
+<li> D'après la question 3, $(v_1,v_2,w_1,w_2)$ est une famille libre.
+Puisqu'elle comporte quatre éléments, c'est une base de $\mathbb R^4$. Ainsi,
+le sous-espace vectoriel qu'elle engendre est égal à $\mathbb R^4$.
+Or, on a $\textrm{vect}(v_1,v_2,w_1,w_2)\subset F+G$, et donc
+$F+G=\mathbb R^4$ puisqu'il contient $\mathbb R^4$ (et est évidemment contenu
+dans $\mathbb R^4$).
+</ol>
+<li><ol class="enumeratechiffre">
+<li> Puisque $v_1$ et $v_2$ sont dans $F$ et que $F$ est un espace vectoriel,
+$v_1+v_2$ est dans $F$. De plus, $v_1+v_2=w_4\in G$.
+<li> Par le théorème des quatre dimensions, on a
+$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)$$
+d'où on tire $4=2+3-\dim(F\cap G)$, soit $\dim(F\cap G)=1$.
+<li> Puisque $w_4\in F\cap G$ et $w_4\neq 0$, la famille $(w_4)$ est une famille libre
+de un vecteur dans un espace de dimension 1. C'est une base de $F\cap G$.
+</ol>
+<li> Non, $F\cap G\neq\{0\}$.
+</ol></div></div></div>
+
+<div class=titrepartie>L'exercice pour les héros</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater898"></span><script>var myRating = raterJs( { element:document.querySelector("#rater898"),	max:5, rating:2.6363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(898,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Supplémentaire commun <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=898.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(898,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce898','imageenonce898');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce898"></a><div class=inner id="innerenonce898">Soit $E$ un espace vectoriel de dimension finie $n$, et $F$, $G$ deux sous-espaces
+vectoriels de $E$ de même dimension $p&lt;n$. Montrer que $F$ et $G$ ont un supplémentaire commun,
+c'est-à-dire qu'il existe un sous-espace $H$ de $E$ tel que $F\oplus H=G\oplus H=E$.</div></div><div class=indication><a href="javascript:showAll('innerindication898','imageindication898');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication898"></a><div class=inner id="innerindication898" style="display:none;">Commencer par le cas où $p=n-1$, et considérer la droite vectorielle engendrée
+par un vecteur qui n'appartient ni à $F$, ni à $G$. Puis itérer.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige898','imagecorrige898',898);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige898"></a><div class=inner id="innercorrige898" style="display:none;">On raisonne par récurrence descendante sur $p\in\{0,\dots,n-1\}$. Traitons d'abord 
+le cas $p=n-1$. On sait que $F\cup G\neq E$. En effet, si $F=G$ ce n'est pas le cas, et si
+$F\neq G$, alors on n'a ni $F\subset G$, ni $G\subset F$ (les deux espaces ont même dimension,
+une inclusion entraînerait l'égalité), et donc $F\cup G$ n'est pas un espace vectoriel.
+En particulier, il n'est pas égal à $E$. On peut choisir $a$ tel que $a\notin F\cup G$.
+Alors $F\cap\textrm{vect}(a)=\{0\}$ et $G\cap\textrm{vect(a)}=\{0\}$. $F$ et
+$\textrm{vect}(a)$ (resp. $G$ et $\textrm{vect}(a)$) sont en somme directe, et
+puisque $\dim(F\oplus \textrm{vect}(a))=n$ (resp. $\dim(G\oplus \textrm{vect}(a))=n$),
+on a $F\oplus\textrm{vect}(a)=G\oplus\textrm{vect}(a)=E$. $\textrm{vect}(a)$ est le supplémentaire
+commun recherché.<br>
+Supposons maintenant le résultat prouvé pour $p+1$, et prouvons-le pour $p$. Comme précédemment, on
+peut trouver $a\notin F\cup G$ et comme précédemment,  $F$ et
+$\textrm{vect}(a)$ (resp. $G$ et $\textrm{vect}(a)$) sont en somme directe. Posons
+$F_1=F\oplus\textrm{vect}(a)$ et $G_1=G\oplus\textrm{vect}(a)$. Alors $F_1$ et $G_1$ ont même
+dimension, égale à $p+1$. D'après l'hypothèse de récurrence, ils possèdent un supplémentaire commun
+que l'on note $H_1$. Mais alors, $F$ et $\textrm{vect}(a)\oplus H_1$ sont en somme directe.
+En effet, si $x\in F\cap\textrm{vect}(a)\oplus H_1$, on a $x=f=\lambda a+h$, avec $f\in F$, $\lambda\in \mathbb K$
+et $h \in H_1$. On en déduit $h=f-\lambda a\in H_1\cap F_1=\{0\}$ et donc $h=0$. Puisque $F\cap\textrm{vect}(a)=\{0\}$,
+on obtient également $f=0$ et $\lambda=0$, et par suite $x=0$. Ainsi, si on pose $H=\textrm{vect}(a)\oplus H_1$,
+alors $H$ et $F$ sont en somme directe et $H+F=E$. De même, $H$ et $G$ sont en somme directe et $H+G=E$. On en déduit que $F$ et $G$ ont un
+supplémentaire commun.<br>
+Ceci achève la preuve par récurrence.</div></div></div>
+
+<div class=cardcours>
+<div class="titrecours">Espaces vectoriels de dimension finie</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcours%252Fdimfinie.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Ffeuillesexo%252Fdimfinie&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fmethodes%252Fdimfinie.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fcolles%252Fdimfinie&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fvideos%252Fdimfinie.html">Vidéos</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mpsi%252Fquizz%252Fdimfinie.html">Quizz</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

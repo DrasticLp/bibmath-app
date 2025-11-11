@@ -1,0 +1,390 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Compacité : théorèmes d'Ascoli et de Stone-Weierstrass</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Compacité : théorèmes d'Ascoli et de Stone-Weierstrass</h1>
+<div class=titrepartie>Théorème de Stone-Weierstrass</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3367"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3367"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3367,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit tensoriel <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3367.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3367,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3367','imageenonce3367');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3367"></a><div class=inner id="innerenonce3367">Soit $X$ un espace métrique compact. On munit $X^2$ de la topologie produit.
+Si $u$ et $v$ sont deux fonctions continues sur $X,$ à valeurs réelles, on définit leur produit tensoriel $u\otimes v$ par 
+$$(u\otimes v)(x,y)=u(x)v(y)$$
+pour $x,y\in X.$ 
+<ol class="enumeratechiffre">
+<li> Montrer que le sous-espace vectoriel $\mathcal C(X)\otimes \mathcal C(X)$ de $\mathcal C(X^2)$ engendré par toutes les fonctions $u\otimes v,$ pour $u,v\in\mathcal C(X)$, est dense dans $\mathcal C(X^2).$
+<li> Application : On suppose dans cette question que $X=[0,1]$. Pour $K\in\mathcal C([0,1]^2)$ et $f\in\mathcal C([0,1])$, on définit $T_K(f)$ par
+$$T_K(f)(x)=\int_0^1 K(x,y)f(y)dy,\ x\in[0,1].$$
+La fonction $T_Kf$ est élément de $\mathcal C([0,1])$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $T_K:\mathcal C([0,1])\to\mathcal C([0,1])$ est continue.
+<li> Démontrer que, pour tout $\veps&gt;0$, il existe $T\in\mathcal L(\mathcal C([0,1]))$ de rang fini tel que 
+$$\|T-T_K\|&lt;\veps.$$ 
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3367','imageindication3367');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3367"></a><div class=inner id="innerindication3367" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le théorème de Stone-Weierstrass.
+<li>
+<ol class="enumeratechiffre">
+<li> Comment démontre-t-on la continuité des applications linéaires?
+<li> Commencer par approcher $K$ par $L(x,y)=\sum_{i=1}^n u_i(x)v_i(y)$ puis $T_K$ par $T_L$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3367','imagecorrige3367',3367);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3367"></a><div class=inner id="innercorrige3367" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit d'appliquer le théorème de Stone-Weierstrass. Pour cela, on va vérifier ses hypothèses. On note $E=\mathcal C(X)\otimes \mathcal C(X).$
+<ul class="rien">
+<li> $X^2$ est compact comme produit de deux compacts.
+<li> $E$ est par définition un sous-espace vectoriel de $\mathcal C(X^2)$.
+<li> $E$ est une sous-algèbre de $\mathcal C(X^2)$. Pour le voir, il suffit de vérifier que, pour tous $u_1,u_2,v_1,v_2$ de $\mathcal C(X)$, $(u_1\otimes v_1)\cdot (u_2\otimes v_2)\in E.$ Or, 
+\begin{align*}
+(u_1\otimes v_1)\cdot (u_2\otimes v_2)(x,y)&=u_1\otimes v_1(x,y)\times u_2\otimes v_2(x,y)\\
+&=\big(u_1(x)v_1(y)\big)\big(u_2(x)v_2(y)\big)\\
+&=\big((u_1(x)u_2(x)\big)(v_1(y)v_2(y)\big)\\
+&=(u_1 u_2)\otimes (v_1v_2)(x,y)
+\end{align*}
+<li> $E$ contient les fonctions constantes : on a $c=c\otimes 1.$
+<li> $E$ sépare les points de $X^2$ : soit $(x_1,y_1)$ et $(x_2,y_2)$ deux points différents de $X^2.$ Par exemple, on peut supposer que $x_1\neq x_2.$ Soit $u$ une fonction continue de $\mathcal C(X)$ qui sépare $x_1$ et $x_2$
+(par exemple, $u=d(x,x_1)$). Alors $u\otimes \mathbf 1$ est élément de $E$ et
+$$u\otimes \mathbf 1(x_1,y_1)=u(x_1)\neq u(x_2)=u\otimes \mathbf 1(x_2,y_2).$$
+</ul>
+<li> <ol class="enumeratechiffre">
+<li> Remarquons que $T_K$ est un endomorphisme de $\mathcal C([0,1])$. De plus, pour tout $f\in\mathcal C([0,1])$, on a 
+$$\|T_K(f)\|_\infty\leq \|K\|_\infty \|f\|_\infty.$$
+Ainsi, $T_K$ est continue, et $\|T_K\|\leq \|K\|_\infty.$
+<li> D'après la première  partie de l'exercice, il existe $n\geq 1$ et $u_1,\dots,u_n,v_1,\dots,v_n$ tels que, si on pose $L(x,y)=\sum_{i=1}^n u_i(x)v_i(y),$ alors $\|K-L\|_\infty&lt;\veps.$
+On remarque alors que $T_L$ est un opérateur de rang fini : en effet, pour tout $f\in\mathcal C([0,1])$, on a 
+$$T_Lf(x)=\sum_{i=1}^n\left( \int_0^1 v_i(y)f(y)dy\right)u_i(x)$$
+et donc $T_L(f)\in\textrm{vect}(u_1,\dots,u_n)$. De plus, il est facile de voir, par linéarité de l'intégrale, que $T_{K}-T_L=T_{K-L}$. Ainsi, 
+$$\|T_{K}-T_L\|=\|T_{K-L}\|\leq \|K-L\|_\infty&lt;\veps.$$
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3377"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3377"),	max:5, rating:2.2307692307692, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3377,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Certains types de polynômes <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3377.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3377,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3377','imageenonce3377');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3377"></a><div class=inner id="innerenonce3377">Soit $a&lt;b$ des réels et soit $k\in\mathbb N^*$.
+<ol class="enumeratechiffre">
+<li> On suppose que $k$ est impair. Démontrer que $\{P(x^k):\ P\in\mathbb R[X]\}$ est dense dans $\mathcal C([a,b],\mathbb R).$
+<li> Démontrer que si $k$ est pair, le résultat précédent n'est plus vrai pour tout choix de $(a,b)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3377','imageindication3377');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3377"></a><div class=inner id="innerindication3377" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser le théorème de Stone-Weierstrass.
+<li> Démontrer que si $a=-1$ et $b=1,$ on ne peut pas approcher la fonction $f(x)=x$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3377','imagecorrige3377',3377);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3377"></a><div class=inner id="innercorrige3377" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $\mathcal A=\{P(x^k):\ P\in\mathbb R[X]\}$. Alors $\mathcal A$ est une sous-algèbre de $\mathcal C([a,b],\mathbb R)$ qui contient les constantes et sépare les points de $[a,b]$ (par exemple parce que la fonction $x\mapsto x^k$ est injective puisque $k$ est impair). Le résultat est donc une conséquence immédiate du théorème de Stone-Weierstrass.
+<li> Ce qui ne fonctionne plus dans la démonstration précédente est la séparation des points de $[a,b]$, car la fonction $x\mapsto x^k$ n'est plus injective. Pour $a=-1$ et $b=1,$ on va utiliser que les fonctions du type $P(x^k)$ sont paires pour démontrer qu'on ne peut pas approcher la fonction $f(x)=x.$ En effet, si $\{P(x^k):\ P\in\mathbb R[X]\}$ était dense dans $\mathcal C([-1,1],\mathbb R),$ alors pour $\veps=1/2,$ il existerait $P\in\mathbb R[X]$ tel que, pour tout $x\in[-1,1],$ 
+$$|x-P(x^k)|\leq 1/2.$$
+Pous $x=1$ et $x=-1,$ on trouverait $|1-P(1)|&lt;1/2$ et $|-1-P(1)|&lt;1/2.$ On en déduirait
+$$|1-(-1)|\leq |1-P(1)|+|-1-P(-1)|&lt;1$$
+ce qui est faux! Donc $\{P(x^k):\ P\in\mathbb R[X]\}$ n'est pas dense dans $\mathcal C([-1,1],\mathbb R).$ 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3368"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3368"),	max:5, rating:2.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3368,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions lipschitziennes <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3368.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3368,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3368','imageenonce3368');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3368"></a><div class=inner id="innerenonce3368">Soit $(K,d)$ un espace métrique compact. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $K$ est séparable (c'est-à-dire qu'il contient une partie dénombrable dense). Dans la suite, on fixe $D$ une partie dénombrable dense. 
+<li> Pour $a\in K,$ on note $d_a$ la fonction continue définie par $d_a(x)=d(x,a)$. Montrer que la famille $\{d_a:\ a\in D\}$  sépare les points de $K.$ Que peut-on dire de la sous-algèbre $A$ de $\mathcal C(K)$ engendrée par  $\mathbf 1$ et les fonctions $d_a$ pour $a\in D?$
+<li> Montrer que l'ensemble des fonctions lipschitziennes sur $K$ est dense
+dans l'espace $\mathcal C(K)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3368','imageindication3368');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3368"></a><div class=inner id="innerindication3368" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour tout $\veps&gt;0,$ on peut recouvrir $K$ par un nombre fini de boules
+de rayon $\veps.$ Choisir $\veps=1/n.$
+<li> Utiliser le théorème de Stone-Weierstrass.
+<li> Prouver que cet ensemble contient $A$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3368','imagecorrige3368',3368);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3368"></a><div class=inner id="innercorrige3368" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour tout $n\geq 1,$ il existe une partie finie $F_n$ de $K$ 
+telle que $K=\bigcup_{x\in F_n}B(x,1/n)$. Notons $D$ la réunion des $F_n.$
+C'est un ensemble dénombrable, et il est dense dans $K.$ En effet, pour tout $x\in K$ et tout $\veps&gt;0,$ on peut choisir un entier $n$ tel que $1/n&lt;\veps;$
+il existe alors $x\in F_n$ tel que $z\in B(x,1/n)$ et donc $d(x,z)&lt;1/n\leq\veps.$
+<li> Soit $x,y\in K$ avec $x\neq y.$ Soit $(a_n)$ une suite de $D$ qui converge vers $x$. Alors $d_a(x,a_n)\to 0$ et comme $(a_n)$ ne converge pas vers $y$ (par unicité de la limite), on n'a pas $d_a(y,a_n)$ qui tend vers $0.$ Ainsi,
+il existe un entier $n$ tel que $d_{a_n}(x)\neq d_{a_n}(y)$
+ce qui prouve la propriété de séparation.
+
+La sous-algèbre de $\mathcal C(K)$ engendrée par $\mathbf 1$ et les fonctions $d_a,$ pour $a\in D,$ sépare donc les points de $K.$ Elle contient les constantes et, dans le cas complexe, elle est stable par conjugaison puisque $d_a$ est réelle. Par le théorème de Stone-Weierstrass, $A$ est dense dans $\mathcal C(K).$
+<li> Les fonctions $d_a$ sont lipschitziennes. De plus, l'ensemble des fonctions lipschitziennes $\textrm{Lip}(K)$ est une sous-algèbre de $\mathcal C(K).$ C'est un sous-espace vectoriel de $\mathcal C(K),$ et il suffit donc de vérifier qu'il est stable par produit. Mais si $f$ et $g$ sont lipschitziennes, de constantes de Lipschitz respectives $C_f$ et $C_g,$ alors
+\begin{align*}
+|(fg)(x)-(fg)(y)|&=|f(x)g(x)-f(y)g(x)+f(y)g(x)-f(y)g(y)|\\
+&\leq C_f \|g\|_\infty d(x,y)+C_g \|f\|_\infty d(x,y).
+\end{align*}
+Donc $\textrm{Lip}(K)$ contient $A$ et ainsi est dense dans $\mathcal C(K).$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater3369"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3369"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3369,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur les hypothèses <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3369.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(3369,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3369','imageenonce3369');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3369"></a><div class=inner id="innerenonce3369">Soit $D$ le disque unité fermé et soit $A$ la sous-algèbre de $\mathcal C(D,\mathbb C)$ engendrée par la fonction $\mathbf 1$ et la fonction $z\mapsto z$.  
+<ol class="enumeratechiffre">
+<li> Démontrer que $A$ contient les constantes et sépare les points de $D.$
+<li> Soit $f\in A.$ Démontrer que $\int_{0}^{2\pi}f(e^{i\theta})d\theta=2\pi f(0)$.
+<li> En déduire que $A$ n'est pas dense dans $\mathcal C(D,\mathbb C).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3369','imageindication3369');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3369"></a><div class=inner id="innerindication3369" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Commencer par remarquer que $A$ est l'ensemble des polynômes en $z$, et vérifier que la formule est vraie pour un monôme. 
+<li> Trouver une fonction de $\mathcal C(D,\mathbb C)$ pour laquelle la formule démontrée à la question précédente est fausse.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3369','imagecorrige3369',3369);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3369"></a><div class=inner id="innercorrige3369" style="display:none;"><ol class="enumeratechiffre">
+<li> $A$ contient évidemment les constantes puisqu'elle contient les multiples de la fonction $\mathbf 1$. Si $z_1\neq z_2$ sont dans $D,$ alors $f(z_1)\neq f(z_2)$ où $f(z)=z\in A.$
+<li> La sous-algèbre engendrée par $A$ n'est rien d'autre que l'ensemble des polynômes en $z$. Par linéarité, il suffit de démontrer que la formule est vraie si $f=\mathbf 1$ et si $f=z^k$ pour $k\in\mathbb N^*$. Elle est trivialement vraie si $f=\mathbf 1.$ D'autre part, si $f=z^k,$ alors 
+$$\int_0^{2\pi}e^{ik\theta}d\theta=\frac{1}{ik}\left[e^{ik\theta}\right]_0^{2\pi}=0=f(0).$$
+<li> Si $A$ était dense dans $\mathcal C(D,\mathbb C),$ alors puisque 
+$$|f(0)-g(0)|\leq \|f-g\|_\infty$$
+et 
+$$\left|\int_0^{2\pi}\big(f(e^{i\theta})-g(e^{i\theta})\big)d\theta\right|
+\leq 2\pi \|f-g\|_\infty$$
+on aurait
+par passage à la limite 
+$$\int_0^{2\pi}f(e^{i\theta})d\theta=2\pi f(0)$$
+pour tout $f\in\mathcal C(D,\mathbb C).$ Mais cette formule est par exemple fausse si $f(z)=|z|,$ puisqu'alors $f(0)=0$ et 
+$$\int_0^{2\pi}f(e^{i\theta})d\theta=2\pi.$$
+</ol></div></div></div>
+
+<div class=titrepartie>Théorème d'Ascoli</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater3378"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3378"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3378,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Adhérence de parties équicontinues <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3378.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(3378,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3378','imageenonce3378');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3378"></a><div class=inner id="innerenonce3378">Soit $X$ un espace métrique et $A\subset\mathcal C(X,\mathbb R)$ une partie équicontinue. Démontrer que $\bar A$ est équicontinue.</div></div><div class=indication><a href="javascript:showAll('innerindication3378','imageindication3378');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3378"></a><div class=inner id="innerindication3378" style="display:none;">Passer à la limite!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3378','imagecorrige3378',3378);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3378"></a><div class=inner id="innercorrige3378" style="display:none;">Soit $x_0\in X$ et $\veps&gt;0.$ Puisque $A$ est équicontinue en $x_0,$ il existe $\delta&gt;0$ tel que, pour tout $x\in X,$ pour tout $f\in A,$ si $d(x,x_0)&lt;\delta,$ alors $|f(x)-f(x_0)|&lt;\veps.$ Soit maintenant $f\in \bar A$ et $(f_n)$ une suite de $A$ qui converge vers $f$ dans $\mathcal C(X,\mathbb R).$ En particulier, pour tout $y\in Y,$ $(f_n(y))$ converge vers $f(y).$ Alors on sait que pour $n\in\mathbb N$ et $d(x,x_0)&lt;\delta,$ on a $|f_n(x)-f_n(x_0)|&lt;\veps.$ Il suffit de passer à la limite pour en déduire que $|f(x)-f(x_0)|\leq\veps.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3372"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3372"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3372,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limite simple de fonctions équicontinues <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3372.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3372,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3372','imageenonce3372');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3372"></a><div class=inner id="innerenonce3372">Soit $X$ et $Y$ deux espaces métriques et $(f_n)$ une suite de fonctions de $X$ dans $Y$ équicontinue sur $X$ et qui converge simplement vers $f$ sur $X$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $f$ est continue sur $X.$
+<li> On suppose de plus que $X$ est compact. Démontrer que la convergence est uniforme sur $X.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3372','imageindication3372');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3372"></a><div class=inner id="innerindication3372" style="display:none;"><ol class="enumeratechiffre">
+<li> Passer à la limite (c'est possible par équicontinuité!).
+<li> &Eacute;crire l'équicontinuité en $x$, obtenir un $\delta_x$ et extraire de $\bigcup_{x\in X}B(x,\delta_x)$ un sous-recouvrement fini.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3372','imagecorrige3372',3372);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3372"></a><div class=inner id="innercorrige3372" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in X$ et $\veps&gt;0.$ Par équicontinuité, il existe $\delta&gt;0$ tel que, pour tout $n\in \mathbb N$ et tout $y\in X,$ 
+$$d_X(x,y)&lt;\delta\implies d_Y(f_n(x),f_n(y))&lt;\veps.$$
+Puisque $f_n(x)\to f(x)$ et $f_n(y)\to f(y)$, on peut passer à la limite et on trouve
+$$d_X(x,y)&lt;\delta\implies d_Y(f(x),f(y))\leq \veps.$$
+Ceci prouve la continuité de $f$ en $x.$ 
+<li> Soit $x\in X$ et $\veps&gt;0.$ Par équicontinuité de $(f_n)$ et continuité de $f,$ il existe $\delta_x&gt;0$ tel que, pour tout $n\in \mathbb N$ et tout $y\in X,$ 
+$$d_X(x,y)&lt;\delta_x\implies d_Y(f_n(x),f_n(y))&lt;\veps\textrm{ et }d_Y(f(x),f(y))&lt;\veps.$$
+On sait que $X=\bigcup_{x\in X}B(x,\delta_x).$ Puisque $X$ est compact, on peut extraire de ce recouvrement ouvert un sous-recouvrement fini, et on écrit 
+$$X=\bigcup_{i=1}^p B(x_i,\delta_i).$$
+Pour chaque $i\in\{1,\dots,p\}$, la suite $(f_n(x_i))$ converge vers $f(x_i).$
+Il existe donc un entier $N_i$ tel que, pour tout $n\geq N_i,$ on a 
+$$d_Y(f_n(x_i),f(x_i))&lt;\veps.$$
+Posons $N=\max(N_1,\dots,N_p)$ et considérons $x\in X.$ Alors il existe $i\in\{1,\dots,p\}$ tel que $d_X(x,x_i)&lt;\delta_i.$ Mais alors, par l'inégalité triangulaire, pour $n\geq N$ (en particulier, $n\geq N_i$),
+\begin{align*}
+d_Y(f_n(x),f(x))&\leq d_Y(f_n(x),f_n(x_i))+d_Y(f_n(x_i),f(x_i))+d_Y(f(x_i),f(x_i))\\
+&\leq 3\veps.
+\end{align*}
+Ceci prouve bien la convergence uniforme de $(f_n)$ vers $f.$
+</ol>
+
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3376"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3376"),	max:5, rating:1.9230769230769, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3376,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composition et équicontinuité <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3376.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3376,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3376','imageenonce3376');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3376"></a><div class=inner id="innerenonce3376">Soit $A,B\subset \mathcal C(\mathbb R,\mathbb R)$. Démontrer que si $A$ est équicontinue et si $B$ est uniformément équicontinue, alors $B\circ A=\{g\circ f:\ g\in B,\ f\in A\}$ est équicontinue. Le résultat reste-t-il vrai si $B$ est supposée simplement équicontinue?</div></div><div class=indication><a href="javascript:showAll('innerindication3376','imageindication3376');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3376"></a><div class=inner id="innerindication3376" style="display:none;">Pour la deuxième partie, on pourra prendre $B=\{x^2\}$ et réfléchir à pourquoi la fonction $x^2$ n'est pas uniformément continue.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3376','imagecorrige3376',3376);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3376"></a><div class=inner id="innercorrige3376" style="display:none;">Il suffit d'écrire les quantificateurs dans le bon sens! Soit $\veps&gt;0$ et $x_0\in\mathbb R.$ Puisque $B$ est uniformément équicontinue, il existe $\delta&gt;0$ tel que, pour tout $g\in B,$ pour tous $u,v\in\mathbb R$ avec $|u-v|&lt;\delta,$ alors $|g(u)-g(v)|&lt;\veps.$ <br>
+Ce $\delta$ fixé, puisque $A$ est équicontinue en $x_0,$ il existe $\eta&gt;0$ tel que, pour tout $f\in A,$ pour tout $x\in \mathbb R$ avec $|x-x_0|&lt;\eta,$ alors $|f(x)-f(x_0)|&lt;\delta.$<br>
+En mettent ceci bout à bout, on a prouvé que, pour tous $f,g\in A\times B,$ pour tout $x\in\mathbb R$ avec $|x-x_0|&lt;\eta,$ alors 
+$$|g\circ f(x)-g\circ f(x_0)|&lt;\veps,$$
+ce qui prouve bien que $B\circ A$ est équicontinue.<br>
+Le résultat devient faux si on ne suppose pas que $B$ est uniformément équicontinue. Choisissons $B=\{g\}$ où $g$ est la fonction définie par $g(x)=x^2$ et choisissons $A=\{f_a:\ a\in\mathbb R\},$ où $f_a(x)=x+a.$ Le choix de $B$ vient du fait que la fonction $g$ est continue sans être uniformément continue. 
+Démontrons que $B\circ A$ n'est pas équicontinue en $0.$ Si c'était le cas, pour $\veps=1,$ il existerait $\delta&gt;0$ tel que, pour tout $x\in\mathbb R$ avec $|x|\leq \delta,$ pour tout $a\in\mathbb R,$ on aurait 
+$$|f_a(x)-f_a(0)|\leq 1.$$
+En particulier, pour $x=\delta,$ on trouverait 
+$$\delta^2+2a\delta\leq 1.$$
+C'est impossible si on choisit $a&gt;1/\delta.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3370"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3370"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3370,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Parties compactes de fonctions holomorphes <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3370.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3370,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3370','imageenonce3370');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3370"></a><div class=inner id="innerenonce3370"><ol class="enumeratechiffre">
+<li> Rappeler les inégalités de Cauchy pour une fonction holomorphe.
+<li> Soit $r&lt;R$ et $f$ une fonction holomorphe dans $D(0,R)$, bornée par $1.$ 
+Démontrer que pour tout $z_0\in D(0,r)$, $|f'(z_0)|\leq \frac 1{R-r}.$
+<li> On note $K=\overline{D(0,r)}$ et $A$ l'ensemble des fonctions holomorphes dans $D(0,R)$ bornées par $1.$ Démontrer que $E=\{f_{|K}:\ f\in A\}$ est une partie relativement compacte de $\mathcal C(K,\mathbb C).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3370','imageindication3370');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3370"></a><div class=inner id="innerindication3370" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser les inégalités de Cauchy. 
+<li> Utiliser le théorème d'Ascoli. La question précédente nous permet de conclure à l'équicontinuité de $E.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3370','imagecorrige3370',3370);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3370"></a><div class=inner id="innercorrige3370" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $f$ est une fonction holomorphe dans un disque $D(z_0,\rho)$, alors, pour tout $n$ positif et tout
+$\gamma$ dans $]0,\rho[$, on a :
+$$\left|\frac{f^{(n)}(z_0)}{n!}\right|\leq \frac{M(\gamma)}{\gamma^n}$$
+où $M(\gamma)=\sup\{|f(z)|; |z-z_0|=\gamma\}$. En particulier, si $f$ est bornée par $1$ dans $D(z_0,\rho),$ en faisant tendre $\gamma$ vers $\rho,$ on trouve
+$$|f^{(n)}(z_0)|\leq \frac{n!}{\rho}.$$
+<li> Il suffit d'appliquer le théorème précédent avec $n=1$ et $\rho=R-r.$ 
+<li> Il suffit d'après le théorème d'Ascoli de démontrer qu'il s'agit d'une partie équicontinue et bornée. L'équicontinuité vient du fait que toutes les fonctions $f\in A$ sont $1/(R-r)$-lipschitziennes sur $K$ d'après la question précédente et l'inégalité des accroissements finis. De plus, pour tout $z\in A,$ $\{f(z):\ f\in A\}$ est contenu dans le disque unité fermé. C'est donc bien une partie bornée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater3375"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3375"),	max:5, rating:1.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3375,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Hypothèses du théorème d'Ascoli <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3375.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(3375,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3375','imageenonce3375');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3375"></a><div class=inner id="innerenonce3375">Une conséquence du théorème d'Ascoli est la suivante : si $(f_n)$ est une suite de fonctions équicontinue et bornée de $\mathcal C([a,b],\mathbb R),$ alors $(f_n)$ admet une sous-suite qui converge uniformément sur $[a,b]$. Dans cet exercice, on souhaite démontrer que l'on ne peut pas remplacer $[a,b]$ par $\mathbb R.$
+Pour cela, considérer la suite $(f_n)$ définie sur $\mathbb R$ par $f_n(x)=\frac1{1+(x-n)^2}.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3375','imagecorrige3375',3375);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3375"></a><div class=inner id="innercorrige3375" style="display:none;">On commence par remarquer que $\|f_n\|_\infty\leq 1,$ et donc que la suite $(f_n)$ est bornée. De plus, la suite $(f_n)$ est équicontinue : en effet, pour tout $x\in\mathbb R$ et pour tout $n\geq 1,$
+$$f_n'(x)=\frac{-2(x-n)}{(1+(x-n)^2)^2}.$$
+Or la fonction $y\mapsto \frac{y}{(1+y^2)^2}$ est bornée sur $\mathbb R$, disons par $M&gt;0$ (car c'est une fonction continue qui tend vers $0$ en l'infini). Donc 
+$$|f_n'(x)|\leq 2M$$
+et toutes les fonctions $f_n$ sont $2M$-lipschitziennes.
+D'autre part, la suite $(f_n)$ n'admet pas de sous-suite qui converge uniformément sur $\mathbb R.$ En effet, la suite $(f_n)$ converge simplement vers $0$ sur $\mathbb R$ et donc si une sous-suite admettait une limite uniforme, cette limite devrait être la fonction nulle. Mais $f_n(n)=1$ et donc $\|f_n-0\|_\infty\geq 1$ ce qui empêche la convergence uniforme.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3371"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3371"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3371,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un problème d'optimisation <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3371.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3371,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3371','imageenonce3371');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3371"></a><div class=inner id="innerenonce3371">Soit $F$ l'ensemble des fonctions de $[0,1]$ dans $\mathbb R$ qui sont $2$-lipschitziennes et qui vérifient $f(0)=0,$ $f(1)=0$. Démontrer qu'il existe $f\in F$ tel que 
+$$\int_0^1 f=\max\left\{\int_0^1 g:\ g\in F\right\}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3371','imageindication3371');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3371"></a><div class=inner id="innerindication3371" style="display:none;">Démontrer que $F$ est une partie compacte de $\mathcal C([0,1],\mathbb R)$ en utilisant le théorème d'Ascoli.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3371','imagecorrige3371',3371);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3371"></a><div class=inner id="innercorrige3371" style="display:none;">On va démontrer que $F$ est une partie compacte de $\mathcal C([0,1],\mathbb R)$ en utilisant le théorème d'Ascoli. D'une part, c'est une partie équicontinue, puisque toutes les fonctions de $F$ sont $2$-lipschitziennes. De plus, pour tout $x\in [0,1]$ et pour tout $f\in F,$
+$$|f(x)|\leq |f(x)-f(0)|\leq 2|x|\leq 2.$$
+Ainsi, pour tout $x\in[0,1]$, $\{f(x):\ f\in A\}$ est une partie bornée de $\mathbb R$ et d'après le théorème d'Ascoli, $F$ est une partie relativement compacte de $\mathcal C([0,1],\mathbb R).$ De plus, c'est une partie fermée : si $(f_n)$ est une suite de fonctions de $F$ qui converge uniformément vers $f$, alors, pour tous $x,y\in[0,1],$
+$$|f(x)-f(y)|=\lim_n |f_n(x)-f_n(y)|\leq 2|x-y|$$
+et 
+$$f(0)=\lim_n f_n(0)=0,\quad f(1)=\lim_n f_n(1)=0.$$
+Ainsi, $f\in F.$ On sait enfin que la forme linéaire $\phi\in\mathcal C([0,1],\mathbb R)\mapsto \int_0^1 \phi$ est continue, puisque 
+$$\left|\int_0^1 \phi\right|\leq \|\phi\|_\infty.$$
+Par compacité de $F,$ elle est bornée sur $F$ et atteint sa borne supérieure.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater3373"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3373"),	max:5, rating:1.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3373,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateurs à noyaux <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3373.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(3373,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3373','imageenonce3373');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3373"></a><div class=inner id="innerenonce3373">Soit $X$ un espace métrique compact et $E=\mathcal C(X,\mathbb R).$ 
+Soit $\mu$ une mesure positive finie sur $(X,\mathcal B(X))$ et soit $K\in\mathcal C(X\times X,\mathbb R).$ On pose, pour $u\in E$ et $x\in X,$
+$$Tu(x)=\int_X K(x,y)u(y)d\mu(y).$$
+Le théorème de continuité des intégrales à paramètres nous garantit que $Tu\in E.$ Démontrer que $T$ est un opérateur compact, c'est-à-dire que $\overline{T(B_E)}$ est une partie compacte de $E.$ </div></div><div class=indication><a href="javascript:showAll('innerindication3373','imageindication3373');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3373"></a><div class=inner id="innerindication3373" style="display:none;">Utiliser le théorème d'Ascoli.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3373','imagecorrige3373',3373);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3373"></a><div class=inner id="innercorrige3373" style="display:none;">Nous allons démontrer que $T(B_E)$ est relativement compact en utilisant le théorème d'Ascoli. D'une part, pour tout $x\in X$ et pour tout $u\in B_E,$ 
+$$|Tu(x)|\leq \int_ X |K(x,y)| \cdot |u(y)| d\mu(y) \leq \|K\|_\infty \|u\|_\infty \mu(Y)$$
+puisque $K$ et $u$, fonctions continues sur les compacts respectifs $X\times X$ et $X$, sont bornées. Ainsi, pour tout $x\in E,$ $\{Tu(x):\ u\in B_E\}$ 
+est borné.
+<br>
+D'autre part, soit $x\in X$, $\veps&gt;0$ et $u\in B_E.$ Alors, pour tout $x'\in X,$
+\begin{align*}
+|Tu(x)-Tu(x')|&\leq \int_X |K(x,y)-K(x',y)|\cdot \|u\|_\infty d\mu(y).
+\end{align*}
+Or, $K$ est uniformément continue sur la partie compacte $X\times X$. Ainsi, 
+il existe $\delta&gt;0$ (qui dépend uniquement de $\veps$) tel que 
+$$d(x,x')&lt;\delta\implies |K(x,y)-K(x',y)|&lt;\veps.$$
+On en conclut que, si $d(x,x')&lt;\delta,$ alors 
+$$|Tu(x)-Tu(x')|\leq \veps \|u\|_\infty \mu(Y)\leq \veps \mu(Y).$$
+Ceci prouve l'équicontinuité de $\{Tu:\ u\in B_E\}.$ 
+<br>
+Finalement, par le théorème d'Ascoli, 
+$\{Tu:\ u\in B_E\}$ est relativement compact et donc $T$ est compact.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3539"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3539"),	max:5, rating:2.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3539,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quicontinuité sur un compact connexe <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3539.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3539,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3539','imageenonce3539');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3539"></a><div class=inner id="innerenonce3539">Soit $X$ un espace métrique compact et soit $A\subset\mathcal C(X,\mathbb C)$ une partie équicontinue. Pour $x\in X,$ on note $A(x)=\{f(x):\ f\in A\}$.
+<ol class="enumeratechiffre">
+<li> Soit $E=\{x\in X:\ A(x)\textrm{ est borné}\}$. Démontrer que $E$ est une partie ouverte et fermée de $X$.
+<li> On suppose de plus que $X$ est connexe et qu'il existe $x_0\in X$ tel que $A(x_0)$ est borné. Démontrer que $A$ est une partie relativement compacte de $\mathcal C(X,\mathbb C)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3539','imageindication3539');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3539"></a><div class=inner id="innerindication3539" style="display:none;"><ol class="enumeratechiffre">
+<li> L'équicontinuité est un argument crucial !
+<li> La connexité permet de se ramener aux hypothèses du théorème d'Ascoli.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3539','imagecorrige3539',3539);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3539"></a><div class=inner id="innercorrige3539" style="display:none;"><ol class="enumeratechiffre">
+<li> Commençons par démontrer que $E$ est fermé. Soit $(x_n)$ une suite d'éléments de $E$ qui converge vers $x\in X$, et prouvons que $x\in E$. Par équicontinuité de $A$ en $x$, il existe $\delta&gt;0$ tel que, pour tout $y\in X,$ $$d(x,y)&lt;\delta\implies \forall f\in A,\ |f(x)-f(y)|&lt;1.$$
+Soit $n\in\mathbb N$ tel que $d(x_n,x)&lt;\delta$. Puisque $A(x_n)$ est borné, il existe $M&gt;0$ tel que, pour tout $f\in A,$ $|f(x_n)|\leq M.$ On en déduit que, pour tout $f\in A,$ 
+$$|f(x)|\leq |f(x)-f(x_n)|+|f(x_n)|\leq 1+M.$$
+Ainsi, $x\in E.$<br>
+Prouvons maintenant que $E$ est ouvert. Soit $x\in E$ et comme précédemment, soit $\delta&gt;0$ tel que, pour tout $y\in X,$
+$$d(x,y)&lt;\delta\implies |f(x)-f(y)|&lt;1.$$
+Puisque $A(x)$ est borné, il existe $M&gt;0$ tel que, pour tout $f\in A,$ $|f(x)|\leq M.$ Finalement on obtient que, pour tout $f\in A,$
+$$|f(y)|\leq |f(y)-f(x)|+|f(x)|\leq M+1.$$
+Ainsi, $B(x,\delta)\subset E$ qui est bien ouvert.
+<li> Si $X$ est connexe, $E$ est une partie non vide à la fois ouverte et fermée de $X$. Donc $E=X$ et on peut désormais appliquer le théorème d'Ascoli.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3414"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3414"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3414,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérateurs à noyau <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3414.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3414,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3414','imageenonce3414');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3414"></a><div class=inner id="innerenonce3414">Soit $K:[0,1]\times [0,1]\to\mathbb R$ une fonction continue. Pour tout $f\in\mathcal C([0,1])$, on définit
+$$Tf(x)=\int_0^x K(x,t)f(t)dt.$$
+<ol class="enumeratechiffre">
+<li> Soit $f\in\mathcal C([0,1])$. Démontrer que, pour tous $x,x'\in[0,1]$, on a 
+$$|(Tf)(x)-(Tf)(x')|\leq \left(\|K\|_\infty |x-x'|+\sup_{t\in[0,1]}|K(x,t)-K(x',t)|\right)\|f\|_\infty.$$
+<li> En déduire que $Tf\in\mathcal C([0,1])$.
+<li> Démontrer que $T$ est un opérateur compact, c'est-à-dire que $T(B)$ est une partie relativement compacte de $\mathcal C([0,1]),$ où $B$ est la boule unité de $\mathcal C([0,1])$ muni de $\|\cdot\|_\infty.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3414','imageindication3414');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3414"></a><div class=inner id="innerindication3414" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par utiliser la relation de Chasles sur une des deux intégrales.
+<li> Il faut utiliser des $\veps$ et l'uniforme continuité de $K$.
+<li> Théorème d'Ascoli!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3414','imagecorrige3414',3414);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3414"></a><div class=inner id="innercorrige3414" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit par la relation de Chasles
+\begin{align*}
+Tf(x)-Tf(x')&=\int_0^x K(x,t)f(t)dt-\int_0^{x}K(x',t)f(t)dt-\int_{x}^{x'}K(x',t)f(t)dt\\
+&=\int_0^x\big(K(x,t)-K(x',t)\big)f(t)dt-\int_x^{x'}K(x',t)f(t)dt
+\end{align*}
+Mais d'une part, pour tous $x,x'\in[0,1]$ et tout $t\in[0,x]$, on a 
+$$\big|\big(K(x,t)-K(x',t)\big) f(t)\big|\leq \sup_{s\in[0,1]}|K(x,s)-K(x',s)|\times\|f\|_\infty$$
+de sorte que 
+\begin{align*}
+\left|\int_0^x\big(K(x,t)-K(x',t)\big)f(t)dt\right|&\leq x\sup_{s\in[0,1]}|K(x,s)-K(x',s)|\times\|f\|_\infty\\
+&\leq \sup_{s\in[0,1]}|K(x,s)-K(x',s)|\times\|f\|_\infty.
+\end{align*}
+D'autre part, on a 
+$$|K(x',t)f(t)|\leq \|K\|_\infty \times\|f\|_\infty$$
+de sorte que 
+$$\left|\int_x^{x'}K(x',t)f(t)dt\right|\leq |x-x'|\|K\|_\infty\|f\|_\infty.$$
+<li> Soit $x\in[0,1]$ et $\veps&gt;0$. Puisque $K$ est continue, donc uniformément continue sur $[0,1]^2$, il existe $\eta&gt;0$ tel que, si $x'\in[0,1]$ et $|x'-x|&lt;\eta,$ alors pour tout $t\in[0,1]$, 
+$$|K(x,t)-K(x',t)|\leq \veps.$$
+On peut de plus choisir $\eta&gt;0$ assez petit pour que $\eta\|K\|_\infty\leq \veps.$ On a alors, pour tout $x'\in[0,1]$ vérifiant $|x'-x|&lt;\eta,$ d'après la question précédente, 
+$$|Tf(x)-Tf(x')|\leq 2\veps\|f\|_\infty.$$
+C'est bien que $Tf\in\mathcal C([0,1])$.
+<li> Il suffit d'appliquer le théorème d'Ascoli. Posons $A=\{Tf:\ f\in B\}$. Alors, pour tout $x\in [0,1]$ et tout $f\in B,$ 
+$$|Tf(x)|\leq \int_0^x \|K\|_\infty \|f\|_\infty dt\leq \|K\|_\infty \|f\|_\infty.$$
+Ainsi, $A$ est une partie bornée de $\mathcal C([0,1])$. De plus, on va démontrer qu'elle est équicontinue. Soit $\veps&gt;0$ et $x\in[0,1]$. On choisit $\eta&gt;0$ comme à la question précédente,
+c'est-à-dire que  si $x'\in[0,1]$ et $|x'-x|&lt;\eta,$ alors pour tout $t\in[0,1]$, 
+$$|K(x,t)-K(x',t)|\leq \veps$$
+et $\eta\|K\|_\infty\leq \veps.$ On a alors, pour tout $f\in B,$ 
+$$|Tf(x)-Tf(x')|\leq 2\veps.$$
+Ceci prouve l'équicontinuité de $A.$ On peut donc lui appliquer le théorème d'Ascoli et $\bar A$ est compacte dans $\mathcal C([0,1])$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3643"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3643"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3643,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Arc rectifiable <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3643.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3643,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3643','imageenonce3643');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3643"></a><div class=inner id="innerenonce3643">Soit \( d \in \mathbb{N}^* \). On munit \( \mathbb{R}^d \) de la norme euclidienne usuelle, notée \( \|\cdot\| \). On dit qu'une partie \( C \subset \mathbb{R}^d \) est un arc rectifiable s'il existe \( f : [0,1] \to \mathbb{R}^d \) lipschitzienne et telle que \( f([0,1]) = C \). Dans cet exercice on fixe un arc rectifiable \( C \).
+
+<ol class="enumeratechiffre">
+    <li> Montrer que \( C \) est compact.
+    <li> On suppose que \( (f_n)_{n \in \mathbb{N}} \) est une suite de fonctions continues de \([0,1]\) dans \( \mathbb{R}^d \) telle que \( f_n([0,1]) = C \) pour tout \( n \in \mathbb{N} \), et \( (f_n)_{n \in \mathbb{N}} \) converge uniformément vers \( f : [0,1] \to \mathbb{R}^d \).
+    Montrer que \( f([0,1]) = C \).
+  <li> On définit la longueur d'arc \( \ell(C) \) par
+    \[
+    \ell(C) = \inf \left\{ K \geq 0 : \text{il existe } f : [0,1] \to \mathbb{R}^d \text{ } K\text{-lipschitzienne et telle que } f([0,1]) = C \right\}.
+    \]
+    Montrer qu'il existe une fonction surjective de \([0,1]\) sur \( C \) dont la constante de Lipschitz est égale à \( \ell(C) .\)
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3643','imageindication3643');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3643"></a><div class=inner id="innerindication3643" style="display:none;"><ol class="enumeratechiffre">
+<li> L'image d'un compact par une application continue est un ...
+<li> Procéder par double inclusion.
+<li> Considérer une suite minimisante $(f_n)$ telle que $f_n$ est une surjection lipschitzienne de $[0,1]$ sur $C$ dont la constante de Lipschitz tend vers $\ell(C)$. Appliquer le théorème d'Ascoli à la suite $(f_n)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3643','imagecorrige3643',3643);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3643"></a><div class=inner id="innercorrige3643" style="display:none;"><ol class="enumeratechiffre">
+<li>   Il existe une fonction \( f \) lipschitzienne telle que \( f([0,1]) = C \). Par conséquent, \( C \) est l'image du compact \([0,1]\) par une fonction continue, donc \( C \) est compact.
+<li>  Soit \( t \in [0,1] \). On a \( f(t) = \lim_{n \to +\infty} f_n(t) \), et \( f_n(t) \in C \) pour tout \( n \). Puisque \( C \) est compact, c'est une partie fermée de \( \mathbb{R}^d \), donc \( f(t) \in C \). Ceci prouve que \( f([0,1]) \subseteq C \).
+
+    Pour établir l'inclusion réciproque, fixons \( c \in C \). Pour tout \( n \in \mathbb{N} \), il existe \( t_n \in [0,1] \) tel que \( f_n(t_n) = c \). Puisque \([0,1]\) est compact, on peut extraire une sous-suite \( (t_{\varphi(n)})_{n \in \mathbb{N}} \) qui converge vers \( t \in [0,1] \). Notons que pour tout \( n \in \mathbb{N} \), on a
+    \[
+    \| f_{\varphi(n)}(t_{\varphi(n)}) - f(t_{\varphi(n)}) \| \leq \| f_{\varphi(n)} - f \|_{\infty} \xrightarrow[n \to +\infty]{} 0.
+    \]
+    Puisque \( f_{\varphi(n)}(t_{\varphi(n)}) = c \) pour tout \( n \in \mathbb{N} \), on obtient que \( f(t_{\varphi(n)}) \) converge vers \( c \). En outre, \( f \) est continue en tant que limite uniforme d'une suite de fonctions continues, et finalement \( f(t) = c \).
+
+    On vient de prouver que \( C \subseteq f([0,1]) \).
+<li> Par caractérisation séquentielle d'une borne inférieure, il existe une suite de fonctions \( K_n \)-lipschitziennes \( f_n : [0,1] \to \mathbb{R}^d \) telles que \( f_n([0,1]) = C \) pour tout \( n \) et \( (K_n)_{n \in \mathbb{N}} \) converge vers \( \ell(C) \).
+
+    Fixons une telle suite \( (f_n)_{n \in \mathbb{N}} \). La suite \( (K_n)_{n \in \mathbb{N}} \) est bornée, et il existe donc une constante \( M \geq 0 \) telle que toutes les fonctions \( f_n \) sont \( M \)-lipschitziennes ; en particulier, \( \{ f_n : n \in \mathbb{N} \} \) est un sous-ensemble équicontinu de \( C([0,1], \mathbb{R}^d) \).
+
+    De plus, pour tout \( t \in [0,1] \), on a \( \{ f_n(t) : n \in \mathbb{N} \} \subseteq C \), qui est compact. Comme \([0,1]\) est compact, toutes les hypothèses sont réunies pour appliquer le théorème d'Ascoli : \( \{ f_n : n \in \mathbb{N} \} \) est relativement compact dans \( C([0,1], \mathbb{R}^d) \). Par conséquent, \( (f_n)_{n \in \mathbb{N}} \) admet une sous-suite \( (f_{\varphi(n)})_{n \in \mathbb{N}} \) qui converge uniformément vers \( f : [0,1] \to \mathbb{R}^d \).
+
+    Le résultat de la question précédente nous permet d'affirmer que \( f([0,1]) = C \); reste à montrer que \( f \) est \( \ell(C) \)-lipschitzienne. Pour cela, fixons \( x, y \in [0,1] \) et notons que
+    \[
+    \| f(x) - f(y) \| = \lim_{n \to +\infty} \| f_{\varphi(n)}(x) - f_{\varphi(n)}(y) \|.
+    \]
+
+    Fixons \( \varepsilon &gt; 0 \). Il existe \( N \in \mathbb{N} \) tel que \( K_n \leq \ell(C) + \varepsilon \) pour tout \( n \geq N \); puisque \( \varphi(n) \geq n \) pour tout \( n \), on a alors, pour tout \( n \geq N \), l'inégalité
+    \[
+    \| f_{\varphi(n)}(x) - f_{\varphi(n)}(y) \| \leq K_{\varphi(n)} |x - y| \leq (\ell(C) + \varepsilon) |x - y|.
+    \]
+
+    Finalement, on obtient en passant à la limite que \( \| f(x) - f(y) \| \leq (\ell(C) + \varepsilon) |x - y| \) pour tout \( x, y \in [0,1] \) et tout \( \varepsilon &gt; 0 \). Par conséquent, \( f \) est \( \ell(C) \)-lipschitzienne.
+
+    Puisque \( f([0,1]) = C \), la constante de Lipschitz de \( f \) ne peut être strictement inférieure à \( \ell(C) \) par définition de \( \ell(C) \), elle vaut donc exactement \( \ell(C) \).
+
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

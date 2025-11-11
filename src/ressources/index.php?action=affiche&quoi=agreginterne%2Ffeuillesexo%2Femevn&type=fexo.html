@@ -1,0 +1,424 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agrégation interne : espaces métriques, espaces vectoriels normés</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=agreginterne%252Findex.html">Documents pour l'agrégation interne</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Agrégation interne : espaces métriques, espaces vectoriels normés</h1>
+<div class=titrepartie>Pour réviser</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1481"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1481"),	max:5, rating:1.4242424242424, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1481,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suites et polynômes <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1481.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1481,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1481','imageenonce1481');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1481"></a><div class=inner id="innerenonce1481">Sur $E=\mathbb R[X]$, on définit $N_1$ et $N_2$ par 
+$$N_1( P)=\sum_{k=0}^{+\infty}|P^{(k)}(0)|\textrm{ et }N_2( P)=\sup_{t\in [-1,1]}|P(t)|.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que $N_1$ et $N_2$ sont deux normes sur $E$.
+<li> &Eacute;tudier pour chacune des deux normes la convergence de la suite $(P_n)$ définie par $P_n=\frac 1nX^n$.
+<li> Les deux normes sont-elles équivalentes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1481','imageindication1481');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1481"></a><div class=inner id="innerindication1481" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1481','imagecorrige1481',1481);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1481"></a><div class=inner id="innercorrige1481" style="display:none;"><ol class="enumeratechiffre">
+<li> On vérifie d'abord que ces deux quantités sont bien définies. En particulier, la somme apparaissant dans $N_1( P)$ est en réalité une somme finie. Prenons ensuite $P$, $Q$ dans $E$ et $\lambda\in\mathbb R$. Alors, pour tout $k\geq 0$, 
+$$|(P+Q)^{(k)}(0)|\leq |P^{(k)}(0)|+|Q^{(k)}(0)|$$
+et donc, en passant à la somme $N_1(P+Q)\leq N_1( P)+N_1(Q)$. On a clairement $N_1(\lambda P)=|\lambda |N_1( P)$. Enfin, si $N_1( P)=0$, alors $0$ est une racine de multiplicité infinie de $P$, ce qui entraîne que $P=0$. <br>
+Passons maintenant à $N_2$. On a, pour tout $t\in [-1,1]$, 
+$$|(P+Q)(t)|\leq |P(t)|+|Q(t)|\leq N_2( P)+N_2(Q).$$
+En passant au sup pour $t\in [-1,1]$, on en déduit que 
+$$N_2(P+Q)\leq N_2(P )+N_2(Q).$$
+Il est clair que $N_2(\lambda P)=|\lambda| N_2( P)$, et si $N_2( P)=0$, alors $P$ admet une infinité de racines, donc $P=0$. Ainsi, $N_2$ est également une norme sur $E$.
+<li> On vérifie facilement que, pour tout $k\in\{1,\dots,n\}$, on a $P_n^{(k)}=(n-1)\cdots (n-k+1)X^{n-k}.$ Ainsi, $P_n^{(k)}(0)=0$ si $k\neq n$ et $P_n^{(n)}(0)=(n-1)!$. On a donc 
+$$N_1(P_n)=(n-1)!\textrm{ et }N_2(P_n)=\frac 1n.$$
+Ainsi, la suite $(P_n)$ converge vers 0 pour $N_2$, mais n'est pas bornée et donc ne converge pas pour $N_1$.
+<li> Les normes ne peuvent pas être équivalentes, sinon une suite convergente pour une norme serait une suite convergente pour l'autre norme.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1498"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1498"),	max:5, rating:1.3714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1498,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme d'un ensemble et d'un ouvert ou d'un fermé <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1498.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1498,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1498','imageenonce1498');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1498"></a><div class=inner id="innerenonce1498">Soit $(E,N)$ un espace vectoriel normé, et $A$ et $B$ deux parties de $E$. On définit :
+$$A+B=\left\{z\in E;\ \exists x\in A,\ \exists y\in B,\ z=x+y\right\}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que si $A$ est ouvert, alors pour tout $b\in E$, $A+\{b\}$ est ouvert.
+<li> Démontrer que si $A$ est ouvert, alors $A+B$ est ouvert.
+<li> Démontrer que les parties $A=\{(x,y)\in\mathbb R^2;\ xy=1\}$ et $B=\{0\}\times \mathbb R$ sont fermées.
+<li> Démontrer que $A+B$ n'est pas fermée, pour $A$ et $B$ les parties de $\mathbb R^2$ introduites à la question précédente.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1498','imageindication1498');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1498"></a><div class=inner id="innerindication1498" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $z=x+b$ un élément de $A+\{b\}$ avec $x\in A.$ Construire une boule autour de $z$ contenue dans $A+\{b\}$ en utilisant que $A$ est ouvert.
+<li> Utiliser la question précédente.
+<li> Utiliser la caractérisation séquentielle des fermés.
+<li> Observer que la première coordonnées des éléments de $A+B$ est toujours non nulle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1498','imagecorrige1498',1498);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1498"></a><div class=inner id="innercorrige1498" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $z\in A+\{b\},\ z=x+b$ avec $x\in A$. Puisque $A$ est ouvert, il existe $\veps&gt;0$ tel que $B(x,\veps)\subset A$. Mais alors, $B(z,\veps)=B(x+b,\veps)\subset A+{b}$. En effet, si $y$ est élément de cette boule, $N((y-b)-x)&lt;\veps$, et donc $y-b=a$ avec $a\in B(x,\veps)\subset A$. D'où $y=a+b\in A+\{b\}$. 
+<li> Remarquons que :
+$$A+B=\bigcup_{b\in B}A+\{b\}.$$
+La réunion d'une famille (quelconque) d'ouverts étant un ouvert et puisque $A+\{b\}$ est ouvert d'après la question précédente, on obtient que $A+B$ est ouvert. 
+<li> Soit $(u_n)=(x_n,y_n)$ une suite d'éléments de $A$, convergeant vers $u=(x,y)$. Alors pour tout entier $n$, on a $x_ny_n=1$ et donc en passant à la limite, $xy=1$ ce qui prouve que $u\in A$. Par la caractérisation séquentielle des fermés, on en déduit que $A$ est fermé. $B$ est lui-aussi fermé, en utilisant une démonstration tout à fait similaire, ou parce que le produit cartésien de deux fermés est un fermé.
+<li> Considérons la suite $(u_n)=(1/n,1)$. Alors c'est une suite d'éléments de $A+B$ car elle s'écrit $u_n=a_n+b_n$ avec $a_n=(1/n,n)\in A$ et $b_n=(0,1-n)\in B$. Elle converge vers $(0,1)$, qui n'est pas un élément de $A+B$ car tout élément de $A+B$ a sa première coordonnée non nulle.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1499"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1499"),	max:5, rating:1.6593406593407, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1499,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sous-espace vectoriel ouvert <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1499.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1499,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1499','imageenonce1499');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1499"></a><div class=inner id="innerenonce1499">Soit $E$ un espace vectoriel normé et $F$ un sous-espace vectoriel de $E$. On suppose que $F$ est ouvert. Démontrer que $F=E$.</div></div><div class=indication><a href="javascript:showAll('innerindication1499','imageindication1499');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1499"></a><div class=inner id="innerindication1499" style="display:none;">Utiliser qu'il existe une boule ouverte centrée en $0$ et contenue dans $F$, puis raisonner par homogénéité.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1499','imagecorrige1499',1499);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1499"></a><div class=inner id="innercorrige1499" style="display:none;">Si $F$ est ouvert, alors puisque $0\in F$, il existe $r&gt;0$ tel que $B(0,r)\subset F$. Mais alors, prenons $x\in E$, $x\neq 0$. Alors $y=\frac{rx}{2\|x\|}$ a pour norme $r/2$, c'est donc un élément de $F$. Puisque $F$ est stable par multiplication par un scalaire, $x=\frac{2\|x\|}{r}y$ est élément de $F$ et donc $F=E$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1505"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1505"),	max:5, rating:1.5636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1505,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exemples <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1505.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1505,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1505','imageenonce1505');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1505"></a><div class=inner id="innerenonce1505">Dessiner, puis déterminer l'intérieur et l'adhérence des parties de $\mathbb R^2$ suivantes :
+\begin{array}{lll}
+A=\left\{(x,y)\in\mathbb R^2;\ x&gt;0\right\}&\quad&
+B=\left\{(x,y)\in\mathbb R^2; \ xy=1\right\}\\
+C=\left\{(x,y)\in\mathbb R^2;\ xy&gt;1\right\}&\quad&
+D=\left\{(x,y)\in\mtr^2\mid x^2+y^2\le 2\right\} \setminus \left\{(x,y)\in \mtr^2
+\mid (x-1)^2+y^2&lt;1\right\}.
+\end{array}
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1505','imagecorrige1505',1505);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1505"></a><div class=inner id="innercorrige1505" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons d'abord que $A$ est une partie ouverte (c'est le demi-plan droit strict) : si $(x,y)\in A$, alors $B( (x,y), x/2)$ est contenue dans $A$. Ainsi, $\stackrel{\circ}A=A$. D'autre part, on a $\bar A=\{(x,y)\in\mathbb R^2;\ x\geq 0\}$. En effet, si $(x_n,y_n)$ est une suite de $A$ qui converge vers $(x,y)$, alors par passage à la limite $x\geq 0$, ce qui prouve que $\bar A\subset \{(x,y)\in\mathbb R^2;\ x\geq 0\}$. Réciproquement, soit $(x,y)\in\mathbb R^2$ tel que $x\geq 0$. Alors, si $x&gt;0$, $(x,y)\in A\subset \bar A$ et si $x=0$, alors prenons la suite $(x_n,y_n)$ définie par $x_n=x+\frac 1n$, $y_n=y$. $(x_n,y_n)$ est une suite de $A$ qui converge vers $(x,y)$, ce qui démontre l'inclusion réciproque.
+<li> On montre facilement que $B$ est fermé, et donc que $\bar B=B$. D'autre part, $\stackrel{\circ}B=\varnothing$. En effet, si $(x,y)\in B$, il existe une suite $(x_n,y_n)$ qui n'est pas dans $B$ et qui converge vers $x$, par exemple $x_n=x+\frac 1n$ et $y_n=y$, on a $x_ny_n=1+\frac yn\neq 1$ puisque $y\neq 0$. 
+<li> On remarque d'abord que cet ensemble est ouvert (le plus facile est de dire qu'il s'agit de l'image réciproque de l'ouvert $]1,+\infty[$ par l'application continue $\phi(x,y)=xy$).  Ainsi, $\stackrel{\circ}C=C$. D'autre part, par une démonstration semblable à la démonstration effectuée pour $A$, on démontre que $\bar C=\{(x,y)\in\mathbb R^2;\ xy\geq 1\}$.
+<li> On va écrire l'ensemble $D$ autrement :
+$$D=\{(x,y)\in\mtr^2\mid x^2+y^2\le 2\}\cap \{(x,y)\in \mtr^2
+\mid (x-1)^2+y^2\geq 1\}.$$
+Remarquons que $D$ est fermé, et donc $\bar D=D$. D'autre part, l'intérieur de l'intersection vaut l'intersection des intérieurs. On a donc :
+$$\stackrel{\circ}D=\{(x,y)\in\mtr^2\mid x^2+y^2&lt; 2\}\cap \{(x,y)\in \mtr^2
+\mid (x-1)^2+y^2&gt; 1\}.$$
+La frontière est alors :
+\begin{eqnarray*}
+\Fr(D)&=&\big(\{(x;y)\in\mathbb{R}^2;\ x^2+y^2\leqslant2\}\cap\{(x;y)\in\mathbb{R}^2|(x-1)^2+y^2=1\}\big)\\
+&& \cup\big(\{(x;y)\in\mathbb{R}^2|x^2+y^2=2\}\cap\{(x;y)\in\mathbb{R}^2|(x-1)^2+y^2\geq1\}.\big)
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1528"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1528"),	max:5, rating:1.2972972972973, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1528,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sont-elles continues? <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1528.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1528,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1528','imageenonce1528');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1528"></a><div class=inner id="innerenonce1528">Déterminer si l'application linéaire $T:(E,N_1)\to (F,N_2)$ est continue dans les cas suivants :
+<ol class="enumeratechiffre">
+<li> $E=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_1=\int_0^1 |f(t)|dt$ et $T:(E,\|.\|_1)\to (E,\|.\|_1),\ f\mapsto fg$ où
+$g\in E$ est fixé.
+<li> $E=\mathbb R[X]$ muni de $\|\sum_{k\geq 0}a_k X^k\|=\sum_{k\geq 0}|a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathbb R_n[X]$ muni de $\|\sum_{k=0}^n a_k X^k\|=\sum_{k=0}^n |a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathbb R[X]$ muni de $\|\sum_{k\geq 0}a_k X^k\|=\sum_{k\geq 0}k!|a_k|$ et $T:(E,\|.\|)\to (E,\|.\|)$, $P\mapsto
+P'$.
+<li> $E=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_2=\left(\int_0^1 |f(t)|^2dt\right)^{1/2}$, $F=\mathcal C([0,1],\mathbb R)$ muni de $\|f\|_1=\int_0^1 |f(t)|dt$
+et $T:(E,\|.\|_2)\to (F,\|.\|_1),\ f\mapsto fg$ où
+$g\in E$ est fixé.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1528','imageindication1528');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1528"></a><div class=inner id="innerindication1528" style="display:none;"><ol class="enumeratechiffre">
+<li> $g$ est bornée sur $[0,1]$.
+<li> Calculer $T(X^k)$.
+<li> 
+<li> Faire un calcul direct.
+<li> Utiliser l'inégalité de Cauchy-Schwarz.
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1528','imagecorrige1528',1528);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1528"></a><div class=inner id="innercorrige1528" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $g$ est continue sur le segment $[0,1]$, elle y est bornée (et atteint ses bornes).
+Posons $M=\max_{t\in[0,1]}|g(t)|$.  Alors on a
+$$\|Tf\|_1=\int_0^1|f(t)g(t)|dt\leq M\int_0^1 |f(t)|dt\leq M\|f\|_1.$$
+Ceci prouve que $T$ est continue.
+<li> Supposons que $T$ est continue. Alors il existe $C&gt;0$ tel que, pour tout $P\in E$,
+on a $\|TP\|\leq C\|P\|$. Soit $n\geq 0$. Pour $P=X^n$, on trouve
+$$TP=nX^{n-1}, \textrm{ d'où }n=\|TP\|\leq C\|P\|=C.$$
+Ceci est impossible car $\mathbb N$ n'est pas majoré. Donc $T$ n'est pas continue.
+<li> On peut utiliser deux arguments différents. On peut d'une part remarquer que $E$ est un espace
+vectoriel de dimension finie, que toute application linéaire entre espaces de dimension finie est continue.
+On peut aussi utiliser un calcul direct. En effet, soit $P(X)=\sum_{k=0}^n a_kX^k\in E$. Alors on a
+\begin{eqnarray*}
+\|TP\|&=&\bigg\|\sum_{k=1}^n ka_kX^{k-1}\bigg\|\\
+&=&\sum_{k=1}^n k |a_k|\\
+&\leq&n\sum_{k=1}^n |a_k|\leq n\|P\|.
+\end{eqnarray*}
+Puisque $n$ ne dépend pas de $P$ (ceci ne dépend que de $E$), on obtient que $T$ est continue.
+<li> On va prouver que $T$ est continue par un calcul direct. Prenons en effet $P=\sum_{k=0}^{+\infty}a_k X^k\in E$ (la
+somme est en fait finie). Alors on a :
+\begin{eqnarray*}
+\|TP\|&=&\bigg\|\sum_{k=0}^{+\infty} (k+1)a_{k+1}X^k\bigg\|\\
+&=&\sum_{k=0}^{+\infty} (k+1)k! |a_{k+1}|=\sum_{k=0}^{+\infty}(k+1)!|a_{k+1}|\\
+&\leq&\sum_{k=1}^{+\infty} k! |a_k|\\
+&\leq&\|P\|.
+\end{eqnarray*}
+Ceci prouve la continuité de $T$.
+<li> On prouve que $T$ est continue en utilisant l'inégalité de Cauchy-Schwarz :
+$$\|Tf\|=\int_{0}^1 |f(t)||g(t)|dt\leq \left(\int_0^1 |f(t)|^2\right)^{1/2}\left(\int_0^1
+|g(t)|^2dt\right)^{1/2}=C\|f\|_2,$$
+avec $$C=\left(\int_0^1 |g(t)|^2 dt\right)^{1/2}.$$
+$C$ est bien un réel fini, car $g$ est continue sur $[0,1]$, donc bornée, et on a $C\leq\|g\|_\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1530"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1530"),	max:5, rating:2.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1530,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Étude de l'opérateur d'intégration <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1530.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1530,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1530','imageenonce1530');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1530"></a><div class=inner id="innerenonce1530">Soit $E=\mathcal C([0,1],\mathbb R)$ que l'on munit de la norme
+$$\|f\|_1=\int_0^1 |f(t)|dt,\ f\in E.$$
+Soit
+$\phi$ l'endomorphisme de $E$ défini par 
+$$\phi(f)(x)=\int_0^x f(t)dt.$$
+<ol class="enumeratechiffre">
+<li> Justifier la terminologie : "$\phi$ est un endomorphisme de $E$."
+<li> Démontrer que $\phi$ est continue.
+<li> Pour $n\geq 0$, on considère $f_n$ l'élément de $E$ défini par
+$f_n(x)=ne^{-nx}$, $x\in[0,1]$. Calculer $\|f_n\|_1$ et $\|\phi(f_n)\|_1$.
+<li> Déterminer $\|\phi\|_{\textrm{op}}$.
+<li> $\phi$ est-elle injective? surjective?
+<li> Quelles sont les valeurs propres de $\phi?$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1530','imageindication1530');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1530"></a><div class=inner id="innerindication1530" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Montrer que $|\phi(f)(x)|\leq \|f\|_1$.
+<li>
+<li>
+<li> 
+<li> Considérer $f\in E$ tel que $\phi(f)=\lambda f$. Démontrer que $f$ est un multiple d'une fonction exponentielle, puis que $f=0.$ 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1530','imagecorrige1530',1530);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1530"></a><div class=inner id="innercorrige1530" style="display:none;"><ol class="enumeratechiffre">
+<li> $\phi$ est clairement une application linéaire, et il faut juste rappeler que
+$\phi(f)$, comme primitive d'une fonction continue, est elle-même continue (et même $C^1$).
+<li> On a 
+$$|\phi(f)(x)|\leq \int_0^x |f(t)|dt\leq \int_0^1 |f(t)|dt\leq \|f\|_1.$$
+On en déduit que 
+$$\|\phi(f)\|_1\leq \int_0^1 \|f\|_1dt\leq \|f\|_1.$$
+Ainsi, $\phi$ est continue.
+<li> On a $\phi(f_n)(x)=\int_0^x ne^{-nt}dt=1-e^{-nx}$. En particulier,
+$\|f_n\|_1=\phi(f_n)(1)=1-e^{-n}$. De plus,
+$$\|\phi(f_n)\|_1=\int_0^1 (1-e^{-nx})dx=1-\frac{1-e^{-n}}{n}.$$
+<li> D'après la question 2, pour tout $f\in E$, 
+$$\|\phi(f)\|_1\leq \|f\|_1,$$
+et donc $\|\phi\|_{\textrm{op}}\leq 1$. De plus, on a 
+$$\|\phi(f_n)\|_1\leq \|\phi\|_{\textrm{op}} \|f_n\|_1\implies \left(1-\frac{1-e^{-n}}{n}\right) \leq (1-e^{-n}) \|\phi\|_{\textrm{op}}.$$
+Passant à la limite dans cette inégalité, on conclut que $\|\phi\|_{\textrm{op}}\geq 1$, ce qui prouve finalement que
+$\|\phi\|_{\textrm{op}}=1$.
+<li> On commence par remarquer que $\phi$ n'est pas surjective. En effet, $\phi(f)$ est de classe $\mathcal C^1$ pour tout $f\in E$, et il existe des fonctions de $E$ qui ne sont pas $\mathcal C^1$ sur $[0,1]$, par exemple la fonction $x\mapsto\left|x-\frac 12\right|.$ En revanche, $\phi$ est injective. En effet, si $\phi(f)=0,$ alors pour tout $x\in[0,1],$ 
+$$\int_0^x f(t)dt=0.$$
+En dérivant cette égalité, on trouve $f(x)=0$ pour tout $x\in[0,1]$ et donc $f=0.$ 
+<li> Soit $\lambda\in\mathbb R\backslash\{0\}.$ On va démontrer que $\lambda$
+n'est pas une valeur propre de $\phi.$  Si $f\in E$ vérifie $\phi(f)=\lambda f,$ alors pour tout $x\in [0,1],$ 
+$$\int_0^x f(t)dt=\lambda f(x).$$
+Ceci prouve que $f$ est dérivable et en dérivant la relation précédente, on trouve que, pour tout $x\in[0,1],$
+$$f(x)=\lambda f'(x).$$
+Ainsi, il existe $C\in\mathbb R$ tel que $f(x)=Ce^{x/\lambda}$ pour tout $x\in[0,1].$ Mais on doit avoir $f(0)=\phi(f)(0)=0,$ et donc $C=0$. Ainsi, $f=0$ et $\lambda$ n'est pas valeur propre de $f$. On vient donc de prouver que $\phi$ n'admet pas de valeurs propres (ce qui est possible car $E$ est de dimension infinie).
+</ol></div></div></div>
+
+<div class=titrepartie>Pour progresser</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater609"></span><script>var myRating = raterJs( { element:document.querySelector("#rater609"),	max:5, rating:2.171875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(609,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalités de Hölder et de Minkowski <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=609.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(609,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce609','imageenonce609');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce609"></a><div class=inner id="innerenonce609">Soit $x,y\in\mtr_+^*$, $p,q\in[1,+\infty[$  tels que $1/p+1/q=1$, et $a_1,\dots,a_n,b_1,\dots,b_n$ $2n$ réels strictement positifs.
+<ol class="enumeratechiffre">
+<li> Montrer que 
+$$xy\leq \frac{1}{p}x^p+\frac{1}{q}y^q.$$
+<li> On suppose dans cette question que $\sum_{i=1}^n a_i^p=\sum_{i=1}^n b_i^q=1.$ Montrer que $\sum_{i=1}^n a_ib_i\leq 1$.
+<li> En déduire la splendide inégalité de Hölder :
+$$\sum_{i=1}^n a_ib_i\leq\left(\sum_{i=1}^n a_i^p\right)^{1/p}\left(\sum_{i=1}^n b_i^q\right)^{1/q}.$$
+<li> On suppose en outre que $p&gt;1$. Déduire de l'inégalité de Hölder l'inégalité de Minkowski :
+$$\left(\sum_{i=1}^n (a_i+b_i)^p\right)^{1/p}\leq\left(\sum_{i=1}^na_i^p\right)^{1/p}+\left(\sum_{i=1}^n b_i^p\right)^{1/p}.$$
+<li> On définit pour  $x=(x_1,\dots,x_n)\in \mathbb R^n$ 
+$$\|x\|_p=(|x_1|^p+\dots+|x_n|^p)^{1/p}.$$
+Démontrer que $\|\cdot\|_p$ est une norme sur $\mathbb R^n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication609','imageindication609');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication609"></a><div class=inner id="innerindication609" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la concavité du logarithme.
+<li>
+<li> Raisonner par homogénéité, en posant $\alpha_i=\frac{a_i}{\left(\sum_{j=1}^n a_j^p\right)^{1/p}}$.
+<li> Décomposer $(a_i+b_i)^p$ en $(a_i+b_i)^{p-1}a_i+(a_i+b_i)^{p-1}b_i$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige609','imagecorrige609',609);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige609"></a><div class=inner id="innercorrige609" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $\ln$ est concave, et on a donc :
+$$\ln\left(\frac{1}{p}x^p+\frac{1}{q}y^q\right)\geq \frac{1}{p}\ln\left(x^p\right)+\frac{1}{q}\ln\left(y^q\right)=\ln\left(xy\right).$$
+Il suffit ensuite d'utiliser la croissance de la fonction exponentielle pour en déduire le résultat voulu.
+<li> Il suffit de sommer les $n$ équations :
+$$a_ib_i\leq\frac{1}{p}a_i^p+\frac{1}{q}b_i^q.$$
+<li> On pose $\alpha_i=\frac{a_i}{\left(\sum_{i=1}^n a_i^p\right)^{1/p}}$ et $\beta_i=\frac{b_i}{\left(\sum_{i=1}^n b_i^q\right)^{1/q}}$. D'après la question précédente, 
+$$\sum_{i=1}^n\alpha_i\beta_i\leq1.$$
+Il suffit ensuite de remplacer $\alpha_i$ et $\beta_i$ par leur valeur pour trouver la formule.
+<li> On décompose $(a_i+b_i)^p$ en $(a_i+b_i)^{p-1}a_i+(a_i+b_i)^{p-1}b_i$. Soit $q$ tel que $1/p+1/q=1$, c'est à dire que $pq-q=p$. En appliquant Hölder à chacun des membres, on a :
+\begin{eqnarray*}
+\sum_{i=1}^n \big(a_i+b_i\big)^p&\leq&\left(\sum_{i=1}^n a_i^p\right)^{1/p}\times\left(\sum_{i=1}^n|a_i+b_i|^{(p-1)q}\right)^{1/q}+\left(\sum_{i=1}^n b_i^p\right)^{1/p}\times\left(\sum_{i=1}^n|a_i+b_i|^{(p-1)q}\right)^{1/q}\\
+&\leq&\left[\left(\sum_{i=1}^n a_i^p\right)^{1/p}+\left(\sum_{i=1}^n b_i^p\right)^{1/p}\right]\times\left(\sum_{i=1}^n|a_i+b_i|^p\right)^{1-1/p}.
+\end{eqnarray*}
+Il suffit de tout refaire passer au premier membre pour obtenir le résultat. Remarquons que le résultat est aussi vrai pour $p=1$. Dans ce cas,
+il est juste trivial!
+<li> L'inégalité précédente se traduit très facilement en disant que $\|\cdot\|_p$ vérifie l'inégalité triangulaire $\|x+y\|_p\leq \|x\|_p+\|y\|_p$. Il est en outre trivial de vérifier que $\|\lambda x\|_p=|\lambda | \|x\|_p$ et que $\|x\|_p=0\iff x=0$. Ainsi, $\|\cdot\|_p$ définit bien une norme sur $\mathbb R^n$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1509"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1509"),	max:5, rating:1.7446808510638, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1509,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opérations ensemblistes, intérieur et adhérence <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1509.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1509,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1509','imageenonce1509');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1509"></a><div class=inner id="innerenonce1509">Soient $A,B$ deux parties d'un espace vectoriel normé $(E,\|\cdot\|)$. 
+<ol class="enumeratechiffre">
+<li> On suppose $A\subset B$. Démontrer que $\mathring A\subset\mathring B$ et que $\bar A\subset\bar B$.
+<li> Démontrer que $(A\cap B)^\circ=\mathring A\cap\mathring B$ et que $\mathring A\cup\mathring B\subset ( A\cup B)^\circ$, mais que l'inclusion peut être stricte.
+<li> Comparer $\overline{A\cap B}$ et $\bar A\cap \bar B$, puis $\overline{A\cup B}$ et $\bar A\cup \bar B$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1509','imageindication1509');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1509"></a><div class=inner id="innerindication1509" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour l'intérieur, dire que $x\in\mathring A$ si et seulement si $A$ est voisinage de $x$. Pour l'adhérence, utiliser la caractérisation séquentielle.
+<li> Pour le contre-exemple, essayer avec des intervalles de $\mathbb R$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1509','imagecorrige1509',1509);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1509"></a><div class=inner id="innercorrige1509" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $x\in \mathring A$, alors $A$ est voisinage de $x$. Puisque $A\subset B$, $B$ est aussi voisinage de $x$ et $x\in\mathring B$. D'autre part, si $x\in\bar A$, il existe une suite $(x_n)$ de $A$ qui converge vers $x$. Mais $(x_n)$ est aussi une suite de $B$ et donc $x\in\bar B$.
+<li> D'une part, on a $A\cap B\subset A$ et $A\cap B\subset B$, donc par la question précédente, on a $(A\cap B)^\circ\subset \mathring A$ et $(A\cap B)^\circ\subset\mathring B$ d'où $(A\cap B)^\circ\subset\mathring A\cap\mathring B$. Réciproquement, si $x\in \mathring A\cap\mathring B$, il existe $r_1&gt;0$ tel que $B(x,r_1)\subset A$ et il existe $r_2&gt;0$ tel que $B(x,r_2)\subset B$. Posons $r=\min(r_1,r_2)&gt;0$. Alors $B(x,r)\subset A\cap B$ et donc $x\in (A\cap B)^\circ$.<br>
+De la même façon, de $A\subset A\cup B$ et $B\subset A\cup B$, on tire $\mathring A\cup\mathring B\subset ( A\cup B)^\circ$. Prenons maintenant $A=[0,1]$ et $B=[1,2]$. Alors $\mathring A=]0,1[$, $\mathring B=]1,2[$ et $(A\cup B)^\circ=]0,2[$. En particulier, $1\in (A\cup B)^\circ$ alors que $1\notin \mathring A\cup\mathring B$.
+<li> De la même façon qu'à la question précédente, en utilisant le résultat de la première question, on a
+$\overline{A\cap B}\subset \bar A\cap \bar B$ et $\bar A\cup \bar B\subset \overline{A\cup B}$. La première inclusion peut être stricte. En effet, prenons $A=]0,1[$ et $B=]1,2[$, de sorte que $A\cap B=\varnothing$ alors que $\bar A\cap \bar B=\{1\}$. La seconde inclusion est une égalité. Prenons $x\in \overline{A\cup B}$. Alors $x$ est limite d'une suite $(x_n)$ à valeurs dans $A\cup B$. Mais ou bien il y a une infinité de termes de $(x_n)$ qui sont dans $A$, ou bien il y a une infinité de termes de $(x_n)$ qui sont dans $B$. Dans le premier cas, $x\in\bar A$ et dans le second, $x\in\bar B$. Dans tous les cas, $x\in \bar A\cup\bar B$. <br>
+Remarquons que l'on aurait aussi pu déduire les résultats de cette question à partir des résultats de la question précédente en passant au complémentaire, puisque $(\bar A)^c=(A^c)^\circ$ etc...
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1535"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1535"),	max:5, rating:2.5185185185185, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1535,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projection <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1535.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1535,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1535','imageenonce1535');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1535"></a><div class=inner id="innerenonce1535">Soit $E$ un espace vectoriel normé et $u$ un endomorphisme de $E$ vérifiant, pour tout $x\in E$, $\|u(x)\|\leq \|x\|$. Pour tout $n\in\mathbb N$, on pose 
+$$v_n=\frac 1{n+1}\sum_{k=0}^n u^k.$$
+<ol class="enumeratechiffre">
+<li> Simplifer $v_n\circ(u-Id)$.
+<li> Montrer que $\ker(u-Id)\cap\textrm{Im}(u-Id)=\{0\}$.
+<li> On suppose désormais que $E$ est de dimension finie. Démontrer que 
+$$\ker(u-Id)\oplus\textrm{Im}(u-Id)=E.$$
+<li> Soit $p$ la projection sur $\ker(u-Id)$ parallèlement à $\textrm{Im}(u-Id)$. Démontrer que, pour tout $x\in E$, $v_n(x)\to p(x)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1535','imageindication1535');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1535"></a><div class=inner id="innerindication1535" style="display:none;"><ol class="enumeratechiffre">
+<li> Télescopage!
+<li> Prendre $y$ dans l'intersection et calculer de deux façons différentes $v_n(y)$.
+<li> Théorème du rang!
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1535','imagecorrige1535',1535);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1535"></a><div class=inner id="innercorrige1535" style="display:none;"><ol class="enumeratechiffre">
+<li> On a, par télescopage, 
+$$\sum_{k=0}^n u^k(u-Id)=u^{n+1}-Id$$ 
+et donc $v_n\circ(u-Id)=\frac 1{n+1}(u^{n+1}-Id).$ 
+<li> Soit $y\in \ker(u-Id)\cap\textrm{Im}(u-Id)$. Alors il existe $x\in E$ tel que $y=(u-Id)(x)$. 
+On en déduit que $v_n(y)=\frac1{n+1}(u^{n+1}(x)-x)$. Puisque $\|u^{n+1}(x)\|\leq \|x\|$, on obtient que $(v_n(y))$ tend vers 0. Mais d'autre part, on sait aussi que $u(y)=y$, et donc, pour tout entier $n$, on a $v_n(y)=y$. Par unicité de la limite, $y=0$.
+<li> C'est une conséquence immédiate du théorème du rang et du résultat de la question précédente.
+<li> Soit $x\in E$, écrivons $x=y+z$ avec $y\in \ker(u-Id)$ et $z\in \textrm{Im}(u-Id)$. Alors le calcul effectué à la deuxième question montre que $v_n(y)=y$ et que $v_n(z)$ tend vers 0. Ainsi, $(v_n(x))$ tend vers $y$ qui est bien égal à $p(x)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1515"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1515"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1515,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sous-groupes de $\mathbb R$ <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1515.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1515,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1515','imageenonce1515');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1515"></a><div class=inner id="innerenonce1515">Soit $H$ un sous-groupe de $(\mathbb R,+)$ non réduit à $\{0\}$. 
+<ol class="enumeratechiffre">
+<li> Justifier l'existence de $m=\inf\{x\in H;\ x&gt;0\}$.
+<li> On suppose que $m&gt;0$. Démontrer que $m\in H$ puis que $H=m\mathbb Z$.
+<li> On suppose que $m=0$. Démontrer que $H$ est dense dans $\mathbb R$.
+<li> En déduire que, si $a$ et $b$ sont deux réels non nuls, $a\mathbb Z+b\mathbb Z$ est dense dans $\mathbb R$ si et seulement si $\frac ab\notin\mathbb Q$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1515','imageindication1515');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1515"></a><div class=inner id="innerindication1515" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer qu'il existe $x\in H\cap ]0,+\infty[$.
+<li> Si $x\in H$ et $x\notin m\mathbb Z$, encadrer $x$ par deux éléments successifs de $m\mathbb Z$ et contredire la définition de la borne inférieure.
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1515','imagecorrige1515',1515);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1515"></a><div class=inner id="innercorrige1515" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de prouver que $\{x\in H;\ x&gt;0\}$ est non-vide, puisque c'est une partie de $\mathbb R$ minorée. Soit $x\in H$, $x\neq 0$. Si $x&gt;0$, c'est bon. Sinon, on considère $-x$.
+<li> Supposons que $m\notin H$. Alors, par définition de la borne inférieure, il existe $x\in H$ tel que $m&lt;x&lt;2m$. Toujours pas définition de la borne inférieure, il existe $y\in H$ tel que $m&lt;y&lt;x$. Mais alors, $x-y\in H$ puisque $H$ est un groupe et $0&lt;x-y&lt;m$, ce qui contredit la définition de la borne inférieure. On en déduit que $m\in H$ puis, parce que $H$ est un groupe, que $m\mathbb Z\subset H$. <br> Réciproquement, prenons $x\in H$. Si $x\notin m\mathbb Z$, soit $k$ l'unique entier relatif tel que $mk&lt;x&lt;(k+1)m$. Alors $0&lt;x-mk&lt;m$ et $x-mk\in H$, ce qui contredit  à nouveau la définition de la borne inférieure. Donc $H=m\mathbb Z$.
+<li> Soit $a\in\mathbb R$ et $\veps&gt;0$. Il s'agit de prouver que $H\cap ]a-\veps,a+\veps[\neq\varnothing$. Comme $H$ est symétrique par rapport à l'origine, on peut toujours supposer que $a\geq 0$. On sait qu'il existe $x\in H$ tel que $0&lt;x&lt;\veps$. Soit $n=\lfloor \frac ax\rfloor$. Alors on sait que $n\leq \frac ax&lt;n+1$ soit $nx\leq a&lt;(n+1)x&lt;nx+\veps$. On en tire que $a-\veps&lt;nx\leq a$ et puisque $nx\in H$, que $H\cap ]a-\veps,a+\veps[$ est non vide. Ceci prouve bien que $H$ est dense dans $\mathbb R$.
+<li> $a\mathbb Z+b\mathbb Z$ est ou bien dense dans $\mathbb R$ ou bien de la forme $m\mathbb Z$. S'il est de la forme $m\mathbb Z$ alors $a\in m\mathbb Z$ et $b\in m\mathbb Z$, donc il existe $p,q\in\mathbb Z$ tels que $a=mp$ et $b=mq$. Il vient $\frac ab=\frac pq\in\mathbb Q$. Réciproquement, si $\frac ab=\frac pq\in\mathbb Q$, alors on sait que 
+\begin{eqnarray*}
+x\in a\mathbb Z+b\mathbb Z&\iff&\exists (k,l)\in\mathbb Z^2,\ x=ak+bl\\
+&\iff&\exists (k,l)\in\mathbb Z^2,\ x=b\left(\frac abk+l\right)\\
+&\iff&\exists (k,l)\in\mathbb Z^2,\ x=b\left(\frac pqk+l\right)\\
+&\iff&\exists (k,l)\in\mathbb Z^2,\ x=\frac bq\left(pk+lq\right)\\
+&\iff&x\in \frac bq(p\mathbb Z+q\mathbb Z).
+\end{eqnarray*}
+Or, $p\mathbb Z+q\mathbb Z$ est un idéal de $\mathbb Z$ et tous les idéaux de $\mathbb Z$ sont de la forme $n\mathbb Z$ avec $n\in\mathbb N^*$. Donc 
+$$a\mathbb Z+b\mathbb Z=\frac{bn}q\mathbb Z.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1524"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1524"),	max:5, rating:2.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1524,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Espace vectoriel des fonctions lipschitziennes <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1524.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1524,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1524','imageenonce1524');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1524"></a><div class=inner id="innerenonce1524">Soit $A$ une partie bornée d'un espace vectoriel normé $(E,\|\cdot\|)$. On note $\mathcal L$ l'espace vectoriel des applications lipschitziennes de $A$ dans $E$.
+<ol class="enumeratechiffre">
+<li> Démontrer que les éléments de $\mathcal L$ sont des fonctions bornées.
+<li> Pour $f\in\mathcal L$, on pose 
+$$K_f=\{k\in\mathbb R_+;\ \forall (x,y)\in A^2,\ \|f(x)-f(y)\|\leq k\|x-y\|\}.$$
+Démontrer que $K_f$ admet une borne inférieure. Dans la suite, on notera $C_f$ cette borne inférieure.
+<li> Justifier que $C_f\in K_f$.
+<li> Démontrer que si $f,g\in\mathcal L$ et si $\lambda\in\mathbb C^*,$ alors $C_{f+g}\leq C_f+C_g$ et $C_{\lambda f}=|\lambda| C_f.$
+<li> Pour $a\in A$, on note $N_a(f)=\|f(a)\|+C_f$. Démontrer que $N_a$ est une norme sur $\mathcal L$.
+<li> Soient $a\neq b\in A$. Les normes $N_a$ et $N_b$ sont-elles équivalentes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1524','imageindication1524');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1524"></a><div class=inner id="innerindication1524" style="display:none;"><ol class="enumeratechiffre">
+<li> Fixer un élément $a$ de $A$ et évaluer $\|f(x)\|$ en fonction de $\|f(a)\|$ et du diamètre de $A$.
+<li> 
+<li> Prendre une suite $(k_n)$ qui converge vers $C_f$ et passer à la limite dans une inégalité.
+<li> Démontrer que $C_f+C_g$ est dans $K_{f+g}$ (utiliser que $C_f\in K_f$).
+<li> 
+<li> Majorer $\|f(b)\|$ en fonction de $\|f(a)\|$, du diamètre de $A$ et de $C_f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1524','imagecorrige1524',1524);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1524"></a><div class=inner id="innercorrige1524" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $f\in\mathcal L$. Il existe donc $K\in \mathbb R_+$ tel que, pour tous $x,y\in A$, 
+$\|f(x)-f(y)\|\leq K\|x-y\|.$
+Fixons $a\in A$. Alors, pour tout $x\in A$, on a par l'inégalité triangulaire
+$$\|f(x)\|\leq \|f(a)\|+\|f(x)-f(a)\|\leq \|f(a)\|+K\|x-a\|\leq \|f(a)\|+K\textrm{diam}(A).$$
+Ainsi, $f$ est bornée.
+<li> $K_f$ est une partie non vide (car $f$ est lipschitzienne) et minorée. Elle admet donc une borne inférieure.
+<li> Soit $(k_n)$ une suite de $K_f$ qui converge vers $C_f$. Alors, pour tous $x,y\in A$, on a 
+$$\|f(x)-f(y)\|\leq k_n \|x-y\|.$$
+On fait tendre $n$ vers l'infini et on a 
+$$\|f(x)-f(y)\|\leq C_f \|x-y\|$$
+ce qui entraîne bien que $C_f\in K_f$.
+<li> Fixons $x,y\in A$. Alors on a par l'inégalité triangulaire 
+$$\|(f+g)(x)-(f+g)(y)\|\leq \|f(x)-f(y)\|+\|g(x)-g(y)\|.$$
+Puisque $C_f\in K_f$ et que $C_g\in K_g$, on a encore
+$$\|(f+g)(x)-(f+g)(y)\|\leq C_f\|x-y\|+C_g\|x-y\|\leq (C_f+C_g)\|x-y\|.$$
+Autrement dit, $C_f+C_g\in K_{f+g}$ et donc $C_{f+g}\leq C_f+C_g$. Pour la deuxième égalité, il suffit de remarquer que 
+$$K_{\lambda f}=|\lambda| K_f,$$
+qui est une conséquence du fait que $\|\lambda x\|=|\lambda|\cdot\|x\|.$
+<li> $N_a$ est bien à valeurs dans $\mathbb R_+$. Si $f=0$, on a $N_a(f)=0$ et réciproquement,
+si $N_a(f)=0$, alors $f(a)=0$ et pour tout $x\in A$, on a $\|f(x)-f(a)\|\leq 0\|x-a\|$, soit $f(x)=f(a)=0$. La fonction est bien identiquement nulle. De plus, si $f,g\in\mathcal L$, alors on a 
+$$N_a(f+g)= |f(a)+g(a)|+C_{f+g}\leq |f(a)|+|g(a)|+C_f+C_g=N_a(f)+N_a(g).$$
+Comme de plus, $C_{\lambda f}=|\lambda |C_f$ pour tout $\lambda\in\mathbb R$ (pourquoi?), on a également que $N_a(\lambda f)=|\lambda| N_a(f)$.
+<li> Par symétrie du rôle joué par $a$ et $b$, il suffit de trouver une constante $M&gt;0$ telle que $N_b(f)\leq M N_a(f)$ pour tout $f\in\mathcal L$ et même, en faisant attention à la forme de $N_a$ et de $N_b$, il suffit de prouver que $|f(b)|\leq M(|f(a)|+C_f).$ Mais, 
+\begin{align*}
+\|f(b)\|&\leq \|f(a)\|+\|f(b)-f(a)\|\\
+&\leq \|f(a)\|+C_f \|b-a\|\\
+&\leq \|f(a)\|+\textrm{diam}(A)C_f\\
+&\leq MN_a(f)
+\end{align*}
+où $M=\max(\textrm{diam}(A),1)$. Ainsi, les deux normes sont équivalentes.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1482"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1482"),	max:5, rating:2.9245283018868, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1482,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une norme? <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1482.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1482,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1482','imageenonce1482');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1482"></a><div class=inner id="innerenonce1482">Soit $E=\mathcal C([0,1],\mathbb R)$. Pour $f,g\in E$, on pose
+$N_g(f)=\|gf\|_\infty$.
+<ol class="enumeratechiffre">
+<li> Donner une condition nécessaire et suffisante sur $g$ pour que $N_g$ soit une norme.
+<li> Donner une condition nécessaire et suffisante sur $g$ pour que $N_g$
+soit équivalente à la norme infinie.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1482','imageindication1482');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1482"></a><div class=inner id="innerindication1482" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $N_g$ n'est pas une norme, alors il existe $f\neq 0$ avec $N_g(f)=0$.
+Que doit contenir l'ensemble des zéros de $g$? Prouver la réciproque.
+<li> Une inégalité est facile. Pour l'autre, il ne faut pas que $g$ soit trop
+petite. Procéder au besoin par des contre-exemples.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1482','imagecorrige1482',1482);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1482"></a><div class=inner id="innercorrige1482" style="display:none;"><ol class="enumeratechiffre">
+<li> La seule propriété qui pose problème est de prouver
+que si $N_g(f)=0$, alors $f=0$.<br>
+Si $N_g$ n'est pas une norme, alors il existe $f\in\mathcal C([0,1])$, $f\neq 0$, avec $N_g(f)=0$.
+Autrement, $f(x)g(x)=0$ pour tout $x\in[0,1]$.
+Puisque $f$ est continue et non-nulle, il existe un intervalle $I$, non réduit à un point, sur lequel $f$ ne s'annule pas.
+Mais alors, on en déduit que $g$ doit être nulle sur $I$.<br>
+Réciproquement, si $g$ s'annule sur un intervalle $I$ non-réduit à un point, alors on peut construire $f$ continue
+qui s'annule hors de $I$ et tel qu'il existe $a\in I$ avec $f(a)\neq 0$ (faire un dessin et construire $f$ comme un
+"pic"). On a donc $f\neq 0$ et $N_g(f)=0$, donc $N_g$ n'est pas une norme.<br>
+Par contraposée, on en déduit que $N_g$ est une norme si et seulement si $g$ ne s'annule pas sur un intervalle non
+réduit à un point.
+<li> Remarquons déjà que $g$, continue sur le segment $[0,1]$, est bornée par une constante $M&gt;0$.
+On a donc $N_g(f)\leq M\|f\|_\infty$ pour tout $f\in E$. Supposons de plus que $g$ ne s'annule pas. Alors, puisque $|g|$
+est continue et atteint ses bornes sur $[0,1]$, il existe $\delta&gt;0$ tel que $|g(x)|\geq\delta$ pour tout $x\in[0,1]$.
+On a alors clairement $N_g(f)\geq\delta\|f\|_\infty$ et les deux normes sont équivalentes.<br>
+Réciproquement, si $g$ s'annule, prouvons que les deux normes ne sont pas équivalentes. Soit $M&gt;0$. On va construire
+$f\in E$, $f\neq 0$, tel que $\|f\|_\infty\geq M N_g(f)$. Pour cela, on sait, par continuité de $g$, qu'il existe
+un intervalle $I$, non-réduit à un point, et contenu dans $[0,1]$, tel que $|g(x)|\leq \frac1M$ pour tout $x\in I$.
+Comme à la question précédente, on peut construire $f$ nulle en dehors de $I$, avec $\|f\|_\infty\leq 1$ et
+$f(a)=1$ pour au moins un $a$ de $I$. On a alors
+$$\|f\|_\infty=1\textrm{ tandis que }N_g(f)=\sup_{x\in I}|g(x)f(x)|\leq \frac{1}{M}.$$
+Ceci prouve bien l'inégalité annoncée, et les deux normes ne sont pas équivalentes. En conclusion, on a démontré que les
+deux normes sont équivalentes si et seulement si $g$ ne s'annule pas.
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

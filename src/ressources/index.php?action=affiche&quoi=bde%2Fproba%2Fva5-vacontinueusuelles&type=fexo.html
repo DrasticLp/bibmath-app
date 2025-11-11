@@ -1,0 +1,809 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Variables aléatoires à densité : lois uniformes, exponentielles, normales</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fproba.html">Exercices de dénombrement - probabilités - statistiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Variables aléatoires à densité : lois uniformes, exponentielles, normales</h1>
+<div class=titrepartie>Lois uniformes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2069"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2069"),	max:5, rating:2.125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2069,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Carré de la loi uniforme <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2069.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2069,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2069','imageenonce2069');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2069"></a><div class=inner id="innerenonce2069">Soit $X$ une variable aléatoire suivant une loi uniforme sur $[a,b]$, avec $0&lt;a&lt;b$.
+Donner la fonction de répartition, la densité, l'espérance et la variance de $Y=X^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication2069','imageindication2069');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2069"></a><div class=inner id="innerindication2069" style="display:none;">Suivre les définitions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2069','imagecorrige2069',2069);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2069"></a><div class=inner id="innercorrige2069" style="display:none;">On calcule la fonction de répartion $F_Y$ de $Y$. Si $y&lt;0$, on a
+$$F_Y(y)=P(Y\leq y)=0.$$
+Si $y\geq 0$, alors 
+$$F_Y(y)=P(Y\leq y)=P(-\sqrt y\leq X\leq \sqrt y)=P(X\leq \sqrt y)=F_X(\sqrt y).$$
+Connaissant la fonction de répartition de $X$, on en déduit
+$$F_Y(y)=\begin{cases}
+0&\textrm{si }y&lt;a^2\\
+\frac{\sqrt y-a}{b-a}&\textrm{si }y\in[a^2,b^2]\\
+1&\textrm{si }y&gt;b^2.
+\end{cases}
+$$
+Cette fonction de répartition est dérivable sauf en $a^2$ et en $b^2$. La dérivée donne la densité. 
+On en déduit que $Y$ admet une densité $p_Y$ donnée par :
+$$p_Y(y)=\begin{cases}
+0&\textrm{si }y&lt;a^2\\
+\frac{1}{2(b-a)\sqrt y}&\textrm{si }y\in[a^2,b^2]\\
+0&\textrm{si }y&gt;b^2.
+\end{cases}$$
+Pour calculer l'espérance de $Y$ et celle de $Y^2$, il est préférable de se souvenir que $Y=X^2$.
+On en déduit :
+$$E(Y)=E(X^2)=\int_a^b\frac{x^2}{b-a}dx=\frac{b^3-a^3}{3(b-a)},$$
+$$E(Y^2)=E(X^4)=\int_a^b\frac{x^4}{b-a}dx=\frac{b^5-a^5}{5(b-a)}.$$
+Enfin, un calcul un peu pénible montre que 
+$$\textrm{Var}(Y)=E(Y^2)-E(Y)^2=\frac{(b-a)^2(4b^2+7ab+4a^2)}{45}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater2314"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2314"),	max:5, rating:1.1052631578947, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2314,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi uniforme, moyenne et écart-type <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2314.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(2314,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2314','imageenonce2314');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2314"></a><div class=inner id="innerenonce2314">Soit $X$ une variable aléatoire suivant une loi uniforme sur $[a,b]$. On note $m$ sa moyenne et $\sigma$ son écart-type. Calculer la probabilité $P(X\in [m-\sigma,m+\sigma])$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2314','imagecorrige2314',2314);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2314"></a><div class=inner id="innercorrige2314" style="display:none;">Rappelons que $m=\frac{a+b}2$ et $\sigma=\frac{b-a}{2\sqrt 3}$ et que $X$ admet pour densité $f(x)=\frac{1}{b-a}\mathbf 1_{[a,b]}(x)$. Remarquons aussi que 
+$$m+\sigma=\frac{a+b}2+\frac{b-a}{2\sqrt 3}\leq \frac{a+b}2+\frac{b-a}2\leq b$$
+et de même $m-\sigma\geq a$. Le calcul de la probabilité demandée suit alors la méthode usuelle pour une loi à densité : 
+\begin{eqnarray*}
+P(X\in [m-\sigma,m+\sigma])&=&\frac{1}{b-a}\int_{m-\sigma}^{m+\sigma}dt\\
+&=&\frac{1}{b-a}\times (m+\sigma-m+\sigma)\\
+&=&\frac{2\sigma}{b-a}\\
+&=&\frac 1{\sqrt 3}.
+\end{eqnarray*}
+Remarquons que ceci ne dépend pas de $a$ et de $b$, ce qui est une propriété assez remarquable de la loi uniforme.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2077"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2077"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2077,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Uniforme et binomiale <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2077.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2077,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2077','imageenonce2077');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2077"></a><div class=inner id="innerenonce2077">Soient $X_0,\dots,X_n$ des variables aléatoires suivant une loi uniforme sur $[0,1]$, indépendantes.
+<ol class="enumeratechiffre">
+<li> Soit $0\leq k\leq n$ et soit $U_k=\min(X_0,\dots,X_k)$. Démontrer que $U_k$ admet une densité que l'on déterminera.
+<li> Soit $N$ une variable aléatoire suivant une loi binomiale $\mathcal B(n,1/2)$, indépendante de $X_0,\dots,X_n.$ 
+Démontrer que $U=\min(X_0,\dots,X_N)$ admet une densité que l'on déterminera.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2077','imageindication2077');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2077"></a><div class=inner id="innerindication2077" style="display:none;"><ol class="enumeratechiffre">
+<li> Chercher la fonction de répartition de $U_k$.
+<li> Procéder de même, en utilisant la formule des probabilités totales.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2077','imagecorrige2077',2077);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2077"></a><div class=inner id="innercorrige2077" style="display:none;"><ol class="enumeratechiffre">
+<li> On va calculer la fonction de répartion $F_k$ de $U_k$. Pour tout $x\in\mathbb R$, on a 
+$$P(U_k&gt;x)=P\big(\cap_{i=0}^k (X_i&gt;x)\big)=\prod_{i=0}^k P(X_i&gt;x),$$
+car les variables aléatoires sont indépendantes. On en déduit :
+$$F_k(x)=P(U_k\leq x)=1-P(U_k&gt;x)=1-\prod_{i=0}^k \big(1-P(X_i\leq x)\big).$$
+Connaissant la loi des $X_i$, on en déduit :
+$$F_k(x)=\begin{cases}
+0&\textrm{si }x&lt;0\\
+1-(1-x)^{k+1}&\textrm{si }x\in[0,1]\\
+1&\textrm{si }x&gt;1.
+\end{cases}$$
+La fonction $F_k$ est $C^1$ sur $\mathbb R\backslash\{0,1\}$. On en déduit que $U_k$ admet une densité $g_k$ donnée par
+la dérivée de $F_k$,
+$$g_k(x)=\begin{cases}
+0&\textrm{si }x\notin[0,1]\\
+(k+1)(1-x)^k&\textrm{si }x\in[0,1].
+\end{cases}
+$$
+<li> On procède de la même façon, en utilisant la formule des probabilités totales. On obtient, pour tout $x\in\mathbb R$,
+\begin{eqnarray*}
+P(U\leq x)&=&\sum_{k=0}^n P(N=k)P(U\leq x|N=k)\\
+&=&\sum_{k=0}^n P(N=k)P(U_k\leq x)\\
+&=&\sum_{k=0}^n \binom{n}{k}\frac{1}{2^n}\big(1-(1-x)^{k+1}\big).
+\end{eqnarray*}
+L'indépendance de $N$ par rapport à $X_0,\dots,X_n$ est nécessaire pour écrire $$P(U\leq x|N=k)=P(U_k\leq x).$$
+La fonction de répartition de $U$ est $C^1$ sur $\mathbb R\backslash\{0,1\}$. On en déduit que $U$ admet une densité $g$ donnée par
+$$g(x)=\begin{cases}
+0&\textrm{si }x\notin[0,1]\\
+\sum_{k=0}^n\binom{n}{k}\frac1{2^n}(k+1)(1-x)^k&\textrm{si }x\in[0,1].
+\end{cases}$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2184"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2184"),	max:5, rating:2.2666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2184,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Temps d'attente <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2184.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2184,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2184','imageenonce2184');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2184"></a><div class=inner id="innerenonce2184">A partir de 7heures du matin, les bus passent toutes les quinze minutes à un arrêt précis. Un usager se présente à cet arrêt entre 7h et 7h30. On fait l'hypothèse que l'heure exacte de son arrivée, représentée par le nombre de minutes après 7h, est une variable aléatoire uniformément répartie sur l'intervalle [0,30]. Quelle est la probabilité que l'usager attende moins de cinq minutes le prochain bus? Qu'il l'attende plus de dix minutes?</div></div><div class=indication><a href="javascript:showAll('innerindication2184','imageindication2184');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2184"></a><div class=inner id="innerindication2184" style="display:none;">Trouver les heures possibles d'arrivée pour que l'usager attende moins de cinq minutes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2184','imagecorrige2184',2184);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2184"></a><div class=inner id="innercorrige2184" style="display:none;">L'usager attendra moins de cinq minutes si son heure d'arrivée est comprise entre 7h10 et 7h15, ou entre 7h25 et 7h30. Si on note $X$ la variable aléatoire définie par l'énoncé, ceci revient à $X$ appartient à $[10,15]$ ou $X$ appartient à $[25,30]$. La probabilité recherchée est donc 
+$\frac{5+5}{30}=\frac 13$.<br>
+Le raisonnement est identique pour déterminer la probabilité qu'il attende plus de dix minutes. Dans ce cas, l'heure d'arrivée doit être comprise entre 7h et 7h05 ou entre 7h15 et 7h20. On trouve à nouveau une probabilité de 1/3.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2183"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2183"),	max:5, rating:2.6315789473684, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2183,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La rencontre <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2183.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2183,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2183','imageenonce2183');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2183"></a><div class=inner id="innerenonce2183">Clément et Amélie se donnent rendez-vous devant une salle de concert entre 19h et 20h. Les instants d'arrivée de Clément et Amélie après 19h sont assimilés à une loi uniforme sur $[0,1]$. Chacun attend jusqu'à un quart d'heure que l'autre arrive, puis rentre dans la salle. Quelle est la probabilité que Clément et Amélie entrent ensemble dans la salle de concert? </div></div><div class=indication><a href="javascript:showAll('innerindication2183','imageindication2183');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2183"></a><div class=inner id="innerindication2183" style="display:none;">Si on note $C$ la variable aléatoire "instant d'arrivée de Clément" et $A$ la variable aléatoire "instant d'arrivée d'Amélie", on cherche la probabilité pour que $|C-A|&lt;1/4$. Utiliser une interprétation géométrique pour calculer cela.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2183','imagecorrige2183',2183);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2183"></a><div class=inner id="innercorrige2183" style="display:none;">Si on note $X$ la variable aléatoire "instant d'arrivée de Clément" et $Y$ la variable aléatoire "instant d'arrivée d'Amélie", on cherche la probabilité pour que $|X-Y|&lt;1/4$. Maintenant, $(X,Y)$ suit une loi uniforme sur $[0,1]\times [0,1]$. Si on note $K$ le carré $[0,1]\times [0,1]$, la probabilité recherchée est donc 
+$$\frac{\textrm{aire}(\{(x,y)\in K;\ |x-y|&lt;1/4\})}{\textrm{aire}(K)}=\textrm{aire}(\{(x,y)\in K;\ |x-y|&lt;1/4\}).$$
+Dans la figure ci-dessous, on doit donc calculer l'aire des triangles ABC et HIJ et l'aire du rectangle ACIH.
+<div class=equation><img src="bde_images/uniforme.png"></div>
+Le triangle ABC est rectangle isocèle en A, la longueur des côtés de l'angle droit vaut 1/4. Son aire est donc $\frac 12\times \frac1{4^2}=\frac 1{32}$. C'est aussi l'aire de HIJ. Par ailleurs, par le théorème de Pythagore, $AC^2=\frac 2{16}$ et $CI^2=\frac{18}{16}$. On en déduit que l'aire du rectangle ACIH vaut $\frac{\sqrt{36}}{16}=\frac 6{16}=\frac 38$. Finalement, la probabilité recherché est donc $\frac{1}{32}+\frac1{32}+\frac 38=\frac 7{16}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2199"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2199"),	max:5, rating:3.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2199,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Image de la loi uniforme <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2199.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2199,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2199','imageenonce2199');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2199"></a><div class=inner id="innerenonce2199">Soit $U$ une variable aléatoire suivant une loi uniforme sur $[-\pi/2,\pi/2]$. On pose $X=\tan U$. Déterminer la loi de $X$, sa densité.</div></div><div class=indication><a href="javascript:showAll('innerindication2199','imageindication2199');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2199"></a><div class=inner id="innerindication2199" style="display:none;">Calculer $P(X\in [a,b])$ en effectuant un changement de variables.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2199','imagecorrige2199',2199);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2199"></a><div class=inner id="innercorrige2199" style="display:none;">Soit $a&lt;b$ deux réels. On a $X\in [a,b]\iff \tan U\in [a,b]\iff U\in [\arctan a,\arctan b]$.
+Ainsi,
+$$P(X\in [a,b])=\frac1{\pi}\int_{\arctan a}^{\arctan b} dx=\frac{\arctan b-\arctan a}{\pi}.$$
+Pour déterminer la densité de $X$, on va effectuer le changement  de variables $x=\arctan y$ dans l'intégrale précédente, de sorte que 
+$$dx=\frac{dy}{1+y^2}.$$
+On a donc 
+$$P(X\in [a,b])=\frac{1}{\pi}\int_a^b \frac{dy}{1+y^2}.$$
+La densité de $X$ est donc donnée par $f(y)=\frac1{\pi(1+y^2)}$. 
+On reconnait une loi de Cauchy.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2202"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2202"),	max:5, rating:3.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2202,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un problème de train! <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2202.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2202,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2202','imageenonce2202');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2202"></a><div class=inner id="innerenonce2202">La distance en train entre Paris et Clermont-Ferrand fait environ 400km. Les motrices tombent souvent en panne sur ce trajet. On fait l'hypothèse que cette panne peut se produire de façon uniforme sur tout le trajet. Lorsqu'un train tombe en panne, on doit faire venir une locomotive de rechange. On suppose que la SNCF dispose pour cette ligne de deux locomotives de rechange. Bien sûr, c'est toujours la locomotive la plus proche qui se rend au lieu de la panne.
+<ol class="enumeratechiffre">
+<li> On suppose que les locomotives sont disposées respectivement dans les gares de départ et d'arrivée. Quel est la distance moyenne parcourue par la locomotive de rechange?
+<li> Un ingénieur de la SNCF se dit : ce serait plus malin de placer les locomotives respectivement au 1/3 et au 2/3 du parcours. Qu'en pensez-vous?
+<li> Déterminer la position optimale des deux locomotives de secours pour minimiser la distance parcourue par la locomotive de rechange.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2202','imagecorrige2202',2202);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2202"></a><div class=inner id="innercorrige2202" style="display:none;"><ol class="enumeratechiffre">
+<li> Voici deux rédactions possibles pour cette question. <br>
+Rédaction 1 : il y a une chance sur deux pour que le train tombe en panne plus près de Paris, et une chance sur deux pour que le train tombe en panne plus près de Clermont. Si le train tombe en panne plus près de Paris, la distance parcourue par la locomotive de rechange suit une loi uniforme sur l'intervalle [0,200]. La distance moyenne parcourue (l'espérance de la variable aléatoire) est donc 100 km. C'est la même chose si la locomotive tombe en panne plus près de Clermont-Ferrand. La distance moyenne parcourue par la locomotive de rechange est donc de 100km.<br>
+Rédaction 2 : On suppose que la locomotive part de Paris, et on note $X$ la variable aléatoire égale au nombre de kilomètres parcourus avant une panne. Alors $X$ suit une loi uniforme sur [0,400]. En particulier, sa densité est $f(x)=\frac{1}{400}\mathbf 1_{[0,400]}$.  Notons $g(X)$ la distance parcourue par la locomotive de rechange. Alors $g(X)=X$ si $0\leq X\leq 200$ et $g(X)=400-X$ si $200\leq X\leq 400$. Par le théorème de transfert, on a donc
+$$E(g(X))=\int_0^{200} xf(x)dx+\int_{200}^{400}(400-x)f(x)dx=100.$$
+<li> On peut faire un raisonnement identique à la question précédente, mais cette fois, il y a quatre cas à considérer : 
+<ul class="rien">
+<li> si  $X$ est à valeurs dans $[0,400/3]$, la distance parcourue par la locomotive de secours sera égale à $\frac{400}3-X$;
+<li> si $X$ est à valeurs dans $[400/3,200]$, la distance parcourue sera égale à $X-400/3$; 
+<li> si $X$ est à valeurs dans $[200,800/3]$, la distance parcourue sera égale à $800/3-X$;
+<li> si $X$ est à valeurs dans $[800/3,400]$, la distance parcourue sera égale à $X-\frac{800}3$.
+</ul>
+Finalement, la distance moyenne vaut (on a utilisé la symétrie par rapport à 200 pour calculer l'intégrale) :
+$$\frac2{400}\int_0^{400/3} (400/3-x)dx+\frac2{400}\int_{400/3}^{200}(x-400/3)dx=\frac{500}9.$$
+C'est effectivement nettement mieux!
+<li> La solution précédente n'est pas optimale. Pour que cela soit optimal, on "sent" qu'il faudrait que les deux locomotives de secours puissent parcourir, en moyenne, la même longueur de trajet de part et d'autre de leur point de rattachement. En voici une démonstration mathématique, sans doute pas la plus simple. Notons $a\leq b$ les positions des deux locomotives de secours, avec $0\leq a\leq b\leq 400$. Comme à la question précédente, on a les 4 cas :
+<ul class="rien">
+<li> si  $X$ est à valeurs dans $[0,a]$, la distance parcourue par la locomotive de secours sera égale à $a-X$;
+<li> si $X$ est à valeurs dans $[a,(a+b)/2]$, la distance parcourue sera égale à $X-a$; 
+<li> si $X$ est à valeurs dans $[(a+b)/2,b]$, la distance parcourue sera égale à $b-X$;
+<li> si $X$ est à valeurs dans $[b,400]$, la distance parcourue sera égale à $X-b$.
+</ul>
+La distance moyenne parcourue vaut donc 
+$$\frac1{400}\left(\int_0^a (a-x)dx+\int_a^{(a+b)/2}(x-a)dx+\int_{(a+b)/2}^b (b-x)dx+\int_{b}^{400}(x-b)\right)$$
+$$=\frac1{400}\left(\frac{a^2}2+\frac{(b-a)^2}4+\frac{(400-b)^2}2\right).$$
+On cherche donc à trouver $a,b$ pour minimiser la fonction 
+$$h(a,b)=\frac{a^2}2+\frac{(b-a)^2}4+\frac{(400-b)^2}2.$$
+On calcule les dérivées partielles de cette fonction :
+$$\frac{\partial h}{\partial a}(a,b)=\frac{3a-b}2\textrm{ et }\frac{\partial h}{\partial b}(a,b)=\frac{3b-a}2-400.$$
+On trouve facilement que les deux dérivées partielles s'annulent simultanément uniquement en $a=100$ et $b=300$. La distance moyenne minimale est donc atteinte si la première locomotive est au 1/4 du parcours, et la seconde au 3/4.
+</ol></div></div></div>
+
+<div class=titrepartie>Lois exponentielles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2084"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2084"),	max:5, rating:1.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2084,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Chaîne de fabrication <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2084.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2084,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2084','imageenonce2084');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2084"></a><div class=inner id="innerenonce2084">Une usine fabrique des cadres de vélo. Pour qu'une pièce soit terminée, il faut
+qu'elle passe par la chaine $A$ puis par la chaine $B$.
+Le temps de passage exprimé en minutes pour un objet sur la chaine 
+$A$ est une variable aléatoire $M$ suivant une loi exponentielle de
+paramètre 2.
+Le temps de passage exprimé en minutes pour un objet sur la chaine 
+$B$ est une variable aléatoire $N$ suivant une loi uniforme sur $\left[
+0,1\right] $
+Les variables $M$ et $N$ sont indépendantes.
+<ol class="enumeratechiffre">
+<li>  Rappeler l'expression d'une densité de probabilité $v$ de $M$
+et d'une densité $w$ de $N$.
+<li>  On note $S$ la variable aléatoire représentant le temps total
+de fabrication d'une pièce.
+Exprimer $S$ en fonction de $M$ et de $N$ et déterminer le temps moyen
+de fabrication d'une pièce.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2084','imageindication2084');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2084"></a><div class=inner id="innerindication2084" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours!
+<li> L'espérance est linéaire!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2084','imagecorrige2084',2084);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2084"></a><div class=inner id="innercorrige2084" style="display:none;"><ol class="enumeratechiffre">
+<li>  Une densité de $M$ est : $v\left( t\right) =0$ sur $\Bbb{R}^{-}$
+et $v\left( t\right) =2e^{-2t}$ sur $\Bbb{R}^{+}$
+une densité de $N$ est : $w\left( t\right) =1$ sur $\left[ 0,1\right] $
+et $0$ ailleurs
+<li>  Le temps total de fabrication est la somme des temps de passage sur $A
+$ et $B.$
+On a donc $S=N+M$.
+On en déduit que le temps moyen de fabrication d'une pièce est : $E\left(
+S\right) =E\left( M\right) +E\left( N\right) =\frac{1}{2}+\frac{1+0}{2}=1.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2318"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2318"),	max:5, rating:1.2142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2318,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Désintégration radioactive. <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2318.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2318,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2318','imageenonce2318');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2318"></a><div class=inner id="innerenonce2318">La durée de vie des atomes de radon suit une loi exponentielle. La probabilité qu'un atome de radon ne soit pas désintégré en 40s
+sachant qu'il ne l'est pas en 12s vaut $\frac{\sqrt 2}2$. Quelle est la probabilité qu'il ne soit pas désintégré avant 76s sachant qu'il ne l'est pas en 20s?</div></div><div class=indication><a href="javascript:showAll('innerindication2318','imageindication2318');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2318"></a><div class=inner id="innerindication2318" style="display:none;">Utiliser la propriété d'absence de mémoire des lois exponentielles.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2318','imagecorrige2318',2318);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2318"></a><div class=inner id="innercorrige2318" style="display:none;">Soit $X$ la variable aléatoire donnant la durée de vie d'un atome de radon. On sait que $X$ suit une loi exponentielle de paramètre $\lambda$.
+On sait que, pour $a&gt;0$, $P(X\geq a)=\int_a^{+\infty}\lambda e^{-\lambda t}dt=e^{-\lambda a}$. L'énoncé nous dit que 
+$$P_{(X\geq 12)}(X\geq 40)=\frac{\sqrt 2}2.$$
+On utilise ensuite que la loi exponentielle est sans mémoire pour écrire que 
+$$P(X\geq 28)=P_{(X\geq 12)}(X\geq 28+12)=\frac{\sqrt 2}2=e^{-28 \lambda}.$$
+D'autre part, on cherche
+$$P_{(X\geq 20)}(X&gt;76)=P(X\geq 56)=e^{-56\lambda}=\left(e^{-28\lambda}\right)^2=\frac 12.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2070"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2070"),	max:5, rating:1.4615384615385, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2070,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Uniforme et exponentielle <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2070.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2070,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2070','imageenonce2070');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2070"></a><div class=inner id="innerenonce2070">Soit $U$ une variable aléatoire de loi uniforme sur $[0,1]$.
+Démontrer que la variable aléatoire $X=-\ln U$ suit une loi exponentielle dont on précisera le paramètre.</div></div><div class=indication><a href="javascript:showAll('innerindication2070','imageindication2070');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2070"></a><div class=inner id="innerindication2070" style="display:none;">Calculer la fonction de répartition de $X$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2070','imagecorrige2070',2070);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2070"></a><div class=inner id="innercorrige2070" style="display:none;">On va calculer la fonction de répartition de $X$. 
+On remarque que $X\leq x$ si et seulement si $U\geq \exp(-x)$, puisque la fonction 
+$x\mapsto \exp(-x)$ est décroissante. On a donc
+$$F_X(x)=P(X\leq x)=P(U\geq \exp(-x)).$$
+Si $x&lt;0$, alors $\exp(-x)&gt;1$ et donc $F_X(x)=0$. Si $x\geq 0$, alors
+$\exp(-x)\in[0,1]$ et donc, puis $U$ suit une loi uniforme à valeurs dans $[0,1]$,
+$$F_X(x)=1-\exp(-x).$$
+On reconnait bien la fonction de répartition d'une loi exponentielle de paramètre 1
+(on peut encore dériver la fonction de répartition pour retomber sur la densité).</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2085"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2085"),	max:5, rating:1.8888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2085,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pannes <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2085.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2085,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2085','imageenonce2085');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2085"></a><div class=inner id="innerenonce2085">Le fonctionnement d'une machine est perturbé par des pannes. On considère les variables aléatoires
+$X_1,X_2$ et $X_3$ définies par : 
+$X_1$ est le temps, exprimé en heures, écoulé entre la mise en route de la machine et la première panne.
+$X_2$ (resp. $X_3$), est le temps, en heures, écoulé entre la remise en route de la machine après la première (resp.
+la deuxième) panne et la panne suivante. On suppose que les variables aléatoires $X_1,X_2$ et $X_3$ sont indépendantes 
+et suivent la même loi exponentielle de paramètre 1/2.
+<ol class="enumeratechiffre">
+<li> Quelle est la durée moyenne de fonctionnement entre deux pannes consécutives?
+<li> Soit $E$ l'événement : "chacune des 3 périodes de fonctionnement de la machine dure plus de 2 heures".
+Calculer $P(E)$.
+<li> Soit $Y$ la variable aléatoire égale à la plus grande des 3 durées de fonctionnement de la machine sans interruption. 
+<ol class="enumeratechiffre">
+<li> Calculer $P(Y\leq t)$ pour tout $t\in\mathbb R$.
+<li> Déterminer une densité de $Y$.
+<li> Pour $a&lt;0$, calculer $\int_0^{+\infty}te^{at}dt.$
+<li> Démontrer que la variable aléatoire $Y$ admet une espérance, dont on calculera, en heures et minutes, la valeur.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2085','imagecorrige2085',2085);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2085"></a><div class=inner id="innercorrige2085" style="display:none;"><ol class="enumeratechiffre">
+<li> La durée moyenne de fonctionnement entre deux pannes consécutives est l'espérance (commune) des variables aléatoires 
+$X_1$, $X_2$ et $X_3$, c'est-à-dire $1/(1/2)=2$.
+<li> L'événement $E$ s'écrit : $E=(X_1\geq 2)\cap (X_2\geq 2)\cap (X_3\geq 2)$. Les variables aléatoires $X_1$, $X_2$ et $X_3$ étant indépendantes,
+on a $P(E)=P(X_1\geq 2)\times P(X_2\geq 2)\times P(X_3\geq 2)$. Or, 
+$$P(X_i\geq 2)=\int_2^{+\infty}\frac12e^{-t/2}dt=e^{-1}.$$
+On en conclut que $P(E)=e^{-3}$.
+<li> <ol class="enumeratechiffre">
+<li> On a $Y=\max(X_1,X_2,X_3)$. Ainsi, $(Y\leq t)=(X_1\leq t)\cap (X_2\leq t)\cap (X_3\leq t)$. 
+Par indépendance des 3 variables aléatoires, on en déduit que
+$$P(Y\leq t)=P(X_1\leq t)P(X_2\leq t)P(X_3\leq t).$$
+Ainsi, si $t\leq 0$, $P(Y\leq t)=0$. Si $t&gt;0$, alors 
+$$P(Y\leq t)=\left(1-e^{-t/2}\right)^3.$$
+<li> La quantité calculée à la question précédente est la fonction de répartition de $Y$, nous la notons $F_Y$.
+Alors $F_Y$ est continue sur $\mathbb R$ et $C^1$ sur $\mathbb R^*$. On en déduit que $Y$ admet une densité notée
+$f_Y$ définie sur $\mathbb R^*$ par $f_Y(t)=F_Y'(t)$, soit
+$$f_Y(t)=\left\{
+\begin{array}{ll}
+0&\textrm{ si }t&lt;0\\
+\frac32e^{-t/2}\left(1-e^{-t/2}\right)^2&\textrm{ si }t&gt;0.
+\end{array}
+\right.$$
+<li> A l'aide d'une intégration par parties, on trouve que
+\begin{eqnarray*}
+\int_0^x te^{at}dt&=&\left[\frac{te^{at}}a\right]_0^x -\int_0^x \frac{e^{at}}adt\\
+&=&\frac{x}a e^{ax}-\frac 1a\left[\frac{e^{ax}}{a}\right]_0^x =\frac{x}a e^{ax}-\frac{e^{ax}}{a^2}+\frac{1}{a^2}.
+\end{eqnarray*}
+Faisant tendre $x$ vers $+\infty$, on trouve finalement que
+$$\int_0^{+\infty}t e^{at}dt=\frac{1}{a^2}.$$
+<li> Nous allons prouver que $\int_0^x tf_Y(t)$ admet une limite lorsque $x$ tend vers $+\infty$.
+Mais, pour tout $x&gt;0$, 
+\begin{eqnarray*}
+\int_0^x tf_Y(t)dt&=&\int_0^x \frac32te^{-t/2}(1-e^{-t/2})^2dt\\
+&=&\frac32\int_0^x \big(te^{-t/2}-2te^{-t}+te^{-3t/2}\big)dt
+\end{eqnarray*}
+Faisant tendre $x$ vers $+\infty$ et utilisant la question précédente, on obtient que l'intégrale $\int_0^{+\infty}tf_Y(t)dt$ 
+converge, et vaut 
+$$E(Y)=\frac{3}2\left(\frac{1}{(-1/2)^2}-\frac2{(-1)^2}+\frac{1}{(-3/2)^2}\right)=\frac{11}{3}.$$
+La durée maximale moyenne de fonctionnement entre deux pannes est 3h40min.
+</ol>
+</ol></div></div></div>    
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2321"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2321"),	max:5, rating:2.6875, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2321,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Durée de vie de composants <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2321.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2321,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2321','imageenonce2321');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2321"></a><div class=inner id="innerenonce2321">Une usine fabrique des appareils électroniques constitués de deux composants $A$ et $B$ dont les fonctionnements sont indépendants l'un de l'autre et dont les durées 
+de vie (en heures) sont des variables aléatoires $X_1$ et $X_2$ qui suivent une loi exponentielle de paramètre respectif $\lambda_1$ et $\lambda_2$.
+<ol class="enumeratechiffre">
+<li> On a observé que la durée de vie moyenne des composants de type $A$ est de $1000$ heures. Que vaut $\lambda_1$?
+<li> On a observé que, en moyenne, un composant sur deux de type $B$  avait une durée de vie inférieure ou égale à 1500 heures, et un sur deux avait une durée de vie supérieure ou égale à 1500 heures. Que vaut $\lambda_2$?
+<li> Un appareil fonctionne si et seulement si ses deux composants fonctionnent. On note $T$ la durée de vie d'un appareil. Pour $x$ un réel strictement positif, exprimer $P(T&gt; x)$ en fonction de $P(X_1&gt; x)$ et de $P(X_2&gt; x)$.
+<li> En déduire $P(T\leq x)$ en fonction de $\lambda_1$, de $\lambda_2$ et de $x$, puis reconnaitre la loi de $T$.
+<li> Sachant que la durée de vie de l'appareil dépasse l'espérance de vie du premier composant, quelle est la probabilité que la durée de vie de l'appareil dépasse l'espérance de vie du deuxième composant ?
+<li> Sachant que la durée de vie de l'appareil dépasse l'espérance de vie du deuxième composant, quelle est la probabilité que la durée de vie de l'appareil dépasse l'espérance de vie du premier composant ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2321','imageindication2321');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2321"></a><div class=inner id="innerindication2321" style="display:none;"><ol class="enumeratechiffre">
+<li> L'énoncé donne l'espérance.
+<li> L'énoncé donne la demi-vie.
+<li> Utiliser l'indépendance de $X_1$ et $X_2$.
+<li> $P(T\leq x)=1-P(T&gt;x)$.
+<li> Utiliser la propriété d'absence de mémoire.
+<li> Attention, il y a un piège!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2321','imagecorrige2321',2321);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2321"></a><div class=inner id="innercorrige2321" style="display:none;"><ol class="enumeratechiffre">
+<li> L'énoncé nous dit que l'espérance de $X_1$ est $1000$. D'après la formule donnant l'espérance d'une variable aléatoire suivant une loi exponentielle, on a 
+$\lambda_1=\frac 1{1000}$.
+<li> L'énoncé nous donne le temps de demi-vie du deuxième composant. Pour une loi exponentielle de paramètre $\lambda_2$, on sait que le temps de demi-vie est $\frac{\ln 2}{\lambda_2}$. On en déduit que $\lambda_2=\frac{\ln 2}{1500}$. On peut retrouver ceci par un calcul. En effet, l'hypothèse de l'énoncé se traduit en 
+$$P(X_2\leq 1500)=P(X_2\geq 1500)=\frac12.$$
+Mais 
+$$P(X_2\leq 1500)=\int_0^{1500}\lambda_2e^{-\lambda_2 t}dt=1-e^{-1500\lambda_2}.$$
+On en déduit que 
+$$e^{-1500\lambda_2}=\frac12\implies -1500 \lambda_2=\ln(1/2)\implies \lambda_2=\frac{\ln 2}{1500}.$$
+<li> L'événement $(T&gt;x)$ est égal à l'intersection $(X_1&gt;x)\cap (X_2&gt;x)$. Par indépendance des variables aléatoires $X_1$ et $X_2$, on en déduit que
+$$P(T&gt;x)=P\big((X_1&gt;x)\cap (X_2&gt;x)\big)=P(X_1&gt;x)P(X_2&gt;x).$$
+<li> On sait que 
+$$P(X_1&gt;x)=e^{-\lambda_1 x}\textrm{ et }P(X_2&gt;x)=e^{-\lambda_2 x}.$$
+On en déduit que 
+$$P(T\leq x)=1-P(T&gt;x)=1-e^{-\lambda_1 x}e^{-\lambda_2 x}=1-e^{-(\lambda_1+\lambda_2)}.$$
+On reconnait la fonction de répartition d'une variable aléatoire suivant une loi exponentielle de paramètre $\lambda_1+\lambda_2$. Donc $X$ suit une loi exponentielle de paramètre $\lambda_1+\lambda_2$.
+<li> On cherche la probabilité conditionnelle
+$P_{\left(T&gt;\frac 1{\lambda_1}\right)}\left(T&gt;\frac 1{\lambda_2}\right)$.
+On peut la calculer directement à partir de la formule des probabilités conditionnelles ou bien en utilisant la propriété d'absence de mémoire de $T$
+qui suit une loi exponentielle. Posons en effet $s=\frac{1}{\lambda_1}$ et $t=\frac{1}{\lambda_2}-\frac{1}{\lambda_1}$. Alors on cherche à calculer
+$P_{(T&gt;s)}(T&gt;t+s).$ Puisque $s&gt;0$ et $t&gt;0$ (car $\lambda_1&gt;\lambda_2$), ceci est égal à $P(T&gt;t)$. Ceci vaut finalement
+$$P(T&gt;t)=\exp\big(-(\lambda_1+\lambda_2)t\big)=\exp\left(\frac{\lambda_2}{\lambda_1}-\frac{\lambda_1}{\lambda_2}\right).$$
+<li> C'est plus facile pour cette question. Comme $\frac{1}{\lambda_2}&gt;\frac{1}{\lambda_1}$, l'événement $\left(T&gt;\frac{1}{\lambda_1}\right)$ est inclus dans l'événement $\left(T&gt;\frac 1{\lambda_2}\right)$. La probabilité recherchée vaut donc 1.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater2074"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2074"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2074,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Variable aléatoire sans mémoire <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2074.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(2074,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2074','imageenonce2074');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2074"></a><div class=inner id="innerenonce2074">On dit qu'une variable aléatoire $T$ à valeurs dans $\mathbb R_+$ est sans mémoire si elle vérifie,
+pour tous $s,t&gt; 0.$
+$$P(T&gt; t+s)=P(T&gt;t)P(T&gt;s).$$
+<ol class="enumeratechiffre">
+<li> Vérifier qu'une variable aléatoire $T$ vérifiant une loi exponentielle de paramètre $\lambda&gt;0$, c'est-à-dire
+dont la densité est donnée par $f(t)=\lambda\exp(-\lambda t)\mathbf 1_{[0,+\infty[}(t)$ est une variable aléatoire sans mémoire.
+<li> Réciproquement, soit $T$ une variable aléatoire à valeurs dans $\mathbb R_+$ sans mémoire et vérifiant $P(T&gt;0)&gt;0$.
+<ol class="enumeratechiffre">
+<li> On suppose qu'il existe $t&gt;0$ tel que $P(T&gt;t)=0$. Calculer $P(T&gt;t/2^n)$ en fonction de $P(T&gt;t)$. En déduire que $P(T&gt;0)=0$. Conclusion?
+<li> Soit $\alpha=P(T&gt;1)$. On souhaite démontrer que $P(T&gt;t)=\alpha^t$ pour tout $t\in\mathbb R_+$.
+<ol class="enumeratechiffre">
+<li> Démontrer ce résultat si $t\in\mathbb N^*$.
+<li> On suppose $t\in\mathbb Q_+^*$ et on note $t=p/q$. Démontrer que 
+$$P(T&gt;p)=\big(P(T&gt;p/q)\big)^q$$
+et en déduire que le résultat est vrai pout $t\in\mathbb Q_+^*$.
+<li> En utilisant la décroissance de $x\mapsto P(T&gt;x)$, démontrer que le résultat est vrai pour tout $t\in\mathbb R_+$.
+</ol>
+<li> Conclure.
+</ol>
+<li> Justifier le terme "sans mémoire". On pourra calculer $P(T&gt;s+t|T&gt;s)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2074','imageindication2074');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2074"></a><div class=inner id="innerindication2074" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer ces probabilités grâce à la densité.
+<li>
+<ol class="enumeratechiffre">
+<li> Pour la seconde partie, on pourra justifier que $P(T&gt;0)=\lim_{n\to+\infty}P(T&gt;t/2^n)$.
+<li> <ol class="enumeratechiffre">
+<li> Procéder par récurrence.
+<li> &Eacute;crire que $p=p/q+\dots+p/q$.
+<li> Considérer $(x_n)$ et $(y_n)$ deux suites de rationnels, avec $(x_n)$ croissante, $(y_n)$ décroissante, $x_n\leq t\leq y_n$ et qui convergent vers $t$ et utiliser que $P(T&gt;x_n)\geq P(T&gt;t)\geq P(T&gt;y_n)$.
+</ol>
+<li> On peut retrouver la densité à partir de la fonction de répartition.
+</ol>
+<li> Utiliser la définition des probabilités conditionnelles.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2074','imagecorrige2074',2074);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2074"></a><div class=inner id="innercorrige2074" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit simplement de calculer la fonction de répartition d'une loi exponentielle. Mais, par intégration,
+$$P(T&gt;t)=\int_{t}^{+\infty}\lambda e^{-\lambda t}dt=e^{-\lambda t},$$
+ce qui entraîne facilement que $T$ est sans mémoire. 
+<li>
+<ol class="enumeratechiffre">
+<li> On va prouver par récurrence sur $n$ que $P(T&gt;t/2^n)=0$. C'est vrai pour $n=0$
+et si c'est vrai au rang $n$, alors 
+$$P(T&gt;(t/2^{n+1}+t/2^{n+1}))=P(T&gt;t/2^{n+1})P(T&gt;t/2^{n+1})$$
+ce qui implique
+$$P(T&gt;t/2^n)=\big(P(T&gt;t/2^{n+1})\big)^2,$$
+ce qui prouve que $P(T&gt;2^{n+1})=0$. Mais alors, la suite d'événements $(A_n)$ définie
+par $A_n=T&gt;t/2^n$ est une suite croissante d'événements, et $\bigcup_n A_n=(T&gt;0)$. On en déduit
+que 
+$$P(T&gt;0)=\lim_{n\to+\infty}P(T&gt;t/2^n)=0,$$
+ce qui contredit l'hypothèse faite sur $T$. On a donc $P(T&gt;t)&gt;0$ pour tout $t\geq 0$.
+<li> <ol class="enumeratechiffre">
+<li> On commence par prouver par récurrence sur $n$ entier non-nul que $P(T&gt;n)=\alpha^n$. C'est vrai pour $n=1$,
+et si c'est vrai au rang $n$, alors 
+$$P(T&gt;n+1)=P(T&gt;n)P(T&gt;1)=\alpha^n\alpha=\alpha^{n+1}.$$
+<li>
+Soit maintenant $t=p/q$ appartenant à $\mathbb Q_+^*$, avec $p,q$ des entiers strictement positifs. On a alors :
+\begin{eqnarray*}
+P(T&gt;p)&=&P(T&gt;p/q+\dots+p/q)\quad\textrm{ (avec $q$ termes dans la somme)}\\
+&=&P(T&gt;p/q)P(T&gt;p/q+\dots+p/q)\quad\textrm{ (avec $q-1$ termes dans la somme)}\\
+&=&\big(P(T&gt;p/q)\big)^q
+\end{eqnarray*}
+soit
+$$P(T&gt;p/q)=\big(P(T&gt;p)\big)^{1/q}=\alpha^{p/q}.$$
+<li> Soit finalement $t\in\mathbb R_+^*$. Il existe deux suites de rationnels $(x_n)$ et $(y_n)$ avec
+$x_n\leq t\leq y_n$ pour tout $n$ et les suites $(x_n)$, $(y_n)$ convergent vers $t$.
+On a de plus 
+$$\alpha^{y_n}=P(T&gt;y_n)\leq P(T&gt;t)\leq P(T&gt;x_n)=\alpha^{x_n}.$$
+On passe à la limite quand $n$ tend vers $+\infty$ et on trouve
+$$\alpha^t\leq P(T&gt;t)\leq \alpha^t$$
+ce qui donne le résultat voulu.
+</ol>
+<li> La fonction de répartition de $T$ est définie, pour $t&gt;0$, par
+$$F_T(t)=1-P(T&gt;t)=1-\alpha^t.$$
+La fonction de répartition est dérivable sur $]0,+\infty[$, on retrouve la densité de $T$ en la dérivant.
+Or, la dérivée de $t\mapsto 1-\alpha^t$ est $t\mapsto -\ln\alpha \alpha^t=-\ln\alpha\exp(t\ln \alpha)$.
+C'est bien la densité d'une loi exponentielle de paramètre $\lambda=-\ln \alpha&gt;0$.
+</ol>
+<li> On a 
+$$P(T&gt;t+s|T&gt;s)=\frac{P\big(T&gt;t+s)\cap (T&gt;s)\big)}{P(T&gt;s)}=\frac{P(T&gt;t+s)}{P(T&gt;s)}=P(T&gt;t).$$
+Si $T$ modélise la durée de vie d'un composant, elle modélise une durée de vie "sans vieillissement". 
+Si le composant a déjà vécu $s$ minutes, il vivra $t$ minutes de plus avec la même probabilité qu'un composant
+neuf vive au moins $t$ minutes.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2075"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2075"),	max:5, rating:2.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2075,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Minimum de deux lois exponentielles <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2075.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2075,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2075','imageenonce2075');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2075"></a><div class=inner id="innerenonce2075">Soient $X_1$ et $X_2$ deux variables aléatoires indépendantes suivant une loi exponentielle
+de paramètres respectifs $\lambda_1$ et $\lambda_2$. On pose $Y=\min(X_1,X_2)$.
+<ol class="enumeratechiffre">
+ <li> Pour tout réel $y$, calculer $\mathbb P(Y&gt;y)$. En déduire que $Y$ suit une loi exponentielle
+de paramètre $\lambda_1+\lambda_2$.
+<li> Deux guichets sont ouverts à une banque. Le temps de service au premier guichet (resp. au deuxième) suit
+une loi exponentielle de moyenne 20 min (resp. 30 min). Deux clients rentrent simultanément, l'un choisit le 
+guichet 1 et l'autre le guichet 2. En moyenne, après combien de temps sort le premier?
+<li> En moyenne, après combien de temps sort le dernier?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2075','imageindication2075');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2075"></a><div class=inner id="innerindication2075" style="display:none;"><ol class="enumeratechiffre">
+ <li> Utiliser l'indépendance pour calculer $\mathbb P(Y&gt;y)$. La fonction de répartition
+caractérise la loi.
+<li>
+<li> On n'a pas besoin de calculer la loi de $\max(X_1,X_2)$, car on veut son espérance qu'on peut calculer
+uniquement à partir de $E(X_1)$, $E(X_2)$ et $E(Y)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2075','imagecorrige2075',2075);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2075"></a><div class=inner id="innercorrige2075" style="display:none;"><ol class="enumeratechiffre">
+ <li> On va commencer par calculer $P(X_1&gt;y)$. Si $y\leq 0$, alors $P(X_1&gt;y)=1$ (car $X_1$ est 
+à valeurs dans $\mathbb R_+$). Sinon, pour $y&gt;0$, on a 
+$$P(X_1&gt;y)=\int_y^{+\infty}\lambda_1e^{-\lambda_1 t}dt=e^{-\lambda_1 y}.$$
+De même,
+$$P(X_2&gt;y)=e^{-\lambda_2 y}.$$
+$Y$ est à valeurs positives, donc $P(Y&gt;y)=1$ si $y\leq 0$. Si $y&gt;0$, alors
+$$P(Y&gt;y)=P(X_1&gt;y\cap X_2&gt;y)=P(X_1&gt;y)P(X_2&gt;y)=e^{-(\lambda_1+\lambda_2)y},$$
+où on a utilisé l'indépendance de $X_1$ et $X_2$. 
+Ainsi, la fonction de répartition de $Y$, notée $F_Y(y)$, vaut 0 si $y\leq 0$ et
+$1-e^{-(\lambda_1+\lambda_2)y}$ si $y&gt;0$. On reconnait la fonction de répartition d'une loi 
+exponentielle de paramètre $\lambda_1+\lambda_2$. Comme la fonction de répartition caractérise
+la loi, on en déduit que $Y$ suit une loi exponentielle de paramètre $\lambda_1+\lambda_2$.
+<li> On cherche $E(Y)$, avec $\lambda_1=1/20$ et $\lambda_2=1/30$. 
+L'espérance de $Y$ est donc
+$$E(Y)=\frac1{\lambda_1+\lambda_2}=\frac{60}5=12.$$
+<li> Si on pose $X=\max(Y_1,Y_2)$, on cherche l'espérance de $X$. Il serait possible de procéder
+comme précédemment, en cherchant la fonction de répartition de $X$ (attention, $X$ ne suit pas
+une loi exponentielle). Mais comme on cherche son espérance, il y a un raisonnement plus facile.
+En effet, il est facile de remarquer que 
+$$X_1+X_2=X+Y$$
+(la somme de deux nombres est égale à la somme de leur minimum et de leur maximum). 
+Prenant l'espérance, on trouve
+$$E(X)=E(X_1)+E(X_2)-E(Y)=20+30-12=38.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2166"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2166"),	max:5, rating:2.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2166,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tunnel <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2166.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2166,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2166','imageenonce2166');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2166"></a><div class=inner id="innerenonce2166">Les ampoules électriques d'un tunnel routier sont allumées 24 heures sur 24 et la durée
+de vie de chaque ampoule suit une loi exponentielle d'espérance 10000 heures. Il y a
+100 ampoules dans le tunnel et à l'instant t = 0, on installe des ampoules neuves.
+Au bout de combien de temps, la probabilité qu'au moins une ampoule soit en panne
+dépasse-t-elle 95\% ?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2166','imagecorrige2166',2166);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2166"></a><div class=inner id="innercorrige2166" style="display:none;">Notons $X_i$ la variable aléatoire donnant la durée de vie (en heures) de la $i$-ème ampoule, pour $i=1,\dots,100$. D'après l'énoncé, $X_i$ suit une loi exponentielle de paramètre $\lambda=1/10000$.
+De plus, les variables aléatoires $X_i$ sont indépendants.
+ On cherche $t\geq 0$ telle que 
+$$P\left(\bigcup_{i=1}^{100}(X_i\leq t)\right)\geq 0,95.$$
+En passant au complémentaire (c'est une stratégie souvent utile lorsqu'on a un événement faisant intervenir une réunion), on cherche $t\geq 0$ tel que
+$$P\left(\bigcap_{i=1}^{100}(X_i&gt; t)\right)\leq 0,05.$$
+Les variables aléatoires $(X_i)$ étant indépendantes, ceci est équivalent à 
+$$\prod_{i=1}^{100} P(X_i&gt;t)\leq 0,05.$$
+Mais, 
+$$P(X_i&gt;t)=\int_{t}^{+\infty}\lambda e^{-\lambda x}dx=e^{-\lambda t}$$
+et donc 
+$$\prod_{i=1}^{100} P(X_i&gt;t)\leq 0,05\iff e^{-100\lambda t}\leq 0,05.$$
+Prenant le logarithme et tenant compte de la valeur de $\lambda$, on constate que ceci est équivalent à 
+$$t\geq -100\ln(0,05).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2319"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2319"),	max:5, rating:2.3846153846154, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2319,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'entreprise d'autocars <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2319.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2319,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2319','imageenonce2319');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2319"></a><div class=inner id="innerenonce2319">Une entreprise d'autocars dessert une région montagneuse. En chemin, les véhicules peuvent être bloqués par des incidents extérieurs comme des pierres, la présence de troupeaux sur la route. Un autocar part de son entrepôt. On note $D$ la variable aléatoire qui mesure la distance, en kilomètres, que l'autocar va parcourir jusqu'à ce que survienne un incident. On admet que $D$ suit une loi exponentielle de paramètre $\lambda$. Une étude statistique a montré qu'une fois sur deux, le premier incident survient avant le 62ème kilomètre et une fois sur deux, il survient après le 62ème kilomètre. 
+
+<ol class="enumeratechiffre">
+ <li> Quelle est la distance moyenne, arrondie au kilomètre, parcourue par un autocar sans incident ?
+ <li> Calculer la probabilité que la distance parcourue sans incident soit :
+ <ol class="enumeratechiffre">
+ <li> supérieure à 300 km ;
+ <li> comprise entre 50 et 100 km.
+</ol>
+<li> Sachant que l'autocar a parcouru 350 kilomètres sans incident, quelle est la probabilité qu'il n'en n'ait pas non plus au cours des 25 kilomètres suivants ?
+<li> L'entreprise possède $N_0$ autocars. Les distances parcourues par chacun des autocars entre l'entrepôt et le lieu où survient le premier incident sont des variables aléatoires deux à deux indépendantes et de même loi exponentielle de paramètre $\lambda$. On note $X_d$ la variable aléatoire égale au nombre d'autocars n'ayant subi aucun incident après avoir parcouru $d$ kilomètres.
+<ol class="enumeratechiffre">
+<li> Quelle est la loi de $X_d$ ?
+<li> Donner le nombre moyen d'autocars n'ayant subi aucun incident après $d$ kilomètres.
+<li> On note $d_0$ le nombre minimum de kilomètres parcourus par chacun des autocars dans une journée. A partir de quelle valeur de $d_0$ a-t-on au moins 99 chances sur 100 qu'un incident se soit produit dans la flotte ? 
+Application numérique : calculer cette valeur lorsque la flotte compte 25 autocars. Commenter.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2319','imagecorrige2319',2319);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2319"></a><div class=inner id="innercorrige2319" style="display:none;"><ol class="enumeratechiffre">
+<li> Traduisons mathématiquement le fait que, une fois sur deux, le premier incident survient avant le 62ème kilomètre et une fois sur deux, il survient après le 62ème kilomètre. Pour la variable aléatoire $D$, cela signifie $P[D\le 62]=1/2$. De plus $D$ suit une loi exponentielle de paramètre $\lambda$. Ainsi 
+$$P[D\le 62]=1-e^{-\lambda\times 62}\ .$$
+On a donc $e^{-\lambda\times 62}=1/2$, ce qui donne $\displaystyle \lambda=\frac{\ln 2}{62}$ qui est la valeur exacte de $\lambda$.
+On en déduit que 
+$$E[D]=\frac1\lambda=\frac{62}{\ln 2}\approx 89\ .$$
+<li>
+<ol class="enumeratechiffre">
+<li> $P[D\ge 300]=e^{-\lambda\times 300}\approx 3,5\%$.
+<li> 
+\begin{eqnarray*}
+P[50\le D\le 100]&=&P[D\le 100]-P[D\le 50]\\
+&=&(1-e^{-\lambda\times 100})-(1-e^{\lambda\times 50})\\&=&e^{-\lambda\times 50}-e^{-\lambda\times 100}\\&\approx& 24,5\%\ .
+\end{eqnarray*}
+</ol>
+<li> On sait que la variable $D$ est sans mémoire. Donc
+$$P[D\ge 375\,\vert\, D\ge 350]=P[D\ge 25]=e^{-\lambda\times 25}\approx 75,6\%\ .$$
+<li>
+<ol class="enumeratechiffre">
+<li> La probabilité qu'un autocar n'ait subi aucun incident après avoir parcouru $d$ kilomètres vaut $P[D\ge d]=e^{-\lambda d}$. Il y a $N_0$ autocars et les distances parcourues avant le premier incident sont indépendantes. Ainsi, la variable $X_d$ qui compte le nombre d'autocars n'ayant subi aucun incident suit une loi binomiale de paramètres $N_0$ et $e^{-\lambda d}$.
+<li> $E[X_d]=N_0\times e^{-\lambda d}$.
+<li> Pour une distance $d_0$ donnée, dire qu'un incident s'est produit dans la flotte, c'est dire que $X_{d_0}&lt; N_0$. On cherche donc $d_0$ tel que $P[X_{d_0}&lt; N_0]\ge 99\%$, ou encore, en passant à l'événement contraire, que $P[X_{d_0}=N_0]\le 1\%$. On trouve donc $e^{-\lambda N_0 d_0}\le 1\%$, soit
+$$d_0\ge \frac{\ln (100)}{\lambda N_0}\ .$$ 
+Si $N_0=25$ on trouve au kilomètre près $d\ge 16$ km. Concrètement, si chaque autocar parcourt plus de 16 km dans la journée, on a une très forte probabilité (supérieure à 0,99) que survienne au moins un incident.  
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2076"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2076"),	max:5, rating:2.7857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2076,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lien entre lois exponentielles et lois géométriques <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2076.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2076,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2076','imageenonce2076');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2076"></a><div class=inner id="innerenonce2076">Soit $X$ une variable aléatoire suivant une loi exponentielle de paramètre $1$.
+On note $Y=\lceil X\rceil$ sa partie entière ``supérieure'', c'est-à-dire que
+$\lceil 1.5\rceil=2$ et $\lceil 3\rceil=3$. 
+<ol class="enumeratechiffre">
+ <li> Démontrer que $Y$ suit une loi géométrique dont on précisera le paramètre.
+<li> On note $Z=Y-X$. Quelle est sa fonction de répartition?
+<li> En déduire que $Z$ est une variable aléatoire à densité dont la densité est
+$$f(t)=\frac{e^{t-1}}{1-e^{-1}}\mathbf 1_{[0,1]}(t).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2076','imageindication2076');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2076"></a><div class=inner id="innerindication2076" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Quelles sont les valeurs prises par $Z$? Exprimer ensuite $P(Z\leq t)$ uniquement en fonction de $X$.
+<li> Dériver!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2076','imagecorrige2076',2076);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2076"></a><div class=inner id="innercorrige2076" style="display:none;"><ol class="enumeratechiffre">
+<li> $Y$ est à valeurs dans $\mathbb N^*$. De plus, on a $Y=n\iff n-1&lt;X\leq n$.
+Ainsi,
+$$P(Y=n)=F_X(n)-F_X(n-1)=(1-e^{-n})-(1-e^{-(n-1)})=(1-e^{-1})e^{-(n-1)}.$$
+On en déduit que $Y$ suit une loi géométrique de paramètre $1-1/e$.
+<li> $Z$ est à valeurs dans $[0,1[$. Si on note $F_Z$ sa fonction de répartition,
+elle est nulle à gauche de 0, et égale à 1 à droite de 1. Choisissons maintenant $t\in[0,1[$. Si $X\in ]n-1,n]$ avec $n$ dans $\mathbb N^*$, alors $Y=n$ et $Z\leq t\iff X\geq Y-t\iff X\geq n-t$. Ainsi, on a $Z\leq t$ si et seulement si il existe $n\in\mathbb N^*$ tel que 
+$n-t\leq X\leq n$. Ainsi,
+$$P(Z\leq t)=P\left(\bigcup_{n=1}^{+\infty}\{n-t\leq X\leq n\}\right)=\sum_{n=1}^{+\infty}P(n-t\leq X\leq n),$$
+puisque les événements $n-t\leq X\leq n$ sont disjoints. On en déduit
+$$P(Z\leq t)=\sum_{n\geq 1}\left(e^{-(n-t)}-e^{-n}\right)=\sum_{n\geq 1}(e^{t}-1)e^{-n}=\frac{(e^{t}-1)e^{-1}}{1-e^{-1}},$$
+car on a reconnu une somme géométrique.
+<li> Il suffit de dériver : 
+$$f(t)=F_Z'(t)=\frac{e^{t-1}}{1-e^{-1}}\mathbf 1_{[0,1]}(t).$$
+</ol></div></div></div>
+
+<div class=titrepartie>Lois normales</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater2083"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2083"),	max:5, rating:1.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2083,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tailles <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2083.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(2083,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2083','imageenonce2083');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2083"></a><div class=inner id="innerenonce2083">La taille d'un homme âgé de 25 ans suit une loi normale de moyenne 175cm et d'écart-type 6cm.
+<ol class="enumeratechiffre">
+ <li> Quel est le pourcentage d'hommes ayant une taille supérieure à 1m85?
+<li> Parmi les hommes mesurant plus de 1m80, quelle proportion mesure plus de 1m92?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2083','imageindication2083');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2083"></a><div class=inner id="innerindication2083" style="display:none;"><ol class="enumeratechiffre">
+ <li> C'est juste un problème de renormalisation de la loi normale.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2083','imagecorrige2083',2083);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2083"></a><div class=inner id="innercorrige2083" style="display:none;">Comme usuellement, on note $\phi$ la fonction de répartition de la loi normale $\mathcal N(0,1)$.
+On note aussi $Y=\frac{X-175}6$, qui suit une loi $\mathcal N(0,1)$.
+<ol class="enumeratechiffre">
+ <li> On cherche $P(X&gt;185)$ qu'on va calculer en renormalisant la loi normale : 
+$$P(X&gt;185)=P\left(\frac{X-175}6&gt;\frac{185-175}6\right)=P(Y&gt;5/3)=1-\phi(5/3)\simeq 0,05.$$
+<li> C'est le même raisonnement, si ce n'est qu'il fait de plus intervenir une probabilité conditionnelle :
+$$P(X&gt;192|X&gt;180)=\frac{P(X&gt;192\cap X&gt;180)}{P(X&gt;180)}=\frac{P(X&gt;192)}{P(X&gt;180)}.$$
+On mène les calculs comme précédemment, et on trouve
+$$P(X&gt;192|X&gt;180)=\frac{1-\phi(17/6)}{1-\phi(5/6)}\simeq 0,01.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2071"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2071"),	max:5, rating:0.83333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2071,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Lecture de la table de la loi normale <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2071.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2071,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2071','imageenonce2071');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2071"></a><div class=inner id="innerenonce2071"><ol class="enumeratechiffre">
+<li> Lecture directe : soit $X$ une variable aléatoire suivant une loi normale $\mathcal N(0,1)$. 
+Déterminer $t&gt;0$ tel que $P(-t&lt;X&lt;t)\simeq 0,95$.
+<li> Renormalisation : soit $X$ une variable aléatoire suivant une loi normale $\mathcal N(8,4)$.
+Donner des valeurs approchées pour 
+$$P(X&lt;7,5),\ P(X&gt;8,5),\ P(6,5&lt;X&lt;10),\ P(X&gt;6|X&gt;5).$$
+<li> Lecture inverse : Soit $X$ une variable aléatoire suivant une loi gaussienne. Déterminer
+l'espérance et la variance de $X$ sachant que 
+$$\left\{
+\begin{array}{rcl}
+P(X&lt;-1)&\simeq& 0,05\\
+P(X&gt;3)&\simeq& 0,12.
+\end{array}\right.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2071','imageindication2071');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2071"></a><div class=inner id="innerindication2071" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Utiliser une variable $Y$ qui suit une loi normale $\mathcal N(0,1)$. 
+<li>
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2071','imagecorrige2071',2071);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2071"></a><div class=inner id="innercorrige2071" style="display:none;"><ol class="enumeratechiffre">
+<li> On note $\phi$ la fonction de répartition de la loi $\mathcal N(0,1)$. On a 
+$$P(-t&lt;X&lt;t)=\phi(t)-\phi(-t)=\phi(t)-(1-\phi (t))=2\phi(t)-1.$$
+Donc $P(-t&lt;X&lt;t)\simeq 0,95\iff \phi(t)=0,975$ ce qui donne $t\simeq 1,96$.
+<li> Si $X$ suit la loi $\mathcal N(m,\sigma^2)$, alors $Y=\frac{X-m}{\sigma}$ suit la loi $\mathcal N(0,1)$.  Posons ici $Y=\frac{X-8}2$. Alors $Y$ suit la loi $\mathcal N(0,1)$. 
+On peut alors répondre aux diverses questions en les formulant à l'aide de $Y$, et en utilisant 
+la table de la loi normale.
+<ol class="enumeratechiffre">
+<li> On a $X&lt;7,5\iff Y&lt; -0,5/ 2=-0,25$. On a donc 
+$$P(X&lt;7,5)=\phi(-0,25)=1-\phi(0,25).$$
+Puisque $\phi(0,25)\simeq 0,60$, on trouve finalement que
+$$P(X&lt;7,5)\simeq 1-0,6=0,4.$$
+<li> On a $X&gt;8,5\iff Y&gt;0,5$ et donc 
+$$P(X&gt;8,5)=P(Y&gt;0,25)=1-\phi(0,25)\simeq 0,40.$$
+<li> On a $6,5&lt;X&lt;10\iff -0,75&lt;Y&lt;1$ et on trouve donc
+\begin{align*}
+P(6,5&lt;X&lt;10)
+&=\phi(1)-\phi(-0,75)\\
+&=\phi(1)-(1-\phi(0,75))\\
+&=\phi(1)+\phi(0,75)-1\\
+&\simeq 0,60.
+\end{align*}
+<li> Il y a une difficulté supplémentaire du fait de l'événement qui est un peu plus compliqué.
+On résout cette difficulté en écrivant que :
+$$P(X&gt;6|X&gt;5)=\frac{P\big((X&gt;6)\cap (X&gt;5)\big)}{P(X&gt;5)}=\frac{P(X&gt;6)}{P(X&gt;5)}.$$
+En renormalisant comme aux questions précédentes, on trouve que 
+$$P(X&gt;6|X&gt;5)=\frac{P(Y&gt;-1)}{P(Y&gt;-1/5)}=\frac{1-\phi(-1)}{1-\phi(-1,5)}=\frac{\phi(1)}{\phi(1,5)}\simeq 0,9015.$$
+</ol>
+<li> Si $X$ suit la loi $\mathcal N(m,\sigma^2)$, alors $Y=\frac{X-m}{\sigma}$ suit la loi $\mathcal N(0,1)$. 
+On doit avoir :
+$$0,05=P(X&lt;-1)=P\left(Y&lt;\frac{-1-m}\sigma\right)=\phi\left(\frac{-1-m}\sigma\right)$$
+et
+$$0,12=P(X&gt;3)=1-P\left(Y\leq \frac{3-m}\sigma\right)=1-\phi\left(\frac{3-m}\sigma\right).$$
+Or, $0,05=1-0,95=\simeq \phi(-1,645)$ et $0,12\simeq \phi(-1,175)$. On doit donc avoir 
+$$\left\{
+\begin{array}{rcl}
+\frac{-1-m}\sigma&=&-1,645\\
+\frac{m-3}\sigma&=&-1,175.
+\end{array}\right.$$
+On résout le système et on trouve que 
+$$\left\{
+\begin{array}{rcl}
+m&\simeq&1,33\\
+\sigma&\simeq&1,41.
+\end{array}\right.$$
+Finalement, la variance vaut $\sigma^2\simeq (1,\!41)^2\simeq 1,\!98$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2352"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2352"),	max:5, rating:2.0909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2352,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Javelot! <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2352.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2352,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2352','imageenonce2352');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2352"></a><div class=inner id="innerenonce2352">On suppose que la distance en mètres parcourues par un javelot lancé par un athlète A suit une loi normale. Au cours d'un entraînement, on constate que
+<ul class="rien">
+<li> exactement $10\%$ des javelots atteignent plus de $75$ mètres.
+<li> exactement $25\%$ des javelots atteignent moint de $50$ mètres.
+</ul>
+Calculer la longueur moyenne parcourue par un javelot ainsi que l'écart-type de cette longueur.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2352','imagecorrige2352',2352);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2352"></a><div class=inner id="innercorrige2352" style="display:none;">Notons $X$ la variable aléatoire égale au nombre de mètres parcourus par un javelot lancé par l'athlète $A$. L'énoncé nous dit que $X$ suit une loi normale de paramètre $\mathcal N(m,\sigma^2)$, avec $m$ et $\sigma$ à déterminer, et que 
+$$P(X\geq 75)=0,1,\ P(X\leq 50)=0,25.$$
+On va renormaliser ceci pour se ramener à $Y=(X-m)/\sigma$ qui suit une loi normale centrée réduite. On a donc
+$$P\left(\frac{X-m}{\sigma}\geq \frac{75-m}{\sigma}\right)=0,1\textrm{ et }
+P\left(\frac{X-m}{\sigma}\leq \frac{50-m}{\sigma}\right)=0,25.$$
+Notant $\phi$ la fonction de répartition d'une loi normale centrée réduite, on a donc le système 
+$$\left\{
+\begin{array}{rcl}
+1-\phi\left(\frac{75-m}{\sigma}\right)&=&0,1\\
+\phi\left(\frac{50-m}{\sigma}\right)&=&0,25
+\end{array}\right.
+\iff
+\left\{
+\begin{array}{rcl}
+\phi\left(\frac{75-m}{\sigma}\right)&=&0,9\\
+\phi\left(\frac{50-m}{\sigma}\right)&=&0,25.
+\end{array}
+\right.
+$$
+En s'aidant d'un tableur ou d'une table de la loi normale, on en déduit que, à $10^{-2}$ près, on a 
+$$\left\{\begin{array}{rcl}
+\frac{75-m}{\sigma}&=&1,28\\
+\frac{50-m}{\sigma}&=&-0,67.
+\end{array}
+\right.$$
+On résout le système et on trouve $m=58,59$ et $\sigma=12,82$. Le javelot parcourt en moyenne 58,59 mètres et l'écart-type est de 12,82.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater2181"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2181"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2181,rating); this.setRating(rating);   this.disable();    done();     }});</script> - C'est le pied! <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2181.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(2181,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2181','imageenonce2181');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2181"></a><div class=inner id="innerenonce2181">On a observé que la longueur d'un pied adulte, en cm, suivait une loi normale $\mathcal N(26,36)$. Une entreprise décide de fabriquer des chaussettes, en proposant trois tailles. 
+<ol class="enumeratechiffre">
+<li> Déterminer un intervalle centré en $26$ qui concentre au moins $95\%$ des tailles.
+<li> Diviser l'intervalle obtenu en trois intervalles égaux, qui détermineront les trois tailles.
+<li> Déterminer quelle part de production on doit réserver à chacune des tailles.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2181','imageindication2181');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2181"></a><div class=inner id="innerindication2181" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours.
+<li>
+<li> La production doit être proportionnelle au nombre de pieds présentant cette taille. Attention, il faut que la somme des parts soit égale à 1!!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2181','imagecorrige2181',2181);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2181"></a><div class=inner id="innercorrige2181" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est du cours (rappelons que 36 désigne ici la variance). Si $X$ désigne la variable aléatoire égale à la longueur d'un pied, on sait que 
+$$P(26-1,96\times 6\leq X\leq 26+1,96\times 6)\equiv 0,95.$$
+Comme on veut un intervalle qui contienne au moins 95\% des tailles, et pour simplifier les calculs dans la suite, on va utiliser l'intervalle $[26-2\times 6,26+2\times 6]=[14,38]$.
+<li> Les trois intervalles sont donc $[14,22]$, $[22,30]$ et $[30,38]$.
+<li> On veut bien sûr que la production soit proportionnelle au nombre de pieds présentant cette taille. Mais il faut faire attention que l'on ne raisonne pas sur tous les pieds, mais sur les pieds ayant une taille entre 14cm et 38cm. \`A l'aide d'un tableur, on trouve :
+\begin{eqnarray*}
+P(14\leq X\leq 22)&\simeq&0,230\\
+P(22\leq X\leq 30)&\simeq&0,495\\
+P(30\leq X\leq 38)&\simeq&0,230\\
+P(14\leq X\leq 38)&\simeq&0,954.
+\end{eqnarray*}
+La part de production pour la taille 14-22 est donc 0,230/0,954, soit à peu près 24,1\% (de même pour la taille 30-38). La part de production pour la taille 22-30 est 0,495/0,954, soit à peu près 51,9\%.<br>
+Un dernier conseil : si un jour vous souhaitez fabriquer des chaussettes, ne croyez pas trop aux données de cet exercice!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2188"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2188"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2188,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Meilleur intervalle pour la loi normale <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2188.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2188,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2188','imageenonce2188');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2188"></a><div class=inner id="innerenonce2188"><ol class="enumeratechiffre">
+<li> Soit $X$ une variable aléatoire suivant une loi normale centrée réduite. On note $a$ un réel strictement positif. Déterminer, parmi tous les intervalles $I$ de longueur $2a$, celui pour lequel $P(X\in I)$ est maximal.
+<li> Reprendre la même question si $X$ suit une loi normale d'espérance $m$ et d'écart-type $\sigma$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2188','imageindication2188');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2188"></a><div class=inner id="innerindication2188" style="display:none;"><ol class="enumeratechiffre">
+<li> Exprimer $P(X\in [x-a,x+a])$ en fonction de la fonction de répartition de $X$. Pour déterminer le maximum d'une fonction, on peut la dériver.
+<li> Normaliser $X$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2188','imagecorrige2188',2188);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2188"></a><div class=inner id="innercorrige2188" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $I=[x-a,x+a]$ un intervalle de longueur $2a$. On cherche $x$ tel que $P(X\in I)=P(X\in [x-a,x+a])$ soit maximal. Géométriquement, ceci est facile à déterminer. On cherche en effet l'intervalle $I$ de longueur $2a$ pour lequel l'aire sous la courbe $y=e^{-x^2/2}$ délimité par cet intervalle soit maximale. La croissance de $x\mapsto e^{-x^2/2}$ sur $]-\infty,0]$ et sa parité font qu'il est "clair" que cette valeur est maximale si $x=0$. Il est toutefois un peu plus difficile de remplacer le "il est clair" par un raisonnement mathématique précis. On peut le faire effectivement en utilisant la décroissance et la parité. Nous donnons ici un raisonnement analytique. Posons en effet
+$g(x)=P(X\in [x-a,x+a])=F(x+a)-F(x-a)$ où $F$ est la fonction de répartition de la loi normale centrée réduite. $g$ est dérivable, positive, admet une limite nulle en $\pm\infty$. De plus, 
+\begin{eqnarray*}
+\sqrt {2\pi}g'(x)&=&\exp\left( -(x+a)^2/2\right)-\exp\left(-(x-a)^2/2\right)\\
+&=&\exp\big( -(x^2+a^2+2ax)/2\big)-\exp\big( -(x^2+a^2-2ax)\big)\\
+&=&\exp\big( -(x^2+a^2)/2\big)\big(\exp(-ax)-\exp(ax)\big).
+\end{eqnarray*}
+On a donc 
+$$g'(x)=0\iff \exp(ax)=\exp(-ax)\iff ax=-ax\iff x=0.$$
+$g'$ s'annule donc uniquement si $x=0$ et $g$ atteint donc son maximum en $0$. C'est bien que l'intervalle $I$ de longueur $2a$ pour lequel $P(X\in I)$ est maximal est l'intervalle $[-a,a]$.
+<li> Notons $Y=(X-m)/\sigma$. On a 
+$$P(X\in [x-a,X+a])=P\left(Y\in \left[\frac{x-m-a}{\sigma},\frac{x-m+a}{\sigma}\right]\right).$$
+Comme $Y$ suit une loi normale centrée réduite, lorsque $a$ est fixé, ceci est maximal si et seulement si $x=m$. Parmi tous les intervalles $I$ de longueur $2a$, celui pour lequel $P(X\in I)$ est maximal est l'intervalle $[m-a,m+a]$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater2172"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2172"),	max:5, rating:2.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2172,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Usinage d'un lingot <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2172.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(2172,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2172','imageenonce2172');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2172"></a><div class=inner id="innerenonce2172"><ol class="enumeratechiffre">
+<li> {\bf Restitution de connaissances.}
+<ol class="enumeratealpha">
+<li> Soit $Z$ une variable aléatoire qui suit une loi normale ${\mathcal N}(m,\sigma^2)$. Donner une valeur approchée à $10^{-2}$ près de  $$P(m-2\sigma\le Z\le m+2\sigma)\ ?$$
+<li> Soit $N$ une variable aléatoire de loi normale centrée réduite. Donner une valeur approchée à $10^{-2}$ près du réel $a$ tel que $$P(-a\le N\le a)=99\%\ .$$
+</ol>
+Au sortir d'un laminoir, un lingot est découpé en billettes de 6 mètres de longueur. On sait que la tête du lingot présente un défaut sur une longueur $X$, où $X$ est une variable aléatoire qui suit une loi normale ${\mathcal N}(8,4)$. Pour tenter d'éliminer la longueur défectueuse, on détruit systématiquement les deux billettes de tête.
+<li> Quel est le risque pour que la troisième billette présente encore un défaut ?
+<li> Calculer le nombre de billettes à détruire pour que la première billette retenue soit sans défaut avec une probabilité d'au moins 99\%.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2172','imageindication2172');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2172"></a><div class=inner id="innerindication2172" style="display:none;"><ol class="enumeratechiffre">
+<li> Ce sont des valeurs du cours ou alors utiliser une table de la loi normale.
+<li> La troisième billette présente un défaut si et seulement si $X&gt;12$. Il faut donc calculer $P(X&gt;12)$.
+<li> La 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2172','imagecorrige2172',2172);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2172"></a><div class=inner id="innercorrige2172" style="display:none;"><ol class="enumeratechiffre">
+<li> Ce sont des valeurs à connaitre. On peut aussi s'aider d'une table de la loi normale. On a alors
+<ol class="enumeratechiffre">
+<li> $$P(m-2\sigma\le Z\le m+2\sigma)=P(-2\leq N\leq 2)\approx 95\%\ .$$
+<li>  $$P(-2,58\le N\le 2,58)\approx 99\%\ .$$
+</ol>
+<li> La longueur de 2 billettes vaut 12 mètres. On cherche donc à calculer $P(X&gt;12)$. Ici, $X$ suit une loi ${\mathcal N}(m,\sigma^2)$ avec $m=8$ et $\sigma=2$. Ainsi, $12=m+2\sigma$. Donc
+\begin{eqnarray*}
+P(X&gt;12)&=&P(X&gt;m+2\sigma)=\frac{1}2\big(P(X&gt;m+2\sigma)+P(X&lt;m-2\sigma)\big)\\
+&=&\frac12\big(1-P(m-2\sigma\leq X\leq m+2\sigma)\big)\approx 2,5\%\ .
+\end{eqnarray*}
+<li> Il est clair par la question précédente que détruire les deux premières billettes ne suffit pas. Voyons qu'il suffit de détruire 3 billettes. La longueur de 3 billettes vaut 18 mètres et $18=m+5\sigma$. On a
+$$P[X&gt;m+5\sigma]&lt; P(X&gt;m+2,58\sigma)\approx0,05\%&lt;1\%\ .$$
+Donc, si on détruit les trois premères billette, la probabilité qu'il reste des défauts dans la première billette retenue est inférieure à 1\%. En fait un calcul précis (obtenu avec GeoGebra ou une table de la loi normale) nous donne
+$$P[X&gt;18]\approx 2,87\times 10^{-7}\ .$$
+Il y a vraiment un risque infime qu'en détruisant les trois premières billettes, la quatrième présente encore un défaut! Remarquons aussi que la modélisation introduite dans cet exercice n'est pas très réaliste. En effet, puisque $X$ suit une loi normale, $X$ peut prendre des valeurs négatives (mais avec probabilité tellement faible que c'est sans réelle importance pour la réalité).
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater2072"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2072"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2072,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2072.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(2072,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2072','imageenonce2072');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2072"></a><div class=inner id="innerenonce2072">Un grossiste fournit en viande hachée trois cantines. Il reçoit chaque matin leurs commandes. Ce sont des variables aléatoires indépendantes
+suivant des lois normales d'espérance respective 55 kg, 65 kg et 30kg, et d'écart-type respectif 4 kg, 10 kg et 3 kg. Calculer la quantité de viande dont
+le grossiste dois disposer pour que le risque de ne pouvoir satisfaire la demande soit inférieur à 5\%.</div></div><div class=indication><a href="javascript:showAll('innerindication2072','imageindication2072');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2072"></a><div class=inner id="innerindication2072" style="display:none;">La somme de trois variables aléatoires indépendantes suivant une loi normale suit une loi normale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2072','imagecorrige2072',2072);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2072"></a><div class=inner id="innercorrige2072" style="display:none;">Notons $X_i$ la variable aléatoire correspondant à la quantité commandée par la $i$-ème cantine. $X_1$, $X_2$ et $X_3$
+sont indépendantes, suivent des lois normales, avec $X_1\sim \mathcal N(55,16)$, $X_2\sim \mathcal N(65,100)$ et $X_3\sim\mathcal N(30,9)$. 
+Notons $Y$ la quantité totale commandée au grossiste, $Y=X_1+X_2+X_3$. Alors $Y$ suit une loi normale, d'espérance la somme des espérances
+et de variance la somme des variances. Autrement dit, $Y$ suit une loi $\mathcal N(150,{125})$. Notons $A$ la quantité de viande dont il doit disposer
+pour que le risque de ne pouvoir satisfaire la demande soit inférieure à 0,05. On a donc $P(Y&gt;A)\leq 0,05$. 
+Pour déterminer $A$ vérifiant cette propriété, on va renormaliser $Y$ et s'aider d'une table de la loi normale centrée réduite.
+Posons en effet $Z=\frac{Y-150}{\sqrt{125}}$. Alors $Y$ suit une loi normale centrée réduite. De plus, 
+$$Y&gt;A\iff \sqrt{125}Z+150&gt;A\iff Z&gt;\frac{A-150}{\sqrt{125}}.$$
+Or, une lecture de la table de la loi normale indique que 
+$$P(Z&gt;1,65)&lt;0,05.$$
+Ainsi, il suffit que 
+$$A\geq 1,65\times\sqrt{125}+150\simeq 168,4.$$
+Le grossiste doit donc disposer d'environ $168,4$ kg de viande.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater2298"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2298"),	max:5, rating:2.0769230769231, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2298,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'ascenseur <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2298.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(2298,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2298','imageenonce2298');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2298"></a><div class=inner id="innerenonce2298">La capacité des ascenseurs est déterminée par le fait que la
+masse d’une personne suit une loi normale de moyenne 75 kg et d’écart-type
+5 kg. Dans un ascenseur du type WH1 le nombre maximum de personnes est
+de 9. Un voyant lumineux affiche qu’il y a surpoids pour une masse supérieure
+à 700 kg, dans ce cas l’ascenseur ne démarre pas.
+<ol class="enumeratechiffre">
+<li> Calculer la probabilité qu’il y ait surpoids, quand un groupe de 9 personnes
+monte dans l’ascenseur.
+<li> Une enquête récente a montré qu’aux USA, le poids moyen est de 76 kg
+et l’écart-type de 6 kg. Le building de la World-Company, à New York,
+est équipé d’un ascenseur du type WH1. Calculer la probabilité qu’il y
+ait surpoids, quand un groupe de 9 personnes monte dans cet ascenseur.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2298','imageindication2298');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2298"></a><div class=inner id="innerindication2298" style="display:none;">La somme de variables aléatoires suivant une loi normale suit une loi normale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2298','imagecorrige2298',2298);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2298"></a><div class=inner id="innercorrige2298" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $X_i$ le poids de la $i$-ème personne.  Par hypothèse, $X_i$ suit une loi $\mathcal N(75,25)$ (ici, $25=5^2$ désigne la variance).
+Si l’on suppose que le poids de chaque personne est indépendant du
+poids des autres personnes présentes dans l’ascenseur alors les $X_i$ sont
+indépendants et
+$$S = X_1 + · · · X_9 \sim  \mathcal (9 × 75,
+9 × 25)\implies S\sim\mathcal N(675,225).$$
+On cherche à calculer la probabilité $P(S &gt; 700)$.
+Pour cela, on renormalise $S$ pour se ramener à une loi normale centrée réduite;
+en remarquant que $\sqrt{225}=15.$ On a donc
+$$P(S&gt;700)=P\left(\frac{S-675}{15}&gt;\frac{700-675}{15}\right)=P(Y&gt;5/3)$$
+où $Y$ suit une loi $\mathcal N(0,1)$. En notant $\phi$ la fonction de répartition de la loi normale centrée réduite, la probabilité recherchée est 
+$$1-\phi(5/3)\simeq 0,05.$$
+<li> Un calcul complètement similaire donne cette fois une probabilité de 0,22. On constate donc que malgré un « faible » écart dans les valeurs de départ, on a quadruplé la probabilté de mettre la
+machine en panne ...
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater2073"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2073"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2073,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un équivalent de la queue de la gaussienne <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2073.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(2073,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2073','imageenonce2073');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2073"></a><div class=inner id="innerenonce2073">Pour $x&gt;0$, on pose $F(x)=\int_{x}^{+\infty}e^{-t^2/2}dt$ et $G(x)=\int_{x}^{+\infty}\frac1{t^2}e^{-t^2/2}dt$.
+<ol class="enumeratechiffre">
+ <li> Démontrer que $G(x)=_{+\infty}o\big(F(x))$.
+<li> Soit $X$ suivant une loi normale $\mathcal N(0,1)$. Donner un équivalent de $P(X&gt;x)$ lorsque $x$
+tend vers $+\infty$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2073','imageindication2073');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2073"></a><div class=inner id="innerindication2073" style="display:none;"><ol class="enumeratechiffre">
+ <li> 
+<li> Intégrer par parties pour se ramener à la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2073','imagecorrige2073',2073);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2073"></a><div class=inner id="innercorrige2073" style="display:none;"><ol class="enumeratechiffre">
+ <li> On peut remarquer que, pour $x\geq 1$ et pour $t\geq x$, on a $\frac1{t^2}\leq\frac1{x^2}$ et donc 
+$$0\leq G(x)\leq\frac{F(x)}{x^2}.$$
+On en déduit immédiatement que $G(x)/F(x)\to 0$ lorsque $x\to+\infty$, et donc que $G=o(F)$ en $+\infty$. Ce résultat peut se démontrer aussi à l'aide du résultat général suivant : si $f(x)=o\big(g(x)\big)$
+au voisinage de $+\infty$, et si l'intégrale $\int_{a}^{+\infty}g(t)dt$ converge, alors
+$$\int_x^{+\infty}f(t)dt=_{+\infty}o\left(\int_x^{+\infty}g(t)dt\right).$$
+Ce résultat s'applique immédiatement ici. 
+<li> On a $P(X&gt;x)=\frac{1}{\sqrt{2\pi}}F(x)$. On va déterminer un équivalent en intégrant par parties. En effet
+\begin{eqnarray*}
+ F(x)&=&\int_x^{+\infty}\frac1t te^{-t^2/2}dt\\
+&=&\left[-\frac 1te^{-t^2/2}\right]_x^{+\infty}-\int_x^{+\infty}\frac{1}{t^2}e^{-t^2/2}dt\\
+&=&\frac 1xe^{-x^2/2}-G(x).
+\end{eqnarray*}
+Comme $G$ est négligeable devant $F$ au voisinage de $+\infty$, on en déduit que 
+$$P(X&gt;x)\sim_{+\infty}\frac{e^{-x^2/2}}{\sqrt{2\pi}x}.$$
+</ol></div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

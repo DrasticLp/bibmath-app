@@ -1,0 +1,986 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Matrices - Inverses de matrices</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrelineaire.html">Exercices d'algèbre linéaire</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Matrices - Inverses de matrices</h1>
+<div class=titrepartie>Calculs abstraits</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3035"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3035"),	max:5, rating:0.56, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3035,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul algébrique avec des inverses <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3035.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3035,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3035','imageenonce3035');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3035"></a><div class=inner id="innerenonce3035">Soit $A,B \in M_{n}(\mathbb{R})$, supposées inversibles. Simplifier au maximum les expressions suivantes :
+<ol class="enumeratechiffre"> 
+	<li> $\displaystyle (2I_{n} + B^{-1})B + A(B-A^{-1}+2A^{-1}B) - AB$
+	<li> $\displaystyle A(7I_{n} + A^{-1}) - B(5B^{-1}A + B^{-1} + A) + A(B-2I_{n})$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3035','imageindication3035');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3035"></a><div class=inner id="innerindication3035" style="display:none;">Utiliser la distributivité, et le fait que $A^{-1}A=I_n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3035','imagecorrige3035',3035);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3035"></a><div class=inner id="innercorrige3035" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+\begin{align*}
+(2I_{n} + B^{-1})B + A(B-A^{-1}+2A^{-1}B) - AB & = 2B+I_n+AB-I_n+2 B-AB\\
+&=4B.
+\end{align*}
+<li> On a cette fois
+\begin{align*}
+A(7I_{n} + A^{-1}) - B(5B^{-1}A + B^{-1} + A) + A(B-2I_{n})&=7A+I_n-5A-I_n-BA+AB-2A\\
+&=-BA+AB.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3199"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3199"),	max:5, rating:0.68, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3199,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice dont le carré est nul <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3199.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3199,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3199','imageenonce3199');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3199"></a><div class=inner id="innerenonce3199">Soit $n\geq 1$ et $A\in\mathcal M_n(\mathbb R)$ tel que $A^2=0.$
+<ol class="enumeratechiffre">
+<li> Démontrer que $A$ n'est pas inversible.
+<li> Démontrer que $I_n+A$ est inversible.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3199','imageindication3199');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3199"></a><div class=inner id="innerindication3199" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire un raisonnement par l'absurde.
+<li> Comment se traduit matriciellement l'identité remarquable $(1+a)(1-a)=1-a^2$?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3199','imagecorrige3199',3199);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3199"></a><div class=inner id="innercorrige3199" style="display:none;"><ol class="enumeratechiffre">
+<li> On va faire un raisonnement par l'absurde. Supposons que $A$ est inversible. Alors on a 
+$$A^2=0\implies A^{-1}A^2=A^{-1}0\implies (A^{-1}A)A=0\implies A=0.$$
+Or la matrice nulle n'est pas inversible, il y a donc une contradiction et $A$ n'est pas inversible.
+<li> Il suffit de remarquer (c'est simplement une extension de l'identité remarquable $(1+x)(1-x)=1-x^2$) que
+$$(I_n+A)(I_n-A)=I_n-A+A-A^2=I_n.$$
+Ainsi, $I_n+A$ est inversible, et son inverse est $I_n-A.$
+</ol></div></div></div>
+
+<div class=titrepartie>Inverse de petites matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater912"></span><script>var myRating = raterJs( { element:document.querySelector("#rater912"),	max:5, rating:1.2058823529412, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(912,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Annulateur <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=912.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(912,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce912','imageenonce912');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce912"></a><div class=inner id="innerenonce912">On considère les matrices $A=\left(\begin{array}{ccc}
+1&0&0\\
+0&1&1\\
+3&1&1\end{array}\right)$, $B=\left(\begin{array}{ccc}
+1&1&1\\
+0&1&0\\
+1&0&0\end{array}\right)$ et $C=\left(\begin{array}{ccc}
+1&1&1\\
+1&2&1\\
+0&-1&-1\end{array}\right)$. Calculer $AB$, $AC$. Que constate-t-on? La matrice $A$ peut-elle être inversible? 
+Trouver toutes les matrices $F\in\mathcal M_3(\mathbb R)$ telles que $AF=0$ (où $0$ désigne la matrice nulle).</div></div><div class=indication><a href="javascript:showAll('innerindication912','imageindication912');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication912"></a><div class=inner id="innerindication912" style="display:none;">On doit trouver $AB=AC$. Supposer $A$ inversible, et multiplier par $A^{-1}$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige912','imagecorrige912',912);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige912"></a><div class=inner id="innercorrige912" style="display:none;">On trouve :
+$$AB=AC=\left(\begin{array}{ccc}
+1&1&1\\
+1&1&0\\
+4&4&3\end{array}\right).$$
+La matrice $A$ n'est pas inversible : si tel était le cas, on multiplierait à gauche par $A^{-1}$ dans l'égalité $AB=AC$, et on trouverait $B=C$. Ce n'est pas le cas! Pour la seconde partie, on considère $F$ une matrice vérifiant les propriétés précitées :
+$$F=\left(\begin{array}{ccc}
+a&b&c\\
+d&e&f\\
+g&h&i\\
+\end{array}\right).$$
+Le calcul de $AF$ donne :
+$$AF=\left(\begin{array}{ccc}
+a&b&c\\
+d+g&e+h&f+i\\
+3a+d+g&3b+e+h&3c+f+i\\
+\end{array}\right).$$
+Puisque $AF=0$, on a le système suivant :
+$$\left\{\begin{array}{l}
+a=b=c=0\\
+d+g=e+h=f+i=0\\
+3a+d+g=3b+e+h=3c+f+i=0
+\end{array}\right.\iff \left\{
+\begin{array}{l}
+a=b=c=0\\
+d=-g\\
+e=-h\\
+f=-i\\
+\end{array}\right.$$
+Les matrices $F$ recherchées sont donc les matrices de la forme :
+$$F=\left(\begin{array}{ccc}
+0&0&0\\
+d&e&f\\
+-d&-e&-f\\
+\end{array}\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater921"></span><script>var myRating = raterJs( { element:document.querySelector("#rater921"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(921,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverser une matrice à partir d'une égalité <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=921.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(921,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce921','imageenonce921');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce921"></a><div class=inner id="innerenonce921"><ol class="enumeratechiffre">
+<li> Soit $\dis A=\left(
+\begin{array}{ccc}
+-1&1&1\\
+1&-1&1\\
+1&1&-1
+\end{array}\right)$. Montrer que $A^2=2I_3-A$, en déduire que $A$ est inversible et calculer $A^{-1}$.
+<li>  Soit $ A=\begin{pmatrix} 1 & 0 & 2 \cr
+0 & -1 & 1 \cr
+1 & -2 & 0 \cr \end{pmatrix} .$ Calculer $
+A^3-A .$ En déduire
+que $ A $ est inversible puis déterminer $ A^{-1} .$ 
+<li> Soit $A=\begin{pmatrix} 
+0&1&-1\\
+-1&2&-1\\
+1&-1&2
+\end{pmatrix}$. Calculer $A^2-3A+2I_3$. En déduire que $A$ est inversible, et calculer $A^{-1}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication921','imageindication921');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication921"></a><div class=inner id="innerindication921" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $\frac{A^2+A}{2}=I_3$, et factoriser.
+<li> &Eacute;crire $A \times \frac 1 4 (A^2-I_3) =
+I_3$ et factoriser
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige921','imagecorrige921',921);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige921"></a><div class=inner id="innercorrige921" style="display:none;"><ol class="enumeratechiffre">
+<li> Le calcul ne pose pas de problèmes. Il mène à :
+$$
+\frac 12(A^2+A)=I_3\implies A\left(\frac 12(A+I_3)\right)=\left(\frac 12(A+I_3)\right)A=I_3.$$
+$A$ est inversible, et son inverse est :
+$$\frac 12(A+I_3).$$
+<li> Un calcul donne $A^3-A = 4 I_3$. Donc $A \times \frac 1 4 (A^2-I_3) =
+I_3$, ainsi $A$ est inversible et
+$$A^{-1} = \frac 1 4 (A^2-I_3) = \frac 1 4
+\begin{pmatrix}
+2&-4&2\\
+1&-2&-1\\
+1&2&-1\\
+\end{pmatrix}.
+$$ 
+<li> On vérifie facilement que $A^2-3A+2I_3=0$. On réécrit ceci en :
+$$A(A-3I_3)=-2I_3\iff A\left(\frac{-1}2(A-3I_3)\right)=I_3.$$
+Ainsi, $A$ est inversible et son inverse est $\frac{-1}2(A-3I_3)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater922"></span><script>var myRating = raterJs( { element:document.querySelector("#rater922"),	max:5, rating:1.1578947368421, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(922,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse avec calculs! <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=922.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(922,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce922','imageenonce922');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce922"></a><div class=inner id="innerenonce922">Dire si les matrices suivantes sont inversibles et, le
+cas échéant, calculer leur inverse :
+$$A=\left(
+\begin{array}{rcl}
+1&1&2\\
+1&2&1\\
+2&1&1
+\end{array}
+\right),\quad
+B=\left(
+\begin{array}{rcl}
+0&1&2\\
+1&1&2\\
+0&2&3
+\end{array}
+\right),\quad 
+C=\left(
+\begin{array}{rcl}
+1&4&7\\
+2&5&8\\
+3&6&9
+\end{array}\right),\quad
+I=\left(
+\begin{array}{rcl}
+i&-1&2i\\
+2&0&2\\
+-1&0&1
+\end{array}\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication922','imageindication922');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication922"></a><div class=inner id="innerindication922" style="display:none;">Utiliser la méthode du pivot de Gauss.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige922','imagecorrige922',922);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige922"></a><div class=inner id="innercorrige922" style="display:none;">On utilise la méthode du pivot de Gauss. Commençons par $A$.
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+1&2&1\\
+2&1&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2-L_1\to L_2\\
+L_3-2L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&-1&-3
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+-2&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_3+L_2\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&0&-4
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+-3&1&1
+\end{array}
+\right)\\
+\end{array}$$
+Après transformations élémentaires, la matrice qui apparait à gauche est triangulaire
+supérieure, et les coefficients sur la diagonale sont tous non nuls.
+On en déduit que $A$ est inversible. On trouve son inverse en poursuivant la méthode.
+$$\begin{array}{r|l}
+\dis \left. \begin{array}{c}
+\\
+\\
+\frac{-1}{4}L_3\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&-1\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-1&1&0\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-2L_3\to L_1\\
+L_2+L_3\to L_2\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&1&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1/2&1/2&1/2\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-L_2\to L_1\\
+\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1/4&-1/4&3/4\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right)\\
+\end{array}
+$$
+La matrice inverse recherchée est donc :
+$$\left(
+\begin{array}{rcl}
+-1/4&-1/4&3/4\\
+-1/4&3/4&-1/4\\
+3/4&-1/4&-1/4
+\end{array}
+\right).$$
+On suit la même méthode pour $B$. On forme
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+0&1&2\\
+1&1&2\\
+0&2&3
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_2\to L_1\\
+L_1\to L_2\\
+L_3-2L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&2\\
+0&1&2\\
+0&0&-1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&1&0\\
+1&0&0\\
+-2&0&1
+\end{array}
+\right)\\
+\end{array}$$
+Après transformations élémentaires, la matrice qui apparait à gauche est triangulaire
+supérieure, et les coefficients sur la diagonale sont tous non nuls.
+On en déduit que $B$ est inversible. On trouve son inverse en poursuivant la méthode.
+$$\begin{array}{r|l}
+\dis \left. \begin{array}{c}
+L_1+2L_3\to L_1\\
+L_2+2L_3\to L_2\\
+-L_3\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&1&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-4&1&2\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right)\\
+\\
+\dis \left.
+ \begin{array}{c}
+L_1-L_2\to L_1\\
+\\
+\ 
+\end{array}
+\right.
+ \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1&1&0\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right)\\
+\end{array}
+$$
+La matrice inverse recherchée est donc :
+$$B^{-1}=\left(
+\begin{array}{rcl}
+-1&1&0\\
+-3&0&2\\
+2&0&-1
+\end{array}
+\right).$$
+Passons à $C$ :
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+2&5&8\\
+3&6&9
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1\\
+L_2-2L_1\to L_2\\
+L_3-3L_1\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+0&-3&-6\\
+0&-6&-12
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-2&1&0\\
+-3&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1\\
+L_2\\
+L_3-2L_2\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&4&7\\
+0&-3&-6\\
+0&0&0
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+-2&1&0\\
+1&-2&1
+\end{array}
+\right)\\
+\end{array}$$
+La matrice $C$ n'est donc pas inversible.<br>
+&Eacute;tudions maintenant $I$ :
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+i&-1&2i\\
+2&0&2\\
+-1&0&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_3\to L_1\\
+L_1\to L_2\\
+L_2\to L_3
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&1\\
+i&-1&2i\\
+2&0&2
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&0\\
+0&1&0
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2+iL_1\to L_2\\
+L_3+2L_1\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&1\\
+0&-1&3i\\
+0&0&4
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&i\\
+0&1&2
+\end{array}
+\right)\\
+\end{array}$$
+La matrice $I$ est donc inversible. Pour calculer son inverse, on poursuit la méthode :
+$$\begin{array}{r|l}
+\dis 
+\left .\begin{array}{c}
+\\
+\\
+L_3/4\to L_3
+\end{array}\right.
+\left(
+\begin{array}{rcl}
+-1&0&1\\
+0&-1&3i\\
+0&0&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+0&0&1\\
+1&0&i\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+L_1-L_3\to L_1\\
+L_2-3iL_3\to L_2\\
+\\
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+-1&0&0\\
+0&-1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&-1/4&1/2\\
+1&-3i/4&-i/2\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+-L_1\to L_1\\
+-L_2\to L_2\\
+\\
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+0&1/4&-1/2\\
+-1&3i/4&i/2\\
+0&1/4&1/2
+\end{array}
+\right)\\
+\end{array}$$
+L'inverse de $I$ est donc la matrice
+$$\left(
+\begin{array}{rcl}
+0&1/4&-1/2\\
+-1&3i/4&i/2\\
+0&1/4&1/2
+\end{array}
+\right).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3036"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3036"),	max:5, rating:1.1538461538462, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3036,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une famille de matrices <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3036.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3036,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3036','imageenonce3036');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3036"></a><div class=inner id="innerenonce3036">Pour tout couple $(a,b)$ de $\mathbb R^2$, on pose $A(a,b)=\begin{pmatrix}a&0&-b\\0&1&0\\b&0&a\end{pmatrix}\in M_{3,3}(\mathbb R)$.
+	<ol class="enumeratechiffre">
+		<li> Soit $c \in \mathbb{R}$. Calculer $A(ac,-bc)A(a,b)$. 
+		
+		<li> Pour quels couples $(a,b)$ la matrice $A$ est-elle inversible? Si elle l'est, donner son inverse.
+	</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3036','imageindication3036');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3036"></a><div class=inner id="innerindication3036" style="display:none;">On pourra discuter suivant que $a^2+b^2=0$ ou non (ce qui revient à $a=0$ et $b=0$).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3036','imagecorrige3036',3036);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3036"></a><div class=inner id="innercorrige3036" style="display:none;">Un rapide calcul donne 
+\[ A(ac,-bc)A(a,b)=\begin{pmatrix}
+(a^2+b^2)c&0&0\\
+0&1&0\\
+0&0&(a^2+b^2)c
+\end{pmatrix}. \]
+Ainsi, si $a^2+b^2\neq 0$, la matrice $A(a,b)$ est inversible, et son inverse est la matrice $A(ac,-bc)$ avec $c=1/(a^2+b^2)$. Réciproquement, si $a^2+b^2=0$, c'est-à-dire si $a=0$ et $b=0$ (la somme de deux carrés est nulle si et seulement si chaque terme de la somme est nul), alors la matrice $A(0,0)$ n'est pas inversible : elle est échelonnée, avec deux coefficients nuls sur la diagonale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3037"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3037"),	max:5, rating:1.8275862068966, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3037,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inversible? <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3037.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3037,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3037','imageenonce3037');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3037"></a><div class=inner id="innerenonce3037"> Pour quelles valeurs du paramètre $m$ la matrice $A=\begin{pmatrix} 1&1&m\\1&m&1\\m&1&1 \end{pmatrix}$ admet-elle un inverse? On ne demande pas de calculer l'inverse.</div></div><div class=indication><a href="javascript:showAll('innerindication3037','imageindication3037');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3037"></a><div class=inner id="innerindication3037" style="display:none;">Appliquer la méthode du pivot de Gauss. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3037','imagecorrige3037',3037);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3037"></a><div class=inner id="innercorrige3037" style="display:none;">On applique la méthode du pivot de Gauss, mais inutile d'utiliser la matrice augmentée puisqu'on ne demande pas de calculer l'inverse. On trouve successivement
+$$\left(\begin{array}{ccc}
+1&1&m\\
+0&m-1&1-m\\
+0&1-m&1-m^2
+\end{array}\right)\begin{array}l \\
+L_2\leftarrow L_2-L_1\\
+L_3\leftarrow L_3-mL_1\\
+\end{array} $$
+$$\left(\begin{array}{ccc}
+1&1&m\\
+0&m-1&1-m\\
+0&0&2-m-m^2\\
+\end{array}\right)
+\begin{array}l
+\\
+\\
+L_3\leftarrow L_3+L_2
+\end{array}
+$$
+La matrice est donc inversible si et seulement si $m-1\neq 0$ et $2-m-m^2\neq 0$. Les solutions des équations $m-1=0$ et $m^2+m-2=0$ étant les réels $1$ et $-2$, la matrice est inversible si et seulement si $m\notin \{-2,1\}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2871"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2871"),	max:5, rating:1.7083333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2871,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse à paramètres <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2871.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2871,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2871','imageenonce2871');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2871"></a><div class=inner id="innerenonce2871">Pour quelles valeurs du paramètre $t$ la matrice suivante est-elle inversible? Dans ce cas, déterminer son inverse.
+$$A=\left(
+\begin{array}{rcl}
+ 1&0&t\\
+ 2&1&0\\
+ 0&1&1
+\end{array}\right)
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication2871','imageindication2871');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2871"></a><div class=inner id="innerindication2871" style="display:none;">Appliquer l'algorithme du pivot de Gauss et discuter suivant la valeur de $t$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2871','imagecorrige2871',2871);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2871"></a><div class=inner id="innercorrige2871" style="display:none;">On utilise la matrice augmentée.
+\begin{align*}
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  2&1&0&0&1&0\\
+  0&1&1&0&0&1
+ \end{array}\right)\\
+ \begin{array}{l}
+  \\
+  L_2-2L_1\to L_2
+  \\
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&1&1&0&0&1
+ \end{array}\right)\\ 
+ \begin{array}{l}
+  \\
+  \\
+  L_3-L_2\to L_3
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&0&1+2t&2&-1&1
+ \end{array}\right)\\ 
+\end{align*}
+
+Si $t=-1/2$, alors la matrice à gauche est triangulaire, mais un de ses coefficients sur la diagonale est nulle : la matrice n'est pas inversible.
+Sinon, la matrice est inversible. On continue l'application de la méthode du pivot de Gauss pour déterminer son inverse.
+
+\begin{align*}
+  \begin{array}{l}
+  \\
+  \\
+  \frac{1}{1+2t}L_3\to L_3
+ \end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&t&1&0&0\\
+  0&1&-2t&-2&1&0\\
+  0&0&1&\frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}
+ \end{array}\right)\\  
+  \begin{array}{l}
+L_1-tL_3\to L_1  \\
+L_2+2tL_3\to L_2  \\
+\\
+\end{array}
+ \quad
+ \left(
+ \begin{array}{ccc|ccc}
+  1&0&0&\frac{1}{1+2t}&\frac{t}{1+2t}&\frac{-t}{1+2t}\\
+  0&1&0&\frac{-2}{1+2t}&\frac{1}{1+2t}&\frac{2t}{1+2t}\\
+  0&0&1&\frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}
+ \end{array}\right)\\ 
+\end{align*}
+On a donc prouvé que 
+$$A^{-1}=
+\left(\begin{array}{ccc}
+       \frac{1}{1+2t}&\frac{t}{1+2t}&\frac{-t}{1+2t}\\
+  \frac{-2}{1+2t}&\frac{1}{1+2t}&\frac{2t}{1+2t}\\
+  \frac{2}{1+2t}&\frac{-1}{1+2t}&\frac{1}{1+2t}.     
+      \end{array}
+\right).$$
+</div></div></div>
+
+<div class=titrepartie>Inverse de grandes matrices</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater923"></span><script>var myRating = raterJs( { element:document.querySelector("#rater923"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(923,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Grand inverse <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=923.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(923,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce923','imageenonce923');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce923"></a><div class=inner id="innerenonce923">Démontrer que la matrice suivante est inversible, et calculer son inverse.
+$$A=\left(
+\begin{array}{cccc}
+1&1&\dots&1\\
+0&1&1&\dots\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&\dots&1
+\end{array}
+\right).$$</div></div><div class=indication><a href="javascript:showAll('innerindication923','imageindication923');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication923"></a><div class=inner id="innerindication923" style="display:none;">Appliquer la méthode du pivot de Gauss.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige923','imagecorrige923',923);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige923"></a><div class=inner id="innercorrige923" style="display:none;">On remarque que la matrice est triangulaire supérieure et que tous ses coefficients sur la diagonale sont non nuls. Elle est donc inversible. Pour calculer son inverse, on utilise la méthode du pivot de Gauss, même si c'est un peu plus compliqué car on a une matrice de taille $n$. Cela dit, elle est déjà triangulaire supérieure. On commence par retirer la dernière ligne aux autres lignes, et on trouve :
+$$\begin{array}{r|l}
+\left(
+\begin{array}{ccccc}
+1&1&\dots&1&0\\
+0&1&1&\dots&0\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&&1&0\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+&
+\left(
+\begin{array}{ccccc}
+1&0&\dots&0&-1\\
+0&1&0&\dots&-1\\
+\vdots&\ddots&\ddots&\vdots\\
+0&\dots&&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+\end{array}$$
+On retire ensuite l'avant-dernière ligne à toutes les lignes la précédent. On trouve
+$$\begin{array}{r|l}
+\left(
+\begin{array}{ccccc}
+1&1&\dots&0&0\\
+0&1&1&\dots&0\\
+\vdots&\ddots&1&\vdots&\vdots\\
+0&\dots&&1&0\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+&
+\left(
+\begin{array}{ccccc}
+1&0&\dots&-1&0\\
+0&1&\ddots&-1&0\\
+\vdots&\ddots&\vdots&\vdots\\
+0&\dots&&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+\end{array}$$
+On continue ainsi, et on fait apparaitre des $-1$ juste au dessus de la diagonale, et rien ailleurs. L'inverse de $A$ est donc 
+$$
+\left(
+\begin{array}{ccccc}
+1&-1&0&\dots&0\\
+0&1&-1&0&\dots\\
+\vdots&\vdots&\ddots&\ddots&\dots\\
+0&\dots&\dots&1&-1\\
+0&\dots&\dots&\dots&1
+\end{array}\right)
+$$
+ce qu'on peut facilement vérifier en faisant le produit de $A$ et de cette matrice.
+
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1019"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1019"),	max:5, rating:2.4166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1019,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice nilpotente <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1019.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1019,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1019','imageenonce1019');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1019"></a><div class=inner id="innerenonce1019">Soit $A\in\mathcal M_n(\mathbb R)$ une matrice nilpotente, c'est-à-dire qu'il existe $p\geq 1$ tel que $A^p=0$. Démontrer que la matrice $I_n-A$ est inversible, et déterminer son inverse.</div></div><div class=indication><a href="javascript:showAll('innerindication1019','imageindication1019');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1019"></a><div class=inner id="innerindication1019" style="display:none;">Penser aux sommes de suites géométriques.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1019','imagecorrige1019',1019);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1019"></a><div class=inner id="innercorrige1019" style="display:none;">L'idée est que, si $-1&lt;x&lt;1$, on a 
+$$\frac1{1-x}=1+x+x^2+\dots$$
+La même chose va se produire pour les matrices grâce au fait que $A^p=0$. En effet, on a 
+\begin{eqnarray*}
+(I_n-A)(I_n+A+\dots+A^{p-1})&=&I_n-A+A-A^2+A^2+\dots+A^{p-1}-A^p\\
+&=&I_n-A^p\\
+&=&I_n.
+\end{eqnarray*}
+On en déduit que $I_n-A$ est inversible, d'inverse $I_n+A+\dots+A^{p-1}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater926"></span><script>var myRating = raterJs( { element:document.querySelector("#rater926"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(926,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrices stochastiques <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=926.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(926,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce926','imageenonce926');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce926"></a><div class=inner id="innerenonce926">Pour $n\geq 1$, on note $\mathcal D$ l'ensemble des matrices $A$ de $\mathcal M_n(\mathbb R)$ telles que $a_{i,j}\geq 0$ pour tout $i,j$ et 
+$$\sum_{j=1}^n a_{i,j}=1$$
+pour tout $i=1,\dots,n$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\mathcal D$ est stable par produit.
+<li> Déterminer les matrices $A$ de $\mathcal D$ qui sont inversibles et telles
+que $A^{-1}\in\mathcal D$. 
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication926','imageindication926');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication926"></a><div class=inner id="innerindication926" style="display:none;"><ol class="enumeratechiffre">
+<li> Permuter deux sommes!
+<li> Supposer que $A$ admet un inverse $B$, calculer le coefficient d'ordre $(i,j)$ de $BA$,
+et en déduire que chaque ligne de $A$ admet au plus un coefficient non nul.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige926','imagecorrige926',926);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige926"></a><div class=inner id="innercorrige926" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $A=(a_{i,j})$ et $B=(b_{i,j})$ deux éléments de $\mathcal D$ et soit $C=AB$ leur produit. Alors, clairement on a 
+$$c_{i,j}=\sum_{k=1}^n a_{i,k}b_{k,j}\geq 0$$ car tout est positif. De plus, pour tout $i$ dans $\{1,\dots,n\}$, on a 
+\begin{eqnarray*}
+\sum_{j=1}^n c_{i,j}&=&\sum_{k=1}^n a_{i,k}\sum_{j=1}^n b_{k,j}\\
+&=&\sum_{k=1}^n a_{i,k}\\
+&=&1
+\end{eqnarray*}
+<li> Supposons que $A\in\mathcal D$ est inversible d'inverse $B\in\mathcal D$. 
+Soient $i\neq j$ dans $\{1,\dots,n\}$. Alors le calcul du coefficient en $(i,j)$ de $BA$ donne
+$$\sum_{k=1}^n b_{i,k}a_{k,j}=0.$$
+Tous les termes étant positifs, ils sont tous nuls. On a donc, pour tout entier $k$ de $\{1,\dots,n\}$,
+$$b_{i,k}a_{k,j}=0.$$
+Fixons $k$ dans $\{1,\dots,n\}$. La matrice $B$ étant inversible, sa $k$-ième colonne n'est pas nulle, et il existe $i$ de $\{1,\dots,n\}$ tel que $b_{i,k}\neq 0$. Alors on a $a_{k,j}=0$ pour tout $j\neq i$. 
+Autrement dit, la matrice $A$ a au plus un coefficient non nul dans sa $k$-ième ligne. Mais la somme des éléments de chaque ligne de $A$ valant 1, ce coefficient vaut forcément 1. Ainsi, $A$ est une matrice
+n'ayant qu'un seul 1 sur chaque ligne. La matrice $A$ étant inversible, ces 1 sont sur chaque ligne dans une colonne différente. $A$ est ce que l'on appelle une matrice de permutation. Réciproquement, il est clair qu'une telle matrice est élément de $\mathcal D$, est inversible et que son inverse est élément de $\mathcal D$.
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Application à la résolution de systèmes linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3118"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3118"),	max:5, rating:1.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3118,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inverse et résolution de système <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3118.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3118,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3118','imageenonce3118');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3118"></a><div class=inner id="innerenonce3118"><ol class="enumeratechiffre">
+<li> Soit $M=\begin{pmatrix} 1&0&-1\\ -2&3&4\\ 0&1&1\end{pmatrix}$. Démontrer que $M$ est inversible et calculer $M^{-1}$.
+<li> En déduire les solutions du système 
+$$\left\{
+\begin{array}{rcl}
+x-z&=&m\\
+-2x+3y+4z&=&1\\
+y+z&=&2m
+\end{array}\right.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3118','imageindication3118');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3118"></a><div class=inner id="innerindication3118" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la méthode du pivot de Gauss.
+<li> Passer par l'écriture matricielle du système.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3118','imagecorrige3118',3118);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3118"></a><div class=inner id="innercorrige3118" style="display:none;"><ol class="enumeratechiffre">
+<li> On utilise la méthode du pivot de Gauss : 
+$$\begin{array}{r|l}
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+-2&3&4\\
+0&1&1
+\end{array}
+\right)
+&\dis 
+\left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+L_2+2L_1\to L_2\\
+\\
+\end{array} \right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&3&2\\
+0&1&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&1\\
+2&1&0\\
+0&0&1
+\end{array}
+\right)\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_2\leftrightarrow L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&3&2
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+2&1&0
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+L_3-3L_2\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&0&-1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+2&1&-3
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+\\
+\\
+-L_3\to L_3
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&-1\\
+0&1&1\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&0&1\\
+-2&-1&3
+\end{array}
+\right)
+\\
+\\
+\dis \left .\begin{array}{c}
+L_1+L_3\to L_1\\
+L_2-L_3\to L_2\\
+\\
+\end{array}\right.
+\dis \left(
+\begin{array}{rcl}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}
+\right)
+&\dis \left(
+\begin{array}{rcl}
+-1&-1&3\\
+2&1&-2\\
+-2&-1&3
+\end{array}
+\right)\\
+\end{array}
+$$
+On obtient donc que $M$ est inversible et $M^{-1}=\begin{pmatrix}
+-1&-1&3\\
+2&1&-2\\
+-2&-1&3
+\end{pmatrix}$. 
+<li> &Eacute;crivons $X=\begin{pmatrix}x\\y\\z\end{pmatrix}$ et $B=\begin{pmatrix}m\\1\\2m\end{pmatrix}$. Alors l'écriture matricielle du système est $MX=B$ qui admet une unique solution, $X=M^{-1}B=\begin{pmatrix}5m-1\\-2m+1\\4m-1\end{pmatrix}$.</div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

@@ -1,0 +1,696 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Couple de variables aléatoires</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fproba.html">Exercices de dénombrement - probabilités - statistiques</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Couple de variables aléatoires</h1>
+<div class=titrepartie>Vecteurs aléatoires discrets finis</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater3148"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3148"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3148,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tirage simultané dans une urne <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3148.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(3148,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3148','imageenonce3148');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3148"></a><div class=inner id="innerenonce3148">On tire simultanément deux boules dans une urne contenant 4 boules indiscernables au toucher et numérotées de $1$ à $4$. On note $U$ le numéro de la plus petite boule, et $V$ le numéro de la plus grande boule. Déterminer la loi conjointe de $(U,V)$, puis les lois de $U$ et de $V$.</div></div><div class=indication><a href="javascript:showAll('innerindication3148','imageindication3148');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3148"></a><div class=inner id="innerindication3148" style="display:none;">Déterminer toutes les valeurs possibles, puis remplir un tableau...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3148','imagecorrige3148',3148);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3148"></a><div class=inner id="innercorrige3148" style="display:none;">L'univers $\Omega$ est $\Omega=\big\{\{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}\big\}$ et on considère que tous les événements sont équiprobables. On peut résumer la loi conjointe de $U$ et $V$ et les lois marginales grâce au tableau suivant :
+$$
+\begin{array}{c||c|c|c||c}
+U\backslash V&2&3&4& P(U=u)\\  \hline
+1&1/6&1/6&1/6&1/2 \\ \hline
+2&0&1/6&1/6&1/3 \\ \hline
+3&0&0&1/6&1/6 \\ \hline \hline
+P(V=v)&1/6&1/3&1/2 
+\end{array}
+$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3096"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3096"),	max:5, rating:1.3589743589744, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3096,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Couple de variables aléatoires uniformes <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3096.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3096,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3096','imageenonce3096');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3096"></a><div class=inner id="innerenonce3096">Soit $(\Omega,P)$ un espace probabilisé fini et soit $X:\Omega\to E$ et $Y:\Omega\to F$ deux variables aléatoires. Démontrer que les deux assertions suivantes sont équivalentes :
+<ol class="enumerateroman">
+<li> $(X,Y)\sim \mathcal U(E\times F)$;
+<li> $X\sim \mathcal U(E)$, $Y\sim\mathcal U(F)$ et $X$ et $Y$ sont indépendantes.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3096','imageindication3096');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3096"></a><div class=inner id="innerindication3096" style="display:none;">Il s'agit essentiellement d'appliquer les définitions, et la formule permettant de retrouver les lois marginales connaissant la loi conjointe. On utilisera aussi $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3096','imagecorrige3096',3096);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3096"></a><div class=inner id="innercorrige3096" style="display:none;">Commençons par prouver $ii.\implies i.$, qui est le sens le plus facile. Soit $(x,y)\in E\times F$. Puisque $X$ et $Y$ sont indépendantes, on a 
+$$P\big((X,Y)=(x,y)\big)=P(X=x)P(Y=y)=\frac{1}{\textrm{card}(E)}\times\frac 1{\textrm{card}(F)}=\frac{1}{\textrm{card}(E\times F)}$$
+où on a utilisé que $X\sim \mathcal U(E)$, $Y\sim\mathcal U(F)$, et que $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.<br>
+Réciproquement, on suppose $i.$. On retrouve facilement les lois marginales de $X$ et de $Y$. Par exemple, pour $x\in E$, on a
+$$P(X=x)=\sum_{y\in F}P\big((X,Y)=(x,y)\big)=\sum_{y\in F}\frac{1}{\card(E\times F)}=\frac{\textrm{card}(F)}{\textrm{card}(E\times F)}=\frac{1}{\textrm{card}(E)}.$$
+Ainsi, on a bien $X\sim\mathcal U(E)$ et de même $Y\sim\mathcal U(F)$. Enfin, $X$ et $Y$ sont bien indépendantes puisque 
+$$P\big((X,Y)=(x,y))=P(X=x)\times P(Y=y)$$
+d'après la formule $\textrm{card}(E\times F)=\textrm{card}(E)\times\textrm{card}(F)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1273"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1273"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1273,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi marginale <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1273.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1273,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1273','imageenonce1273');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1273"></a><div class=inner id="innerenonce1273">On dispose de $n$ boites numérotées de $1$ à $n$.  La boite $k$ contient $k$ boules numérotées de $1$ à $k$. On choisit au hasard de façon équiprobable une boite, puis une boule dans cette boite. On note $X$ le numéro de la boite et $Y$ le numéro de la boule.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi conjointe du couple $(X,Y)$.
+<li> En déduire la loi de $Y$.
+<li> Calculer l'espérance de $Y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1273','imageindication1273');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1273"></a><div class=inner id="innerindication1273" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser des probabilités conditionnelles.
+<li>
+<li> On applique la définition et on permute les sommes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1273','imagecorrige1273',1273);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1273"></a><div class=inner id="innercorrige1273" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour tout $(i,j)$ dans $\{1,\dots,n\}^2$, on a 
+$$P\big ( (X,Y)=(i,j)\big) = P(X=i) P(Y=j|X=i).$$
+On en déduit que si $j&gt;i$, alors $P\big ( (X,Y)=(i,j)\big) =0$ alors que si $j\leq i$, 
+$$P\big ( (X,Y)=(i,j)\big) =\frac{1}{n}\times\frac{1}i.$$
+<li> $Y$ prend ses valeurs dans $\{1,\dots,n\}$ et on a 
+$$P(Y=k)=\sum_{i=1}^n P\big((X=i,Y=k)\big)=\sum_{i=k}^n P\big((X=i,Y=k)\big)=\sum_{i=k}^n \frac1{ni}.$$
+<li> Pour calculer l'espérance, on applique la définition et on permute les sommes.
+\begin{eqnarray*}
+E(Y)&=&\frac 1n\sum_{k=1}^n \sum_{i=k}^n\frac ki\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\sum_{k=1}^i k\\
+&=&\frac 1n\sum_{i=1}^n \frac 1i\times \frac {i(i+1)}2\\
+&=&\frac 1n\sum_{i=1}^n \frac{i+1}2\\
+&=&\frac 1{2n}\times \left(\frac{(n+1)(n+2)}2-1\right)\\
+&=&\frac{n+3}4.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1277"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1277"),	max:5, rating:1.2631578947368, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1277,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi jointe uniforme <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1277.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1277,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1277','imageenonce1277');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1277"></a><div class=inner id="innerenonce1277">Soit $(X,Y)$ un couple de variables aléatoires suivant une loi uniforme sur $\{0,\dots,n\}^2$.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi de $X$, la loi de $Y$, la loi de $X+Y$.
+<li> $X$ et $Y$ sont-elles indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1277','imageindication1277');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1277"></a><div class=inner id="innerindication1277" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser les méthodes classiques. Pour la loi de $X+Y$, on pourra séparer les cas $X+Y\leq n$ et $X+Y\geq n$.
+<li> Utiliser la définition.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1277','imagecorrige1277',1277);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1277"></a><div class=inner id="innercorrige1277" style="display:none;"><ol class="enumeratechiffre">
+<li> $X$ est à valeurs dans $\{0,\dots,n\}$. On a, pour tout $k$ de $\{0,\dots,n\}$,
+$$P(X=k)=\sum_{i=0}^n P\big ( (X,Y)=(k,i)\big) =\sum_{i=0}^n \frac{1}{(n+1)^2}=\frac 1{n+1}.$$
+$X$ suit donc une loi uniforme sur $\{0,\dots,n\}$. Par symétrie, il en est de même de $Y$.<br>
+La variable aléatoire $X+Y$ est à valeurs dans $\{0,\dots,2n\}$ et pour tout $k$ dans cet intervalle d'entiers, on a 
+$$P(X+Y=k)=\sum_{i=0}^k P\big( (X=i,Y=k-i)\big).$$
+Si $k\leq n$, ceci devient égal à 
+$$P(X+Y=k)=\sum_{i=0}^k \frac{1}{(n+1)^2}=\frac{k+1}{(n+1)^2}.$$
+Si $k&gt;n$, la somme ne peut aller que jusque $n$ (car $i\leq n$) et ne peut commencer qu'en $k-n$ (car $k-i\leq n$) et donc
+$$P(X+Y=k)=\sum_{i=k-n}^n \frac{1}{(n+1)^2}=\frac{2n-k+1}{(n+1)^2}.$$
+<li> Les variables $X$ et $Y$ sont indépendantes, car pour tout couple $(i,j)$ de $\{0,\dots,n\}$, on a bien
+$$P\big( (X=i),(Y=j)\big)=P(X=i)P(Y=j)=\frac{1}{(n+1)^2}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1278"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1278"),	max:5, rating:1.5238095238095, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1278,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Vecteurs aléatoires et matrices <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1278.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1278,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1278','imageenonce1278');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1278"></a><div class=inner id="innerenonce1278">On considère un espace probabilisé $(\Omega,\mathcal{B},P)$ et deux variables aléatoires $X$ et $Y$ définies sur $\Omega$ et à valeurs dans $\{1,\dots,n+1\}$, où $n$ 
+est un entier naturel supérieur ou égal à 2. On pose, pour tout couple $(i,j)\in\{1,\dots,n+1\}^2$
+$$a_{i,j}=P(X=i,Y=j).$$
+On suppose que :
+$$a_{i,j}=\left\{
+\begin{array}{ll}
+\frac{1}{2n}&\textrm{si }|i+j-(n+2)|=1\\
+0&\textrm{sinon}.
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Vérifier que la famille $(a_{i,j})$ ainsi définie est bien une loi de probabilité de couple.
+<li> Ecrire la matrice $A\in\mathcal{M}_{n+1}(\mtr)$ dont le terme général est $a_{i,j}$. Vérifier que $A$ est diagonalisable.
+<li> Déterminer les lois de probabilité de $X$ et $Y$.
+<li> Pour tout couple $(i,j)\in\{1,\dots,n+1\}^2$, on pose :
+$$b_{i,j}=P(X=i|Y=j).$$
+Déterminer la matrice $B\in\mathcal{M}_{n+1}(\mtr)$ dont le terme général est $b_{i,j}$. Montrer que le vecteur 
+$$v=\left(\begin{array}{c}
+P(X=1)\\
+\vdots\\
+P(X=n+1)
+\end{array}\right)$$
+est vecteur propre de $B$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1278','imageindication1278');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1278"></a><div class=inner id="innerindication1278" style="display:none;"><ol class="enumeratechiffre">
+<li> Vérifier que les $a_{i,j}$ sont positifs ou nuls, et que leur somme fait 1.
+<li> Que dire d'une matrice symétrique réelle?
+<li> Comment calcule-t-on les lois marginales à partir de la loi conjointe? (Utiliser la formule des probabilités totales).
+<li> Il faut revenir à la formule définissant une probabilité conditionnelle.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1278','imagecorrige1278',1278);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1278"></a><div class=inner id="innercorrige1278" style="display:none;"><ol class="enumeratechiffre">
+<li> Tous les scalaires $a_{i,j}$ sont positifs ou nuls. Comptons le nombre de $a_{i,j}$ non nuls. Ce sont les termes pour lesquels :
+<ul class="rien">
+<li> soit $i+j=n+3$, avec $1\leq i,j\leq n+1$, soit les couples de la forme $(i,n+3-i)$ avec $1\leq i,n+3-i\leq n+1$ qui donne $2\leq i\leq n+1$. Il y a donc $n$ tels termes.
+<li> soit $i+j=n+1$, avec $1\leq i,j\leq n+1$, soit les couples de la forme $(i,n+1-i)$ avec $1\leq i,n+1-i\leq n+1$ qui donne $1\leq i\leq n$. Il y a encore $n$ tels termes.
+</ul>
+Au total, il y a $2n$ termes, et comme chacun vaut $1/2n$, la somme fait bien 1.
+<li> La matrice de $A$ a la forme :
+$$\left(
+\begin{array}{cccccc}
+0&\dots&\dots&\dots&1/2n&0\\
+0&\dots&\dots&1/2n&0&1/2n\\
+\vdots&&\ddots&\ddots&\ddots&0\\
+\vdots&\ddots&\ddots&\\
+1/2n&\ddots&\ddots&&&\vdots\\
+0&1/2n&0&\dots&&0
+\end{array}\right)$$
+(les termes en $1/2n$ sont au dessus et en dessous de la diagonale non principale).
+Elle est symétrique réelle, donc diagonalisable.
+<li> La loi de $X$ est donnée par $P(X=i)=\sum_{j=1}^{n+1}P(X=i,Y=j)=\sum_{j=1}^{n+1}a_{i,j}$. On trouve :
+<ul class="rien">
+<li> $P(X=1)=P(X=n+1)=1/2n$.
+<li> $P(X=i)=1/n$ si $2\leq i\leq n$.
+</ul>
+Matriciellement, cela signifie qu'on a fait la somme sur chaque ligne de $A$. Par symétrie,$Y$ suit la même loi que $X$.
+<li> On a, pour tout $1\leq i,j\leq n+1$, 
+$$b_{i,j}=\frac{a_{i,j}}{P(Y=j)}.$$
+<ul class="rien">
+<li> $b_{1,j}\neq 0$ si et seulement si $j=n$, et dans ce cas $b_{1,n}=1/2$.
+<li> $b_{n+1,j}\neq 0$ si et seulement si $j=2$, et dans ce cas $b_{n+1,2}=1/2$.
+<li> pour $2\leq i\leq n$, $b_{i,j}\neq 0$ si et seulement si $j=n+3-i$ ou $j=n+1-i$. Donc :
+$$\left\{\begin{array}{rclcrcl}
+b_{2,n+1}&=&1&\textrm{ }&b_{i,n+3-i}&=&1/2\\
+b_{n,1}&=&1&\textrm{ }&b_{i,n+1-i}&=&1/2.
+\end{array}\right.$$
+On vérifie alors aisément que $v$ est vecteur propre pour la valeur propre $1$.
+</ul>
+</ol></div></div></div>
+
+
+<div class=titrepartie>Vecteurs aléatoires discrets infinis</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3481"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3481"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3481,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Loi du deuxième pile <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3481.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3481,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3481','imageenonce3481');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3481"></a><div class=inner id="innerenonce3481">On considère une suite de lancers de pile ou face indépendants, la probabilité d'obtenir pile étant $p\in]0,1[$. On note $X$ (respectivement $Y$) le rang du premier (respectivement du deuxième) pile.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi du couple $(X,Y)$.
+<li> En déduire la loi de $Y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3481','imageindication3481');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3481"></a><div class=inner id="innerindication3481" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire l'événement $(X=i,Y=j)$ en fonction des résultats des lancers.
+<li> Il y a une méthode générale pour déterminer une loi marginale connaissant la loi du couple.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3481','imagecorrige3481',3481);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3481"></a><div class=inner id="innercorrige3481" style="display:none;"><ol class="enumeratechiffre">
+<li> $(X,Y)$ prend ses valeurs dans $(\mathbb N^*)^2$. Soit $i,j\in\mathbb N^*$. Alors, si $i\geq j,$ on a $(X=i)\cap (Y=j)=\varnothing$ et si $i&lt;j$, l'événement $(X=i)\cap (Y=j)$ est l'événement 
+$$F_1\cap\cdots\cap F_{i-1}\cap P_i\cap F_{i+1}\cap\cdots\cap F_{j-1}\cap P_j,$$
+où $F_k$ (respectivement $P_k$) désigne l'événement obtenir face (respectivement pile) au $k$-ème lancer. On a donc 
+$$P((X,Y)=(i,j))=\left\{
+\begin{array}{ll}
+0&\textrm{ si }i\geq j\\
+p^2(1-p)^{j-2}&\textrm{ si }i&lt;j.
+\end{array}\right.
+$$
+<li> La variable aléatoire $Y$ est à valeurs dans $\{2,3,\dots\}$. Pour $j\geq 2,$ on a
+\begin{align*}
+P(Y=j)&=\sum_{i=1}^{+\infty}P(X=i,Y=j)\\
+&=\sum_{i=1}^{j-1}P(X=i,Y=j)\\
+&=\sum_{i=1}^{j-1}p^2(1-p)^{j-2}\\
+&=(j-1)p^2(1-p)^{j-2}.
+\end{align*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1282"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1282"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1282,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Couple géométrique <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1282.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1282,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1282','imageenonce1282');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1282"></a><div class=inner id="innerenonce1282">Soient $X$ et $Y$ deux variables aléatoires à valeurs dans $\mtn^*$, telles que :
+$$P\big((X=i)\cap(Y=j)\big)=\frac{a}{2^{i+j}},$$
+pour tous $i,j$ de $\mtn^*$.
+<ol class="enumeratechiffre">
+<li> Calculer $a$.
+<li> Déterminer les lois marginales de $X$ et $Y$.
+<li> $X$ et $Y$ sont-elles indépendantes?
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1282','imageindication1282');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1282"></a><div class=inner id="innerindication1282" style="display:none;"><ol class="enumeratechiffre">
+<li> Il faut que la somme sur $i$ et $j$ fasse 1.
+<li> Utiliser la définition.
+<li> Comparer $P\big((X=i)\cap(Y=j)\big)$ et $P(X=i)\times P(Y=j)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1282','imagecorrige1282',1282);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1282"></a><div class=inner id="innercorrige1282" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est d'abord nécessaire que $a\geq 0$. On a ensuite :
+$$\sum_{i,j\geq 1}\frac{a}{2^{i+j}}=1\iff a\sum_{i=1}^{+\infty}\frac{1}{2^i}\sum_{j=1}^{+\infty}\frac 1{2^j}=1\iff a=1.$$
+<li> Pour $i\in\mtn^*$, on a :
+$$P(X=i)=\sum_{j=1}^{+\infty}P\big((X=i)\cap(Y=j)\big)=\sum_{j=1}^{+\infty}\frac{1}{2^{i+j}}=\frac{1}{2^i}=\frac{1}{2}\frac{1}{2^{i-1}}.$$
+$X$ suit donc une loi géométrique de paramètre $1/2$. Par raison de symétrie, il en est de même pour $Y$.
+<li> On a :
+$$P(X=i)\times P(Y=j)=\frac{1}{2^{i+j}}=P\big((X=i)\cap(Y=j)\big).$$
+Les variables aléatoires sont indépendantes.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3497"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3497"),	max:5, rating:1.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3497,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Motifs <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3497.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3497,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3497','imageenonce3497');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3497"></a><div class=inner id="innerenonce3497">On effectue une suite de lancers avec une pièce non équilibrée telle que la probabilité d'obtenir pile vaut $3/4$. On note $X$ la longueur de la première chaîne, c'est-à-dire le nombre de tirages initiaux donnant le même résultat que le premier tirage. On note $Y$ la longueur de la deuxième chaîne. Par exemple, si on a la suite de tirages $FFPPPFPF\dots$ on a $X=2$ et $Y=3.$ 
+<ol class="enumeratechiffre">
+<li> Calculer la loi de $X.$
+<li> Calculer la loi du couple $(X,Y).$
+<li> Calculer la loi de $Y.$
+<li> Les variables aléatoires $X$ et $Y$ sont-elles indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3497','imageindication3497');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3497"></a><div class=inner id="innerindication3497" style="display:none;"><ol class="enumeratechiffre">
+<li> Décrire l'événement $(X=k)$ à l'aide d'une succession de piles et de faces.
+<li> Faire de même pour l'événement $(X,Y)=(k,l).$
+<li> Utiliser le système complet d'événements $(X=k)_{k\geq 1}.$
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3497','imagecorrige3497',3497);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3497"></a><div class=inner id="innercorrige3497" style="display:none;">Pour $k\in\mathbb N^*,$ notons $P_k$ l'événement "le $k$-ème lancer donne un pile" et $F_k$ l'événement "le $k$-ème lancer donne un face".
+<ol class="enumeratechiffre">
+<li> La variable aléatoire $X$ prend ses valeurs dans $\mathbb N^*$. Pour $k\in\mathbb N^*,$ l'événement $X=k$ est la réunion disjointe 
+$$(F_1\cap F_2\cap\cdots\cap F_k\cap P_{k+1})\cup(P_1\cap P_2\cap\cdots\cap P_k\cap F_{k+1}).$$ Par indépendance des lancers, on en déduit que 
+$$P(X=k)=\left(\frac 14\right)^k\times\frac 34+\left(\frac 34\right)^k\times\frac 14=\frac{3^k+3}{4^{k+1}}.$$
+<li> Le couple $(X,Y)$ prend ses valeurs dans $\mathbb N^*\times\mathbb N^*.$ Pour $k,l\in\mathbb N^*\times\mathbb N^*,$ l'événement $(X,Y)=(k,l)$ est la réunion disjointe
+$$(F_1\cap F_2\cap \cdots \cap F_k\cap P_{k+1}\cap\cdots\cap P_{k+l}\cap F_{k+l+1})\cup(P_1\cap P_2\cap \cdots \cap P_k\cap F_{k+1}\cap\cdots\cap F_{k+l}\cap P_{k+l+1}).$$ 
+Toujours par indépendance des lancers, on obtient 
+\begin{align*}
+P((X,Y)&=(k,l))=\left(\frac 34\right)^l\left(\frac 14\right)^{k+1}+\left(\frac 34\right)^{k+1}\left(\frac 14\right)^l\\
+&=\frac{3^{k+1}+3^l}{4^{k+l+1}}.
+\end{align*}
+<li> Pour en déduire la loi de $Y,$ on utilise le système complet d'événements $(X=k)_{k\geq 1}.$ On obtient, pour $l\geq 1$ (remarquons que $Y$ est aussi à valeurs dans $\mathbb N^*$),
+\begin{align*}
+P(Y=l)&=\sum_{k=1}^{+\infty}P((X,Y)=(k,l))\\
+&=\sum_{k=1}^{+\infty}\frac{3^{k+1}+3^l}{4^{k+l+1}}\\
+&=\frac 1{4^l}\sum_{k=1}^{+\infty}\left(\frac 34\right)^{k+1}+\frac{3^l}{4^l}
+\sum_{k=1}^{+\infty}\left(\frac 14\right)^{k+1}\\
+&=\frac{1}{4^l}\frac{(3/4)^2}{1-3/4}+\frac{3^l}{4^l}\frac{(1/4)^2}{1-1/4}\\
+&=\frac{9+3^{l-1}}{4^{l+1}}.
+\end{align*}
+On remarque que la loi de $Y$ est différente de celle de $X,$ ce qui ne semble pas évident à la première analyse du problème.
+<li> Les variables aléatoires $X$ et $Y$ ne sont pas indépendantes : par exemple, on a 
+$$P(X=1)=3/8, P(Y=1)=9/16\textrm{ et }P((X,Y)=(1,1))=3/16\neq P(X=1)\times P(Y=1).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2031"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2031"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2031,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Couple géométrique <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2031.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2031,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2031','imageenonce2031');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2031"></a><div class=inner id="innerenonce2031">Soit $X$ et $Y$ deux variables aléatoires indépendantes suivant la même loi géométrique de paramètre $p\in ]0,1[$. On pose $Z=\min(X,Y)$ et $q=1-p$. Soit en outre $n$ un entier strictement positif.
+<ol class="enumeratechiffre">
+<li> Calculer $P(X\geq n)$.
+<li> Calculer $P(Z\geq n)$. En déduire $P(Z=n)$. Quelle est la loi de $Z$?
+<li> Les variables $X$ et $Z$ sont-elles indépendantes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2031','imageindication2031');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2031"></a><div class=inner id="innerindication2031" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire cet événement comme une somme.
+<li> $Z\geq n$ si et seulement si $X\geq n$ et $Y\geq n$.
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2031','imagecorrige2031',2031);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2031"></a><div class=inner id="innercorrige2031" style="display:none;"><ol class="enumeratechiffre">
+<li> L'événement $X\geq n$ s'écrit comme réunion (dénombrable et disjointe) des événéments élémentaires $X=k$, $k\geq n$. On a donc
+$$P(X\geq n)=\sum_{k\geq n}P(X=k)=\sum_{k\geq n}q^{k-1}p=\frac{q^{n-1}p}{1-q}=q^{n-1}.$$
+<li> On a $Z\geq n$ si et seulement si $X\geq n$ et $Y\geq n$. Ces deux événements sont indépendants, et donc 
+$$P(Z\geq n)=P(X\geq n)P(Y\geq n)=q^{2n-2}.$$
+Or, 
+$$P(Z=n)=P(Z\geq n)-P(Z\geq n+1)=q^{2n-2}-q^{2n}=q^{2n-2}(1-q^2).$$
+Ainsi, $Z$ suit une loi géométrique de paramètre $1-q^2$.
+<li> Remarquons que les événements $(X=n)\cap (Z\geq n)$ et $(X=n)\cap (Z=n)$ sont égaux et égaux à $(X=n)\cap (Y\geq n)$. Si $X$ et $Z$ étaient indépendantes, alors on aurait
+$$P((X=n)\cap (Z\geq n))=P(X=n)P(Z\geq n)$$ et $$P((X=n)\cap (Z=n))=P(X=n)P(Z=n).$$
+En particulier, on devrait avoir $P(Z=n)=P(Z\geq n)$, ce qui n'est pas le cas. $X$ et $Z$ ne sont pas des variables aléatoires indépendantes.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater3495"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3495"),	max:5, rating:2.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3495,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exemple de loi conjointe - calcul de covariance <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3495.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(3495,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3495','imageenonce3495');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3495"></a><div class=inner id="innerenonce3495">Soit $a\in\mathbb R.$ On considère un couple $(X,Y)$ de variables aléatoires de loi conjointe donnée par 
+$$\forall (i,j)\in\mathbb N^2,\ P(X=i,Y=j)=a\frac{i+j}{i!j!}.$$
+<ol class="enumeratechiffre">
+<li> Déterminer $a.$
+<li> Déterminer les lois marginales de $X$ et de $Y.$ Les variables aléatoires $X$ et $Y$ sont elles indépendantes ?
+<li> Démontrer que le couple $(X,Y)$ admet une covariance et la calculer.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3495','imageindication3495');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3495"></a><div class=inner id="innerindication3495" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser $\sum_{i,j=0}^{+\infty}P(X=i,Y=j)=1.$
+<li>
+<li> Calculer $E(X),$ $E(Y)$ puis $E(XY)$ en utilisant la formule de transfert.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3495','imagecorrige3495',3495);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3495"></a><div class=inner id="innercorrige3495" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour que ceci définisse la loi d'un couple de variables aléatoires, il suffit de vérifier que
+$$\sum_{i,j=0}^{+\infty}P(X=i,Y=j)=1.$$
+Or, 
+\begin{align*}
+\sum_{j=0}^{+\infty}P(X=i,Y=j)&=\sum_{j=0}^{+\infty}a\frac{i+j}{i!j!}\\
+&=\frac a{i!}\left(i\sum_{j=0}^{+\infty}\frac1{j!}+\sum_{j=0}^{+\infty}\frac{j}{j!}\right)\\
+&=\frac a{i!}\left(\frac ie+\sum_{j=1}^{+\infty}\frac 1{(j-1)!}\right)\\
+&=\frac a{i!}(ie+e)=ae\frac{i+1}{i!}.
+\end{align*}
+On en déduit que 
+\begin{align*}
+\sum_{i,j=0}^{+\infty}P(X=i,Y=j)&=\sum_{i=0}^{+\infty}ae \frac{i+1}{i!}\\
+&=ae\left(\sum_{i=0}^{+\infty}\frac{i}{i!}+\sum_{i=0}^{+\infty}\frac 1{i!}\right)\\
+&=ae \left(\sum_{i=1}^{+\infty}\frac{1}{(i-1)!}+\sum_{i=0}^{+\infty}\frac 1{i!}\right)\\
+&=ae(e+e)=2ae^2.
+\end{align*}
+Il faut donc choisir $a=e^{-2}/2.$
+<li> Les variables aléatoires $X$ et $Y$ prennent leurs valeurs dans $\mathbb N.$ En utilisant le système complet d'événements $(Y=j),$ pour $j\in\mathbb N,$ on a, pour tout $i\in\mathbb N,$
+\begin{align*}
+P(X=i)&=\sum_{j=0}^{+\infty}P(X=i,Y=j)\\
+&=\sum_{j=0}^{+\infty}ae\frac{i+1}{i!}
+\end{align*}
+d'après le calcul fait à la question précédente, 
+et donc
+$$P(X=i)=\frac{i+1}{2e i!}.$$
+Par symétrie du rôle joué par $X$ et $Y,$ on obtient également pour tout $j\in\mathbb N,$ 
+$$P(Y=j)=\frac{j+1}{2e j!}.$$
+On observe alors que les variables aléatoires $X$ et $Y$ ne sont pas indépendantes puisque $P(X=0,Y=0)=0$ alors que $P(X=0)P(Y=0)=(1/2e)^2\neq 0.$
+<li> Commençons par calculer l'espérance de $X.$ On a 
+\begin{align*}
+\sum_{i=0}^{+\infty}iP(X=i)&=\frac{1}{2e}\sum_{i=0}^{+\infty}\frac{i(i+1)}{i!}\\
+&=\frac{1}{2e}\sum_{i=0}^{+\infty}\frac{i(i-1)+2i}{i!}\\
+&=\frac1{2e}\left(\sum_{i=1}^{+\infty}\frac{1}{(i-2)!}+2\sum_{i=1}^{+\infty}\frac{1}{(i-1)!}\right)\\
+&=\frac{1}{2e}(e+2e)=\frac 32.
+\end{align*}
+De la même façon, $E(Y)=3/2.$ Reste à calculer $E(XY),$ ce que l'on fait à l'aide de la formule de transfert :
+\begin{align*}
+E(XY)&=\sum_{i,j=0}^{+\infty}ij P(X=i,Y=j).
+\end{align*}
+Commençons par la somme sur $j$ :
+\begin{align*}
+\sum_{j=0}^{+\infty}ijP(X=i,Y=j)&=
+\frac{i}{2e^2 i!}\sum_{j=0}^{+\infty}\frac{j(i+j)}{j!}\\
+&=\frac{i}{2e^2 i!}\left(i\sum_{j=0}^{+\infty}\frac j{j!}+\sum_{j=0}^{+\infty}\frac{j^2}{j!}\right)\\
+&=\frac{i}{2e^2 i!}\left(ie +\sum_{j=0}^{+\infty}\frac{j(j-1)+j}{j!}\right)\\
+&=\frac{i}{2e^2 i!}\left(ie+2e\right)\\
+&=\frac{i^2+2i}{2e i!}
+\end{align*}
+Il vient
+\begin{align*}
+E(XY)&=\frac 1{2e}\sum_{i=0}^{+\infty}\frac{i^2+2i}{i!}\\
+&=\frac 1{2e}\sum_{i=0}^{+\infty}\frac{i(i-1)+3i}{i!}\\
+&=\frac{e+3e}{2e}=2.
+\end{align*}
+On conclut
+$$\textrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=\frac{-1}4.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1281"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1281"),	max:5, rating:2.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1281,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Guichet de poste <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1281.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1281,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1281','imageenonce1281');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1281"></a><div class=inner id="innerenonce1281">Dans un bureau de poste, il y a deux guichets. Chacune des personnes arrivant à la poste choisit le premier guichet avec une probabilité $p$, 
+ou le deuxième guichet avec une probabilité $q=1-p$. Les personnes effectuent leur choix de façon indépendante. En une heure, le nombre $X$ de personnes arrivés à la poste suit une loi de Poisson $\mathcal{P}(m)$.
+On désigne par $Y$ le nombre de personnes ayant choisi le premier guichet.
+<ol class="enumeratechiffre">
+<li> Exprimer la probabilité conditionnelle de $Y=k$ sachant que $X=n$. 
+<li> En déduire la loi conjointe du couple $(X,Y)$.
+<li> Déterminer la loi de $Y$. On trouvera que $Y$ suit une loi de Poisson de paramètre $mp$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1281','imageindication1281');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1281"></a><div class=inner id="innerindication1281" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaitre le schéma d'une loi binomiale. On séparera le cas $k\leq n$ du cas $k&gt;n$.
+<li> Utiliser la formule définissant une probabilité conditionnelle. On fera la même séparation de cas.
+<li> On rappelle que $\sum_{k=0}^{+\infty}\lambda^k/k!=e^\lambda$. Il faut juste aller doucement, et faire un changement d'indice dans la somme.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1281','imagecorrige1281',1281);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1281"></a><div class=inner id="innercorrige1281" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour chaque personne, le choix du premier guichet se fait avec une probabilité $p$. Les choix sont indépendants les uns des autres, et $Y=k|X=n$ compte le nombre de "succès"
+lorsqu'on réalise $n$ fois l'épreuve. On reconnait le schéma théorique d'une variable aléatoire de loi binomiale. On a donc :
+$$P(Y=k|X=n)=\left\{
+\begin{array}{ll}
+\binom nk p^kq^{n-k}&\textrm{si $0\leq k\leq n$}\\
+0&\textrm{si $k&gt;n$.}
+\end{array}\right.$$
+<li> On a :
+\begin{eqnarray*}
+P(Y=k,X=n)&=&P(X=n)P(Y=k|X=n)\\
+&=&\left\{\begin{array}{ll}
+e^{-m}\frac{m^n}{n!}\binom nkp^kq^{n-k}&\textrm{si $k\leq n$}\\
+0&\textrm{sinon.}\end{array}\right.
+\end{eqnarray*}
+<li> Il faut réaliser la sommation! On a, tenant compte du fait que les premiers termes sont nuls :
+\begin{eqnarray*}
+P(Y=k)&=&\sum_{n=k}^{+\infty}P(Y=k,X=n)\\
+&=&e^{-m}\left(\frac{p}{q}\right)^k\frac{1}{k!}\sum_{n=k}^{+\infty}\frac{(mq)^n}{(n-k)!}\\
+&=&e^{-m}\left(\frac{p}{q}\right)^k\frac{1}{k!}(mq)^k\sum_{n=k}^{+\infty}\frac{(mq)^{n-k}}{(n-k)!}\\
+&=&e^{-m}\left(\frac{p}{q}\right)^k\frac{1}{k!}(mq)^k\sum_{n=0}^{+\infty}\frac{(mq)^{n}}{(n)!}\\
+&=&e^{-m}\left(\frac{p}{q}\right)^k\frac{1}{k!}(mq)^ke^{mq}\\
+&=&e^{-mp}\frac{(mp)^k}{k!}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2032"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2032"),	max:5, rating:2.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2032,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Naissances <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2032.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2032,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2032','imageenonce2032');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2032"></a><div class=inner id="innerenonce2032">On suppose que le nombre $N$ d'enfants dans une famille suit une loi de Poisson de paramètre $\lambda&gt;0$. On suppose qu'à chaque naissance, la probabilité que l'enfant soit une fille est $p\in ]0,1[$ et celle que ce soit un garçon est $q=1-p$. On suppose aussi que les sexes des naissances successives sont indépendants. On note $X$ la variable aléatoire correspondant au nombre de filles par familles, et $Y$ celle du nombre de garçons.
+<ol class="enumeratechiffre">
+<li> Déterminer la loi conjointe du couple $(N,X)$.
+<li> En déduire la loi de $X$ et celle de $Y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2032','imageindication2032');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2032"></a><div class=inner id="innerindication2032" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer la probabilité conditionnelle $P(X=k|N=n)$.
+<li> Retrouver la loi marginale à partir de la loi du couple.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2032','imagecorrige2032',2032);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2032"></a><div class=inner id="innercorrige2032" style="display:none;"><ol class="enumeratechiffre">
+<li> La probabilité $P(X=k|N=n)$ est égale $\binom nkp^kq^{n-k}$ si $k\leq n$ (à nombre de naissances fixé, le nombre de filles suit une loi binomiale de paramètres $n$ et $p$), et $0$ si $k&gt;n$ (ou $k&lt;0$). On en déduit que 
+$$P(N=n,X=k)=P(X=k|N=n)P(N=n)=\binom nk p^k q^{n-k}e^{-\lambda}\frac{\lambda^n}{n!}.$$
+<li> On déduit la loi marginale de $X$ à partir de la loi du couple :
+\begin{eqnarray*}
+P(X=k)&=&\sum_{n\geq k} P(X=k,N=n)\\
+&=&\sum_{n\geq k}\frac{e^{-\lambda}\lambda^np^k q^{n-k}}{k!(n-k)!}\\
+&=&\frac{e^{-\lambda}\lambda^k p^k}{k!}\sum_{n=k}^{+\infty}\frac{\lambda^{n-k}q^{n-k}}{(n-k)!}\\
+&=&\frac{e^{-\lambda}\lambda^k p^k}{k!}\sum_{m=0}^{+\infty}\frac{\lambda^{m}q^{m}}{m!}\\
+&=&\frac{e^{-\lambda}\lambda^k p^k}{k!}e^{\lambda q}\\
+&=&\frac{e^{-\lambda p}(\lambda p)^k}{k!}
+\end{eqnarray*}
+
+Ainsi, $X$ suit une loi de Poisson de paramètre $\lambda p$. De même, $Y$ suit une loi de Poisson de paramètre $\lambda q$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3634"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3634"),	max:5, rating:2.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3634,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Peinture (d'après oral CCPINP) <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3634.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3634,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3634','imageenonce3634');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3634"></a><div class=inner id="innerenonce3634">Un homme peint un mur en étant placé sur un échafaudage, des passants passent sous son échafaudage et ont chacun une probabilité $p\in]0,1[$ de se faire toucher par une goutte de peinture. Soit $X$ la variable aléatoire donnant le nombre de personnes touchées en une journée et $Y$ celui du nombre de personnes qui ne sont pas touchées. On suppose que $n$ personnes passent dans la journée.
+<ol class="enumeratechiffre">
+<li> Donner les lois de $X$ et $Y$. Sont-elles indépendantes ? 
+<li> On suppose maintenant que $N$ personnes passent dans la journées et que $N$ suit une loi de Poisson de paramètre $\lambda.$ Donner les lois de $X$ et de $Y$. Sont-elles indépendantes ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3634','imageindication3634');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3634"></a><div class=inner id="innerindication3634" style="display:none;"><ol class="enumeratechiffre">
+<li> Reconnaître une situation classique.
+<li> Pour déterminer la loi de $X,$ utiliser la formule des probabilités totales avec le système complet d'événements $(N=n)_{n\geq 0}.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3634','imagecorrige3634',3634);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3634"></a><div class=inner id="innercorrige3634" style="display:none;"><ol class="enumeratechiffre">
+<li> On reconnait un schéma de Bernoulli : une répétition de $n$ expériences indépendantes avec probabilité $p$ de succès, et $X$ qui compte le nombre de succès. Ainsi, $X$ suit une loi binomiale $\mathcal B(n,p).$ De même, $Y$ suit la loi $\mathcal B(n,1-p).$ Puisque $Y=X-n,$ il est clair que $X$ et $Y$ ne sont pas indépendantes puisque la connaissance de $X$ donne celle de $Y$. On peut aussi remarquer que 
+$$P(X=0,Y=0)=0\neq P(X=0)\times P(Y=0).$$
+<li> On va utiliser la formule des probabilités totales avec le système complet d'événements $(N=n)_{n\in\mathbb N}.$ Remarquons que $X$ prend ses valeurs dans $\mathbb N.$ Pour tout $k\in\mathbb N,$ on a 
+\begin{align*}
+P(X=k)&=\sum_{n=0}^{+\infty}P(X=k,N=n)\\
+&=\sum_{n=k}^{+\infty}P(X=k,N=n)\\
+&=\sum_{n=k}^{+\infty}P(X=k|N=n)P(N=n)\\
+&=\sum_{n=k}^{+\infty}\binom nk p^k(1-p)^{n-k}\frac{e^{-\lambda}\lambda^n}{n!}\\
+&=\left(\frac p{1-p}\right)^k \frac{e^{-\lambda}}{k!}\sum_{n=k}^{+\infty}\frac1{(n-k)!}(\lambda(1-p))^n \\
+&=\left(\frac p{1-p}\right)^k \frac{e^{-\lambda}}{k!}\sum_{m=0}^{+\infty}\frac{1}{m!}(\lambda(1-p))^{m+k}\\
+&=(\lambda p)^k \frac{e^{-\lambda}}{k!}e^{\lambda(1-p)}\\
+%&=\frac{(\lambda p)^k e^{-\lambda p}}{k!}
+\end{align*}
+Autrement dit, $X$ suit une loi de Poisson de paramètre $\lambda p.$ De la même façon $Y$ suit une loi de Poisson de paramètre $\lambda (1-p).$
+<li> Il faut faire attention : le raisonnement précédent ne s'applique plus car le lien qui unit $X$ et $Y$ (la formule $X+Y=N$) n'est plus déterministe. On va prouver que $X$ et $Y$ sont indépendantes en revenant à la définition. Pour $k,l\in\mathbb N,$ on remarque que 
+$$(X=k)\cap (Y=l)=(X=k)\cap (N=k+l)$$
+et donc 
+\begin{align*}
+P(X=k,Y=l)&=P((X=k)\cap (N=k+l))\\
+&=P(X=k|N=k+l)P(N=k+l)\\
+&=\binom{k+l}k p^k (1-p)^{l}\frac{\lambda^{k+l}e^{-\lambda}}{(k+l)!}\\
+&=\frac{p^k (1-p)^l \lambda^{k+l}e^{-\lambda}}{k!\cdot  l!}\\
+&=P(X=k)P(Y=l)
+\end{align*}
+d'après les lois obtenues ci-dessus pour $X$ et $Y.$ 
+</ol></div></div></div>
+
+
+<div class=titrepartie>Vecteurs aléatoires continus</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1283"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1283"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1283,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tir à l'arc <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1283.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1283,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1283','imageenonce1283');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1283"></a><div class=inner id="innerenonce1283">Théo fait du tir à l'arc sur une cible circulaire de rayon 1. On suppose que Théo est suffisamment maladroit
+pour que le point d'impact M de coordonnées $(X,Y)$ soit uniformément distribué sur la cible.
+On note $D=\{(x,y)\in\mathbb R^2;\ x^2+y^2\leq 1\}$.
+<ol class="enumeratechiffre">
+<li> Quelle est la densité du couple $(X,Y)$?
+<li> Déterminer les lois marginales de $X$ et de $Y$.
+<li> Les variables aléatoires $X$et $Y$ sont-elles indépendanes?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1283','imageindication1283');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1283"></a><div class=inner id="innerindication1283" style="display:none;"><ol class="enumeratechiffre">
+<li> Lire attentivement l'énoncé.
+<li> Appliquer la formule du cours.
+<li> Trouver deux intervalles $I$ et $J$ tels que
+$$P(X\in I,\ Y\in J)\neq P(X\in I)P(X\in J).$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1283','imagecorrige1283',1283);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1283"></a><div class=inner id="innercorrige1283" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après l'énoncé, on a 
+$$p_{(X,Y)}(x,y)=\frac1\pi\mathbf 1_D(x,y)$$
+la constante $1/\pi$ permettant de normaliser cette densité (son intégrale vaut 1).
+<li> On applique la formule du cours :
+$$p_X(x)=\int_\mathbb R p_{(X,Y)}(x,y)dy=\frac2\pi\sqrt{1-x^2}\mathbf 1_{]-1,1[}(x).$$
+Par symétrie du rôle joué par $X$ et $Y$, on a aussi
+$$p_Y(x)=\int_\mathbb R p_{(X,Y)}(x,y)dx=\frac2\pi\sqrt{1-y^2}\mathbf 1_{]-1,1[}(y).$$
+<li> Soit $I=J=[3/4,1]$. Il est clair que $P(X\in I)&gt;0$ et que $P(Y\in J)&gt;0$.
+D'autre part, puisque $(3/4)^2+(3/4)^2&gt;1$, on a aussi 
+$$P(X\in I,\ Y\in J)=0.$$
+Ainsi,
+$$P(X\in I,\ Y\in J)\neq P(X\in I)P(Y\in J)$$
+et donc les variables aléatoires $X$ et $Y$ ne sont pas indépendantes.	
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1284"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1284"),	max:5, rating:2.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1284,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Triangle <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1284.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1284,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1284','imageenonce1284');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1284"></a><div class=inner id="innerenonce1284">Soit $T$ la réunion du triangle et de l'intérieur du triangle de sommets les points $O(0,0)$, $I(1,0)$ et $J(0,1)$ et soit $(X,Y)$ un couple
+de variables aléatoires de loi uniforme sur $T$.
+<ol class="enumeratechiffre">
+<li> Donner la densité du couple $(X,Y)$.
+<li> Calculer les lois marginales de $X$ et de $Y$.
+<li> Les variables aléatoires $X$ et $Y$ sont-elles indépendantes?
+<li> Calculer la covariance du couple $(X,Y)$. Qu'en pensez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1284','imageindication1284');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1284"></a><div class=inner id="innerindication1284" style="display:none;"><ol class="enumeratechiffre">
+<li> Lire attentivement l'énoncé, et calculer l'aire de $T$.
+<li> Intégrer pour chaque coordonnée.
+<li> Trouver deux intervalles $I$ et $J$ tels que
+$$P(X\in I,\ Y\in J)\neq P(X\in I)P(X\in J).$$
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1284','imagecorrige1284',1284);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1284"></a><div class=inner id="innercorrige1284" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $(X,Y)$ suit une loi uniforme sur le triangle $T$ dont l'aire est $1/2$, la densité du couple $(X,Y)$ est donnée
+par 
+$$p_{(X,Y)}(x,y)=2\times \mathbf 1_{T}(x,y).$$
+<li> On trouve la densité marginale en appliquant la formule du cours (par intégration). Remarquons que
+$X$ est à valeurs dans $[0,1]$, et donc que $p_X(x)=0$ si $x\notin [0,1]$. Si $x\in[0,1]$, on en déduit
+\begin{eqnarray*}
+p_X(x)&=&\int_{-\infty}^{+\infty}p_{X,Y}(x,y)dy\\
+&=&\int_{0}^{1-x} 2dy\\
+&=&2(1-x).
+\end{eqnarray*}
+On en déduit donc que
+$$p_X(x)=2(1-x)\mathbf 1_{[0,1]}(x).$$
+Par symétrie, la densité de $Y$, $p_Y$, est égale à celle de $X$, $p_X$.
+<li> Soit $I=J=[1/2,+\infty[$. Il est clair que $P(X\in I)&gt;0$ et $P(Y\in J)&gt;0$.
+D'autre part, l'ensemble $\{(x,y)\in\mathbb R^2;\ x&gt;1/2\textrm{ et }y&gt;1/2\}$ est disjoint de $T$,
+et donc
+$$P(X\in I,\ Y\in J)=0\neq P(X\in I)P(Y\in J).$$
+Les deux variables aléatoires ne sont pas indépendantes.
+<li> On a d'une part 
+$$\mathbb E(X)=\mathbb E(Y)=\int_{\mathbb R}xp_X(x)dx=\int_0^1 2x(1-x)dx=\frac{1}{3}.$$
+D'autre part,
+\begin{eqnarray*}
+\mathbb E(XY)&=&\int_{\mathbb R^2}xyp_{(X,Y)}(x,y)dxdy\\
+&=&2\int_{x=0}^1\int_{y=0}^{1-x}xydxdy\\
+&=&\int_{x=0}^1x(1-x)^2dx\\
+&=&\frac 1{12}.
+\end{eqnarray*}
+On en déduit que
+$$\textrm{Cov}(X,Y)=\mathbb E(XY)-\mathbb E(X)\mathbb E(Y)=\frac1{12}-\frac19=-\frac1{36}\neq 0.$$
+La covariance est non-nulle, on retrouve donc le résultat de la question précédente nous disant que les variables aléatoires
+ne sont pas indépendantes.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater2504"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2504"),	max:5, rating:2.5714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2504,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exponentielle <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2504.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(2504,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2504','imageenonce2504');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2504"></a><div class=inner id="innerenonce2504">Soit $X$ et $Y$ deux variables aléatoires indépendantes suivant des lois exponentielles de paramètres respectifs $\lambda$ et $\mu$. Déterminer $P(X&gt;Y)$.</div></div><div class=indication><a href="javascript:showAll('innerindication2504','imageindication2504');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2504"></a><div class=inner id="innerindication2504" style="display:none;">Quelle est la densité du couple $(X,Y)$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2504','imagecorrige2504',2504);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2504"></a><div class=inner id="innercorrige2504" style="display:none;">Les variables $(X,Y)$ étant indépendantes, le couple $(X,Y)$ admet pour densité $$f(x,y)=\mathbb 1_{[0,+\infty[^2}(x,y)\lambda e^{-\lambda x}\mu e^{-\mu y}.$$
+On en déduit que 
+\begin{align*}
+P(X&gt;Y)&=E(1_{x&gt;y})\\
+&=\int_{y=0}^{+\infty}\int_{x=y}^{+\infty}\lambda e^{-\lambda x}dx\mu e^{-\mu y}dy\\
+&=\int_{y=0}^{+\infty}\mu e^{-(\lambda+\mu)y}dy\\
+&=\frac{\mu}{\lambda+\mu}.
+\end{align*}
+En particulier, si $\lambda=\mu$, on obtient 1/2.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1285"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1285"),	max:5, rating:4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1285,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit de lois de Pareto <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1285.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1285,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1285','imageenonce1285');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1285"></a><div class=inner id="innerenonce1285">On dit que la variable aléatoire $X$ suit une loi de Pareto de paramètre $\alpha&gt;0$ si,
+$$\forall x\geq 1,\  P(X&gt;x)=x^{-\alpha}.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que cette propriété caractérise effectivement la loi de $X$.
+Montrer que $X$ suit une loi à densité, et préciser cette densité.
+<li> Pour quelles valeurs de $\alpha$ la variable $X$ est-elle d'espérance finie?
+<li> Soient $X,Y$ deux variables aléatoires indépendantes suivant une loi de Pareto 
+de paramètre $\alpha$. On note $dP_Y$ la loi de $Y$. Montrer que, si $t\geq 1$, alors
+$$P(XY&gt;t)=\int_1^{+\infty}P\left(X&gt;\frac ty\right)dP_Y(y).$$
+<li> En déduire que, pour tout $t\geq 1$, $P(XY&gt;t)=t^{-\alpha}(1+\alpha\ln t).$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1285','imageindication1285');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1285"></a><div class=inner id="innerindication1285" style="display:none;"><ol class="enumeratechiffre">
+<li> $P(X&gt;1)=1$.
+<li> 
+<li> Ecrire $P(XY&gt;t)$ en fonction de l'intégrale d'une certaine fonction par rapport à la loi du couple.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1285','imagecorrige1285',1285);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1285"></a><div class=inner id="innercorrige1285" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que $P(X&gt;1)=1$, et donc pour $t\leq 1$, on a $P(X&gt; t)=1$. Ainsi, la formule donnée permet de caractériser complètement la fonction de répartition $F_X$ qui vaut 
+$$F_X(t)=\mathbf 1_{[1,+\infty[}(t)(1-t^{-\alpha}).$$
+Cette fonction est dérivable, sauf éventuellement en $1$. Sa dérivée est la densité 
+$$f_X(t)=\mathbf 1_{[1,+\infty[}(t)\alpha t^{-\alpha-1}.$$
+<li> La fonction $t \times t^{-\alpha-1}$ est intégrable au voisinage de $+\infty$ si et seulement si $-\alpha&lt;-1$,
+c'est-à-dire $\alpha&gt;1$.
+<li> Puisque $(X,Y)$ sont indépendantes, la loi du couple $(X,Y)$ est égale au produit (tensoriel) des lois. Autrement dit, par le théorème de transfert :
+$$P(XY&gt;t)=\int_{\mathbb R^2}\mathbf 1_{\{xy&gt;t\}}(x,y)dP_{(X,Y)}(x,y)=\int_{\mathbb R^2}\mathbf 1_{\{xy&gt;t\}}(x,y)dP_X(x)dP_Y(y).$$
+On peut intégrer sur $[1,+\infty[^2$ au lieu de $\mathbb R^2$, puis utiliser le théorème de Fubini pour obtenir
+$$P(XY&gt;t)=\int_{1}^{+\infty}\left(\int_{1}^{+\infty}\mathbf 1_{\{xy&gt;t\}}(x,y)dP_X(x)\right)dP_Y(y).$$
+Or, 
+$$\int_{1}^{+\infty}\mathbf 1_{\{xy&gt;t\}}(x,y)dP_X(x)=\int_1^{+\infty}\mathbf 1_{\{x\geq t/y\}}(x)dP_X(x)=P\left(X&gt;\frac ty\right).$$
+<li> En utilisant le résultat précédent, et en remarquant que $P(X&gt;t/y)=1$ si $y\geq t$, on a 
+$$P(XY&gt;t)=\int_1^{t}t^{-\alpha}y^{\alpha}\alpha y^{-\alpha-1}dy+\int_t^{+\infty}\alpha y^{-\alpha-1}dy.$$
+En intégrant, on trouve 
+$$P(XY&gt;t)=\alpha t^{-\alpha}\int_1^t y^{-1}dy+t^{-\alpha}=\alpha t^{-\alpha}\ln(t)+t^{-\alpha}=t^{-\alpha}(1+\alpha \ln t).$$
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Meef</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater2169"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2169"),	max:5, rating:2.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2169,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'automne <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2169.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(2169,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2169','imageenonce2169');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2169"></a><div class=inner id="innerenonce2169">Un étudiant s’ennuie durant son cours de probabilités et passe son temps à regarder
+par la fenêtre les feuilles tomber d’un arbre. On admet que le nombre de feuilles tombées à la
+fin du cours est une variable aléatoire $X$ qui suit une loi de Poisson de paramètre $\lambda&gt;0$. Cela
+signifie que pour tout $k\in\mathbb N$, 
+$$P(X = k) = e^{-\lambda}\frac{\lambda^k}{k!}.$$
+<ol class="enumeratechiffre">
+<li> <ol class="enumeratealpha">
+<li> Expliquer pourquoi les hypothèses de l'énoncé permettent de dire que pour tout
+$\lambda&gt;0$, 
+$$e^{\lambda}=\sum_{k=0}^{+\infty}\frac{\lambda^k}{k!}.$$
+<li> \emph{Calculer} l’espérance et la variance de X.
+</ol>
+<li> A chaque fois qu’une feuille tombe par terre, l’étudiant lance une pièce qui donne pile avec une
+probabilité $p$ et face avec probabilité $q = 1-p$, $p\in]0, 1[$. On note $F$ et $P$ le nombre de
+faces et de piles obtenus respectivement.
+<ol class="enumeratealpha">
+<li> Pour $k\in\mathbb N$ fixé, expliquer de manière simple pourquoi la loi de $F$ sachant $X = k$
+est une loi binomiale dont on précisera les paramètres. En déduire l’expression de
+$P(F = a|X = k)$.
+<li> Pour $(k, a)\in\mathbb N$, calculer la quantité $P(X = k, F = a)$.
+<li>  En déduire la loi de $F$, ainsi que son espérance.
+<li> Donner, sans calculs, la loi de $P$.
+</ol>
+<li> Montrer que $P$ et $F$ sont indépendantes.
+<li> Calculer $E[P F]$ et $Var[P + F]$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2169','imageindication2169');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2169"></a><div class=inner id="innerindication2169" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratealpha">
+<li> $P_X$ est une probabilité.
+<li> Méthodes de cours.
+</ol>
+<li> 
+<ol class="enumeratealpha">
+<li> Reconnaitre un schéma de Bernoulli.
+<li> Utiliser la définition des probabilités conditionnelles.
+<li> Utiliser la formule des probabilités totales.
+<li> Par symétrie.
+</ol>
+<li> Montrer que $P$ et $F$ sont indépendantes.
+<li> Utiliser l'indépendance de $P$ et $F$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2169','imagecorrige2169',2169);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2169"></a><div class=inner id="innercorrige2169" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratealpha">
+<li> On nous dit que $X$ est une variable aléatoires à valeurs dans $\mathbb N$ telle que
+$$P(X = k) = e^{-\lambda}\frac{\lambda^k}{k!}.$$
+On sait aussi que 
+$$\sum_{k=0}^{+\infty}P(X=k)=1.$$
+De ces deux relations, on déduit facilement le résultat demandé.
+$$e^{\lambda}=\sum_{k=0}^{+\infty}\frac{\lambda^k}{k!}.$$
+<li> Ce sont des arguments à savoir. On a 
+\begin{eqnarray*}
+E(X)&=&\sum_{k=0}^{+\infty}k P(X=k)\\
+&=&e^{-\lambda}\sum_{k=1}^{+\infty} \frac{\lambda^k}{(k-1)!}\\
+&=&e^{-\lambda}\lambda \sum_{k=0}^{+\infty}\frac{\lambda^k}{k!}\\
+&=&{\lambda}.
+\end{eqnarray*}
+On a de la même façon, en écrivant $k^2=k(k-1)+k$,
+\begin{eqnarray*}
+E(X^2)&=&\sum_{k=0}^{+\infty}k^2 P(X=k)\\
+&=&e^{-\lambda}\sum_{k=2}^{+\infty}\frac{\lambda^k}{(k-2)!}+e^{-\lambda}\sum_{k=1}^{+\infty}\frac{\lambda^k}{(k-1)!}\\
+&=&{\lambda^2}+{\lambda}.
+\end{eqnarray*}
+On en déduit que 
+$$V(X)=E(X^2)-\big(E(X)\big)^2={\lambda}.$$
+</ol>
+<li> 
+<ol class="enumeratealpha">
+<li> Lorsque $X$ est fixé égal à $k$, $F$ compte le nombre de succès (obtenir face) de la répétition de $k$ expériences aléatoires indépendantes ayant chacune une probabilité $q$ de succès. Donc la loi de $F$ sachant $X = k$
+est une loi binomiale $\mathcal B(k,q)$. On en déduit que 
+$$P(F = a|X = k)=\left\{
+\begin{array}{ll}
+\binom ka q^ap^{k-a}&\textrm{si $0\leq a\leq k$}\\
+0&\textrm{sinon.}
+\end{array}\right.$$
+<li> On a :
+\begin{eqnarray*}
+P(F=a,X=k)&=&P(X=k)P(F=a|X=k)\\
+&=&\left\{\begin{array}{ll}
+e^{-\lambda}\frac{\lambda^k}{k!}\binom kaq^ap^{k-a}&\textrm{si $a\leq k$}\\
+0&\textrm{sinon.}\end{array}\right.
+\end{eqnarray*}
+<li> D'après la formule des probabilités totales,
+\begin{eqnarray*}
+P(F=a)&=&\sum_{k=a}^{+\infty}P(F=a,X=k)\\
+&=&e^{-\lambda}\left(\frac{q}{p}\right)^a\frac{1}{a!}\sum_{k=a}^{+\infty}\frac{(\lambda p)^k}{(k-a)!}\\
+&=&e^{-\lambda}\left(\frac{q}{p}\right)^a\frac{1}{a!}(\lambda p)^a\sum_{k=a}^{+\infty}\frac{(\lambda p)^{k-a}}{(k-a)!}\\
+&=&e^{-\lambda}\left(\frac{q}{p}\right)^a\frac{1}{a!}(\lambda p)^a\sum_{k=0}^{+\infty}\frac{(\lambda p)^{k}}{k!}\\
+&=&e^{-\lambda}\left(\frac{q}{p}\right)^a\frac{1}{a!}(\lambda p)^ae^{\lambda p}\\
+&=&e^{-\lambda q}\frac{(\lambda q)^a}{a!}.
+\end{eqnarray*}
+Ainsi, $F$ suit une loi de Poisson de paramètre $q\lambda$.
+<li> Par symétrie, $P$ suit une loi de Poisson de paramètre $p\lambda$.
+</ol>
+<li> L'événement $(F=a)\cap(P=b)$ est l'événement $(F=a)\cap (X=a+b)$ et donc 
+\begin{eqnarray*}
+\mathbb P(F=a\textrm{ et }P=b)&=&\mathbb P(F=a\textrm {et }X=a+b)\\
+&=&P(F=a|X=a+b)P(X=a+b)\\
+&=&e^{-\lambda}\frac{\lambda^{a+b}}{(a+b)!}\binom {a+b}aq^ap^{b}\\
+&=&e^{-\lambda}\frac{\lambda^{a+b}}{a!b!}q^a p^b.
+\end{eqnarray*}
+D'autre part, 
+$$\mathbb P(F=a)\times \mathbb P(P=b)=e^{-\lambda q}\frac{(\lambda q)^a}{a!}e^{-\lambda p}\frac{(\lambda p)^b}{b!}.$$
+Ces deux quantités sont égales, et donc $P$ et $F$ sont indépendantes.
+<li> Par indépendance de $P$ et $F$, on a 
+$$E(PF)=E(P)E(F)=\lambda^2 pq$$
+et 
+$$Var[P + F]=Var(P)+Var(F)=\lambda,$$
+ce qu'on pouvait aussi retrouver en remarquant plus simplement que $P+F=X$.
+</ol></div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

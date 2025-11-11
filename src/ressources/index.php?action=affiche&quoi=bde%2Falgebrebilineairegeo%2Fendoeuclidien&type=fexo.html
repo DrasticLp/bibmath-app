@@ -1,0 +1,717 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Endomorphismes et matrices symétriques</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrebilineairegeo.html">Exercices sur les espaces euclidiens</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Endomorphismes et matrices symétriques</h1>
+<div class=titrepartie>Généralités sur les endomorphismes autoadjoints</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1081"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1081"),	max:5, rating:1.6470588235294, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1081,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Premiers pas avec les endomorphismes symétriques <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1081.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1081,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1081','imageenonce1081');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1081"></a><div class=inner id="innerenonce1081">Soit $E$ un espace vectoriel euclidien, et soient $u,v$ deux endomorphismes symétriques de $E$.
+<ol class="enumeratechiffre">
+<li> Démontrer que $\ker(u)\oplus^\perp \textrm{Im}(u)=E$.
+<li> Démontrer que $u\circ v$ est symétrique si et seulement si $u\circ v=v\circ u$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1081','imageindication1081');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1081"></a><div class=inner id="innerindication1081" style="display:none;"><ol class="enumeratechiffre">
+<li> Démontrer qu'ils sont orthogonaux, et utiliser le théorème du rang.
+<li> Calculer $\langle u\circ v(x),y\rangle$ en utilisant que $u$ et $v$ sont symétriques, puis écrire ce que cela signifie que $u\circ v$ est symétrique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1081','imagecorrige1081',1081);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1081"></a><div class=inner id="innercorrige1081" style="display:none;"><ol class="enumeratechiffre">
+<li> On va d'abord démontrer que ces deux sous-espaces sont orthogonaux, donc en somme directe orthogonale. Soit $x\in\ker (u)$ et soit $y\in\textrm{Im}(u)$. Alors il existe $z\in E$ tel que $y=u(z)$. On en déduit alors, en utilisant la symétrie de $u$, 
+$$\langle x,y\rangle=\langle x,u(z)\rangle=\langle u(x),z\rangle=0.$$
+En utilisant le théorème du rang, on conclut alors que ces deux sous-espaces sont supplémentaires.
+<li> Soient $x,y\in E$. En utilisant successivement le fait que $u$ et $v$ sont symétriques, on en déduit que 
+\begin{eqnarray*}
+\langle u\circ v(x),y\rangle&=&\langle v(x),u(y)\rangle\\
+&=&\langle x,v\circ u(y)\rangle.
+\end{eqnarray*}
+On en déduit que si $u\circ v=v\circ u$, alors $u\circ v$ est symétrique. Réciproquement, si $u\circ v$ est symétrique, alors le calcul précédent montre que, pour tous $x,y\in E$, on a 
+$$\langle x,v\circ u(y)\rangle=\langle x,u\circ v(y)\rangle\implies \langle x,u\circ v(y)-v\circ u(y)\rangle=0.$$
+Ainsi, le vecteur $u\circ v(y)-v\circ u(y)$ est orthogonal à tous les vecteurs de l'espace : il est donc nul, et comme ceci est vrai pour tout $y\in E$, on a $u\circ v=v\circ u$. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1084"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1084"),	max:5, rating:1.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1084,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Symétrique entraîne linéaire <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1084.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1084,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1084','imageenonce1084');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1084"></a><div class=inner id="innerenonce1084">Soit $u:E\to E$ tel que, pour tous $x,y\in E$, on a $\langle u(x),y\rangle=\langle x,u(y)\rangle$. Démontrer que $u$ est linéaire.</div></div><div class=indication><a href="javascript:showAll('innerindication1084','imageindication1084');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1084"></a><div class=inner id="innerindication1084" style="display:none;">Calculer $\langle u(x+y)-u(x)-u(y),z\rangle$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1084','imagecorrige1084',1084);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1084"></a><div class=inner id="innercorrige1084" style="display:none;">Soient $x,y\in E$. Pour démontrer que $u(x+y)=u(x)+u(y)$, il suffit de démontrer que le vecteur $u(x+y)-u(x)-u(y)$ est orthogonal à tous les vecteurs de l'espace. Prenons donc $z\in E$. Alors on a 
+\begin{eqnarray*}
+\langle u(x+y)-u(x)-u(y),z\rangle&=&\langle u(x+y),z\rangle-\langle u(x),z\rangle-\langle u(y),z\rangle\\
+&=&\langle x+y,u(z)\rangle-\langle x,u(z)\rangle-\langle y,u(z)\rangle\\
+&=&0.
+\end{eqnarray*}
+Avec une méthode tout à fait similaire, on prouve que $u(\lambda x)=\lambda u(x)$ pour tout $\lambda\in\mathbb R$, et donc $u$ est bien linéaire.</div></div></div>
+ 
+
+
+<div class=titrepartie>Réduction des endomorphismes autoadjoints et des matrices symétriques - pratique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1082"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1082"),	max:5, rating:1.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1082,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynôme annulateur d'une matrice symétrique <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1082.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1082,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1082','imageenonce1082');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1082"></a><div class=inner id="innerenonce1082">Soit $n\geq 1$ et $S\in\mathcal S_n(\mathbb R)$ telle que $S^4=2S^3-3S^2.$
+Démontrer que $S=0.$</div></div><div class=indication><a href="javascript:showAll('innerindication1082','imageindication1082');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1082"></a><div class=inner id="innerindication1082" style="display:none;">Déterminer quelles peuvent être les valeurs propres de $S$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1082','imagecorrige1082',1082);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1082"></a><div class=inner id="innercorrige1082" style="display:none;">Le polynôme $P=X^4-2X^3+3X^2$ est un polynôme annulateur pour $S.$ Il se factorise en $P=X^2(X^2-2X+3)$. Or, le discriminant de $X^2-2X+3$ est $-8&lt;0,$ et donc la seule racine de $P$ est $0$. Comme les valeurs propres des matrices sont toujours des racines des polynômes annulateurs, la seule valeur propre possible pour $S$ est $0$. <br>
+Mais d'autre part, $S$ est diagonalisable (dans une base orthonormée), et donc il existe $P\in O_n(\mathbb R)$ tel que $S=PDP^T$ avec $D$ diagonale constituée par les valeurs propres de $A,$ c'est-à-dire $D=0.$ Ainsi, $S=0.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1085"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1085"),	max:5, rating:2.1304347826087, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1085,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En pratique - 1 <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1085.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1085,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1085','imageenonce1085');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1085"></a><div class=inner id="innerenonce1085">Justifier que la matrice 
+$$A=\left(
+\begin{array}{rcl}
+1&-2&-2\\
+-2&1&-2\\
+-2&-2&1
+\end{array}\right)$$
+est diagonalisable, et trouver $P\in O_3(\mathbb R)$ tel que $P^TAP$ soit diagonale.</div></div><div class=indication><a href="javascript:showAll('innerindication1085','imageindication1085');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1085"></a><div class=inner id="innerindication1085" style="display:none;">Réduire comme on le fait d'ordinaire, mais pour chaque sous-espace propre, trouver une base orthonormale.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1085','imagecorrige1085',1085);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1085"></a><div class=inner id="innercorrige1085" style="display:none;">La matrice $A$ est symétrique réelle, elle est donc diagonalisable. Le calcul du polynôme caractéristique donne $\chi_A(X)=X^3-3X^2-9X+27$. Ses racines sont $-3$  (racine simple) et $3$ (racine double). Cherchons d'abord le sous-espace propre associé à $3$. La résolution de l'équation $AX=3X$ montre que l'espace propre associé est le plan vectoriel $x+y+z=0$. Une base de cet espace est donnée par $((1,-1,0),(1,0,-1)).$ L'orthonormalisation de cette base (par rapport au produit scalaire canonique de $\mathbb R^3$) donne la base orthonormale $((1/\sqrt 2,-1/\sqrt 2,0),(1/\sqrt 6,1/\sqrt 6,-2/\sqrt 6)).$ <br>
+Pour l'espace propre associé à $-3,$ il y a possibilité d'aller plus vite. Comme on a affaire à une matrice symétrique, les espaces propres sont orthogonaux. Ici, l'espace propre associé à $-3$ ne peut-être que l'orthogonal du plan $x+y+z=0$. Un vecteur normal à ce plan étant le vecteur $(1,1,1)$, une base orthonormée de l'espace propre associée à $-3$ est le vecteur $(1/\sqrt 3,1/\sqrt 3,1/\sqrt 3)$. <br>
+Finalement, on trouve qu'une matrice $P$ qui convient est :
+$$P=\left(
+\begin{array}{ccc}
+1/\sqrt 3&1/\sqrt 2&1/\sqrt 6\\
+1/\sqrt 3&-1/\sqrt 2&1/\sqrt 6\\
+1/\sqrt 3&0&-2/\sqrt 6\\
+\end{array}\right).$$
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1086"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1086"),	max:5, rating:2.0714285714286, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1086,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En pratique - 2 <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1086.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1086,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1086','imageenonce1086');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1086"></a><div class=inner id="innerenonce1086">Diagonaliser dans une base orthonormée la matrice suivante :
+$$A=\left(
+\begin{array}{rcl}
+6&-2&2\\
+-2&5&0\\
+2&0&7
+\end{array}\right).$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1086','imagecorrige1086',1086);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1086"></a><div class=inner id="innercorrige1086" style="display:none;">La matrice est symétrique réelle, elle est donc diagonalisable dans une base orthonormée. Le calcul de son polynôme caractéristique montre que ses valeurs propres sont 3, 6 et 9. Une base de vecteurs propres associés est $ (2,2,-1), (-1,2,2), (2,-1,2)$. Ses vecteurs sont déjà orthogonaux (cela aurait le cas quelque soient les vecteurs propres choisis, car les espaces propres sont de dimension 1, et ils sont orthogonaux deux à deux). Pour obtenir une base orthonormale, il suffit de divisier chaque vecteur par sa norme. Une base orthonormale de vecteurs propres est donc :
+$$(2/3,2/3,-1/3), (-1/3,2/3,2/3), (2/3,-1/3,2/3).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater3559"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3559"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3559,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une équation (d'après Oral Mines) <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3559.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(3559,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3559','imageenonce3559');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3559"></a><div class=inner id="innerenonce3559">Soit $n\geq 1$. Déterminer les matrices $M\in\mathcal M_n(\mathbb R)$ solutions de l'équation $M M^T M=I_n$.</div></div><div class=indication><a href="javascript:showAll('innerindication3559','imageindication3559');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3559"></a><div class=inner id="innerindication3559" style="display:none;">En multipliant par $M^T$ l'équation précédente, démontrer que $M$ est symétrique.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3559','imagecorrige3559',3559);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3559"></a><div class=inner id="innercorrige3559" style="display:none;">Si on multiplie à droite par $M^T$ l'équation précédente, on trouve
+$$MM^TMM^T=M^T.$$
+Prenant la tranposée de cette égalité, on a encore 
+$$MM^TMM^T=M.$$
+Ainsi, $M$ est symétrique (réelle). Elle est donc diagonalisable. De plus, $M^3=I_n.$ Donc si $\lambda$ est une valeur propre de $M,$ on a $\lambda^3=1,$ c'est-à-dire que $\lambda=1$ (puisque $\lambda$ est réelle). Ainsi, $M$ est une matrice diagonalisable dont la seule valeur propre est $1$. On a $M=I_n.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1087"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1087"),	max:5, rating:2.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1087,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Limite de suites <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1087.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1087,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1087','imageenonce1087');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1087"></a><div class=inner id="innerenonce1087">Soit 
+$$M=\left(
+\begin{array}{ccc}
+\frac 12&\frac 14&\frac 14\\
+\frac 14&\frac 13&\frac 5{12}\\
+\frac 14&\frac 5{12}&\frac 13
+\end{array}\right).$$
+<ol class="enumeratechiffre">
+<li> Prouver que la suite de matrices $(M^n)$ converge.
+<li> Soit $N=\lim_n M^n$. Caractériser géométriquement l'endomorphisme associé à $N$.
+<li> Soit $(X_n)$ la suite de vecteurs de $\mathbb R^3$ définie par $X_0=\left(\begin{array}{rcl}
+u_0\\v_0\\w_0\end{array}\right)$ et $X_{n+1}=MX_n$. Prouver que la suite $(X_n)$ converge et déterminer sa limite en fonction de $u_0$, $v_0$ et $w_0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1087','imageindication1087');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1087"></a><div class=inner id="innerindication1087" style="display:none;"><ol class="enumeratechiffre">
+<li> Diagonaliser $M$.
+<li> $N$ est une projection. Quels sont ses éléments caractéristiques?
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1087','imagecorrige1087',1087);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1087"></a><div class=inner id="innercorrige1087" style="display:none;"><ol class="enumeratechiffre">
+<li> La matrice $M$ étant symétrique réelle, elle est diagonalisable dans une base orthonormée. Ses valeurs propres sont $1$, $\frac 14$ et $\frac{-1}{12}$. On cherche ensuite une base de vecteurs propres et on trouve que la matrice 
+$$P=\left(\begin{array}{ccc}
+1&2&0\\
+1&-1&1\\
+1&-1&-1
+\end{array}\right)$$
+est telle que 
+$$M=P\left(
+\begin{array}{ccc}
+1&0&0\\
+0&\frac 14&0\\
+0&0&\frac{-1}{12}\\
+\end{array}
+\right)P^{-1}.$$
+Puisque $M^n=PD^n P^{-1}$, où $D$ est la matrice diagonale précédente, on constate sans peine que $(M^n)$ tend vers 
+$$N=P\left(
+\begin{array}{ccc}
+1&0&0\\
+0&0&0\\
+0&0&0\\
+\end{array}
+\right)P^{-1}=\frac 13\left(\begin{array}{ccc}
+1&1&1\\
+1&1&1\\
+1&1&1
+\end{array}\right).$$
+<li> Notons $(u,v,w)$ les 3 vecteurs colonnes de $P$ (ie une base de vecteurs propres de $N$). Alors si $f$ est l'endomorphisme associé à $N$, on a $f(u)=u$, $f(v)=0$ et $f(w)=0$. $f$ est donc la projection sur $\textrm{vect}(u)$ parallèlement à $\textrm{vect}(v,w)$. Mais puisque la famille $(u,v,w)$ est une famille orthogonale (on a diagonalisé une matrice symétrique), $f$ est en réalité la projection orthogonale sur $\textrm{vect}(u)=\ker(M-I_n)$.
+<li> Par une récurrence simple, on a pour tout $n\in\mathbb N$, $X_n=M^n X_0$. Passans à la limite, on trouve que $(X_n)$ converge vers le vecteur 
+$$Y=NX_0=\frac{1}3\left(
+\begin{array}{c}
+u_0+v_0+w_0\\
+u_0+v_0+w_0\\
+u_0+v_0+w_0\\
+\end{array}
+\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1078"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1078"),	max:5, rating:1.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1078,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Identité plus un endomorphisme de rang 1 <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1078.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1078,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1078','imageenonce1078');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1078"></a><div class=inner id="innerenonce1078">Soit $E$ un espace euclidien de dimension $n\geq 2$, $a$ un vecteur unitaire de $E$ et $\lambda$ un réel. 
+<ol class="enumeratechiffre">
+<li> Démontrer que 
+$$f(x)=x+\lambda \langle x,a\rangle a$$
+définit un endomorphisme symétrique de $E$.
+<li> Déterminer les valeurs propres de $f$ et les sous-espaces propres correspondants.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1078','imageindication1078');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1078"></a><div class=inner id="innerindication1078" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la définition.
+<li> Séparer le cas $\lambda=0$. Sinon, résoudre l'équation $f(x)=\mu x$. On pourra voir ce qui se passe si $x$ est orthogonal à $a$, et si $x$ est proportionnel à $a$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1078','imagecorrige1078',1078);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1078"></a><div class=inner id="innercorrige1078" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $x,y\in E$. Alors on a d'une part
+$$
+\langle f(x),y\rangle=\langle x,y\rangle+\lambda \langle x,a\rangle \langle a,y\rangle$$
+et d'autre part
+$$\langle x,f(y)\rangle=\langle x,y\rangle +\lambda \langle y,a\rangle \langle x,a\rangle.$$
+On conclut par symétrie du produit scalaire que $\langle f(x),y\rangle=\langle x,f(y)\rangle$.
+<li> D'abord, si $\lambda=0$, $f$ est l'identité : 1 est valeur propre et tous les vecteurs de l'espace (sauf le vecteur nul) sont des vecteurs propres. On suppose donc que $\lambda\neq 0$, et soit $\mu$ une valeur propre de $f$ de vecteur propre associé $x\neq 0$. Alors on a 
+$$f(x)=\mu x\iff (\mu-1)x=\lambda \langle x,a\rangle a.$$
+Si $\mu=1$, alors ceci est équivalent à $\langle x,a\rangle=0$. Ainsi, $1$ est valeur propre de $f$, et l'espace propre associé est $\textrm{vect}(a)^\perp$. Si $\mu\neq 1$, on voit que $x$ et $a$ doivent être proportionnels. Or, on a
+$$f(a)=(1+\lambda)a.$$
+Ainsi, $1+\lambda$ est valeur propre de $f$, et son espace propre contient $\textrm{vect}(a)$. Mais puisque $\textrm{vect}(a)$ et $\textrm{vect}(a)^\perp$ sont supplémentaires, on a déterminé complètement les sous-espaces propres de $f$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2630"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2630"),	max:5, rating:3.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2630,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Etude d'un endomorphisme symétrique particulier <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2630.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2630,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2630','imageenonce2630');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2630"></a><div class=inner id="innerenonce2630">Soit $E$ un espace vectoriel euclidien de dimension supérieure ou égale à 3. Soit $(u,v)$ une famille libre de vecteurs de $E$ et on considère 
+l'endomorphisme $f$ de $E$ défini par
+$$f(x)=\langle u,x\rangle u-\langle v,x\rangle v.$$
+<ol class="enumeratechiffre">
+ <li> Démontrer que $f$ est un endomorphisme symétrique.
+ <li> Déterminer $\ker(f)$ et $\textrm{Im}(f)$.
+ <li> Déterminer les valeurs propres de $f$ ainsi que la dimension des sous-espaces propres associés.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2630','imageindication2630');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2630"></a><div class=inner id="innerindication2630" style="display:none;"><ol class="enumeratechiffre">
+ <li> Utiliser la définition.
+ <li> Déterminer $\ker(f)$ en utilisant que $(u,v)$ est une famille libre, puis déterminer $\textrm{Im}(f)$ en utilisant le théorème du rang.
+ <li> &Eacute;crire la matrice de $f$ dans une bonne base (utiliser le résultat de la question précédente), puis calculer son polynôme caractéristique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2630','imagecorrige2630',2630);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2630"></a><div class=inner id="innercorrige2630" style="display:none;"><ol class="enumeratechiffre">
+ <li> Pour $x,y\in E$, on a
+ \begin{align*}
+  \langle f(x),y\rangle&=\langle \langle u,x\rangle u-\langle v,x\rangle v,y\rangle\\
+  &= \langle u,x\rangle\langle u,y\rangle-\langle v,x\rangle\langle v,y\rangle.
+ \end{align*}
+ D'autre part, on a aussi
+ \begin{align*}
+  \langle x,f(y)\rangle&=\langle x,\langle u,y\rangle u-\langle v,y\rangle v\rangle\\
+  &=\langle x,u\rangle\langle u,y\rangle -\langle x,v\rangle \langle v,y\rangle.
+ \end{align*}
+ En utilisant la symétrie du produit scalaire, on obtient bien $\langle f(x),y\rangle=\langle x,f(y)\rangle$
+ et donc $f$ est un endomorphisme symétrique.
+<li> Puisque $(u,v)$ est une famille libre, $f(x)=0$ si et seulement si $\langle u,x\rangle=0$ et $\langle v,x\rangle=0$. Notons
+$P$ le plan engendré par les vecteurs $u$ et $v$. On a prouvé que $x\in\ker(f)$ si et seulement si $x$ est orthogonal au plan $P$, autrement dit
+$\ker(f)=P^\perp$. Ainsi, puisque $\dim(P)=2$, on a $\dim(\ker(f))=n-2$. <br>
+Par le théorème du rang, $\textrm{Im}(f)$ est de dimension $n-\dim(\ker(f))=2$. De plus, il est clair que $\textrm{Im}(f)$ est inclus dans $P$ qui est lui aussi de dimension 2.
+Par égalité des dimensions, $\textrm{Im}(f)=P$.
+<li> On sait déjà que $0$ est valeur propre de $f$ et que l'espace propre associé est de dimension $n-2$. D'autre part, dans une base de $E$ constituée par une base de $\ker(f)$ et
+de $(u,v)$, la matrice de $f$ s'écrit
+$$
+\begin{pmatrix}
+ 0&\dots&0&0&0\\
+ \vdots&\ddots&\vdots&\vdots&\vdots\\
+ 0&\dots&0&0&0\\
+ 0&\dots&0&\|u\|^2&\langle u,v\rangle\\
+ 0&\dots&0&-\langle u,v\rangle&-\|v\|^2
+\end{pmatrix}.
+$$
+On calcule le polynôme caractéristique de $f$ en utilisant cette matrice et on trouve
+\begin{align*}
+ \chi_f(X)&=(-X)^{n-2}\left(\|u\|^2-X\right)\left(-\|v\|^2-X\right)+\langle u,v\rangle^2\\
+ &=(-X)^{n-2}\left(X^2+\left(\|v\|^2-\|u\|^2\right)X+\langle u,v\rangle^2-\|u\|^2\|v\|^2\right).
+\end{align*}
+Le discriminant du polynôme de degré 2 qui apparait vaut
+\begin{align*}
+ \Delta&=\left(\|v\|^2-\|u\|^2\right)^2-4\langle u,v\rangle^2+4\|u\|^2\|v\|^2\\
+ &=\left(\|v\|^2+\|u\|^2\right)^2-4\langle u,v\rangle^2\\
+ &=\left(\|v\|^2+\|u\|^2-2\langle u,v\rangle\right)\left(\|v\|^2+\|u\|^2+2\langle u,v\rangle\right)\\
+ &=\|u-v\|^2\|u+v\|^2.
+\end{align*}
+Comme $(u,v)$ est libre, on n'a pas $u=v$ ou $u=-v$ et donc $\Delta&gt;0$. 
+Le polynôme $\chi_f$ admet donc deux racines distinctes non nulles qui sont
+$$\frac{1}{2}\left(\|u\|^2-\|v\|^2\pm\|u-v\|\|u+v\|\right).$$
+Ces deux racines sont les deux dernières valeurs propres de $f$, et les espaces propres associés sont de dimension 1.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Réduction des endomorphismes autoadjoints et des matrices symétriques - théorie</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1073"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1073"),	max:5, rating:1.1904761904762, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1073,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Produit scalaire nul <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1073.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1073,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1073','imageenonce1073');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1073"></a><div class=inner id="innerenonce1073">Soit $u$ un endomorphisme symétrique d'un espace euclidien $E$ vérifiant, pour tout $x\in E$, $\langle u(x),x\rangle=0$. Que dire de $u$?</div></div><div class=indication><a href="javascript:showAll('innerindication1073','imageindication1073');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1073"></a><div class=inner id="innerindication1073" style="display:none;">Quelles sont les valeurs propres possibles de $u$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1073','imagecorrige1073',1073);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1073"></a><div class=inner id="innercorrige1073" style="display:none;">Soit $\lambda$ une valeur propre de $u$, et $x$ un vecteur propre associé. Alors on a d'une part
+$$\langle u(x),x\rangle=\langle \lambda x,x\rangle=\lambda \|x\|^2$$
+et d'autre part, par hypothèse,
+$$\langle u(x),x\rangle=0.$$
+Toutes les valeurs propres de $u$ sont donc nulles. Comme $u$ est diagonalisable, on en déduit que $u=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1077"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1077"),	max:5, rating:1.4347826086957, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1077,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice symétrique à puissance nulle <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1077.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1077,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1077','imageenonce1077');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1077"></a><div class=inner id="innerenonce1077">Soit $A\in\mathcal M_n(\mathbb R)$ symétrique. On suppose qu'il existe $p\in\mathbb N$ tel que $A^p=0$. Que vaut $A$?</div></div><div class=indication><a href="javascript:showAll('innerindication1077','imageindication1077');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1077"></a><div class=inner id="innerindication1077" style="display:none;">Quelles sont les valeurs propres de $A$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1077','imagecorrige1077',1077);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1077"></a><div class=inner id="innercorrige1077" style="display:none;">Soit $\lambda$ une valeur propre de $A$, et $X$ un vecteur propre associé. Alors on a $A^p X=\lambda^p X$ mais aussi $A^p X=0$. Ainsi, on doit avoir $\lambda^p=0$, soit encore $\lambda=0$. Ainsi, toutes les valeurs propres de $A$ doivent être nulles. Mais comme $A$ est diagonalisable, il est clair que ceci entraîne que $A=0$. Réciproquement, la matrice nulle vérifie bien ceci!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1715"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1715"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1715,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inversible? <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1715.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1715,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1715','imageenonce1715');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1715"></a><div class=inner id="innerenonce1715">Soit $A\in\mathcal M_n(\mathbb R)$ une matrice symétrique. Est-ce que la matrice $A+iI_n$ est inversible?</div></div><div class=indication><a href="javascript:showAll('innerindication1715','imageindication1715');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1715"></a><div class=inner id="innerindication1715" style="display:none;">Est-ce que $0$ est valeur propre de $A+iI_n$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1715','imagecorrige1715',1715);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1715"></a><div class=inner id="innercorrige1715" style="display:none;">Il suffit de prouver que $0$ n'est pas une valeur propre de $A+iI_n$. Mais $A$ étant une matrice symétrique réelle, elle est diagonalisable sur $\mathbb R$ et admet donc uniquement des valeurs propres réelles, $\lambda_1,\dots,\lambda_n$ (éventuellement répétées plusieurs fois si la valeur propre est multiple). Donc les valeurs propres de $A+iI_n$ sont $\lambda_1+i,\dots,\lambda_n+i$. Ainsi, $0$ n'est pas valeur propre de $A+iI_n$ et cette matrice est inversible.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1074"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1074"),	max:5, rating:2.1363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1074,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de la norme <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1074.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1074,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1074','imageenonce1074');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1074"></a><div class=inner id="innerenonce1074">Soit $u$ un endomorphisme autoadjoint d'un espace euclidien $E$ de dimension $n$. On note $\lambda_1\leq \lambda_2\leq\dots\leq\lambda_n$ les valeurs propres de $u$, comptées avec leur multiplicité. Démontrer que, pour tout $x\in E$, on a
+$$\lambda_1 \|x\|^2\leq \langle u(x),x\rangle \leq \lambda_n \|x\|^2.$$</div></div><div class=indication><a href="javascript:showAll('innerindication1074','imageindication1074');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1074"></a><div class=inner id="innerindication1074" style="display:none;">Calculer les normes dans une base orthonormée de vecteurs propres.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1074','imagecorrige1074',1074);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1074"></a><div class=inner id="innercorrige1074" style="display:none;">Soit $(e_1,\dots,e_n)$ une base orthonormée de vecteurs propres associée aux valeurs propres $(\lambda_1,\dots,\lambda_n)$. &Eacute;crivons $x\in E$ sous la forme $x=x_1e_1+\dots x_n e_n$, de sorte que 
+$$u(x)=\lambda_1 x_1 e_1+\dots+\lambda_n x_n e_n.$$
+Alors on a 
+$$\|x\|^2=x_1^2+\dots+x_n^2$$
+et 
+$$\langle u(x),x\rangle=\lambda_1x_1^2+\dots+\lambda_n x_n^2.$$
+Puisque, pour tout $i=1,\dots,n$, on a $\lambda_1\leq\lambda_i\leq\lambda_n$, on a donc
+$$\lambda_1 \|x\|^2\leq \langle u(x),x\rangle\leq \lambda_n \|x\|^2.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater3322"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3322"),	max:5, rating:1.6818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3322,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une condition nécessaire et suffisante pour que le spectre soit contenu dans un intervalle <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3322.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(3322,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3322','imageenonce3322');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3322"></a><div class=inner id="innerenonce3322">Soit $E$ un espace euclidien, $u\in\mathcal S(E)$ et $a\leq b$ deux réels. Démontrer que les deux assertions suivantes sont équivalentes :
+<ol class="enumeratechiffre">
+<li> $\textrm{Sp}(u)\subset[a,b]$;
+<li> $\forall x\in E,\ \langle u(x)-ax,u(x)-bx\rangle\leq 0.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3322','imageindication3322');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3322"></a><div class=inner id="innerindication3322" style="display:none;">Pour $1.\implies 2.,$ calculer les produits scalaires dans une base orthonormée de vecteurs propres de $f$. Pour $2\implies 1.,$ fixer un vecteur propre associé à $\lambda$, et étudier ce que signifie sur $\lambda$ l'inégalité $2.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3322','imagecorrige3322',3322);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3322"></a><div class=inner id="innercorrige3322" style="display:none;">$1.\implies 2.$ Puisque $f\in\mathcal S(E)$, il existe une base orthonormée $(e_1,\dots,e_n)$ de $E$ constituée de vecteurs propres pour $u$ : pour tout $i\in\{1,\dots,n\},$ $u(e_i)=\lambda_i e_i$ avec $\lambda_i\in[a,b]$. Soit maintenant $x\in E$. Alors $x$ s'écrit $\sum_{i=1}^n x_i e_i,$ et on a :
+\begin{align*}
+\langle u(x)-ax,u(x)-bx\rangle&=\left\langle \sum_{i=1}^n (\lambda_i-a)x_ie_i,\sum_{j=1}^n (\lambda_j-b)x_je_j\right\rangle\\
+&=\sum_{i=1}^n (\lambda_i-a)(\lambda_i-b)x_i^2
+\end{align*}
+où la dernière ligne vient du fait que $(e_1,\dots,e_n)$ est une base orthonormée. Puisque $(\lambda_i-a)(\lambda_i-b)x_i^2\leq 0$ pour tout $i=1,\dots,n$, on obtient bien $\langle u(x)-ax,u(x)-bx\rangle\leq 0.$<br>
+$2.\implies 1.$ Soit $\lambda$ une valeur propre de $E$ et $x\in E,$ $x\neq 0$, tel que $u(x)=\lambda x.$ Alors on a 
+$$\langle u(x)-ax,u(x)-bx\rangle=(\lambda-a)(\lambda-b)\|x\|^2.$$
+Ainsi, puisque $x\neq 0,$ on doit avoir $(\lambda-a)(\lambda-b)\leq 0,$
+ce qui revient exactement à dire que $\lambda\in[a,b].$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1717"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1717"),	max:5, rating:2.2222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1717,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Image numérique <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1717.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1717,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1717','imageenonce1717');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1717"></a><div class=inner id="innerenonce1717">Soit $E$ un espace vectoriel euclidien et $u$ un endomorphisme symétrique de $E$. On note $m$ la plus petite et $M$ la plus grande des valeurs propres de $u$. On appelle image numérique de $u$ et on note $W(u)$ l'ensemble $\{\langle u(x),x\rangle;\ x\in E,\ \|x\|=1\}$. Le but de l'exercice est de démontrer que $1\in W(u)$ si et seulement si $1\in [m,M]$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $x\in E$, on a $m\|x\|^2\leq \langle u(x),x\rangle\leq M\|x\|^2$. Que peut-on en conclure?
+<li> Soit $e,f\in E$ de norme $1$ tels que $u(e)=me$ et $u(f)=Mf$. Pour $\theta\in\mathbb R$, on pose $g(\theta)=(\cos\theta)e+(\sin\theta)f$ et $h(\theta)=\langle u(g(\theta)),g(\theta)\rangle$. Calculer $h(0)$ et $h(\pi/2)$. Que peut-on en déduire?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1717','imageindication1717');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1717"></a><div class=inner id="innerindication1717" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer les normes dans une base orthonormée de vecteurs propres de $u$.
+<li> Appliquer le théorème des valeurs intermédiaires à $h$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1717','imagecorrige1717',1717);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1717"></a><div class=inner id="innercorrige1717" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $(e_1,\dots,e_n)$ une base orthonormée de vecteurs propres associée aux valeurs propres $(\lambda_1,\dots,\lambda_n)$. &Eacute;crivons $x\in E$ sous la forme $x=x_1e_1+\dots x_n e_n$, de sorte que 
+$$u(x)=\lambda_1 x_1 e_1+\dots+\lambda_n x_n e_n.$$
+Alors on a 
+$$\|x\|^2=x_1^2+\dots+x_n^2$$
+et 
+$$\langle u(x),x\rangle=\lambda_1x_1^2+\dots+\lambda_n x_n^2.$$
+Puisque, pour tout $i=1,\dots,n$, on a $m\leq\lambda_i\leq M$, on a donc
+$$m \|x\|^2\leq \langle u(x),x\rangle\leq M \|x\|^2.$$
+On en déduit que si $1\in W(u)$, alors $1\in [m,M]$.
+<li> On a $h(0)=\langle u(e),e\rangle=m$ et $h(\pi/2)=\langle u(f),f\rangle=M$. Supposons désormais que $1\in [m,M]$. Si $m=M$, alors $1=m=M\in W(u)$. Sinon, la fonction $h$ étant continue, par le théorème des valeurs intermédiaires, il existe $\theta\in [0,\pi/2]$ tel que $h(\theta)=1$. Mais alors, on sait que (puisque $e$ et $f$ sont orthogonaux car ce sont deux vecteurs propres associés à des valeurs propres distinctes) $\|g(\theta)\|=1$, et donc $1\in W(u)$. On a donc prouvé la réciproque de la première question.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1075"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1075"),	max:5, rating:2.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1075,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Norme d'un endomorphisme symétrique <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1075.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1075,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1075','imageenonce1075');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1075"></a><div class=inner id="innerenonce1075">Soit $E$ un espace vectoriel euclidien. Pour $f\in\mcl(E)$, on note $\rho(f)=\max\{|\lambda|;\ \lambda\textrm{ valeur propre de }f\}$.
+On pose également $\|f\|=\sup\{\|f(x)\|;\ \|x\|\leq 1\}$. Démontrer que si $f$ est symétrique, alors
+$\|f\|=\rho(f)$.</div></div><div class=indication><a href="javascript:showAll('innerindication1075','imageindication1075');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1075"></a><div class=inner id="innerindication1075" style="display:none;">Prendre une base orthonormale de vecteurs propres, et calculer les normes à l'aide des décompositions
+dans cette base.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1075','imagecorrige1075',1075);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1075"></a><div class=inner id="innercorrige1075" style="display:none;">Soit $(e_1,\dots,e_n)$ une base orthonormale de $E$ constituée de vecteurs propres pour $f$. Notons $(\lambda_1,
+\dots,\lambda_n)$ les valeurs propres associées. Pour $x=\sum_{i=1}^n x_ie_i$, on a $f(x)=\sum_{i=1}^n \lambda_ix_ie_i$, et donc
+$$\|f(x)\|^2=\sum_{i=1}^n |\lambda_i|^2 x_i^2\leq \rho(f)^2 \|x\|^2,$$
+ce qui prouve que $\|f\|\leq\rho(f)$. D'autre part, il existe $k$ tel que $\rho(f)=|\lambda_k|$.
+On a alors $\|f(e_k)\|=|\lambda_k|=\rho(f)$, et comme $\|e_k\|=1$, on a $\rho(f)\leq\|f\|$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1072"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1072"),	max:5, rating:1.8421052631579, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1072,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Symétrique et orthogonal <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1072.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1072,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1072','imageenonce1072');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1072"></a><div class=inner id="innerenonce1072">Déterminer les endomorphismes symétriques et orthogonaux d'un espace vectoriel euclidien.</div></div><div class=indication><a href="javascript:showAll('innerindication1072','imageindication1072');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1072"></a><div class=inner id="innerindication1072" style="display:none;">Penser par exemple en termes de valeurs propres.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1072','imagecorrige1072',1072);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1072"></a><div class=inner id="innercorrige1072" style="display:none;">Soit $u$ un tel endomorphisme, et soit $\lambda$ une valeur propre de $u$. Si $x$ est un vecteur propre associé, on a $\|u(x)\|=\|x\|$ et $\|u(x)\|=|\lambda| \|x\|$. On en déduit que $\lambda=\pm 1$. On a donc $\ker(u-Id)\oplus^\perp \ker(u+Id)=E$ et donc $u$ est une symétrie orthogonale. Réciproquement, toute symétrie orthogonale est un endomorphisme symétrique et orthogonal.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1097"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1097"),	max:5, rating:2.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1097,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme des carrés des coefficients <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1097.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1097,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1097','imageenonce1097');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1097"></a><div class=inner id="innerenonce1097">Soit $E$ un espace vectoriel euclidien et $u\in\mathcal L(E)$.
+<ol class="enumeratechiffre">
+<li> Montrer que, si $(e_i)$ et $(f_k)$ sont deux bases orthonormées de $E$, alors
+$$\sum_{i=1}^n \|u(e_i)\|^2=\sum_{k=1}^n \|u^*(f_k)\|^2.$$
+<li> En déduire que la quantité $\sum_{i=1}^n \|u(e_i)\|^2$ est indépendant de la base orthonormée choisie.
+<li> Soit $A=(a_{i,j})_{1\leq i,j\leq n}$ une matrice symétrique, $\lambda_1,\dots,\lambda_n$ ses valeurs propres,
+comptées avec leur multiplicité. Montrer que
+$$\sum_{1\leq i,j\leq n}a_{i,j}^2=\sum_{k=1}^n \lambda_k^2.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1097','imageindication1097');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1097"></a><div class=inner id="innerindication1097" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire que 
+$$\|u(e_i)\|^2=\sum_{k=1}^n |\langle u(e_i),e_k\rangle|^2.$$
+<li> C'est contenu dans la question précédente.
+<li> On note $u$ l'endomorphisme canoniquement associé à $A$ dans la base canonique de $\mathbb R^n$. Calculer
+de deux façons différentes $\sum_{i=1}^n \|u(e_i)\|^2$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1097','imagecorrige1097',1097);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1097"></a><div class=inner id="innercorrige1097" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit
+$$\|u(e_i)\|^2=\sum_{k=1}^n |\langle u(e_i),f_k\rangle|^2,$$
+de sorte que
+\begin{eqnarray*}
+\sum_{i=1}^n \|u(e_i)\|^2&=&\sum_{i=1}^n\sum_{k=1}^n |\langle u(e_i),f_k\rangle|^2\\
+&=&\sum_{k=1}^n\sum_{i=1}^n |\langle e_i,u^*(f_k)\rangle|^2\\
+&=&\sum_{k=1}^n \|u^*(f_k)\|^2.
+\end{eqnarray*}
+<li> Si $(e_i)$ et $(e'_i)$ sont deux bases orthonormées, alors on aura toujours, $(f_i)$ désignant une base
+orthonormée fixe
+$$\sum_{i=1}^n \|u(e_i)\|^2=\sum_{i=1}^n \|u(e'_i)\|^2=\sum_{k=1}^n \|u^*(f_k)\|^2.$$
+La quantité est donc indépendante de la base orthonormée choisie.
+<li> Soit $u$ l'endomorphisme canoniquement associé à $A$ dans la base canonique $(e_1,\dots,e_n)$ de $\mathbb R^n$.
+Par un calcul direct, on a aussi 
+$$u(e_j)=\sum_{i=1}^n a_{i,j}e_i$$
+de sorte que
+$$\|u(e_1)\|^2+\dots+\|u(e_n)\|^2=\sum_{1\leq i,j\leq n}a_{i,j}^2.$$
+Mais, $u$ est un endomorphisme symétrique, il est diagonalisable dans une base orthonormée $(f_1,\dots,f_n)$ telle
+que $u(f_i)=\lambda_i f_i.$ On a alors
+$$\|u(f_1)\|^2+\dots+\|u(f_n)\|^2=\sum_{k=1}^n\lambda_k^2.$$
+D'après le résultat de la question précédente, ces deux quantités sont égales!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1080"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1080"),	max:5, rating:2.7857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1080,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application à une matrice non symétrique <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1080.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1080,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1080','imageenonce1080');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1080"></a><div class=inner id="innerenonce1080">Soit $A\in\mathcal M_n(\mathbb R)$. Démontrer que la matrice $A^T A$ est diagonalisable et que ses valeurs propres sont des réels positifs.</div></div><div class=indication><a href="javascript:showAll('innerindication1080','imageindication1080');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1080"></a><div class=inner id="innerindication1080" style="display:none;">Si $X$ est un vecteur propre, simplifier l'écriture de $X^T A^T A X$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1080','imagecorrige1080',1080);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1080"></a><div class=inner id="innercorrige1080" style="display:none;">On remarque d'abord que la matrice $A^T A$ est symétrique. Elle est donc diagonalisable à valeurs propres réelles. De plus, si $X$ est un vecteur propre associé à la valeur propre $\lambda$, alors on a 
+$$A^T A X=\lambda X\implies X^T A^T A X=\lambda X^T X\implies (AX)^T AX=\lambda X^T X\implies \|AX\|^2=\lambda \|X\|^2.$$
+Ainsi, $\lambda$, quotient de deux réels positifs, est un réel positif.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1083"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1083"),	max:5, rating:2.1578947368421, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1083,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphismes symétriques qui commutent <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1083.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1083,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1083','imageenonce1083');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1083"></a><div class=inner id="innerenonce1083">Soient $u,v$ deux endomorphismes symétrique d'un espace euclidien qui commutent, $u\circ v=v\circ u$. 
+<ol class="enumeratechiffre">
+<li> Soit $\lambda$ une valeur propre de $u$. On pose $F=\ker(u-\lambda Id_E)$. Démontrer que $F$ et $F^\perp$ sont stables par $v$.
+<li> Démontrer qu'il existe une base orthonormale de $E$ diagonalisant simultanément $u$ et $v$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1083','imageindication1083');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1083"></a><div class=inner id="innerindication1083" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Raisonner par récurrence sur la dimension.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1083','imagecorrige1083',1083);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1083"></a><div class=inner id="innercorrige1083" style="display:none;"><ol class="enumeratechiffre">
+<li> Le fait que $F$ est stable par $v$ ne dépend pas du fait que $u$ et $v$ sont symétriques. En effet, dès que $u$ et $v$ commutent, si $P\in\mathbb R[X]$, alors $\ker P(u)$ est stable par $v$. Reprouvons ce fait dans ce cas particulier. Soit $x\in F$, de sorte que $u(x)=\lambda x$. Alors 
+$$u(v(x))=v(u(x))=v(\lambda x)=\lambda v(x)$$
+de sorte que $v(x)\in F$ et que $F$ est stable par $v$.<br>
+Prenons ensuite $y\in F^\perp$, et prouvons que $v(y)\in F^\perp$. On veut prouver que, pour tout $x\in F$, on a 
+$$\langle v(y),x\rangle=0.$$
+Mais puisque $v$ est symétrique, ceci est égal à 
+$$\langle y,v(x)\rangle=0$$
+puisque $v(x)\in F$. Ainsi, $F^\perp$ est aussi stable par $v$.
+<li> On va raisonner par récurrence forte sur la dimension de l'espace. Le résultat demandé est vrai en dimension 1. Supposons qu'il soit vrai pour toute dimension inférieure ou égale à $n-1$, et prouvons-le en dimension $n$. Puisque $u$ est symétrique, $u$ admet une valeur propre $\lambda$ et notons $F$ le sous-espace propre associé. $F$ est stable par $v$. Notons $v_0$ la restriction de $v$ à $F$. C'est un endomorphisme symétrique, et donc il existe une base orthonormale $(e_1,\dots,e_p)$ de $F$ diagonalisant $v_0$. Puisque on travaille dans $F$, on a aussi $u(e_i)=\lambda e_i$. Remarquons ensuite que $F^\perp$ est stable par $u$ et par $v$. Notons $u_1$ et $v_1$ les restrictions respectives de $u$ et $v$ à $F^\perp$. $u_1$ et $v_1$ commutent, et $\dim(F^\perp)&lt;n$. Ainsi, il existe une base orthonormale $(f_1,\dots,f_q)$ diagonalisant simultanément $u_1$ et $v_1$. La base $(e_1,\dots,e_p,f_1,\dots,f_q)$ est alors une base orthonormale de $E$ diagonalisant simultanément $u$ et $v$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater3315"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3315"),	max:5, rating:2.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3315,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme d'une matrice orthogonale et de sa transposée <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3315.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(3315,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3315','imageenonce3315');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3315"></a><div class=inner id="innerenonce3315">Soit $A\in\mathcal M_n(\mathbb R)$. Démontrer que les propriétés suivantes sont équivalentes : 
+<ol class="enumeratechiffre">
+<li> Il existe $B\in O_n(\mathbb R)$ tel que $A=B+B^T$;
+<li> $A\in\mathcal S_n(\mathbb R),$ $\textrm{Sp}(A)\subset [-2,2]$ et les valeurs propres de $A$ dans $]-2,2[$ sont de multiplicité paire.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3315','imageindication3315');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3315"></a><div class=inner id="innerindication3315" style="display:none;">Pour $1.\implies 2.$, partir du théorème de réduction des matrices orthogonales pour $B,$ faire la somme, et tout devrait bien se passer! Pour $2.\implies 1.$, partir du théorème de réduction des matrices symétriques pour $A$, et construire $B$ par blocs. On pourra utiliser que si $\lambda\in [-2,2]$, il existe $\theta\in\mathbb R$ tel que $\lambda=2\cos(\theta).$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3315','imagecorrige3315',3315);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3315"></a><div class=inner id="innercorrige3315" style="display:none;">$1.\implies 2.$ Si $A=B+B^T,$ il est clair que $A^T=A$ et donc que $A$ est symétrique. De plus, d'après le théorème de réduction des matrices orthogonales, il existe une matrice orthogonale $P$ telle que 
+$$B=P\begin{pmatrix}I_p&\\&-I_q&&(0)\\
+&&R(\theta_1)\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)
+\end{pmatrix} P^T$$
+avec $p,q,r\in\mathbb N$, $\theta_1,\dots,\theta_r\in \mathbb R\backslash\pi\mathbb Z$ et $R(\theta)=\begin{pmatrix} \cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{pmatrix}.$
+Dans ce cas, on a 
+$$B+B^T=P\begin{pmatrix}2I_p&\\&-2I_q&&(0)\\
+&&R(\theta_1)+R(\theta_1)^T\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)+R(\theta_r)^T
+\end{pmatrix} P^T.$$
+Ceci démontre le résultat, en remarquant que 
+$$R(\theta)+R(\theta)^T =\begin{pmatrix}2\cos\theta&0\\0&2\cos\theta\end{pmatrix}.$$
+Les valeurs propres de $A$ sont alors $2$ (de multiplicité $p$), $-2$ (de multiplicité $q$) et les $2\cos(\theta_i)$, qui sont dans $]-2,2[$ et qui sont de multiplicité paire (il est possible que les $\theta_i$ ne soient pas tous distincts).<br>
+$2.\implies 1.$ Notons $p$ (resp. $q$) la multiplicité de $2$ (resp. $-2$). Les valeurs propres de $A$ dans $]-2,2[$ sont de multiplicité paire. Notons les $\lambda_1,\lambda_1,\dots,\lambda_r,\lambda_r$, comptées avec leur multiplicité. Le théorème des réduction des matrices symétriques nous dit qu'il existe $P\in O_n(\mathbb R)$ tel que 
+$$A=
+P\begin{pmatrix}2I_p&\\&-2I_q&&(0)\\
+&&\lambda_1 I_2\\
+&(0)&&\ddots\\
+&&&&\lambda_r I_2
+\end{pmatrix} P^T.$$
+On peut alors s'inspirer de la preuve de $1.\implies 2.$ et remarquer que, pour $i=1,\dots,r,$ il existe $\theta_i\in\mathbb R$ tel que $2\cos(\theta_i)=\lambda_i.$ On pose alors 
+$$B=P\begin{pmatrix}I_p&\\&-I_q&&(0)\\
+&&R(\theta_1)\\
+&(0)&&\ddots\\
+&&&&R(\theta_r)
+\end{pmatrix} P^T$$
+qui est bien élément de $O_n(\mathbb R)$ et satisfait $A=B+B^T.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1088"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1088"),	max:5, rating:3.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1088,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Fischer-Cochran <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1088.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1088,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1088','imageenonce1088');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1088"></a><div class=inner id="innerenonce1088">Soit $E$ un espace vectoriel euclidien de dimension $n$.
+<ol class="enumeratechiffre">
+<li> Soit $v\in S(E)$ tel que $(v(x),x)=0$ pour tout $x\in E$. Montrer que $v=0$.
+<li> Soient $u_1,\dots,u_p\in S(E)$. On suppose que $rg(u_1)+\dots+rg(u_p)=n$, et que
+$$\forall x\in E, (u_1(x),x)+\dots+(u_p(x),x)=(x,x).$$
+<ol class="enumeratechiffre">
+<li> Montrer que $u_1+\dots+u_p=Id_E$.
+<li> Montrer que $E=Im(u_1)\oplus\dots\oplus Im(u_p)$.
+<li> Montrer que pour tout $i$, $u_i$ est la projection orthogonale sur $Im(u_i)$.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1088','imageindication1088');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1088"></a><div class=inner id="innerindication1088" style="display:none;"><ol class="enumeratechiffre">
+<li> Quelles peuvent être les valeurs propres de $v$?
+<li> <ol class="enumeratechiffre">
+<li> Utiliser la question précédente.
+<li> Une fois n'est pas coutume, montrer que l'on a d'abord une somme, puis prouver que c'est une somme directe.
+<li> Calculer $u_k(x)$ à l'aide de 1.a).
+</ol>
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1088','imagecorrige1088',1088);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1088"></a><div class=inner id="innercorrige1088" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $\lambda$ une valeur propre de $v$. Alors on a $0=(v(x),x)=\lambda\|x\|^2$, et donc $\lambda=0$. Puisque
+$v$ est diagonalisable, et que toutes ses valeurs propres sont nulles, on en déduit que $v=0$.
+<li> <ol class="enumeratechiffre">
+<li> En utilisant la linéarité, ceci se traduit par 
+$$\forall x\in E, (u_1(x)+\dots+u_p(x)-Id_E(x),x)=0.$$
+Puisque $u_1+\dots+u_p-Id_E$ est symétrique, on en déduit $u_1+\dots+u_p=Id_E$. 
+<li> La relation précédente montre que tout $x$ de $E$ se décompose en $x=u_1(x)+\dots+u_p(x)$.
+Ainsi, on a $E=Im(u_1)+\dots+Im(u_p)$. D'autre part, la relation sur les rangs entraîne automatiquement
+que la somme est directe!  (on utilise le fait que $F$ et $G$ sont en somme directe si et seulement si
+$\dim(F+G)=\dim(F)+\dim(G)$).
+<li> Puisque $Id_E=u_1+\dots+u_p$, on a, pour tout $x\in E$ et tout $k$ :
+$$u_k(x)=u_1\circ u_k(x)+\dots+u_p\circ u_k(x).$$
+Par l'unicité de la décomposition due à la somme directe, on en déduit que
+$u_i\circ u_k=0$ si $i\neq k$, et $u_k^2=u_k$. Ainsi, $u_k$ est bien une projection sur $Im(u_k)$. Puisqu'en outre
+l'endomorphisme est symétrique, c'est la projection orthogonale sur $Im(u_k)$!
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater1089"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1089"),	max:5, rating:2.8947368421053, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1089,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Courant-Fischer <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1089.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(1089,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1089','imageenonce1089');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1089"></a><div class=inner id="innerenonce1089">Soit $A$ une matrice symétrique réelle d'ordre $n$ et $\lambda_1\leq\lambda_2\leq \dots\leq \lambda_n$ ses valeurs propres
+rangées par ordre croissant. Soit également $(e_1,\dots,e_n)$ une base orthonormale de vecteurs propres associés, ie $f(e_k)=\lambda_k e_k$.
+On désigne par $V_k$ le sous-espace $\textrm{vect}(e_1,\dots,e_k)$, par $W_k$ le sous-espace vectoriel $\textrm{vect}(e_k,\dots,e_n)$ et par $\mathcal F_k$ l'ensemble des sous-espaces vectoriels de 
+$\mathbb R^n$ de dimension $k\in\{1,\dots,n\}$. On pose, pour tout $x\in\mathbb R^n$ non-nul, 
+$$R_A(x)=\frac{\langle Ax,x\rangle}{\|x\|^2}.$$
+<ol class="enumeratechiffre">
+<li> Montrer que $\lambda_1=\min_{x\neq 0}R_A(x)$ et que $\lambda_n=\max_{x\neq 0}R_A(x)$.
+<li> Montrer que $\max_{x\in V_k\backslash\{0\}} R_A(x)=\lambda_k$.
+<li> Soit $V$ un sous-espace vectoriel de $\mathbb R^n$ de dimension $k$. Vérifier que $V\cap W_k\neq\{0\}$. 
+En déduire que $\max_{x\in V\backslash\{0\}} R_A(x)\geq \lambda_k$.
+<li> Déduire des questions précédentes le théorème de Courant-Fischer :
+$$\lambda_k=\min_{V\in\mathcal F_k}\max_{x\in V\backslash\{0\}}R_A(x).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1089','imageindication1089');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1089"></a><div class=inner id="innerindication1089" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la base orthonormale et commencer par prouver que $R_A(x)\in[\lambda_1,\lambda_n]$.
+<li> $x=e_k$.
+<li> Dimension + $R_A(x)\geq\lambda_k$ pour tout $x\in W_k$ (toujours grâce à la base orthonormale).
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1089','imagecorrige1089',1089);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1089"></a><div class=inner id="innercorrige1089" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in \mathbb R^n$ non nul qu'on décompose dans la base orthonormale $(e_i)_{1\leq i\leq n}$, $x=x_1e_1+\dots+x_ne_n$.
+On a donc 
+$$Ax=\lambda_1 x_1 e_1+\dots+\lambda_n x_n e_n.$$
+Il vient 
+$$\langle Ax,x\rangle=\lambda_1x_1^2+\dots+\lambda_nx_n^2$$
+soit, en utilisant $\lambda_1\leq\lambda_i\leq \lambda_n$,
+$$\lambda_1\|x\|^2\leq \langle Ax,x\rangle\leq \lambda_n \|x\|^2.$$
+On en déduit que $R_A(x)\in[\lambda_1,\lambda_n]$. De plus, $R_A(e_1)=\lambda_1$
+et $R_A(e_n)=\lambda_n$. Ceci prouve le résultat demandé.
+<li> Pour $x=e_k\in V_k$, on a $R_A(x)=\lambda_k$, d'où le résultat voulu.
+<li> Si $V\cap W_k$ était réduit à $\{0\}$, on aurait $\dim(V+W_k)=\dim(V)+\dim(W_k)=k+(n-k+1)=n+1&gt;n$, une contradiction.
+Maintenant, pour tout $x\in W_k$, $x\neq 0$, on a $R_A(x)\geq \lambda_k$. Ceci se prouve exactement comme à la question 1.,
+en écrivant $x=x_ke_k+\dots+x_ne_n$, et en remarquant que $\lambda_i\geq\lambda_k$ pour $i\in\{k,\dots,n\}$. D'autre part, il est clair que $V\backslash \{0\}$ contient $V\cap W_k\backslash \{0\}$,  d'où le résultat voulu.
+<li> La question 2 nous dit que 
+$$\min_{V\in\mathcal F_k}\max_{x\in V\backslash\{0\}}R_A(x)\leq \max_{x\in V_k\backslash\{0\}}R_A(x)\leq \lambda_k.$$
+D'autre part, la question 3 nous dit que, pour tout $V\in\mathcal F_k$, on a 
+$$\max_{x\in V\backslash\{0\}}R_A(x)\geq\lambda_k.$$
+D'où le théorème de Courant-Fischer.
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Endomorphismes symétriques positifs et définis positifs</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater3324"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3324"),	max:5, rating:1.5333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3324,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Positive ou non? <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3324.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(3324,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3324','imageenonce3324');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3324"></a><div class=inner id="innerenonce3324">Dire si les matrices suivantes sont positives, définies positives.
+$$A=\begin{pmatrix}
+2&-1\\
+-1&1
+\end{pmatrix}\quad\quad B=\begin{pmatrix}
+1&2\\
+2&1
+\end{pmatrix}.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3324','imageindication3324');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3324"></a><div class=inner id="innerindication3324" style="display:none;">Calculer $\langle AX,X\rangle$ pour tout $X\in\mathbb R^2.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3324','imagecorrige3324',3324);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3324"></a><div class=inner id="innercorrige3324" style="display:none;">Soit $X=\begin{pmatrix}x\\y\end{pmatrix}.$
+Alors $AX=\begin{pmatrix}2x-y\\-x+y\end{pmatrix}$ de sorte que 
+$$\langle AX,X\rangle=2x^2-xy-xy+y^2=(x-y)^2+x^2.$$
+Cette dernière quantité est toujours positive ou nulle, donc $A\in\mathcal S_2^+(\mathbb R),$ et de plus elle est nulle si et seulement $x=y=0.$ Donc $A\in\mathcal S_2^{++}(\mathbb R).$<br>
+Concernant $B,$ un calcul similaire donne
+$$\langle BX,X\rangle=x^2+4xy+y^2=(x+y)^2+2xy.$$
+En particulier, si $X=\begin{pmatrix}1\\-1\end{pmatrix},$ alors $\langle BX,X\rangle=-2&lt;0.$ Donc $B$ n'est pas une matrice symétrique positive. <br>
+Les deux résultats de l'exercice peuvent sembler étonnants. Ils illustrent le fait qu'être positif ne peut se décider uniquement en fonction du signe des coefficients de la matrice.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater3321"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3321"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3321,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Identité plus une matrice symétrique positive <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3321.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(3321,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3321','imageenonce3321');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3321"></a><div class=inner id="innerenonce3321">Soit $A\in\mathcal S_n^+(\mathbb R)$. Démontrer que $\det(I_n+A)\geq 1.$</div></div><div class=indication><a href="javascript:showAll('innerindication3321','imageindication3321');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3321"></a><div class=inner id="innerindication3321" style="display:none;">Quelles sont les valeurs propres de $I_n+A$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3321','imagecorrige3321',3321);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3321"></a><div class=inner id="innercorrige3321" style="display:none;">Puisque $A\in\mathcal S_n(\mathbb R)$, $A$ est diagonalisable dans une base orthonormale : il existe $P\in O_n(\mathbb R)$ telle $A=PDP^{-1},$ avec $D=\textrm{diag}(\lambda_1,\dots,\lambda_n).$ D'autre part, puisque $A$ est positive, tous les valeurs propres $\lambda_i$ sont éléments de $[0,+\infty[$. 
+On écrit ensuite 
+$$I_n+A=PI_nP^{-1}+PDP^{-1}=P(I_n+D)P^{-1}$$
+avec $I_n+D=\textrm{diag}(1+\lambda_1,\dots,1+\lambda_n).$ On a enfin
+$$\det(I_n+D)=\prod_{k=1}^n (1+\lambda_k)\geq 1$$
+puisque $1+\lambda_k\geq 1$ pour tout $k=1,\dots,n$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater3319"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3319"),	max:5, rating:2.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3319,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice $2\times 2$ définie positive <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3319.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(3319,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3319','imageenonce3319');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3319"></a><div class=inner id="innerenonce3319">Soit $A=\begin{pmatrix}r&s\\s&t\end{pmatrix}.$ Démontrer que 
+$$A\in\mathcal S_2^{++}(\mathbb R)\iff r&gt;0\textrm{ et }rt&gt;s^2.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3319','imageindication3319');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3319"></a><div class=inner id="innerindication3319" style="display:none;">Il y a deux méthodes possibles : revenir à la définition en étudiant quelles conditions font que $\langle AX,X\rangle &gt;0$ pour $X\neq 0$, ou calculer les valeurs propres de $A$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3319','imagecorrige3319',3319);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3319"></a><div class=inner id="innercorrige3319" style="display:none;">Voici deux méthodes pour résoudre cet exercice : <br>
+Méthode 1. $A\in\mathcal S_n^{++}(\mathbb R)$ si et seulement si, pour tout $X=\begin{pmatrix}x\\y\end{pmatrix}\neq 0,$ $\langle AX,X\rangle&gt;0.$
+On commence par calculer 
+$$\langle AX,X\rangle=rx^2+2sxy+ty^2.$$
+On suppose que $A\in\mathcal S_n^{++}(\mathbb R).$ Alors en choisissant $x=1$ et $y=0$, on obtient $r&gt;0$. On a aussi $t&gt;0$ en choisissant $x=0$ et $y=1$. On essaie alors d'écrire $\langle AX,X\rangle$ comme la somme de deux carrés. On s'inspire de la mise sous forme canonique d'un trinôme du second degré, et on trouve 
+$$\langle AX,X\rangle=r\left(x+\frac{sy}r\right)^2 +\frac{y^2}{r}(rt-s^2).$$
+En choisissant $x=s/r$ et $y=-1,$ on a 
+$$\langle AX,X\rangle=\frac{rt-s^2}{r}&gt;0,$$
+ce qui entraîne $rt-s^2&gt;0.$ Réciproquement, si $rt-s^2&gt;0$ et $r&gt;0$, on a aussi $t&gt;0$ et l'écriture 
+$$\langle AX,X\rangle=r\left(x+\frac{sy}r\right)^2 +\frac{y^2}{r}(rt-s^2)$$
+entraîne que $\langle AX,X\rangle\geq 0$ pour tout $X\in\mathbb R^2$. De plus, si $\langle AX,X\rangle=0,$ alors on a 
+$$\left\{
+\begin{array}{rcl}
+x+\frac{s}{r}y&=&0\\
+y&=&0\end{array}\right. \iff x=y=0.$$
+Ceci démontre que $A\in\mathcal S_2^{++}(\mathbb R).$<br>
+Méthode 2. Puisque $A$ est clairement symétrique, on peut utiliser que $A\in\mathcal S_2^{++}(\mathbb R)$ si et seulement si ses valeurs propres sont strictement posives. Notons $\lambda_1$ et $\lambda_2$ ces deux valeurs propres (éventuellement, $\lambda_1=\lambda_2$). Il est facile de voir que 
+$$\left\{\begin{array}{rcl}
+\lambda_1&&gt;&0\\
+\lambda_2&&gt;&0
+\end{array}\right.
+\iff
+\left\{\begin{array}{rcl}
+\lambda_1\lambda_2&&gt;&0\\
+\lambda_1+\lambda_2&&gt;&0
+\end{array}\right.
+$$
+Or, le polynôme caractéristique de $A$ est 
+$$C_A(X)=x^2-(r+t)x+(rt-s^2).$$
+Par les relations coefficients/racines, $\lambda_1\lambda_2=rt-s^2$ et
+$\lambda_1+\lambda_2=r+t$. Ainsi,
+$$A\in S_2^{++}(\mathbb R)\iff rt&gt;s^2\textrm{ et }r+t&gt;0.$$
+Or, sous la condition $rt&gt; 0,$ on a $r+t&gt;0\iff r&gt;0$. Ceci donne une deuxième démonstration de l'équivalence.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater3320"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3320"),	max:5, rating:1.4444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3320,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une relation d'ordre sur les matrices symétriques <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3320.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(3320,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3320','imageenonce3320');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3320"></a><div class=inner id="innerenonce3320">Pour $(A,B)\in\mathcal S_n(\mathbb R)$, on note $A\leq B$ si $B-A\in\mathcal S_n^+(\mathbb R)$. Vérifier que l'on définit ainsi une relation d'ordre sur $\mathcal S_n(\mathbb R).$</div></div><div class=indication><a href="javascript:showAll('innerindication3320','imageindication3320');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3320"></a><div class=inner id="innerindication3320" style="display:none;">Revenir à la définition d'une relation d'ordre : réflexivité, antisymétrie, transitivite. On pourra utiliser qu'une matrice diagonalisable dont le spectre est égal à $\{0\}$ est égale à la matrice nulle.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3320','imagecorrige3320',3320);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3320"></a><div class=inner id="innercorrige3320" style="display:none;">On vérifie que la relation $\leq$ est réflexive, antisymétrique, transitive :
+<ul class="rien">
+<li> réflexive : puisque la matrice nulle est une matrice symétrique positive, on a bien $A\leq A$ pour tout $A\in\mathcal S_n(\mathbb R)$.
+<li> antisymétrique : soit $A,B\in\mathcal S_n(\mathbb R)$ telles que $A\leq B$ et $B\leq A$. Alors $B-A\in\mathcal S_n^+(\mathbb R)$ et donc son spectre est contenu dans $\mathbb R_+$. De même, le spectre de $A-B$ est contenu dans $\mathbb R_+$. Puisque $B-A=-(A-B)$, on obtient que le spectre de $B-A$ est contenu dans $\{0\}$. Comme de plus $B-A$ est diagonalisable (c'est une matrice symétrique réelle!), on obtient que $B-A=0$ soit $A=B.$
+<li> transitive : soit $A,B,C\in\mathcal S_n(\mathbb R)$ telles que $A\leq B$ et $B\leq C.$ Alors pour tout $X\in\mathbb R^n,$ 
+$$\langle (C-A)X,X\rangle=\langle (C-B+B-A)X,X\rangle=\langle (C-B)X,X\rangle+\langle (B-A)X,X\rangle\geq 0.$$
+Ainsi, $C-A$ est une matrice de $\mathcal S_n^+(\mathbb R)$ et $A\leq C.$
+</ul>
+Remarquons que pour résoudre cet exercice, on a utilisé les deux caractérisations d'une matrice symétrique positive.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater1090"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1090"),	max:5, rating:3.2857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1090,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Décomposition polaire <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1090.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(1090,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1090','imageenonce1090');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1090"></a><div class=inner id="innerenonce1090">Soit $E$ un espace vectoriel euclidien. Un endomorphisme symétrique $u\in S(E)$ est dit positif
+si pour tout $x$ de $E$, $(u(x),x)\geq 0$. Il est dit défini positif si pour tout $x$ de $E$ non nul,
+$(u(x),x)&gt;0$. On notera $S^+(E)$ l'ensemble des endomorphismes symétriques positifs, et $S^{++}(E)$ l'ensemble
+des endomorphismes symétriques définis positifs.
+<ol class="enumeratechiffre">
+<li> Soit $u\in S(E)$. Montrer que $u$ appartient à $S^+(E)$ si et seulement si ses valeurs propres sont positives ou nulles.
+Donner une condition nécessaire et suffisante sur les valeurs propres de $u\in S(E)$ pour que $u\in S^{++}(E)$.
+<li> Soit $u\in S^+(E)$, $\lambda_1,\dots,\lambda_p$ ses valeurs propres (distinctes), et $E_i=\ker(u-\lambda_i Id_E)$.
+On définit $v_i$ par $v_i(x)=\sqrt{\lambda_i} x$ si $x\in E_i$, et $v_i(x)=0$ si $x\in E_i^\perp$. On note enfin $v=v_1+\dots+v_p$.
+Justifier que $v^2=v\circ v=u$, et
+que $v$ est positif.
+<li> Soit $w$ un autre élément de $S^+(E)$ tel que $w^2=u$.<ol class="enumeratechiffre">
+<li> Montrer que $wu=uw$.
+<li> En déduire que $w(E_i)\subset E_i$.
+<li> Soit $w_i$ l'endomorphisme induit par $w$ sur $E_i$. Vérifier que $w_i$ est symétrique positif, puis diagonaliser $w_i$.
+<li> En déduire que $w=v$.
+</ol>
+<li> Soit $f\in GL(E)$. <ol class="enumeratechiffre">
+<li> Montrer que $f^*\circ f\in S^{++}(E)$.
+<li> Montrer qu'il existe un unique couple $(h,g)\in O(E)\times S^{++}(E)$ tel que $f=h\circ g$. Cette factorisation
+s'appelle décomposition polaire de $f$.
+</ol>
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1090','imageindication1090');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1090"></a><div class=inner id="innerindication1090" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer $(u(x),x)$ dans une base orthonormale de vecteurs propres.
+<li> Décomposer $E$ en somme directe des espaces propres de $u$.
+<li> <ol class="enumeratechiffre">
+<li> Remplacer $u$ par $w^2$.
+<li> Que peut-on dire des images et noyaux de deux endomorphismes qui commutent?
+<li> $w_i$ est symétrique. Quelle peuvent-être les valeurs propres de $w$?
+<li> Recoller!
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Appliquer la définition!
+<li> Prendre pour $g$ l'unique élément de $S^+(E)$ tel que $g^2=f^*\circ f$. Puis définir $h$
+de l'unique façon possible. Vérifier que $h\in O(E)$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1090','imagecorrige1090',1090);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1090"></a><div class=inner id="innercorrige1090" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $u$ est symétrique, il existe une base orthonormée $\mathcal{B}=(e_1,\dots,e_n)$ de vecteurs propres,
+correspondant aux valeurs propres $\lambda_1,\dots,\lambda_n$. Prenant $x\in E$, $x=\sum_{i=1}^n x_i e_i$, on a
+$$(u(x),x)=\sum_{i=1}^n \lambda_i x_i^2.$$
+Si toutes les valeurs propres sont positives, on en déduit que cette quantité est positive. D'autre part,
+s'il existe une valeur propre strictement négative, par exemple $\lambda_1$, alors $(u(e_1),e_1)=\lambda_1&lt;0$, et $u$ n'est pas positif.
+Pour que $u$ soit défini positif, il est nécessaire et suffisant que toutes les valeurs propres de $u$ soient strictement positives.
+Le raisonnement est identique.
+<li> D'après le théorème spectral, les $E_i$ sont en somme directe orthogonale. Ainsi, si $x\in E_i$, on a $v_j(x)=0$ si
+$j\neq i$ et $v_i(x)=\sqrt{\lambda_i}x$. Ainsi, $v(x)=v_1(x)+\dots+v_n(x)=\sqrt{\lambda_i}x$, et $v^2(x)=\lambda_i x$. Puisque
+$E_1\oplus\dots\oplus E_n=E$, la relation est vraie sur $E$ tout entier par recollement. D'autre part, $v$ est symétrique
+positif, car chacun des $v_i$ est symétrique positif.
+<li> <ol class="enumeratechiffre">
+<li> On a : $w\circ u=w\circ w^2=w^3=w^2\circ w=u\circ w$.
+<li> Il est bien connu que si deux endomorphismes commutent, le noyau de tout polynôme en l'un est stable par l'autre.
+En particulier, les sous-espaces propres de $u$ sont stables par $w$.
+<li> $w_i$ est un endomorphisme symétrique positif, car c'est la restriction à un sous-espace stable d'un endomorphisme positif.
+$w_i$ est donc diagonalisable dans une base orthonormale. En outre, si $\mu$ est une de ses valeurs propres,
+associée au vecteur propre $y$, on a $w(y)=\mu y\implies w^2(y)=\mu^2 y=\lambda_i y$. Il vient $\mu=\sqrt{\lambda_i}$,
+puisque $\mu$ est positif. Ainsi, $w_i=\sqrt{\lambda_i}Id_{E_i}$.
+<li> Ainsi, $w$ coïncide avec $v$ sur chaque $E_i$, et puisque $E$ est somme directe des $E_i$, $w=v$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> On remarque d'abord que $f^*\circ f$ est symétrique. De plus, si $x\neq 0$, on a :
+$$(f^*(f(x)),x)=(f(x),f(x))&gt;0,$$
+car $f(x)\neq 0$ puisque $f$ est inversible.
+<li> Prouvons d'abord l'unicité, en supposant que $f=h_1\circ g_1=h_2\circ g_2$.
+On a nécessairement $f^*\circ f=g_1^2=g_2^2$. Puisque $g_1$ et $g_2$ doivent être symétriques positifs,
+le résultat des questions précédentes prouve que $g_1=g_2$. On en déduit, en inversant $g_1$ et $g_2$, que $h_1=h_2$.
+Ce raisonnement nous guide alors pour l'existence. Posons $g$ la racine carré positive de $f^*\circ f$, qui est donnée
+par les questions précédentes. Il faut remarquer que $g$ est définie positive, car $g$ est inversible
+puisque $g^2$ l'est. On pose ensuite $h=f\circ g^{-1}$, de sorte que $h^*\circ h=g^{-1}f^*\circ f g^{-1}=g^{-1}g^2g^{-1}=Id_E$, ce qui 
+prouve que $h$ est un endomorphisme orthogonal.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater1091"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1091"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1091,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Matrice de Hilbert <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1091.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(1091,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1091','imageenonce1091');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1091"></a><div class=inner id="innerenonce1091">Soit $H$ la matrice $\displaystyle H=\left(\frac{1}{i+j-1}\right)_{i,j=1,\dots,n}$, et soit $X=\left(\begin{array}c x_1\\x_2\\\vdots\\x_n\end{array}\right)$ un 
+vecteur de $\mathbb R^n$.
+<ol class="enumeratechiffre">
+<li> Exprimer $\langle HX,X\rangle$ à l'aide d'une intégrale (on pourra remarquer que $\frac{1}{i+j-1}=\int_0^1 x^{i+j-2}dx$).
+<li> En déduire que la matrice $H$ est définie positive.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1091','imagecorrige1091',1091);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1091"></a><div class=inner id="innercorrige1091" style="display:none;"><ol class="enumeratechiffre">
+<li> Rappelons la formule générale pour une matrice $A=(a_{i,j})_{1\leq i,j\leq n}$ : 
+$$\langle AX,X\rangle=\sum_{i,j=1}^n a_{i,j}x_ix_j.$$
+Ici, et utilisant l'indication, on a
+$$\langle HX,X\rangle=\sum_{i,j=1}^n x_ix_j\int_0^1 x^{i+j-2}dx.$$
+Utilisant la linéarité de l'intégrale et reconnaissant un carré, on obtient :
+\begin{eqnarray*}
+\langle HX,X\rangle&=&\int_0^1\sum_{i,j=1}^n x_ix_j x^{i+j-2}dx\\
+&=&\int_0^1 \left(\sum_{i=1}^n x_i x^{i-1}\right)^2dx.
+\end{eqnarray*}
+<li> De la formule précédente, on déduit immédiatement que $H$ est positive. Démontrons qu'elle est définie positive. En effet,si $\langle HX,X\rangle=0$,
+alors, puisqu'on intègre une fonction continue et positive sur $[0,1]$ dont l'intégrale doit être nulle, on déduit que 
+$$\forall x\in[0,1], \sum_{i=1}^n x_i x^{i-1}=0.$$
+Un polynôme ayant une infinité de racine étant le polynôme nul, on en déduit que tous les $x_i$ sont nuls, soit encore que $X$ est nul. Ainsi, $H$ 
+est bien définie positive.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater3573"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3573"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3573,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Critère de Sylvester <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3573.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(3573,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3573','imageenonce3573');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3573"></a><div class=inner id="innerenonce3573">Soit $n\geq 1$ et $M=(m_{i,j})_{1\leq i,j\leq n}\in\mathcal M_n(\mathbb R)$. 
+Pour $k\in\{1,\dots,n\},$ on note $M_k$ la matrice $(m_{i,j})_{1\leq i,j\leq k}\in\mathcal M_k(\mathbb R)$. Le but de l'exercice est de démontrer le critère de Sylvester : $M$ est définie positive si et seulement si, pour tout $k\in\{1,\dots,n\}$, $\det(M_k)&gt;0.$
+<ol class="enumeratechiffre">
+<li> Justifier que si $M$ est définie positive, alors $\det(M)&gt;0.$
+<li> Soit $k\in\{1,\dots,n\}$ et $X_k\in\mathcal M_{k,1}(\mathbb R)$ un vecteur colonne. Déterminer un vecteur colonne $X\in\mathcal M_{n,1}(\mathbb R)$ tel que 
+$X_k^T M_k X_k=X^T M X.$ En déduire que si $M$ est définie positive, alors $\det(M_k)&gt;0.$
+<li> On suppose que $n\geq 2$, que $\det(M)&gt;0$ et que $M$ s'écrit
+$$M=\begin{pmatrix}
+M_{n-1}&U\\
+U^T&\alpha
+\end{pmatrix}$$
+avec $U\in\mathcal M_{n-1,1}(\mathbb R)$ et $\alpha\in\mathbb R.$ On suppose que la matrice $M_{n-1}$ est définie positive. Justifier l'existence d'un vecteur $V\in\mathcal M_{n-1,1}(\mathbb R)$ tel que $M_{n-1}V+U=0.$ En notant 
+$$Q=\begin{pmatrix}
+I_{n-1}&V\\
+0&1
+\end{pmatrix},$$
+démontrer que $Q^T MQ$ s'écrit par blocs 
+$$\begin{pmatrix}
+M_{n-1}&0\\
+0&\beta
+\end{pmatrix}$$
+avec $\beta&gt;0.$
+<li> En déduire que si une matrice vérifie le critère de Sylvester, elle est définie positive.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3573','imageindication3573');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3573"></a><div class=inner id="innerindication3573" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la caractérisation spectrale. 
+<li> Compléter par des zéros, puis utiliser la question précédente.
+<li>
+<li> Procéder par récurrence.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3573','imagecorrige3573',3573);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3573"></a><div class=inner id="innercorrige3573" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $M$ est symétrique définie positive, elle est diagonalisable et ses valeurs propres $\lambda_1,\dots,\lambda_n$ (écrites ici avec multiplicité) sont strictement positives. Puisque $\det(M)=\prod_{i=1}^n \lambda_i,$ on a $\det(M)&gt;0.$
+<li> Si $X_k=\begin{pmatrix}x_1\\\vdots \\x_k\end{pmatrix},$ il suffit de poser $X=\begin{pmatrix}x_1\\ \vdots\\x_k\\0\\ \vdots\\0\end{pmatrix}$. Si $M$ est définie positive, soit $X_k\in\mathcal M_k(\mathbb R)$ non nul et soit $X$ défini comme ci-dessus. Puisque $X\neq 0,$ on a $X^TMX&gt;0$ et donc $X_k^T M_k X_k&gt;0.$ Ainsi, $M_k$ est définie positive et donc $\det(M_k)&gt;0$ d'après la question précédente.
+<li> Puisque $M_{n-1}$ est définie positive, elle est inversible et on peut poser $V=-M_{n-1}^{-1}U.$ En effectuant les produits, on obtient alors 
+$$MQ=\begin{pmatrix}
+M_{n-1}&0\\
+U^T&U^TV+\alpha
+\end{pmatrix}
+$$
+puis
+$$Q^T MQ=\begin{pmatrix}
+M_{n-1}&0\\
+0&U^T V+\alpha
+\end{pmatrix}
+$$
+d'où le résultat avec $\beta=U^T V+\alpha.$ On remarque que $\beta&gt;0$ car d'une part 
+$$\det(Q^T M Q)=(\det M)(\det(Q))=\det(M)&gt;0$$ 
+et d'autre part
+$$\det(Q^T M Q)=(\det(M_{n-1}))\beta$$
+avec $\det(M_{n-1})&gt;0$ puisque $M_{n-1}$ est définie positive.
+<li> On va raisonner par récurrence sur $n.$ On pose $\mathcal P_n$ la propriété : "toute matrice $M\in\mathcal M_n(\mathbb R)$ vérifiant le critère de Sylvester est définie positive".<br>
+La propriété est clairement vraie pour $n=1.$ Supposons $n\geq 2$ et supposons la propriété vraie jusqu'au rang $n-1$. On considère $M\in\mathcal M_n(\mathbb R)$ vérifiant le critère de Sylvester. On utilise les notations de la question précédente, et on considère $X\in\mathcal M_{n,1}(\mathbb R)$ avec $X\neq 0.$
+Soit $Y=Q^{-1}X$ de sorte que $X=QY.$ Alors 
+$$X^T M X= Y^T Q^T M Q Y.$$
+&Eacute;crivons $Y=\begin{pmatrix}Y_{n-1}\\y_n\end{pmatrix}$ de sorte que 
+$$X^T M X= Y_{n-1}M_{n-1}Y_{n-1}+\beta y_n^2.$$
+Puisque $M_{n-1}$ est définie positive par hypothèse de récurrence, et que $Y\neq 0$ ce qui implique que ou $Y_{n-1}\neq 0,$ ou $y_n\neq 0,$ de sorte que
+$$X^T M X&gt;0.$$
+Ainsi, $M$ est bien définie positive.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater1092"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1092"),	max:5, rating:2.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1092,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sous-espace engendré par les matrices symétriques définies positives <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1092.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(1092,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1092','imageenonce1092');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1092"></a><div class=inner id="innerenonce1092">Quel est le sous-espace vectoriel engendré par les matrices symétriques définies positives dans $\mathcal M_n(\mathbb R)$?</div></div><div class=indication><a href="javascript:showAll('innerindication1092','imageindication1092');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1092"></a><div class=inner id="innerindication1092" style="display:none;">Commencer par remarquer que toute matrice diagonale est dans ce sous-espace.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1092','imagecorrige1092',1092);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1092"></a><div class=inner id="innercorrige1092" style="display:none;">Soit $A$ une matrice symétrique quelconque.
+Il existe une matrice inversible $P$ telle que $A=PDP^{T}$,
+où $D$ est une matrice diagonale, $D=\textrm{diag}(\lambda_1,\dots,\lambda_n)$.
+Soit $M&gt;\max(|\lambda_1|,\dots,|\lambda_n|).$
+On considère les deux matrices suivantes :
+$$B=P\textrm{diag}(M+\lambda_1,\dots,M+\lambda_n)P^{T}\textrm{ et } C=P\textrm{diag}(M,\dots,M)P^{T}.$$
+Alors $B$ et $C$ sont deux matrices symétriques définies positives, et
+$A=B-C$. L'espace vectoriel engendré par les matrices symétriques définies positives contient
+donc toutes les matrices symétriques. Comme l'ensemble des matrices symétriques est un espace vectoriel,
+on en déduit que c'est le sous-espace vectoriel recherché.</div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

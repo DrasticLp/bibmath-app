@@ -1,0 +1,752 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Transformée de Laplace</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Transformée de Laplace</h1>
+<div class=titrepartie>Plutôt pour master Enseignement</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater788"></span><script>var myRating = raterJs( { element:document.querySelector("#rater788"),	max:5, rating:1.2894736842105, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(788,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Abscisse de convergence <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=788.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(788,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce788','imageenonce788');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce788"></a><div class=inner id="innerenonce788">Déterminer l'abscisse de convergence de la transformée de Laplace des fonction suivantes :
+$$\begin{array}{lll}
+\mathbf 1.\ e^{2t}\cos(\omega t),\ \omega\in\mathbb R&\quad&\mathbf 2.\ t^ne^{-3t},\ n\geq 0\\
+\mathbf 3.\ \cosh(at),\ a\in\mathbb R
+\end{array}
+$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige788','imagecorrige788',788);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige788"></a><div class=inner id="innercorrige788" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $|e^{-pt}e^{2t}\cos(\omega t)|\leq e^{-(p-2)t}$. Cette dernière fonction est bornée au voisinage de $+\infty$ si $p\geq 2$. De plus, si $p&lt;2$, choisissant $t=\frac{2k\pi}{\omega}$, on a
+$|e^{-pt}e^{2t}\cos(\omega t)|=e^{(2-p)t}\to +\infty$ si $k\to+\infty$. Ainsi, on a prouvé que l'abscisse de convergence est égale à $2$.
+<li> Par croissance comparée des fonctions polynômes et exponentielles, on sait que, pour tout $n\geq 0$ et tout $p&gt;-3$, 
+$$\lim_{t\to+\infty}e^{-pt}e^{-3t}t^n=0.$$
+De plus, si $p&lt;-3$, alors 
+$$\lim_{t\to+\infty}e^{-pt}e^{-3t}t^n=+\infty$$
+(ce n'est plus une forme indéterminée). Donc l'abscisse de convergence est $-3$.
+<li> Il faut faire attention à distinguer les cas $a\geq 0$ et $a&lt;0$. Si $a\geq 0$, on a 
+$$\cosh(at)\sim_{+\infty}\frac{e^{at}}2$$
+et donc la fonction $e^{-pt}\cosh(at)$ est bornée au voisinage de l'infini si et seulement si $p&gt;a$.
+Si $a&lt;0$, alors 
+$$\cosh(at)\sim_{+\infty}\frac{e^{-at}}2$$
+et donc la fonction $e^{-pt}\cosh(at)$ est bornée au voisinage de l'infini si et seulement si $p&gt;-a$.
+Dans tous les cas, on a prouvé que l'abscisse de convergence est égale à $|a|$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater790"></span><script>var myRating = raterJs( { element:document.querySelector("#rater790"),	max:5, rating:1.3720930232558, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(790,rating); this.setRating(rating);   this.disable();    done();     }});</script> - A partir de la fonction échelon-unité <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=790.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(790,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce790','imageenonce790');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce790"></a><div class=inner id="innerenonce790">Tracer le graphe et calculer la transformée de Laplace des fonctions suivantes : 
+$$\begin{array}{lll}
+\mathbf 1.\ \mathcal U(t-1)-\mathcal U(t-2)&\quad&\mathbf 2. \mathcal U(t-2)(t-2)^2\\
+\mathbf 3.\ \sum_{n=0}^{+\infty}\big(\mathcal U(t-2n)-\mathcal U(t-(2n+1))\big).
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication790','imageindication790');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication790"></a><div class=inner id="innerindication790" style="display:none;">Pour la question 1, déterminer les valeurs pour lesquelles la fonction est nulle...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige790','imagecorrige790',790);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige790"></a><div class=inner id="innercorrige790" style="display:none;"><ol class="enumeratechiffre">
+<li> On distingue 3 cas :
+<ul class="rien">
+<li> Si $t&lt; 1$, alors $\mathcal U(t-1)=0$ et $\mathcal U(t-2)=0$ et la fonction est nulle.
+<li> Si $t\in [1,2[$, alors $\mathcal U(t-1)=1$ et $\mathcal U(t-2)=0$ et la fonction vaut 1.
+<li> Si $t\geq 2$, alors $\mathcal U(t-1)=1$ et $\mathcal U(t-2)=1$ et la fonction est nulle.
+</ul>
+On obtient donc le graphe suivant :
+<div class=equation><img src="bde_images/heavi1.png"></div>
+On calcule alors la transformée de Laplace de cette fonction soit en utilisant la transformée de Laplace de la fonction échelon-unité et le théorème du retard, soit en utilisant l'expression de la fonction déterminée ci-dessus. Avec cette dernière méthode, on trouve que 
+$$F(p)=\int_1^2 e^{-pt}=\frac 1pe^{-p}-\frac 1pe^{-2p}.$$
+<li> La fonction est simplement la fonction $t\mapsto t^2$, mais tronquée à sa partie positive et retardée d'un temps égal à 2. On obtient donc la courbe :
+<div class=equation><img src="bde_images/heavi2.png"></div>
+On sait de plus que 
+$$\mathcal L(t^2\mathcal U(t))(p)=\frac 2{p^3}.$$
+En utilisant le théorème du retard, on en déduit que 
+$$\mathcal L\big((t-a)^2\mathcal U(t-a)\big)=\frac{2e^{-2p}}{p^3}.$$
+<li> Avec le même raisonnement qu'à la première question, on constate que 
+la fonction vaut 1 sur les intervalles du type $[2n,2n+1]$ et vaut 0 ailleurs :
+<div class=equation><img src="bde_images/heavi3.png"></div>
+Le calcul de la transformée de Laplace donne alors
+\begin{eqnarray*}
+F(p)&=&\sum_{n=0}^{+\infty}\int_{2n}^{(2n+1)}e^{-pt}dt\\
+&=&\sum_{n\geq 0}\frac{e^{-2np}}{p}-\sum_{n=0}^{+\infty}\frac{e^{-(2n+1)p}}{p}\\
+&=&\frac{1}{p(1-e^{-2p})}-\frac{e^{-p}}{p(1-e^{-2p})}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater792"></span><script>var myRating = raterJs( { element:document.querySelector("#rater792"),	max:5, rating:1.5675675675676, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(792,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calculs directs <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=792.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(792,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce792','imageenonce792');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce792"></a><div class=inner id="innerenonce792">Déterminer la transformée de Laplace des fonctions suivantes : 
+$$
+\begin{array}{lll}
+\mathbf 1.\ (2t^2-1)\mathcal U(t)&\quad&\mathbf 2.\ \left(e^t-\cos\left(\frac 23t\right)e^{2t}\right)\mathcal U(t)\\
+\mathbf 3.\ te^{4t}\mathcal U(t)&\quad&\mathbf 4.\ \cos^3(t)e^t\mathcal U(t).
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication792','imageindication792');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication792"></a><div class=inner id="innerindication792" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la linéarité et le formulaire. 
+<li> Utiliser le formulaire et la formule de multiplication par $e^{at}$.
+<li> Procéder comme à la question précédente.
+<li> Linéariser $\cos^3 x$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige792','imagecorrige792',792);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige792"></a><div class=inner id="innercorrige792" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après la linéarité de la transformée de Laplace et le formulaire, on a 
+$$\mathcal L(f)(p)=2\mathcal L(t^2\mathcal U(t))(p)-\mathcal L(\mathcal U(t))(p)=2\times \frac{2!}{p^3}-\frac 1p=\frac 4{p^3}-\frac 1p.$$
+<li> On utilise encore la linéarité. On a d'une part 
+$$\mathcal L(e^t\mathcal U(t))=\frac 1{p-1}.$$
+D'autre part, pour la rechercher de $\mathcal L\left (e^{2t}\cos\left(\frac 23t\right)\right)$, on utilise d'une part le formulaire pour remarquer que 
+$$\mathcal L\left (\cos\left(\frac 23t\right)\right)=\frac p{p^2+\frac 49}.$$
+On utilise ensuite la formule 
+$$\mathcal L(e^at f)(p)=F(p-a)$$
+où $F=\mathcal L(f)$. On en déduit que 
+$$\mathcal L\left (e^{2t}\cos\left(\frac 23t\right)\right)=\frac {p-2}{(p-2)^2+\frac 49}.$$
+Finalement, la transformée de Laplace recherché est la fonction
+$$\frac 1{p-1}-\frac {p-2}{(p-2)^2+\frac 49}.$$
+<li> On procède comme à la question précédente, en commençant par remarquer
+que 
+$$\mathcal L(t\mathcal U(t))=\frac 1{p^2}.$$
+De la formule de multiplication par $e^{at}$, on déduit que
+$$\mathcal L(te^{4t}\mathcal U(t))=\frac1{(p-4)^2}.$$
+<li> On commence par linéariser $\cos^3 x$. Pour cela, on remarque que
+\begin{eqnarray*}
+\cos^3(x)&=&\left(\frac{e^{ix}+e^{-ix}}2\right)^3\\
+&=&\frac 18\left(e^{3ix}+3e^{ix}+3e^{-ix}+e^{-i3x}\right)\\
+&=&\frac 14\cos(3x)+\frac 34\cos(x).
+\end{eqnarray*}
+On en déduit que 
+$$\mathcal L(\cos^3(t))=\frac 14\frac{p}{p^2+9}+\frac 34\frac{p}{p^2+1}.$$
+Raisonnant comme à la question précédente, on déduit finalement que 
+$$\mathcal L(\cos^3(t)e^t)=\frac 14\frac{p-1}{(p-1)^2+9}+\frac 34\frac{p-1}{(p-1)^2+1}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater803"></span><script>var myRating = raterJs( { element:document.querySelector("#rater803"),	max:5, rating:1.3548387096774, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(803,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application de la formule de dérivation <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=803.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(803,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce803','imageenonce803');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce803"></a><div class=inner id="innerenonce803">On pose 
+$$f(t)=(1-\cos t)\mathcal U(t),\ g(t)=e^{-t}f(t).$$ 
+<ol class="enumeratechiffre">
+<li> Montrer que $\mathcal L(f)(p)=\frac{1}{p(p^2+1)}$.
+<li> En déduire que 
+$$\mathcal L\left(e^t g''\right)(p)=\frac{(p-1)^2}{p(p^2+1)}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication803','imageindication803');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication803"></a><div class=inner id="innerindication803" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par linéarité.
+<li> Utiliser la formule de translation (deux fois), et la formule liant la transformée de Laplace 
+d'une dérivée à celle de la fonction elle-même.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige803','imagecorrige803',803);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige803"></a><div class=inner id="innercorrige803" style="display:none;"><ol class="enumeratechiffre">
+<li> Par linéarité, 
+\begin{eqnarray*}
+\mathcal L(f)(p)&=&\mathcal L(\mathcal U )(p)-\mathcal L(\cos t)(p)\\
+&=&\frac 1p-\frac p{p^2+1}=\frac{1}{p(p^2+1)}.
+\end{eqnarray*}
+<li> On a, par la formule de translation 
+$$\mathcal L(g)(p)=\frac{1}{(p+1)((p+1)^2+1)}.$$
+D'autre part, on a 
+\begin{eqnarray*}
+\mathcal L(g'')(p)&=&p\mathcal L(g')(p)-\lim_0 g'\\
+&=&p\big(p\mathcal L(g)(p)-\lim_0g\big)-\lim_0 g'\\
+\end{eqnarray*}
+Or, on vérifie facilement que $\lim_0 g=\lim_0 g'=0$. Il vient
+$$\mathcal L(g'')(p)=p^2\mathcal L(g)(p)=\frac{p^2}{(p+1)((p+1)^2+1)}.$$
+En réappliquant la formule de translation:
+$$\mathcal L\left(e^tg''(t)\right)(p)=\frac{(p-1)^2}{p(p^2+1)}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater796"></span><script>var myRating = raterJs( { element:document.querySelector("#rater796"),	max:5, rating:1.6857142857143, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(796,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Recherche d'original <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=796.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(796,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce796','imageenonce796');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce796"></a><div class=inner id="innerenonce796">Retrouver l'original des transformées de Laplace suivantes :
+$$\begin{array}{lll}
+\mathbf 1.\ \frac1{(p+1)(p-2)}&\quad&\mathbf 2.\ \frac{-1}{(p-2)^2}\\
+\mathbf 3.\ \frac{5p+10}{p^2+3p-4}&\quad&\mathbf 4.\ \frac{p-7}{p^2-14p+50}\\
+\mathbf 5.\ \frac{p}{p^2-6p+13}&\quad&\mathbf 6.\ \frac{e^{-2p}}{p+3}
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication796','imageindication796');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication796"></a><div class=inner id="innerindication796" style="display:none;"><ol class="enumeratechiffre">
+<li> Décomposer en éléments simples.
+<li> Utiliser la formule qui exprime la dérivée d'une transformée de Laplace.
+<li> Décomposer en éléments simples.
+<li> Mettre le trinôme du dénominateur sous forme canonique.
+<li> Mettre le trinôme sous forme canonique, puis retirer et ajouter 3 au numérateur.
+<li> Utiliser le théorème du retard.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige796','imagecorrige796',796);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige796"></a><div class=inner id="innercorrige796" style="display:none;"><ol class="enumeratechiffre">
+<li> On décompose la fraction en éléments simples, ie on cherche $a$ et $b$ tels que 
+$$\frac{1}{(p+1)(p-2)}=\frac a{p+1}+\frac b{p-2}.$$
+On trouve $a=-1/3$ et $b=1/3$. Il vient que l'original recherché est
+$$\frac {-1}3 e^{-t}\mathcal U(t)+\frac 13e^{2t}\mathcal U(t).$$
+<li> Posons $G(p)=\frac 1{p-2}$ et $F(p)=\frac{-1}{(p-2)^2}.$ Alors $G'(p)=F(p)$. Or, l'original
+de $G$ est la fonction $e^{2t}\mathcal U(t)$. Donc, par la formule de multiplication par $t$, on en déduit que l'original de $F$ est la fonction $-te^{2t}\mathcal U(t)$.
+<li> Le dénominateur se factorise en $(p+4)(p-1)$. On décompose la fraction en éléments simples en l'écrivant sous la forme
+$$\frac a{p+4}+\frac b{p-1}=\frac{(a+b)p+(4b-a)}{p^2-3p+4}.$$
+Par identification, on a le système
+$$\left\{
+\begin{array}{rcl}
+a+b&=&5\\
+-a+4b&=&10\\
+\end{array}\right.$$
+qui donne facilement $a=2$ et $b=3$. 
+Ainsi, la fonction est 
+$$\frac 2{p+4}+\frac 3{p-1}.$$
+L'original recherché est la fonction 
+$$2e^{-4t}\mathcal U(t)+3e^t\mathcal U(t).$$
+<li> Le discriminant du trinôme du second degré au dénominateur est négatif, donc il n'admet pas de racines. On le met sous forme canonique en écrivant 
+$$\frac{p-7}{p^2-14p+50}=\frac{p-7}{(p-7)^2+1}.$$
+L'original de la fonction $\frac{p}{p^2+1}$ est la fonction $\cos t\mathcal U(t)$. Tenant compte de la formule de multiplication par $e^{at}$, l'original recherché est 
+$$\cos te^{7t}\mathcal U(t).$$
+<li>  Le discriminant du trinôme du second degré au dénominateur est négatif, donc il n'admet pas de racines. On le met sous forme canonique en écrivant 
+\begin{eqnarray*}
+ \frac{p}{p^2-6p+13}&=&\frac{p}{(p-3)^2+4}\\
+&=&\frac{p-3}{(p-3)^2+2^2}+\frac{3}{(p-3)^2+2^2}\\
+&=&\frac{p-3}{(p-3)^2+2^2}+\frac{3}2\times\frac 2{(p-3)^2+2^2}.
+\end{eqnarray*}
+En raisonnant comme à la question précédente, on trouve que l'original recherché est la fonction
+$$\cos(2t)e^{3t}\mathcal U(t)+\frac 32\sin(2t)e^{3t}\mathcal U(t).$$
+<li> L'original de $\frac 1{p+3}$ est la fonction $e^{-3t}\mathcal U(t)$. Pour trouver l'original de la fonction $\frac{e^{-2p}}{p+3}$, on utilise le théorème du retard et on trouve que l'original est
+$$e^{-3(t-2)}\mathcal U(t-2).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater756"></span><script>var myRating = raterJs( { element:document.querySelector("#rater756"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(756,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quations différentielles et transformée de Laplace <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=756.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(756,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce756','imageenonce756');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce756"></a><div class=inner id="innerenonce756">On se propose d'utiliser la transformée de Laplace pour résoudre des équations différentielles.
+<ol class="enumeratechiffre">
+<li> On considère l'équation différentielle
+$$y'+y=e^t\mathcal U(t),\ y(0)=1.$$
+Soit $y$ une fonction causale solution de l'équation dont on suppose qu'elle admet une transformée de Laplace $F$. Démontrer que $F$ satisfait l'équation 
+$$F(p)=\frac{p}{(p-1)(p+1)}.$$
+En déduire $y$.
+<li> Sur le même modèle, résoudre l'équation différentielle
+$$y''-3y'+2y=e^{3t}\mathcal U(t),\ y(0)=1,\ y'(0)=0.$$
+<li> Sur le même modèle, résoudre le système différentiel
+$$\left\{
+\begin{array}{rcl}
+x'&=&-x+y+\mathcal U(t)e^t,\ x(0)=1\\
+y'&=&x-y+\mathcal U(t)e^t,\ y(0)=1.
+\end{array}
+\right.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication756','imageindication756');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication756"></a><div class=inner id="innerindication756" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer la transformée de Laplace de $y'$ en fonction de la transformée de Laplace de $y$ et de $y(0)$. Appliquer la transformée de Laplace à toute l'équation. Puis inverser la transformée de Laplace.
+<li> Méthode complètement similaire.
+<li> C'est un peu plus difficile. Il faut considérer $F$ la transformée de Laplace de $x$ et $G$ la transformée de Laplace de $y$. Il y a un système en $F,G$ à résoudre, puis il faut inverser les transformées de Laplace.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige756','imagecorrige756',756);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige756"></a><div class=inner id="innercorrige756" style="display:none;"><ol class="enumeratechiffre">
+<li> La transformée de Laplace de $y'$ est
+$$\mathcal L(y')(p)=pF(p)-y(0)=pF(p)-1.$$
+Si on applique la transformée de Laplace à l'équation 
+$$y'+y=e^t\mathcal U(t),$$
+on trouve
+$$pF(p)-1+F(p)=\frac{1}{p-1}$$
+ce qui donne
+$$(p+1)F(p)=\frac1{p-1}+1=\frac p{p-1}$$
+ou encore
+$$F(p)=\frac{p}{(p-1)(p+1)}.$$
+On va calculer la transformée de Laplace inverse de cette fonction et pour cela on la décompose en éléments simples. On trouve que
+$$F(p)=\frac{1/2}{p-1}+\frac{1/2}{p+1}.$$
+On en déduit que $y(t)=\frac12 e^t\mathcal U(t)+\frac12e^{-t}\mathcal U(t).$ On vérifie ensuite que c'est bien une solution (la solution!) de l'équation.
+<li> On admet encore une fois que $y$ possède une transformée de Laplace $F$. On a cette fois 
+$$\mathcal L(y')(p)=pF(p)-1\textrm{ et }\mathcal L(y'')(p)=p(pF(p)-1)-0=p^2 F(p)-p.$$
+Appliquant la transformée de Laplace à l'équation, on trouve
+$$(p^2-3p+2)F(p)=\frac{1}{p-3}+(p-3)=\frac{p^2-6p+10}{p-3}.$$
+Mais $p^2-3p+2$ se factorise en $(p-1)(p-2)$ et on trouve
+$$F(p)=\frac{p^2-6p+10}{(p-1)(p-2)(p-3)}.$$
+On décompose encore une fois en éléments simples, et on trouve que
+$$F(p)=\frac{5/2}{p-1}-\frac2{p-2}+\frac{1/2}{p-3}.$$
+On inverse la transformée de Laplace, et on trouve que
+$$y(t)=\frac 52e^t\mathcal U(t)-2e^{2t}\mathcal U(t)+\frac 12e^{3t}\mathcal U(t),$$
+qui est bien une solution (la solution!) de l'équation.
+<li> On admet cette fois que $x$ et $y$ possèdent une transformée de Laplace que l'on note respectivement $F$ et $G$. On a alors
+$$\mathcal L(x')(p)=pF(p)-1\textrm{ et }\mathcal L(y')(p)=pG(p)-1.$$
+Si on applique la transformée de Laplace au système différentiel, on obtient le système linéaire
+$$\left\{
+\begin{array}{rcl}
+pF(p)-1&=&-F(p)+G(p)+\frac 1{p-1}\\
+pG(p)-1&=&F(p)-G(p)+\frac1{p-1}.
+\end{array}
+\right.$$
+On va résoudre ce système pour calculer $F(p)$ et $G(p)$. Il est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+(p+1)F(p)-G(p)&=&\frac 1{p-1}+1=\frac p{p-1}\\
+-F(p)+(p+1)G(p)&=&\frac1{p-1}+1=\frac p{p-1}.
+\end{array}
+\right.$$
+En faisant la différence des deux équations, on trouve que $F=G$, puis que 
+$$F(p)=G(p)=\frac{1}{p-1}.$$
+On en déduit, en inversant la transformée de Laplace, que $x(t)=y(t)=e^t\mathcal U(t),$
+et on vérifie facilement qu'il s'agit d'une (de la) solution du système différentiel!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater786"></span><script>var myRating = raterJs( { element:document.querySelector("#rater786"),	max:5, rating:2.8571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(786,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Circuit RC <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=786.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(786,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce786','imageenonce786');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce786"></a><div class=inner id="innerenonce786"><div class=equation><img src="bde_images/circuitrc.png"></div>
+Dans un circuit comprenant en série un condensateur de capacité $C$ et une résistance $R$, la tension $v$ aux bornes du condensateur est donnée par
+$$RC v'(t)+v(t)=e(t)$$
+où $e(t)$ est la tension d'excitation aux bornes du circuit. Supposons que $v(0)=0$. Notons $V=\mathcal L(v)$ et $E=\mathcal L(e)$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tablir la relation entre $V$ et $E$ sous forme $V(p)=T(p)E(p)$ avec une fonction $T$ que l'on déterminera. La fonction $T$ est appelée fonction de transfert.
+<li> En déduire la réponse du système, c'est-à-dire la tension $v(t)$, aux excitations suivantes :
+<ol class="enumeratechiffre">
+<li> un échelon de tension, $e(t)=\mathcal U(t)$;
+<li> un créneau $e(t)=H(t)-H(t-t_0)$.
+</ol>
+Tracer les graphes correspondants.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication786','imageindication786');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication786"></a><div class=inner id="innerindication786" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la transformée de Laplace à l'équation différentielle.
+<li> Décomposer en éléments simples $T(p)E(p)$ et inverser la transformée de Laplace.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige786','imagecorrige786',786);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige786"></a><div class=inner id="innercorrige786" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $v(0)=0$, on sait que 
+$$\mathcal L(v')(p)=pV(p).$$
+Si on applique la transformée de Laplace à l'équation, on trouve que 
+$$RC pV(p)+V(p)=E(p)\implies V(p)=\frac{E(p)}{RCp+1}.$$
+<li> <ol class="enumeratechiffre">
+<li> Dans ce cas, $E(p)=\frac 1p$ et donc 
+$$V(p)=\frac{1}{p(RCp+1)}=\frac 1p-\frac{RC}{RCp+1}.$$
+L'inversion de la transformée de Laplace donne alors
+$$v(t)=\mathcal U(t)\left(1-e^{-t/RC}\right).$$
+Le graphe est le suivant :
+<div class=equation><img src="bde_images/circuitrc2.png"></div>
+<li> Dans ce cas, $E(p)=\frac 1p-\frac{e^{-t_0 p}}p.$
+On en déduit que 
+$$V(p)=\frac 1p-\frac{RC}{RCp+1}-\frac {e^{-t_0p}}p+\frac{RCe^{-t_0p}}{RCp+1}.$$
+On inverse la transformée de Laplace en utilisant les formulaire et la propriété de la translation. On trouve que
+$$v(t)=\mathcal U(t)\left(1-e^{-t/RC}\right)-\mathcal U(t-t_0)\left(1-e^{-(t-t_0)/RC}\right).$$
+Le graphe est le suivant :
+<div class=equation><img src="bde_images/circuitrc3.png"></div>
+</ol>
+</ol></div></div></div>
+
+<div class=titrepartie>Plutôt pour BTS</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater789"></span><script>var myRating = raterJs( { element:document.querySelector("#rater789"),	max:5, rating:1.8235294117647, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(789,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=789.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(789,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce789','imageenonce789');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce789"></a><div class=inner id="innerenonce789">Tracer le graphe et calculer la transformée de Laplace des fonctions suivantes : 
+$$\begin{array}{lll}
+\mathbf 1.\ \mathcal U(t-1)-\mathcal U(t-2)&\quad&\mathbf 2. \mathcal U(t-2)(t-2)^2\\
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication789','imageindication789');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication789"></a><div class=inner id="innerindication789" style="display:none;">Pour la question 1, déterminer les valeurs pour lesquelles la fonction est nulle. On séparera l'étude en 3 cas : $t\leq 1$, $t\in [1,2]$ et $t\geq 2$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige789','imagecorrige789',789);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige789"></a><div class=inner id="innercorrige789" style="display:none;"><ol class="enumeratechiffre">
+<li> On distingue 3 cas :
+<ul class="rien">
+<li> Si $t&lt; 1$, alors $\mathcal U(t-1)=0$ et $\mathcal U(t-2)=0$ et la fonction est nulle.
+<li> Si $t\in [1,2[$, alors $\mathcal U(t-1)=1$ et $\mathcal U(t-2)=0$ et la fonction vaut 1.
+<li> Si $t\geq 2$, alors $\mathcal U(t-1)=1$ et $\mathcal U(t-2)=1$ et la fonction est nulle.
+</ul>
+On obtient donc le graphe suivant :
+<div class=equation><img src="bde_images/heavi1.png"></div>
+On calcule alors la transformée de Laplace de cette fonction soit en utilisant la transformée de Laplace de la fonction échelon-unité et le théorème du retard, soit en utilisant l'expression de la fonction déterminée ci-dessus. Avec cette dernière méthode, on trouve que 
+$$F(p)=\int_1^2 e^{-pt}=\frac 1pe^{-p}-\frac 1pe^{-2p}.$$
+<li> La fonction est simplement la fonction $t\mapsto t^2$, mais tronquée à sa partie positive et retardée d'un temps égal à 2. On obtient donc la courbe :
+<div class=equation><img src="bde_images/heavi2.png"></div>
+On sait de plus que 
+$$\mathcal L(t^2\mathcal U(t))(p)=\frac 2{p^3}.$$
+En utilisant le théorème du retard, on en déduit que 
+$$\mathcal L\big((t-a)^2\mathcal U(t-a)\big)=\frac{2e^{-2p}}{p^3}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater793"></span><script>var myRating = raterJs( { element:document.querySelector("#rater793"),	max:5, rating:2.0555555555556, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(793,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=793.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(793,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce793','imageenonce793');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce793"></a><div class=inner id="innerenonce793">Déterminer la transformée de Laplace des fonctions suivantes : 
+$$
+\begin{array}{lll}
+\mathbf 1.\ (2t^2-1)\mathcal U(t)&\quad&\mathbf 2.\ \left(e^t-\cos\left(\frac 23t\right)e^{2t}\right)\mathcal U(t)\\
+\mathbf 3.\ te^{4t}\mathcal U(t)
+\end{array}
+$$</div></div><div class=indication><a href="javascript:showAll('innerindication793','imageindication793');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication793"></a><div class=inner id="innerindication793" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser la linéarité et le formulaire. 
+<li> Utiliser le formulaire et la formule de multiplication par $e^{at}$.
+<li> Procéder comme à la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige793','imagecorrige793',793);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige793"></a><div class=inner id="innercorrige793" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après la linéarité de la transformée de Laplace et le formulaire, on a 
+$$\mathcal L(f)(p)=2\mathcal L(t^2\mathcal U(t))(p)-\mathcal L(\mathcal U(t))(p)=2\times \frac{2!}{p^3}-\frac 1p=\frac 4{p^3}-\frac 1p.$$
+<li> On utilise encore la linéarité. On a d'une part 
+$$\mathcal L(e^t\mathcal U(t))=\frac 1{p-1}.$$
+D'autre part, pour la rechercher de $\mathcal L\left (e^{2t}\cos\left(\frac 23t\right)\right)$, on utilise d'une part le formulaire pour remarquer que 
+$$\mathcal L\left (\cos\left(\frac 23t\right)\right)=\frac p{p^2+\frac 49}.$$
+On utilise ensuite la formule 
+$$\mathcal L(e^at f)(p)=F(p-a)$$
+où $F=\mathcal L(f)$. On en déduit que 
+$$\mathcal L\left (e^{2t}\cos\left(\frac 23t\right)\right)=\frac {p-2}{(p-2)^2+\frac 49}.$$
+Finalement, la transformée de Laplace recherché est la fonction
+$$\frac 1{p-1}-\frac {p-2}{(p-2)^2+\frac 49}.$$
+<li> On procède comme à la question précédente, en commençant par remarquer
+que 
+$$\mathcal L(t\mathcal U(t))=\frac 1{p^2}.$$
+De la formule de multiplication par $e^{at}$, on déduit que
+$$\mathcal L(te^{4t}\mathcal U(t))=\frac1{(p-4)^2}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater802"></span><script>var myRating = raterJs( { element:document.querySelector("#rater802"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(802,rating); this.setRating(rating);   this.disable();    done();     }});</script> -  <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=802.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(802,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce802','imageenonce802');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce802"></a><div class=inner id="innerenonce802">On pose 
+$$f(t)=(1-\cos t)\mathcal U(t),\ g(t)=e^{-t}f(t).$$ 
+<ol class="enumeratechiffre">
+<li> Montrer que $\mathcal L(f)(p)=\frac{1}{p(p^2+1)}$.
+<li> Calculer, pour $t&gt;0$, $g'(t)$. Que valent $\lim_{x\to 0^+}g(x)$ et $\lim_{x\to 0^+}g'(x)$?
+<li> En déduire que 
+$$\mathcal L\left(e^t g''\right)(p)=\frac{(p-1)^2}{p(p^2+1)}.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication802','imageindication802');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication802"></a><div class=inner id="innerindication802" style="display:none;"><ol class="enumeratechiffre">
+<li> Raisonner par linéarité.
+<li> Dériver un produit
+<li> Utiliser la formule de translation (deux fois), et la formule liant la transformée de Laplace 
+d'une dérivée à celle de la fonction elle-même.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige802','imagecorrige802',802);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige802"></a><div class=inner id="innercorrige802" style="display:none;"><ol class="enumeratechiffre">
+<li> Par linéarité, 
+\begin{eqnarray*}
+\mathcal L(f)(p)&=&\mathcal L(\mathcal U )(p)-\mathcal L(\cos t)(p)\\
+&=&\frac 1p-\frac p{p^2+1}=\frac{1}{p(p^2+1)}.
+\end{eqnarray*}
+<li> On dérive des produits, et on trouve
+$$g'(t)=-e^{-t}(1-\cos t)+e^{-t}\sin t.$$
+On vérifie alors facilement que $g(0^+)=g'(0^+)=0$.
+<li> On a, par la formule de translation 
+$$\mathcal L(g)(p)=\frac{1}{(p+1)((p+1)^2+1)}.$$
+D'autre part, on a 
+\begin{eqnarray*}
+\mathcal L(g'')(p)&=&p\mathcal L(g')(p)-\lim_0 g'\\
+&=&p\big(p\mathcal L(g)(p)-\lim_0g\big)-\lim_0 g'\\
+\end{eqnarray*}
+Or, on vérifie facilement que $\lim_0 g=\lim_0 g'=0$. Il vient
+$$\mathcal L(g'')(p)=p^2\mathcal L(g)(p)=\frac{p^2}{(p+1)((p+1)^2+1)}.$$
+En réappliquant la formule de translation:
+$$\mathcal L\left(e^tg''(t)\right)(p)=\frac{(p-1)^2}{p(p^2+1)}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater791"></span><script>var myRating = raterJs( { element:document.querySelector("#rater791"),	max:5, rating:2.65, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(791,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une rampe <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=791.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(791,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce791','imageenonce791');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce791"></a><div class=inner id="innerenonce791"><ol class="enumeratechiffre">
+<li> Soit $a&gt;0$. Déterminer la transformée de Laplace de $t\mapsto t\mathcal U(t-a)$.
+<li> On considère le signal suivant : 
+<div class=equation><img src="bde_images/rampe1.png"></div>
+Calculer, à partir de la définition, sa transformée de Laplace.
+<li> Décomposer le signal en une combinaison linéaire de signaux élémentaires. Retrouver alors le résultat en utilisant le formulaire.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication791','imageindication791');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication791"></a><div class=inner id="innerindication791" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $t=(t-a)+a$.
+<li> Il faudra faire une intégration par parties pour calculer l'intégrale entre 0 et 1.
+<li> La fonction $\mathcal U(t)-\mathcal U(t-1)$ est un créneau entre 0 et 1.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige791','imagecorrige791',791);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige791"></a><div class=inner id="innercorrige791" style="display:none;"><ol class="enumeratechiffre">
+<li> On écrit $t=(t-a)+a$ de sorte que 
+$$t\mathcal U(t-a)=(t-a)\mathcal U(t-a)+a\mathcal U(t-a).$$
+En utilisant le formulaire et le théorème du retard, on en déduit que la transformée de Laplace vaut
+$$F(p)=\frac{e^{-ap}}{p^2}+\frac {ae^{-ap}}p.$$
+Voici une autre méthode pour réaliser ce calcul, peut-être moins astucieuse. Si on pose $g(t)=U(t-a)$ et $G$ sa transformée de Laplace, on peut aussi remarquer que la transformée de Laplace de $g$ est $-G'$. Or, la transformée de Fourier de $U(t-a)$ est $p\mapsto e^{-ap}/p$, par la formule de retard et par le calcul de la transformée de Fourier de $U.$ On en déduit que 
+$$F(p)=\frac{ape^{-ap}+e^{-ap}}{p^2}$$
+ce qui est (bien sûr) le même résultat que ci-dessus.
+<li> La fonction, que l'on notera $f$, est égale à $2t$ sur l'intervalle $[0,1]$ et à $2$ sur l'intervalle $[1,+\infty[$. En utilisant la relation de Chasles, sa transformée de Laplace vaut donc 
+\begin{eqnarray*}
+\mathcal L(f)(p)&=&\int_0^1 2te^{-pt}dt+\int_1^{+\infty}2e^{-pt}dt.
+\end{eqnarray*}
+Le calcul de la deuxième intégrale ne pose pas de problèmes et elle vaut 
+$$\int_1^{+\infty}2e^{-pt}dt=\left[\frac{2}{-p}e^{-pt}\right]_1^{+\infty}=\frac{2e^{-p}}p.$$
+Pour le calcul de la première intégrale, on doit faire une intégration par parties, en posant
+$v(t)=t$ et $u'(t)=e^{-pt}$.
+\begin{eqnarray*}
+\int_0^1 2te^{-pt}dt&=&2\left[-\frac 1p e^{-pt}t\right]_0^1+2\int_0^1 \frac 1p e^{-pt}dt\\
+&=&\frac{-2e^{-p}}p-\frac{2e^{-p}}{p^2}+\frac 2{p^2}\\
+\end{eqnarray*}
+On en déduit que 
+$$\mathcal L(f)(p)=-\frac{2e^{-p}}{p^2}+\frac 2{p^2}.$$
+<li> La fonction $\mathcal U(t)-\mathcal U(t-1)$ est un créneau entre 0 et 1. On en déduit que 
+$$f(t)=2t\big(\mathcal U(t)-\mathcal U(t-1)\big)+2\mathcal U(t-1).$$
+On utilise le formulaire et le résultat de la première question pour trouver
+\begin{eqnarray*}
+\mathcal L(f)(p)&=&\frac 2{p^2}-2\frac{e^{-p}}{p^2}-\frac {2e^{-p}}p+2\frac{e^{-p}}p\\
+&=&-\frac{2e^{-p}}{p^2}+\frac 2{p^2}
+\end{eqnarray*}
+ce qui est bien le même résultat que ci-dessus.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater794"></span><script>var myRating = raterJs( { element:document.querySelector("#rater794"),	max:5, rating:1.5789473684211, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(794,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction triangle <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=794.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(794,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce794','imageenonce794');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce794"></a><div class=inner id="innerenonce794">On considère la fonction causale $f$ dont le graphe est donné par la représentation graphique suivante :
+<div class=equation><img src="bde_images/triangle1.png"></div>
+<ol class="enumeratechiffre">
+<li> Déterminer l'expression de $f$ sur les intervalles $[0,1]$, $[1,2]$ et $[2,+\infty[$.
+<li> Démontrer que 
+$$f(t)=t\mathcal U(t)-2(t-1)\mathcal U(t-1)+(t-2)\mathcal U(t-2).$$
+<li> En déduire la transformée de Laplace de $f$. 
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication794','imageindication794');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication794"></a><div class=inner id="innerindication794" style="display:none;"><ol class="enumeratechiffre">
+<li> Trouver l'expression de la fonction affine correspondante.
+<li> $\mathcal U(t)-\mathcal U(t-1)$ est un créneau valant $1$ sur $[0,1]$ et $0$ ailleurs.
+<li> Utiliser le résultat de la question précédente et la linéarité.
+</ol> </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige794','imagecorrige794',794);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige794"></a><div class=inner id="innercorrige794" style="display:none;"><ol class="enumeratechiffre">
+<li> Sur l'intervalle $[0,1]$, $f(t)=t$. Sur l'intervalle $[1,2]$, c'est un tout petit peu plus compliqué et il faut faire attention à l'ordonnée à l'origine, qui vaut $2$. Donc sur l'intervalle $[1,2]$, on a $f(t)=-t+2$. Sur $[2,+\infty[$, $f(t)=0$. 
+<li> On utilise le fait que la fonction $\mathcal U(t)-\mathcal U(t-1)$ est un créneau valant $1$ sur $[0,1]$ et $0$ ailleurs, tandis que la fonction $\mathcal U(t-1)-\mathcal U(t-2)$ est un créneau valant $1$ sur $[1,2]$ et $0$ ailleurs. On a alors
+\begin{eqnarray*}
+f(t)&=&t\big(\mathcal U(t)-\mathcal U(t-1))+(-t+2)\big(\mathcal U(t-1)-\mathcal U(t-2)\big)\\
+&=&t\mathcal U(t)-2(t-1)\mathcal U(t-1)+(t-2)\mathcal U(t-2).
+\end{eqnarray*}
+On peut aussi plus simplement(?) vérifier que si $t\in [0,1]$, les deux formules coïncident, ainsi que si $t\in [1,2]$ et si $t\geq 2$.
+<li> On a, par le théorème de retard, 
+$$\mathcal L\big((t-a)\mathcal U(t-a)\big)(p)=\frac{e^{-ap}}{p^2}.$$
+Utilisant le résultat de la question précédente, on trouve
+\begin{eqnarray*}
+\mathcal L(f)(p)&=&\frac{1}{p^2}-\frac{2e^{-p}}{p^2}+\frac{e^{-2p}}{p^2}.
+\end{eqnarray*}
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater795"></span><script>var myRating = raterJs( { element:document.querySelector("#rater795"),	max:5, rating:2.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(795,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Recherche d'original <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=795.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(795,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce795','imageenonce795');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce795"></a><div class=inner id="innerenonce795">Retrouver l'originale des transformée de Laplace suivantes :
+<ol class="enumeratechiffre">
+<li> $\displaystyle \frac1{(p+1)(p-2)}$. On pourra chercher $a,b$ tels que 
+$$\frac{1}{(p+1)(p-2)}=\frac a{p+1}+\frac b{p-2}.$$
+<li> $\displaystyle \frac{e^{-2p}}{p+3}$.
+<li> $\displaystyle \frac{5p+10}{p^2+3p-4}$. On pourra chercher $a$ et $b$ tels que
+$$\frac{5p+10}{p^2+3p-4}=\frac a{p+4}+\frac b{p-1}.$$
+<li> $\displaystyle \frac{p-7}{(p-7)^2+1}$.
+<li> $\displaystyle \frac{p}{p^2-6p+13}$. On pourra remarque que $p^2-6p+13=(p-3)^2+4$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication795','imageindication795');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication795"></a><div class=inner id="innerindication795" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> Utiliser le théorème du retard...
+<li>
+<li>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige795','imagecorrige795',795);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige795"></a><div class=inner id="innercorrige795" style="display:none;"><ol class="enumeratechiffre">
+<li> On décompose la fraction en éléments simples, ie on cherche $a$ et $b$ tels que 
+$$\frac{1}{(p+1)(p-2)}=\frac a{p+1}+\frac b{p-2}.$$
+On trouve $a=-1/3$ et $b=1/3$. Il vient que l'original recherché est
+$$\frac {-1}3 e^{-t}\mathcal U(t)+\frac 13e^{2t}\mathcal U(t).$$
+<li> L'original de $\frac 1{p+3}$ est la fonction $e^{-3t}\mathcal U(t)$. Pour trouver l'original de la fonction $\frac{e^{-2p}}{p+3}$, on utilise le théorème du retard et on trouve que l'original est
+$$e^{-3(t-2)}\mathcal U(t-2).$$
+<li> Le dénominateur se factorise en $(p+4)(p-1)$. On décompose la fraction en éléments simples en l'écrivant sous la forme
+$$\frac a{p+4}+\frac b{p-1}=\frac{(a+b)p+(4b-a)}{p^2-3p+4}.$$
+Par identification, on a le système
+$$\left\{
+\begin{array}{rcl}
+a+b&=&5\\
+-a+4b&=&10\\
+\end{array}\right.$$
+qui donne facilement $a=2$ et $b=3$. 
+Ainsi, la fonction est 
+$$\frac 2{p+4}+\frac 3{p-1}.$$
+L'original recherché est la fonction 
+$$2e^{-4t}\mathcal U(t)+3e^t\mathcal U(t).$$
+<li> L'original de la fonction $\frac{p}{p^2+1}$ est la fonction $\cos t\mathcal U(t)$. Tenant compte de la formule de multiplication par $e^{at}$, l'original recherché est 
+$$\cos te^{7t}\mathcal U(t).$$
+<li>  Le discriminant du trinôme du second degré au dénominateur est négatif, donc il n'admet pas de racines. On écrit
+\begin{eqnarray*}
+ \frac{p}{p^2-6p+13}&=&\frac{p}{(p-3)^2+4}\\
+&=&\frac{p-3}{(p-3)^2+2^2}+\frac{3}{(p-3)^2+2^2}\\
+&=&\frac{p-3}{(p-3)^2+2^2}+\frac{3}2\times\frac 2{(p-3)^2+2^2}.
+\end{eqnarray*}
+En raisonnant comme à la question précédente, on trouve que l'original recherché est la fonction
+$$\cos(2t)e^{3t}\mathcal U(t)+\frac 32\sin(2t)e^{3t}\mathcal U(t).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater754"></span><script>var myRating = raterJs( { element:document.querySelector("#rater754"),	max:5, rating:1.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(754,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation différentielle <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=754.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(754,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce754','imageenonce754');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce754"></a><div class=inner id="innerenonce754"><ol class="enumeratechiffre">
+<li> Déterminer $a$ et $b$ de sorte que 
+$$\frac{p}{(p-1)(p+1)}=\frac a{p-1}+\frac b{p+1}.$$
+<li> En déduire la fonction causale $f$ dont la transformée de Laplace est $\frac{p}{(p-1)(p+1)}$.
+<li> On considère l'équation différentielle
+$$y'+y=e^t\mathcal U(t),\ y(0)=1.$$
+Soit $y$ une fonction causale solution de l'équation dont on suppose qu'elle admet une transformée de Laplace $F$.  Exprimer, en fonction de $F$, la transformée de Laplace de $y'$.
+<li>  Démontrer que $F$ satisfait l'équation 
+$$F(p)=\frac{p}{(p-1)(p+1)}.$$
+<li> En déduire $y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication754','imageindication754');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication754"></a><div class=inner id="innerindication754" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par identification.
+<li> Utiliser le cours.
+<li> C'est du cours!
+<li> Appliquer la transformée de Laplace à l'équation différentielle.
+<li> Utiliser les questions précédentes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige754','imagecorrige754',754);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige754"></a><div class=inner id="innercorrige754" style="display:none;"><ol class="enumeratechiffre">
+<li> On procède par identification, par exemple en mettant tout au même dénominateur. On trouve alors que 
+$$\frac{p}{(p-1)(p+1)}=\frac {1/2}{p-1}+\frac {1/2}{p+1}.$$
+<li> Par les résultats du cours, la fonction causale dont la transformée de Laplace est $\frac{p}{(p-1)(p+1)}$ est la fonction $\frac12\left(e^t\mathcal U(t)+e^{-t}\mathcal U(t)\right)$.
+<li> On sait que 
+$$\mathcal L(y')(p)=pF(p)-y(0)=pF(p)-1.$$
+<li> Si on applique la transformée de Laplace à l'équation 
+$$y'+y=e^t\mathcal U(t),$$
+on trouve
+$$pF(p)-1+F(p)=\frac{1}{p-1}$$
+ce qui donne
+$$(p+1)F(p)=\frac1{p-1}+1=\frac p{p-1}$$
+ou encore
+$$F(p)=\frac{p}{(p-1)(p+1)}.$$
+<li> Par les questions précédentes, $y(t)=\frac12\left(e^t\mathcal U(t)+e^{-t}\mathcal U(t)\right)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater755"></span><script>var myRating = raterJs( { element:document.querySelector("#rater755"),	max:5, rating:2.5263157894737, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(755,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation différentielle du second ordre <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=755.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(755,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce755','imageenonce755');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce755"></a><div class=inner id="innerenonce755"><ol class="enumeratechiffre">
+<li> Déterminer $a,b,c$ tels que 
+$$\frac{p^2-6p+10}{(p-1)(p-2)(p-3)}=\frac{a}{p-1}+\frac b{p-2}+\frac{c}{p-3}.$$
+<li> On considère l'équation différentielle
+$$y''-3y'+2y=e^{3t}\mathcal U(t),\ y(0)=1,\ y'(0)=0.$$
+On admet que $y$ admet une transformée de Laplace $F$. Démontrer que 
+$$F(p)=\frac{p^2-6p+10}{(p-1)(p-2)(p-3)}.$$
+<li> En déduire $y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication755','imageindication755');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication755"></a><div class=inner id="innerindication755" style="display:none;"><ol class="enumeratechiffre">
+<li> Procéder par identification.
+<li> Appliquer la transformée de Laplace à l'équation différentielle.
+<li> Inverser la transformée de Laplace.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige755','imagecorrige755',755);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige755"></a><div class=inner id="innercorrige755" style="display:none;"><ol class="enumeratechiffre">
+<li> On procède par identification, et on trouve 
+$$\frac{5/2}{p-1}-\frac2{p-2}+\frac{1/2}{p-3}.$$
+<li> On a, par les formules du cours,
+$$\mathcal L(y')(p)=pF(p)-1\textrm{ et }\mathcal L(y'')(p)=p(pF(p)-1)-0=p^2 F(p)-p.$$
+Appliquant la transformée de Laplace à l'équation, on trouve
+$$(p^2-3p+2)F(p)=\frac{1}{p-3}+(p-3)=\frac{p^2-6p+10}{p-3}.$$
+Mais $p^2-3p+2$ se factorise en $(p-1)(p-2)$ et on trouve
+$$F(p)=\frac{p^2-6p+10}{(p-1)(p-2)(p-3)}.$$
+<li> D'après la première question,
+$$F(p)=\frac{5/2}{p-1}-\frac2{p-2}+\frac{1/2}{p-3}.$$
+On inverse la transformée de Laplace, et on trouve que
+$$y(t)=\frac 52e^t\mathcal U(t)-2e^{2t}\mathcal U(t)+\frac 12e^{3t}\mathcal U(t),$$
+qui est bien une solution (la solution!) de l'équation.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater753"></span><script>var myRating = raterJs( { element:document.querySelector("#rater753"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(753,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Système différentiel <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=753.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(753,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce753','imageenonce753');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce753"></a><div class=inner id="innerenonce753">On se propose de résoudre le système différentiel suivant : 
+$$\left\{
+\begin{array}{rcl}
+x'&=&-x+y+\mathcal U(t)e^t,\ x(0)=1\\
+y'&=&x-y+\mathcal U(t)e^t,\ y(0)=1.
+\end{array}
+\right.$$
+Pour cela, on admet que $x$ possède une transformée de Laplace notée $F$ et que $y$ possède
+une transformée de Laplace notée $G$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que $F$ et $G$ sont solutions du système 
+$$\left\{
+\begin{array}{rcl}
+(p+1)F(p)-G(p)&=&\frac 1{p-1}+1=\frac p{p-1}\\
+-F(p)+(p+1)G(p)&=&\frac1{p-1}+1=\frac p{p-1}.
+\end{array}
+\right.$$
+<li> En déduire que $F(p)=G(p)=\frac{1}{p-1}$.
+<li> En déduire $x$ et $y$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication753','imageindication753');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication753"></a><div class=inner id="innerindication753" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer la transformée de Laplace de $x'$ en fonction de $F$ et la transformée de Laplace de $y'$ en fonction de $G$. Puis appliquer la transformée de Laplace au système différentiel.
+<li> Résoudre le système.
+<li> C'est du cours!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige753','imagecorrige753',753);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige753"></a><div class=inner id="innercorrige753" style="display:none;"><ol class="enumeratechiffre">
+<li> On a, par les formules du cours, que
+$$\mathcal L(x')(p)=pF(p)-1\textrm{ et }\mathcal L(y')(p)=pG(p)-1.$$
+Si on applique la transformée de Laplace au système différentiel, on obtient le système linéaire
+$$\left\{
+\begin{array}{rcl}
+pF(p)-1&=&-F(p)+G(p)+\frac 1{p-1}\\
+pG(p)-1&=&F(p)-G(p)+\frac1{p-1}.
+\end{array}
+\right.$$
+On va résoudre ce système pour calculer $F(p)$ et $G(p)$. En mettant tous les termes en $F(p)$ et $G(p)$ du même côté, et tous les autres de l'autre côté, on trouve qu'il est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+(p+1)F(p)-G(p)&=&\frac 1{p-1}+1=\frac p{p-1}\\
+-F(p)+(p+1)G(p)&=&\frac1{p-1}+1=\frac p{p-1}.
+\end{array}
+\right.$$
+<li> En faisant la différence des deux équations, on trouve que $F=G$, puis que 
+$$F(p)=G(p)=\frac{1}{p-1}.$$
+<li> On en déduit, en inversant la transformée de Laplace, que $x(t)=y(t)=e^t\mathcal U(t),$
+et on vérifie facilement qu'il s'agit d'une (de la) solution du système différentiel!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater787"></span><script>var myRating = raterJs( { element:document.querySelector("#rater787"),	max:5, rating:0.66666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(787,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Circuit RC <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=787.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(787,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce787','imageenonce787');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce787"></a><div class=inner id="innerenonce787"><div class=equation><img src="bde_images/circuitrc.png"></div>
+Dans un circuit comprenant en série un condensateur de capacité $C$ et une résistance $R$, la tension $v$ aux bornes du condensateur est donnée par
+$$RC v'(t)+v(t)=e(t)$$
+où $e(t)$ est la tension d'excitation aux bornes du circuit. Supposons que $v(0)=0$. Notons $V=\mathcal L(v)$ et $E=\mathcal L(e)$.
+<ol class="enumeratechiffre">
+<li> &Eacute;tablir la relation entre $V$ et $E$ sous forme $V(p)=T(p)E(p)$ avec une fonction $T$ que l'on déterminera. La fonction $T$ est appelée fonction de transfert.<br>
+Dans la suite, on supposera que $R=1000\Omega$ et $C=0,002F$.
+<li> On pose $F(p)=\frac{1}{p(2p+1)}$. Déterminer $a$ et $b$ de sorte que 
+$$F(p)=\frac cp+\frac d{p+\frac 12}.$$
+En déduire une fonction causale $f$ dont $F$ soit la transformée de Laplace.
+<li> On suppose que l'excitation aux bornes du circuit est un échelon de tension, $e(t)=\mathcal U(t)$. Déterminer la réponse $v(t)$ du circuit. Représenter cette fonction à l'aide du logiciel de votre choix. Comment interprétez-vous cela?
+<li> Déterminer une fonction causale dont la transformée de Laplace soit 
+$$\frac{e^{(t-t_0)p}}{p-a}.$$
+<li> On suppose que l'excitation aux bornes du circuit est un créneau, $e(t)=H(t)-H(t-t_0)$.
+Déterminer la réponse $v(t)$ du circuit. Représenter cette fonction à l'aide du logiciel de votre choix. Comment interprétez-vous cela?
+Tracer les graphes correspondants.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication787','imageindication787');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication787"></a><div class=inner id="innerindication787" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la transformée de Laplace à l'équation différentielle.
+<li>
+<li> 
+<li> Appliquer le formulaire et la formule donnant la transformée de Laplace d'une translation.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige787','imagecorrige787',787);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige787"></a><div class=inner id="innercorrige787" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $v(0)=0$, on sait que 
+$$\mathcal L(v')(p)=pV(p).$$
+Si on applique la transformée de Laplace à l'équation, on trouve que 
+$$RC pV(p)+V(p)=E(p)\implies V(p)=\frac{E(p)}{RCp+1}.$$
+Dans la suite, on a donc $RC=2$.
+<li> En mettant tout au même dénominateur, on trouve que $c=1$ et $d=-1$.
+$F$ est donc la transformée de Laplace de $\mathcal U(t)-\mathcal U(t)e^{-t/2}$.
+<li> Dans ce cas, $E(p)=\frac 1p$ et donc 
+$$V(p)=F(p).$$
+L'inversion de la transformée de Laplace donne alors
+$$v(t)=\mathcal U(t)-\mathcal U(t)e^{-t/2}$$
+Le graphe est le suivant :
+<div class=equation><img src="bde_images/circuitrc2.png"></div>
+La tension va progressivement s'aligner sur la tension d'entrée, avec un temps de retard.
+<li> L'original de $\frac{1}{p-a}$ est $\mathcal U(t)e^{at}$, et le facteur $e^{(t-t_0)p}$ correspond à une translation pour l'original. Ainsi, la fonction $\mathcal U(t-t_0)e^{a(t-t_0)}$ a pour transformée de Laplace la fonction $\frac{e^{(t-t_0)p}}{p-a}.$
+<li> Dans ce cas, $E(p)=\frac 1p-\frac{e^{-t_0 p}}p.$
+On en déduit que 
+$$V(p)=\frac 1p-\frac{}{p+\frac 12}-\frac {e^{-t_0p}}p+\frac{e^{-t_0p}}{p+\frac 12}.$$
+En utilisant la question précédente, on trouve que
+$$v(t)=\mathcal U(t)\left(1-e^{-t/2}\right)-\mathcal U(t-t_0)\left(1-e^{-(t-t_0)/2}\right).$$
+Le graphe est le suivant (avec $t_0=2)$.
+<div class=equation><img src="bde_images/circuitrc3.png"></div>
+De la même façon, la tension de sortie augmente progressivement jusqu'à ce que la tension d'entrée devienne nulle. La tension de sortie rediminue, toujours avec un temps de retard.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater797"></span><script>var myRating = raterJs( { element:document.querySelector("#rater797"),	max:5, rating:2.9230769230769, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(797,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un bon bilan! <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=797.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(797,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce797','imageenonce797');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce797"></a><div class=inner id="innerenonce797">On considère la fonction causale $e$ définie sur $\mathbb R$ par 
+$$e(t)=4\big(\mathcal U(t)-\mathcal U(t-2)\big).$$
+<ol class="enumeratechiffre">
+<li> Représenter graphiquement $e$ dans un repère orthonormé.
+<li> On note $E$ la transformée de Laplace de $e$. Calculer $E$.
+<li> L'étude d'un circuit électrique conduit à étudier la tension de sortie $s$ reliée à la tension d'entrée $e$ par la formule
+$$4s'(t)+s(t)=e(t),\ s(0)=0.$$
+On admet que $s$ admet une transformée de Laplace notée $S$. Démontrer que
+$$S(p)=\frac 1{p\left(p+\frac14\right)}\left(1-e^{-2p}\right).$$
+<li> Déterminer des réels $a$ et $b$ tels que 
+$$\frac 1{p\left(p+\frac14\right)}=\frac a{p}+\frac b{p+\frac 14}.$$
+<li> Déterminer l'original des fonctions suivantes :
+$$ \frac 1p,\quad \frac{e^{-2p}}p,\quad \frac{1}{p+\frac 14},\ \frac{e^{-2p}}{p+\frac 14}.$$
+<li> En déduire la valeur de $s$.
+<li> Vérifier que 
+$$s(t)=\left\{
+\begin{array}{ll}
+0&\textrm{si t&lt;0}\\
+4-4e^{-t/4}&\textrm{si }0\leq t&lt;2\\
+4\left(e^{1/2}-1\right)e^{-t/4}&\textrm{si }t\geq 2.
+\end{array}\right.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication797','imageindication797');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication797"></a><div class=inner id="innerindication797" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;tudier la valeur de la fonction sur l'intervalle $[0,2]$ et ailleurs...
+<li> Appliquer les formules du cours.
+<li> Calculer la transformée de Laplace de l'équation différentielle.
+<li> Mettre tout au même dénominateur et procéder par identification.
+<li> Appliquer les résultats du formulaire.
+<li> &Eacute;crire $S$ en utilisant le résultat de la question 4. Puis utiliser la table des inverses des transformations de Laplace trouvées à la question précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige797','imagecorrige797',797);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige797"></a><div class=inner id="innercorrige797" style="display:none;"><ol class="enumeratechiffre">
+<li> On distingue 3 cas. 
+<ul class="rien">
+<li> Si $t\leq 0$, alors $\mathcal U(t)=0$ et $\mathcal U(t-2)=0$. Donc $e(t)=0$.
+<li> Si $t\in ]0,2]$, alors $\mathcal U(t)=1$ et $\mathcal U(t-2)=0$. Donc $e(t)=4$.
+<li> Si $t&gt;2$, alors $\mathcal U(t)=1$ et $\mathcal U(t-2)=1$. Donc $e(t)=0$.
+</ul>
+On en déduit la représentation graphique suivante :
+<div class=equation><img src="bde_images/creneau1.png"></div>
+<li> Il s'agit simplement d'appliquer la formule du retard. On trouve alors
+$$E(p)=\frac 4p-\frac{4e^{-2p}}p.$$
+<li> D'après la formule de la dérivée, 
+$$\mathcal L(s')(p)=pS(p)-s(0)=pS(p).$$
+Si on calcule la transformée de Laplace de l'équation différentielle, on trouve
+$$(4p+1)S(p)=E(p)$$
+ce qui donne 
+$$S(p)=\frac{4(1-e^{-2p})}{p(4p+1)}=\frac 1{p\left(p+\frac14\right)}\left(1-e^{-2p}\right).$$
+<li> On met tout au même dénominateur et on constate que 
+$$\frac a{p}+\frac b{p+\frac 14}=\frac{(a+b)p+\frac{a}4}{p\left(p+\frac 14\right)}.$$
+Par identification, on trouve $a+b=0$ et $\frac a4=1$. Il vient $a=4$ et $b=-4$.
+<li> On trouve successivement
+$$\mathcal U(t),\ \mathcal U(t-2),\ e^{-t/4}\mathcal U(t),\ e^{-(t-2)/4}\mathcal U(t-2).$$
+<li> Tenant compte de la décomposition en éléments simples obtenu précédemment, on a 
+$$S(p)=\frac 4p-\frac {4e^{-2p}}p-\frac{4}{p+\frac 14}+\frac{4e^{-2p}}{p+\frac 14}.$$
+En utilisant le résultat de la question précédente, et en tenant compte de la linéarité de la transformée de Laplace, on trouve finalement : 
+$$s(t)=4\left(1-e^{-t/4}\right)\mathcal U(t)-4\left(1-e^{-(t-2)/4}\right)\mathcal U(t-2).$$
+<li> Si $t&lt;0$, alors $\mathcal U(t)=\mathcal U(t-2)=0$, et donc $s(t)=0$.
+Si $t\in [0,2[$, alors $\mathcal U(t)=1$ et $\mathcal U(t-2)=0$ d'où
+$$s(t)=4\left(1-e^{-t/4}\right).$$
+Si $t\geq 2$, alors $\mathcal U(t)=\mathcal U(t-2)=1$, et donc 
+\begin{eqnarray*}
+s(t)&=&4\left(1-e^{-t/4}\right)-4\left(1-e^{-(t-2)/4}\right)\\
+&=&4-4e^{-t/4}-4+4e^{1/2}e^{-t/4}\\
+&=&4\left(e^{1/2}-1\right)e^{-t/4}.
+\end{eqnarray*}
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

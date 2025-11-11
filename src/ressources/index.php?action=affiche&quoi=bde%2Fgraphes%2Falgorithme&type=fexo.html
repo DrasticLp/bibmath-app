@@ -1,0 +1,916 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Algorithmes - écrire et analyser des algorithmes</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fgraphes.html">Exercices de théorie des graphes et d'algorithmique</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Algorithmes - écrire et analyser des algorithmes</h1>
+<div class=titrepartie>Algorithmes en analyse</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater2094"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2094"),	max:5, rating:1.6363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2094,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Temps d'arrêt <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2094.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(2094,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2094','imageenonce2094');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2094"></a><div class=inner id="innerenonce2094">On note $H_n$ la somme $H_n=\sum_{k=1}^n \frac 1k$. On admet
+que $(H_n)$ tend vers $+\infty$. &Eacute;crire un algorithme qui détermine le plus petit entier
+$n$ tel que $H_n$ dépasse un réel $a$ donné.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2094','imagecorrige2094',2094);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2094"></a><div class=inner id="innercorrige2094" style="display:none;">Nous donnons deux algorithmes. <br>
+Algorithme 1 :
+<pre><code class="language-python">n=0
+H=0
+Tant que (H&lt;a) faire
+  n=n+1
+  H=H+1/n
+Fin tant que
+Afficher n.
+</code></pre>
+Algorithme 2 :
+<pre><code class="language-python">n=1
+H=0
+Tant que (H&lt;a) faire
+  H=H+1/n
+  n=n+1
+Fin tant que
+Afficher n-1.
+</code></pre>
+Il faut bien remarquer la gestion différente de l'indice $n$ entre le premier et le deuxième algorithme,
+et notamment le fait que l'on doit retourner $n-1$ dans le deuxième algorithme.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3571"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3571"),	max:5, rating:2.6842105263158, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3571,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas cette limite ! <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3571.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3571,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3571','imageenonce3571');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3571"></a><div class=inner id="innerenonce3571">Pour $n\geq 1$, on pose 
+$$S_n=\sum_{k=1}^n \frac 1{k^3}.$$
+On admet que $(S_n)$ converge vers un réel appelé constante d'Apéry qui vaut environ $1,\!20205690316$. &Eacute;crire un algorithme qui prouve que $(S_n)$ ne converge pas vers 
+$$\beta=\frac{\pi^3}{\sqrt[6]{294542216}}\simeq 1,\!20205690198.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3571','imageindication3571');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3571"></a><div class=inner id="innerindication3571" style="display:none;">Utiliser la croissance de $(S_n)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3571','imagecorrige3571',3571);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3571"></a><div class=inner id="innercorrige3571" style="display:none;">Puisque $(S_n)$ est croissante, il suffit de vérifier qu'un terme de la suite excède $\beta.$ On calcule donc des termes successifs jusqu'à dépasser la valeur approchée par excès de $\beta$. Voici un algorithme sous Python.
+<pre><code class="language-python">def pascettelimite():
+    S=1
+    n=1
+    while (S&lt;1.2020560199):
+        n=n+1
+        S=S+1/n**3
+    print(n)
+</code></pre>
+La fonction affiche la valeur $752$, ce qui implique que $S_{752}&gt;\beta$
+et donc que $(S_n)$ ne converge pas vers $\beta.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2259"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2259"),	max:5, rating:2.6428571428571, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2259,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Maximum d'une suite <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2259.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2259,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2259','imageenonce2259');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2259"></a><div class=inner id="innerenonce2259">On pose $p=0,9$, et on admet que la fonction $x\mapsto p^x-\frac{1}x$ est croissante sur $[1,a]$ et décroissante sur $[a,+\infty[$, où $a&gt;1$. &Eacute;crire un algorithme permettant de déterminer 
+pour quelle valeur de l'entier $r$ le nombre $p^r-\frac 1r$ est maximal.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2259','imagecorrige2259',2259);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2259"></a><div class=inner id="innercorrige2259" style="display:none;">On parcourt les termes consécutifs de la suite jusqu'à observer une décroissance. Il faut faire bien attention à l'initialisation (pour entrer dans la boucle) et à la sortie (afficher le rang précédent le dernier que l'on a calculé).
+<pre><code class="language-python">VARIABLES : 
+  p entier
+  r entier
+  u,v réel
+Traitement
+  p=0,9
+  r=1
+  u=p^r-1/r
+  v=u
+  Tant que (u&lt;=v) faire
+    u=v
+    r=r+1
+    v=p^r-1/r
+  Fin Tant Que.
+  Afficher r-1  
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater2097"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2097"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2097,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Encadrement d'intégrale <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2097.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(2097,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2097','imageenonce2097');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2097"></a><div class=inner id="innerenonce2097">Soit $f:[0,1]\to\mathbb R$ une fonction croissante. Pour $n\geq 1$, on pose 
+$$U_n=\frac 1n\sum_{k=0}^{n-1}f(k/n)\textrm{ et }V_n=\frac 1n\sum_{k=1}^{n}f(k/n).$$
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $n\geq 1$, on a $U_n\leq \int_0^1 f(x)dx\leq V_n$.
+<li> On admet que $(U_n)$ et $(V_n)$ convergent vers $\int_0^1 f(x)dx$.
+&Eacute;crire un algorithme donnant une valeur approchée
+de $\int_0^1 e^{x^2}dx$ à $10^{-3}$ près.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2097','imageindication2097');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2097"></a><div class=inner id="innerindication2097" style="display:none;"><ol class="enumeratechiffre">
+<li> Relation de Chasles et croissance de la fonction.
+<li> Il suffit de mesure l'écart $V_n-U_n$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2097','imagecorrige2097',2097);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2097"></a><div class=inner id="innercorrige2097" style="display:none;"><ol class="enumeratechiffre">
+<li> D'après la relation de Chasles, on sait que 
+$$\int_0^1 f(t)dt=\sum_{k=0}^{n-1}\int_{k/n}^{(k+1)/n}f(t)dt.$$
+Mais, puisque $f$ est croissante, pour tout $t\in\left[\frac kn,\frac{k+1}n\right]$, on a 
+$$f(t)\geq f(k/n)\implies \int_{k/n}^{(k+1)/n}f(t)dt\geq \int_{k/n}^{(k+1)/n}f(k/n)dt\geq\frac 1n f(k/n).$$
+Il suffit de sommer ces relations pour $k$ allant de $1$ à $n$ pour trouver que $U_n\leq \int_0^1 f(t)dt$. La preuve
+est similaire pour $V_n$.
+<li> On sait que 
+$$0\leq \int_0^1 f(t)dt-U_n\leq V_n-U_n.$$
+Pour que $U_n$ soit une valeur approchée (par défaut) à $10^{-3}$ près de $\int_0^1 f(t)dt$, il suffit que $V_n-U_n\leq 10^{-3}$.
+Notre algorithme va donc calculer les valeurs de $U_n$ et $V_n$ jusqu'à ce que cette condition soit remplie.
+<pre><code class="language-python">n=1
+Répète
+  U=0
+  V=0
+  Pour k allant de 0 à n-1 faire
+     U=U+exp((k*k)/(n*n))/n
+     V=V+exp(((k+1)*(k+1))/(n*n))/n
+  Fin pour
+  n=n+1
+Jusqu'à ((V-U)&lt;0.001)
+Afficher U
+</code></pre>
+Codé en Python, ceci donne la fonction suivante : 
+<pre><code class="language-python">def integral(ecart):
+     n=0
+     u=0
+     v=1
+     while ((v-u)&gt;ecart):
+          u=0
+          v=0
+          n=n+1
+          for k in range(n):
+               u=u+math.exp((k*k)/(n*n))/n
+               v=v+math.exp((k+1)*(k+1)/(n*n))/n
+     return (u,v,n)
+</code></pre>
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater2628"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2628"),	max:5, rating:2.15, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2628,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Des limites de l'informatique <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2628.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(2628,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2628','imageenonce2628');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2628"></a><div class=inner id="innerenonce2628">Pour $n\geq 0$, on considère la suite $(I_n)$ définie par 
+$$I_n=\int_0^1 e^x (1-x)^n  dx.$$
+<ol class="enumeratechiffre">
+<li> Calculer $I_0$ puis démontrer que, pour tout $n\geq 0$, $I_{n+1}=(n+1)I_n-1$.
+<li> &Eacute;crire sous Python une fonction permettant de calculer $I_n$ en utilisant la relation de récurrence obtenue précédemment. Exécuter cette fonction. Quelle conjecture peut-on formuler sur la nature de la suite $(I_n)$?
+<li> Démontrer que $(I_n)$ est une suite décroissante, puis qu'elle est convergente. Quelle est sa limite? Comparer avec votre conjecture.
+<li> Pour $a\in \mathbb R$, on définit une suite $(J_n)$ par $J_{n+1}=(n+1)J_n-1$ et $J_0=a$. Démontrer que, pour tout $n\in\mathbb N$, $J_{n+1}-I_{n+1}=(n+1)(J_n-I_n)$. 
+<li> En déduire, suivant la valeur de $a$, le comportement de la suite $(J_n)$.
+<li> Expliquer le phénomène conduisant à la conjecture formulée à la question 2.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2628','imageindication2628');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2628"></a><div class=inner id="innerindication2628" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire une intégration par parties.
+<li>
+<li> Pour démontrer que $(I_n)$ est décroissante, on pourra utiliser sa définition à l'aide d'une intégrale. Pour déterminer la limite de $(I_n)$, on pourra utiliser la relation de récurrence.
+<li>
+<li> Exprimer $J_n-I_n$ en fonction de $J_0-I_0$.
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2628','imagecorrige2628',2628);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2628"></a><div class=inner id="innercorrige2628" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $I_0=e-1$. Pour obtenir la relation de récurrence, on va faire une intégration par parties, en posant $u'(x)=\exp(x)$ et $v(x)=(1-x)^{n+1}$, de sorte que $u(x)=\exp(x)$ et $v'(x)=-(n+1)(1-x)^n$. On trouve
+\begin{align*}
+I_{n+1}&=\left[ e^x (1-x)^{n+1}\right]_0^1 +(n+1)\int_0^1 e^x (1-x)^n dx\\
+&=(n+1)I_n-1. 
+\end{align*}
+<li> En utilisant $I_0=e-1$, une fonction qui convient est la suivante : 
+<pre><code class="language-python">from math import *
+
+def suite(n):
+    I=exp(1)-1;
+    for k in range(n):
+        I=(k+1)*I-1
+    return I
+</code></pre>
+L'utilisation de cet algorithme donne des valeurs décroissantes pour $I_n$, positives pour $n\leq 17$ et négatives pour $\geq 18$
+(en particulier, $suite(18)\simeq -0.8702$). Si on continue, il semble que la suite tende vers $-\infty$, puisque
+$suite(100)\simeq -1.35\times 10^{142}$.
+<li> Soit $n\in\mathbb N$. Remarquons que, pour tout $x\in [0,1]$, on a $0\leq (1-x)\leq 1$, et donc 
+$$0\leq (1-x)^{n+1}\leq (1-x)^n.$$
+On multiplie par $e^x$ (qui est positif), puis on intègre entre $0$ et $1$ pour trouver 
+$$0\leq I_{n+1}\leq I_n.$$
+On vient donc de prouver que la suite $(I_n)$ est décroissante. De plus, elle est minorée par $0$. Elle est donc convergente. Notons $\ell$ sa limite, avec $\ell\geq 0$. 
+On peut écrire aussi la relation $I_{n+1}=(n+1)I_n-1$ sous la forme
+$$\frac{I_{n+1}}{n+1}=I_n-\frac{1}{n+1}.$$
+Passant à la limite dans cette égalité, on trouve que $\ell=0$.
+La conjecture est donc fausse!<br>
+Pour prouver que $\ell=0$, on pouvait aussi observer que, pour tout $x\in [0,1]$, 
+$$0\leq e^x(1-x)^n \leq e (1-x)^n$$
+et donc
+$$0\leq I_n\leq \int_0^1 e (1-x)^n dx=\frac e{n+1}.$$
+Par le théorème des gendarmes, $(I_n)$ tend vers $0$.
+<li> C'est immédiat!
+\[ J_{n+1}-I_{n+1}=(n+1)J_n-1-\big((n+1)I_n-1\big)=(n+1)\big(J_n-I_n\big). \]
+<li> Une récurrence rapide démontre que, pour tout $n\in\mathbb N$, 
+$$J_n-I_n=n! (J_0-I_0)=n! (a-e+1).$$
+Puisque $(I_n)$ tend vers $0$, la suite $(J_n)$
+<ul class="rien">
+<li> tend vers $0$ si $a=e-1$;
+<li> tend vers $+\infty$ si $a&gt;e-1$;
+<li> tend vers $-\infty$ si $a&lt;e-1$.
+</ul>
+<li> Python ne pouvait pas permettre de formuler une bonne conjecture. En effet, il ne connait pas la valeur exacte de $e$, mais seulement une valeur approchée. Et pour la formule de récurrence donnée, la seule suite qui tend vers $0$ est celle pour laquelle le premier terme vaut exactement $e$. Partant d'un mauvais premier terme (même si l'approximation est très bonne!), on a l'impression que la suite tend vers $-\infty$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater2991"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2991"),	max:5, rating:2.0952380952381, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2991,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Algorithme de trichotomie <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2991.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(2991,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2991','imageenonce2991');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2991"></a><div class=inner id="innerenonce2991">Soit $f:[a,b]\to\mathbb R$ une fonction convexe. On pose 
+$a_0=a$, $a_1=(2a+b)/3$, $a_2=(a+2b)/3$ et $a_3=b$. On pose également
+$$\mu=\frac{f(a_2)-f(a_1)}{a_2-a_1}.$$ 
+<ol class="enumeratechiffre">
+<li> On suppose que $\mu\leq 0$. Justifier que $f$ atteint son minimum sur $[a,b]$ sur l'intervalle $[a_1,a_3]$.
+<li> On suppose que $\mu&gt;0$. Justifier que $f$ atteint son minimum sur $[a,b]$
+sur l'intervalle $[a_0,a_2]$.
+<li> &Eacute;crire une fonction sous Python permettant de donner un encadrement d'amplitude $\veps$ du minimum de la fonction convexe $x\mapsto e^x+x^2$, sachant que ce minimum
+se situe dans l'intervalle $[-1,0]$.
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication2991','imageindication2991');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2991"></a><div class=inner id="innerindication2991" style="display:none;">Penser à utiliser l'inégalité des pentes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2991','imagecorrige2991',2991);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2991"></a><div class=inner id="innercorrige2991" style="display:none;"><ol class="enumeratechiffre">
+<li> Par l'inégalité des pentes, on sait que, pour tout $x\leq a_1$, on a 
+$$\frac{f(a_1)-f(x)}{a_1-x}\leq \frac{f(a_2)-f(a_1)}{a_2-a_1}=\mu\leq 0.$$
+Ainsi, $f(a_1)\leq f(x)$, et la fonction atteint son minimum sur $[a_1,a_3]$.
+<li> Cette fois, l'inégalité des pentes nous dit que, pour tout $x\geq a_2$, on a
+$$0&lt;\mu=\frac{f(a_2)-f(a_1)}{a_2-a_1}\leq\frac{f(x)-f(a_2)}{x-a_2}.$$
+Ainsi, $f(x)\geq f(a_2)$, et $f$ atteint son minimum sur $[a_0,a_2]$.
+<li> 
+<pre><code class="language-python">from math import *
+
+def f(x):
+    return exp(x)+x*x
+
+def minimum(eps):
+    a0=-1
+    a3=0
+    while (a3-a0&gt;eps):
+        a1=(2*a0+a3)/3
+        a2=(a0+2*a3)/3
+        mu=(f(a2)-f(a1))/(a2-a1)
+        if (mu&gt;0):
+            a3=a2
+        else:
+            a0=a1
+    return [a0,a3]
+</code></pre>
+Remarquons que l'algorithme se termine car la taille de l'intervalle est multiplié par $2/3$ à chaque étape.
+</ol></div></div></div>
+
+<div class=titrepartie>Algorithmes en arithmétique</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater2093"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2093"),	max:5, rating:2.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2093,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Renversant! <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2093.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(2093,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2093','imageenonce2093');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2093"></a><div class=inner id="innerenonce2093">&Eacute;crire une fonction qui prend en entrée un entier naturel $a$ et retourne
+cet entier écrit à l'envers. Par exemple, si $a=1234$, la fonction
+devra retourner $a=4321$. On pourra utiliser les fonctions quotient(n,p)
+et reste(n,p) qui donnent le quotient et le reste de la division de n par p.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2093','imagecorrige2093',2093);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2093"></a><div class=inner id="innercorrige2093" style="display:none;">L'idée est que si l'on prend le reste de a dans la division par 10, on récupère le dernier chiffre,
+et si on prend le quotient, on récupère $a$ privé de son dernier chiffre. Il suffit d'itérer
+le procédé, en décalant à chaque fois le résultat provisoire vers la gauche. Une solution est donc : 
+<pre><code class="language-python">b=0
+Tant que a&gt;0 faire
+   b=10b+reste(a,10)
+   a=quotient(a,10)
+Retourner b
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2533"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2533"),	max:5, rating:1.7708333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2533,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Algorithme pour compter le nombre de nombres premiers inférieurs à un entier $n$ <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2533.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2533,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2533','imageenonce2533');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2533"></a><div class=inner id="innerenonce2533"><ol class="enumeratechiffre">
+<li> &Eacute;crire une fonction $\textrm{divise}(p,q)$ d'argument deux entiers naturels non nuls $p$ et $q$ et renvoyant True si $p$ divise $q$, et False sinon.
+<li> &Eacute;crire une fonction $\textrm{estpremier}(p)$ d'argument un entier naturel $p$, renvoyant $1$ si $p$ est premier, et renvoyant $0$ sinon.
+<li> &Eacute;crire une fonction $\phi(n)$ d'argument un entier naturel $n$ et renvoyant le nombre de nombres premiers inférieurs ou égaux à $n$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2533','imagecorrige2533',2533);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2533"></a><div class=inner id="innercorrige2533" style="display:none;"><ol class="enumeratechiffre">
+<li> On utilise le fait que $p$ divise $q$ si et seulement si le reste dans la division euclidienne de $q$ par $p$ est nul.
+<pre><code class="language-python">def divise(p,q):
+    if ( (q%p) == 0):
+         return True
+    else:
+        return False
+</code></pre>
+<li> Un entier naturel est premier si ses seuls diviseurs positifs sont $1$ et lui-même, et s'il n'est pas égal à $1$. On sépare donc le traitement de $1$, et pour les autres, on regarde si un des entiers entre $2$ et $p-1$ divise $p$.
+<pre><code class="language-python">def estpremier(p):
+    if (p&lt;2):
+        return 0
+    for i in range(2,p):
+        if divise(i,p):
+            return 0
+    return 1
+</code></pre>
+<li>
+<pre><code class="language-python">def phi(n):
+    total=0
+    for m in range(2,n+1):
+        total+=estpremier(m)
+    return total
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater2095"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2095"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2095,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation de Pell-Fermat <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2095.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(2095,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2095','imageenonce2095');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2095"></a><div class=inner id="innerenonce2095">On considère l'équation $x^2-2y^2=1$ d'inconnues $x,y\in\mathbb N^*$.
+&Eacute;crire un algorithme permettant de déterminer toutes les solutions de cette équation pour lesquelles
+$y\leq 100$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2095','imagecorrige2095',2095);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2095"></a><div class=inner id="innercorrige2095" style="display:none;">On notera Ent(x) la partie entière de x.
+<pre><code class="language-python">Pour y allant de 0 à 100
+  z=sqrt(1+2y*y)
+  Si z=Ent(z) afficher(z,y)
+Fin pour.
+</code></pre>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater2096"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2096"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2096,rating); this.setRating(rating);   this.disable();    done();     }});</script> - En base 2 <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2096.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(2096,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2096','imageenonce2096');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2096"></a><div class=inner id="innerenonce2096"><ol class="enumeratechiffre">
+<li> &Eacute;crire 21 en base 2.
+<li> Proposer un algorithme qui prend en entrée un entier $n$ et retourne son écriture en base 2.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2096','imageindication2096');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2096"></a><div class=inner id="innerindication2096" style="display:none;">Commencer par le dernier chiffre....</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2096','imagecorrige2096',2096);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2096"></a><div class=inner id="innercorrige2096" style="display:none;"><ol class="enumeratechiffre">
+<li> Cette question est évidemment destinée à comprendre comment proposer un algorithme pour la question suivante.
+L'idée est de partir d'abord du dernier chiffre. En effet, si 
+21 s'écrit $b_k\dots b_1$ en base 2, alors on a 
+$$21=b_k2^k+b_{k-1}2^{k-1}+\dots+2b_2+b_1,$$
+et donc $b_1$ est le reste dans la division par 2 de 17. On a donc 
+$$21=2\times 10+1.$$
+On continue avec 10 :
+$$10=2\times 5+0,$$
+soit 
+$$21=2^2\times 5+2^1\times 0+1.$$
+On reprend avec 5 :
+$$5=2\times 2+1,$$
+soit 
+$$21=2^3\times 2+2^2\times 1+2^1\times 0+1,$$
+soit finalement 
+$$21=2^4\times 1+2^3\times 0+2^2\times 1+2^1\times 0+1.$$
+Ainsi, 21 s'écrit en base 2 : $10101$.
+<li> Voici un algorithme possible. Il met les chiffres successifs dans une liste.
+Puis on lit la liste en sens contraire...
+<pre><code class="language-python">Lire n
+i=0
+tant que (n&gt;0) faire 
+  l[i]=reste(n,2)
+  n=(n-l[i])/2
+  i=i+1
+Fin tant que
+Pour j allant de i-1 jusque 0 faire
+  Afficher l[j]
+Fin tant que.
+</code></pre>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater2647"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2647"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2647,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Algorithme de décomposition en produit de facteurs premiers <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2647.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(2647,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2647','imageenonce2647');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2647"></a><div class=inner id="innerenonce2647">Le but de l'exercice est d'écrire un algorithme pour décomposer un entier en produit de nombres premiers. Si $n$ est un entier naturel non nul et $p$ est un nombre premier, on note $v_p(n)$ le plus grand entier $k$ tel que $p^k$ divise $n$. Si $p$ ne divise pas $n$, on pose $v_p(n)=0$. L'entier $v_p(n)$ s'appelle la valuation $p$-adique de $n$.
+<ol class="enumeratechiffre">
+<li> &Eacute;crire une fonction booléenne $\textrm{estPremier}(n)$ qui prend en argument un entier naturel non nul $n$ et qui renvoie le booléen $\textrm{True}$ si $n$ est premier et la booléen $\textrm{False}$ sinon. On pourra utiliser le critère suivant : un entier $n\geq 2$ qui n'est divisible par aucun entier $d\geq 2$ tel que $d^2\leq n$ n'est pas premier.
+<li> En déduire une fonction $\textrm{liste_premiers}(n)$ qui prend en argument un entier naturel non nul $n$ et renvoie la liste des nombres premiers inférieurs ou égaux à $n$.
+<li> Pour calculer la valuation 2-adique de 40, on peut utiliser la méthode suivante:
+<ul class="rien">
+<li> 40 est divisible par 2 et le quotient vaut 20
+<li> 20 est divisible par 2 et le quotient vaut 10
+<li> 10 est divisible par 2 et le quotient vaut 5
+<li> 5 n'est pas divisible par 2.
+</ul>
+La valuation 2-adique de 40 vaut donc 3.<br>
+Écrire  une  fonction $\textrm{valuation_p_adique(n, p)}$ non récursive qui  implémente  cet  algorithme.  Elle  prend  en  arguments  un  entier  naturel  $n$ non  nul  et  un  nombre  premier  $p$ et renvoie la valuation $p$-adique      de $n$. Par exemple, puisque $40=2^3\times 5$, $\textrm{valuation_p_adique(40, 2)}$ renvoie 3, $\textrm{valuation_p_adique(40, 5)}$ renvoie 1 et $\textrm{valuation_p_adique(40, 7)}$ renvoie 0.
+<li> Écrire une deuxième fonction cette fois-ci récursive, $\textrm{val}(n, p)$ qui renvoie la valuation $p$-adique de $n$.
+<li> En  déduire une fonction $\textrm{decomposition_facteurs_premiers(n)}$ qui  calcule la décomposition en facteurs premiers d'un entier $n\geq 2$. Cette  fonction doit renvoyer la liste des couples $(p,v_p(n))$ pour tous les nombres premiers $p$ qui divisent $n$. Par exemple, $\textrm{decomposition_facteurs_premiers}(40)$ renvoie la liste $[[2,3],[5, 1]]$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2647','imagecorrige2647',2647);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2647"></a><div class=inner id="innercorrige2647" style="display:none;"><ol class="enumeratechiffre">
+<li> On traite le cas $n=1$ séparément, puis on utilise l'algorithme proposé par l'énoncé. On teste tous les nombres entre $2$ et $\sqrt n$ pour voir s'ils divisent $n$. Si c'est le cas pour un entier, on retourne $\textrm{False}$. Sinon, on retourne $\textrm{True}$.
+<pre><code class="language-python">def estPremier(n):
+    if (n&lt;2):
+         return False
+    d=2
+    while ((d*d)&lt;=n):
+        if ( (n%d)==0):
+             return False
+        d+=1
+    return True
+</code></pre>
+<li> On parcourt tous les nombres compris entre 2 et $n$, et on les ajoute à la liste s'ils sont premiers.
+<pre><code class="language-python">def liste_premiers(n):
+    l=[]
+    for d in range(2,n+1):
+        if (estPremier(d)):
+             l.append(d)
+    return l
+</code></pre>
+<li> On initialise un entier $s$ à $0$. On augmente $s$ de $1$ à chaque fois que $p$ divise $n$, et on divise $n$ par $p$.
+<pre><code class="language-python">def valuation_p_adique(n,p):
+    s=0
+    while ((n%p)==0):
+        s+=1
+        n=n/p
+    return s
+</code></pre>
+<li> Avec la même idée : 
+<pre><code class="language-python">def val(n,p):
+    if ((n%p)==0):
+        return val(n/p,p)+1
+    else:
+        return 0
+</code></pre>
+<li> On parcourt la liste des premiers inférieurs ou égaux à $n$, et on ajoute ce premier $p$ et la valuation $p$-adique de $n$ à la liste si toutefois cette valuation est strictement positive.
+<pre><code class="language-python">def decomposition_facteurs_premiers(n):
+    l=liste_premiers(n)
+    liste=[]
+    for p in l:
+        vp=val(n,p)
+        if vp&gt;0:
+            liste.append( [p,vp] )
+    return liste
+</code></pre>
+</ol></div></div></div>
+
+
+<div class=titrepartie>Simulations</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater2260"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2260"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2260,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Simulation d'une rangée de spots <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2260.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(2260,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2260','imageenonce2260');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2260"></a><div class=inner id="innerenonce2260">Une rampe verticale de spots nommés de bas en haut $S_1,\ S_2,\ S_3,\ S_4$ change d'état de la manière suivante :
+<ul class="rien">
+<li> à l'instant $t=0$, le spot $S_1$ est allumé.
+<li> si, à l'instant $t=n,\ n\geq 0$, le spot $S_1$ est allumé, alors un (et un seul) des spots $S_1,\ S_2,\ S_3,\ S_4$ s'allume à l'instant $t=n+1$, et ceci de manière équiprobable.
+<li> si, à l'instant $t=n,\ n\geq 0$, le spot $S_k$ ($2\leq k\leq 4$) est allumé, le spot $S_{k-1}$ s'allume à l'instant $t=n+1$.
+</ul>
+On pourra remarquer qu'à chaque instant, un et un seul spot est allumé. On note $X$ la variable aléatoire représentant le premier instant (s'il existe) où le spot $S_2$ s'allume.  &Eacute;crire une fonction sous Python simulant le fonctionnement de la variable aléatoire $X$. On rappelle que la fonction $\verb+randint(a,b)+$ du module random renvoie un nombre entier aléatoire compris entre $a$ et $b$ (avec $a$ et $b$ inclus).</div></div><div class=indication><a href="javascript:showAll('innerindication2260','imageindication2260');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2260"></a><div class=inner id="innerindication2260" style="display:none;">Utiliser deux variables : une désignant l'instant, et une désignant le spot allumé.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2260','imagecorrige2260',2260);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2260"></a><div class=inner id="innercorrige2260" style="display:none;">On va utiliser deux variables : instant qui désigne l'instant où l'on est, et $k$ qui désigne le spot allumé à l'instant courant. Un algorithme possible est :
+<pre><code class="language-python">from random import *
+
+def simulX():
+  instant=0
+  k=1
+  while (k!=2):
+    instant=instant+1
+    if (k==1):
+      k=randint(1,4)
+    else:
+      k=k-1
+  return instant
+
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater2568"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2568"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2568,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Crèmes brûlées <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2568.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(2568,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2568','imageenonce2568');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2568"></a><div class=inner id="innerenonce2568">Un restaurateur accueille 70 clients chaque soir. Il sait qu'en moyenne, 2 clients sur 5 prennent une crème brûlée. Il pense que, s'il prépare 30 crèmes brûlées, dans plus de 70\% des cas, la demande en crèmes brûlées sera satisfaite. Ecrire un algorithme permettant de conjecturer s'il a raison.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2568','imagecorrige2568',2568);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2568"></a><div class=inner id="innercorrige2568" style="display:none;">Voici une solution possible sous Python : 
+
+<pre><code class="language-python">import random
+
+def soiree(n,p):
+    c=0
+    for i in range(n):
+        if (random.random()&lt;p):
+            c=c+1
+    return c
+    
+def repetitions(nb):
+    succes=0
+    for i in range(nb):
+        if (soiree(70,0.4)&lt;=30):
+            succes=succes+1
+    return (succes/nb)
+</code></pre>
+
+La fonction soiree(n,p) simule le déroulement d'une soirée et renvoie le nombre de crèmes brûlées commandées au cours d'une soirée. La fonction repetitions(nb) propose de répéter un grand nombre de soirées. Pour chaque soirée où le nombre de crèmes brûlées commandées est inférieur à 30, on comptabilise un succès. On affiche ensuite la fréquence du nombre de succès. Une exécution de repetitions(10000) donne environ 0,73. Le restaurateur semble avoir raison!<br>
+Remarquons qu'il est aussi possible d'avoir une résolution mathématique du problème. Le nombre de crèmes brûlées commandé chaque soir est une variable aléatoire $X$ qui suit une loi binomiale de paramètres $70$ et $0.4$. L'énoncé nous demande de savoir si $P(X\leq 30)\geq 0,7$ ce que l'on peut déterminer facilement à l'aide d'un tableur.</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Polynômes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2570"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2570"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2570,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Schéma de Horner <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2570.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2570,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2570','imageenonce2570');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2570"></a><div class=inner id="innerenonce2570">Soit $P(x)=a_n x^n+a_{n-1}x^{n-1}+\dots+a_0$. Pour évaluer $P(x)$, le mathématicien anglais Horner a proposé la méthode suivante : 
+$$P(x)= (\cdots(((a_n x+a_{n-1})x+a_{n-2})x+a_{n-3})\cdots)x+a_0.$$
+&Eacute;crire une fonction sous Python qui prend en entrée la liste des coefficients d'un polynôme $P$ et un nombre réel $x$ et qui retourne $P(x)$ suivant la méthode de Horner.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2570','imagecorrige2570',2570);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2570"></a><div class=inner id="innercorrige2570" style="display:none;">Voici une fonction qui reproduit le fonctionnement du schéma de Hörner : 
+<pre><code class="language-python">def horner(P,x):
+    n=len(P)
+    valeur=0
+    for i in range(n-1,-1,-1):
+        valeur=valeur*x+P[i]
+    return valeur
+</code></pre>
+Il y a une petite subtilité ici, autour de la boucle : on fait décroître l'indice $i$ de $n$ (le degré du polynôme) jusque 0 (mais il faut mettre -1 comme deuxième indice de la fonction range). On réalise en fait comme première opération $0\times x+a_n$, puis $a_n\times x+a_{n-1}$, etc... d'où ce besoin de faire une boucle où l'indice diminue. <br>
+Si le degré du polynôme est $d$ (qui est égal à $n+1$ dans notre fonction), notre fonction réalise exactement $d+1$ additions et $d+1$ multiplications. On peut descendre à $d$ additions et $d$ multiplications en modifiant un petit peu l'initialisation puis en faisant partir la boucle de $n-2$ :
+<pre><code class="language-python">def horner(P,x):
+    n=len(P)
+    valeur=P[n-1]
+    for i in range(n-2,-1,-1):
+        valeur=valeur*x+P[i]
+    return valeur
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater2612"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2612"),	max:5, rating:2.3846153846154, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2612,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynôme interpolateur de Lagrange <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2612.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(2612,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2612','imageenonce2612');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2612"></a><div class=inner id="innerenonce2612">Soit $n\geq 1$ un entier. On se donne $(n+1)$ réels $x_0,\dots,x_n$ deux à deux distincts, et $y_0,\dots,y_{n}$ une autre liste de $(n+1)$ réels (non nécessairement deux à deux distincts). Pour tout entier $i=0,\dots,n$, on définit le polynôme $L_i$ de $\mathbb R_n[X]$ par 
+$$L_i(x)=\prod_{k=0, k\neq i}^n \frac{X-x_k}{x_i-x_k}$$
+puis le polynôme 
+$$P(X)=\sum_{i=0}^n y_i L_i(X).$$
+<ol class="enumeratechiffre">
+<li> Vérifier que $P(x_i)=y_i$ pour tout $i=0,\dots,n$.
+<li> &Eacute;crire une fonction lagrange qui prend en arguments une liste $x$ de points d'interpolation $x_i$, une liste $y$ de valeurs $y_i$, de même longueur que $x$, $a$ un réel, et qui renvoie la valeur de $P(a)$, où $P$ est le polynôme interpolateur défini précédemment.
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication2612','imageindication2612');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2612"></a><div class=inner id="innerindication2612" style="display:none;"><ol class="enumeratechiffre">
+<li> Que vaut $L_i(x_k)$?
+<li> &Eacute;crire une fonction intermédiaire qui calcule $L_i(a)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2612','imagecorrige2612',2612);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2612"></a><div class=inner id="innercorrige2612" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $i,k\in\{0,\dots,n+1\}$. On remarque que $L_i(x_k)=0$ (car un des termes du produit est nul) sauf si $k=i$. Dans ce cas, tous les termes du produit sont égaux à $1$, et $L_i(x_i)=1$. On en déduit que 
+$$P(x_k)=\sum_{i=0}^n y_i L_i(x_k)=y_k L_k(x_k)=y_k.$$
+Ainsi, $P$ est bien un polynôme interpolateur.
+<li> On commence par écrire une fonction intermédiaire que calcule $L_i(a)$. 
+<pre><code class="language-python">def poly_lagrange(x,i,a):
+    #renvoie L_i(a) où L_i est le i-ème polynôme de Lagrange associé à la liste x
+    resultat=1
+    for k in range(0,len(x)):
+        if (k!=i):
+          resultat=resultat*(a-x[k])/(x[i]-x[k])
+    return resultat
+    
+def lagrange(x,y,a):
+    resultat=0
+    for k in range(0,len(x)):
+        resultat=resultat+y[k]*poly_lagrange(x,k,a)
+    return resultat
+</code></pre>
+</ol></div></div></div>
+
+<div class=titrepartie>Algèbre</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3572"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3572"),	max:5, rating:2.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3572,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Groupe des permutations <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3572.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3572,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3572','imageenonce3572');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3572"></a><div class=inner id="innerenonce3572">Pour $n\in\mathbb N^*,$ on note $S_n$ le groupe des permutations de l’ensemble $\{0,\dots,n-1\}$. Une élément de $S_n$ sera représenté en Python par une liste, dont l’élément d’indice $i$ est l’image de $i$ par cette
+permutation. Par exemple, la liste $[3,1,0,2]$ représente la permutation $\sigma\in S_4$ définie par $\sigma(0)=3,$ $\sigma(1)=1,$ $\sigma(2)=0$ et $\sigma(3)=2.$ 
+<ol class="enumeratechiffre">
+<li> Quelle liste Python représente la transposition $(2\quad 3)\in S_4$ ?
+<li> Écrire une fonction Python $\verb+comp(s1, s2)+$ prenant en entrée deux listes représentant des permutations $\sigma_1$ et $\sigma_2$ du même groupe de permutations et renvoyant la liste représentant la permutation $\sigma_1\circ\sigma_2.$
+<li> Écrire une fonction Python $\verb+inv(s)+$ prenant en entrée une liste représentant une permutation $\sigma$ et renvoyant la liste représentant $\sigma^{-1}$.
+<li> On souhaite tester si un sous-ensemble $G$ de $S_n$ est ou non un sous-groupe de $S_n.$ Écrire une fonction Python $\verb+groupe(G)+$ prenant en entrée une liste de listes, où chaque sous-liste représente une permutation de $S_n$ et renvoyant $\verb+True+$ s’il s’agit bien d’un sous-groupe de $S_n$ et $\verb+False+$ sinon.
+<li> Écrire une fonction Python $\verb+cyclique(s)+$ prenant en entrée une liste $s$ représentant une permutation $\sigma$ $S_n$ et renvoyant le sous-groupe de $S_n$ engendré par $\sigma$ sous la forme d’une liste de listes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3572','imagecorrige3572',3572);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3572"></a><div class=inner id="innercorrige3572" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit de la liste $[0,1,3,2]$.
+<li>
+<pre><code class="language-python">def comp(s1,s2):
+    L=[]
+    for i in range(len(s1)):
+        L.append(s1[s2[i]])
+    return L
+</code></pre>
+<li>
+<pre><code class="language-python">def inv(s):
+    L=[]
+    for i in range(len(s)):
+        L.insert(s[i],i)
+    return L
+</code></pre>
+<li> Il suffit de vérifier que $G$ est non vide, stable par passage à l'inverse et par produit.
+<pre><code class="language-python">def groupe(G):
+    if (len(G)==0):
+        return False
+    for i in range(len(G)):   # on teste si G est stable par inverse
+        if (inv(G[i]) not in G):
+            return False
+    for i in range(len(G)):  # on teste si G est stable par produit
+        for j in range(len(G)):
+            if (comp(G[i],G[j]) not in G):
+                return False
+    return True
+</code></pre>
+<li> On commence par créer une fonction qui vérifie si une permutation est égale à l'identité. Le groupe engendré par $\sigma$ est ensuite l'ensemble $\{\sigma,\sigma^2,\dots,\sigma^k\}$ de sorte que $\sigma^{k+1}$ est l'identité. On calcule donc toutes les puissances de $\sigma$ jusqu'à obtenir l'identité.
+<pre><code class="language-python">def identite(s):
+    for i in range (len(s)):
+        if (s[i]!=i):
+            return False
+    return True
+
+def cyclique(s):
+    G=[s]
+    t=s
+    while (identite(t)==False):
+        t=comp(s,t)
+        G.append(t)
+    return G
+</code></pre>
+</ol></div></div></div>
+
+<div class=titrepartie>Dénombrement</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater2665"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2665"),	max:5, rating:1.2068965517241, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2665,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Partitions d'un entier <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2665.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(2665,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2665','imageenonce2665');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2665"></a><div class=inner id="innerenonce2665">On appelle partition d'un entier naturel $n$ toute suite finie $(\alpha_1,\dots,\alpha_k)\in (\mathbb N^*)^k$ telle que $\alpha_1\geq \cdots\geq\alpha_k$ et $\alpha_1+\cdots+\alpha_k=n$.
+On note $\Gamma_n$ l'ensemble des partitions de l'entier $n$.
+<ol class="enumeratechiffre">
+<li> Déterminer $\Gamma_1,\Gamma_2,\Gamma_3,\Gamma_4$. 
+<li> Pour $j,n\in\mathbb N$, on note $Y_{n,j}$ l'ensemble des partitions de $n$ dont le premier terme est inférieur ou égal à $j$, et on note $y_{n,j}$ le cardinal de $Y_{n,j}$. On convient que $y_{0,0}=1$. 
+<ol class="enumeratechiffre">
+<li> Calculer $y_{n,1}$.
+<li> On se propose de démontrer que, si $2\leq j\leq n$, alors $y_{n,j}=y_{n,j-1}+y_{n-j,\min(j,n-j)}$. Démontrer cette relation pour $j=n$.
+<li> Pour $2\leq j&lt;n$, vérifier que $y_{n,j}=y_{n,j-1}+y_{n-j,j}$ puis conclure.
+</ol>
+<li> &Eacute;crire une fonction Python qui prend en argument un entier $n\geq 1$ et qui renvoie le cardinal de $\Gamma_n$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication2665','imageindication2665');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2665"></a><div class=inner id="innerindication2665" style="display:none;"><ol class="enumeratechiffre">
+<li> 
+<li> 
+<ol class="enumeratechiffre">
+<li> 
+<li> Classer les partitions en deux types.
+<li> Classer les partitions en deux types. Pour conclure, on pourra utiliser que si $q&gt;p$, alors $y_{p,q}=y_{p,p}$.
+</ol>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2665','imagecorrige2665',2665);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2665"></a><div class=inner id="innercorrige2665" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $\Gamma_1=\{(1)\}$, $\Gamma_2=\{(2),(1,1)\}$, $\Gamma_3=\{(3),(2,1),(1,1,1)\}$, $\Gamma_4=\{(4), (3,1), (2,2), (2,1,1), (1,1,1,1)\}$. 
+<li> 
+<ol class="enumeratechiffre">
+<li> Il n'y a qu'une seule partition qui commence par un $1$ : celle qui comporte $n$ fois le chiffre $1$. Donc $y_{n,1}=1$.
+<li> Lorsque $j=n$, on cherche à déterminer toutes les partitions. On les sépare en deux parties disjointes :
+<ul class="rien">
+<li> Les partitions qui commencent par un $n$ : il n'y en a qu'une, la partition $(n)$, et $y_{n-n,0}=y_{0,0}=1$.
+<li> Les partitions qui commencent par un nombre inférieur ou égal à $n-1$ : il y en a $y_{n,n-1}$.
+</ul>
+D'où $y_{n,n}=y_{n,n-1}+y_{0,0}$ qui est le résultat demandé.
+<li> De la même façon, on sépare les partitions de $n$ commençant par un nombre inférieur ou égal à $j$ en deux parties disjointes : 
+<ul class="rien">
+<li> les partitions commençant par $j$; il reste alors $n-j$ à partager en une partition qui commence par un nombre inférieur ou égal à $j$; il y a donc exactement $y_{n-j,j}$ telles partitions.
+<li> les partitions commençant par un nombre inférieur ou égal à $j-1$. Il y a exactement $y_{n,j-1}$ telles partitions.
+</ul>
+On a donc prouvé, pour $2\leq j\leq n-1$, la relation $y_{n,j}=y_{n,j-1}+y_{n-j,j}$. Si $j\leq n-j$, c'est exactement la relation demandée. Si $j&gt;n-j$, alors on a $y_{n-j,j}=y_{n-j,n-j}$ (plus généralement, si $q&gt;p$, alors $y_{p,q}=y_{p,p}$ car toute partition de $p$ qui commence par un nombre inférieur ou égal à $q$ commence en réalité par un nombre inférieur ou égal à $p$). Dans tous les cas, on a prouvé le résultat demandé.
+</ol>
+<li> En utilisant la formule démontrée à la question précédente, en utilisant un tableau, et en faisant attention aux indices et à l'initialisation (par exemple, $y_{n,0}=0$), voici une fonction possible : 
+<pre><code class="language-python">def partitions(n):
+    y=[[1]]
+    for i in range(1,n+1):
+        y.append([0,1])
+        for j in range(2,i+1):
+            y[i].append(y[i][j-1]+y[i-j][min(j,i-j)])
+    return y[n][n]
+</code></pre>
+Par exemple, un appel \verb+partitions(8)+ donne 22.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Récursivité</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater2611"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2611"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2611,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Factorielle <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2611.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(2611,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2611','imageenonce2611');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2611"></a><div class=inner id="innerenonce2611">&Eacute;crire une fonction récursive factorielle qui prend en argument un entier naturel $n$ et renvoie l'entier $n!$.</div></div><div class=indication><a href="javascript:showAll('innerindication2611','imageindication2611');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2611"></a><div class=inner id="innerindication2611" style="display:none;">Utiliser que $n!=n\times (n-1)!$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2611','imagecorrige2611',2611);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2611"></a><div class=inner id="innercorrige2611" style="display:none;">On utilise tout simplement que $n!=n\times (n-1)!$, la condition d'arrêt étant donnée par $0!=1$. On en déduit l'algorithme suivant sous Python : 
+<pre><code class="language-python">def factorielle(n):
+  if (n==0) return 1
+  return n*factorielle(n-1)
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2567"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2567"),	max:5, rating:1.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2567,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Coefficients binomiaux <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2567.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2567,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2567','imageenonce2567');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2567"></a><div class=inner id="innerenonce2567">On rappelle que si $n$, $k$ sont deux entiers naturels, le coefficient binomial $\binom nk$ vérifie 
+<ul class="rien">
+<li> $\binom nk=0$ si $k&gt;n$.
+<li> $\binom n0=\binom nn=1$.
+<li> $\binom nk=\binom {n-1}{k-1}+\binom {n-1}k$ si $1\leq k\leq n-1$.
+</ul>
+&Eacute;crire une fonction récursive permettant de calculer $\binom nk$ à partir des formules précédentes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2567','imagecorrige2567',2567);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2567"></a><div class=inner id="innercorrige2567" style="display:none;"><pre><code class="language-python">def binom(n,k):
+    if (k&gt;n):
+         return 0
+    if (k==0) or (k==n):
+         return 1
+    return binom(n-1,k)+binom(n-1,k-1)
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater2572"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2572"),	max:5, rating:1.8333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2572,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une suite récurrente <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2572.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(2572,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2572','imageenonce2572');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2572"></a><div class=inner id="innerenonce2572">On considère une suite récurrente $(u_n)$ donnée par $u_1=1$, $u_2=3$, et les formules de récurrence :
+$$\left\{
+\begin{array}{rcl}
+u_{2n}&=&u_n^2+5\\
+u_{2n+1}&=&u_n u_{n+1}+7.
+\end{array}\right.
+$$
+<ol class="enumeratechiffre">
+<li> Recopier et compléter la fonction récursive suivante, de sorte que suite(n) renvoie le couple $(u_n,u_{n+1})$.
+<pre><code class="language-python">def suite(n):
+    if n==1:
+        return(1,3)
+    k=n//2
+    a,b=suite(....)
+    if n%2==0:
+        return (...,...)
+    else:
+        return (...,...)
+</code></pre>
+<li> Pour tout entier $n\geq 2$, exprimer en fonction de $n$ le nombre d'appels récursifs que réalise suite(n).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2572','imageindication2572');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2572"></a><div class=inner id="innerindication2572" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li> Encadrer $n$ entre $2^p$ et $2^{p+1}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2572','imagecorrige2572',2572);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2572"></a><div class=inner id="innercorrige2572" style="display:none;"><ol class="enumeratechiffre">
+<li> Voici une solution :
+<pre><code class="language-python">def suite(n):
+    if n==1:
+        return(1,3)
+    k=n//2
+    a,b=lucas4(k)
+    if n%2==0:
+        return (a*a+5,a*b+7)
+    else:
+        return (a*b+7,b*b+5)
+</code></pre>
+Un petit mot d'explication. Si $n$ est pair, $n$ s'écrit $n=2k$ et $a,b=u_k,u_{k+1}$. On doit retourner $u_{2k},u_{2k+1}$, ce que l'on fait avec les formules de l'énoncé. Si $n$ est impair, alors $n$ s'écrit $2k+1$ et $a,b=u_k,u_{k+1}$. On doit retourner $u_{2k+1},u_{2k+2}$ et on écrit la formule donnant $u_{2k+2}$ sous la forme $u_{2k+2}=u_{k+1}^2+5$.
+<li> Démontrons par récurrence sur $p\geq 1$ que si $n$ vérifie $2^p\leq n&lt;2^{p+1}$, alors le nombre d'appels récursifs que réalise suite(n) est exactement égal à $p$.<br>
+Initialisation : si $p=1$, soit $n=2$ ou $n=3$, alors $k=1$, et la fonction suite(n) appelle récursivement suite(1) qui ne fait plus d'appels récursifs. <br>
+Hérédité : soit $p\geq 2$ tel que la propriété soit vraie au rang $p$. Soit $n$ tel que $2^{p+1}\leq n&lt;2^{p+2}$. Alors le $k$ calculé dans la fonction vérifie $2^{p}\leq k&lt;2^{p+1}$. De plus, suite(n) appelle récursivement suite(k). Par hypothèse de récurrence, cette dernière fonction fera $p$ appels récursifs. La fonction suite(n) fera donc en tout $p+1$ appels récursifs, et la propriété est vraie au rang $p+1$.<br>
+Par le principe de récurrence, on a donc démontré que si $p$ est l'entier tel que $2^p\leq n&lt;2^{p+1}$, alors la fonction suite(n) fera $p$ appels récursifs. On rappelle que $p$ est égal à $\lfloor\log_2 n\rfloor$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater2573"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2573"),	max:5, rating:2.7272727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2573,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Complexité de l'algorithme d'exponentiation rapide <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2573.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(2573,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2573','imageenonce2573');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2573"></a><div class=inner id="innerenonce2573">L'algorithme d'exponentiation rapide est basé sur la remarque suivante : on a $a^{2p}=a^p\cdot a^p$ et $a^{2p+1}=a^p\cdot a^p\cdot a$. Ainsi, pour calculer $a^{2p}$, il suffit de savoir calculer $a^p$ et de faire une multiplication, et pour calculer $a^{2p+1}$, il suffit de savoir calculer $a^p$ et de faire deux multiplications. L'algorithme suivant implémente récursivement l'algorithme d'exponentiation rapide sous Python : 
+<pre><code class="language-python">def exporapide(a,n):
+    if n==0:
+        return 1
+    b=exporapide(a,n//2)
+    if (n%2)==1:
+        return b*b*a
+    else:
+        return b*b
+</code></pre>
+Démontrer que, pour tout $n\geq 1$, le nombre total de multiplications effectuées par un appel à exporapide(a,n) est inférieur ou égal à $2+2\lfloor \log_2 n\rfloor$.</div></div><div class=indication><a href="javascript:showAll('innerindication2573','imageindication2573');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2573"></a><div class=inner id="innerindication2573" style="display:none;">Procéder par récurrence forte sur $n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2573','imagecorrige2573',2573);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2573"></a><div class=inner id="innercorrige2573" style="display:none;">On va procéder par récurrence forte sur $n\geq 1$. On fixe $a$ et pour tout $n\geq 1$, notons $\mathcal P(n)$ la propriété "un appel à exporapide(a,n) effectue au plus $2+2\lfloor \log_2 n\rfloor$ multiplications".<br>
+Initialisation : exporapide(a,1) effectue deux multiplications, et $2=2+2\lfloor \log_2 1\rfloor$. <br>
+Hérédité : On suppose que $\mathcal P(k)$ est vraie pour tout $k\leq n-1$ et on va prouver que $\mathcal P(n+1)$ est vraie. On distingue alors deux cas : 
+<ul class="rien">
+<li> ou bien $n$ est pair : dans ce cas, le nombre total de multiplications effectuées par exporapide(a,n) est égal à 1 plus le nombre de multiplications effectuées par exporapide(a,n/2). Par hypothèse de récurrence, le nombre total est inférieur ou égal à  $1+2+2\lfloor\log_2(n/2)\rfloor$. Mais $\log_2(n/2)=\log_2(n)-1$ et donc le nombre d'appels est majoré par $1+2+2\lfloor \log_2(n)\rfloor-2\leq 2+2\lfloor\log_2(n)\rfloor$.
+<li> ou bien $n$ est impair : dans ce cas, exporapide(a,n) effectue deux muliplications et autant de multiplications que exporapide(a,(n-1)/2). Par hypothèse de récurrence, le nombre total de multiplications est donc majoré par 
+$$2+2+2\lfloor\log_2((n-1)/2)\rfloor\leq 4+2\lfloor \log_2(n-1)\rfloor-2\leq 2+2\lfloor\log_2(n)\rfloor.$$
+</ul>
+Dans tous les cas, on a prouvé que $\mathcal P(n)$ est vérifiée.<br>
+Conclusion : par le principe de récurrence fort, $\mathcal P(n)$ est vrai pour tout $n\geq 1$.</div></div></div>
+
+<div class=titrepartie>Analyser des algorithmes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater2098"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2098"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2098,rating); this.setRating(rating);   this.disable();    done();     }});</script> - pgcd <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2098.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(2098,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2098','imageenonce2098');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2098"></a><div class=inner id="innerenonce2098">L'algorithme suivant propose de calculer le pgcd de deux entiers $a$ et $b$, avec $a&gt;b$.
+Fonctionne-t-il? Sinon, corriger cet algorithme.
+<pre><code class="language-python">Lire a
+Lire b
+Tant que (b non nul) Faire
+  a=b
+  b=reste de a par b
+Fin Tant que.
+Afficher a.
+</code></pre></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2098','imagecorrige2098',2098);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2098"></a><div class=inner id="innercorrige2098" style="display:none;">L'algorithme ne fonctionne pas. En effet, imaginons qu'on entre dans la boucle Tant que avec $a=25$ et $b=12$.
+Après la première ligne du Tant que, on a $a=12$ et $b=12$, puis, dès la deuxième ligne, $b=0$.
+Dans tous les cas, l'algorithme va renvoyer la valeur initiale de $b$. Pour le corriger, il faudrait introduire une troisième variable
+$r$, et écrire le Tant que sous la forme suivante : 
+<pre><code class="language-python">Tant que (b non nul) Faire
+  r=reste de a par b
+  a=b
+  b=r
+Fin Tant que.
+</code></pre></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater2099"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2099"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2099,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Marche aléatoire <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2099.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(2099,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2099','imageenonce2099');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2099"></a><div class=inner id="innerenonce2099">Une puce se déplace sur un axe gradué. Au temps $t=0$, la puce est en 0. 
+Si la puce est en $x$, à l'instant $n+1$, elle est en $x+1$ avec probabilité $1/3$,
+en $x+2$ avec probabilité $1/3$, en $x-3$ avec probabilité $1/3$.
+On souhaite programmer un algorithme simulant la position de la puce
+après 50 itérations. On propose l'algorithme suivant :
+<pre><code class="language-python">x=0
+Pour t allant de 1 à 50 Faire
+  Si (random()&lt;1/3) alors x=x+1
+  Si (random()&gt;=1/3) et (random()&lt;2/3) alors x=x+2
+  Si (random()&gt;=2/3) alors x=x-3
+Fin Pour.
+Afficher x.
+</code></pre>
+Cet algorithme fonctionne-t-il? Sinon, le corriger (la fonction random() retourne un nombre
+(pseudo)-aléatoire entre 0 et 1).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2099','imagecorrige2099',2099);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2099"></a><div class=inner id="innercorrige2099" style="display:none;">L'algorithme ne fonctionne pas, car on utilise, dans la même itération de la boucle Pour,
+trois tirages aléatoires différents. Rien ne dit que l'une des trois conditions sera remplie.
+Au contraire, les trois conditions pourraient être remplies. Un algorithme correct est : 
+<pre><code class="language-python">x=0
+Pour t allant de 1 à 50 Faire
+  r=random()
+  Si (r&lt;1/3) alors x=x+1
+  Si (r&gt;=1/3) et (r&lt;2/3) alors x=x+2
+  Si (r&gt;=2/3) alors x=x-3
+Fin Pour.
+Afficher x.
+</code></pre>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater2100"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2100"),	max:5, rating:2.9166666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2100,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Triplets pythagoriciens <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2100.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(2100,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2100','imageenonce2100');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2100"></a><div class=inner id="innerenonce2100">Voici l'énoncé posé à des étudiants : 
+``On rappelle qu'un triplet d'entiers naturels $(a,b,c)$ est un triplet pythagoricien si $a^2+b^2=c^2$.
+&Eacute;crire un algorithme donnant tous les triplets pythagoriciens de sorte que $a+b+c\leq 10000$.''<br>
+Voici les réponses de quelques étudiants. Déterminer les algorithmes qui donnent le bon résultat.
+Expliquer.<br>
+&Eacute;tudiant 1 :
+<pre><code class="language-python">Pour k1 allant de 0 à 10000 faire
+  Pour k2 allant de 0 à 10000 faire
+     Pour k3 allant de 0 à 10000 faire
+         Si $k1^2+k2^2=k3^2$ et k1+k2+k3&lt;=10000 alors afficher (k1,k2,k3) 
+         Fin Si
+     Fin pour
+  Fin pour
+Fin pour.
+</code></pre>
+&Eacute;tudiant 2 : 
+<pre><code class="language-python">a=0, b=0,c=0
+Pour b allant de 0 à 10000
+  $a^2+b^2\to c$.
+  Si a+b+sqrt(c)&lt;10000 et sqrt(c) entier alors afficher (a,b,sqrt(c))
+  c=0;
+  a=a+1;
+Fin Pour.
+</code></pre>
+&Eacute;tudiant 3 : 
+<pre><code class="language-python">a=0, b=0, c=0
+Tant que a+b+c&lt;=10000 faire
+  Tant que a+b+c&lt;=10000 faire
+      afficher(a,b,c)
+      b=b+1
+      c=sqrt(a*a+b*b)
+  Fin tant que
+  a=a+1
+  b=0
+Fin tant que.
+</code></pre>
+&Eacute;tudiant 4 : 
+<pre><code class="language-python">Pour a allant de 0 à 10000 faire
+  Pour b allant de 0 à 10000-a faire
+     Pour c allant de 0 à 10000-a-b faire
+         Si a*a+b*b=c*c afficher (a,b,c) Fin si
+     Fin pour
+   Fin pour.
+Fin pour.
+</code></pre>
+&Eacute;tudiant 5 : 
+<pre><code class="language-python">a=0, b=0
+Tant que a+b+sqrt(a*a+b*b)&lt;=10000 faire
+  b=0
+  Tant que a+b+sqrt(a*a+b*b)&lt;=10000 faire
+      Si Ent(sqrt(a*a+b*b))=sqrt(a*a+b*b) alors afficher (a,b,sqrt(a*a+b*b)) 
+      Fin si
+      b=b+1
+  Fin tant que
+  a=a+1
+Fin tant que.
+</code></pre>
+&Eacute;tudiant 6 : 
+<pre><code class="language-python">Pour a allant de 0 à 10000 faire
+   Pour b allant de 0 à 10000 faire
+      c=0
+      Tant que a+b+c&lt;=10000 faire
+         si a*a+b*b=c*c alors afficher (a,b,c)
+         sinon c=c+1
+      Fin tant que
+   Fin pour.
+Fin pour.
+</code></pre></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2100','imagecorrige2100',2100);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2100"></a><div class=inner id="innercorrige2100" style="display:none;">Analysons les algorithmes un par un. Celui de l'étudiant 1 est parfaitement correct.
+En effet, les boucles permettent de parcourir tous les triplets (a,b,c) où a, b et c sont compris
+entre 0 et 10000, et le test permet de n'afficher que les triplets qui correspondent aux conditions imposées.<br>
+Dans l'algorithme de l'étudiant 2, a et b n'évoluent pas indépendamment. Quand b vaut 0, a vaut 0, quand b vaut 1,
+a vaut 1. L'algorithme ne donnera que les triplets pythagoriciens pour lesquels a=b.<br>
+Dans l'algorithme de l'étudiant 3, on ne teste pas si $\sqrt{a^2+b^2}$ est un entier... L'algorithme 4
+est correct et plus efficace que le premier.<br>
+Le problème de l'algorithme de l'étudiant 5 est plus subtil. En effet, lorsqu'on sort du Tant Que ``imbriqué'', on a 
+$a^2+b^2+\sqrt{a^2+b^2}&gt;10000$. On ne change pas la valeur de $b$ et on fait $a=a+1$. Ainsi, on a toujours
+$a^2+b^2+\sqrt{a^2+b^2}&gt;10000$, et on sort aussi du Tant Que ``externe'' immédiatement.
+On ne teste donc que les valeurs de $a$ pour lesquelles $a=0$.<br>
+Enfin, l'algorithme de l'étudiant 6 comporte une boucle infinie. En effet,
+lorsque la condition $a^2+b^2=c^2$ est remplie, alors on ne fait pas varier $c$, et donc on boucle indéfiniment dans le Tant que
+$a+b+c\leq 10000$ (cette condition d'ailleurs ne testerait pas que $a+b+c\leq 10000$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater2101"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2101"),	max:5, rating:3.9090909090909, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2101,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2101.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(2101,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2101','imageenonce2101');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2101"></a><div class=inner id="innerenonce2101">Dans l'exercice donné aux étudiants, on considère la suite $(S_n)$ définie par
+$$S_n=\sum_{k=0}^n \frac{(-1)^k}{k+1}.$$
+On a prouvé que $(S_n)$ converge vers une limite $\ell$, et que, si on pose $u_n=S_{2n}$ et $v_n=S_{2n+1}$, alors pour tout entier $n$, on a $v_n\leq \ell\leq u_n$. Il est demandé aux étudiants d'écrire un algorithme donnant un encadrement de $\ell$ d'amplitude inférieur ou égal à $0.001$. Voici leurs réponses. Analysez-les.<br>
+&Eacute;tudiant 1 : <br>
+<pre><code class="language-python">n:=2 
+u:=5/6 
+v:=7/12 
+Tant que u-v&gt;0.001 faire
+  u=u-1/(2n)+1/(2n+1)
+  v=u-1/(2n+2)
+Fin Tant que
+Retourner u et v. 
+</code></pre>
+&Eacute;tudiant 2 : 
+<pre><code class="language-python">a=1
+c=1/2 
+n=0 
+b=a 
+d=c 
+tant que (a-c&gt;0.001) faire 
+  n=n+1 
+  b=a
+  a=b+(-1)/(2n+1)+1/(2n+2)
+  d=c 
+  c=d+1/(2n+2)-1/(2n+3) 
+Afficher a et b
+</code></pre>
+&Eacute;tudiant 3 : 
+<pre><code class="language-python">Entrées :  
+u=1 
+v=1/2 
+n=0 
+Traitement : 
+Tant que (v-u&gt;0.001)  
+  n=n+1 
+  u=u+somme{k=0 à 2n}(-1)^k/(k+1)
+  v=v+somme{k=0 à 2n+1}(-1)^k/(k+1) 
+Sortie : u,v 
+</code></pre>
+&Eacute;tudiant 4 : 
+<pre><code class="language-python">Variables : u,v,n,k 
+Initialisation : 
+u=1 
+v=1/2
+k=0 
+n=0 
+Traitement :
+Tant que (u-v&gt;0.001) faire 
+  Pour k allant de 1 à 2n faire 
+     u=u+(-1)^k/k+1 
+  Pour k allant de 1 à 2n+1 faire 
+     v=v+(-1)^k/(k+1)
+  n=n+1
+Sortie : Afficher u,v 
+</code></pre>
+&Eacute;tudiant 5 : 
+<pre><code class="language-python">Variables : a,b,n,u,v 
+Initialisation : 
+u=1 
+v=1/2
+a=1/2 
+b=1 
+Traitement 
+Tant que (a&gt;0.001)  
+  n=n+1 
+  a=1/(2n+2) 
+  b=1/(2n+1) 
+  u=v+b 
+  v=u-a 
+Sortie : u,v 
+</code></pre>
+&Eacute;tudiant 6 : 
+<pre><code class="language-python">s=0 
+t=0 
+Pour k=0 à 1000 faire 
+  s=s+(-1)^k/(k+1) 
+Fin Pour.
+t=s+(-1)^(1001)/1002 
+Afficher s,t 
+</code></pre></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2101','imagecorrige2101',2101);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2101"></a><div class=inner id="innercorrige2101" style="display:none;">&Eacute;tudiant 1 :  l'initialisation est étrange (pourquoi initialiser au rang 2), mais pourquoi pas? Le test d'arrêt est correct, mais la valeur de $n$ n'est jamais changée. Les formules pour calculer u et v seraient correctes (ce qu'on vérifie en exécutant les premières itérations de la boucle) si on ajoutait $n=n+1$ avant la fin du Tant Que.<br>
+&Eacute;tudiant 2 : le test est correct, l'utilisation des variables $b$ et $d$ est superflue. Elle donne l'impression que l'étudiant n'a pas bien compris la notion de variable et ne sait pas que l'on peut faire $a=a+\cdots$. Par ailleurs, le calcul de $a$ et de $c$ est erroné, comment le montre le calcul de la valeur de $u_1$. Enfin, les valeurs retournées ne doivent pas être $a$ et $b$, mais $a$ et $c$.
+<br>
+&Eacute;tudiant 3 : Bonne séparation des parties de l'algorithme (même s'il s'agit plus de la phase dite d'initialisation, ou de variables). On n'entre jamais dans la boucle (mauvais rôle joué par u et v). Dans la boucle, le calcul de u et v est erroné : ou bien on ne rajoute que les termes manquants, ou bien on calcule la somme, mais on ne l'ajoute pas à ce qui a déjà été calculé. De plus, on évite d'utiliser l'instruction somme dans un algorithme (elle n'est pas disponible dans tous les langages de programmation). <br>
+&Eacute;tudiant 4 : Bonne séparation des parties de l'algorithme et stratégie différente pour calculer la somme. Malheureusement, il faut réinitialiser les valeurs de u et de v à 0 au début du Tant Que pour que le calcul fonctionne, et la boucle sur $k$ devrait commencer en $0$ et non en $1$. <br>
+&Eacute;tudiant 5 : La variable $n$ n'est pas initialisée (il faudrait l'initialiser à $n=0$). Sinon, cela fonctionne. Le test est intéressant ainsi que la façon d'ajouter les termes. Là encore, pour se convaincre que l'algorithme fonctionne, il faut le simuler avec les premières itérations.<br>
+&Eacute;tudiant 6 : La démarche de cet étudiant est différente. Il calcule d'abord le nombre de termes de la série qu'il faut calculer pour avoir une bonne approximation. Pour cela, il remarque qu'il veut que $|u_n-v_n|\leq 10^{-3}$ et que $|u_n-v_n|=\frac 1{2n+2}$. Il suffit donc de calculer $u_n$ et $v_n$ avec $n\geq 500$ pour avoir une bonne approximation. C'est ce que fait cet étudiant, qui calcule $S_{1000}=u_{500}$ et $S_{1001}=v_{500}$.</div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

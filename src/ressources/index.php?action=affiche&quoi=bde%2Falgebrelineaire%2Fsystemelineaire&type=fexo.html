@@ -1,0 +1,939 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Systèmes linéaires</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Falgebrelineaire.html">Exercices d'algèbre linéaire</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Systèmes linéaires</h1>
+<div class=titrepartie>Systèmes linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater527"></span><script>var myRating = raterJs( { element:document.querySelector("#rater527"),	max:5, rating:0.87837837837838, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(527,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sans problèmes <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=527.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(527,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce527','imageenonce527');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce527"></a><div class=inner id="innerenonce527">Résoudre les systèmes linéaires suivants :
+$$\left\{
+\begin{array}{rcl}
+x+y+2z&=&3\\
+x+2y+z&=&1\\
+2x+y+z&=&0
+\end{array}\right.
+\quad\quad\quad
+\left\{
+\begin{array}{rcl}
+x+2z&=&1\\
+-y+z&=&2\\
+x-2y&=&1
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication527','imageindication527');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication527"></a><div class=inner id="innerindication527" style="display:none;">Utiliser la méthode du pivot de Gauss.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige527','imagecorrige527',527);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige527"></a><div class=inner id="innercorrige527" style="display:none;">On va utiliser la méthode du pivot de Gauss. Pour le premier système, on écrit
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+y+2z&=&3\\
+x+2y+z&=&1\\
+2x+y+z&=&0
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+y+2z&=&3\\
+y-z&=&-2\quad L_2-L_1\to L_2\\
+-y-3z&=&-6\quad L_3-2L_1\to L_3
+\end{array}\right. \\
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+y+2z&=&3\\
+y-z&=&-2\\
+-4z&=&-8\quad L_3+L_2\to L_3
+\end{array}\right. \\
+&\iff&
+\left\{
+\begin{array}{rcl}
+x&=&-1\\
+y&=&0\\
+z&=&2
+\end{array}\right. \\
+\end{eqnarray*}
+Pour le second système, on procède de la même façon :
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+2z&=&1\\
+-y+z&=&2\\
+x-2y&=&1
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+2z&=&1\\
+-y+z&=&2\\
+-2y-2z&=&0\quad\quad L_3-L_1\to L_3
+\end{array}\right.\\
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+2z&=&1\\
+-y+z&=&2\\
+-4z&=&-4\quad\quad L_3-2L_2\to L_3
+\end{array}\right. \\
+&\iff&
+\left\{
+\begin{array}{rcl}
+x&=&-1\\
+y&=&-1\\
+z&=&1
+\end{array}\right.
+\end{eqnarray*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater528"></span><script>var myRating = raterJs( { element:document.querySelector("#rater528"),	max:5, rating:1.716814159292, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(528,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trop d'inconnues ou d'équations <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=528.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(528,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce528','imageenonce528');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce528"></a><div class=inner id="innerenonce528">Résoudre les systèmes suivants :
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+y+z-3t&=&1\\
+2x+y-z+t&=&-1
+\end{array}\right.
+\quad\quad\quad
+\left\{
+\begin{array}{rcl}
+x+2y-3z&=&4\\
+x+3y-z&=&11\\
+2x+5y-5z&=&13\\
+x+4y+z&=&18
+\end{array}\right.
+\end{eqnarray*}</div></div><div class=indication><a href="javascript:showAll('innerindication528','imageindication528');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication528"></a><div class=inner id="innerindication528" style="display:none;">Appliquer la méthode du pivot de Gauss. Dans le premier système, il y a plus d'inconnues que d'équations. Il faut exprimer certaines inconnues en fonction des autres.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige528','imagecorrige528',528);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige528"></a><div class=inner id="innercorrige528" style="display:none;">Pour le premier système :
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+y+z-3t&=&1\\
+2x+y-z+t&=&-1
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+y+z-3t&=&1\\
+-y-3z+7t&=&-3
+\end{array}\right.
+\end{eqnarray*}
+Le système est triangulaire, et il y a plus d'inconnues que d'équations. On va donc exprimer certaines inconnues en fonctions des autres. Par exemple, ici, on peut exprimer $x$ et $y$ en fonction de $z$ et $t$. Le système devient : 
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+y+z-3t&=&1\\
+-y-3z+7t&=&-3\\
+z&=&z\\
+t&=&t
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+x&=&2z-4t-2\\
+y&=&-3z+7t+3\\
+z&=&z\\
+t&=&t
+\end{array}\right.
+\end{eqnarray*}
+L'ensemble des solutions est donc 
+$$\mathcal S=\left\{(2z-4t-2,-3z+7t+3,z,t);\ (z,t)\in\mathbb R^2\right\}.$$
+Pour le second système, on écrit
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+2y-3z&=&4\\
+x+3y-z&=&11\\
+2x+5y-5z&=&13\\
+x+4y+z&=&18
+\end{array}\right.
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+2y-3z&=&4\\
+y+2z&=&7\quad L_2-L_1\to L_2\\
+y+z&=&5\quad L_3-2L_1\to L_3\\
+2y+4z&=&14\quad L_4-L_1\to L_4
+\end{array}\right.\\
+&\iff&
+\left\{
+\begin{array}{rcl}
+x+2y-3z&=&4\\
+y+2z&=&7\\
+-z&=&-2\quad L_3-L_2\to L_3\\
+0&=&0\quad L_4-2L_2\to L_4
+\end{array}\right.
+\end{eqnarray*}
+La dernière équation, qui est une relation de compatibilité, est vérifiée. On en déduit alors facilement que l'ensemble des solutions est 
+$$\mathcal S=\left\{(4,3,2)\right\}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater535"></span><script>var myRating = raterJs( { element:document.querySelector("#rater535"),	max:5, rating:1.9152542372881, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(535,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Systèmes proches, et pourtant! <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=535.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(535,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce535','imageenonce535');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce535"></a><div class=inner id="innerenonce535">Résoudre les deux systèmes suivants. Qu'en pensez-vous?
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+x+5y+9z&=&180\\
+9x+10y+5z&=&40\\
+10x+9y+z&=&-50\\
+\end{array}\right.
+&\quad\quad&
+\left\{
+\begin{array}{rcl}
+x+5y+9z&=&180\\
+9x+10y+5z&=&41\\
+10x+9y+z&=&-50\\
+\end{array}\right.
+\end{eqnarray*}</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige535','imagecorrige535',535);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige535"></a><div class=inner id="innercorrige535" style="display:none;">On résout le première système par la méthode du pivot de Gauss. En notant $(S)$ ce système, on a
+\begin{eqnarray*}
+(S)&\iff&
+\left\{
+\begin{array}{rcll}
+x+5y+9z&=&180\\
+-35y-76z&=&-1580&\quad L_2-9L_1\\
+-41y-89z&=&-1850&\quad L_3-10L_1
+\end{array}\right.\\
+&\iff&
+\left\{
+\begin{array}{rcll}
+x+5y+9z&=&180\\
+-35y-76z&=&-1580\\
+z&=&30&\quad 35L_3-41L_2
+\end{array}\right.
+\end{eqnarray*}
+On conclut alors facilement que le système admet une solution unique qui vaut (10,-20,30).
+La résolution de l'autre système est très semblable et donne pour solution unique (-66,69,-11).
+Deux systèmes très proches peuvent donc avoir des solutions très différentes. On dit que le système est mal conditionné.</div></div></div>
+
+
+<div class=titrepartie>Systèmes linéaires à paramètres</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater3034"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3034"),	max:5, rating:1.8823529411765, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3034,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Paramètre dans le second membre <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3034.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(3034,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3034','imageenonce3034');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3034"></a><div class=inner id="innerenonce3034">Déterminer, selon la valeur du paramètre $m\in\mathbb R$ et en utilisant l'algorithme de Gauss, l'ensemble des solutions du système :$$\left\{
+\begin{array}{rcl}
+x+y-z&=&1\\
+3x+y-z&=&1\\
+x-2y+2z&=&m\\
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3034','imageindication3034');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3034"></a><div class=inner id="innerindication3034" style="display:none;">Appliquer la méthode du pivot de Gauss de façon standard. L'élimination donne une condition de compatibilité pour que le système possède des solutions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3034','imagecorrige3034',3034);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3034"></a><div class=inner id="innercorrige3034" style="display:none;">Notons $(\mathcal S)$ le système. Alors 
+\begin{eqnarray*}
+(\mathcal S)
+&\iff&\left\{
+\begin{array}{ccccccl}
+x&+&y&-&z&=&1&\\
+&-&2y&+&2z&=&-2&L_2\leftarrow L_2-3L_1\\
+&-&3y&+&3z&=&m-1&L_3\leftarrow L_3-L_1\\
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{ccccccl}
+x&+&y&-&z&=&1&\\
+&&y&-&z&=&1&L_2\leftarrow L_2/-2\\
+&-&3y&+&3z&=&m-1&L_3\\
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{ccccccl}
+x&+&y&-&z&=&1&\\
+&&y&-&z&=&1&\\
+&&&&0&=&m+2&L_3\leftarrow L_3+3L_2\\
+\end{array}\right.
+\end{eqnarray*}
+On peut alors discuter suivant les valeurs de $m$ :
+<ul class="rien">
+<li> Si $m+2\neq 0$, c'est-à-dire si $m\neq -2$, le système n'admet pas de solutions.
+<li> Si $m=-2$, alors le système est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+x&=&0\\
+y&=&1+z
+\end{array}\right.$$
+L'ensemble des solutions est alors $\{(0,z+1,z);\ z\in\mathbb R\}$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater530"></span><script>var myRating = raterJs( { element:document.querySelector("#rater530"),	max:5, rating:1.1234567901235, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(530,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Système et interprétation géométrique <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=530.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(530,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce530','imageenonce530');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce530"></a><div class=inner id="innerenonce530">Soit $m$ un réel. Résoudre le système suivant 
+$$\left\{
+\begin{array}{rcl}
+x+my&=&-3\\
+mx+4y&=&6
+\end{array}\right.$$
+(on pourra discuter en fonction de $m$).
+Quelle interprétation géométrique du résultat faites-vous?</div></div><div class=indication><a href="javascript:showAll('innerindication530','imageindication530');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication530"></a><div class=inner id="innerindication530" style="display:none;">Appliquer la méthode du pivot de Gauss en réalisant $L_2-mL_1\to L_2$. 
+On pourra discuter en fonction de $m$/</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige530','imagecorrige530',530);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige530"></a><div class=inner id="innercorrige530" style="display:none;">On applique la méthode du pivot de Gauss. En laissant inchangée la première ligne et en faisant $L_2-mL_1\to L_2$, le système est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+x+my&=&-3\\
+(4-m^2)y&=&6+3m=3(m+2)
+\end{array}\right.$$
+Discutons alors suivant les valeurs de $m$.
+<ul class="rien">
+<li> Si $m\neq 2$ et $m\neq -2$, $4-m^2$ ne s'annule pas. On en déduit que 
+$$y=\frac{3(m+2)}{4-m^2}=\frac{3(m+2)}{(2-m)(2+m)}=\frac{-3}{m-2}.$$
+On reporte ceci dans la première équation et on trouve
+$$x=-3-my=-3+\frac{3m}{m-2}=\frac{-3m+6+3m}{m-2}=\frac 6{m-2}.$$
+Le système admet donc une unique solution qui est $\left(\frac{6}{m-2},\frac {-3}{m-2}\right).$
+<li> Si $m=2$, alors la dernière ligne devient $0=12$. Le système n'admet pas de solutions.
+<li> Si $m=-2$, alors la dernière ligne devient $0=0$ et le système est équivalent à 
+$$x-2y=-3\iff x=-3+2y.$$
+L'ensemble des solutions est alors 
+$$\mathcal S=\{(-3+2y,y);\ y\in\mathbb R\}.$$
+</ul>
+Géométriquement, on peut en déduire que les deux droites $x+my=-3$ et $mx+4y=6$ sont
+<ul class="rien">
+<li> sécantes si $m\neq 2,-2$;
+<li> parallèles strictement si $m=2$;
+<li> confondues si $m=-2$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater529"></span><script>var myRating = raterJs( { element:document.querySelector("#rater529"),	max:5, rating:1.9615384615385, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(529,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux équations et deux paramètres <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=529.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(529,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce529','imageenonce529');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce529"></a><div class=inner id="innerenonce529">Déterminer suivant la valeur des paramètres $a,b\in\mathbb R$ l'ensemble des solutions du système :$$\left\{
+\begin{array}{rcl}
+ax+y&=&b\\
+x+ay&=&b\\
+\end{array}\right.$$
+</div></div><div class=indication><a href="javascript:showAll('innerindication529','imageindication529');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication529"></a><div class=inner id="innerindication529" style="display:none;">On discutera suivant que $a\neq \pm 1$, $a=1$ ou $a=-1$. Dans ce dernier cas, on pourra encore discuter suivant la valeur de $b$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige529','imagecorrige529',529);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige529"></a><div class=inner id="innercorrige529" style="display:none;">Notons $(S)$ ce système, et appliquons la méthode du pivot de Gauss. En permutant la première et la deuxième ligne, puis en effectuant l'opération $L_2\leftarrow L_1-aL_1,$ on obtient successivement
+\begin{eqnarray*}
+(S)&\iff&\left\{
+\begin{array}{rcll}
+x+ay&=&b\\
+ax+y&=&b
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+x+ay&=&b\\
+(1-a^2)y&=&b(1-a)
+\end{array}\right.
+\end{eqnarray*}
+On discute alors suivant les valeurs de $a$, en remarquant que $1-a^2=0\iff a\in\{-1,1\}$.
+<ul class="rien">
+<li> Si $a\neq 1,-1,$ alors on peut diviser par $1-a^2$ et le système est équivalent à 
+$$\left\{\begin{array}{rcl}
+x+ay&=&b\\
+y&=&\frac{b}{1+a}
+\end{array}\right.
+\iff\left\{\begin{array}{rcl}
+x&=&\frac{b}{1+a}\\
+y&=&\frac b{1+a}.
+\end{array}\right.
+$$
+L'ensemble des solutions est donc $\left\{\left(\frac{b}{1+a};\frac{b}{1+a}\right)\right\}$.
+<li> Si $a=1,$ alors le système est équivalent à 
+$$\left\{\begin{array}{rcl}
+x+y&=&b\\
+0&=&0
+\end{array}\right.
+\iff x=b-y.$$
+L'ensemble des solutions est donc $\left\{\left(b-y;y\right):\ y\in\mathbb R\right\}.$
+<li> Si $a=-1,$ le système est équivalent à 
+$$\left\{\begin{array}{rcl}
+x-y&=&b\\
+0&=&2b.
+\end{array}\right.$$
+On doit encore discuter suivant les valeurs de $b$ :
+<ul class="rien">
+<li> Si $b\neq 0,$ la dernière ligne est incompatible et l'ensemble des solutions est l'ensemble vide.
+<li> Si $b=0,$ le système devient l'unique équation $x=y$, et l'ensemble des solutions est $\{(y;y):\ y\in\mathbb R\}.$
+</ul>
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3192"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3192"),	max:5, rating:1.969696969697, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3192,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre de solutions + quelques cas <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3192.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3192,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3192','imageenonce3192');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3192"></a><div class=inner id="innerenonce3192">Pour tout paramètre $m\in\mathbb R$, on considère le système :
+$$(S_m)\: : \; \left\{
+\begin{array}{ccccccc}
+x & &  &+&2z         &=&4\\
+2x&+&my&+&4z         &=&8-m\\
+-x&-&my&+&(m^2-3m-2)z&=&2m-4\\
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Indiquer le nombre de solutions en fonction du paramètre $m$.
+<li> Donner l'ensemble des solutions dans le cas $m=0$, puis dans le cas $m=1$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3192','imageindication3192');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3192"></a><div class=inner id="innerindication3192" style="display:none;">Mettre le système sous forme triangulaire, puis discuter suivant si les coefficients sur la diagonale sont nuls ou non.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3192','imagecorrige3192',3192);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3192"></a><div class=inner id="innercorrige3192" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par chercher un système triangulaire équivalent : 
+\begin{eqnarray*}
+(S_m)&\iff&\left\{
+\begin{array}{cccccccl}
+x & &  &+&2z         &=&4&\\
+&&my&&         &=&-m&L_2\leftarrow L_2-2L_1\\
+&&-my&+&(m^2-3m)z&=&2m&L_3\leftarrow L_3+L_1\\
+\end{array}\right.
+\\
+&\iff&\left\{
+\begin{array}{cccccccl}
+x & &  &+&2z         &=&4\\
+&&my&&         &=&-m\\
+&&&&(m^2-3m)z&=&m&L_3\leftarrow L_3+L_2\\
+\end{array}\right.
+\end{eqnarray*}
+Remarquons aussi que $m^2-3m=m(m-3)$. On distingue alors 3 cas :
+<ul class="rien">
+<li> Si $m\neq 0$ et $m\neq 3$, le système est triangulaire et les coefficients diagonaux sont non nuls : le système admet une unique solution.
+<li> Si $m=0$, le système est équivalent à l'unique équation $x+2z=4$, dont l'ensemble des solutions est infini.
+<li> Si $m=3$, la dernière ligne du système est $0=3$, et le système n'admet pas de solutions.
+</ul>
+<li> Lorsque $m=0$, on peut réécrire l'unique équation restante, $x+2z=4$, sous la forme $x=4-2z$. L'ensemble des solutions est alors $\mathcal S_0=\{(4-2z,y,z):\ (y,z)\in\mathbb R^2\}$. Si $m=1,$ la résolution du système triangulaire donne immédiatement $\mathcal S_1=\{(5,-1,-1/2)\}$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater2872"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2872"),	max:5, rating:1.3818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2872,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Discussion suivant deux valeurs <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2872.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(2872,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2872','imageenonce2872');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2872"></a><div class=inner id="innerenonce2872">Résoudre le système suivant, en discutant suivant la valeur du paramètre $m$.
+$$\left\{
+\begin{array}{rcl}
+ x+y+mz&=&0\\
+ x+my+z&=&0\\
+ mx+y+z&=&0
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication2872','imageindication2872');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2872"></a><div class=inner id="innerindication2872" style="display:none;">Lorsque $m\neq 1$, on pourra diviser par $m-1$ et remarquer que $1-m^2=(1-m)(1+m)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2872','imagecorrige2872',2872);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2872"></a><div class=inner id="innercorrige2872" style="display:none;">On utilise la matrice augmentée du système 
+\begin{align*}
+ \left(\begin{array}{ccc|c}
+        1&1&m&0\\
+        1&m&1&0\\
+        m&1&1&0
+       \end{array}
+  \right)\\
+    \begin{array}{l}
+     \\
+     L_2-L_1\to L_2\\
+     L_3-mL_1\to L_3
+    \end{array}
+    \quad\left(
+    \begin{array}{ccc|c}
+     1&1&m&0\\
+     0&m-1&1-m&0\\
+     0&1-m&1-m^2&0
+    \end{array}\right)
+\end{align*}
+
+On distingue alors le premier cas $m=1$. Les deux dernières lignes sont nulles et le système est équivalent à
+$$x+y+z=0.$$
+L'ensemble des solutions est $\{(-y-z,y,z): y,z\in\mathbb R\}$.
+
+Lorsque $m\neq 1$, on peut multiplier la deuxième et la troisième ligne par $1/(m-1)$ et on trouve le système équivalent
+
+\begin{align*}
+ \left(\begin{array}{ccc|c}
+        1&1&m&0\\
+        0&1&-1&0\\
+        0&-1&-m-1&0
+       \end{array}
+  \right)\\
+    \begin{array}{l}
+     \\
+     \\
+     L_3+L_2\to L_3
+    \end{array}
+    \quad\left(
+    \begin{array}{ccc|c}
+     1&1&m&0\\
+     0&1&-1&0\\
+     0&0&-m-2&0
+    \end{array}\right)
+\end{align*}
+
+Si $m=-2$, le système est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+ x+y-2z&=&0\\
+ y-z&=&0
+\end{array}\right.$$
+dont l'ensemble des solutions est $\{(z,z,z):z\in\mathbb R\}$. Si $m\neq -2$ (et toujours $m\neq 1$), le système 
+est équivalent à 
+$$\left\{
+\begin{array}{rcl}
+ x+y+mz&=&0\\
+ y-z&=&0\\
+ z&=&0
+\end{array}
+\right.$$
+dont l'unique solution est $(0,0,0)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater531"></span><script>var myRating = raterJs( { element:document.querySelector("#rater531"),	max:5, rating:2.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(531,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Paramètre partout <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=531.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(531,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce531','imageenonce531');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce531"></a><div class=inner id="innerenonce531">Discuter suivant la valeur du paramètre $a\in\mathbb R$ le système 
+$$\left\{
+\begin{array}{rcl}
+ax+(1-a)y+(1-a)z&=&a^2\\
+ax+(1+a)y+(1+a)z&=&a-a^2\\
+x+y+z&=&1-a
+\end{array}\right.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige531','imagecorrige531',531);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige531"></a><div class=inner id="innercorrige531" style="display:none;">Notons $(S)$ ce système, et appliquons la méthode du pivot de Gauss en choisissant la troisième ligne comme pivot :
+\begin{eqnarray*}
+(S)&\iff&\left\{
+\begin{array}{rcll}
+x+y+z&=&1-a&\quad\quad L_3\\
+y+z&=&0&\quad\quad L_2-aL_3\\
+(1-2a)y+(1-2a)z&=&2a^2-a&\quad\quad L_1-aL_3
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+x+y+z&=&1-a\\
+y+z&=&0\\
+a(2a-1)&=&0
+\end{array}\right.
+\end{eqnarray*}
+On distingue alors plusieurs cas. Si $a\notin\{0,1/2\}$, le système n'est pas compatible
+et n'admet donc pas de solutions. Si $a=0$, le système est équivalent à
+$$\left\{
+\begin{array}{rcl}
+x+y+z&=&1\\
+y+z&=&0
+\end{array}\right.$$
+et donc l'ensemble des solutions est $\{(1,y,-y);\ y\in\mathbb R\}$. Si $a=1/2$, le système devient
+$$\left\{
+\begin{array}{rcl}
+x+y+z&=&1/2\\
+y+z&=&0
+\end{array}\right.$$
+et donc l'ensemble des solutions est $\{(1/2,y,-y);\ y\in\mathbb R\}$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater532"></span><script>var myRating = raterJs( { element:document.querySelector("#rater532"),	max:5, rating:3.0384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(532,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dans $\mathbb C$ <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=532.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(532,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce532','imageenonce532');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce532"></a><div class=inner id="innerenonce532">Discuter, suivant la valeur du paramètre $m\in\mathbb C$, le nombre de solutions du système suivant :
+$$\left\{
+\begin{array}{rcl}
+x-my+m^2z&=&m\\
+mx-m^2y+mz&=&1\\
+mx+y-m^3z&=&-1
+\end{array}\right.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige532','imagecorrige532',532);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige532"></a><div class=inner id="innercorrige532" style="display:none;">On applique la méthode du pivot de Gauss et on obtient :
+$$\left\{
+\begin{array}{rcl}
+x-my+m^2z&=&m\\
+mx-m^2y+mz&=&1\\
+mx+y-m^3z&=&-1
+\end{array}\right.
+\iff 
+\left\{
+\begin{array}{rcll}
+x-my+m^2z&=&m\\
+(m-m^3)z&=&1-m^2&\quad\quad L_2-mL_1\to L_2\\
+(1+m^2)y-2m^3z&=&-1-m^2&\quad\quad L_3-mL_1\to L_3
+\end{array}\right.
+$$
+On discute alors suivant la valeur de $m$. Si $m=0$, la deuxième ligne devient $0=1$, et le système est incompatible : il n'admet pas de solutions. Si $m=1$ ou $m=-1$, la deuxième ligne devient $0=0$. Le système est alors équivalent à
+$$
+\left\{
+\begin{array}{rcll}
+x-my+m^2z&=&m\\
+2y-2m^3z&=&-2
+\end{array}\right.
+$$
+Dans ce cas, le système admet une infinité de solutions. L'ensemble des solutions est une droite de $\mathbb R^3$.<br>
+Supposons maintenant $m\neq 0,\pm 1$. Le système est alors équivalent à 
+$$
+\left\{
+\begin{array}{rcll}
+x-my+m^2z&=&m\\
+z&=&\frac 1m\\
+(1+m^2)y&=&-1-m^2+2m^2
+\end{array}\right.
+$$
+Il faut encore discuter : si $m\neq \pm i$, alors on peut déterminer $y$ et le système admet une unique solution. Si $m=\pm i$, la dernière ligne devient $0=-2$, et le système est incompatible.<br>
+En résumé, le système :
+<ul class="rien">
+<li> admet une unique solution si $m\neq 0,\pm 1,\pm i$;
+<li> admet une infinité de solutions (une droite de $\mathbb R^3$) si $m=\pm 1$;
+<li> n'admet pas de solutions si $m=0,\pm i$.
+</ul></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater533"></span><script>var myRating = raterJs( { element:document.querySelector("#rater533"),	max:5, rating:1.8780487804878, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(533,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Plein de cas! <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=533.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(533,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce533','imageenonce533');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce533"></a><div class=inner id="innerenonce533">&Eacute;tudier, suivant les valeurs des paramètres $a,b\in\mathbb R,$ l'existence de solutions du système :
+ $$\left\{\begin{array}{ccccccc} 
+x &+&  by &+& az &=& 1\\
+x &+& aby &+&  z &=& b \\
+ax &+&  by &+&  z &=& 1 \\
+\end{array}\right.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige533','imagecorrige533',533);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige533"></a><div class=inner id="innercorrige533" style="display:none;">On applique la méthode du pivot en notant $(S)$ le système initial :
+\begin{eqnarray*}
+(S)
+
+&\iff&
+\left\{\begin{array}{ccccccll}
+x &+&  by &+& az &=& 1 &{L_1} \cr
+  & & b(a-1)y &+&  (1-a)z &=& b-1 & {L_2 \leftarrow L_2-L_1} \cr
+  &&  b(1-a)y &+&  (1-a^2)z &=& 1-a & {L_3 \leftarrow L_3-aL_1} \cr
+\end{array}\right.\\
+&\iff&
+\left\{\begin{array}{ccccccl}
+x &+&  by &+& az &=& 1  \cr
+  & & b(a-1)y &+&  (1-a)z &=& b-1  \cr
+  &&   &&  (2-a-a^2)z &=& b-a & L_3\leftarrow L_3+L_2
+\end{array}\right.
+\end{eqnarray*}
+
+Nous allons maintenant discuter de l'existence des solutions.
+Remarquons d'abord que $2-a-a^2= -(a-1)(a+2)$.
+Donc si $a\neq 1$ et $a\neq -2$ alors $2-a-a^2\neq 0$
+donc $z=\frac{a-b}{(a-1)(a+2)}$. On a donc trouvé la valeur de $z$.
+La deuxième ligne du système triangulaire est 
+$b(a-1)y +  (1-a)z = b-1$. Or, on sait déjà $a-1\neq 0$.
+Si $b\neq 0$ alors, en reportant la valeur de $z$ obtenue, on trouve la valeur 
+$y= \frac{b-1 - (1-a)z}{b(a-1)}$.
+Puis avec la première ligne on en déduit aussi $x=1-by-az$.
+
+Donc si $a\neq 1$ et $a \neq -2$ et $b\neq 0$ alors il existe une unique solution $(x,y,z)$.
+
+Il faut maintenant s'occuper des cas particuliers.
+  <ul class="rien">
+
+     <li> Si $a=1$ alors notre système triangulaire devient :
+$$\left\{\begin{array}{ccccccc}
+x &+&  by &+&z&=& 1 \cr
+  & & & &  0 &=& b-1 \cr
+  &&   &&  0 &=& b-1 \cr
+\end{array}\right.
+$$ 
+Si $b\neq 1$ il n'y a pas de solution.
+Si $a=1$ et $b=1$
+alors il ne reste plus que l'équation $x+y+z=1$.
+On choisit par exemple $y,z$ comme paramètres, l'ensemble des solutions 
+est $$\big\{(1-y-z,y,z) \mid y,z \in \mathbb R \big\}.$$
+
+  <li> Si $a=-2$ alors le système triangulaire devient :
+$$\left\{\begin{array}{ccccccc}
+x &+&  by &-& 2z &=& 1 \cr
+  & & -3by &+&  3z &=& b-1 \cr
+  &&   &&  0 &=& b+2 \cr
+\end{array}\right.
+$$
+Donc si $b\neq -2$ il n'y a pas de solution. 
+Si $a=-2$ et $b=-2$ alors le système est
+$$\left\{\begin{array}{ccccccc}
+x &-&  2y &-& 2z &=& 1 \cr
+  & & 2y &+&  z &=& -1 \cr
+\end{array}\right.
+$$
+Si l'on choisit $y$ comme paramètre alors il y a une infinité de solutions
+$$\big\{(-1-2y,y,-1-2y) \mid y \in \mathbb R \big\}.$$
+
+    <li> Enfin si $b=0$
+alors la deuxième et troisième ligne du système triangulaire sont :
+$(1-a)z =-1 $ et $(2-a-a^2)z =-a$. Donc $z=\frac{-1}{1-a}=\frac{-a}{2-a-a^2}$
+(le sous-cas $b=0$ et $a=1$ n'a pas de solution).
+Dans tous les cas il n'y a pas de solution.
+</ul>
+
+  Conclusion :
+<ul class="rien">
+  <li> Si $a\neq 1$ et $a\neq -2$ et $b\neq 0$, le système admet une unique solution.
+  <li> Si $a=1$ et $b\neq 1$ il n'y a pas de solution (le système n'est pas compatible).
+  <li> Si $a=1$ et $b=1$ il y a une infinité de solutions (qui forment un plan dans $\mathbb R^3$).
+  <li> Si $a=-2$ et $b\neq -2$ il n'y a pas de solution. 
+  <li> Si $a=-2$ et $b=-2$ il y a une infinité de solutions (qui forment une droite dans $\mathbb R^3$).
+  <li> Si $b=0$ il n'y a pas de solution.
+</ul></div></div></div>
+
+
+<div class=titrepartie>Applications</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater3032"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3032"),	max:5, rating:2.15625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3032,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Équilibrer des équations chimiques <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3032.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(3032,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3032','imageenonce3032');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3032"></a><div class=inner id="innerenonce3032"> Équilibrer les équations chimiques suivantes : 
+ <ol class="enumeratechiffre">
+  <li> $NH_3+O_2\rightarrow NO+H_2O$;
+  <li> $C_2H_6+O_2\rightarrow CO_2+H_2O$.
+ </ol></div></div><div class=indication><a href="javascript:showAll('innerindication3032','imageindication3032');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3032"></a><div class=inner id="innerindication3032" style="display:none;">Il faut placer un entier devant chaque molécule de sorte que le nombre d'atomes de chaque élément soit le même de chaque côté de l'équation.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3032','imagecorrige3032',3032);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3032"></a><div class=inner id="innercorrige3032" style="display:none;"><ol class="enumeratechiffre">
+ <li> Il s'agit de trouver $a$, $b$, $c$ et $d$ de sorte que le nombre d'atomes de chaque élément soit le même de chaque côté de l'équation 
+ $$aNH_3+bO_2\rightarrow cNO+dH_2O.$$
+ Les réels $a,b,c,d$ doivent satisfaire le système 
+ \begin{eqnarray*}
+  \left\{
+ \begin{array}{rcl}
+  a&=&c\\
+  3a&=&2d\\
+  2b&=&c+d
+ \end{array}
+\right.
+&\iff &
+\left\{ \begin{array}{ccccccccccc}
+         a&&&-&c&&&=&0\\
+         3a&&&&&-&2d&=&0\\
+         &&2b&-&c&-&d&=&0
+        \end{array} \right.
+        \\
+&\iff&
+\left\{ \begin{array}{ccccccccccc}
+         a&&&-&c&&&=&0\\
+         &&&&3c&-&2d&=&0&&L_2\leftarrow L_2-3L_1\\
+         &&2b&-&c&-&d&=&0
+        \end{array} \right.
+        \\
+&\iff&
+\left\{ \begin{array}{ccccccccccc}
+         a&&&-&c&&&=&0\\
+         &&2b&-&c&-&d&=&0&& L_2\leftrightarrow L_3\\         
+         &&&&3c&-&2d&=&0&&\\
+        \end{array} \right.
+        \\        
+&\iff&
+        \left\{ \begin{array}{ccccccccccc}
+         a&=&2d/3\\
+         b&=&5d/6&& \\      
+         c&=&2d/3&&\\
+        \end{array} \right.
+        \\   
+\end{eqnarray*}        
+Puisqu'on cherche une solution entière, on peut choisir la valeur $d=6$, et on a donc équilibré la réaction chimique en l'écrivant
+\[ 4NH_3+5O_2\rightarrow 4NO+6H_2O. \]
+<li> On procède en suivant exactement la même méthode, et on équilibre l'équation chimique en 
+\[ 2C_2H_6+7O_2\rightarrow 4CO_2+6H_20 . \]
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater3033"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3033"),	max:5, rating:2.0789473684211, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3033,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Système géométrique <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3033.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(3033,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3033','imageenonce3033');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3033"></a><div class=inner id="innerenonce3033">L'espace est muni d'un repère $(O,\vec i,\vec j,\vec k)$. On considère $\mathcal P_1$ (respectivement $\mathcal P_2$, $\mathcal P_3$)
+ l'ensemble des points $M(x,y,z)$ de l'espace vérifiant :
+ \[ 
+  \begin{array}{cccccccc}
+   \mathcal P_1:& 2x&-&3y&+&4z&=&-3\\
+   \mathcal P_2:& -x&+&2y&+&z&=&5\\
+   \mathcal P_3:&4x&-&5y&+&14z&=&1
+  \end{array}
+ \]
+ <ol class="enumeratechiffre">
+  <li> Quelle est la nature géométrique de chacun des $\mathcal P_i$?
+  <li> Déterminer l'intersection de $\mathcal P_1$, $\mathcal P_2$ et $\mathcal P_3$. Quelle est sa nature géométrique?
+ </ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3033','imagecorrige3033',3033);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3033"></a><div class=inner id="innercorrige3033" style="display:none;"><ol class="enumeratechiffre">
+  <li> Chaque $\mathcal P_i$ est un plan.
+<li> 
+  Un point $M(x,y,z)$ est dans l'intersection de $\mathcal P_1$, $\mathcal P_2$ et $\mathcal P_3$ si et seulement s'il vérifie le système suivant :
+  $$\left\{
+  \begin{array}{ccccccc}
+   -x&+&2y&+&z&=&5\\
+   2x&-&3y&+&4z&=&-3\\
+   4x&-&5y&+&14z&=&1
+  \end{array}
+ \right. $$
+ On résout ce système à l'aide de l'algorithme du pivot de Gauss. Notons $(\mathcal S)$ ce système. Alors 
+ \begin{eqnarray*}
+  (\mathcal S)&\iff&\left\{
+  \begin{array}{ccccccccc}
+   -x&+&2y&+&z&=&5\\
+   &&y&+&6z&=&7 & & L_2\leftarrow L_2+2L_1\\
+   &&3y&+&18z&=&21 && L_3\leftarrow L_2+4L_1
+  \end{array}
+ \right. \\
+  &\iff& \left\{
+  \begin{array}{ccccccccc}
+   -x&+&2y&+&z&=&5\\
+   &&y&+&6z&=&7 & & L_2\leftarrow L_2+2L_1\\
+   &&&&0&=&0 && L_3\leftarrow L_3-3L_2
+  \end{array}
+ \right. \\
+ &\iff&\left\{\begin{array}{ccccc}
+        x&=&9&-&11z\\
+        y&=&7&-&6z
+       \end{array}
+\right.
+\end{eqnarray*}
+L'ensemble des solutions est $\{(9-11z,7-6z,z),\ z\in\mathbb R\}$. Il s'agit d'une droite passant par le point $(9,7,0)$ et de vecteur directeur $(-11,-6,1)$.
+ </ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater2643"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2643"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2643,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynômes vérifiant certaines propriétés <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2643.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(2643,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2643','imageenonce2643');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2643"></a><div class=inner id="innerenonce2643">Déterminer tous les triplets $(a,b,c)\in\mathbb R^3$ tels que le polynôme $P(x)=ax^2+bx+c$ vérifie
+<ol class="enumeratechiffre">
+ <li> $P(-1)=5$, $P(1)=1$ et $P(2)=2$;
+ <li> $P(-1)=4$ et $P(2)=1$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2643','imageindication2643');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2643"></a><div class=inner id="innerindication2643" style="display:none;">En calculant $P(-1)$, $P(1)$ et $P(2)$, on trouve un système de trois équations d'inconnues $a$, $b$ et $c$. Résoudre ce système.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2643','imagecorrige2643',2643);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2643"></a><div class=inner id="innercorrige2643" style="display:none;"><ol class="enumeratechiffre">
+ <li> 
+Puisque $P(-1)=a-b+c$, le triplet $(a,b,c)$ vérifie l'équation $a-b+c=5$. Les valeurs $P(1)=1$ et $P(2)=2$ donnent les autres équations
+$a+b+c=1$ et $4a+2b+c=2$. Ainsi, le triplet $(a,b,c)$ vérifie la propriété demandée si et seulement s'il est solution du système
+$$\left\{
+\begin{array}{rcl}
+ a-b+c&=&5 \\
+ a+b+c&=&1\\
+ 4a+2b+c&=&2
+ \end{array}\right. 
+$$
+On résout alors ce système en utilisant la méthode du pivot de Gauss.
+\begin{eqnarray*}
+ \left\{
+\begin{array}{rcl}
+ a-b+c&=&5 \\
+ a+b+c&=&1\\
+ 4a+2b+c&=&2
+ \end{array}\right. &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a-b+c&=&5 \\
+ 2b&=&-4&L_2\leftarrow L_2-L_1\\
+ 6b-3c&=&-18&L_3\rightarrow L_3-4L_1
+ \end{array}\right. \\
+ &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a-b+c&=&5 \\
+ b&=&-2&\\
+ -12-3c&=&-18
+ \end{array}\right. \\
+ &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a-b+c&=&5 \\
+ b&=&-2&\\
+ c&=&2
+ \end{array}\right. \\
+ &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a&=&1 \\
+ b&=&-2&\\
+ c&=&2
+ \end{array}\right. \\ 
+\end{eqnarray*}
+Le seul triplet qui convient est $(1,-2,2)$, soit le polynôme $P(x)=x^2-2x+2$.
+<li> On applique la même méthode, mais cette fois le système ne comporte que deux équations.
+Il n'aura pas une solution unique, et on va exprimer une inconnue en fonction des autres.
+\begin{eqnarray*}
+\left\{
+\begin{array}{rcl}
+ a-b+c&=&4 \\
+ 4a+2b+c&=&1\\
+ \end{array}\right. &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a-b+c&=&4 \\
+ 6b-3c&=&-15&L_2\leftarrow L_2-4L_1\\
+ \end{array}\right. \\
+  &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a-b+c&=&4 \\
+ c&=&2b+5\\
+ \end{array}\right. \\
+   &\iff& 
+ \left\{
+\begin{array}{rcll}
+ a&=&-b-1 \\
+ c&=&2b+5\\
+ \end{array}\right. \\
+\end{eqnarray*}
+
+ Les triplets solutions sont tous ceux qui s'écrivent $(-b-1,b,2b+5)$ avec $b\in\mathbb R$, qui correspondent
+ aux polynômes $(-b-1)x^2+bx+2b+5$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater432"></span><script>var myRating = raterJs( { element:document.querySelector("#rater432"),	max:5, rating:2.0405405405405, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(432,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fraction rationnelle avec décomposition en éléments simples <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=432.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(432,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce432','imageenonce432');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce432"></a><div class=inner id="innerenonce432">Soit $f(x)=\frac{5x^2+21x+22}{(x-1)(x+3)^2}$, $x\in ]1,+\infty[$.
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe trois réels $a$, $b$ et $c$ tels que
+$$\forall x\in ]1,+\infty[,\ f(x)=\frac a{x-1}+\frac b{x+3}+\frac c{(x+3)^2}.$$
+<li> En déduire la primitive de $f$ sur $]1,+\infty[$ qui s'annule en 2.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication432','imageindication432');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication432"></a><div class=inner id="innerindication432" style="display:none;"><ol class="enumeratechiffre">
+<li> Mettre tout au même dénominateur, et procéder par identification.
+<li> Intégrer chaque "élément simple", et ajuster la constante.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige432','imagecorrige432',432);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige432"></a><div class=inner id="innercorrige432" style="display:none;"><ol class="enumeratechiffre">
+<li> On peut tout mettre au même dénominateur, et procéder par identification. En effet, on a 
+\begin{eqnarray*}
+\frac{a}{x-1}+\frac{b}{x+3}+\frac c{(x+3)^2}&=&
+\frac{a(x+3)^2+b(x-1)(x+3)+c(x-1)}{(x-1)(x+3)^2}\\
+&=&\frac{x^2(a+b)+x(6a+2b+c)+(9a-3b-c)}{(x-1)(x+3)^2}.
+\end{eqnarray*}
+L'égalité demandée sera vérifiée dès que 
+$$\left\{
+\begin{array}{rcl}
+a+b&=&5\\
+6a+2b+c&=&21\\
+9a-3b-c&=&22
+\end{array}\right.$$
+On résout ce système en commençant par remarquer que $a=5-b$. Il est donc successivement équivalent à 
+$$\left\{
+\begin{array}{rcl}
+a&=&5-b\\
+-4b+c&=&-9\\
+-12b-c&=&-23
+\end{array}\right.$$
+$$\iff\left\{
+\begin{array}{rcl}
+a&=&5-b\\
+c&=&-9+4b\\
+-16b&=&-32
+\end{array}\right.$$
+On trouve finalement comme unique solution $a=3$, $b=2$ et $c=-1$, de sorte que 
+$$f(x)=\frac{3}{x-1}+\frac{2}{x+3}-\frac1{(x+3)^2}.$$
+<li> On intègre chacun des éléments simples de la décomposition précédente, en tenant compte du fait que l'on travaille sur l'intervalle $]1,+\infty[$. Les primitives de $f$ sur cet intervalle sont donc les fonctions
+$$F(x)=3\ln(x-1)+2\ln(x+3)+\frac{1}{x+3}+d.$$
+La primitive qui s'annule en $2$ et celle pour laquelle $d$ vérifie l'équation 
+$$3\ln(1)+2\ln 5+\frac 15+d=0.$$
+La primitive de $f$ sur l'intervalle $]1,+\infty[$ qui s'annule en 2 est donc la fonction $F$ définie par
+$$F(x)=3\ln(x-1)+2\ln(x+3)+\frac{1}{x+3}-2\ln 5-\frac 15.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater534"></span><script>var myRating = raterJs( { element:document.querySelector("#rater534"),	max:5, rating:2.4074074074074, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(534,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Système non linéaire <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=534.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(534,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce534','imageenonce534');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce534"></a><div class=inner id="innerenonce534">Résoudre le système suivant, où $x$, $y$ et $z$ sont des réels positifs :
+$$\left\{
+\begin{array}{rcl}
+x^3y^2z^6&=&1\\
+x^4y^5z^{12}&=&2\\
+x^2y^2z^5&=&3.
+\end{array}\right.$$</div></div><div class=indication><a href="javascript:showAll('innerindication534','imageindication534');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication534"></a><div class=inner id="innerindication534" style="display:none;">Passer par le logarithme!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige534','imagecorrige534',534);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige534"></a><div class=inner id="innercorrige534" style="display:none;">On pose $a=\ln x$, $b=\ln y$ et $c=\ln z$ et notons $(S)$ le système.
+La fonction logarithme étant injective, on a :
+\begin{eqnarray*}
+(S)&\iff&\left\{
+\begin{array}{rcl}
+3a+2b+6c&=&0\\
+4a+5b+12c&=&\ln 2\\
+2a+2b+5c&=&\ln 3
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+3a+2b+6c&=&0\\
+7b+12c&=&3\ln 2\\
+2b+3c&=&3\ln 3
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+3a+2b+6c&=&0\\
+7b+12c&=&3\ln 2\\
+-3c&=&21\ln 3-6\ln 2
+\end{array}\right.\\
+&\iff&\left\{
+\begin{array}{rcl}
+a&=&-2\ln 2+6\ln 3\\
+b&=&-3\ln 2+12\ln 3\\
+c&=&2\ln 2-7\ln 3.
+\end{array}\right.
+\end{eqnarray*}
+Ceci donne finalement comme unique solution 
+$$\left\{
+\begin{array}{rcl}
+x&=&2^{-2}3^6\\
+y&=&2^{-3}3^{12}\\
+z&=&2^23^{-7}.
+\end{array}\right.
+$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater536"></span><script>var myRating = raterJs( { element:document.querySelector("#rater536"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(536,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application géométrique <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=536.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(536,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce536','imageenonce536');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce536"></a><div class=inner id="innerenonce536">Soit $n\geq 3$. Discuter l'existence et l'unicité dans le plan d'un polygone à $n$ côtés dont les milieux des côtés sont fixés.</div></div><div class=indication><a href="javascript:showAll('innerindication536','imageindication536');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication536"></a><div class=inner id="innerindication536" style="display:none;">Interpréter ceci en terme d'affixes de points et d'un système linéaire à résoudre dans $\mathbb C$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige536','imagecorrige536',536);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige536"></a><div class=inner id="innercorrige536" style="display:none;">On va raisonner en termes d'affixes dans le plan complexe. Soient $a_1,\dots,a_n$ les affixes des milieux fixés. On cherche des points $M_1,\dots,M_n$ dont les affixes respectives $z_1,\dots,z_n$ sont solutions du système
+$$\left\{
+\begin{array}{rcl}
+z_1+z_2&=&2a_1\\
+z_2+z_3&=&2a_2\\
+\vdots&\vdots&\vdots\\
+z_{n-1}+z_n&=&2a_{n-1}\\
+z_n+z_1&=&2a_n.
+\end{array}
+\right.$$
+Le problème admet une solution si et seulement si le système admet une solution, et la solution du problème est unique si et seulement si la solution du système est unique. On doit donc résoudre ce système. Pour cela, effectuons l'opération $L_1-L_2+L_3+\dots+(-1)^{n-1} L_{n}\to L_1$. Le système est alors équivalent à 
+$$\left\{
+\begin{array}{rcl}
+(1+(-1)^{n-1})z_1&=&2(a_1-a_2+\dots+(-1)^{n-1}a_n)\\
+z_2+z_3&=&2a_2\\
+\vdots&\vdots&\vdots\\
+z_{n-1}+z_n&=&2a_{n-1}\\
+z_n+z_1&=&2a_n.
+\end{array}
+\right.$$
+On peut alors discuter suivant la parité de $n$.
+<ul class="rien">
+<li> Si $n$ est impair, alors $1+(-1)^{n-1}=2$, la première ligne donne $z_1$ et en poursuivant à partir de la dernière ligne, on trouve que le système (et donc le problème) admet une unique solution.
+<li> Si $n$ est pair, alors la première ligne est une relation de compatibilité 
+$$a_1-a_2+\dots+(-1)^{n-1}a_n=0.$$
+Si cette condition n'est pas remplie, le système n'admet pas de solutions. Si la condition est remplie, alors on peut choisir une inconnue comme paramètre et exprimer toutes les inconnues en fonction de celle-ci. Le système admet une infinité de solutions.
+</ul></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

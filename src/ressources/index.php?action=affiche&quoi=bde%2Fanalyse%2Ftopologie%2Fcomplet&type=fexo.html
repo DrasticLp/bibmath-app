@@ -1,0 +1,588 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Espaces complets, espaces de Banach</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Base de données d'exercices</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Espaces complets, espaces de Banach</h1><div class=titrepartie>Suites de Cauchy</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1574"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1574"),	max:5, rating:1.6976744186047, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1574,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une CNS de convergence <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1574.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1574,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1574','imageenonce1574');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1574"></a><div class=inner id="innerenonce1574">Soit $(E,\|\cdot\|)$ un espace vectoriel normé et $(x_n)_{n\in\mtn}$ une
+suite d'éléments de $E$. On suppose que $(x_n)$ est de Cauchy.
+Montrer qu'elle converge si et seulement si elle admet une sous-suite
+convergente.</div></div><div class=indication><a href="javascript:showAll('innerindication1574','imageindication1574');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1574"></a><div class=inner id="innerindication1574" style="display:none;">Une suite convergente admet toujours une sous-suite convergente. S'il existe une sous-suite convergente vers $l$, montrer à l'aide de l'inégalité triangulaire que la suite converge vers la même limite.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1574','imagecorrige1574',1574);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1574"></a><div class=inner id="innercorrige1574" style="display:none;">Une suite convergente admet toujours une sous-suite convergente. Réciproquement, si $(u_n)$ admet une sous-suite $(u_{\varphi(n)})$ qui converge vers $l$, on fixe $\veps&gt;0$. Puisque $(u_n)$ est de Cauchy, il existe $N_1$ tel que $$n,p\geq N_1\implies \|u_n-u_p\|\leq \veps.$$
+On fixe ensuite  $n_0$ tel que $\varphi(n_0)&gt;N_1$ et $\|u_{\varphi(n_0)}-l\|\leq \veps$. Pour $n\geq\varphi(n_0)\geq N_1$, on a d'après l'inégalité triangulaire :
+$$\|u_n-l\|\leq \|u_n-u_{\varphi(n_0)}\|+\|u_{\varphi(n_0)}-l\|\leq 2\veps.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1573"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1573"),	max:5, rating:2.1463414634146, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1573,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Suite de Cauchy et séries <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1573.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1573,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1573','imageenonce1573');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1573"></a><div class=inner id="innerenonce1573">Soit $(X,d)$ un espace métrique et $(x_n)$ une suite de $X$. Démontrer que si $\sum_{n\geq 1}d(x_n,x_{n+1})&lt;+\infty$, alors la suite $(x_n)$ est de Cauchy. La réciproque est-elle vraie?</div></div><div class=indication><a href="javascript:showAll('innerindication1573','imageindication1573');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1573"></a><div class=inner id="innerindication1573" style="display:none;">Un sens se déduit facilement de l'inégalité triangulaire. Pour la réciproque, penser à une série convergente non absolument convergente.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1573','imagecorrige1573',1573);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1573"></a><div class=inner id="innercorrige1573" style="display:none;">Supposons que $\sum_{n\geq 1}d(x_n,x_{n+1})&lt;+\infty$. Alors, la suite $(S_n)$ définie par 
+$S_n=\sum_{k=1}^{n}d(x_k,x_{k+1})$ est de Cauchy. Pour tout $\veps&gt;0$, il existe $N\in\mathbb N$ tel que, pour $q\geq p\geq  N$, on a 
+$$\sum_{k=p}^{q-1} d(x_k,x_{k+1})&lt;\veps.$$
+Par l'inégalité triangulaire, on a 
+$$d(x_p,x_q)\leq d(x_p,x_{p+1})+d(x_{p+1},x_{p+2})+\dots+d(x_{q-1},x_q)&lt;\veps.$$
+Ainsi, la suite $(x_k)$ est de Cauchy. <br>
+La réciproque est fausse. Travaillons avec $X=\mathbb R$ muni de sa métrique usuelle et posons
+$x_n=\sum_{k=1}^n \frac{(-1)^k}k$. Alors la suite $(x_n)$ converge d'après le critère des séries alternées, donc elle est de Cauchy. Mais, $d(x_n,x_{n+1})=\frac 1{n+1}$, qui est le terme général d'une série divergente.</div></div></div>            
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2408"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2408"),	max:5, rating:1.2903225806452, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2408,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonction asymptotiquement linéaire <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2408.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2408,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2408','imageenonce2408');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2408"></a><div class=inner id="innerenonce2408">Soit $f:\mathbb R\to\mathbb R$ une fonction continue telle qu'il existe $a&gt;0$ satisfaisant, pour tous $x,y\in\mathbb R$,
+$$|f(x+y)-f(x)-f(y)|\leq a.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $y\in\mathbb R$ et tout $k\geq 1$, 
+$$|f(2^k y)-2^kf(y)|\leq 2^k a.$$
+ <li> En déduire que, pour tout $x\in\mathbb R$, la suite $\left(\frac{f(2^n x)}{2^n}\right)$ est une suite de Cauchy.
+ <li> En déduire que la fonction $g(x)=\lim_n \frac{f(2^n x)}{2^n}$ existe et qu'elle vérifie, pour tous $x,y\in\mathbb R$, 
+ $$g(x+y)=g(x)+g(y).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2408','imageindication2408');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2408"></a><div class=inner id="innerindication2408" style="display:none;"><ol class="enumeratechiffre">
+ <li> Inégalité triangulaire.
+ <li> Appliquer l'inégalité précédente à $y=2^n x$.
+ <li> Utiliser l'inégalité connue sur $f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2408','imagecorrige2408',2408);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2408"></a><div class=inner id="innercorrige2408" style="display:none;"><ol class="enumeratechiffre">
+ <li> D'après l'inégalité triangulaire, on a 
+ \begin{eqnarray*}
+|f(2^k y)-2^k f(y)|&\leq&|f(2^k y)-2f(2^{k-1}y)|+2|f(2^{k-1}y)-2f(2^{k-2}y)|+\cdots\\
+&&+2^{k-1}|f(2y)-2f(y)|\\
+&\leq&a+2a+\cdots+2^{k-1}a\\
+&\leq&2^k a.
+ \end{eqnarray*}
+ <li> Soit $n\geq 0$ et $k\geq 0$. L'inégalité précédente appliquée à $y=2^n x$, et après division par $2^{n+k}$, donne 
+ $$\left|\frac{f(2^{n+k}x)}{2^{n+k}}-\frac{f(2^n x)}{2^n}\right|\leq \frac{a}{2^n}.$$
+ Ceci montre que la suite $(u_n)$ définie par $u_n=\frac{f(2^n x)}{2^n}$ est une suite de Cauchy. En effet, choisissons $\veps&gt;0$. Alors
+ il existe $N\geq 1$ tel que $a/2^N\leq \veps$. Pour $p\geq n\geq N$, écrivant $p=n+k$ avec $k\geq 0$, l'inégalité précédente donne
+ $$|u_p-u_n|\leq \frac{a}{2^n}\leq \veps.$$
+ <li> La suite $(u_n)$ étant de Cauchy dans l'espace complet $\mathbb R$, elle converge. La fonction $g$ vérifie la propriété demandée car, de l'inégalité sur la fonction $f$, on tire,
+ pour tous $x,y\in\mathbb R$ et tout $n\geq 1$, 
+ $$\left|\frac{f(2^n(x+y))-f(2^n x)-f(2^n y)}{2^n}\right|\leq\frac{a}{2^n}.$$
+ Passant à la limite quand $n$ tend vers l'infini, on trouve
+ $$|g(x+y)-g(x)-g(y)|=0$$
+ ce qu'il fallait démontrer.
+</ol></div></div></div>
+
+<div class=titrepartie>Espaces complets</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1604"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1604"),	max:5, rating:1.5172413793103, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1604,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas une bonne distance <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1604.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1604,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1604','imageenonce1604');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1604"></a><div class=inner id="innerenonce1604">Soit $X=]0,+\infty[$. Pour $x,y\in X$, on note 
+$$\delta(x,y)=\left|\frac{1}{x}-\frac{1}{y}\right|.$$
+Montrer que $\delta$ est une distance sur $X$. L'espace métrique $(X,\delta)$ est-il complet?
+</div></div><div class=indication><a href="javascript:showAll('innerindication1604','imageindication1604');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1604"></a><div class=inner id="innerindication1604" style="display:none;">Pour vérifier que $\delta$ est une distance, il faut vérifier 3 conditions. Vérifier ensuite que la suite $(n)$ est de Cauchy, mais qu'elle ne converge pas.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1604','imagecorrige1604',1604);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1604"></a><div class=inner id="innercorrige1604" style="display:none;">$\delta$ est une distance. En effet, on a :
+<ul class="rien">
+<li> $\delta(x,y)=\delta(y,x)$.
+<li> $\delta(x,z)=\left|\frac{1}{x}-\frac{1}{z}\right|\leq\left|\frac{1}{x}-\frac{1}{y}\right|+\left|\frac{1}{y}-\frac{1}{z}\right|=\delta(x,y)+\delta(y,z).$
+<li> $\delta(x,y)=0$ si et seulement si $x=y$.
+</ul>
+L'espace $(X,\delta)$ est donc un espace métrique. Il n'est pas complet. Prenons en effet la suite $(u_n)$ définie pour $n\geq 1$ par $u_n=n$. Cette suite $(u_n)$ est de Cauchy. En effet,
+$$\delta(u_n,u_{n+p})\leq\frac{1}{n}+\frac{1}{n+p}\leq\frac{2}{n}.$$
+Cette suite est donc une suite de Cauchy. Elle ne peut converger, car si sa limite était $l$, on aurait :
+$$\left|\frac{1}{n}-\frac{1}{l}\right|\to 0,$$ 
+ce qui entraîne $1/l=0$ ce qui est bien sûr impossible. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1605"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1605"),	max:5, rating:1.4705882352941, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1605,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pas une bonne norme! <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1605.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1605,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1605','imageenonce1605');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1605"></a><div class=inner id="innerenonce1605">Soit $E$ l'espace vectoriel des fonctions continues de $[-1,1]$ à
+valeurs dans $\mtr$. On définit une norme sur $E$ en posant
+$$\|f\|_1=\int_{-1}^1 |f(t)| \,dt.$$ On va montrer que $E$ muni de
+cette norme n'est pas complet. Pour cela, on définit une suite
+$(f_n)_{n\in\mtn^*}$ par
+\[f_n(t)=\begin{cases} -1 &\text{si } -1\le t \le -\frac1n\\
+nt &\text{si } -\frac1n\le t \le \frac1n\\
+1 &\text{si } \frac1n \le t\le 1.
+\end{cases}\]
+<ol class="enumeratechiffre">
+<li> Vérifier que $f_n\in E$ pour tout $n\ge 1$.
+<li> Montrer que $$\|f_n-f_p\|_1\le \sup(\frac2n,\frac2p)$$ et en
+déduire que $(f_n)$ est de Cauchy.
+<li> Supposons qu'il existe une fonction $f\in E$ telle que $(f_n)$
+converge vers $f$ dans $(E,\|\cdot\|_1)$. Montrer qu'alors on a
+$$\lim_{n\rightarrow+\infty}\int_{-1}^{-\alpha} |f_n(t)-f(t)|\, dt=0
+\qquad \text{et} \qquad \lim_{n\rightarrow+\infty}\int_{\alpha}^1
+|f_n(t)-f(t)|\, dt=0$$ pour tout $0&lt;\alpha&lt;1$.
+<li> Montrer qu'on a $$\lim_{n\rightarrow+\infty}\int_{-1}^{-\alpha}
+|f_n(t)+1|\, dt=0
+\qquad \text{et} \qquad \lim_{n\rightarrow+\infty}\int_{\alpha}^1
+|f_n(t)-1|\, dt=0$$ pour tout $0&lt;\alpha&lt;1$.
+En déduire que
+\begin{align*}
+&f(t)=-1\qquad &\forall t\in[-1,0[\\
+&f(t)=1\qquad &\forall t\in ]0,1].
+\end{align*}
+Conclure.</div></div><div class=indication><a href="javascript:showAll('innerindication1605','imageindication1605');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1605"></a><div class=inner id="innerindication1605" style="display:none;"><ol class="enumeratechiffre">
+<li> Vérifier la continuité en $1/n$ et $1/n$.
+<li> Supposer par exemple $n\leq p$, et calculer l'intégrale.
+<li> L'intégrale d'une fonction positive sur une partie d'un segment est inférieure ou égale à l'intégrale de cette fonction sur tout le segment.
+<li> Calculer les intégrales pour $1/n&lt;\alpha$.  Utiliser la continuité de $f$  et l'inégalité triangulaire pour prouver que $f$ est nécessairement égal à 1 sur $]0,1]$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1605','imagecorrige1605',1605);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1605"></a><div class=inner id="innercorrige1605" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de vérifier la continuité en $1/n$ et $-1/n$. Mais si $t$ tend vers $1/n$, alors $nt$ tend vers 1, ce qui prouve la continuité en $1/n$. De même en $-1/n$.
+<li> On suppose $n\leq p$. On a alors :
+\begin{eqnarray*}
+\|f_n-f_p\|_1&\leq&\int_{-1/n}^{1/n}|f_n(t)-f_p(t)|dt.
+\end{eqnarray*}
+Or, $f_n$ et $f_p$ sont toujours du même signe, et donc :
+$$|f_n(t)-f_p(t)|\leq |f_n(t)|=1.$$
+En intégrant, on obtient le résultat.
+<li> L'intégrale d'une fonction positive sur une partie d'un segment est inférieure ou égale à l'intégrale de cette fonction sur tout le segment. On a en particulier :
+$$\int_\alpha^1 |f(t)-f_n(t)|\leq \int_{-1}^1 |f(t)-f_n(t)|=\|f-f_n\|\to 0.$$
+De même pour l'intégrale entre $-\alpha$ et $1$.
+<li> C'est même plus fort que cela! En effet, si $n$ est assez grand pour que $1/n&lt;\alpha$, on a exactement :
+$$\int_{\alpha}^1|f_n(t)-1|dt=0.$$
+Fixons maintenant $\alpha&gt;0$. On a, par l'inégalité triangulaire :
+\begin{eqnarray*}
+\int_\alpha^1 |f(t)-1|dt&\leq&\int_{\alpha}^1 |f(t)-f_n(t)|dt+\int_{\alpha}^1 |f_n(t)-1|dt
+\end{eqnarray*}
+Faisant tendre $n$ vers $+\infty$, on prouve finalement que :
+$$\int_\alpha^1 |f(t)-1|dt=0.$$
+Puisque $t\mapsto |f(t)-1|$ est continue sur $[\alpha,1]$ et que c'est une fonction positive, la nullité de son intégrale entraîne que cette fonction est elle-même identiquement nulle sur $[\alpha,1]$. Puisque $\alpha$ est arbitraire, on obtient finalement que $f(t)=1$ sur $]0,1]$. Le raisonnement est le même sur l'intervalle $[-1,0[$. On obtient alors une absurdité, puisqu'une telle fonction $f$ ne peut pas être continue en 0. L'espace n'est pas complet!
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1606"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1606"),	max:5, rating:1.56, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1606,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un espace de fonctions <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1606.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1606,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1606','imageenonce1606');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1606"></a><div class=inner id="innerenonce1606">Soit $X$ un ensemble. On note $B(X,\mtr)$ l'espace vectoriel des fonctions bornées de $X$ dans $\mtr$. On munit $B(X,\mtr)$ d'une norme $\|\cdot\|$ en posant 
+$$\forall f\in B(X,\mtr),\ \|f\|=\sup_{x\in X}|f(x)|.$$
+Montrer que $(B(X,\mtr),\|\cdot\|)$ est un espace de Banach.</div></div><div class=indication><a href="javascript:showAll('innerindication1606','imageindication1606');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1606"></a><div class=inner id="innerindication1606" style="display:none;">La preuve de la complétude d'un espace métrique est hyper-classique :
+<ul class="rien">
+<li> On considère une suite de Cauchy.
+<li> On construit sa limite éventuelle, en utilisant d'autres outils ou bien la complétude d'un autre espace.
+<li> On vérifie que cette limite appartient à l'ensemble de départ.
+<li> On montre que la suite de Cauchy converge vers cette limite éventuelle.
+</ul></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1606','imagecorrige1606',1606);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1606"></a><div class=inner id="innercorrige1606" style="display:none;">Soit $(f_n)$ une suite de Cauchy de $B(X,\mtr)$. Fixons $x\in X$. Pour tous $p,q$ appartenant à $\mathbb N$, on a : $|f_p(x)-f_q(x)|\leq\|f_p-f_q\|$. La suite $(f_n(x))$ est donc de Cauchy dans $\mtr$, et comme $\mtr$ est complet, la suite $(f_n(x))$ converge. On note $f(x)$ sa limite. On définit ainsi une application $f$ de $X$ dans $\mtr$. Cette application est bornée. En effet, la suite $(f_n)$ est une suite de Cauchy, elle est donc bornée par une constante $M$. Mais alors, pour tout $x\in X$, on a : $|f_n(x)|\leq \|f_n\|\leq M$. Par passage à la limite, on a donc $|f(x)|\leq M$, et ceci prouve que $f\in B(X,\mtr)$, avec $\|f\|\leq M$. Il reste à prouver que $(f_n)$ converge vers $f$ dans $B(X,\mtr)$. Soit $\veps&gt;0$. Il existe un entier $N&gt;0$ tel que, pour tous $p,q&gt;N$, on a :
+$$\|f_p-f_q\|\leq\veps.$$
+On fixe $x$ dans $X$. On a donc :
+$$|f_p(x)-f_q(x)|\leq\veps.$$
+On fait tendre $p$ vers $+\infty$. On a donc :
+$$|f(x)-f_q(x)|\leq\veps.$$
+Puisque cette inégalité est vraie pour tout $x$ dans $X$, on a :
+$$\|f-f_q\|\leq\veps.$$
+Ceci est vrai pour tout $q\geq N$, et donc $(f_q)$ converge vers $f$.<br>
+Finalement, toute suite de Cauchy $(f_n)$ de $B(x,\mtr)$ converge, donc $B(X,\mtr)$ est complet.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1607"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1607"),	max:5, rating:1.6086956521739, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1607,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions $C^1$ <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1607.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1607,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1607','imageenonce1607');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1607"></a><div class=inner id="innerenonce1607">Soit $E=\mathcal C^1([0,1])$ que l'on munit de $N(f)=\|f\|_\infty+\|f'\|_\infty$. Démontrer que $(E,N)$ est un espace complet.</div></div><div class=indication><a href="javascript:showAll('innerindication1607','imageindication1607');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1607"></a><div class=inner id="innerindication1607" style="display:none;">Utiliser que $\mathcal C([0,1])$ muni de $\|\cdot\|_\infty$ est complet, ainsi que des résultats sur la convergence uniforme.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1607','imagecorrige1607',1607);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1607"></a><div class=inner id="innercorrige1607" style="display:none;">Soit $(f_n)$ une suite de Cauchy de $(E,N)$. Alors $(f_n)$ est une suite de Cauchy de $\mathcal C([0,1])$ muni de $\|\cdot\|_\infty$. Ce dernier espace étant complet, la suite $(f_n)$ converge vers une fonction $f$ continue. De même, la suite $(f_n')$ est une suite de Cauchy du même espace. Elle converge donc vers une fonction $g$ continue. Ainsi, la suite $(f_n)$ converge uniformément sur $[0,1]$ vers $f$ et la suite $(f_n')$ converge uniformément sur $[0,1]$ vers $g$. Des théorèmes sur la convergence uniforme des suites de fonctions, on déduit que $f$ est $C^1$ et que $f'=g$. De plus, dire que $\|f_n-f\|_\infty$ et $\|f_n'-f'\|_\infty$ tendent vers zéro implique que $N(f_n-f)$ tend vers 0 et donc que $(f_n)$ converge vers $f$ dans $E$. L'espace $(E,N)$ est bien complet.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1609"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1609"),	max:5, rating:1.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1609,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un espace de suites <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1609.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1609,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1609','imageenonce1609');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1609"></a><div class=inner id="innerenonce1609">On note $\ell^1$ l'espace vectoriel des suites $x=(x(k))_{k\in\mtn}$ réelles vérifiant :
+$$\|x\|=\sum_{k=0}^{+\infty}|x(k)|&lt;+\infty.$$
+On admettra que l'on définit ainsi une norme sur $\ell^1$. On cherche à prouver que $\ell^1$ est un espace de Banach. Soit donc $(x_n)_{n\in\mtn}$ une suite de Cauchy d'éléments de $\ell^1$. Etant donné $\veps&gt;0$, il existe donc $N(\veps)\in\mtn$ tel que, si $n,l\geq N(\veps)$, alors :
+$$\|x_n-x_l\|\leq\veps.$$
+<ol class="enumeratechiffre">
+<li> Montrer qu'on a alors, pour tout $k\in\mtn$, et pour tous $n,l\geq N(\veps)$
+$$\left|x_n(k)-x_l(k)\right|\leq\veps.$$
+<li> Montrer que $\lim_{n\to+\infty}x_n(k)$ existe pour tout $k\in\mtn$.
+<li> Montrer qu'il existe $K\in\mtn$ tel que 
+$$\sum_{k\geq K}|x_{N(\veps)}(k)|\leq \veps.$$
+<li> Montrer que pour tout $L\geq K$, on a :
+$$\sum_{K\leq k\leq L}|x(k)|\leq2\veps.$$
+<li> En déduire que l'on a $x\in\ell^1$, et que :
+$$\lim_{n\to+\infty}\|x_n-x\|=0.$$ 
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1609','imageindication1609');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1609"></a><div class=inner id="innerindication1609" style="display:none;"><ol class="enumeratechiffre">
+<li> Un élément est plus petit que la somme.
+<li> $\mtr$ est complet.
+<li> $x_{N(\veps)}$ est élément de $\ell^1$, et le reste d'une série convergente devient de plus en plus petit.
+<li> Démontrer d'abord le résultat pour $x_n(k)$ à la place de $x(k)$  (utiliser l'inégalité triangulaire), puis passer à la limite!
+<li> Faire tendre $L$ vers $+\infty$ dans la question précédente, puis décomposer la somme en somme de 1 à $K-1$ puis de $K$ à $+\infty$. La première somme est finie, il n'y a pas de problèmes pour passer à la limite. Pour la seconde, utiliser les questions précédentes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1609','imagecorrige1609',1609);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1609"></a><div class=inner id="innercorrige1609" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est clair que :
+$$|x_n(k)-x_l(k)|\leq \|x_n-x_l\|\leq\veps.$$
+<li> La suite $(x_n(k))_{n\geq 1}$ est de Cauchy dans $\mtr$. Elle est donc convergente, puisque $\mtr$ est complet.
+<li> Puisque $x_{N(\veps)}$ est élément de $\ell^1$, la série $\sum_{k\geq 0}|x_{N(\veps)}(k)|$ est convergente. En particulier, son reste devient infiniment petit. Il existe donc $K\in\mtn$ tel que :
+$$\sum_{k\geq K}|x_{N(\veps)}(k)|\leq \veps.$$
+<li> Fixons $n\geq N(\veps)$. Par l'inégalité triangulaire, on a :
+\begin{eqnarray*}
+\sum_{k=K}^L |x_n(k)|&\leq&\sum_{k=K}^L |x_n(k)-x_{N(\veps)}(k)|+\sum_{k=K}^L |x_{N(\veps)}(k)|\\
+&\leq&\|x_n-x_{N(\veps)}\|+\veps\\
+&\leq&2\veps.
+\end{eqnarray*}
+On passe à la limite dans cette inégalité (ce qui est autorisée car la somme à gauche est finie), et on trouve le résultat demandé.
+<li> La série de terme général $|x(k)|$ est à termes positifs, et d'après la question précédente, la suite des sommes partielles est majorée : la série est donc convergente, ce qui signifie exactement que $x\in\ell^1$. D'autre part, faisant tendre $L$ vers $+\infty$ dans les inégalités précédentes, on a, pour $n\geq N(\veps)$ :
+$$\sum_{k\geq K}|x_n(k)|\leq 2\veps,$$
+$$\sum_{k\geq K}|x(k)|\leq 2\veps.$$
+Donc, si $n\geq N(\veps)$, on a :
+\begin{eqnarray*}
+\|x_n-x\|&\leq&\sum_{k=1}^{K-1}|x(k)-x_n(k)|+\sum_{k\geq K}|x_n(k)|+\sum_{k\geq K}|x(k)|\\
+&\leq&\sum_{k=1}^{K-1}|x(k)-x_n(k)|+4\veps.
+\end{eqnarray*}
+Or, la première somme est finie, son nombre de termes est indépendant de $n$, et chacun des termes tend vers 0. En particulier, il existe $N_1$ tel que, si $n\geq N_1$, on a :
+$$\sum_{k=1}^{K-1}|x(k)-x_n(k)|\leq \veps.$$
+Résumons : si $n\geq\max(N(\veps),N_1)$, alors :
+$$\|x_n-x\|\leq 5\veps.$$
+Ceci achève de prouver que $(x_n)$ converge vers $x$,et par suite que $\ell^1$ est complet.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1608"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1608"),	max:5, rating:2.7391304347826, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1608,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions lipschitziennes <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1608.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1608,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1608','imageenonce1608');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1608"></a><div class=inner id="innerenonce1608">Soit $E$ l'ensemble des fonction de $[0,1]$ dans $\mathbb R$ qui sont lipschitziennes. On munit $E$ de la norme suivante :
+$$N(f)=\|f\|_\infty+\sup_{0\leq x&lt;y\leq 1}\frac{|f(x)-f(y)|}{|x-y|}.$$
+Démontrer que $(E,N)$ est un espace de Banach.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1608','imagecorrige1608',1608);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1608"></a><div class=inner id="innercorrige1608" style="display:none;">Soit $(f_n)$ une suite de Cauchy de $(E,N)$. Alors, par définition de $N$, c'est aussi une suite de Cauchy de $(\mathcal C([0,1],\|\cdot\|_\infty)$ qui est complet. En particulier, il existe une fonction $f$ continue sur $[0,1]$ telle que $\|f-f_n\|_\infty\to 0$. Prouvons ensuite que $f$ est lipschitzienne.
+La suite $(f_n)$ étant une suite de Cauchy, elle est bornée, disons par $C&gt;0$. En particulier, pour tous $0\leq x&lt;y\leq 1$, on a 
+$$ \frac{|f_n(x)-f_n(y)|}{|x-y|}\leq C.$$
+Passant à la limite, on trouve 
+$$\frac{|f(x)-f(y)|}{|x-y|}\leq C$$
+et donc $f$ est bien lipschitzienne. Il reste à prouver que $(f_n)$ converge vers $f$ pour la norme $N$. Soit $\veps&gt;0$. Il existe $N\in\mathbb N$ tel que, pour tous $q\geq p\geq N$, et pour tous $0\leq x&lt;y\leq 1$, on a 
+$$\|f_p-f_q\|_\infty+\frac{|(f_p-f_q)(x)-(f_p-f_q)(y)|}{|x-y|}\leq \veps.$$
+On fait tendre $q$ vers l'infini, et il vient 
+$$\|f_p-f\|_\infty+\frac{|(f_p-f)(x)-(f_p-f)(y)|}{|x-y|}\leq \veps.$$
+Ceci étant vrai pour tous $0\leq x&lt;y\leq 1$, on a finalement
+$$N(f_p-f)\leq\veps$$
+ce qui achève la preuve du fait que $(E,N)$ est complet.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1610"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1610"),	max:5, rating:2.5909090909091, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1610,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications linéaires continues <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1610.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1610,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1610','imageenonce1610');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1610"></a><div class=inner id="innerenonce1610">Soit $E$ un espace vectoriel normé, $F$ un espace de Banach, et $\mcl_c(E,F)$ l'espace vectoriel normé des applications linéaires continues de $E$ dans $F$, muni de la norme des applications linéaires :
+$$\|f\|=\sup_{\|x\|=1}\|f(x)\|.$$
+Montrer que $\mcl_c(E,F)$ est un espace de Banach.</div></div><div class=indication><a href="javascript:showAll('innerindication1610','imageindication1610');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1610"></a><div class=inner id="innerindication1610" style="display:none;">On fait comme toujours pour prouver qu'un espace métrique est complet : on prend $(f_n)$ une suite de Cauchy, on essaie de deviner sa limite (ici en utilisant la complétude de $F$), on prouve que cette limite éventuelle est bien dans $\mcl_c(E,F)$ (ne pas oublier la linéarité), et on termine en prouvant effectivement la convergence.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1610','imagecorrige1610',1610);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1610"></a><div class=inner id="innercorrige1610" style="display:none;">Soit $(f_n)$ une suite de Cauchy de $\mcl_c(E,F)$. Fixons $\veps&gt;0$. Il existe $N\in\mtn$ tel que, si $p,q\geq N$, on a :
+$$\|f_p-f_q\|\leq\veps.$$
+Fixons provisoirement $x\in E$. Alors, on a :
+$$\|f_p(x)-f_q(x)\|\leq\|f_p-f_q\|\|x\|\leq\|x\|\veps.$$
+Ceci prouve que la suite $(f_p(x))$ est de Cauchy dans $F$. Or, $F$ est complet. Cette suite est donc convergente. On note $f(x)$ sa limite. Remarquons d'abord que, par passage à la limite dans 
+$$f_n(\lambda x+\mu y)=\lambda f_n(x)+\mu f_n(y),$$
+la fonction limite $f$ est linéaire. En outre, la suite $(f_n)$ étant de Cauchy, elle est majorée, disons par $M$. Autrement dit, pour tout $x\in E$, pour tout $n\in\mtn$, on a :
+$$\|f_n(x)\|\leq M\|x\|.$$
+Cette inégalité passe à la limite, et donc $f\in\mcl_c(E,F)$. Il reste à prouver la convergence de $(f_n)$ vers $f$ dans $\mcl_c(E,F)$. Mais, pour tout $x$ dans $E$, et pour $p,q\geq N$, on a :
+$$\|f_p(x)-f_q(x)\|\leq\veps\|x\|.$$
+On fait tendre $p$ vers $+\infty$ : pour $q\geq N$,on a donc :
+$$\|f(x)-f_q(x)\|\leq\veps\|x\|\implies \|f-f_q\|\leq\veps.$$
+La suite $(f_n)$ converge vers $f$, et l'espace $\mcl_c(E,F)$ est complet!
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1611"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1611"),	max:5, rating:2.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1611,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions continues <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1611.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1611,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1611','imageenonce1611');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1611"></a><div class=inner id="innerenonce1611">On note $E$ l'espace des fonctions continues de $[-1,1]$ à valeurs dans $\mtc$. On définit sur $E$ l'application suivante :
+$$&lt;f,g&gt;=\int_{-1}^1 f(x)\overline{g(x)}dx.$$
+<ol class="enumeratechiffre">
+<li> Montrer que l'on définit ainsi une forme hermitienne non dégénérée positive. En déduire que 
+$$\|f\|_2=\left(\int_{-1}^1|f(x)|^2dx\right)^{1/2}$$
+est une norme sur $E$.
+<li> Si $f\in E$, on définit 
+$$\|f\|_\infty=\sup\left\{|f(x)|;\ x\in[-1,1]\right\}.$$
+Vérifier que $\|f\|_\infty$ définit une norme sur $E$.
+<li> Montrer que les normes $\|.\|_\infty$ et $\|.\|_2$ ne sont pas équivalentes.
+<li> Montrer que l'espace vectoriel normé $(E,\|.\|_\infty)$ est complet.
+<li> Le but de cette question est de démontrer que $(E,\|.\|_2)$ n'est pas complet. Pour cela, on définit la suite de fonctions $(f_n)$ en posant :
+$$f_n(x)=\left\{\begin{array}{cc} -1 &\text{si } -1\le x \le -\frac1n\\
+nx &\text{si } -\frac1n&lt; x &lt; \frac1n\\
+1 &\text{si } \frac1n \le x\le 1,
+\end{array}\right.$$
+dont on va montrer que c'est une suite de Cauchy de $(E,\|.\|_2)$ sans que ce soit une suite convergente. 
+<ol class="enumeratechiffre">
+<li> Faire un dessin et vérifier que $f_n\in E$.
+<li> Montrer que pour $1\leq n\leq p$, on a :
+$$\|f_n-f_p\|_2\leq\sqrt{\frac{2}{n}}.$$
+En déduire que la suite $(f_n)$ est de Cauchy dans $(E,\|.\|)_2)$. 
+<li> Supposons que la suite $(f_n)$ converge vers $f$ dans $(E,\|.\|_2)$. Montrer que pour tout $t\in]0,1]$, on a $f(t)=1$.
+Que doit valoir $f$ sur $[-1,0[$? Conclure.
+</ol>
+<li> L'application linéaire $T:E\to \mtc,\ f\mapsto f(0)$ est elle continue si on munit $E$ de $\|.\|_\infty$? si on munit $E$ de $\|.\|_2$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1611','imageindication1611');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1611"></a><div class=inner id="innerindication1611" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $g$ est continue positive sur $[a,b]$, alors 
+$$\int_a^bg(t)dt=0\iff g=0.$$
+<li> Pour prouver l'inégalité $\|f+g\|_\infty\leq \|f\|_\infty+\|g\|_\infty$, il faut revenir à l'inégalité triangulaire point par point.
+<li> Raisonner par l'absurde, en supposant que les normes sont équivalentes. Trouver alors une suite de fonctions $(f_n)$ pour laquelle 
+la norme infinie de $(f_n)$ reste constante égale à 1, alors que sa norme 2 tend vers 0.
+<li> Appliquer le raisonnement classique. Prendre une suite de Cauchy, fixer $x\in[-1,1]$, et considérer la suite $(f_n(x))$ 
+qui est de Cauchy. Considérer la limite $f(x)$...et prouver que $f_n$ converge vers $f$.
+<li> <ol class="enumeratechiffre">
+<li>
+<li> Sur quels sous-intervalles de $[-1,1]$ coïncident $f$ et $g$?
+<li> Supposer qu'il existe un point $x_0$ de $]0,1]$ avec $f(x_0)\neq 1$. Utiliser la continuité de $f$ en $x_0$
+pour prouver que, pour tout $x$ proche de $x_0$, $f(x_0)$ est relativement loin de $1$. En déduire qu'il est impossible que la suite $(f_n)$ converge vers $f$.
+</ol>
+<li> Reprendre une suite de fonctions un peu comme dans la question de l'équivalence des normes pour prouver que $T$ n'est pas
+continue pour $\|.\|_2$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1611','imagecorrige1611',1611);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1611"></a><div class=inner id="innercorrige1611" style="display:none;"><ol class="enumeratechiffre">
+<li> La linéarité (ou antilinéarité) est immédiate. Si $&lt;f,f&gt;=0$, alors la fonction $x\mapsto |f(x)|^2$ est une fonction continue positive
+sur l'intervalle $[-1,1]$. Son intégrale est nulle si et seulement si cette fonction est identiquement nulle. Donc $&lt;f,f&gt;=0\iff f=0$.
+<li> Soient $f$ et $g$ dans $E$. Puisque $|\lambda f(x)|=|\lambda||f(x)|$, on en déduit que $\|\lambda f\|_\infty=|\lambda|\|f\|_\infty$.
+D'autre part, on a, pour tout $x\in E$ :
+$$|f(x)+g(x)|\leq |f(x)|+|g(x)|\leq \|f\|_\infty+\|g\|_\infty.$$
+En passant à la borne supérieure, on obtient :
+$$\|f+g\|_\infty\leq\|f\|_\infty+\|g\|_\infty.$$
+Finalement, si on a $\|f\|_\infty=0$, pour tout $x\in[-1,1]$, on a $|f(x)|=0$, ce qui entraîne que $f$ est identiquement nulle.
+<li> D'abord, on peut remarquer que l'on a toujours :
+$$\|f\|_2\leq \left(\int_{-1}^1\|f\|_\infty^2\right)^{1/2}\leq \sqrt{2}\|f\|_\infty.$$
+C'est donc l'autre inégalité qui doit être mise en défaut! Supposons donc que l'on ait l'existence d'une constante $C$ telle que, pour tout $f\in E$, 
+$$\|f\|_\infty\leq C\|f\|_2.$$
+Pour nier ce genre d'inégalités, il faut par exemple construire une suite de fonctions pour laquelle la norme infinie reste constante, alors
+que la norme $\|.\|_2$ tend vers 0. On peut par exemple définir la suite de fonctions $(f_n)$ suivante :
+$$f_n(x)=x^n.$$
+Il est clair que $\|f_n\|_\infty=1$. D'autre part, par un moyen ou un autre, comme par exemple en appliquant le théorème de convergence dominée,
+on prouve que 
+$$\lim_{n\to\infty}\|f_n\|_2=0.$$
+Maintenant, ceci est contradictoire avec l'inégalité 
+$$\|f_n\|_\infty\leq C\|f_n\|_2$$
+quand $n$ tend vers l'infini (on obtiendrait $1\leq 0$).
+<li> C'est un raisonnement très classique! On considère $(f_n)$ une suite de Cauchy pour cet espace vectoriel normé, et on veut prouver qu'il existe 
+une fonction $f$ pour laquelle $\|f_n-f\|_\infty\to 0$. On fixe $x\in[-1,1]$. De l'inégalité 
+$$|f_n(x)-f_p(x)|\leq\|f_n-f_p\|_\infty,$$
+on en déduit que la suite $(f_n(x))$ est une suite de Cauchy dans $\mtc$. Maintenant, $\mtc$ est complet. La suite $(f_n(x))$ est donc convergente.
+On note $f(x)$ sa limite. On définit ainsi une fonction $f$ sur $[-1,1]$. Il faut maintenant montrer que $f$ est continue sur $[-1,1]$ (rien ne
+dit pour le moment que $f\in E$), puis que $(f_n)$ converge vers $f$ pour la norme $\|.\|_\infty$. C'est le point le plus délicat, mais on procède de la 
+même façon pour quasiment tous les exemples! On commence par fixer $\veps&gt;0$. Puisque la suite $(f_n)$ est de Cauchy (on réutilise donc une deuxième fois cette information),
+il existe $n_0\in\mtn$ tel que $n,p\geq n_0\implies \|f_n-f_p\|_\infty\leq\veps$ (remarquons que $n_0$ ne dépend que de $\veps$).
+Si $x$ est fixé dans $[-1,1]$, on en déduit :
+$$|f_n(x)-f_p(x)|\leq\veps.$$
+On fait alors tendre $p$ vers $+\infty$. On obtient :
+$$\forall x\in[-1,1],\ |f_n(x)-f(x)|\leq\veps.$$
+Ceci signifie exactement 
+$$\|f_n-f\|_\infty\leq\veps.$$
+Ainsi, on obtient que la suite $(f_n)$ converge uniformément vers $f$ sur $[-1,1]$, ce qui montre d'une part que $f$ est continue, et d'autre part que $(f_n)$ converge vers 
+$f$ dans $(E,\|.\|_\infty)$.
+<li> <ol class="enumeratechiffre">
+<li> Immédiat!
+<li> Par définition (on peut vérifier aussi cela à l'aide du dessin de la question précédente), les fonctions $f_n$ et $f_p$
+coïncident sur les intervalles $[-1,-1/n]$ et $[1/n,1]$. D'autre part, pour $x$ compris dans $[-1/n,0]$, il est clair que 
+$$|f_n(x)-f_p(x)|\leq 1$$
+(ces deux fonctions sont comprises entre $-1$ et $0$). Cette inégalité reste vérifiée si $x$ est dans l'intervalle $[0,1/n]$.
+On obtient donc 
+$$\|f_n-f_p\|_2\leq \left(\int_{-1/n}^{1/n} 1^2dt\right)^{1/2}\leq\sqrt{\frac{2}{n}}.$$ 
+On en déduit immédiatement que la suite $(f_n)$ est de Cauchy.
+<li> Supposons qu'il existe un point $x_0\in]0,1]$ pour lequel $f(x_0)\neq 1$. On suppose par exemple que $f(x_0)&gt;1$, et on pose 
+$\alpha=f(x_0)-1$. Par continuité de $f$ au point $x_0$, il existe $\eta&gt;0$, que l'on peut toujours supposer inférieur strict
+à $x_0/2$, tel que 
+$$x\in[x_0-\eta,x_0+\eta]\implies f(x)&gt;1+\alpha/2$$
+(il peut toujours être utile de faire un dessin pour comprendre ce type de résultat). Maintenant, pour tous les $n$ suffisamment grands pour que $\frac{1}{n}&lt;\eta$, on a $f_n(x)=1$ dès que $x\in [x_0-\eta,x_0+\eta]$.
+Ceci donne alors :
+\begin{eqnarray*}
+\|f_n-f\|_2^2&\geq& \int_{x_0-\eta}^{x_0+\eta}(f(x)-1)^2dx\\
+&\geq&\int_{x_0-\eta}^{x_0+\eta}\frac{\alpha^2}{4}\\
+&\geq&\frac{\eta\alpha^2}{2}.
+\end{eqnarray*}
+Cette dernière quantité étant strictement positive, il est impossible que $\|f_n-f\|_2$ tende vers 0.\\
+De la même façon, on prouve que $f(x)=-1$ si $x\in[-1,0[$. Mais alors il est impossible que $f$ soit continue en 0 :
+la suite $(f_n)$ ne converge pas dans $(E,\|.\|_2)$, et donc cet espace n'est pas complet.\\
+On peut faire un raisonnement alternatif en utilisant $L^2([0,1])$. En effet, il est facile de voir que $(f_n)$ converge
+vers 1 dans $L^2([0,1])$ -par exemple en appliquant le théorème de convergence dominée. Par unicité de la limite,
+il est nécessaire que $f=1$ presque partout sur $[0,1]$, donc partout puisque les fonctions sont continues. De même,
+on prouve que $f=-1$ sur $[-1,0]$, ce qui est une contradiction!
+</ol>
+<li> On a clairement :
+$$|T(f)|=|f(0)|\leq \|f\|_\infty,$$
+et donc $T$ est continue pour $(E,\|.\|_\infty)$. 
+Le cas de la norme $\|.\|_2$ est plus difficile à traiter. Le mieux est peut-être encore de faire le même type de raisonnement
+que pour l'équivalence des normes, en supposant que $T$ est continue, c'est-à-dire qu'il existe une constante $C&gt;0$ telle que 
+$$|f(0)|\leq C\|f\|_2.$$
+On va alors prendre pour suite $(f_n)$ une suite de fonctions triangles à base rétrécie, c'est-à-dire des fonctions toujours
+égales à 0, sauf près de 1 où elles vont avoir la forme d'un triangle avec sommet en $1$ et $f(0)=1$. Par exemple, on choisit :
+$$f_n(x)=\left\{
+\begin{array}{ll}
+0&\textrm{si $x\in[-1,-1/n]$}\\
+n(x+1/n)&\textrm{si $x\in[-1/n,0]$}\\
+-nx+1&\textrm{si $x\in[0,1/n]$}\\
+0&\textrm{si $x\in[1/n,1]$}.\end{array}\right.$$
+Un dessin est indispensable pour comprendre. On laisse alors le soin au lecteur de vérifier que $\|f_n\|_2\to 0$ si $n\to\infty$
+(car la base se rétrécit!), alors que $|f(0)|=1$.
+</ol></div></div></div>
+
+
+<div class=titrepartie>Théorème du point fixe</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1612"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1612"),	max:5, rating:1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1612,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une itérée est contractante <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1612.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1612,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1612','imageenonce1612');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1612"></a><div class=inner id="innerenonce1612">Soit $E=\mtr^d$ muni d'une norme $\|\cdot\|$. On rappelle qu'une application
+continue $g$ de $E$ dans $E$ est dite \emph{contractante} s'il existe
+$K\in ]0,1[$ tel que
+$$ \|g(x)-g(y)\|\le K \|x-y\| \qquad \forall x,y\in E.$$ On rappelle
+aussi que toute application contractante admet un unique point fixe.
+Soit $f$ une application continue de $E$ dans $E$ telle qu'il existe un
+entier $n$ tel que $f^n$ soit contractante. On note $x_0$ le point
+fixe de $f^n$.
+<ol class="enumeratechiffre">
+<li> Montrer que tout point fixe de $f$ est un point fixe de $f^n$.
+<li> Montrer que si $x$ est un point fixe de $f^n$, il en est de même
+pour $f(x)$.
+<li> En déduire que $x_0$ est l'unique point fixe de $f$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1612','imageindication1612');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1612"></a><div class=inner id="innerindication1612" style="display:none;"><ol class="enumeratechiffre">
+<li> Composer (récurrence?)!
+<li> Ecrire $f^n(f(x))=f(f^n(x))$.
+<li> Unicité du point fixe.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1612','imagecorrige1612',1612);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1612"></a><div class=inner id="innercorrige1612" style="display:none;"><ol class="enumeratechiffre">
+<li> Si $x$ est un point fixe de $f$, on a $f^2(x)=f(x)=x$, et par une récurrence immédiate on trouve que $f^n(x)=x$. $x$ est donc un (le!) point fixe de $f^n$.
+<li> On a : $f^n(f(x))=f(f^n(x))=f(x)$, ce qui prouve bien que $f(x)$ est un point fixe de $f^n$.
+<li> Par unicité du point fixe de $f^n$, qui est contractante, on a $f(x)=x$, ce qui prouve que $f$ admet $x$ comme point fixe.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1613"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1613"),	max:5, rating:1.9473684210526, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1613,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un théorème de point fixe <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1613.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1613,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1613','imageenonce1613');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1613"></a><div class=inner id="innerenonce1613">L'objectif de cet exercice est de démontrer le théorème suivant : si $K$ est un convexe compact d'un espace de Banach $E$,
+et si $f:K\to K$ vérifie 
+$$\forall (x,y)\in K^2,\ \|f(x)-f(y)\|\leq \|x-y\|,$$
+alors $f$ admet un point fixe. On fixe un point $a\in K$.
+<ol class="enumeratechiffre">
+ <li> On définit sur $K$ la suite de fonctions $(f_n)$ par 
+$$f_n(x)=f\left(\frac 1na+\left(1-\frac 1n\right)x\right).$$
+Démontrer que, pour chaque $n$, $f_n$ admet un unique point fixe $(t_n)$.
+ <li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1613','imageindication1613');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1613"></a><div class=inner id="innerindication1613" style="display:none;"><ol class="enumeratechiffre">
+ <li> Il suffit de démontrer que chaque $f_n$ est contractante.
+ <li> On peut extraire de $(t_n)$ une sous-suite convergente vers $t$. Il s'agit de prouver que $t$ est un point fixe de $f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1613','imagecorrige1613',1613);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1613"></a><div class=inner id="innercorrige1613" style="display:none;"><ol class="enumeratechiffre">
+ <li> Il suffit de démontrer que chaque $f_n$ est contractante. Remarquons déjà qu'elle est bien définie : par convexité de $K$, 
+le point $\frac 1na+\left(1-\frac 1n\right)x$ est dans $K$. De plus, pour $x,y\in K$, on a 
+$$f_n(x)-f_n(y)=f\left( \frac 1na+\left(1-\frac 1n\right)x\right)-f\left(\frac 1na+\left(1-\frac 1n\right)y\right).$$
+Or, 
+$$\left\|\left( \frac 1na+\left(1-\frac 1n\right)x\right)-\left( \frac 1na+\left(1-\frac 1n\right)y\right)\right\|=\left(1-\frac 1n\right)\|x-y\|.$$
+L'hypothèse sur $f$ nous permet alors d'écrire que
+$$\|f_n(x)-f_n(y)\|\leq \left(1-\frac 1n\right)\|x-y\|.$$
+On en déduit que la fonction $f_n$ est $1-\frac1n$-contractante. Elle admet donc un unique point fixe $t_n$.
+ <li> La suite $(t_n)$ vit dans le compact $K$. Elle admet donc une suite extraite $(t_{\phi(n)})$ qui converge vers 
+$t\in K$. On va prouver que $t$ est un point fixe de $f$. 
+Pour cela, l'idée est d'écrire que
+$$f(t)-t=f(t)-t_{\phi(n)}+t_ {\phi(n)}-t=f(t)-f_{\phi(n)}(t_{\phi(n)})+t_{\phi(n)}-t.$$
+Puisque $t_{\phi(n)}-t\to 0$, la seule chose à prouver est que 
+$$f(t)-f_{\phi(n)}(t_{\phi(n)})\to 0.$$
+Pour cela, on écrit 
+\begin{eqnarray*}
+\|f(t)-f_{\phi(n)}(t_{\phi(n)})\|&=&\left\|f(t)-f\left(\frac1{\phi(n)}a+\left(1-\frac1{\phi(n)}\right)t_{\phi(n)}\right)\right|\\
+&\leq&\left\|t-\frac 1{\phi(n)}a-\left(1-\frac1{\phi(n)}\right)t_{\phi(n)}\right\|\\
+&\leq&\left\|\frac1{\phi(n)}t+\left(1-\frac1{\phi(n)}\right)t-\frac 1{\phi(n)}a-\left(1-\frac1{\phi(n)}\right)t_{\phi(n)}\right\|\\
+&\leq& \frac{1}{\phi(n)}\left\|t-a\right\|+\left(1-\frac1{\phi(n)}\right)\|t-t_{\phi(n)}\|.
+\end{eqnarray*}
+Puisque $\phi(n)\to+\infty$ et $t-t_{\phi(n)}\to 0$, il est maintenant clair que 
+$f(t)-f_{\phi(n)}(t_{\phi(n)})\to 0$, ce que achève de prouver que $t$ est un point fixe pour $f$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1614"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1614"),	max:5, rating:2.8666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1614,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Résolution de système <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1614.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1614,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1614','imageenonce1614');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1614"></a><div class=inner id="innerenonce1614">Soit $\mathbb R^2$ muni de la norme
+$$\|(x,y)\|_1=|x|+|y|.$$
+On définit l'application $f:\mathbb R^2\to\mathbb R^2$ par :
+$$f(x,y)=\left(\frac14\sin(x+y),1+\frac23\arctan(x-y)\right).$$
+<ol class="enumeratechiffre">
+<li> Démontrer qu'il existe une constante $k\in]0,1[$ telle que, quels que soient
+$(x,y),(x',y')\in\mathbb R^2$, on a 
+$$\|f(x,y)-f(x',y')\|_1\leq k \|(x,y)-(x',y')\|_1.$$
+<li> En déduire que le système
+$$\left\{
+\begin{array}{rcl}
+\frac14\sin(x+y)&=&x\\
+1+\frac23\arctan(x-y)&=&y\\
+\end{array}
+\right.$$
+admet une unique solution dans $\mathbb R^2$.
+<li> Aurait-on pu appliquer la même méthode en utilisant la norme $\|.\|_\infty$ au lieu de la norme $\|.\|_1$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1614','imageindication1614');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1614"></a><div class=inner id="innerindication1614" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser l'inégalité des accroissements finis appliquée aux fonctions $\sin$ et $\arctan$.
+<li> C'est une conséquence du théorème du point fixe.
+<li> &Eacute;tudier précisément ce qui se passe sur la deuxième coordonnée si $y=-x$ est proche de 0.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1614','imagecorrige1614',1614);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1614"></a><div class=inner id="innercorrige1614" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons que, puisque $|\cos x|\leq 1$ et que $|1/(1+x^2)|\leq 1$ pour tout $x\in\mathbb R$,
+l'inégalité des accroissements finis nous dit que, pour tous $(u,v)\in\mathbb R^2$, on a
+$$|\sin(u)-\sin(v)|\leq |u-v|\textrm{ et }|\arctan(u)-\arctan(v)|\leq |u-v|.$$
+Ainsi, on obtient 
+\begin{eqnarray*}
+\|f(x,y)-f(x',y')\|_1&\leq&\frac14|\sin(x+y)-\sin(x'+y')|+\frac23|\arctan(x-y)-\arctan(x'-y')|\\
+&\leq&\frac{1}4|(x+y)-(x'+y')|+ \frac23|(x-y)-(x'-y')|\\
+&\leq&\frac{1}4|(x-x')+(y-y')|+\frac23|(x-x')-(y-y')|\\
+&\leq&\left(\frac14+\frac23\right)\big(|x-x'|+|y-y'|\big)\\
+&\leq&\frac{11}{12}\|(x,y)-(x',y')\|_1
+\end{eqnarray*}
+<li> La fonction $f$ est contractante, et $\mathbb R^2$ muni de $\|.\|_1$ est un espace de Banach. D'après le théorème du point fixe,
+il existe un unique couple $(x,y)\in\mathbb R^2$ tel que $(x,y)=f(x,y)$. Autrement dit, le système admet une unique solution.
+<li> L'utilisation de la norme $\|.\|_\infty$ ne convenait pas, car $f$ n'est pas contractante lorsqu'on utilise cette norme. En effet, choisissons $x&gt;0$ et $y=-x$.
+On a alors 
+$$\|f(x,-x)-f(0,0)\|_\infty\geq \frac23\big(\arctan(2x)-\arctan(0)\big).$$
+D'après l'égalité des accroissement finis appliqués à la fonction $g:t\mapsto \arctan(t),$ sur $[0,2x]$ avec $g'(t)=\frac{1}{1+t^2}$ qui vérifie, pour tout $t\in[0,2x],$ 
+$$\frac1{1+4x^2}\leq g'(t)\leq 1,$$
+on a 
+$$\|f(x,-x)-f(0,0)\|_\infty \geq\frac{4x}{3(1+4x^2)}.$$
+ Si $f$ était $k$-contractante, avec $k\in[0,1[$, on aurait :
+$$\frac{2x}{1+4x^2}\leq \|f(x,-x)-f(0,0)\|_\infty\leq k\|(x,-x)-(0,0)\|_\infty\leq kx.$$
+Faisant tendre $x$ vers 0, on obtiendrait $2\leq k$, une contradiction.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1615"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1615"),	max:5, rating:2.9333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1615,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Résolution de système <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1615.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1615,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1615','imageenonce1615');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1615"></a><div class=inner id="innerenonce1615">Montrer que le système
+$\displaystyle
+\left\{
+\begin{array}{ll}
+x_1 &=\dis \frac{1}{5}(2\sin x_1 + \cos x_2 )\\[2mm]
+x_2 &=\dis \frac{1}{5}( \cos x_1 +3 \sin x_2)
+\end{array}
+\right.
+$ admet une solution unique $(x_1,x_2)\in \mathbb{R}^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication1615','imageindication1615');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1615"></a><div class=inner id="innerindication1615" style="display:none;">Utiliser le théorème du point fixe!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1615','imagecorrige1615',1615);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1615"></a><div class=inner id="innercorrige1615" style="display:none;">Soit $f$ l'application de $\mtr^2$ dans $\mtr^2$ définie par :
+$$f(x_1,x_2)=\left(\frac{1}{5}(2\sin x_1 + \cos x_2 ),\frac{1}{5}( \cos x_1 +3 \sin x_2)\right).$$
+On munit $\mtr^2$ de la norme $\|(x_1,x_2)\|=\max(|x_1|,|x_2|)$. On va montrer que $f$ est contractante, d'où l'on déduit par le théorème du point fixe qu'elle admet un unique point fixe, ce qui est encore équivalent à dire que le système de départ admet une unique solution. Soit $X=(x_1,x_2)\in\mtr^2,\ Y=(y_1,y_2)\in\mtr^2$. On a :
+$$\frac{1}{5}\left|2\sin x_1 + \cos x_2 -2\sin y_1-\cos y_2\right|\leq \frac{1}{5}\left(2|x_1-y_1|+|x_2-y_2|\right)\leq \frac{3}{5}\|X-Y\|,$$
+où on a utilisé notamment l'inégalité des accroissements finis pour les fonctions sinus et cosinus. On a également la même inégalité pour la seconde coordonnée (avec 4/5 au lieu de 3/5), ce qui prouve :
+$$\|f(X)-f(Y)\|\leq \frac{4}{5}\|X-Y\|.$$
+L'application est contractante.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1616"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1616"),	max:5, rating:2.2105263157895, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1616,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème du point fixe avec paramètre <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1616.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1616,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1616','imageenonce1616');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1616"></a><div class=inner id="innerenonce1616">Soit $X$ et $E$ deux parties d'un espace vectoriel normé, $E$ étant une partie complète. On considère une application $F:X\times E\to E$, $(\lambda,x)\mapsto F(\lambda,x)$ continue, et $k$-contractante en la seconde variable, c'est-à-dire qu'elle existe $k\in]0,1[$ tel que :
+$$\forall \lambda\in X,\ \forall (x,y)\in E^2,\ \|F(\lambda,x)-F(\lambda,y)\|\leq k\|x-y\|.$$
+Montrer que, pour tout $\lambda\in X$, il existe un unique $x_\lambda\in E$ tel que $F(\lambda,x_\lambda)=x_\lambda$. Montrer ensuite que l'application $X\to E$, $\lambda\mapsto x_\lambda$ est continue.</div></div><div class=indication><a href="javascript:showAll('innerindication1616','imageindication1616');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1616"></a><div class=inner id="innerindication1616" style="display:none;">L'existence et l'unicité de $x_\lambda$ vient du théorème du point fixe. Pour établir la continuité, essayer d'estimer la différence $\|x_{\lambda}-x_{\lambda'}\|$ en passant par $F$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1616','imagecorrige1616',1616);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1616"></a><div class=inner id="innercorrige1616" style="display:none;">Pour chaque $\lambda\in X$, l'application $x\mapsto F(\lambda,x)$ est contractante et admet donc un unique point fixe $x_\lambda$. Fixons ensuite $\lambda,\lambda'\in X$. On a :
+\begin{eqnarray*}
+\|x_\lambda-x_{\lambda'}\|&=&\|F(\lambda,x_\lambda)-F(\lambda',x_{\lambda'})\|\\
+&\leq&\|F(\lambda,x_\lambda)-F(\lambda,x_{\lambda'})\|+\|F(\lambda,x_{\lambda'})-F(\lambda',x_{\lambda'})\|\\
+&\leq&k\|x_\lambda-x_{\lambda'}\|+\|F(\lambda,x_{\lambda'})-F(\lambda',x_{\lambda'})\|.
+\end{eqnarray*}
+On en déduit : 
+$$\|x_{\lambda}-x_{\lambda'}\|\leq \frac{1}{1-k}\|F(\lambda,x_{\lambda'})-F(\lambda',x_{\lambda'})\|.$$
+Maintenant, la continuité de $\lambda\mapsto F(\lambda,x_{\lambda'})$ entraîne que $x_\lambda$ converge vers $x_{\lambda'}$ si $\lambda$ tend vers $\lambda'$.</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Propriétés topologiques</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1572"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1572"),	max:5, rating:3.4, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1572,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intersection décroissante de boules fermés <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1572.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1572,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1572','imageenonce1572');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1572"></a><div class=inner id="innerenonce1572">Soit $E$ un espace vectoriel normé complet. Soit $B_n=\bar B(a_n,r_n)$ une suite décroissante de boules fermées telle que $(r_n)$ ne tend pas vers 0.
+<ol class="enumeratechiffre">
+<li> Question préliminaire : soit $a,b\in E$, $r,\rho&gt;0$ tels que $\bar B(b,\rho)\subset \bar B(a,r)$. Démontrer que $\|a-b\|&lt;r-\rho$.
+<li> Démontrer que $(a_n)$ converge vers $a\in E$, que $(r_n)$ converge vers $r&gt;0$, puis que $\bigcap _n B_n=\bar B(a,r)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1572','imageindication1572');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1572"></a><div class=inner id="innerindication1572" style="display:none;"><ol class="enumeratechiffre">
+<li> Faire un dessin!
+<li> Démontrer que $(r_n)$ est décroissante à l'aide de la question précédente, puis démontrer que $(a_n)$ est une suite de Cauchy.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1572','imagecorrige1572',1572);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1572"></a><div class=inner id="innercorrige1572" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $y=b+\rho\frac{b-a}{\|b-a\|}$. Alors $\|y-b\|= \rho$ et donc $\|y-a\|\leq r$. Or, $\|y-a\|=\|b-a\|+\rho$, ce qui prouve $\|b-a\|\leq r-\rho$.
+<li> La question précédente nous dit que, si $p&lt;q$, alors 
+$$\|a_p-a_q\|\leq r_p-r_q.$$
+En particulier, la suite $(r_n)$ est une suite décroissante de réels qui sont tous positifs. Elle est donc convergente, vers $r&gt;0$ par hypothèse. La suite $(r_n)$ est donc aussi une suite de Cauchy. L'inégalité $\|a_p-a_q\|\leq r_p-r_q$ montre que la suite $(a_n)$ est aussi une suite de Cauchy. Puisque $E$ est complet, il existe $a\in E$ tel que $(a_n)$ converge vers $a$.<br>
+Soit $x\in\bigcap_n B_n$. Alors, pour tout entier $n$, on a $\|x-a_n\|\leq r_n$ et par passage à la limite, $\|x-a\|\leq r$. Ainsi, $x\in \bar B(a,r)$. <br>
+Réciproquement, de $\|a_p-a_q\|\leq r_p-r_q$, on tire en faisant tendre $q$ vers l'infini : $\|a_p-a\|\leq r_p-r$. Ceci prouve (par l'inégalité triangulaire) que $\bar B(a,r)\subset B_p$ et donc que $\bar B(a,r)\subset\bigcap_n B_n$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1617"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1617"),	max:5, rating:2.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1617,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème des fermés emboités <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1617.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1617,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1617','imageenonce1617');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1617"></a><div class=inner id="innerenonce1617">Soit $(X,d)$ un espace métrique complet. Montrer que l'intersection d'une suite décroissante $(F_n)$ de parties fermées non vides et bornées de $(X,d)$ dont le diamètre tend vers 0 a une intersection non vide.</div></div><div class=indication><a href="javascript:showAll('innerindication1617','imageindication1617');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1617"></a><div class=inner id="innerindication1617" style="display:none;">Prendre pour chaque $n$ un élément $x_n$ dans $F_n$, et prouver que la suite est de Cauchy.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1617','imagecorrige1617',1617);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1617"></a><div class=inner id="innercorrige1617" style="display:none;">Soit, pour chaque entier $n$, un élément $x_n$ appartenant à $F_n$. Remarquons que, si $N$ est fixé, et $p,q\geq N$, par décroissance de la suite $(F_n)$, on a :
+$$d(x_p,x_q)\leq \diam(F_N).$$
+Puisque la suite des diamètres tend vers 0, la suite $(x_n)$ est de Cauchy, et puisque $X$ est complet, elle converge. Soit $x$ sa limite. Si $N$ est fixé, par décroissance de la suite $(F_n)$, la suite $(x_n)$ est dans $F_N$ à partir d'un certain rang, et comme cet ensemble est fermé, la limite appartient également à cet ensemble. En conclusion, $x\in\bigcap_n F_n$. Remarquons pour conclure que $x$ est le seul élément qui peut-être dans cette intersection, puisque le diamètre tend vers 0.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater2230"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2230"),	max:5, rating:3.4117647058824, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2230,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une condition nécessaire et suffisante pour être un espace de Banach <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2230.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(2230,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2230','imageenonce2230');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2230"></a><div class=inner id="innerenonce2230">Soit $E$ un espace vectoriel normé. Démontrer que $E$ est un espace de Banach si et seulement si toute série absolument convergente est convergente.</div></div><div class=indication><a href="javascript:showAll('innerindication2230','imageindication2230');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2230"></a><div class=inner id="innerindication2230" style="display:none;">Si $(x_n)$ est une suite de Cauchy de $E$, construire une suite $y_j=x_{n_j}-x_{n_{j-1}}$ de sorte que $\|y_j\|&lt;2^{-(j-1)}$. Utiliser la convergence de $\sum \|y_j\|$ pour construire la limite.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2230','imagecorrige2230',2230);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2230"></a><div class=inner id="innercorrige2230" style="display:none;">L'implication directe est du cours. Elle utilise simplement que si la série $\sum \|x_n\|$ converge, la suite de ses sommes partielles est une suite de Cauchy. Donc, par l'inégalité triangulaire, la suite des sommes partielles de $\sum_n x_n$ est aussi une suite de Cauchy, donc une suite convergente.<br>
+Pour la réciproque, on considère $(x_n)$ une suite de Cauchy de $E$. Il faut fabriquer sa limite. On va le faire en faisant le lien entre suite et série télescopique. Malheureusement, on ne peut pas utiliser directement $\sum_n x_{n+1}-x_n$ car rien ne dit que cette série est convergente. Il faut prendre des indices plus espacés qui vont nous être donnés par le fait que $(x_n)$ est de Cauchy. On définit ainsi par récurrence sur $j\geq 0$ une suite croissante $(n_j)$ de sorte que, pour tout $n\geq n_j$, $\|x_n-x_{n_j}\|\leq 2^{-j}$. L'existence d'une telle suite suit immédiatement du fait que $(x_n)$ est une suite de Cauchy. Posons ensuite $y_j=x_{n_{j+1}}-x_{n_j}$. Alors, $\|y_j\|\leq 2^{-j}$ et donc la série $\sum_j \|y_j\|$ est absolument convergente. Par hypothèse, elle est convergente, et notons $\ell$ sa somme. Les sommes partielles de cette série se calculent facilement : 
+$$\sum_{j=0}^J y_j=x_{n_J}-x_{n_0}.$$
+Ainsi, la suite $(x_{n_j})$ converge vers $\ell+x_{n_0}$. Reste maintenant à passer à la suite $(x_n)$ toute entière. On peut utiliser un résultat général qui dit qu'une suite de Cauchy ayant une valeur d'adhérence est une suite convergente. Ici, on peut donner un raisonnement un peu plus simple basé sur la construction de notre suite. Fixons $\veps&gt;0$, et soit $j$ tel qu'on ait à la fois $2^{-j}\leq\veps$ et $\|x_{n_j}-\ell-x_{n_0}\|\leq\veps$. Alors, pour tout $n\geq n_j$, par l'inégalité triangulaire, on a 
+$$\|x_n-\ell-x_{n_0}\|\leq \|x_n-x_{n_j}\|+\|x_{n_j}-\ell-x_{n_0}\|\leq 2\veps.$$
+Ceci achève de prouver la convergence de la suite $(x_n)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1618"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1618"),	max:5, rating:4.1333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1618,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème de Baire <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1618.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1618,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1618','imageenonce1618');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1618"></a><div class=inner id="innerenonce1618">Soit $E$ une partie complète d'un espace vectoriel normé. 
+<ol class="enumeratechiffre">
+<li> Montrer qu'une intersection dénombrable d'ouverts denses dans $E$ est dense dans $E$. Attention, ce n'est pas nécessairement un ouvert!
+<li> Que dire de la réunion dénombrable de fermés d'intérieur vide?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1618','imageindication1618');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1618"></a><div class=inner id="innerindication1618" style="display:none;"><ol class="enumeratechiffre">
+<li> On pourra, partant de $x$ et $\veps&gt;0$, considérer une suite strictement décroissante de boules fermées contenues successivement dans $B(x,\veps)\cap\bigcap_{i=0}^nU_i$.
+<li> Passer au complémentaire.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1618','imagecorrige1618',1618);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1618"></a><div class=inner id="innercorrige1618" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $x\in E$ et $\veps&gt;0$. Il faut construire un élément qui appartient à $B(x,\veps)$ et à $\bigcap_{i=1}^{+\infty}U_i$. On va déduire cet élément du théorème des fermés emboités. Précisément, on va construire une suite $(x_n)$ d'éléments de $E$, et $(r_n)$ une suite de nombre réels strictement positifs tels que :
+$$\left\{
+\begin{array}{l}
+r_n\leq\frac{1}{n}\\
+\overline{B}(x_n,r_n)\subset\overline{B}(x_{n-1},r_{n-1})\\
+\overline{B}(x_n,r_n)\subset B(x,\veps)\cap\bigcap_{i=0}^nU_i.
+\end{array}\right.$$
+Construisons d'abord $x_1$. Puisque $U_1$ est dense, il existe $x_1\in B(x,\veps)\cap U_1$. Maintenant, $B(x,\veps)\cap U_1$ est ouvert, et donc il existe $0&lt;r_1&lt;1$ tel que $\overline{B}(x_1,r_1)\subset B(x,\veps)\cap U_1$. Supposons maintenant les suites construites jusqu'au rang $n-1$. Puisque $U_n$ est ouvert, il existe $x_n$ appartenant à $B(x_{n-1},r_{n-1})\cap U_n$. En outre, cette dernière intersection est ouverte, et il existe $0&lt;r_n&lt;1/n$ tel que $\overline{B}(x_n,r_n)\subset B(x_{n-1},r_{n-1})\cap U_n$. En particulier, utilisant l'hypothèse de récurrence, on a aussi l'inclusion :
+$$\overline{B}(x_n,r_n)\subset B(x,\veps)\cap\bigcap_{i=0}^nU_i.$$
+Concluons : d'après le théorème des fermés emboités, la suite $(x_n)$ converge vers un point $l\in E$. Maintenant, pour chaque $l$, 
+$$l\in \overline{B}(x_n,r_n)\subset B(x,\veps)\cap\bigcap_{i=1}^{n}U_i.$$
+$l$ appartient donc à $B(x,\veps)$ et à $\bigcap_{i=1}^{+\infty}U_i$ : ce dernier ensemble est dense dans $E$.
+<li> Soit $F_n$ un fermé d'intérieur vide. Alors $F_n^c=U_n$ est un ouvert dense. Donc $\bigcap_{n\geq 1}U_n$ est dense. Ainsi, $\bigcup_{n\geq 1}F_n=\left(\bigcap_{n\geq 1}U_n\right)^c$ est d'intérieur vide (c'est un petit exercice pour prouver que le complémentaire d'un ensemble dense est un ensemble d'intérieur vide).
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

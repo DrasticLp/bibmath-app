@@ -1,0 +1,778 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agrégation interne : séries entières, séries de Fourier</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=agreginterne%252Findex.html">Documents pour l'agrégation interne</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Agrégation interne : séries entières, séries de Fourier</h1>
+<div class=titrepartie>Pour réviser</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1817"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1817"),	max:5, rating:1.1728395061728, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1817,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rayon de convergence - 1 <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1817.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1817,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1817','imageenonce1817');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1817"></a><div class=inner id="innerenonce1817">Déterminer le rayon de convergence des séries entières suivantes :
+$$\begin{array}{lll}
+\mathbf{1.}\ \sum_{n}\frac{1}{\sqrt{n}}x^n&
+\mathbf{2.}\ \sum_n\frac{n!}{(2n)!}x^n&\mathbf{3.}\ \sum_{n\geq 1}  \frac{n!}{2^{2n}\sqrt{(2n)!}}x^n\\
+\mathbf {4.}\ \sum_{n}(\ln n) x^n&\mathbf{5.}\ \sum_n\frac{\sqrt nx^{2n}}{2^n+1}&
+\mathbf{6.}\ \sum_n(2+ni) z^n\\
+\mathbf{7.}\ \sum_n\frac{(-1)^n}{1\times 3\times\dots\times (2n-1)}z^n\\
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication1817','imageindication1817');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1817"></a><div class=inner id="innerindication1817" style="display:none;">On peut déterminer tous ces rayons de convergence en utilisant la règle de d'Alembert.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1817','imagecorrige1817',1817);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1817"></a><div class=inner id="innercorrige1817" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Comment calculer le rayon de convergence d'une série entière?</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8aLQhDZwW9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> Posons $a_n=\frac 1{\sqrt n}$. Alors 
+$$\frac{a_{n+1}}{a_n}=\sqrt{\frac{n}{n+1}}\to 1$$
+et donc le rayon de convergence de cette série entière est égal à $1$.
+<li> Posons $a_n=\frac{n!}{(2n)!}$. Alors
+$$\frac{a_{n+1}}{a_n}=\frac{n+1}{(2n+2)(2n+1)}=\frac{1}{4n+2}\to 0.$$
+D'après la règle de d'Alembert, le rayon de convergence est $+\infty$.
+<li> On applique la règle de d'Alembert en remarquant que
+$$\frac{a_{n+1}}{a_n}=\frac{(n+1)}{4\sqrt{(2n+1)(2n+2)}}\to \frac{1}8,$$
+où on a posé $a_n= \frac{n!}{2^{2n}\sqrt{(2n)!}}$. Le rayon de convergence de la série est donc égal à 8.
+<li> On sait que $(\ln n R^n)$ est borné si et seulement $|R|&lt;1$. Ainsi, le rayon de convergence vaut 1. Ceci peut se retrouver par la règle de d'Alembert, puisque 
+$$\frac{\ln(n+1)}{\ln n}=\frac{\ln n+\ln\left(1+\frac 1n\right)}{\ln n}\to 1.$$
+<li> Pour $R&gt;0$, on a 
+$$\frac{\sqrt nR^{2n}}{2^n+1}\sim_{+\infty} \sqrt n \left(\frac{R^2}{2}\right)^n.$$
+Ceci est borné si et seulement si $\frac{R^2}2&lt;1$. Le rayon de convergence
+est donc $\sqrt 2.$ On peut là encore donner une preuve en utilisant la règle de d'Alembert.
+<li> On remarque que
+$$(n-2)|z|^n\leq |2+ni||z^n|\leq (2+n)|z|^n.$$
+Ainsi, la série converge pour $|z|&lt;1$ et diverge pour $|z|&gt;1$. Son rayon de convergence est donc 1.
+<li> Notant $u_n=\frac{(-1)^n}{1\times 3\times\dots\times (2n-1)}z^n$, on applique la règle de d'Alembert pour étudier la
+convergence absolue de cette série. On a :
+$$\left|\frac{u_{n+1}}{u_n}\right|=\frac{|z|}{2n+1}\to 0.$$
+La série entière est donc convergente pour toute valeur de $z$. Son rayon de convergence est donc $+\infty$.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1838"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1838"),	max:5, rating:0.69565217391304, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1838,rating); this.setRating(rating);   this.disable();    done();     }});</script> - DSE en 0 <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1838.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1838,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1838','imageenonce1838');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1838"></a><div class=inner id="innerenonce1838">Développer en série entière au voisinage de 0 les fonctions suivantes. On précisera le rayon de convergence de la série entière obtenue.
+$$\begin{array}{lcl}
+\mathbf{1.}\ln(1+2x^2)&\quad&\mathbf{2.}\displaystyle \frac{1}{a-x}\textrm{ avec }a\neq 0\\
+\mathbf{3.}\ln(a+x) \textrm{ avec }a&gt; 0&\quad&\mathbf{4.}\displaystyle \frac{e^x}{1-x}\\
+\mathbf{5.}\ln(1+x-2x^2)&\quad&\mathbf{6.}\displaystyle(4+x^2)^{-3/2}
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication1838','imageindication1838');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1838"></a><div class=inner id="innerindication1838" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de remplacer $t$ par $2x^2$ dans le développement en série entière de $\ln(1+t)$.
+<li> Factoriser par $a$ au dénominateur.
+<li> Factoriser par $a$ dans le logarithme.
+<li> C'est un simple produit de Cauchy.
+<li> Factoriser $1+x-2x^2$.
+<li> Se ramener à $(1+t)^\alpha$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1838','imagecorrige1838',1838);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1838"></a><div class=inner id="innercorrige1838" style="display:none;"><ol class="enumeratechiffre">
+<li> Il suffit de remplacer $t$ par $2x^2$ dans le développement en série entière de $\ln(1+t)$.
+On a donc
+$$\ln(1+2x^2)=\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}2^n x^{2n}}{n}.$$
+La série converge si $|2x^2|&lt;1$. Son rayon de convergence est donc $\frac{1}{\sqrt 2}$.
+<li> Il suffit de factoriser par $a$ au dénominateur et d'utiliser le développement en série
+entière de $\frac{1}{1-u}$. Il vient
+$$\frac{1}{a-x}=\frac{1}{a}\times\frac{1}{1-\frac{x}{a}}.$$
+Pour $|x/a|&lt;1\iff |x|&lt;|a|$, on obtient
+$$\frac{1}{a-x}=\frac{1}a\times\sum_{n=0}^{+\infty}\frac{x^n}{a^n}=\sum_{n=0}^{+\infty}\frac{x^n}{a^{n+1}}.$$
+Le rayon de convergence de la série obtenue est $|a|$.
+<li> On factorise par $a$ :
+$$\ln(x+a)=\ln\big(a(1+x/a)\big)=\ln(a)+\ln(1+x/a).$$
+Pour $|x/a|&lt;1$, soit $|x|&lt;a$, on en déduit
+$$\ln(x+a)=\ln(a)+\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}x^n}{na^n}.$$
+Le rayon de convergence de la série entière obtenue est $a$.
+<li> On réalise le produit de Cauchy des deux séries :
+$$e^x=\sum_{n=0}^{+\infty}\frac{x^n}{n!}\textrm{ et }\frac{1}{1-x}=\sum_{n=0}^{+\infty}x^n.$$
+La deuxième série ayant pour rayon de convergence 1, on en déduit que pour $|x|&lt;1$, on a
+$$\frac{e^x}{1-x}=\sum_{n=0}^{+\infty}a_n x^n\textrm{ avec }a_n=\sum_{k=0}^n\frac{1}{k!}.$$
+La série converge pour $|x|&lt;1$ (règle du produit de Cauchy), et comme $a_n\geq 1$, le rayon de
+convergence de la série obtenue est exactement égal à 1 puisque, pour $|x|&gt;1$, la série $\sum_n a_n x^n$ ne
+peut pas converger puisque son terme général ne tend pas vers zéro.
+<li> On a $1+x-2x^2=(1-x)(1+2x)$ donc la fonction est définie sur $I=]-1/2,1[$, et sur cet intervalle, elle s'écrit
+$$\ln(1+x-2x^2)=\ln(1-x)+\ln(1+2x).$$
+En utilisant le développement en série entière de $\ln(1+u)$, on obtient
+$$\ln(1-x)=-\sum_{n=1}^{+\infty}\frac{x^n}{n}$$
+(valable pour $|x|&lt;1$)
+$$\ln(1+2x)=\sum_{n=1}^{+\infty}(-1)^{n-1}\frac{(2x)^n}{n}$$
+(valable pour $|x|&lt;1/2$). En effectuant la somme, on en déduit que
+$$\ln(1+x-2x^2)=\sum_{n=1}^{+\infty}\frac{(-1)^{n-1}2^n-1}{n}x^n.$$
+La série obtenue est de rayon de convergence 1/2.
+<li> On factorise par 4 pour se ramener à $(1+t)^{\alpha}$. On a donc
+$$(4+x^2)^{-3/2}=\frac{1}8\left(1+\frac{x^2}4\right)^{-3/2}.$$
+La fonction $u\mapsto (1+u)^{-3/2}$ est développable en série entière sur $]-1,1[$ et
+$$\forall u\in]-1,1[,\ (1+u)^{-3/2}=1+\sum_{n\geq 1}(-1)^n\frac{3.5.7.\dots.(2n+1)}{2.4.6.\dots.2n}u^n.$$
+Il en résulte que pour tout $x$ tel que $\frac{x^2}4\in]-1,1[$, on a
+$$\left(1+\frac{x^2}4\right)^{-3/2}=1+\sum_{n\geq 1}(-1)^n\frac{3.5.7.\dots.(2n+1)}{2.4.6.\dots.2n}\frac{x^{2n}}{4^n}.$$
+La série entière obtenue a pour rayon de convergence $2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1841"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1841"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1841,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Rayon de convergence et somme - 1 <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1841.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1841,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1841','imageenonce1841');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1841"></a><div class=inner id="innerenonce1841">Pour les séries entières suivantes, donner le rayon de convergence et exprimer leur somme en termes de fonctions
+usuelles :
+$$\begin{array}{llllll}
+\mathbf{1.}\quad\sum_{n\geq 0}\frac{n-1}{n!}x^n&\quad\quad&
+\mathbf{2.}\quad \sum_{n\geq 0}\frac{n+2}{n+1}x^n&\quad\quad&
+\mathbf{3.}\quad \sum_{n\geq 0}\frac{(n+1)(n-2)}{n!}x^n\\
+\mathbf{4.}\quad\sum_{n\geq 1}\frac{(-1)^{n+1}}{2^n n!}x^{2n}
+\end{array}$$</div></div><div class=indication><a href="javascript:showAll('innerindication1841','imageindication1841');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1841"></a><div class=inner id="innerindication1841" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire sous forme de deux sommes, et faire un changement d'indices dans la première somme.
+<li> &Eacute;crire $\frac{n+2}{n+1}=1+\frac{1}{n+1}$.
+<li> &Eacute;crire $(n+1)(n-2)$ sous la forme $n(n-1)-2$.
+<li> Reconnaitre la fonction exponentielle évaluée en un certain point.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1841','imagecorrige1841',1841);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1841"></a><div class=inner id="innercorrige1841" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $u_n=\frac{n-1}{n!}$. On vérifie facilement que la suite $(u_{n+1}/u_n)$ tend vers $0$, et donc le rayon de convergence de la série entière est égal à $+\infty$. Pour déterminer sa somme, on écrit que pour tout $x\in\mathbb R$, 
+$$\sum_{n\geq 0}\frac{n-1}{n!}x^n=\sum_{n=1}^{+\infty}\frac{x^n}{(n-1)!}-\sum_{n=0}^{+\infty}\frac{x^n}{n!}=\sum_{n=0}^{+\infty}\frac{x\cdot x^n}{n!}-e^x=(x-1)e^x.$$
+<li> Posons $u_n=\frac{n+2}{n+1}$. Puisque $u_n\to 1$, la suite $|u_nz^n|$ est bornée si $|z|&lt;1$ et tend vers
+$+\infty$ si $|z|&gt;1$. On en déduit que le rayon de convergence de la série étudiée est égal à 1.
+Pour sommer la série entière, il suffit d'écrire
+$$\frac{n+2}{n+1}=1+\frac{1}{n+1}$$
+ce qui donne
+\begin{eqnarray*}
+\sum_{n\geq 0}\frac{n+2}{n+1}x^n&=&\sum_{n\geq 0}x^n+\sum_{n\geq 0}\frac{1}{n+1}x^n\\
+&=&\frac{1}{1-x}+\frac1x\sum_{n\geq 0}\frac{x^{n+1}}{n+1}\\
+&=&\frac{1}{1-x}-\frac{\ln(1-x)}{x}.
+\end{eqnarray*}
+Même si cette dernière fonction semble ne pas être définie en $0$, elle se prolonge bien sûr par continuité en ce point.
+<li> Comme pour la première série, la règle de d'Alembert montre facilement que le rayon de convergence de la série entière vaut $+\infty$. Ensuite, l'"astuce", dans ce type d'exercice où on voit apparaitre une fraction du type $P(n)/n!$, avec $P$ un polynôme, et d'écrire le polynôme dans la base $1,n,n(n-1),n(n-1)(n-2),\cdots$, dans le but de faire apparaitre la série de la fonction exponentielle. Ici, on a 
+$$(n+1)(n-2)=n^2-n-2=n(n-1)-2.$$
+On a donc 
+\begin{eqnarray*}
+\sum_{n\geq 0}\frac{(n+1)(n-2)}{n!}x^n &=&\sum_{n\geq 0}\frac{n(n-1)}{n!}x^n-2\sum_{n\geq 0}\frac{1}{n!}x^n\\
+&=&\sum_{n\geq 2}\frac{1}{(n-2)!}x^n-2e^x\\
+&=&x^2\sum_{n\geq 0}\frac{1}{n!}x^n-2e^x=(x^2-2)e^x.
+\end{eqnarray*}
+<li> Par la règle de d'Alembert, on prouve facilement que le rayon de convergence vaut $+\infty$. Pour identifier la somme, que nous noterons $S$, il faut "voir" que cette somme ressemble beaucoup à la fonction exponentielle, mais il faut l'évaluer en $-x^2/2$ pour voir apparaitre le $(-1)^n x^{2n}$ au numérateur et le $2^n$ au dénominateur. Au final (il faut aussi remarquer que la somme commence pour $n=1$), on obtient
+$$S(x)=\sum_{n\geq 1}\frac{(-1)^{n+1}}{2^n n!}x^{2n}=1-\exp(-x^2/2).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1828"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1828"),	max:5, rating:1.5555555555556, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1828,rating); this.setRating(rating);   this.disable();    done();     }});</script> - L'anneau des séries entières est intègre <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1828.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1828,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1828','imageenonce1828');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1828"></a><div class=inner id="innerenonce1828">On note $\mathcal A$ l'ensemble des séries entières (à coefficients complexes) de rayon de convergence supérieur ou égal à 1. L'addition et le produit de Cauchy de deux séries entières munissent $\mathcal A$ d'une structure d'anneau. Montrer que $\mathcal A$ est intègre.</div></div><div class=indication><a href="javascript:showAll('innerindication1828','imageindication1828');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1828"></a><div class=inner id="innerindication1828" style="display:none;">Montrer que si $f\neq 0$ et $g\neq 0$, il y a un coefficient non-nul dans le produit de Cauchy de $fg$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1828','imagecorrige1828',1828);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1828"></a><div class=inner id="innercorrige1828" style="display:none;">Soit $f(z)=\sum_n a_nz^n$ et $g(z)=\sum_n b_n z^n$ deux séries entières de rayon de convergence au moins égal à 1, non identiquement nulles. Soit $a_p$ le premier coefficient non-nul de $f$
+et soit $b_q$ le premier coefficient non-nul de $g$. Alors $fg$ est la série entière $\sum_n c_nz^n$, où $c_n$ est donné par
+$$c_n=\sum_{k=0}^n a_kb_{n-k}.$$
+Maintenant, étudions le coefficient $c_{p+q}$. On a
+$$c_{p+q}=\sum_{k=0}^{p-1}a_{k}b_{p+q-k}+a_pb_q+\sum_{k=p+1}^{p+q}a_kb_{p+q-k}.$$
+Mais la première somme est nulle, puisque $a_k=0$ pour $k\leq p-1$, et la dernière somme est nulle puisque $b_{p+q-k}=0$ pour $k\geq p+1$. Ainsi, $c_{p+q}=a_pb_q\neq 0$ et $fg$ n'est pas la série entière identiquement nulle. L'anneau étudié est bien intègre.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1856"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1856"),	max:5, rating:2.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1856,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de la somme d'une série <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1856.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1856,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1856','imageenonce1856');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1856"></a><div class=inner id="innerenonce1856">On considère la série entière $f(x)=\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n(2n+1)}x^{2n+1}$.
+<ol class="enumeratechiffre">
+<li> Quel est son rayon de convergence, que l'on notera $R$? Y-a-t-il convergence aux bornes de l'intervalle de définition?
+<li> Sur quel intervalle la fonction $f$ est-elle a priori continue? Démontrer qu'elle est en réalité continue
+sur $[-R,R]$.
+<li> Exprimer, au moyen des fonctions usuelles, la somme de la série dérivée sur $]-R,R[$.
+En déduire une expression de $f$ sur $]-R,R[$.
+<li> Calculer $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n(2n+1)}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1856','imageindication1856');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1856"></a><div class=inner id="innerindication1856" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer (par exemple) la règle de d'Alembert.
+<li> Convergence normale.
+<li> Comparer avec le développement en série entière de $\ln(1+x)$. Puis intégrer (par parties).
+<li> Passer à la limite.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1856','imagecorrige1856',1856);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1856"></a><div class=inner id="innercorrige1856" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $u_n=\frac{(-1)^{n+1}}{n(2n+1)}x^{2n+1}$.
+Alors $\frac{|u_{n+1}|}{|u_n|}=\frac{n(2n+1)x^2}{(n+1)(2n+3)}\to |x|^2$.
+Ainsi, d'après la règle de d'Alembert, la série entière est convergente
+pour $|x|&lt;1$ et divergente pour $|x|&gt;1$. Son rayon de convergence est donc 1.
+De plus, pour $x=1$, la série $\sum_{n\geq 1}\frac{(-1)^{n+1}}{n(2n+1)}$ est (absolument) convergente
+(on peut aussi prouver qu'elle converge d'après le critère des séries alternées).
+De même, pour $x=-1$, la série $\sum_{n\geq 1}\frac{(-1)^n}{n(2n+1)}$ est convergente.
+$f$ est donc définie sur $[-1,1]$.
+<li> La théorie des séries entières nous dit que $f$ est continue sur son intervalle ouvert de convergence,
+c'est-à-dire sur $]-1,1[$. Pour prouver la continuité sur $[-1,1]$, on va prouver qu'il y a convergence normale
+sur tout l'intervalle $[-1,1]$. En effet, pour tout $x\in[-1,1]$, on a
+$$\left|\frac{(-1)^{n+1}x^n}{n(2n+1)}\right|\leq\frac{1}{n(2n+1)}$$
+et le membre de droite de l'inégalité est le terme général d'une série numérique
+convergente (insistons sur le fait qu'il ne dépend pas de $x$). La
+série est donc normalement convergente sur $[-1,1]$. Comme chaque fonction
+$x\mapsto\frac{(-1)^{n+1}x^n}{n(2n+1)}$ est continue sur $[-1,1]$, on en déduit
+que $f$ est continue sur $[-1,1]$.
+<li> La série dérivée est, pour $|x|&lt;1$, 
+$$f'(x)=\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}x^{2n}=\ln(1+x^2).$$
+En effet, pour $x\in]-1,1[$, on a $0\leq x^2&lt;1$ et on est bien dans le domaine
+de validité du développement en série entière de $\ln(1+u)$. Puisque $f(0)=0$, on 
+en déduit $f(x)=\int_0^x \ln(1+t^2)dt$. On calcule cette intégrale
+en effectuant une intégration par parties :
+\begin{eqnarray*}
+f(x)&=&\int_0^x 1\times \ln(1+t^2)dt\\
+&=&\left[t\ln(1+t^2)\right]_0^x-\int_0^x \frac{2t^2}{1+t^2}dt\\
+&=&x\ln(1+x^2)-2\int_0^x\frac{t^2+1-1}{t^2+1}dt\\
+&=&x\ln(1+x^2)-2\int_0^x\left(1-\frac{1}{t^2+1}\right)dt\\
+&=&x\ln(1+x^2)-2\left[t-\arctan(t)\right]_0^x\\
+&=&x\ln(1+x^2)-2x+2\arctan x.
+\end{eqnarray*}
+<li> L'égalité $f(x)=x\ln(1+x^2)-2x+2\arctan x$ n'est valable que pour $x\in]-1,1[$.
+Mais le membre de droite comme celui de gauche sont continus en 1.
+Par continuité, l'égalité précédente reste vraie sur $[0,1]$ tout entier. On conclut que
+$$\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n(2n+1)}=f(1)=\ln(2)-2+\frac\pi2.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater247"></span><script>var myRating = raterJs( { element:document.querySelector("#rater247"),	max:5, rating:2.1363636363636, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(247,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des séries entières <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=247.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(247,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce247','imageenonce247');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce247"></a><div class=inner id="innerenonce247">On considère l'équation différentielle
+$$xy''-y'+4x^3 y=0\quad\quad (E)$$
+dont on se propose de déterminer les solutions sur $\mathbb R$. 
+<ol class="enumeratechiffre">
+<li> Question préliminaire : soient $a,b,c,d$ 4 réels et $f:\mathbb R^*\to\mathbb R$ définie par
+$$f(x)=\left\{\begin{array}{ll}
+a\cos(x^2)+b\sin(x^2)&\textrm{ si }x&gt;0\\
+c\cos(x^2)+d\sin(x^2)&\textrm{ si }x&lt;0
+\end{array}\right.
+$$
+A quelle condition sur $a,b,c,d$ la fonction $f$ se prolonge-t-elle en une fonction de classe $C^2$ sur 
+$\mathbb R$?<br>
+On recherche
+les solutions de $(E)$ qui sont développables en série entière au voisinage de 0. On note $x\mapsto \sum_{n=0}^{+\infty}a_n x^n$
+une telle solution, lorsqu'elle existe, et on désigne par $R$ son rayon de convergence.
+<li> Montrer qu'il existe une relation de récurrence, que l'on explicitera, entre $a_{n+4}$ et $a_n$.
+<li> Pour $p\in\mathbb N$, déterminer $a_{4p+1}$ et $a_{4p+3}$.
+<li> Pour $p\in\mathbb N$, déterminer $a_{4p}$ en fonction de $a_0$ et de $p$
+(respectivement $a_{4p+2}$ en fonction de $a_2$ et $p$).
+<li> Quel est le rayon de la série entière obtenue? Exprimer la comme combinaison linéaire de 
+deux fonctions "classiques".
+<li> Soit $S$ le $\mathbb R$-espace vectoriel des applications de $\mathbb R$ dans $\mathbb R$ qui sont solutions
+de $(E)$ sur $\mathbb R$. Préciser une base de $S$.
+</ol> </div></div><div class=indication><a href="javascript:showAll('innerindication247','imageindication247');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication247"></a><div class=inner id="innerindication247" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;tudier les conditions qu'impose la continuité de $f$, de $f'$ et de $f''$ en 0 sur les coefficients $a,b,c,d$.
+<li> Introduire cette solution dans l'équation différentielle, mettre tout sous la forme d'une seule somme et identifier.
+<li> Que valent $a_1$ et $a_3$?
+<li> 
+<li> 
+<li> Il faut raccorder les solutions en s'aidant de la question préliminaire!
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige247','imagecorrige247',247);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige247"></a><div class=inner id="innercorrige247" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Présentation de la méthode</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gCsMcK_lpVI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> Il faut étudier quelles conditions il faut mettre sur $a$, $b$, $c$ et $d$ pour que ceci définisse
+une solution de classe $C^2$ sur $\mathbb R$. La continuité de $y$ en $0$ entraîne que $a=c$ puisque
+$$a=\lim_{x\to 0^+}y(x)\textrm{ et }c=\lim_{x\to 0^-}y(x).$$
+De plus, on a 
+$$y'(x)=-2ax\sin(x^2)+2bx\cos(x^2)\textrm{ si }x&gt;0.$$
+$$y''(x)=-2a\sin(x^2)-4ax^2\cos(x^2)+2b\cos(x^2)-4bx^2\sin(x^2)\textrm{ si }x&gt;0.$$
+De même, on a 
+$$y''(x)=-2a\sin(x^2)-4ax^2\cos(x^2)+2d\cos(x^2)-4dx^2\sin(x^2)\textrm{ si }x&lt;0.$$
+Remarquons que 
+$$2b=\lim_{x\to 0^+}y''(x)\textrm{ et }2d=\lim_{x\to 0^-}y''(x).$$
+Pour que $y''$ soit continue en 0, il est nécessaire que $b=d$. Réciproquement la fonction
+$x\mapsto a\cos(x^2)+b\sin(x^2)$ définit bien une fonction de classe $C^2$ sur $\mathbb R$.
+<li> Soit $y(x)=\sum_{n\geq 0}a_nx^n$ une série entière solution de $(E)$ de rayon de convergence $R&gt;0$. 
+On introduit ce développement en série entière dans $(E)$. Après dérivation terme à terme de la série, et réindexation
+des séries, on obtient :
+$$xy''-y'+4x^3y=-a_1+3a_3x^2+\sum_{n=3}^{+\infty}\big(a_{n+1}(n-1)(n+1)+4a_{n-3}\big)x^n=0$$
+pour tout $x\in]-R,R[$. L'unicité du développement en série entière entraîne que $a_1=a_3=0$, tandis que, 
+pour tout $n\geq 3$, 
+$$a_{n+1}=-\frac{4}{(n-1)(n+1)}a_{n-3}.$$
+En réindexant, on trouve, pour tout $n\geq 0$,
+$$a_{n+4}=-\frac{4}{(n+2)(n+4)}a_n.$$
+<li> D'après la relation de récurrence précédente, et puisque $a_1$ et $a_3$ sont nuls, on trouve que
+$a_{4p+1}=0$ et $a_{4p+3}=0$ pour tout $p\geq 0$.
+<li> La relation de récurrence nous dit que 
+$$a_{4p}=-\frac{4}{(4p)(4p-2)}a_{4(p-1)}=\frac{-1}{2p(2p-1)}.$$
+On prouve alors aisément par récurrence que
+$$a_{4p}=\frac{(-1)^p}{(2p)!}a_0.$$
+De même, on obtient
+$$a_{4p+2}=\frac{(-1)^p}{(2p+1)!}a_2.$$
+<li> En appliquant la règle de d'Alembert, ou en remarquant que $\frac{R^p}{(2p)!}$ tend vers 0 lorsque $p$
+tend vers l'infini, pour tout $R\in\mathbb R$, on obtient que la série entière obtenue a pour rayon de convergence
+$+\infty$. De plus, on a 
+\begin{eqnarray*}
+y(x)&=&a_0\sum_{p\geq 0}\frac{(-1)^p}{(2p)!}x^{4p}+a_2\sum_{p\geq 0}\frac{(-1)^p}{(2p+1)!}x^{4p+2}\\
+&=&a_0\cos(x^2)+a_2\sin(x^2).
+\end{eqnarray*}
+<li> Puisque la série entière obtenue a pour rayon de convergence $+\infty$, sa somme est solution de
+$(E)$ sur $\mathbb R$. De plus, sur chaque intervalle ne contenant pas $0$, on sait que l'ensemble des
+solutions de $(E)$ est un espace vectoriel de dimension 2. Il est donc nécessairement engendré par $\cos(x^2)$
+et $\sin(x^2)$. Considérons maintenant une solution $y$ de $(E)$ sur $\mathbb R$. Elle est solution sur $]0,+\infty[$, et
+donc il existe deux constantes $a_0$ et $a_2$ telles que
+$$y(x)=a_0\cos(x^2)+a_2\sin(x^2)\textrm{ pour }x&gt;0.$$
+Elle est solution sur $]-\infty,0[$ et donc il existe deux constantes $b_0$ et $b_2$ telles que
+$$y(x)=b_0\cos(x^2)+b_2\sin(x^2)\textrm{ pour }x&lt;0.$$
+D'après la question préliminaire, $y$ va se prolonger en une fonction de classe $C^2$ si et seulement si 
+$a_0=b_0$ et $a_2=b_2$. Ainsi, l'ensemble des solutions sur $\mathbb R$ de l'équation est l'espace vectoriel
+de dimension 2 engendré par les fonctions $x\mapsto a\cos(x^2)+b\sin(x^2)$, $a,b\in\mathbb R$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater166"></span><script>var myRating = raterJs( { element:document.querySelector("#rater166"),	max:5, rating:1.4222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(166,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application aux calculs de séries <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=166.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(166,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce166','imageenonce166');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce166"></a><div class=inner id="innerenonce166">Déterminer la série de Fourier de la fonction périodique de période $2\pi$ définie par $f(x)=x^2$ pour $-\pi\leq x\leq \pi$. En déduire la somme des séries $\dis \sum_{n\geq 1}\frac{1}{n^2}$, $\dis \sum_{n\geq 1}\frac{(-1)^{n+1}}{n^2},\ \sum_{n\geq 1}\frac{1}{n^4}$.</div></div><div class=indication><a href="javascript:showAll('innerindication166','imageindication166');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication166"></a><div class=inner id="innerindication166" style="display:none;">Le calcul des coefficients de Fourier se fait par intégration par parties. Appliquer ensuite le théorème de Dirichlet, et trouver les deux premières sommes en prenant des valeurs particulières pour $x$. Pour la troisième somme, on pourra appliquer le théorème de Parseval.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige166','imagecorrige166',166);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige166"></a><div class=inner id="innercorrige166" style="display:none;">La fonction $f$ est paire, ses coefficients en sinus sont nuls, et on a :
+$$a_0=\frac{1}{2\pi}\int_{-\pi}^\pi x^2dx=\frac{\pi^2}{3},$$
+$$a_n=\frac{2}{\pi}\int_0^\pi x^2\cos(nx)dx.$$
+La calcul de $a_n$ se fait par une double intégration par parties, et on trouve :
+$$a_n=(-1)^n\frac{4}{n^2}.$$
+Maintenant, $f$ est continue et $C^1$ par morceaux : cette fonction est somme de sa série de Fourier pour tout réel, et on a donc, pour tout $x$ dans $[-\pi,\pi]$, 
+$$x^2=\frac{\pi^2}{3}+4\sum_{n\geq 1}\frac{(-1)^{n}}{n^2}\cos(nx).$$
+Si l'on fait $x=\pi$, on obtient :
+$$\pi^2=\frac{\pi^2}{3}+4\sum_{n\geq 1}\frac{1}{n^2}.$$
+On obtient exactement :
+$$\sum_{n\geq 1}\frac{1}{n^2}=\frac{\pi^2}{6}.$$
+Si l'on fait $x=0$, on obtient cette fois :
+$$\sum_{n\geq 1}\frac{(-1)^{n+1}}{n^2}=\frac{\pi^2}{12}.$$
+Pour calculer la dernière somme demandée, il faut pouvoir mettre les coefficients au carré, et c'est ce que l'on obtient dans l'égalité de Parseval, que l'on peut appliquer ici puisque $f$ est continue :
+$$\frac{1}{2\pi}\int_{-\pi}^\pi x^4dx=\frac{\pi^4}{9}+\frac{1}{2}\sum_{n\geq 1}\frac{16}{n^4}.$$
+Ceci donne :
+$$\sum_{n\geq 1}\frac{1}{n^4}=\frac{\pi^4}{8}\left(\frac{1}{5}-\frac{1}{9}\right)=\frac{\pi^4}{90}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater176"></span><script>var myRating = raterJs( { element:document.querySelector("#rater176"),	max:5, rating:1.9565217391304, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(176,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Régularité et décroissance des coefficients - avec indications <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=176.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(176,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce176','imageenonce176');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce176"></a><div class=inner id="innerenonce176">Soit $f:\mathbb R\to\mathbb R$ une application continue et $2\pi$-périodique.
+<ol class="enumeratechiffre">
+<li> Démontrer que $(c_n(f))$ tend vers 0 lorsque $|n|$ tend vers $+\infty$.
+<li> On suppose que $f$ est $C^k$. &Eacute;tablir une relation entre les coefficients de Fourier de $f$
+et ceux de $f^{(k)}$. 
+<li> En déduire que si $f$ est de classe $C^\infty$, alors $c_n(f)=o(1/n^k)$ pour tout entier $k$.
+<li> Réciproquement, on suppose que $c_n(f)=o(1/n^k)$ quand $|n|\to+\infty$ pour tout entier $k$
+et on pose $S(x)=\sum_{n\in\mathbb Z}c_n(f)e^{inx}$. 
+<ol class="enumeratechiffre">
+<li> Calculer les coefficients de Fourier de $S$.
+<li> Démontrer que $S$ est de classe $C^\infty$.
+<li> En utilisant le théorème de Parseval, démontrer que deux fonctions continues qui ont les mêmes coefficients
+de Fourier sont égales.
+<li> En déduire que $f=S$ et donc que $f$ est de classe $C^\infty$.
+</ol>
+<li> Quel théorème a-t-on démontré dans cet exercice?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige176','imagecorrige176',176);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige176"></a><div class=inner id="innercorrige176" style="display:none;"><ol class="enumeratechiffre">
+<li> C'est une conséquence du théorème de Parseval : la série $\sum |c_n(f)|^2$ converge, son terme général tend donc vers 0.
+<li> Par intégrations par parties successives, on trouve
+$$c_n(f)=\frac{1}{(in)^k}c_n(f^{(k)}).$$
+<li> En mettant ensemble les deux questions précédentes, on trouve :
+$$n^k c_n(f)=\frac{c_n(f^{(k)})}{i^k}\xrightarrow{|n|\to+\infty}0.$$
+<li> <ol class="enumeratechiffre">
+<li> Voir la question suivante
+<li> 
+La série définissant $S$ converge normalement sur $\mathbb R$, car il existe une constante $M&gt;0$ telle que
+$|c_n(f)|\leq\frac{M}{|n|^2+1}$ pour tout $n\in\mathbb Z$, et donc
+on a
+$$|c_n(f)e^{int}|\leq \frac{M}{|n|^2+1},$$
+et le membre de droite de l'inégalité précédente est le terme général d'une série numérique convergente. Ainsi,
+$S$ est définie sur $\mathbb R$ tout entier, et est continue. De plus, on a
+$$|(in)^k c_n(f)|\leq \frac{C_k}{|n|^2+1}$$
+pour une certaine constante $C_k$ puisque $n^{k+2}c_n(f)\to 0$ quand $|n|\to+\infty$. Ceci montre que toutes les
+séries dérivées de $S$ convergent normalement sur $\mathbb R$, et donc que $S$ définit une fonction $C^\infty$ sur
+$\mathbb R$.
+$S$ est somme d'une série trigonométrique qui converge normalement,
+donc uniformément, et donc ses coefficients de Fourier sont les coefficients de la série trigonométrique.
+<li> Soient $u$ et $v$ deux fonctions continues ayant les mêmes coefficients de Fourier. Alors la fonction $u-v$ a ses coefficients de Fourier nuls.
+Par le théorème de Parseval, on en déduit que 
+$$\int_0^{2\pi}|u(t)-v(t)|^2 dt=0.$$
+L'intégrale sur $[0,2\pi]$ de la fonction continue et positive $|u-v|^2$ est nulle. C'est que cette fonction est identiquement nulle,
+et donc que $u=v$.
+<li> Il suffit de mettre ensemble les résultats précédents.
+</ol>
+<li> Soit $f:\mathbb R\to\mathbb R$ une application continue et $2\pi$-périodique.
+$f$ est de classe $C^\infty$ si et seulement si, pour tout $k\in\mathbb N$,
+on a $c_n(f)=o(1/n^k)$ quand $|n|$ tend vers $+\infty$.
+</ol></div></div></div>
+
+<div class=titrepartie>Pour progresser</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1830"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1830"),	max:5, rating:2.2608695652174, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1830,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;tude pratique de la somme d'une série entière <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1830.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1830,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1830','imageenonce1830');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1830"></a><div class=inner id="innerenonce1830">Soit
+$$f:x \mapsto \sum\limits_{n = 1}^{ + \infty } {\sin \left( {\frac{1}{{\sqrt n }}} \right)x^n } .$$
+<ol class="enumeratechiffre">
+<li> Déterminer le rayon de convergence $R$ de la série entière définissant $f$.
+<li> Etudier la convergence en $ - R$ et en $R$.
+<li> <ol class="enumeratechiffre">
+<li> Soit $M&gt;0$. Montrer qu'il existe un entier $N\geq 1$ et un réel $\delta&gt;0$ tel que,
+pour tout $x\in]1-\delta,1[$, alors 
+$$\sum_{n=1}^N \sin \left( {\frac{1}{{\sqrt n }}} \right) x^n\geq M.$$
+<li> En déduire la limite de $f(x)$ quand $x \to 1^ - $.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> On considère la série entière 
+$$g:x\mapsto \sum_{n=2}^{+\infty} \left[\sin\left(\frac 1{\sqrt n}\right)-\sin\left(\frac 1{\sqrt{n-1}}\right)\right]x^n.$$
+Démontrer que cette série converge normalement sur $[0,1]$.
+<li> En déduire que $\lim_{x\to 1^-}(1 - x)f(x)=0$.
+</ol>
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1830','imageindication1830');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1830"></a><div class=inner id="innerindication1830" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer le critère de d'Alembert.
+<li> En $-1$, utiliser le critère des séries alternées.
+<li> <ol class="enumeratechiffre">
+<li> Utiliser la divergence de $\sum_n \sin(1/\sqrt n)$.
+<li> La série majore toutes ces sommes partielles.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Se ramener à la convergence simple en 1.
+<li>
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1830','imagecorrige1830',1830);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1830"></a><div class=inner id="innercorrige1830" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $\sin\left(\frac1{\sqrt n}\right)\sim_{+\infty} \frac1{\sqrt n}$, on démontre par exemple
+par le critère de d'Alembert que le rayon de convergence vaut $1$.
+<li> Par croissance de la fonction sinus entre $0$ et $\pi/2$, la suite $\big(\sin(1/\sqrt n)\big)$ est décroissante, et positive.
+D'après le critère des séries alternées, la série converge en $-1$. En $1$, la série $\sum_n \sin(1/\sqrt n)$ est divergente,
+par comparaison à la série de Riemann divergente $\sum_n  1/\sqrt n$ (on compare bien des séries à termes positifs).
+<li> <ol class="enumeratechiffre">
+<li> La série $\sum_n \sin(1/\sqrt n)$, qui est à termes positifs, est divergente. Il existe donc un entier $N\geq 1$ tel que
+$$\sum_{n=1}^N \sin\left(\frac1{\sqrt n}\right)\geq M+1.$$
+De plus, cet entier $N$ étant fixé, la fonction $h:x\mapsto \sum_{n=1}^N \sin(1/\sqrt n)x^n$ est continue en $1.$ Ceci donne l'existence de $\delta&gt;0$
+tel que, pour tout $x\in]1-\delta,1]$, 
+$$h(x)\geq h(1)-1.$$
+Ceci est exactement le résultat voulu.
+<li> Puisqu'on a une série à termes positifs, la série majore toutes ses sommes partielles. Ainsi, pour tout $M&gt;0$, on peut trouver
+$\delta&gt;0$ tel que, pour tout $x\in]1-\delta,1[$, 
+$$f(x)\geq M.$$
+Ceci signifie exactement que $f$ tend vers $+\infty$ en $1^-$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Il est clair que, pour tout $x\in[0,1]$, on a 
+$$\left|\left(\sin\left(\frac 1{\sqrt n}\right)-\sin\left(\frac 1{\sqrt{n-1}}\right)\right)x^n\right|\leq \left|\sin\left(\frac 1{\sqrt n}\right)-\sin\left(\frac 1{\sqrt{n-1}}\right)\right|.$$
+D'après, par exemple, l'inégalité des accroissements finis, 
+$$\left|\sin\left(\frac 1{\sqrt n}\right)-\sin\left(\frac 1{\sqrt{n-1}}\right)\right|\leq \left|\frac 1{\sqrt n}-\frac 1{\sqrt {n-1}}\right|\leq \frac C{(n-1)^{3/2}}$$
+(la dernière inégalité pouvant se démontrant en appliquant aussi l'inégalité des accroissements finis à la fonction $\frac1{\sqrt x}$).
+La série (numérique) de terme général $(n-1)^{-3/2}$ étant convergente, ceci prouve la convergence normale de la série définissant $g$ sur $[0,1]$.
+<li> Un calcul aisé montre que 
+$$(1-x)f(x)=\sin(1)x+g(x).$$
+Or, $g$ étant continue en 1, on trouve 
+$$\lim_{x\to 1}(1-x)f(x)=\sin(1)+g(1)=\sin(1)+\sum_{n=2}^{+\infty}\left[\sin\left(\frac 1{\sqrt n}\right)-\sin\left(\frac 1{\sqrt{n-1}}\right)\right]=0.$$
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1831"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1831"),	max:5, rating:2.1, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1831,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Théorème d'Abel <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1831.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1831,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1831','imageenonce1831');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1831"></a><div class=inner id="innerenonce1831">Soit $(a_n)$ une suite de réels tel que $\sum_n a_n x^n$ soit de rayon de convergence $1$. On note
+$f$ la somme de cette série entière. On suppose de plus que la série numérique $\sum_n a_n$ converge et on note
+$$R_n=\sum_{k=n+1}^{+\infty}a_k.$$
+<ol class="enumeratechiffre">
+<li> Démontrer que, pour tout $x\in[0,1[$ et tout $n\geq 1$, on a 
+$$f(x)-\sum_{k=0}^{+\infty}a_k=\sum_{k=0}^n a_k(x^k-1)+(x-1)\sum_{k=n+1}^{+\infty}R_k x^k+R_n(x^{n+1}-1).$$
+<li> En déduire que 
+$$\lim_{x\to 1^-}f(x)=\sum_{k=0}^{+\infty}a_k.$$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1831','imageindication1831');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1831"></a><div class=inner id="innerindication1831" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;crire $a_k=R_{k-1}-R_k$.
+<li> Fixer d'abord $n$ pour que la deuxième somme soit petite, indépendamment de $x$ dans $[0,1[$, puis faire tendre $x$ vers 1...
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1831','imagecorrige1831',1831);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1831"></a><div class=inner id="innercorrige1831" style="display:none;"><ol class="enumeratechiffre">
+<li> On commence par couper la somme en $n$ et par remarquer que
+$$f(x)-\sum_{k=0}^{+\infty}a_k=\sum_{k=0}^n a_k(x^k-1)+\sum_{k=n+1}^{+\infty}a_kx^k-R_n.$$
+La clé ici est d'écrire dans la deuxième somme $a_k=R_{k-1}-R_k$ (et d'effectuer
+ce qu'on appelle une transformation d'Abel). Pour $m\geq n+1$, il vient 
+$$\sum_{k=n+1}^{m}a_kx^k=\sum_{k=n+1}^{m}(R_{k-1}-R_{k})x^k=\sum_{k=n+1}^{m-1}R_k(x^{k+1}-x^k)+R_nx^{n+1}-R_mx^{m}.$$
+Puisque $(R_p)$ tend vers 0, on peut faire tendre $m$ vers $\infty$ et on trouve
+$$\sum_{k=n+1}^{\infty}a_kx^k=(x-1)\sum_{k=n+1}^{+\infty}R_kx^k+R_n x^{n+1},$$
+ce qui donne bien
+$$f(x)-\sum_{k=0}^{+\infty}a_k=\sum_{k=0}^n a_k(x^k-1)+(x-1)\sum_{k=n+1}^{+\infty}R_k x^k+R_n(x^{n+1}-1).$$
+<li> On va d'abord fixer $n$ pour que la deuxième somme soit petite, indépendamment de $x$ dans $[0,1[$, puis on va faire tendre $x$ vers 1.
+Soit donc $\veps&gt;0$. Il existe $n\in\mathbb N$ tel que, pour $k\geq n$, on a $|R_k|\leq\veps.$ On en déduit, pour tout $x\in[0,1[$, 
+$$\left| (x-1)\sum_{k=n+1}^{+\infty}R_k x^k\right|\leq \veps |x-1|\times \sum_{k=N+1}^{+\infty} x^k\leq \veps.$$
+On a de plus, toujours pour cette valeur de $n$, 
+$$\left|R_n(x^{n+1}-1)\right|\leq 2\veps.$$
+Cette valeur de $n$ étant fixée, la fonction $x\mapsto \sum_{k=0}^n a_k(x^k-1)$ est continue en 1, de limite nulle.
+Ainsi, on peut trouver $\delta&gt;0$ tel que, pour tout $x\in ]1-\delta,1[$, on a 
+$$\left|\sum_{k=0}^n a_k(x^k-1)\right|\leq\veps.$$
+Finalement, en mettant tous les résultats ensembles, on trouve qu'il existe $\delta&gt;0$ tel que, pour tout $x\in ]1-\delta,1[$, on a 
+$$\left|f(x)-\sum_{k=0}^{+\infty}a_k \right|\leq 4\veps.$$
+Ceci est exactement le résultat voulu.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1848"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1848"),	max:5, rating:3.1578947368421, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1848,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une fonction $C^\infty$ non développable en série entière <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1848.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1848,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1848','imageenonce1848');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1848"></a><div class=inner id="innerenonce1848">Soit $f(x)=\sum_{n=0}^{+\infty}e^{-n}e^{n^2ix}$.
+<ol class="enumeratechiffre">
+<li> Justifier que $f$ est une fonction de classe $C^\infty$ sur $\mathbb R$.
+<li> Montrer que, pour chaque $k\geq 1$, $\frac{|f^{(k)}(0)|}{k!}\geq k^k e^{-k}$.
+<li> En déduire que $f$ n'est pas développable en série entière en $0.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1848','imageindication1848');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1848"></a><div class=inner id="innerindication1848" style="display:none;"><ol class="enumeratechiffre">
+<li> Montrer la convergence normale de toutes les séries dérivées.
+<li> Majorer la somme par un terme, et utiliser $k^k\geq k!$.
+<li> Pour tout $x\in\mathbb R$, la série $\sum_{k\geq 0}\frac{f^{(k)}(0)}{k!}x^k$ est divergente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1848','imagecorrige1848',1848);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1848"></a><div class=inner id="innercorrige1848" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons pour $n\geq 0$ et $x\in\mathbb R,$ $u_n(x)=e^{-n}e^{n^2ix}$. Alors $u_n$ est $C^\infty$ sur $\mathbb R$ et pour tout $k\geq 0$, pour tout
+$x\in\mathbb R$ et tout $n\geq 0$, on a
+$$u_n^{(k)}(x)=(in^2)^k e^{-n}e^{n^2ix}.$$
+Puisque $n^{2k}e^{-n}=O(n^{-2})$, il existe une constante $M&gt;0$ telle que pour tout $x\in\mathbb R$,
+$$|u_n^{(k)}(x)|\leq Mn^{-2}.$$
+La série (numérique) qui apparait à droite est convergente, on en déduit que la série des dérivées $k$-ièmes
+$\sum_{n\geq 0}u_n^{(k)}$ converge normalement (donc uniformément) sur $\mathbb R$ pour tout $k\geq 0$.
+Ainsi, $f=\sum_n u_n$ est de classe $C^\infty$.
+<li> D'après le calcul précédent, on a 
+$$|f^{(k)}(0)|=\left|\sum_{n=0}^{+\infty}i^k n^{2k}e^{-n}\right|=\sum_{n=0}^{+\infty} n^{2k}e^{-n}\geq k^{2k}e^{-k}.$$
+Or, $k^k\geq k!$, et donc 
+$$\frac{|f^{(k)}(0)|}{k!}\geq \frac{k^k}{k!}k^ke^{-k}\geq k^k e^{-k}.$$
+<li> Si la fonction était développable en série entière en $0,$ il existerait un intervalle non-vide $I$ centré en $0$ tel
+que, pour tout $x\in I$, $f$ serait somme de sa série de Taylor en $0.$ Autrement dit, on aurait
+$$f(x)=\sum_{k\geq 0}\frac{f^{(k)}(0)}{k!}x^k.$$
+Mais pour $x\neq 0$, cette série ne converge pas car son terme général ne tend pas vers 0. En effet,
+$$\left|\frac{f^{(k)}(0)}{k!}x^k\right|\geq k^k (x/e)^{k}\to+\infty$$
+Ainsi, $f$ n'est pas développable en série
+entière en $0.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1861"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1861"),	max:5, rating:3.6666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1861,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Nombre de dérangements <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1861.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1861,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1861','imageenonce1861');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1861"></a><div class=inner id="innerenonce1861">Pour tous les entiers $k$ et $n$ tels que $n\geq 1$ et $0\leq k\leq n$, on note $D_{n,k}$ le nombre de bijections (ou permutations)
+$s$ de l'ensemble $\{1,\dots,n\}$ ayant $k$ points fixes, c'est-à-dire telles que
+$$k=\textrm{card}\big\{i\in\{1,\dots,n\};\ s(i)=i\big\}.$$
+On pose $D_{0,0}=1$ et $d_n=D_{n,0}$. $d_n$ désigne le nombre de dérangements, c'est-à-dire de permutations sans point
+fixe.
+<ol class="enumeratechiffre">
+<li> Dresser la liste de toutes les permutations de $\{1,2,3\}$ et en déduire la valeur
+de $D_{3,0}$, $D_{3,1}$, $D_{3,2}$ et $D_{3,3}$.
+<li> Montrer que $n!=\sum_{k=0}^n D_{n,k}$.
+<li> Montrer que $D_{n,k}=\binom{n}{k}D_{n-k,0}$.
+<li> Montrer que la série entière $\sum_{n\geq 0}\frac{d_n}{n!}z^n$ a un rayon de convergence supérieur ou égal à 1.
+<li> On pose $f(x)=\sum_{n=0}^{+\infty}\frac{d_n}{n!}x^n$. Montrer que $(\exp x)f(x)=\frac{1}{1-x}$ pour $|x|&lt;1$.
+<li> En déduire que $d_n=n!\sum_{k=0}^n\frac{(-1)^k}{k!}$.
+<li> Soit $p_n$ la probabilité pour qu'une permutation prise au hasard soit un dérangement. Quelle est la limite de
+$p_n$ quand $n$ tend vers $+\infty$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1861','imageindication1861');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1861"></a><div class=inner id="innerindication1861" style="display:none;"><ol class="enumeratechiffre">
+<li> Il y a 6 permutations....
+<li> Regrouper les permutations suivant leur nombre de points fixes.
+<li> Pour décrire une permutation ayant $k$ points fixes, il faut choisir ces $k$ points fixes, puis, pour les autres
+$n-k$ points, décrire le dérangement que l'on obtient.
+<li> Majorer (trivialement) $d_n$.
+<li> Faire le produit de Cauchy des deux séries entières et utiliser les formules des deux premières questions.
+<li> Exprimer $f$ en fonction des autres.
+<li> Etudier $d_n/n!$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1861','imagecorrige1861',1861);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1861"></a><div class=inner id="innercorrige1861" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $\{1,2,3\}$ a trois éléments, il existe exactement 6 bijections différentes de
+$\{1,2,3\}$ dans lui-même :
+<ul class="rien">
+<li> l'identité;
+<li> les 3 transpositions $(1\ 2)$, $(1\ 3)$, $(2\ 3)$.
+<li> les 2 cycles $(1\ 2\ 3)$ et $(1\ 3\ 2)$.
+</ul>
+L'identité a 3 points fixes, les transpositions en ont 1 et les cycles n'en ont pas.
+On en déduit que
+$$D_{3,0}=2,\ D_{3,1}=3,\ D_{3,2}=0\textrm{ et }D_{3,3}=1.$$
+<li> Si on note $A_k$ l'ensemble des permutations de $\{1,\dots,n\}$ ayant $k$ point fixes, alors 
+les ensembles $A_0,\dots,A_n$ sont deux à deux disjoints et leur réunion est égale à l'ensemble des permutations de $\{1,\dots,n\}$.
+Ainsi, on a bien $n!=\sum_{k=0}^n\textrm{card}(A_k)=\sum_{k=0}^n D_{n,k}$.
+<li> Pour chaque permutation ayant $k$ points fixes, il y a 
+<ul class="rien">
+<li> $\binom{n}{k}$ choix possibles de ces $k$ points fixes (choisir $k$ éléments parmi $n$);
+<li> ce choix effectué, la permutation agit comme une permutation sans point fixe sur les $n-k$ éléments restants.
+Il y a $D_{n-k,0}$ telles permutations.
+</ul>
+Le nombre de permutations ayant $k$ points fixes vaut donc $\binom{n}{k}D_{n-k,0}$.
+<li> Clairement, on a $0\leq d_n\leq n!$, soit $\frac{|d_n||z|^n}{n!}\leq |z|^n$. La série converge absolument si
+$|z|&lt;1$, son rayon de convergence est au moins égal à 1.
+<li> Puisque les séries entières définissant $\exp x$ et $f(x)$ ont un rayon de convergence supérieur ou égal à 1, leur
+produit de Cauchy est absolument convergent pour $|x|&lt;1$. De plus, on a
+$$(\exp x)f(x)=\sum_{n=0}^{+\infty}b_nx^n\textrm{ avec }b_n=\sum_{k=0}^n\frac{d_{n-k}}{(n-k)!}\times\frac{1}{k!}.$$
+Mais
+$$\sum_{k=0}^n\frac{d_{n-k}}{k!(n-k)!}=\frac{1}{n!}\sum_{k=0}^n \binom{n}{k}d_{n-k}=\frac{1}{n!}\sum_{k=0}^n
+D_{n,k}=1.$$
+On obtient
+$$(\exp x)f(x)=\sum_{n=0}^{+\infty}x^n=\frac{1}{1-x}.$$
+<li> De l'égalité $(\exp x)f(x)=\frac{1}{1-x}$, on tire
+$$f(x)=\frac{e^{-x}}{1-x}.$$
+On réalise le produit de Cauchy des deux séries entières obtenues à droite et on trouve
+$$f(x)=\sum_{n=0}^{+\infty}c_n x^n\textrm{ avec }c_n=\sum_{k=0}^n \frac{(-1)^k}{k!}.$$
+Par identification, on obtient bien $d_n=n!\sum_{k=0}^n\frac{(-1)^k}{k!}$.
+<li> La probabilité recherchée est $p_n=d_n/n!=\sum_{k=0}^n \frac{(-1)^k}{k!}$. Utilisant le développement en série
+entière de $\exp(-x)$, on trouve que cette probabilité converge vers $\exp(-1)=1/e$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater182"></span><script>var myRating = raterJs( { element:document.querySelector("#rater182"),	max:5, rating:2.6, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(182,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Wirtinger <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=182.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(182,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce182','imageenonce182');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce182"></a><div class=inner id="innerenonce182">Soit $f:\mtr\to\mtc$ une application $2\pi-$périodique de classe $C^1$ telle que $\int_0^{2\pi}f(t)dt=0$. Montrer que 
+$$\int_0^{2\pi}|f(t)|^2dt\leq \int_0^{2\pi}|f'(t)|^2dt,$$
+et caractériser l'égalité.</div></div><div class=indication><a href="javascript:showAll('innerindication182','imageindication182');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication182"></a><div class=inner id="innerindication182" style="display:none;">Utiliser l'identité de Parseval.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige182','imagecorrige182',182);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige182"></a><div class=inner id="innercorrige182" style="display:none;">Le fait de regarder des inégalités concernant des intégrales de fonction prises au carré incite à utiliser l'identité de Parseval.
+On note $c_n(f)$ les coefficients de Fourier trigonométriques de $f$. L'énoncé donne $c_0(f)=0$. Par ailleurs, une simple intégration
+par parties montre que $c_n(f')=inc_n(f)$. L'identité de Parseval appliquée aux deux fonctions $f$ et $f'$ donne donc 
+$$\frac{1}{2\pi}\int_0^{2\pi}|f(t)|^2=\sum_{n\in\mtz^*}|c_n(f)|^2\leq \sum_{n\in\mtz^*}n^2|c_n(f)|^2=\sum_{n\in\mtz}|c_n(f')|^2=\frac{1}{2\pi}\int_0^{2\pi}|f'(t)|^2dt,$$
+ce qui donne l'inégalité voulue. Pour qu'il y ait égalité, il faut que partout les inégalités soient des égalités. En particulier, 
+on doit avoir $n^2|c_n(f)|^2=|c_n(f)|^2$ pour tout $n\in\mtz^*$. Ceci entraîne en particulier que $c_n(f)=0$ pour $|n|&gt;1$. Comme $f$ est de classe $C^1$, sa série de Fourier 
+converge normalement vers $f$, et on obtient donc que $f(t)=ae^{-it}+be^{it}$, avec $a,b\in\mtc$. Réciproquement, il est facile de vérifier que pour des 
+fonctions de cette forme, il y a égalité.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater186"></span><script>var myRating = raterJs( { element:document.querySelector("#rater186"),	max:5, rating:2.3571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(186,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Séries de Fourier et équations différentielles <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=186.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(186,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce186','imageenonce186');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce186"></a><div class=inner id="innerenonce186">Le but de l'exercice est de déterminer si l'équation différentielle $(E)$
+$$y''+e^{it}y=0$$
+admet des solutions $2\pi$-périodiques.
+<ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> Montrer que la série trigonométrique $\sum_{n\geq 0}\frac{1}{(n!)^2}e^{int}$ converge uniformément sur $\mathbb R$ vers une fonction $f$
+$2\pi$-périodique.
+<li> Montrer que la fonction $f$ est de classe $C^2$ et qu'elle est solution de $(E)$.
+</ol>
+<li> Soit $g:\mathbb R\to\mathbb C$ une solution $2\pi$-périodique de classe $C^2$ de $(E)$. On désigne par
+$\sum_{n\in\mathbb Z}c_n(g)e^{int}$ et $\sum_{n\in\mathbb Z}c_n(g'')e^{int}$ les séries de Fourier respectives de $g$
+et de $g''$.
+<ol class="enumeratechiffre">
+<li> Exprimer $c_n(g'')$ en fonction de $c_n(g)$.
+<li> En utilisant que $g$ est solution de $(E)$, exprimer $c_n(g'')$ en fonction de $c_{n-1}(g)$. 
+<li> En déduire que l'ensemble des solutions $2\pi$-périodiques de $(E)$ est l'espace
+vectoriel de dimension 1 engendré par la fonction $f$.
+</ol>
+<li> $(E)$ possède-t-elle des solutions qui ne sont pas $2\pi$-périodiques?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication186','imageindication186');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication186"></a><div class=inner id="innerindication186" style="display:none;"><ol class="enumeratechiffre">
+<li> On prouve la convergence normale de la série, puis de la série dérivée, puis de la série dérivée seconde sur $\mathbb R$.
+<li> <ol class="enumeratechiffre">
+<li> Intégrer par parties.
+<li> &Eacute;crire la définition de $c_n(g'')$ puis remplacer $g''$ par $e^{it}g$.
+<li> 
+</ol>
+<li> Quelle est la taille de l'espace vectoriel des solutions?
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige186','imagecorrige186',186);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige186"></a><div class=inner id="innercorrige186" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<ol class="enumeratechiffre">
+<li> On a, pour tout $t\in\mathbb R$,
+$$\left|\frac{1}{(n!)^2}e^{int}\right|\leq\frac{1}{(n!)^2}$$
+et le membre de droite est le terme général d'une série numérique convergente. La série trigonométrique converge normalement, donc uniformément
+sur $\mathbb R$.
+<li> Puisque, pour chaque $n\in\mathbb N$, la fonction $f_n:t\mapsto \frac{1}{(n!)^2}e^{int}$ est continue, et puisque la série trigonométrique
+converge uniformément, la fonction $f$ est continue. De plus, $f_n$ est de classe $C^2$ et on a, pour tout $t\in\mathbb R$,
+$$\left|f_n'(t)\right|\leq \frac{n}{(n!)^2}\textrm{ et }\left|f_n''(t)\right|\leq\frac{1}{\big((n-1)!\big)^2}.$$
+Les membres de droite sont à chaque fois des séries numériques convergentes (par exemple, d'après la règle de d'Alembert),
+les séries de fonctions $\sum_{n\geq 0}f_n(t)$ et $\sum_{n\geq 0}f_n''(t)$ convergent donc normalement sur $\mathbb R$. Ceci
+prouve que $f$ est de classe $C^2$, et de plus que $f''(t)=\sum_{n\geq 0}\frac{(in)^2}{n!}e^{int}$.
+On en déduit
+\begin{eqnarray*}
+f''(t)+e^{it}f(t)&=&\sum_{n\geq 1}\frac{-1}{\big((n-1)!\big)^2}e^{int}+\sum_{n\geq 0}\frac{1}{(n!)^2}e^{i(n+1)t}\\
+&=&\sum_{n\geq 0}\frac{-1}{(n!)^2}e^{i(n+1)t}+\sum_{n\geq 0}\frac{1}{(n!)^2}e^{i(n+1)t}\\
+&=&0.
+\end{eqnarray*}
+La fonction $f$ est donc bien solution de l'équation différentielle $(E)$.
+</ol>
+<li> <ol class="enumeratechiffre">
+<li> Il suffit de faire une double intégration par parties pour prouver que
+$$c_n(g'')=(in)^2 c_n(g)=-n^2 c_n(g).$$
+<li> Puisque $g$ est solution de l'équation différentielle $(E)$, on sait que $g''(t)=-g(t)e^{it}$
+pour tout $t\in\mathbb R$. Ceci donne
+\begin{eqnarray*}
+c_n(g'')&=&\frac{1}{2\pi}\int_{-\pi}^{\pi}g(t)e^{it}e^{-int}dt\\
+&=&-c_{n-1}(g).
+\end{eqnarray*}
+<li> Les deux résultats précédents pris ensemble prouvent que, pour chaque $n\in\mathbb Z$, on a 
+$$c_{n-1}(g)=n^2c_n(g).$$
+Par deux récurrences faciles, on prouve alors que, pour tout $n\geq 0$, $\dis c_n(g)=\frac{c_0(g)}{(n!)^2}$, et pour tout $n&lt;0$, $c_n(g)=0$.
+De plus, puisque $g$ est $C^1$ et $2\pi$-périodique, elle est somme de sa série de Fourier. Autrement dit, on a
+$$g(t)=\sum_{n\in\mathbb Z}c_n(g)e^{int}=c_0\sum_{n\geq 0}\frac{1}{(n!)^2}e^{int}.$$
+Ainsi, $g$ est proportionnelle à la fonction $f$ et l'ensemble des solutions $2\pi$-périodiques de $(E)$ est l'espace vectoriel engendré par $f$.
+</ol>
+<li> On rappelle que d'après le théorème de Cauchy, l'ensemble des solutions sur $\mtr$ de cette équation est un espace vectoriel de dimension 2.
+Il existe donc des solutions qui ne sont pas $2\pi$-périodiques.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater178"></span><script>var myRating = raterJs( { element:document.querySelector("#rater178"),	max:5, rating:2.9473684210526, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(178,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Phénomène de Gibbs <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=178.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(178,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce178','imageenonce178');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce178"></a><div class=inner id="innerenonce178">On se propose dans cet exercice d'étudier la convergence de la série de Fourier de la fonction impaire, $2\pi$-périodique,
+définie par 
+$$f(x)=\left\{
+\begin{array}{ll}
+1&\textrm{ si }x\in]0,\pi[\\
+0&\textrm{ si }x=k\pi,\ k\in\mathbb Z.
+\end{array}\right.$$
+<ol class="enumeratechiffre">
+<li> Question préliminaire : 
+<ol class="enumeratechiffre">
+<li> Montrer que, pour tout $x\in[0,\pi/2]$, on a
+$\sin(x)\geq\frac{2}\pi x.$
+<li> Montrer que, pour tout $x\in\mathbb R$, on a
+$|\sin x-x|\leq \frac{|x|^3}6.$
+<li> Soit $h_n$ la fonction définie sur $[0,\pi]$ par 
+$$h_n(t)=\left\{
+\begin{array}{ll}
+\frac{\sin t}{(2n)\sin\left(\frac{t}{2n}\right)}&\textrm{ si }t\neq 0\\
+1&\textrm{si }t=0.
+\end{array}\right.$$
+Déduire des questions précédentes que $(h_n)$ converge uniformément sur $[0,\pi]$ vers une fonction $h$ que l'on précisera.
+</ol>
+<li> Calculer la série de Fourier de $f$ et prouver qu'elle converge simplement vers $f$.
+Y-a-t-il convergence uniforme?
+<li> Soit $S_n$ la $(2n-1)$-ième somme partielle de la série de Fourier de $f$,
+$$S_n(x)=\frac{4}{\pi}\sum_{k=1}^n \frac{\sin\big((2k-1)x\big)}{2k-1}.$$
+Justifier que $S_n$ est dérivable sur $\mathbb R$ et que sa dérivée vérifie
+$$S_n'(x)=\left\{
+\begin{array}{ll}
+\frac{2}\pi\times\frac{\sin(2nx)}{\sin x}&\textrm{ si }x\notin\pi\mathbb Z\\
+\frac{(-1)^q 4n}\pi&\textrm{ si }x=q\pi,\ q\in\mathbb Z.
+\end{array}\right.$$
+En déduire que $S_n$ présente $(2n-1)$ extrema locaux sur l'intervalle $]0,\pi[$.
+Montrer que le premier d'entre eux est un maximum et qu'il est atteint en $x_n=\frac{\pi}{2n}$.
+On posera pour la suite $a_n=S_n(x_n)$.
+<li> Montrer que, pour tout $x\in[0,\pi[$, on a
+$$S_n(x)=\frac2\pi\int_0^x\frac{\sin(2nt)}{\sin t}dt.$$
+En déduire que
+$$a_n=\frac{2}\pi\int_0^{\pi}\frac{\sin t}{(2n)\sin\left(\frac{t}{2n}\right)}dt.$$
+<li> Montrer que $\lim_{n\to+\infty}a_n=\frac2\pi\int_0^{\pi}\frac{\sin t}tdt.$
+</ol>
+On peut vérifier que $\frac2\pi\int_0^{\pi}\frac{\sin t}tdt&gt;1.$</div></div><div class=indication><a href="javascript:showAll('innerindication178','imageindication178');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication178"></a><div class=inner id="innerindication178" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> 
+<li> Appliquer une formule de Taylor à la fonction $\sin$.
+<li> Soit $h(t)=\sin t/t$. Prouver la convergence simple de $(h_n)$ vers $h$, puis écrire
+$$|h_n(t)-h(t)|=\frac{(2n)|\sin t|\times |\sin(t/2n)-(t/2n)|}{|(2n)t\sin(t/2n)|}.$$
+</ol>
+<li>
+<li> On peut dériver terme à terme la somme finie. Revoir ensuite comment exprimer sans somme
+une somme de cosinus...
+<li> 
+<li> Permuter limite et intégrale à l'aide de la convergence uniforme prouvé plus haut.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige178','imagecorrige178',178);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige178"></a><div class=inner id="innercorrige178" style="display:none;"><ol class="enumeratechiffre">
+<li> <ol class="enumeratechiffre">
+<li> La fonction $\sin$ est concave dans $[0,\pi/2]$. Son graphe est au-dessus de ses cordes,
+en particulier au dessus de la corde qui relie le point $(0,0)$ au point $(\pi/2,1)$.
+Ceci donne exactement l'inégalité demandée.
+<li> Il s'agit juste de l'inégalité de Taylor-Lagrange à l'ordre 3 appliquée à la fonction $t\mapsto \sin t$,
+entre les points $0$ et $x$.
+<li> Puisque $\sin(t/2n)\sim_{+\infty}t/2n$, on en déduit que pour $t\in]0,\pi]$, $(h_n(t))$
+converge vers $\frac{\sin t}{t}$. Soit $h$ défini par $h(t)=\frac{\sin t}{t}$ si $t\in]0,\pi]$
+et $h(0)=1$. On va démontrer que $(h_n)$ converge uniformément vers $h$ sur $]0,\pi]$.
+On a, pour $t\in]0,\pi]$,
+\begin{eqnarray*}
+|h_n(t)-h(t)|&=&\frac{(2n)|\sin t|\times |\sin(t/2n)-(t/2n)|}{|(2n)t\sin(t/2n)|}.
+\end{eqnarray*}
+Mais, $|\sin t|\leq 1$ et $|\sin(t/2n)-(t/2n)|\leq\frac{t^3}{8n^3}$. 
+De plus, puisque $t\in]0,\pi]$, $t/2n\in]0,\pi/2]$ et on a 
+$$\sin(t/2n)\geq \frac{2}{\pi}\times\frac{t}{2n}=\frac{t}{\pi n}$$
+ce qui donne finalement
+$$|h_n(t)-h(t)|\leq 2n\times\frac{t^3}{8n^3}\times \frac{\pi n}{t^2}=\frac{\pi t}{4 n^2}\leq\frac{\pi^2}{4n^2}.$$
+Ceci prouve bien la convergence uniforme de $(h_n)$ vers $h$ sur l'intervalle $[0,\pi]$.
+</ol>
+<li> La fonction $f$ est impaire, donc $a_n(f)=0$ pour tout $n\in\mathbb N$. Pour $n\geq 1$, on a
+\begin{eqnarray*}
+b_n(f)&=&\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\sin(nt)dt=\frac{1}{\pi}\int_{-\pi}^0-\sin(nt)dt+\frac{1}{\pi}\int_{0}^{\pi}\sin(nt)dt\\
+&=&+\frac1{\pi n}\big(\cos(0)-\cos(-n\pi)\big)+\frac{1}{n}\big(\cos(n\pi)-\cos(0)\big)\\
+&=&-\frac{1}{\pi n}\big(2-2(-1)^n\big).
+\end{eqnarray*}
+Ainsi, si $n$ est pair, $b_n(f)=0$ et si $n$ est impair, $b_n(f)=\frac{4}{\pi n}.$
+Puisque $f$ est $C^1$ par morceaux, sa série de Fourier converge en tout point $x\in\mathbb R$
+vers la demi-somme des limites à gauche et à droite de $f$ en $x$. En les points où $f$ est continue,
+cette demi-somme est bien sûr égale à $f(x)$. En $k\pi$, cette demi-somme fait 0, et donc
+vaut aussi $f(k\pi)$. Bien sûr, la convergence ne saurait être uniforme, puisque $f$ n'est pas continue
+alors que chaque somme partielle de la série de Fourier l'est.
+<li> $S_n$ est dérivable comme somme de fonctions dérivables, et de plus, pour tout $x\in\mathbb R$, on a
+$$S_n'(x)=\frac{4}{\pi}\sum_{k=1}^n \cos\big((2k-1)x\big).$$
+Reste à calculer cette somme. Si $x=k\pi$, on trouve bien que $S_n'(x)=\frac{(-1)^q4n}\pi$.
+Pour $x\neq k\pi$, $k\in\mathbb Z$, on écrit que 
+$$S_n'(x)=\frac4\pi\Re e\left(\sum_{k=1}^n e^{i(2k-1)x}\right).$$
+On utilise ensuite la somme d'une série géométrique :
+\begin{eqnarray*}
+\sum_{k=1}^n e^{i(2k-1)x}&=&e^{-ix}\sum_{k=1}^n e^{2ikx}\\
+&=&e^{-ix}\frac{e^{2ix}-e^{i(2n+2)x}}{1-e^{2ix}}\\
+&=&\frac{e^{-ix}e^{i(n+2)x}}{e^{ix}}\frac{e^{-inx}-e^{inx}}{e^{-ix}-e^{ix}}\\
+&=&e^{inx}\frac{\sin(nx)}{\sin(x)}.
+\end{eqnarray*}
+En prenant la partie réelle, on trouve finalement
+$$S_n'(x)=\frac{4}{\pi}\frac{\cos (nx)\sin(nx)}{\sin x}=\frac{2}\pi\times\frac{\sin 2nx}{\sin x}.$$
+Ainsi, en chaque point de la forme $\frac{k\pi}{2n}$, $k\in\{1,\dots,2n-1\}$, la fonction $S_n'$ s'annule
+et change de signe. Ainsi, $S_n$ présente un extremum en ces points. De plus, $S_n'$ ne s'annule
+sur l'intervalle $]0,\pi[$ qu'en ces points. On a donc trouvé les $2n-1$ extrema locaux de $f$ sur
+$]0,\pi[$. 
+Le premier d'entre eux est bien atteint en $x_n=\frac{\pi}{2n}$, et $S_n'\geq 0$ avant $x_n$
+tandis que $S_n'\leq 0$ après $x_n$. $x_n$ est bien un maximum local de $S_n$.
+<li> Puisque $S_n'$ est continue, le théorème fondamental du calcul intégral nous dit que, pour tout $x\in\mathbb R$, on a
+$$S_n(x)-S_n(0)=\int_0^x S_n'(t)dt.$$
+D'après les calculs effectués précédemment, on trouve
+$$S_n(x)=\frac2\pi\int_0^x\frac{\sin(2nt)}{\sin t}dt.$$
+En particulier, 
+$$a_n=S_n(x_n)=\frac2\pi\int_0^{\pi/2n}\frac{\sin(2nt)}{\sin t}dt.$$
+Le changement de variables $u=nt$ donne le résultat souhaité.
+<li> On a 
+$$a_n=\frac2\pi\int_0^\pi h_n(t)dt.$$
+Or, la fonction $(h_n)$ converge uniformément vers $h$ sur $[0,\pi]$. On peut donc permuter la limite et l'intégrale et on a
+$$\lim_{n\to+\infty}a_n=\frac2\pi\int_0^{\pi}\frac{\sin t}tdt.$$
+</ol></div></div></div>
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

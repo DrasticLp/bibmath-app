@@ -1,0 +1,551 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math sup : Probabilités sur un univers fini</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math sup : Probabilités sur un univers fini</h1>
+<div class=titrepartie>Exercices théoriques sur les espaces probabilisés</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater1227"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1227"),	max:5, rating:1.2758620689655, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1227,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;criture ensembliste <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1227.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(1227,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1227','imageenonce1227');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1227"></a><div class=inner id="innerenonce1227">Soit $\Omega$ un univers et soient $A,B,C$ trois événements de $\Omega$. Traduire en termes ensemblistes
+(en utilisant uniquement les symboles d'union, d'intersection et de passage au complémentaire, ainsi que $A$, $B$ 
+et $C$) les événements suivants :
+<ol class="enumeratechiffre">
+ <li> Seul $A$ se réalise;
+<li> $A$ et $B$ se réalisent, mais pas $C$.
+<li> les trois événements se réalisent;
+<li> au moins l'un des trois événements se réalise;
+<li> au moins deux des trois événements se réalisent;
+<li> aucun ne se réalise;
+<li> au plus l'un des trois se réalise;
+<li> exactement deux des trois se réalisent;
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1227','imagecorrige1227',1227);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1227"></a><div class=inner id="innercorrige1227" style="display:none;"><ol class="enumeratechiffre">
+ <li> Seul $A$ se réalise : $A\cap \bar B\cap \bar C$;
+<li> $A$ et $B$ se réalisent, mais pas $C$ : $(A\cap B)\backslash C=(A\cap B)\cap\bar C$;
+<li> les trois événements se réalisent : $A\cap B\cap C$;
+<li> au moins l'un des trois événements se réalise : $A\cup B\cup C$;
+<li> au moins deux des trois événements se réalisent : $(A\cap B)\cup (A\cap C)\cup (B\cap C)$; on pourrait être tenté de rajouter la réunion avec $A\cap B\cap C$, mais c'est inutile puisque $A\cap B\cap C$ est inclus dans $A\cap B$.
+<li> aucun ne se réalise : $\bar A\cap \bar B\cap \bar C$;
+<li> au plus l'un des trois se réalise : c'est le contraire de ``au moins deux se réalisent'', donc
+$$\overline{(A\cap B)\cup (A\cap C)\cup (B\cap C)};$$
+<li> exactement deux des trois se réalisent : on peut le reformuler en ``au moins deux se réalisent,
+mais pas trois'', d'où
+$$\big((A\cap B)\cup (A\cap C)\cup (B\cap C)\big)\cap \overline{A\cap B\cap C}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater1229"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1229"),	max:5, rating:1.325, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1229,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sur la probabilité de l'intersection <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1229.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(1229,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1229','imageenonce1229');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1229"></a><div class=inner id="innerenonce1229">Soient $A$ et $B$ deux événements d'un espace probabilisé. Démontrer que 
+$$\max\big(0,P(A)+P(B)-1\big)\leq P(A\cap B)\leq \min\big(P(A),P(B)\big).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1229','imageindication1229');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1229"></a><div class=inner id="innerindication1229" style="display:none;">Il y a en réalité quatre inégalités à prouver. Une seule n'est pas immédiate. Partir de 
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B).$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1229','imagecorrige1229',1229);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1229"></a><div class=inner id="innercorrige1229" style="display:none;">Remarquons d'abord que $A\cap B\subset A$ et donc $P(A\cap B)\leq P(A)$. De même, $P(A\cap B)\leq P(B)$, ce qui prouve l'inégalité de droite. De plus, $P(A\cap B)\geq 0$ et aussi
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B)\implies P(A\cap B)=P(A)+P(B)-P(A\cup B).$$
+Mais $P(A\cup B)\leq 1$ et donc 
+$$P(A\cap B)\geq P(A)+P(B)-1.$$
+On a donc aussi obtenu l'inégalité de gauche.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater1230"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1230"),	max:5, rating:2.1818181818182, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1230,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Inégalité de Bonferroni <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1230.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(1230,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1230','imageenonce1230');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1230"></a><div class=inner id="innerenonce1230">Soient $(\Omega,\mathcal F,\mathbb P)$ un espace probabilisé, et $A_1,\dots,A_n$
+des événements. Démontrer que 
+$$\mathbb P(A_1\cap\dots\cap A_n)\geq \left(\sum_{i=1}^n \mathbb P(A_i)\right)-(n-1).$$</div></div><div class=indication><a href="javascript:showAll('innerindication1230','imageindication1230');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1230"></a><div class=inner id="innerindication1230" style="display:none;">Procéder par récurrence sur $n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1230','imagecorrige1230',1230);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1230"></a><div class=inner id="innercorrige1230" style="display:none;">On va procéder par récurrence sur $n$, le point clé étant la formule 
+$$\mathbb P(A\cap B)=\mathbb P(A)+\mathbb P(B)-\mathbb P(A\cup B).$$
+ La propriété est vraie si $n=1$. Soit $n\geq 2$ et supposons la propriété vraie au rang $n-1$. Prouvons-la au rang $n$.
+ On pose $A=A_1\cap\dots\cap A_{n-1}$ et $B=A_n$. Alors, d'après la formule précédente
+$$\mathbb P(A_1\cap\dots\cap A_n)=\mathbb P(A\cap B)=\mathbb P(A)+\mathbb P(B)-\mathbb P(A\cup B).$$
+Maintenant, on utilise l'hypothèse de récurrence pour minorer $\mathbb P(A)$, et
+on utilise le fait que $\mathbb P(A\cup B)\leq 1$, et on obtient 
+$$\mathbb P(A_1\cap\dots\cap A_n)\geq \sum_{i=1}^{n-1} \mathbb P(A_i)-(n-2)+P(A_n)-1$$
+ce qui est exactement le résultat voulu.</div></div></div>
+
+<div class=titrepartie>Calcul de probabilités par dénombrement</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater1224"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1224"),	max:5, rating:1.40625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1224,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Jeu de cartes <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1224.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(1224,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1224','imageenonce1224');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1224"></a><div class=inner id="innerenonce1224">On tire simultanément trois cartes au hasard dans un paquet de 32 cartes. Quelle est la probabilité de 
+<ol class="enumeratechiffre">
+<li> n'obtenir que des coeurs?
+<li> que des as?
+<li> deux coeurs et un pique?
+</ol>
+On donnera le résultat sous forme de fraction irréductible.</div></div><div class=indication><a href="javascript:showAll('innerindication1224','imageindication1224');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1224"></a><div class=inner id="innerindication1224" style="display:none;">Compter le nombre de tirages possibles et le nombre de tirages total.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1224','imagecorrige1224',1224);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1224"></a><div class=inner id="innercorrige1224" style="display:none;"><ol class="enumeratechiffre">
+<li> Le nombre de tirages possible est $\binom 83$. Le nombre total de tirages est $\binom{32}3$. La probabilité recherchée est donc 
+$$\frac{\binom 83}{\binom{32}3}=\frac{8\times 7\times 6}{32\times 31\times 30}=\frac{7}{620}.$$
+<li> Le raisonnement est identique. On obtient 
+$$\frac{\binom 43}{\binom{32}3}=\frac{4\times 3\times 2}{32\times 31\times 30}=\frac{1}{1240}.$$
+<li> Le nombre de tirages possibles est $\binom 82\times\binom 81$. La probabilité recherchée est
+donc
+$$\frac{\binom 82\times\binom 81}{\binom{32}3}=\frac{28\times 8}{4960}=\frac{7}{155}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater1225"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1225"),	max:5, rating:2.36, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1225,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Au moins un six! <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1225.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(1225,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1225','imageenonce1225');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1225"></a><div class=inner id="innerenonce1225">Soit $n\geq 1$. On lance $n$ fois un dé parfaitement équilibré. Quelle est la probabilité d'obtenir
+<ol class="enumeratechiffre">
+<li> au moins une fois le chiffre 6?
+<li> au moins deux fois le chiffre 6?
+<li> au moins $k$ fois le chiffre 6?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1225','imageindication1225');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1225"></a><div class=inner id="innerindication1225" style="display:none;">&Eacute;tudier plutôt la probabilité de l'événement complémentaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1225','imagecorrige1225',1225);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1225"></a><div class=inner id="innercorrige1225" style="display:none;">Dans chaque cas, on va plutôt étudier la probabilité d'obtenir l'événement complémentaire.
+<ol class="enumeratechiffre">
+<li> La probabilité de n'obtenir aucun $6$ est $\left(\frac 56\right)^n$. La probabilité d'obtenir au moins un six est donc $1-\left(\frac 56\right)^n$.
+<li> Soit $A$ l'événement "obtenir au maximum une fois le chiffre 6". Alors $A$ est la somme des événements disjoints $A_0$="ne jamais obtenir six" et $A_1$="obtenir exactement $1$ fois le chiffre 6". On a $P(A)=P(A_0)+P(A_1)$. De plus, $P(A_0)$ a été calculé à la question précédente :
+$$P(A_0)=\left(\frac 56\right)^n.$$
+Calculons désormais $P(A_1)$. On commence par choisir le lancer où on a obtenu le chiffre 6. Il y a $\binom n1=n$ tels choix. Ce lancer fixé, la suite de lancers a une probabilité valant $\frac 16\times\left(\frac 56\right)^{n-1}$ de se réaliser. On en déduit que 
+$$P(A_1)=\binom n1\times\frac 16\times\left(\frac 56\right)^{n-1}.$$
+Finalement, la probabilité d'obtenir au moins deux fois le chiffre 6 vaut 
+$$1-\left(\frac 56\right)^n-\binom n1\times\frac 16\times\left(\frac 56\right)^{n-1}.$$
+<li> On généralise la méthode précédente. Notons $A_j$ la probabilité d'obtenir exactement $j$ fois le chiffre 6. La probabilité recherchée est
+$$1-P(A_0)-P(A_1)-\dots-P(A_{k-1}).$$
+Mais, pour calculer $P(A_j)$ on détermine d'abord la place des $j$ chiffres $6$ : il y a $\binom nj$ tels choix. Ce choix fait, la suite de lancers a une probabilité égale à $\left(\frac 16\right)^j\left(\frac 56\right)^{n-j}$ de se réaliser. On a donc
+$$P(A_j)=\binom nj\left(\frac 16\right)^j\left(\frac 56\right)^{n-j}.$$
+On conclut finalement que la probabilité d'obtenir au moins $k$ fois le chiffre $6$ vaut
+$$1-\sum_{j=0}^{k-1}\binom nj\left(\frac 16\right)^j\left(\frac 56\right)^{n-j}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater1221"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1221"),	max:5, rating:2.125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1221,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Racines de polynômes <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1221.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(1221,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1221','imageenonce1221');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1221"></a><div class=inner id="innerenonce1221">On jette 3 fois un dé à 6 faces, et on note $a$, $b$ et $c$ les résultats successifs obtenus. On note $Q(x)=ax^2+bx+c$. Déterminer la probabilité pour que :
+<ul class="rien">
+<li> $Q$ ait deux racines réelles distinctes.
+<li> $Q$ ait une racine réelle double.
+<li> $Q$ n'ait pas de racines réelles.
+</ul></div></div><div class=indication><a href="javascript:showAll('innerindication1221','imageindication1221');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1221"></a><div class=inner id="innerindication1221" style="display:none;">L'espace probabilisé à considérer est $\Omega=\{1,2,3,4,5,6\}^3$, muni de l'équiprobabilité. Il suffit ensuite de compter le nombre d'issues pour lesquelles $b^2-4ac&gt;0$, etc... </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1221','imagecorrige1221',1221);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1221"></a><div class=inner id="innercorrige1221" style="display:none;">On associe à l'expérience aléatoire l'univers des possibles $\Omega=\{1,2,3,4,5,6\}^3$, muni de l'équiprobabilité. Ainsi, la probabilité d'un événement $A$ vaut $\card(A)/6^3$. On s'intéresse d'abord
+à l'événement $A=\{(a,b,c)\in\Omega;\ b^2-4ac&gt;0\}$. Il suffit de dénombrer $A$. On commence par établir un petit tableau avec les valeurs de $4ac$ :
+$$
+\begin{array}{c|c|c|c|c|c|c}
+c\backslash a&1&2&3&4&5&6\\\hline
+1&4&8&12&16&20&24\\\hline
+2&8&16&24&32&40&48\\\hline
+3&12&24&36&48&60&72\\\hline
+4&16&32&48&64&80&96\\\hline
+5&20&40&60&80&100&120\\\hline
+6&24&48&72&96&120&144
+\end{array}
+$$
+On calcule le cardinal de $A$ en regardant dans le tableau le nombre de valeurs de $a$ et $c$ pour lesquelles $b^2&gt;4ac$, pour les 6 valeurs que peut prendre $b$. On trouve :
+$$\card(A)=0+0+3+5+14+16=38.$$
+On en déduit :
+$$P(A)=\frac{38}{216}=\frac{19}{108}.$$
+On note pareillement $B=\{(a,b,c)\in\Omega;\ b^2-4ac=0\}$ et $C=\{(a,b,c)\in\Omega;\ b^2-4ac&lt;0\}$. Le même dénombrement prouve que :
+$$P(B)=\frac{5}{216}.$$
+On peut calculer $P(C)$ de la même façon, ou remarquer que les 3 événement $A,B,C$ forment un système complet d'événements. On déduit alors :
+$$P(C)=1-P(A)-P(B)=\frac{173}{216}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater1220"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1220"),	max:5, rating:2.24, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1220,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Le problème des anniversaires <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1220.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(1220,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1220','imageenonce1220');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1220"></a><div class=inner id="innerenonce1220">Vous êtes dans une classe de 30 élèves. Votre prof de maths veut parier avec vous 10 euros 
+qu'au moins deux personnes dans cette classe ont la même date d'anniversaire. Acceptez-vous le pari?</div></div><div class=indication><a href="javascript:showAll('innerindication1220','imageindication1220');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1220"></a><div class=inner id="innerindication1220" style="display:none;">Traduire le problème en terme d'application injective (ou plutôt non injective...).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1220','imagecorrige1220',1220);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1220"></a><div class=inner id="innercorrige1220" style="display:none;">On va chercher la probabilité que deux personnes de la classe aient la même date d'anniversaire. Si elle est supérieure à 1/2, il ne faut pas accepter le pari. Il est plus facile de calculer la probabilité de l'événement complémentaire. On va donc chercher la probabilité que deux personnes n'ont pas la même date d'anniversaire et, pour simplifier, on va oublier que
+certaines années comportent un 29 février. Formalisons un peu le problème. Pour que deux personnes n'aient pas la même date d'anniversaire,
+on doit fabriquer une injection de $\{1,\dots,30\}$ dans $\{1,\dots,365\}$. Il y a $365\times 364\times\dots\times 336$ telles applications injectives. Il y a total de $365^{30}$ applications de $\{1,\dots,30\}$ dans $\{1,\dots,365\}$. La
+probabilité que deux personnes aient la même date d'anniversaire vaut donc 
+$$1-\frac{365\times 364\times \dots\times336}{365^{30}}=1-\frac{364}{365}\times \dots\times \frac{336}{365}\simeq 1-0,293\simeq0,706$$
+Refusez le pari!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater1219"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1219"),	max:5, rating:2.3478260869565, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1219,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La coupe <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1219.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(1219,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1219','imageenonce1219');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1219"></a><div class=inner id="innerenonce1219">Pour organiser une coupe, on organise un tirage au sort qui réunit $n$ équipes de basket-ball de 1ère division et $n$ équipes de 2ième division, de sorte que chaque équipe joue un match, et un seul.
+<ol class="enumeratechiffre">
+<li> Calculer la probabilité $p_n$ que tous les matchs opposent une équipe de 1ère division à une équipe de 2ème division.
+<li> Calculer la probabilité $q_n$ que tous les matchs opposent deux équipes de la même division.
+<li> Montrer que pour tout $n\geq 1$, $\dis\frac{2^{2n-1}}{n}\leq \binom{2n}n\leq 2^{2n}.$
+<li> En déduire $\lim_{n\to+\infty}p_n$ et $\lim_{n\to\infty}q_n$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1219','imageindication1219');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1219"></a><div class=inner id="innerindication1219" style="display:none;"><ol class="enumeratechiffre">
+<li> Commencer par calculer le nombre total de tirages au sort possibles. On pourra mettre un ordre sur les matchs pour distinguer les tirages au sort. Ensuite, compter les tirages au sort opposant des équipes différentes. Pour le premier match, il faut choisir 1 équipe parmi n équipes de 1ère division et 1 équipe parmi n équipe de 2ème division. Pour le second match, il suffit d'en choisir $n-1$,...
+<li> Le cas $n$ impair est facile. Si $n=2k$ est pair, commencer par choisir les $k$ matchs qui opposent équipes de 1ère division entre elles, puis faire un dénombrement des tirages au sort à l'intérieur de chaque division.
+<li> Commencer par écrire que :
+$$(2n)!=2^n (2n-1)(2n-3)\dots3\times1\times n!.$$
+<li> Majorer $p_n$ et $q_n$ à l'aide de la formule précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1219','imagecorrige1219',1219);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1219"></a><div class=inner id="innercorrige1219" style="display:none;"><ol class="enumeratechiffre">
+<li> On va dénombrer les tirages au sort en tenant compte de l'ordre des matchs dans le tirage (c'est-à-dire que si l'on a 4 équipes A,B,C et D, les tirages (A-B,C-D) et (C-D,A-B) sont comptés comme deux tirages différents car ils n'ont pas le même premier match). On pourrait faire sans cette convention, on obtiendrait les mêmes résultats mais cela changerait un peu la façon de faire.
+Un tirage au sort se présente donc comme une $n-$liste de matchs, c'est-à-dire une $n-$liste de combinaisons 2 à 2 disjointes. Il y a $\binom{2n}2$ façons de choisir la première combinaison. Puis, cette combinaison choisie, il y a encore $\binom{2n-2}2$ façons de choisir la combinaison suivante. Et ainsi de suite...
+Ainsi, le nombre total de tirages au sort est :
+$$\binom{2n}2\times \binom{2n-2}2\times\dots \binom42\binom22=\frac{(2n)!}{2^n}.$$
+Parmi ces tirages, comptons ceux qui ne font s'opposer que des équipes de division distinctes. Pour le premier match, il y a $n$ façons de choisir l'équipe de première division, et $n$ façons de choisir l'équipe de deuxième division, soit $n^2$ choix. Pour le second match, il reste à choisir parmi $n-1$ équipes, et donc on a $(n-1)^2$ choix. 
+Finalement, on obtient :
+$$p_n=\frac{(n!)^2}{\frac{(2n)!}{2^n}}=\frac{2^n}{\binom{2n}{n}}.$$
+<li> D'abord, si $n$ est impair, un tel tirage au sort est clairement impossible, et $q_n=0$. On suppose donc que $n$ est pair et s'écrit $2k$. On choisit d'abord les $k$ matchs parmi $2k$ qui opposent les matchs de 1ère division entre eux : cela fait $\binom{2k}k$ choix. Une fois ce choix réalisé, il faut compter le nombre de tirages à l'intérieur entre équipes de 1ère division.
+De la même façon que lorsqu'on a compté le nombre total de tirages au sort, on trouve $\frac{(2k)!}{2^k}$. De même pour les tirages au sort entre équipes de 2è division. On a donc :
+$$q_{2k}=\frac{2^{2k}}{(4k)!}\times \binom{2k}k\times\left(\frac{(2k)!}{2^k}\right)^2=\frac{\binom{2k}k}{\binom{4k}{2k}}.$$
+<li> Ecrivons que :
+$$(2n)!=2^n (2n-1)(2n-3)\dots3\times1\times n!.$$
+On a donc :
+$$\binom{2n}n=2^n\frac{(2n-1)(2n-3)\dots3\times 1}{n!}.$$
+Maintenant, en utilisant l'encadrement $2n-k-1\leq 2n-k\leq 2n-k+1$, on obtient 
+$$2^n\frac{(2n-2)(2n-4)\dots 4\times 2}{n!}\leq \binom{2n}n\leq2^n\frac{2n(2n-2)\dots 4\times 2}{n!}$$
+qui donne finalement le résultat demandé.
+<li> On a donc :
+$$0\leq p_n\leq \frac{n}{2^{n-1}},$$ qui prouve que $p_n$ tend vers 0 si $n$ tend vers $+\infty$.
+De même pour $q_n$...
+</ol></div></div></div>
+
+
+<div class=titrepartie>Probabilités non uniformes</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater1222"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1222"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1222,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dés pipés <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1222.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(1222,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1222','imageenonce1222');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1222"></a><div class=inner id="innerenonce1222">On dispose d'un dé pipé tel que la probabilité d'obtenir une face soit proportionnelle au chiffre porté par cette face. On lance le dé pipé. 
+<ol class="enumeratechiffre">
+<li> Donner un espace probabilisé modélisant l'expérience aléatoire.
+<li> Quelle est la probabilité d'obtenir un chiffre pair?
+<li> Reprendre les questions si cette fois le dé est pipé de sorte que la probabilité d'obtenir une face paire soit le double de la probabilité d'obtenir une face impaire, les probabilités d'obtenir chaque face paire étant toutes égales entre elles.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1222','imageindication1222');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1222"></a><div class=inner id="innerindication1222" style="display:none;"><ol class="enumeratechiffre">
+<li> L'énoncé nous dit que $\mathbb P(\{i\})={\lambda}\times i$. Le problème est de déterminer $\lambda$. Utiliser que la somme des probabilités doit faire 1.
+<li> Décomposer en événements élémentaires.
+<li> Cette fois, poser $\lambda=\mathbb P(\{1\})$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1222','imagecorrige1222',1222);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1222"></a><div class=inner id="innercorrige1222" style="display:none;"><ol class="enumeratechiffre">
+<li> L'univers le plus naturel à associer à l'expérience est $\{1,\dots,6\}$. Soit $\mathbb P$ la probabilité modélisant l'expérience aléatoire. L'énoncé nous dit que $\mathbb P(\{i\})=\lambda\times i$. Le problème est de déterminer $\lambda$. Pour cela, on remarque que
+$$\mathbb P(\{1\})+\mathbb P(\{2\})+\mathbb P(\{3\})+\mathbb P(\{4\})+\mathbb P(\{5\})+\mathbb P(\{6\})=1.$$
+Mais, 
+$$\mathbb P(\{1\})+\mathbb P(\{2\})+\mathbb P(\{3\})+\mathbb P(\{4\})+\mathbb P(\{5\})+\mathbb P(\{6\})=21 \lambda.$$
+On doit donc avoir $\lambda=\frac 1{21}$. 
+<li> On a 
+$$\mathbb P(\{\textrm{obtenir un chiffre pair}\})=\mathbb P(\{2\})+\mathbb P(\{4\})+\mathbb P(\{6\})=\frac{12}{21}=\frac 47.$$
+<li> L'univers est le même. Posons cette fois $\lambda=\mathbb P(\{1\})$. Alors on doit avoir
+$$\mathbb P(\{2\})=\mathbb P(\{4\})=\mathbb P(\{6\})=2\lambda$$
+et
+$$\mathbb P(\{1\})=\mathbb P(\{3\})=\mathbb P(\{5\})=\lambda.$$
+Par le même raisonnement qu'à la question précédente, on doit avoir
+$$3\lambda+6\lambda=1\implies \lambda=\frac 19.$$
+On en déduit que 
+$$\mathbb P(\{\textrm{obtenir un chiffre pair}\})=\frac{2}9+\frac 29+\frac 29=\frac23.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater1223"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1223"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1223,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Déterminer une probabilité <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1223.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(1223,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1223','imageenonce1223');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1223"></a><div class=inner id="innerenonce1223">Soit $n\geq 1$. Déterminer une probabilité sur $\{1,\dots,n\}$ telle que la probabilité de $\{1,\dots,k\}$ soit proportionnelle à $k^2$.</div></div><div class=indication><a href="javascript:showAll('innerindication1223','imageindication1223');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1223"></a><div class=inner id="innerindication1223" style="display:none;">Poser $P(\{1,\dots,k\})=\lambda k^2$. Que vaut $P(\{k\})$ en fonction de $\lambda$ et $k$. Utiliser que $P(\{1,\dots,n\}=1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1223','imagecorrige1223',1223);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1223"></a><div class=inner id="innercorrige1223" style="display:none;">L'énoncé nous dit que l'on cherche une probabilité $P$ telle que  $P(\{1,\dots,k\})=\lambda k^2$. On a alors, pour $k=1,\dots,n$, 
+$$P(\{k\})=P(\{1,\dots,k\})-P(\{1,\dots,k-1\})=\lambda k^2-\lambda (k-1)^2=2\lambda k-\lambda.$$
+On va déterminer $\lambda$ en remarquant que 
+$$P(\{1,\dots,n\})=1$$
+ce qui entraîne
+$$\lambda n^2=1\iff \lambda=\frac1{n^2}.$$
+La probabilité est donc définie par
+$$P(\{k\})=\frac{2k-1}{n^2}.$$
+On vérifie aisément que réciproquement, cette probabilité vérifie que $P(\{1,\dots,k\})$ est proportionnelle  à $k^2$.</div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Indépendance</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater1234"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1234"),	max:5, rating:1.3921568627451, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1234,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indépendance et contexte <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1234.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(1234,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1234','imageenonce1234');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1234"></a><div class=inner id="innerenonce1234"><ol class="enumeratechiffre">
+<li> Une urne contient 12 boules numérotées de 1 à 12. On en tire une hasard, et on considère les événements 
+$$A=\textrm{"tirage d'un nombre pair''},$$
+$$B=\textrm{"tirage d'un multiple de 3''}.$$
+Les événements $A$ et $B$ sont-ils indépendants?
+<li> Reprendre la question avec une urne contenant 13 boules.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1234','imageindication1234');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1234"></a><div class=inner id="innerindication1234" style="display:none;">&Eacute;crire en termes d'ensembles les événements $A,\ B$ et $A\cap B$. Puis calculer les probabilités.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1234','imagecorrige1234',1234);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1234"></a><div class=inner id="innercorrige1234" style="display:none;"><ol class="enumeratechiffre">
+<li> On a :
+$$A=\{2,4,6,8,10,12\}$$
+$$B=\{3,6,9,12\}$$
+$$A\cap B=\{6,12\}.$$
+On a donc $P(A)=1/2$, $P(B)=1/3$ et $P(A\cap B)=1/6=P(A)P(B).$ Les événements $A$ et $B$ sont indépendants.
+<li> Les événements $A$, $B$ et $A\cap B$ s'écrivent encore exactement de la même façon. Mais cette fois, on a : $P(A)=6/13$, $P(B)=4/13$ et $P(A\cap B)=2/13\neq 24/169$. Les événements $A$ et $B$ ne sont pas indépendants. C'est conforme à l'intuition. Il n'y a plus la même répartition de boules paires et de boules impaires, et dans les multiples de 3 compris entre 1 et 13, la répartition des nombres pairs et impairs est restée inchangée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater1235"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1235"),	max:5, rating:1.6170212765957, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1235,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indépendance deux à deux et indépendance mutuelle <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1235.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(1235,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1235','imageenonce1235');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1235"></a><div class=inner id="innerenonce1235">Votre voisine a deux enfants dont vous ignorez le sexe. On considère les trois événement suivants :
+<ul class="rien">
+<li> $A$="les deux enfants sont de sexes différents"
+<li> $B$="l'ainé est une fille"
+<li> $C$="le cadet est un garçon".
+</ul>
+Montrer que $A$, $B$ et $C$ sont deux à deux indépendants, mais ne sont pas mutuellement indépendants. On suppose que la probabilité à la naissance d'avoir une fille (respectivement un garçon) est égale à $1/2$.</div></div><div class=indication><a href="javascript:showAll('innerindication1235','imageindication1235');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1235"></a><div class=inner id="innerindication1235" style="display:none;">Calculer la probabilité de $A$, $B$, $C$, $A\cap B$,...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1235','imagecorrige1235',1235);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1235"></a><div class=inner id="innercorrige1235" style="display:none;">Clairement, on a $P(B)=P(C)=\frac 12$. Les quatre possibilités pour les deux enfants, supposées équiprobables, sont (F,G), (F,F), (G,G), (G,F). On en déduit que $P(A)=\frac 12$.<br>
+Ensuite $A\cap B$ correspond à $(F,G)$ et donc $P(A\cap B)=\frac 14=P(A)P(B)$. On en déduit que $A$ et $B$ sont indépendants. On prouve de la même façon que $A$ et $C$ sont indépendants, et que $B$ et $C$ sont indépendants.<br>
+Enfin, $A\cap B\cap C=B\cap C$ et donc $P(A\cap B\cap C)=\frac 14\neq P(A)P(B)P(C)$. Les trois événements ne sont pas mutuellement indépendants.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater1238"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1238"),	max:5, rating:2.1444444444444, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1238,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Probabilité d'une réunion et indépendance <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1238.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(1238,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1238','imageenonce1238');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1238"></a><div class=inner id="innerenonce1238">Soient $A_1, \dots,A_n$  $n$ événements d’un espace probabilisé $(\Omega,P)$.  On les suppose mutuellement indépendants et de probabilités respectives $p_i = P(A_i)$. 
+ Donner une expression simple de $P(A_1\cup\dots\cup A_n)$ en fonction de $p_1,\dots,p_n$.<br>
+Application : on suppose qu'une personne est soumise à $n$ expériences indépendantes les unes des autres et qu'à chaque expérience, elle ait une probabilité $p$ d'avoir un accident. Quelle est la probabilité qu'elle ait au moins un accident?</div></div><div class=indication><a href="javascript:showAll('innerindication1238','imageindication1238');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1238"></a><div class=inner id="innerindication1238" style="display:none;">Passer par le complémentaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1238','imagecorrige1238',1238);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1238"></a><div class=inner id="innercorrige1238" style="display:none;">Si les événements $A_1,\dots,A_n$ sont mutuellement indépendants, les événements complémentaires
+$\overline{A_1},\dots,\overline{A_n}$ le sont aussi. On en déduit que 
+\begin{eqnarray*}
+P(A_1\cup\dots\cup A_n)&=&1-P(\overline{A_1}\cap\dots\cap \overline{A_n})\\
+&=&1-\prod_{i=1}^n P(\overline{A_i})\\
+&=&1-\prod_{i=1}^n (1-p_i).
+\end{eqnarray*}
+Dans le cas particulier proposé, la probabilité d'avoir au moins un accident vaut donc $1-(1-p)^n$.
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater1236"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1236"),	max:5, rating:2.3888888888889, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1236,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indépendance impossible <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1236.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(1236,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1236','imageenonce1236');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1236"></a><div class=inner id="innerenonce1236">On suppose qu'on a un espace probabilisé tel que l'univers $\Omega$ est un ensemble fini de cardinal un nombre premier $p$, et que le modèle choisi soit celui de l'équiprobabilité. Prouver que deux événements $A$ et $B$ non triviaux (différent de $\varnothing$ et $\Omega$) ne peuvent pas être indépendants.</div></div><div class=indication><a href="javascript:showAll('innerindication1236','imageindication1236');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1236"></a><div class=inner id="innerindication1236" style="display:none;">Raisonner par l'absurde, calculer le cardinal de $A\cap B$ et utiliser le théorème de Gauss pour obtenir une contradiction.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1236','imagecorrige1236',1236);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1236"></a><div class=inner id="innercorrige1236" style="display:none;">Supposons qu'il existe $A$ et $B$ deux événements non triviaux indépendants. On note $m$ le cardinal de $A$ et $n$ le cardinal de $B$. On a donc $P(A)=m/p$ et $P(B)=n/p$. Puisque $A$ et $B$ sont supposés indépendants, et toujours parce que le modèle adopté est celui de l'équiprobabilité, on a :
+$$\card(A\cap B)=p\times P(A\cap B)=p\times P(A)\times P(B)=\frac{mn}{p}.$$
+Puisque le cardinal est un entier, $p$ divise le produit $mn$, et par le théorème de Gauss, il divise l'un des deux, disons $n$. D'autre part, puisque $n\leq p$, ceci n'est possible que si $n=0$ ou $n=p$. Autrement dit, seulement si $B$ est ou l'événement certain, ou l'événement impossible, c'est-à-dire un événement trivial.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater1237"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1237"),	max:5, rating:1.7735849056604, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1237,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Circuit électrique <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1237.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(1237,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1237','imageenonce1237');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1237"></a><div class=inner id="innerenonce1237"><ol class="enumeratechiffre">
+<li> Soient $A,\ B,\ C$ trois événements. Montrer que :
+$$P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C).$$
+<li> On dispose de 3 composants électriques $C_1,\ C_2$ et $C_3$ dont la probabilité de fonctionnement est $p_i$, et de fonctionnement totalement indépendant les uns des autres. Donner la probabilité de fonctionnement du circuit 
+<ol class="enumeratechiffre">
+<li> si les composants sont disposés en série.
+<li> si les composants sont disposés en parallèle.
+<li> si le circuit est mixte : $C_1$ est disposé en série avec le sous-circuit constitué de $C_2$ et $C_3$ en parallèle.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1237','imageindication1237');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1237"></a><div class=inner id="innerindication1237" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer trois fois la formule $P(F\cup G)=...$.
+<li> On note $F_i$ l'événement : ``le circuit $C_i$ fonctionne''. Il faut calculer pour le premier cas $P(F_1\cap F_2\cap F_3)$, pour le second $P(F_1\cup F_2\cup F_3)$, et pour le troisième $P(F_1\cap(F_2\cup F_3))$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1237','imagecorrige1237',1237);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1237"></a><div class=inner id="innercorrige1237" style="display:none;"><ol class="enumeratechiffre">
+<li> On procède en deux temps. D'une part :
+$$P\left((A\cup B)\cup C\right)=P(A\cup B)+P(C)-P((A\cup B)\cap C).$$
+Mais, 
+$$P((A\cup B)\cap C)=P( (A\cap C)\cup (B\cap C))=P(A\cap C)+P(B\cap C)-P(A\cap B\cap C),$$
+et 
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B).$$
+On appelle aussi ceci la formule du crible de Poincaré, elle se généralise avec plusieurs événements par récurrence.
+<li> On note $F_i$ l'événement : ``le composant $C_i$ fonctionne''. Par hypothèse, les événements $F_i$ sont mutuellement indépendants. Il faut calculer pour le premier cas $P(F_1\cap F_2\cap F_3)$ (le circuit formé par les trois composants disposés en série fonctionne si et seulement si les trois composants fonctionnent), pour le second $P(F_1\cup F_2\cup F_3)$ (le circuit formé par les trois composants disposés en parallèle fonctionne si et seulement si un des trois composants fonctionne), et pour le troisième $P(F_1\cap(F_2\cup F_3))$. On a :
+<ol class="enumeratechiffre">
+<li> Par indépendance des événements :
+$$P(F_1\cap F_2\cap F_3)=p_1p_2p_3.$$
+<li> D'après la formule précédente, et par indépendance des événements :
+$$P(F_1\cup F_2\cup F_3)=p_1+p_2+p_3-p_1p_2-p_1p_3-p_2p_3+p_1p_2p_3.$$
+<li> L'événement $F_2\cup F_3$ est indépendant de $F_1$. On a donc :
+$$P(F_1\cap(F_2\cup F_3))=P(F_1)P(F_2\cup F_3)=P(F_1)\big(P(F_2)+P(F_3)-P(F_2\cap F_3)\big)$$
+soit $$P(F_1\cap(F_2\cup F_3))=p_1\left(p_2+p_3-p_2p_3\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater1239"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1239"),	max:5, rating:2.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1239,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Relecture <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1239.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(1239,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1239','imageenonce1239');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1239"></a><div class=inner id="innerenonce1239">Un livre contient 4 erreurs, numérotées de 1 à 4, et est relu par une suite de relecteurs pour correction. A chaque relecture, chaque erreur est corrigée avec une probabilité 1/3. Les erreurs sont corrigées de manière indépendante les unes des autres, et les relectures sont indépendantes les unes des autres.
+<ol class="enumeratechiffre">
+<li> Quelle est la probabilité que l’erreur numéro 1 ne soit pas corrigée à l’issue de la $n$-ième lecture ?
+<li> Quelle est la probabilité que le livre soit entièrement corrigé à l’issue de la $n$-ième lecture ? Combien faut-il de relectures pour que cette probabilité soit supérieure à 0.9 ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1239','imageindication1239');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1239"></a><div class=inner id="innerindication1239" style="display:none;"><ol class="enumeratechiffre">
+<li> Introduire $A_i$ l'événement "l'erreur numéro 1 n'est pas corrigée par le $i$-ème relecteur" et interpréter la question en termes de $A_i.$
+<li> Introduire $B_j$ l'événement "l'erreur numéro $j$ n'est pas corrigée à l'issue de la $n$-ième relecture" et interpréter la question en termes de $B_j$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1239','imagecorrige1239',1239);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1239"></a><div class=inner id="innercorrige1239" style="display:none;"><ol class="enumeratechiffre">
+<li> Notons $A_i$ l'événement "l'erreur numéro 1 n'est pas corrigée par le $i$-ème relecteur". Alors on a $P(A_i)=2/3$ et les événements $A_i$ sont indépendants. On s'intéresse à la probabilité de l'événement
+$A_1\cap\dots\cap A_n$ qui vaut donc
+$$P(A_1\cap\dots\cap A_n)=\prod_{i=1}^n \frac 23=\frac{2^n}{3^n}.$$
+<li> Notons $B_j$ l'événement "l'erreur numéro $j$ n'est pas corrigée à l'issue de la $n$-ième relecture". D'après la question précédente, on a $P(B_j)=2^n/3^n$ pour $j=1,\dots,4$. Le livre est entièrement corrigé après la $n$-ième relecture si l'événement $\bigcap_{j=1}^4 \overline{B_j}$ est réalisé. Les événements $B_j$ étant indépendants, le livre est entièrement corrigé après $n$ relectures avec une probabilité valant 
+$$\prod_{j=1}^4 \left(1-\frac{2^n}{3^n}\right)=\left(1-\frac{2^n}{3^n}\right)^4.$$
+Cette probabilité est supérieure à $0,9$ si et seulement si 
+\begin{eqnarray*}
+\left(1-\frac{2^n}{3^n}\right)^4\geq 0.9&\iff& \left(\frac 23\right)^n\leq 1-(0.9)^{1/4}\\
+&\iff&n\ln(2/3)\leq \ln(1-0.9^{1/4})\\
+&\iff&n\geq \frac {\ln(1-0.9^{1/4})}{\ln(2/3)}
+\end{eqnarray*}
+et donc ceci fonctionne dès que $n\geq 10$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater1240"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1240"),	max:5, rating:2.98, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1240,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Indicatrice d'Euler <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1240.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(1240,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1240','imageenonce1240');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1240"></a><div class=inner id="innerenonce1240">Soit $n&gt;1$ un entier fixé. On choisit de manière équiprobable un entier $x$ dans $\{1,\dots,n\}$.
+Pour tout entier $m\leq n$, on note $A_m$ l'événement "$m$ divise $x$". On note également $B$ l'événement
+"$x$ est premier avec $n$". Enfin, on note $p_1,\dots,p_r$ les diviseurs premiers de $n$.
+<ol class="enumeratechiffre">
+<li> Exprimer $B$ en fonction des $A_{p_k}$.
+<li> Pour tout entier naturel $m$ qui divise $n$, calculer la probabilité de $A_m$.
+<li> Montrer que les événements $A_{p_1},\dots,A_{p_r}$ sont mutuellement indépendants.
+<li> En déduire la probabilité de $B$.
+<li> Application : on note $\phi(n)$ le nombre d'entiers compris entre $1$ et $n$ qui sont premiers avec $n$.
+Démontrer que
+$$\phi(n)=n\prod_{k=1}^r \left(1-\frac{1}{p_k}\right).$$
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication1240','imageindication1240');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1240"></a><div class=inner id="innerindication1240" style="display:none;"><ol class="enumeratechiffre">
+<li> $x$ est premier avec $n$ si et seulement si aucun des diviseurs premiers de $n$ ne divise $x$.
+<li> &Eacute;crire quels sont tels les élements de $A_m$.
+<li> Utiliser un résultat d'arithmétique.
+<li> 
+<li> 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1240','imagecorrige1240',1240);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1240"></a><div class=inner id="innercorrige1240" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que $x$ est premier avec $n$ si et seulement si aucun des diviseurs premiers de $n$ ne divise $x$. On a donc :
+$$B=\overline{A_{p_1}}\cap\dots\cap \overline{A_{p_r}}.$$
+<li> Puisque qu'on est en situation d'équiprobabilité, il suffit de calculer le cardinal de $A_m$. Mais si $n=km$, alors les multiples de $m$ qui sont inférieurs ou égaux à $n$ sont
+$m$, $2m,\dots,km$. On a donc 
+$$P(A_m)=\frac{k}{n}=\frac{1}m.$$
+<li> Soit $i_1&lt;\dots&lt;i_m$ des entiers distincts choisis dans $\{1,\dots,r\}$. On doit prouver que
+$$P(A_{p_{i_1}})\dots P(A_{p_{i_m}})=P(A_{p_{i_1}}\cap \dots\cap A_{p_{i_m}}).$$
+Mais,
+$$P(A_{p_{i_1}})\dots P(A_{p_{i_m}})=\prod_{j=1}^m \frac{1}{p_{i_j}}.$$
+D'autre part, puisque $p_{i_1},\dots,p_{i_m}$ sont premiers entre eux deux à deux, un entier est multiple de
+$p_{i_1}\dots p_{i_m}$ si et seulement s'il est multiple de chaque $p_{i_j}$, $j=1,\dots,m$. On en déduit que 
+$$A_{p_{i_1}}\cap\dots\cap A_{p_{i_m}}=A_{p_{i_1}\dots p_{i_m}},$$
+soit 
+$$P(A_{p_{i_1}}\cap\dots\cap A_{p_{i_m}})=\frac{1}{p_{i_1}\dots p_{i_m}},$$
+ce qui prouve le résultat voulu.
+<li> Les événements $\overline{A_{p_1}},\dots,\overline{A_{p_r}}$ sont également indépendants. On en déduit que
+$$P(B)=\prod_{j=1}^r P(\overline{A_{p_{j}}})=\prod_{j=1}^r \left(1-\frac{1}{p_j}\right).$$
+<li> On sait aussi, par le modèle de l'équiprobabilité et puisque le cardinal de $B$ est égal à $\phi(n)$, que
+$$P(B)=\frac{\phi(n)}n$$
+ce qui, grâce à la question précédente, donne le résultat voulu.
+</ol></div></div></div>
+
+<div class=titrepartie>Probabilités conditionnelles</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater1242"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1242"),	max:5, rating:1.7777777777778, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1242,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Clés USB <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1242.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(1242,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1242','imageenonce1242');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1242"></a><div class=inner id="innerenonce1242">Le gérant d'un magasin d'informatique a reçu un lot de clés USB. $5\%$ des boites sont abîmées. Le gérant estime que :
+<ul class="rien">
+<li> $60\%$ des boites abîmées contiennent au moins une clé défectueuse.
+<li> $98\%$ des boites non abîmées ne contiennent aucune clé défectueuse.
+</ul>
+Un client achète une boite du lot. On désigne par $A$ l'événement : ``la boite est abîmée'' et par $D$ l'événement ``la boite achetée contient au moins une clé défectueuse''. 
+<ol class="enumeratechiffre">
+<li> Donner les probabilités de $P(A)$, $P(\bar A)$, $P(D|A)$, $P(D|\bar A)$, $P(\bar D|A)$ et $P(\bar D|\bar A)$. En déduire la probabilité de $D$.
+<li> Le client constate qu'une des clés achetées est défectueuse. Quelle est
+la probabilité pour qu'il ait acheté une boite abîmée?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1242','imageindication1242');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1242"></a><div class=inner id="innerindication1242" style="display:none;"><ol class="enumeratechiffre">
+<li> Traduire les informations de l'énoncé, utiliser la formule des probabilités totales.
+<li> Utiliser la formule de Bayes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1242','imagecorrige1242',1242);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1242"></a><div class=inner id="innercorrige1242" style="display:none;"><ol class="enumeratechiffre">
+<li> L'énoncé donne directement $P(A)=0,05$, d'où $P(\bar A)=0,95$, $P(D|A)=0,6$ et $P(\bar D|\bar A)=0,98$. On en déduit :
+$$P(\bar D|A)=1-P(D|A)=0,4$$
+$$P(D|\bar A)=1-P(\bar D|\bar A)=0,02.$$
+D'après la formule des probabilités totales :
+$$P(D)=P(A)P(D|A)+P(\bar A)P(D|\bar A)=\frac{49}{1000}.$$
+<li> On obtient $P(A|D)$ grâce à la formule de Bayes :
+$$P(A|D)=\frac{P(A\cap D)}{P(D)}=\frac{P(D|A)P(A)}{P(D)}=\frac{30}{49}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater1243"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1243"),	max:5, rating:1.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1243,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tirages successifs dans une urne <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1243.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(1243,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1243','imageenonce1243');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1243"></a><div class=inner id="innerenonce1243">On considère une urne contenant 4 boules blanches et 3 boules noires. On tire 
+une à une et sans remise 3 boules de l'urne. Quelle est la probabilité pour que la première boule tirée
+soit blanche, la seconde blanche et la troisième noire?</div></div><div class=indication><a href="javascript:showAll('innerindication1243','imageindication1243');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1243"></a><div class=inner id="innerindication1243" style="display:none;">Lire le titre de l'exercice.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1243','imagecorrige1243',1243);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1243"></a><div class=inner id="innercorrige1243" style="display:none;">On note $B_i$ (resp. $N_i$) l'événement : ``La $i$-ème boule tirée est blanche (resp. noire)''.
+On cherche à calculer $P(B_1\cap B_2\cap N_3)$, ce que l'on va faire en utilisant la formule des
+probabilités composées :
+$$P(B_1\cap B_2\cap N_3)=P(B_1)P(B_2|B_1)P(N_3|B_1\cap B_2).$$
+Chacune des probabilités qui apparaît est facile à calculer, car
+$P(B_1)=4/7$, $P(B_2|B_1)=3/6$ (il reste 6 boules dont 3 blanches)
+et $P(N_3|B_1\cap B_2)=3/5$. Finalement, on obtient $P(B_1\cap B_2\cap N_3)=\frac 6{35}.$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater1244"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1244"),	max:5, rating:1.8125, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1244,rating); this.setRating(rating);   this.disable();    done();     }});</script> - A partir de dénombrement <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1244.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(1244,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1244','imageenonce1244');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1244"></a><div class=inner id="innerenonce1244">Une urne contient 8 boules blanches et 2 boules noires, indiscernables au toucher. On tire sans remise et successivement 3 boules de cette urne.
+<ol class="enumeratechiffre">
+<li> Quelle est la probabilité qu'au moins une boule noire figure dans le tirage?
+<li> Sachant qu'au moins une boule noire figure dans le tirage, quelle est la probabilité que la première boule tirée soit noire?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1244','imageindication1244');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1244"></a><div class=inner id="innerindication1244" style="display:none;"><ol class="enumeratechiffre">
+<li> Dénombrer!
+<li> Dénombrer les tirages tels que la première boule est noire, et appliquer la définition des probabilités conditionnelles.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1244','imagecorrige1244',1244);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1244"></a><div class=inner id="innercorrige1244" style="display:none;"><ol class="enumeratechiffre">
+<li> Distinguons les boules et ordonnons les tirages. Il y a $10\times 9\times 8$ tirages possibles. Calculons maintenant le nombre de tirages comprenant au moins une boule noire. Il y a deux possibilités :
+<ul class="rien">
+<li> Le tirage ne comporte qu'une seule boule noire. Il y a 3 façons de choisir la position de la boule noire (lors du premier tirage, du deuxième, etc...), 2 choix pour cette boule, et ensuite $8\times 7$ choix pour les deux boules blanches. En tout, il y a donc $3\times 2\times 8\times 7$ tirages correspondants.
+<li> Le tirage comporte les deux boules noires. On choisit d'abord les deux tirages où on a pris les boules noires : on choisit 2 places parmi 3, soit $\binom 32=3$. Ce choix fait, il y a 2 choix pour les boules noires, et 8 choix pour les boules blanches. Il y a donc en tout  $3\times 2\times 8$ tels tirages.
+</ul>
+Le nombre total de tirages est donc $6\times 8\times 8$ et si on note $B$ l'événement "Au moins une boule noire figure dans le tirage", alors la probabilité de $B$ est égale à 
+$$P(B)=\frac{6\times 8\times 8}{10\times 9\times 8}=\frac{8}{15}.$$
+Remarquons que, comme souvent dans ce type d'exercice, il est plus facile de déterminer la probabilité du complémentaire : en effet, $\overline B$ est l'événement "on ne tire que des boules blanches". Le nombre de tirages correspondant est $8\times 7\times 6$ et donc 
+$$P(\overline B)=\frac{8\times 7\times 6}{10\times 9\times 8}=\frac{7\times 6}{10\times 9}=\frac{7}{15}$$
+ce qui est bien la valeur attendue (ouf)!
+<li> Le dénombrement du nombre de tirages tels que la première boule soit noire est plus simple. Il y a exactement $2\times 9\times 8$ tirages. Si $A$ est l'événement : "La première boule tirée est noire", alors 
+$$P(A)=\frac{2\times 9\times 8}{10\times 9\times 8}=\frac 15.$$
+On cherche $P(A|B)$. Par définition, 
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(A)}{P(B)}=\frac 38$$
+puisque $A\subset B$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater1245"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1245"),	max:5, rating:2.0833333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1245,rating); this.setRating(rating);   this.disable();    done();     }});</script> - QCM <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1245.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(1245,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1245','imageenonce1245');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1245"></a><div class=inner id="innerenonce1245">Un questionnaire à choix multiples propose $m$ réponses pour chaque question. Soit $p$ la probabilité qu'un étudiant connaisse la bonne réponse à une question donnée. S'il ignore la réponse, il choisit au hasard l'une des réponses proposées. Quelle est pour le correcteur la probabilité qu'un étudiant connaisse vraiment la bonne réponse lorsqu'il l'a donnée?</div></div><div class=indication><a href="javascript:showAll('innerindication1245','imageindication1245');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1245"></a><div class=inner id="innerindication1245" style="display:none;">Utiliser la formule de Bayes.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1245','imagecorrige1245',1245);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1245"></a><div class=inner id="innercorrige1245" style="display:none;">On note :
+$$B=\left\{\textrm{L'étudiant donne la bonne réponse}\right\}$$
+$$C=\left\{\textrm{L'étudiant connait la bonne réponse}\right\}.$$
+On cherche $P_B(C)=P(C|B)$, et l'énoncé donne :
+$$P(C)=p,\ P(B|C)=1,\ P(B|\bar C)=\frac{1}{m}.$$
+D'après la formule des probabilités totales, on a :
+$$P(B)=P(C)P(B|C)+P(\bar C)P(B|\bar C)=\frac{(m-1)p+1}{m}.$$
+D'après la formule de Bayes :
+$$P(C|B)=\frac{P(B|C)P(C)}{P(B)}=\frac{mp}{1+(m-1)p}.$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater1246"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1246"),	max:5, rating:1.8965517241379, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1246,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dés pipés <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1246.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(1246,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1246','imageenonce1246');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1246"></a><div class=inner id="innerenonce1246">On dispose de 100 dés dont 25 sont pipés. Pour chaque dé pipé, la probabilité d'obtenir le chiffre 6 lors d'un lancer vaut $1/2$.
+<ol class="enumeratechiffre">
+ <li> On tire un dé au hasard parmi les 100 dés. On lance ce dé et on obtient 6. Quelle est la probabilité que ce dé soit pipé?
+ <li> Soit $n\in\mathbb N^*$. On tire un dé au hasard parmi 100 dés. On lance ce dé $n$ fois et on obtient $n$ fois le chiffre $6$.
+ Quelle est la probabilité $p_n$ pour que ce dé soit pipé. Interpréter le résultat.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1246','imageindication1246');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1246"></a><div class=inner id="innerindication1246" style="display:none;"><ol class="enumeratechiffre">
+ <li> Formule de Bayes!
+ <li> 
+</ol>
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1246','imagecorrige1246',1246);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1246"></a><div class=inner id="innercorrige1246" style="display:none;"><ol class="enumeratechiffre">
+ <li> Notons $T$ l'événement : ``le dé est pipé'' et $C$ l'événement ``le lancer amène un 6''. On cherche $P_C(T)$. 
+ On va calculer cette probabilité en utilisant la formule de Bayes. En effet, $(T,\bar T)$ est un système complet
+ d'événements de probabilités non nulles, avec $P(T)=25/100=1/4$ et $P(\bar T)=1-P(T)=3/4$. L'énoncé nous dit aussi que 
+ $P_T(C)=1/2$ et bien sûr $P_{\bar T}(C)=1/6$. La formule
+ de Bayes donne alors
+ \begin{align*}
+  P_C(T)&=\frac{P(T)P_T(C)}{P_T(C)P(T)+P_{\bar T}(C)P(\bar T)}\\
+  &=\frac{\frac 14\times\frac 12}{\frac 12\times\frac 14+\frac 16\times \frac 34}\\
+  &=\frac 12.
+ \end{align*}
+ <li> Introduisons les événements $C_k$ définis par ``le $k$-ième lancer amène un 6'' et $D=\bigcap_{k=1}^n C_k$. 
+ Nous cherchons $P_D(T)$ que l'on calcule toujours par la formule de Bayes. Il faut juste remarquer que maintenant,
+ par indépendance des événements $C_k$, $P_T(D)=(1/2)^n$ et $P_{\bar T}(D)=(1/6)^n$. On trouve donc :
+  \begin{align*}
+  P_D(T)&=\frac{P(T)P_T(D)}{P_T(D)P(T)+P_{\bar T}(D)P(\bar T)}\\
+  &=\frac{\frac 14\times\left(\frac 12\right)^n}{\left(\frac 12\right)^n\times\frac 14+\left(\frac 16\right)^n\times \frac 34}\\
+  &=\frac {1}{1+3^{-n+1}}.
+ \end{align*}
+ En particulier, $(p_n)$ tend vers 1 lorsque $n$ tend vers l'infini, ce qui est conforme à l'intuition : plus $n$ est grand, plus le dé est très certainement pipé.
+</ol>
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater1248"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1248"),	max:5, rating:1.4074074074074, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1248,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Compagnie d'assurance <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1248.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(1248,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1248','imageenonce1248');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1248"></a><div class=inner id="innerenonce1248">Une compagnie d'assurance répartit ses clients en trois classes $R_1$, $R_2$ et $R_3$ : les bons risques, les risques moyens, et les mauvais risques.
+Les effectifs de ces trois classes représentent $20\%$ de la population totale pour la classe $R_1$, $50\%$ pour la classe $R_2$, et 
+$30\%$ pour la classe $R_3$. Les statistiques indiquent que les probabilités d'avoir un accident au cours de l'année pour une personne de l'une de ces trois classes sont respectivement de 0.05, 0.15 et 0.30.
+<ol class="enumeratechiffre">
+<li> Quelle est la probabilité qu'une personne choisie au hasard dans la population ait un accident dans l'année?
+<li> Si M.Martin n'a pas eu d'accident cette année, quelle est la probabilité qu'il soit un bon risque?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1248','imageindication1248');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1248"></a><div class=inner id="innerindication1248" style="display:none;"><ol class="enumeratechiffre">
+<li> Appliquer la formule des probabilités totales.
+<li> Appliquer la formule de Bayes.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1248','imagecorrige1248',1248);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1248"></a><div class=inner id="innercorrige1248" style="display:none;"><ol class="enumeratechiffre">
+<li> On note $A$ l'événement "avoir un accident dans l'année". Comme les trois classes $R_1$, $R_2$ et $R_3$ réalisent une partition de la population. On peut appliquer la formule des probabilités totales :
+\begin{eqnarray*}
+P(A)&=&P(A|R_1)P(R_1)+P(A|R_2)P(R_2)+P(A|R_3)P(R_3)\\
+&=&0,05\times 0,2+0,15\times 0,5+0,3\times 0,3\\
+&=&0,175.
+\end{eqnarray*}
+<li> On cherche la probabilité d'être dans $R_1$ sachant qu'on n'a pas eu d'accident, c'est-à-dire la probabilité $P(R_1|\overline{A})$. La formule de Bayes donne :
+$$P(R_1|\overline{A})=\frac{P(\overline{A}|R_1)P(R_1)}{P(\overline{A})}.$$
+La probabilité $P(\overline{A})$ se calcule par la formule $P(\overline{A})=1-P(A)$, tandis que l'énoncé donne $P(\overline{A}|R_1)=0,95$. On obtient finalement :
+$$P(R_1|\overline{A})=\frac{0,95\times 0,2}{1-P(A)}\simeq 0,23.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater1249"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1249"),	max:5, rating:2.5625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1249,rating); this.setRating(rating);   this.disable();    done();     }});</script> - La rumeur <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1249.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(1249,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1249','imageenonce1249');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1249"></a><div class=inner id="innerenonce1249">Une information de type vrai/faux est transmise à l'intérieur d'une population.
+Avec une probabilité $p$, l'information reçue d'une personne est transmise telle quelle à la personne suivante. Avec une probabilité $1−p$, l'information reçue d'une personne est transmise de façon contraire à la personne suivante. On note $p_n$ la probabilité
+que l'information après $n$ transmissions soit correcte.
+<ol class="enumeratechiffre">
+ <li> Donner une relation de récurrence entre $p_{n+1}$ et $p_n$. 
+<li> En déduire la valeur de $p_n$ en fonction de $p$ et de $n$.
+<li> En déduire la valeur de $\lim_n p_n$. Qu'en pensez-vous?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication1249','imageindication1249');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1249"></a><div class=inner id="innerindication1249" style="display:none;"><ol class="enumeratechiffre">
+ <li> Utiliser la formule des probabilités totales. 
+<li> On a une suite arithmético-géométrique. Retirer la limite possible pour retrouver une suite
+géométrique.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1249','imagecorrige1249',1249);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1249"></a><div class=inner id="innercorrige1249" style="display:none;"><ol class="enumeratechiffre">
+ <li> On note $I_n$ l'événement : "l'information après $n$ transmissions est correcte''.
+D'après la formule des probabilités totales, on sait que
+$$P(I_{n+1})=P(I_{n+1}|I_n)P(I_n)+P(I_{n+1}|\overline{I_n})P(\overline{I_n}).$$
+Mais, $P(I_{n+1}|I_n)=p$ (l'information doit être transmise correctement)
+et $P(I_{n+1}|\overline{I_n})=1-p$ (l'information doit être mal transmise).
+On en déduit que 
+$$p_{n+1}=p\times p_n+(1-p)\times(1-p_n)=(2p-1) p_n+(1-p).$$
+<li> On a une suite arithmético-géométrique. Sa limite possible $l$ vérifie
+$$l=(2p-1)\times l+(1-p)\iff l=1/2.$$
+On pose alors $u_n=p_n-\frac 12$ et on vérifie que $(u_n)$ est géométrique de raison $(2p-1)$. 
+En effet,
+$$u_{n+1}=p_{n+1}-\frac12=(2p-1)p_n+(1-p)-\frac 12=(2p-1)\left(p_n-\frac12\right).$$
+On en déduit $u_n=(2p-1)^n u_0$ avec $u_0=p_0-1/2=1/2$. On conclut que
+$$p_n=\frac12+\frac 12(2p-1)^n.$$
+<li> On distingue alors trois cas :
+<ul class="rien">
+ <li> Si $p=1$, l'information est transmise presque sûrement correctement, et $p_n=1$ pour tout entier $n$.
+<li> Si $p=0$, l'information est presque sûrement mal transmise, et $p_{2n}=1$, $p_{2n+1}=0$ pour tout entier $n$.
+<li> Si $p\in]0,1[$, alors $|2p-1|&lt;1$ et donc $(p_n)$ converge vers 1/2. On n'a plus de traces de l'information initiale!
+</ul>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater1251"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1251"),	max:5, rating:2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1251,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Tests de dépistage <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1251.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(1251,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1251','imageenonce1251');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1251"></a><div class=inner id="innerenonce1251">Vous êtes directeur de cabinet du ministre de la santé. Une maladie est présente dans la population,
+ dans la proportion d'une personne malade sur $10000$. Un responsable d'un grand laboratoire pharmaceutique
+  vient vous vanter son nouveau test de dépistage : si une personne est malade, le test est positif à $99\%$.
+   Si une personne n'est pas malade, le test est positif à $0,\!1\%$. Autorisez-vous la commercialisation de ce test?</div></div><div class=indication><a href="javascript:showAll('innerindication1251','imageindication1251');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1251"></a><div class=inner id="innerindication1251" style="display:none;">Calculer la probabilité qu'une personne soit malade si elle a une réponse positive au test.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1251','imagecorrige1251',1251);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1251"></a><div class=inner id="innercorrige1251" style="display:none;">Les chiffres donnés ont l'air excellent, mais ils donnent l'inverse de ce que l'on souhaite.
+ Le problème est plutôt le suivant : si une personne a une réponse positive au test, est-elle malade? C'est la formule de Bayes qui permet de remonter le chemin. Précisément, on note $M$ l'événement "La personne est malade'', et $T$ l'événement "le test est positif''. Les données dont on dispose sont $P(M)=10^{-4}$, $P(T|M)=0,\!99$ et $P(T|\bar M)=0,\!001$. On cherche $P(M|T)$. La formule de Bayes donne :
+\begin{eqnarray*}
+P(M|T)&=&\frac{P(T|M)P(M)}{P(T|M)P(M)+P(T|\bar M)P(\bar M)}\\
+&=&\frac{10^{-4}\times 0,99}{10^{-4}\times 0,99+10^{-3}\times 0,9999}\\
+&\simeq&0,09.
+\end{eqnarray*}
+C'est catastrophique! La probabilité pour qu'une personne positive au test soit effectivement malade est inférieure à $10\%$. Le test engendre donc beaucoup de faux-positifs (personnes positives au test, mais non malades). C'est tout le problème des maladies assez rares : les test de dépistage doivent être extrêmement fiables. Remarquons par ailleurs ici une bonne illustration du vieil adage des statisticiens : on peut faire dire n'importe quoi aux chiffres, cf le laboratoire pharmaceutique!</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater1252"></span><script>var myRating = raterJs( { element:document.querySelector("#rater1252"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(1252,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Menteur! <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=1252.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(1252,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce1252','imageenonce1252');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce1252"></a><div class=inner id="innerenonce1252">Vous jouez à pile ou face avec un autre joueur. Il parie sur pile, lance la pièce, et obtient pile. Quelle est la probabilité pour qu'il soit un tricheur?</div></div><div class=indication><a href="javascript:showAll('innerindication1252','imageindication1252');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication1252"></a><div class=inner id="innerindication1252" style="display:none;">Introduire la proportion $x$ de tricheurs dans la population, et donner, à l'aide du théorème de Bayes, une estimation de la probabilité qu'il soit un tricheur en fonction de $x$. Il faudra convenir de certaines probabilités de bon sens.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige1252','imagecorrige1252',1252);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige1252"></a><div class=inner id="innercorrige1252" style="display:none;">Soit $x$ la proportion de tricheurs dans la population. On note respectivement $P,F,H,T$ les événements "le joueur obtient pile'', "le joueur obtient face'', "Le joueur est honnête'', "le joueur est un tricheur''. Il semble raisonnable de convenir que $P(P|H)=1/2$ et $P(F|H)=1/2$ et $P(P|T)=1$ (un tricheur fait vraiment ce qu'il veut!). On cherche donc $P(T|P)$. De la formule de Bayes, on déduit :
+$$P(T|P)=\frac{P(P|T)P(T)}{P(P|T)P(T)+P(P|H)P(H)}=\frac{x}{x+1/2(1-x)}=\frac{2x}{x+1}.$$
+Le résultat est plus ou moins réconfortant suivant la proportion de tricheurs $x$ dans la population!</div></div></div>
+
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

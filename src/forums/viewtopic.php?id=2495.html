@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>[Python] Construction de carrés magiques de dimension n=2(2k+1) / Programmation / Forum de mathématiques - Bibm@th.net</title>
+
+
+
+<script src="https://www.flashb.id/universal/59c6c89c-e8c5-5af0-8478-8cd0a507c103.js" async data-cfasync="false"></script>
+  <script type="text/javascript" data-cfasync="false">
+    window._hbdbrk = window._hbdbrk || [];
+  </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>
+window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());
+  gtag('config', 'G-CTYE0T3DYG');</script>
+
+	
+
+
+
+ 
+ <script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script> 
+ 
+ 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)'], ['[tex]','[/tex]'] ]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<link type="text/css" href="../css/bibstyle.css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="../common/fonctions.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://www.bibmath.net/forums/style/Bibmath.css" />
+
+<link rel="stylesheet" type="text/css" href="https://www.bibmath.net/forums/fluxgeshi.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="https://www.bibmath.net/forums/captcha/css/style.css" />
+<link rel="stylesheet" type="text/css" href="https://www.bibmath.net/forums/captcha/css/redmond/jquery-ui-1.8.21.custom.css" />
+<script type="text/javascript" src="https://www.bibmath.net/forums/captcha/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://www.bibmath.net/forums/captcha/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="https://www.bibmath.net/forums/captcha/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript">
+	$(function(){var f=$("#sliderCaptcha");var b=$("#cleCaptcha");var d=$(".boutonsCaptcha");var a=$("#javascriptCaptcha");var e=[21,27,35,0,28,10,20,13,0,15,22,21,3,23,6,6,20,49,0,36,9,36,15,4,10,8,12,26,42,9,11,29,7,36,37,2,40,37,19,11,47,21,16,36,35,36,48,5,0,48];var h=0;var g=5;var c=0;a.hide();f.slider({value:0,min:0,max:g,step:1,slide:function(i,j){if(j.value>c){c=j.value;h+=c}},stop:function(j,k){var i=false;if(k.value==g){if(h==((g+Math.pow(g,2))/2)){i=true;f.slider("option","disabled",true);if(b.val().length!=e.length){$.post("captcha.php",{tokenCaptcha:b.val()},function(m){var l="";$.each(e,function(){l+=m.charAt(this%m.length)});b.val(l);d.removeAttr("disabled")})}}}if(!i){h=c=0;f.slider("option","value",h)}}})});
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+function process_form(the_form)
+{
+	var required_fields = {
+		"req_message": "Message",
+		"req_username": "Nom",
+		"req_email": "E-mail"
+	};
+	if (document.all || document.getElementById)
+	{
+		for (var i = 0; i < the_form.length; ++i)
+		{
+			var elem = the_form.elements[i];
+			if (elem.name && required_fields[elem.name] && !elem.value && elem.type && (/^(?:text(?:area)?|password|file)$/i.test(elem.type)))
+			{
+				alert('"' + required_fields[elem.name] + '" est un champ obligatoire pour ce formulaire.');
+				elem.focus();
+				return false;
+			}
+		}
+	}
+	return true;
+}
+/* ]]> */
+</script>
+<link rel="canonical" href="viewtopic.php%3Fid=2495.html" title="Page 1" />
+</head>
+
+<body>
+
+<header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="itemselectionne"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="../ressources/moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:flex" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="../ressources/index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="../ressources/moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="mainforum"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div style="min-height:280px;" class="r89-mobile-billboard-top"></div></div><article id="contenugauche">
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+			<h1><a href="https://www.bibmath.net/forums/index.php">Forum de mathématiques - Bibm@th.net</a></h1>
+			<div id="brddesc">Bienvenue dans les forums du site <a href="../index.html">BibM@th</a>, <b>des forums où on dit Bonjour (Bonsoir), Merci, S'il vous plaît...</b></div>
+		</div>
+		<div id="mytopnav" class="topnav">
+			
+				<a href="https://www.bibmath.net/forums/index.php">Accueil</a>
+				<a href="https://www.bibmath.net/forums/userlist.php">Liste des membres</a>
+				<a href="misc.php%3Faction=rules.html">Règles</a>
+				<a href="https://www.bibmath.net/forums/search.php">Recherche</a>
+				<a href="register.php.html">Inscription</a>
+				<a href="login.php.html">Identification</a>
+				<a href="javascript:void(0);" class="iconemenuforum" onclick="ouvremenuforum()">&#9776;</a>
+			
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">Vous n'êtes pas identifié(e).</p>
+			<ul class="conr">
+				<li><span>Contributions&#160;: <a href="https://www.bibmath.net/forums/search.php?action=show_recent" title="Trouver les discussions comportant des messages récents.">Récentes | </a> <a href="https://www.bibmath.net/forums/search.php?action=show_unanswered" title="Trouver les discussions sans réponse.">Sans réponse</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="https://www.bibmath.net/forums/index.php">Accueil</a></li>
+			<li><span>»&#160;</span><a href="https://www.bibmath.net/forums/viewforum.php?id=10">Programmation</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php%3Fid=2495.html">[Python] Construction de carrés magiques de dimension n=2(2k+1)</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages&#160;: </span><strong class="item1">1</strong></p>
+			<p class="postlink conr"><a href="https://www.bibmath.net/forums/post.php?tid=2495">Répondre</a></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p13862" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=13862#p13862">06-03-2009 20:45:28</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=64">yoshi</a></strong></dt>
+						<dd class="usertitle"><strong>Modo Ferox</strong></dd>
+						<dd><span>Inscription&#160;: 20-11-2005</span></dd>
+						<dd><span>Messages&#160;: 17 356</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>[Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>Bonsoir,</p><p>Voilà revu et corrigé un programme de constructions de carrés magiques de dimension &quot;impairement paire&quot; n = 2(2k+1) avec [tex]k\in \mathbb{N}^*[/tex].<br />Ainsi que vous le verrez sur la page <a href="../carres/index.php%3Faction=affiche&amp;quoi=impapairs.html" rel="nofollow">http://www.bibmath.net/carres/index.php … =impapairs</a> où tout est expliqué pour la construction &quot;à la main&quot;, à partir d&#039;un carré déjà rempli, on applique 3 symétries : 2 axiales par rapport à l&#039;horizontale et la verticale et la symétrie centrale.<br />Toute la difficulté a été<br />1. D&#039;informatiser ces symétries<br />2. Et surtout de repérer mathématiquement (puis traduire en Python) l&#039;appartenance d&#039;un nombre à une forme, laquelle forme conditionne son déplacement...</p><p>Voilà, essayez-le, regardez la répartition des nombre dont la somme est n^2+1, la répartition pairs/impairs...</p><div class="geshicodebox code_python"><div class="python" style="font-family:monospace;"><span style="color: #808080; font-style: italic;">#!/usr/bin/env python</span><br />
+<span style="color: #808080; font-style: italic;"># -*- coding: Latin-1 -*-</span></p><p>
+<span style="color: #808080; font-style: italic;"># Pour un fonctionnement en mode console (DOS), remplacer # -*- coding: Latin-1 -*- </span><br />
+<span style="color: #808080; font-style: italic;"># par # -*-coding:cp437-*-</span></p><p>
+<span style="color: #ff7700;font-weight:bold;">from</span> <span style="color: #dc143c;">os</span> <span style="color: #ff7700;font-weight:bold;">import</span> getcwd</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> titre_general<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *********************************************&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; CARRES DE DIMENSIONS IMPAIREMENT PAIRE &nbsp;*&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; &nbsp; Modèle du Carré du Soleil &nbsp; &nbsp; &nbsp; &nbsp; *&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *********************************************&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> &nbsp; <br />
+&nbsp; &nbsp; <br />
+<span style="color: #ff7700;font-weight:bold;">def</span> initialisation_carres<span style="color: black;">&#40;</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; L1<span style="color: #66cc66;">,</span>L2<span style="color: #66cc66;">=</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><span style="color: #66cc66;">,</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L1.<span style="color: black;">append</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">0</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L2.<span style="color: black;">append</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">0</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_init.<span style="color: black;">append</span><span style="color: black;">&#40;</span>L1<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag.<span style="color: black;">append</span><span style="color: black;">&#40;</span>L2<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; L1<span style="color: #66cc66;">,</span>L2<span style="color: #66cc66;">=</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><span style="color: #66cc66;">,</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_init<span style="color: #66cc66;">,</span>car_mag</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> choix_dimension<span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">while</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">try</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n <span style="color: #66cc66;">=</span> <span style="color: #008000;">int</span><span style="color: black;">&#40;</span><span style="color: #008000;">raw_input</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Veuillez choisir la dimension du carré : &quot;</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> n % <span style="color: #ff4500;">2</span> <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">and</span> n % <span style="color: #ff4500;">4</span> <span style="color: #66cc66;">!=</span> <span style="color: #ff4500;">0</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: black;">&#40;</span>n/<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span> % <span style="color: #ff4500;">2</span> <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">break</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Désolé ! Vous n'avez pas entré un nombre valide. Veuillez recommencer...&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">except</span> <span style="color: #008000;">ValueError</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Désolé ! Ce n'est pas un nombre. Essayez encore...&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> n</p><p>
+<span style="color: #808080; font-style: italic;"># Procédure centrale de calcul</span><br />
+<span style="color: #ff7700;font-weight:bold;">def</span> calcul<span style="color: black;">&#40;</span>n<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; nn<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">=</span>n/<span style="color: #ff4500;">2</span><span style="color: #66cc66;">,</span><span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> no_qd <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">4</span><span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> l <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>nn<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> c <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>nn<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j <span style="color: #66cc66;">=</span> l + nn*<span style="color: black;">&#40;</span>no_qd<span style="color: #66cc66;">&gt;</span><span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i <span style="color: #66cc66;">=</span> c + nn*<span style="color: black;">&#40;</span>no_qd % <span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">2</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal_quadr<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>no_qd<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">3</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>ip_puis_pa<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">4</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>ip_pa_1li<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">5</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal_1s2<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">6</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>pairs_impairs_en_colonnes_sym<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal_1s2_avec_symetrie_centrale_par_paires<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; car_init<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> i <span style="color: #66cc66;">==</span> j <span style="color: #ff7700;font-weight:bold;">or</span> i+j <span style="color: #66cc66;">==</span> n-<span style="color: #ff4500;">1</span>: &nbsp; <span style="color: #808080; font-style: italic;"># Les diagonales restent en place</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #808080; font-style: italic;"># initialisation du drapeau d'appartenance à une forme</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tem <span style="color: #66cc66;">=</span> <span style="color: black;">&#40;</span>i <span style="color: #66cc66;">==</span> nn-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">or</span> i <span style="color: #66cc66;">==</span> nn<span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">and</span> <span style="color: black;">&#40;</span>j <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">or</span> j <span style="color: #66cc66;">==</span> n-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tem <span style="color: #66cc66;">=</span> tem + <span style="color: black;">&#40;</span><span style="color: black;">&#40;</span>j <span style="color: #66cc66;">==</span> nn-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">or</span> j <span style="color: #66cc66;">==</span> nn<span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">and</span> <span style="color: black;">&#40;</span>i <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">or</span> &nbsp;i <span style="color: #66cc66;">==</span> n-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tem <span style="color: #66cc66;">=</span> tem + <span style="color: black;">&#40;</span>i <span style="color: #66cc66;">==</span> j - <span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">or</span> i + j <span style="color: #66cc66;">==</span> n-<span style="color: #ff4500;">2</span> <span style="color: #ff7700;font-weight:bold;">or</span> i+j <span style="color: #66cc66;">==</span> n <span style="color: #ff7700;font-weight:bold;">or</span> i <span style="color: #66cc66;">==</span> j+<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> no_qd<span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quadr1<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> no_qd <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quadr2<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> no_qd <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">2</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quadr3<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quadr4<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_init<span style="color: #66cc66;">,</span>car_mag</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> affichage_stockage<span style="color: black;">&#40;</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> n <span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">34</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Dimension trop grande : création d'un fichier&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; ecriture_dans_fichier<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; affichage<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>car_init<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; teste_magie<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span></p><p>
+<span style="color: #808080; font-style: italic;"># Pour voir le carré initial, remplacer après le print car_mag par car_init</span><br />
+<span style="color: #ff7700;font-weight:bold;">def</span> affichage<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>car_init<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;#############################################&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Carré d'ordre &quot;</span><span style="color: #66cc66;">,</span>n<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;#############################################&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ff7700;font-weight:bold;">if</span> n <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">6</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;%2i&quot;</span> % car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><span style="color: #66cc66;">,</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ff7700;font-weight:bold;">elif</span> n <span style="color: #66cc66;">&lt;</span> <span style="color: #ff4500;">34</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;%3i&quot;</span> % car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><span style="color: #66cc66;">,</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> n <span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">10</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> &nbsp; &nbsp; &nbsp; &nbsp;</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> ecriture_dans_fichier<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; rep <span style="color: #66cc66;">=</span> getcwd<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; nom <span style="color: #66cc66;">=</span> <span style="color: #483d8b;">&quot;Impapairs_&quot;</span> + <span style="color: #008000;">str</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>+<span style="color: #483d8b;">&quot;.txt&quot;</span> &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; chemin_nom<span style="color: #66cc66;">=</span>rep+<span style="color: #008000;">chr</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">92</span><span style="color: black;">&#41;</span>+nom<br />
+&nbsp; &nbsp; fichier <span style="color: #66cc66;">=</span> <span style="color: #008000;">open</span><span style="color: black;">&#40;</span>nom<span style="color: #66cc66;">,</span><span style="color: #483d8b;">'w'</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; lgmax <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">1</span> + <span style="color: #008000;">len</span><span style="color: black;">&#40;</span><span style="color: #008000;">str</span><span style="color: black;">&#40;</span>n**<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; blanc <span style="color: #66cc66;">=</span><span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; enreg<span style="color: #66cc66;">=</span><span style="color: #483d8b;">&quot;&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nb <span style="color: #66cc66;">=</span> <span style="color: #008000;">str</span><span style="color: black;">&#40;</span>car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lg <span style="color: #66cc66;">=</span> <span style="color: #008000;">len</span><span style="color: black;">&#40;</span>nb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enreg +<span style="color: #66cc66;">=</span> blanc<span style="color: black;">&#91;</span><span style="color: #ff4500;">0</span>:lgmax-lg<span style="color: black;">&#93;</span>+nb &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; fichier.<span style="color: black;">write</span><span style="color: black;">&#40;</span>chaine+<span style="color: #483d8b;">&quot;<span style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; fichier.<span style="color: black;">close</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Vous trouverez votre fichier ici&quot;</span><span style="color: #66cc66;">,</span>chemin_nom<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+<span style="color: #ff7700;font-weight:bold;">def</span> teste_magie<span style="color: black;">&#40;</span>car_mag<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Test des lignes&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tot <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tot <span style="color: #66cc66;">=</span> tot + car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> tot<span style="color: #66cc66;">,</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Test des colonnes&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tot<span style="color: #66cc66;">=</span><span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tot <span style="color: #66cc66;">=</span> tot + car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> tot<span style="color: #66cc66;">,</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Test des diagonales&quot;</span><br />
+&nbsp; &nbsp; tot1 <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; tot2 <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">for</span> j <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; i <span style="color: #66cc66;">=</span> j<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tot1 <span style="color: #66cc66;">=</span> tot1 + car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; tot2 <span style="color: #66cc66;">=</span> tot2 + car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> tot1<span style="color: #66cc66;">,</span>tot2<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span></p><p>
+<span style="color: #808080; font-style: italic;"># Application des symétries dans chaque quadrant</span><br />
+<span style="color: #ff7700;font-weight:bold;">def</span> quadr1<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: black;">&#40;</span><span style="color: black;">&#40;</span>c - l<span style="color: black;">&#41;</span> <span style="color: #66cc66;">&gt;</span> n/<span style="color: #ff4500;">4.0</span> <span style="color: #ff7700;font-weight:bold;">and</span> c <span style="color: #66cc66;">&gt;</span> l<span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: black;">&#40;</span><span style="color: black;">&#40;</span>l - c<span style="color: black;">&#41;</span><span style="color: #66cc66;">&lt;</span> n/<span style="color: #ff4500;">4.0</span> <span style="color: #ff7700;font-weight:bold;">and</span> c <span style="color: #66cc66;">&lt;</span> l<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-<span style="color: #ff4500;">1</span>-i<span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n-j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_mag</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> quadr2<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: black;">&#40;</span>c + l <span style="color: #66cc66;">&lt;</span> nn-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">and</span> c + l <span style="color: #66cc66;">&gt;</span> n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><span style="color: #ff7700;font-weight:bold;">or</span> c + l <span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">3</span>*n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n - j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> tem <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">and</span> <span style="color: black;">&#40;</span>c + l <span style="color: #66cc66;">&lt;</span> n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: black;">&#40;</span>c + l <span style="color: #66cc66;">&gt;</span> nn-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">and</span> c + l<span style="color: #66cc66;">&lt;</span> <span style="color: #ff4500;">3</span>*n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n-j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_mag</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> quadr3<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: black;">&#40;</span>c + l<span style="color: #66cc66;">&gt;</span> n/<span style="color: #ff4500;">4.0</span> -<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">and</span> c + l <span style="color: #66cc66;">&lt;</span> nn-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> c + l<span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">3</span>*n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> tem <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">and</span> <span style="color: black;">&#40;</span>c + l <span style="color: #66cc66;">&lt;</span> n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: black;">&#40;</span>c + l <span style="color: #66cc66;">&gt;</span>nn-<span style="color: #ff4500;">1</span> <span style="color: #ff7700;font-weight:bold;">and</span> c + l <span style="color: #66cc66;">&lt;</span> <span style="color: #ff4500;">3</span>*n/<span style="color: #ff4500;">4.0</span>-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n -j- <span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n-j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_mag</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> quadr4<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>tnb<span style="color: #66cc66;">,</span>tem<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> tem <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n-j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> <span style="color: black;">&#40;</span>c<span style="color: #66cc66;">&lt;</span>l <span style="color: #ff7700;font-weight:bold;">and</span> l-c <span style="color: #66cc66;">&gt;</span> n/<span style="color: #ff4500;">4.0</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: black;">&#40;</span>c <span style="color: #66cc66;">&gt;</span> l <span style="color: #ff7700;font-weight:bold;">and</span> c-l <span style="color: #66cc66;">&lt;</span> n/<span style="color: #ff4500;">4.0</span><span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>j<span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>n-i-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span> <span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; car_mag<span style="color: black;">&#91;</span>n-j-<span style="color: #ff4500;">1</span><span style="color: black;">&#93;</span><span style="color: black;">&#91;</span>i<span style="color: black;">&#93;</span><span style="color: #66cc66;">=</span> tnb<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> car_mag</p><p>
+<span style="color: #808080; font-style: italic;"># Méthodes de calcul (dans l'ordre)</span><br />
+<span style="color: #ff7700;font-weight:bold;">def</span> normal<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> n*j + i + <span style="color: #ff4500;">1</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> normal_quadr<span style="color: black;">&#40;</span>c<span style="color: #66cc66;">,</span>l<span style="color: #66cc66;">,</span>no_qd<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> nn**<span style="color: #ff4500;">2</span>*no_qd + nn*l + c + <span style="color: #ff4500;">1</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> ip_puis_pa<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> <span style="color: black;">&#40;</span><span style="color: #ff4500;">2</span>*i+<span style="color: #ff4500;">1</span>+j*<span style="color: #ff4500;">2</span>*n<span style="color: black;">&#41;</span>*<span style="color: black;">&#40;</span>j<span style="color: #66cc66;">&lt;</span>nn<span style="color: black;">&#41;</span>+<span style="color: black;">&#40;</span>j<span style="color: #66cc66;">&gt;=</span>nn<span style="color: black;">&#41;</span>*<span style="color: black;">&#40;</span><span style="color: #ff4500;">2</span>+<span style="color: #ff4500;">2</span>*i+<span style="color: black;">&#40;</span>j-nn<span style="color: black;">&#41;</span>*<span style="color: #ff4500;">2</span>*n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> ip_pa_1li<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> j %<span style="color: #ff4500;">2</span> <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">2</span> * i+ <span style="color: #ff4500;">1</span> + <span style="color: #ff4500;">2</span>*n*<span style="color: black;">&#40;</span>j/<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span>*<span style="color: black;">&#40;</span>j<span style="color: #66cc66;">&gt;</span><span style="color: #ff4500;">0</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">2</span>*<span style="color: black;">&#40;</span>i+<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span>+ <span style="color: #ff4500;">2</span>*n*<span style="color: black;">&#40;</span>j/<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> normal_1s2<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> <span style="color: #ff4500;">1</span>+i/<span style="color: #ff4500;">2</span>+<span style="color: #ff4500;">2</span>*nn**<span style="color: #ff4500;">2</span>*<span style="color: black;">&#40;</span>i%<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span>+nn*j &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> pairs_impairs_en_colonnes_sym<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> i <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">0</span> <span style="color: #ff7700;font-weight:bold;">or</span> i <span style="color: #66cc66;">==</span> n-<span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; dp <span style="color: #66cc66;">=</span> <span style="color: black;">&#40;</span><span style="color: black;">&#40;</span><span style="color: black;">&#40;</span>i+<span style="color: #ff4500;">1</span> - <span style="color: #ff4500;">2</span>*<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">&gt;</span>nn-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>/<span style="color: #ff4500;">2</span><span style="color: black;">&#41;</span>% <span style="color: #ff4500;">2</span> <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> dp <span style="color: #66cc66;">==</span> <span style="color: #ff4500;">1</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb <span style="color: #66cc66;">=</span> n*j + n - i<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">else</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>normal<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+<span style="color: #ff7700;font-weight:bold;">def</span> normal_1s2_avec_symetrie_centrale_par_paires<span style="color: black;">&#40;</span>i<span style="color: #66cc66;">,</span>j<span style="color: #66cc66;">,</span>n<span style="color: #66cc66;">,</span>nn<span style="color: #66cc66;">,</span>tnb<span style="color: black;">&#41;</span>:<br />
+&nbsp; &nbsp; tnb<span style="color: #66cc66;">=</span>i/<span style="color: #ff4500;">2</span>+<span style="color: #ff4500;">1</span>+nn**<span style="color: #ff4500;">2</span>*<span style="color: black;">&#40;</span>i%<span style="color: #ff4500;">2</span><span style="color: #66cc66;">==</span><span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span>+nn*j+nn**<span style="color: #ff4500;">2</span>*<span style="color: black;">&#40;</span>j<span style="color: #66cc66;">&gt;</span>nn-<span style="color: #ff4500;">1</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">return</span> tnb</p><p>
+mode<span style="color: #66cc66;">=</span><span style="color: #ff4500;">10</span><br />
+<span style="color: #ff7700;font-weight:bold;">while</span> mode<span style="color: #66cc66;">!=</span> <span style="color: #ff4500;">0</span>:<br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">try</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; titre_general<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 1. Dans l'ordre normal par ligne du carré&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 2. Dans l'ordre normal par ligne de quadrant&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 3. Tous les nombres impairs, puis les pairs&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 4. Avec lignes de nombres impairs et pairs alternées&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 5. Ordre normal en sautant une case à chaque fois dans le carré&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 6. Par 2 colonnes à la fois avec symétrie dans chaque quadrant&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; 7. Ordre normal en sautant une case et par paires symétriques de somme n²&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0. Sortie du programme&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; mode <span style="color: #66cc66;">=</span> <span style="color: #008000;">int</span><span style="color: black;">&#40;</span><span style="color: #008000;">raw_input</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot; &nbsp; &nbsp; Votre choix : &quot;</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">if</span> mode <span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">7</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Désolé ! Vous n'avez pas entré un nombre valide. Veuillez recommencer...&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">elif</span> mode <span style="color: #66cc66;">&gt;</span><span style="color: #ff4500;">0</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n<span style="color: #66cc66;">=</span><span style="color: #ff4500;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n<span style="color: #66cc66;">=</span>choix_dimension<span style="color: black;">&#40;</span>n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">=</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><span style="color: #66cc66;">,</span><span style="color: black;">&#91;</span><span style="color: black;">&#93;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">=</span>initialisation_carres<span style="color: black;">&#40;</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">=</span>calcul<span style="color: black;">&#40;</span>n<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; affichage_stockage<span style="color: black;">&#40;</span>car_init<span style="color: #66cc66;">,</span>car_mag<span style="color: #66cc66;">,</span>mode<span style="color: #66cc66;">,</span>n<span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">raw_input</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;... Appuyer sur ENTREE ... '</span><span style="color: black;">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span><br />
+&nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">except</span> <span style="color: #008000;">ValueError</span>:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot;Désolé ! Ce n'est pas un nombre. Essayez encore...&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ff7700;font-weight:bold;">print</span> <br />
+<span style="color: #ff7700;font-weight:bold;">print</span><br />
+<span style="color: #ff7700;font-weight:bold;">print</span><br />
+<span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: #483d8b;">&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Au revoir !&quot;</span></div></div><p>Commentaires ?</p><p>@+</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Arx Tarpeia Capitoli proxima...</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=13862">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p13863" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=13863#p13863">06-03-2009 23:18:39</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=1032">tibo</a></strong></dt>
+						<dd class="usertitle"><strong>Membre expert</strong></dd>
+						<dd><span>Inscription&#160;: 23-01-2008</span></dd>
+						<dd><span>Messages&#160;: 1 097</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re&#160;: [Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>J&#039;en reste sans voix...</p><p>Meme en le poussant à la limite (carré de taille 10002), aprés 2h consécutives de calculs, et je pense le double d&#039;affichage (c&#039;est en cours là), j&#039;obtiens un résultat.</p><p>Franchement BRAVO</p><p>(allez j&#039;emet quand meme une critique, est-ce vraiment nécéssaire d&#039;afficher les test de lignes, de colonne et de diagonales? que le programme test, oui. afficher le somme, oui. mais pas tout afficher)</p><p>bon maintenant je vais décortiquer ton code. Enfin ce week-end, parce que demain j&#039;ai DS de math quand meme, il faudrait relire son cours un peu non?</p>
+						<p class="postedit"><em>Dernière modification par tibo (06-03-2009 23:19:18)</em></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>A quoi sert une hyperbole?<br />----- A boire de l&#039;hypersoupe pardi !</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=13863">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p13864" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=13864#p13864">07-03-2009 08:41:28</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=64">yoshi</a></strong></dt>
+						<dd class="usertitle"><strong>Modo Ferox</strong></dd>
+						<dd><span>Inscription&#160;: 20-11-2005</span></dd>
+						<dd><span>Messages&#160;: 17 356</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re&#160;: [Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>Salut,</p><br /><p>le test de magie peut s&#039;enlever facilement ou devenir optionnel : je vais voir ça...<br />n=10002 ???&#160; J&#039;aurais jamais pensé que quelqu&#039;un aille jusque là...<br />En principe, il n&#039;y a pas d&#039;affichage au delà de n = 34, mais stockage dans un fichier (dans le même dossier que le prog) séquentiel dont le nom te sera donné.<br />Pourquoi cela ? Pour permettre la récupération via un traitement de textes puis imprimer des morceaux sur une page A4 pour enfin les assembler : je l&#039;avais fait avec une dimension autour de 100...<br />La taille estimée pour n= 10002 ? Environ 400 Mo !!!!</p><p>Je vais voir pour un fichier à accès direct...</p><p>Pour avoir une chance de comprendre le code, il faut bien lire la page de BibM@th où la méthode à la main est décrite...<br />A ma connaissance, personne n&#039;avait pu, jusqu&#039;à ce que je le fasse, sauter le pas de la dimension 6 à 10 et au-delà : des formes nouvelles apparaissent à partir de 10.&#160; Depuis le temps que j&#039;affirme cela, je n&#039;ai jamais été démenti...<br />L&#039;identification de ces formes nouvelles est due à l&#039;un de mes amis ex-libraire et grand amateur de la magie des nombres : il a travaillé avec n = 10. Au delà, c&#039;est un coup de chance et une intuition personnelle, un jour il y a près de 20 ans.</p><p>L&#039;étape suivante, l&#039;informatisation, a été longue et semée d&#039;embûches.<br />Même avec une version de secours qui fonctionnait, sachant ce que j&#039;avais imaginé, la modification du programme pour :<br />- qu&#039;il fonctionne à partir de l&#039;indice 0 et non plus 1, avec le passage d&#039;une seule liste de n^2 nombres à une liste comprenant n listes de n nombres pour simuler les tableaux (n&#039;existent pas en Python) du BASIC et d&#039;autres langages,<br />- ne plus utiliser de variables déclarées globales<br />m&#039;a demandé une dizaine d&#039;heures...</p><p>Merci pour cette première réaction...</p><p>@+</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Arx Tarpeia Capitoli proxima...</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=13864">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p13865" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=13865#p13865">07-03-2009 14:59:27</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=1032">tibo</a></strong></dt>
+						<dd class="usertitle"><strong>Membre expert</strong></dd>
+						<dd><span>Inscription&#160;: 23-01-2008</span></dd>
+						<dd><span>Messages&#160;: 1 097</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re&#160;: [Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>oups en effet c&#039;est beaucoup 10002,<br />j&#039;ai mis un 0 en trop<br />en fait c&#039;est 1002, et vu le temps que ça m&#039;a pris je ne tenterai pas plus<br />et bien pensé aussi cette histoire de ficher &quot;annexe&quot;, par contre l&#039;affichage est un peu bizar quand les nombres sont trop grands</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>A quoi sert une hyperbole?<br />----- A boire de l&#039;hypersoupe pardi !</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=13865">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p13990" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=13990#p13990">18-03-2009 08:21:59</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=64">yoshi</a></strong></dt>
+						<dd class="usertitle"><strong>Modo Ferox</strong></dd>
+						<dd><span>Inscription&#160;: 20-11-2005</span></dd>
+						<dd><span>Messages&#160;: 17 356</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re&#160;: [Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>Bonjour,</p><p>Je pense, sans avoir essayé, savoir pourquoi tibo a déclaré que les nombres stockés étaient bizarres.<br />J&#039;ai modifié la méthode de stockage et de nommage du fichier contenant les nombres du carré magique.<br />Je n&#039;avais pas testé la méthode avant, mais recopié icelle directement de l&#039;ancien programme de construction, et comme je ne gère plus maintenant une liste, mais une liste de listes, il devait y avoir effectivement quelques &quot;bizarreries&quot;.</p><p>Dont acte...</p><p>S&#039;il y a encore une bricole, me le faire savoir, merci</p><p>@+</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Arx Tarpeia Capitoli proxima...</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=13990">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p14028" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="https://www.bibmath.net/forums/viewtopic.php?pid=14028#p14028">21-03-2009 18:29:34</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="https://www.bibmath.net/forums/profile.php?id=64">yoshi</a></strong></dt>
+						<dd class="usertitle"><strong>Modo Ferox</strong></dd>
+						<dd><span>Inscription&#160;: 20-11-2005</span></dd>
+						<dd><span>Messages&#160;: 17 356</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re&#160;: [Python] Construction de carrés magiques de dimension n=2(2k+1)</h3>
+					<div class="postmsg">
+						<p>Bonsoir,</p><p>Encore une (toute) petite destinée à &quot;standardiser&quot; (pour traitement ultérieur --&gt; utilitaire mis en ligne) les noms de carrés magiques enregistrés :<br />remplacer dans :</p><p>def ecriture_dans_fichier(car_mag,mode,n):</p><p>&#160; &#160; nom = &quot;Impapairs_&quot; + str(n) par&#160; nom = &quot;Impapairs_&quot;+str(n)+&quot;.txt&quot;</p><p>@+</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Arx Tarpeia Capitoli proxima...</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Hors ligne</span></p></div>
+				<div class="postfootright">
+					<ul>
+						<li class="postquote"><span><a href="https://www.bibmath.net/forums/post.php?tid=2495&amp;qid=14028">Citer</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages&#160;: </span><strong class="item1">1</strong></p>
+			<p class="postlink conr"><a href="https://www.bibmath.net/forums/post.php?tid=2495">Répondre</a></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="https://www.bibmath.net/forums/index.php">Accueil</a></li>
+			<li><span>»&#160;</span><a href="https://www.bibmath.net/forums/viewforum.php?id=10">Programmation</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php%3Fid=2495.html">[Python] Construction de carrés magiques de dimension n=2(2k+1)</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="quickpost" class="blockform">
+	<h2><span>Réponse rapide</span></h2>
+	<div class="box">
+		<form id="quickpostform" method="post" action="https://www.bibmath.net/forums/post.php?tid=2495" onsubmit="this.submit.disabled=true;if(process_form(this)){return true;}else{this.submit.disabled=false;return false;}">
+			<div class="inform">
+				<fieldset>
+					<legend>Veuillez composer votre message et l'envoyer</legend>
+					<div class="infldset txtarea">
+						<input type="hidden" name="form_sent" value="1" />
+						<div class="conl required"><strong>Nom <span>(obligatoire)</span></strong><br /><input type="text" name="req_username" tabindex="1" /><br /></div>
+						<div class="conl required"><strong>E-mail <span>(obligatoire)</span></strong><br /><input type="text" name="req_email" tabindex="2" /><br /></div>
+						<div class="clearer"></div>
+						<div class="required"><strong>Message <span>(obligatoire)</span></strong><br /><textarea id="req_message" name="req_message" rows="7" tabindex="3" placeholder="Entrez votre message ici. N'oubliez pas les formules de politesse (bonjour, merci...)."></textarea></div>
+
+
+<script type="text/javascript" src="https://www.bibmath.net/forums/include/toolbar_func.js"></script>
+<noscript><p><strong>Veuillez activer javascript pour utiliser l'outil de formatage du texte.</strong></p></noscript>
+<script type="text/javascript">
+/* <![CDATA[ */
+	var tb = new toolBar(document.getElementById('req_message'), 'img/fluxtoolbar/smooth/', 'img/smilies/');
+	tb.btSingle('bt_tex.png', 'tex', '');
+	tb.btSingle('bt_bold.png', 'b', 'Texte en gras : [b]texte[/b]');
+	tb.btSingle('bt_italic.png', 'i', 'Texte en italique : [i]texte[/i]');
+	tb.btSingle('bt_underline.png', 'u', 'Texte souligné : [u]texte[/u]');
+	tb.btSingle('bt_strike.png', 's', 'Texte barré : [s]texte[/s]');
+	tb.btSingle('bt_sup.png', 'sup', 'Exposant : [sup]texte[/sup]');
+	tb.btSingle('bt_sub.png', 'sub', 'Indice : [sub]texte[/sub]');
+	tb.btSingle('bt_size_plus.png', 'h', 'Titre : [h]texte[/h]');
+	tb.btSingle('bt_align_left.png', 'left', 'Aligner à gauche : [left]texte[/left]');
+	tb.btSingle('bt_align_right.png', 'right', 'Aligner à droite : [right]texte[/right]');
+	tb.btSingle('bt_align_center.png', 'center', 'Centrer : [center]texte[/center]');
+	tb.btSingle('bt_align_justify.png', 'justify', 'Justifier : [justify]texte[/justify]');
+	tb.btColor('bt_color.png', 'Couleur du texte : [color=#000000]texte[/color]');
+	tb.btSingle('bt_quote.png', 'q', 'Citation en ligne : [q]texte[/q]');
+	tb.btPrompt_1('bt_acronym.png', 'acronym', 'Acronyme : [acronym=World Wide Web Consortium]W3C[/acronym]', 'Désignation complète de l\'acronyme :');
+	tb.btPrompt_2('bt_img.png', 'img', 'Image : [img=texte]http://www.site.ltd/url-image.png[/img]', 'Veuillez entrer l\'URL de votre image :', 'Veuillez entrer une description pour votre image (attribut alt) :', 1);
+	tb.btSingle('bt_pre.png', 'code', 'Texte préformaté : [code=langage]texte[/code] ou [code]texte[/code]');
+	tb.btPrompt_1('bt_bquote.png', 'quote', 'Bloc de citation : [quote=user]texte[/quote]', 'Veuillez entrer le nom de l\'utilisateur cité (ou laissez vide) :');
+	tb.btPrompt_2('bt_link.png', 'url', 'Lien : [url=http://www.website.ltd/]un site[/url]', 'Veuillez entrer l\'URL de votre lien :', 'Veuillez entrer un nom descriptif de votre lien :', 0);
+	tb.btPrompt_2('bt_email.png', 'email', 'Courriel : [email=name@host.ltd]email[/email]', 'Veuillez entrer une adresse mail valide :', 'Veuillez entrer un nom descriptif de votre courriel :', 0);
+	tb.btSingle('bt_li.png', '*', 'Elément de liste : [*]text[/*]');
+	tb.btPrompt_1('bt_ul.png', 'list', 'Liste : [list=*,1,a]text[/list]', 'Veuillez entrer le type de liste : * = liste à puce, 1 = liste ordonnée numériquement, a = liste ordonnée alphabétiquement');
+	tb.draw();
+/* ]]> */
+</script>
+						<ul class="bblinks">
+                            <li><span><a href="viewtopic.php%3Fid=1943.html">Code Latex</a></span>				
+							<li><span><a href="https://www.bibmath.net/forums/help.php#bbcode" onclick="window.open(this.href); return false;">BBCode&#160;</a> 						</ul>
+					</div>
+				</fieldset>
+			</div>
+		<div class="inform">
+			<fieldset>
+				<div class="infldset">
+					<p>Programme anti-spam : Afin de lutter contre le spam, nous vous demandons de bien vouloir répondre à la question suivante.
+  Après inscription sur le site, vous n'aurez plus à répondre à ces questions.</p>
+					<div class="required">
+						Quel est le résultat de l'opération suivante (donner le résultat en chiffres)? <br />quarante moins trois 						
+						<input name="vsab_question" value="69ca26d2bb2a55c174bb5770768856a4" type="hidden" />
+						<input name="vsab_answer" id="vsab_answer" type="text"  />
+						<br />
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		
+			<div class="inform">
+				<fieldset>
+					<legend>Système anti-bot</legend>
+					<div class="infldset">
+						<p>Faites glisser le curseur de gauche à droite pour activer le bouton de confirmation.</p>
+						<div class="rbox">
+							<div id="javascriptCaptcha">Attention : Vous devez activer Javascript dans votre navigateur pour utiliser le système anti-bot.</div>
+							<div id="sliderCaptcha"></div>
+							<input type="hidden" id="cleCaptcha" name="cleCaptcha" value="973287efb1d508626e8de29482c148b961774fbf7233a8dffa6" />
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<p class="buttons"><input type="submit" name="submit" tabindex="4" value="Valider" accesskey="s" class="boutonsCaptcha" disabled="disabled" /> <input type="submit" name="preview" value="Prévisualisation" tabindex="5" accesskey="p" class="boutonsCaptcha" disabled="disabled" /></p>
+			
+		</form>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Pied de page des forums</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="https://www.bibmath.net/forums/viewforum.php">
+					<div><label><span>Atteindre<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Entraide">
+							<option value="8">Entraide (collège-lycée)</option>
+							<option value="9">Entraide (supérieur)</option>
+							<option value="13">Leçons de Capes</option>
+						</optgroup>
+						<optgroup label="Autres forums">
+							<option value="4">Café mathématique</option>
+							<option value="3">Enigmes, casse-têtes, curiosités et autres bizarreries</option>
+							<option value="11">Le coin des beaux problèmes de Géométrie</option>
+							<option value="12">Échecs et maths</option>
+							<option value="6">Cryptographie</option>
+							<option value="10" selected="selected">Programmation</option>
+							<option value="5">GeoLabo, laboratoire de géométrie</option>
+						</optgroup>
+					</select></label>
+					
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+</article></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="https://www.bibmath.net/forums/viewtopic.php?cmpscreen">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

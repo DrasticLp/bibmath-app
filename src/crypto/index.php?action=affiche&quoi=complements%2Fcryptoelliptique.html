@@ -1,0 +1,143 @@
+<!doctype html><html lang="fr"<head><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta charset="utf-8"><meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Chiffrer à l'aide des courbes elliptiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chiffrer à l'aide des courbes elliptiques</title><link type="text/css" href="css/cryptostyle.css" rel="stylesheet" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({  tex2jax: {inlineMath: [['$','$']]} });</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/javascript" src="common/fonctions.js"></script><script src="common/spoiler.js"></script></head><body><header id="bandeau"><div id="bandeaucentre"><span id=bandeaulogo>Cryptographie et codes secrets</span><span id=bandeaumilieu><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" title="Consulter notre page Facebook">
+	<img src="img/fb.png" /></a></span><div id=bandeaurecherche><form id="formrech" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></form></div></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()">
+	<img src="img/menumobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="img/deletemobile.png">
+	</a></span><span class="itembandeaumobile">Cryptographie!</span></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site">
+	<img src="img/forumgrand.png" /></a></span>
+	<span class="itembandeaumobilesansbordure"><a href="https://www.facebook.com/bibmath" alt="Consulter notre page FaceBook" 
+	title="Consulter notre page Facebook"><img src="img/fbmobile.png" /></a></span>
+	<span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()">
+	<img src="img/loupemobile.png" /></a></span>
+	<span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()">
+	<img src="img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/crypto/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><section id="listemenuhaut"><span id="menu0" class="item"><a href="Analyse.class.html">Accueil</a></span><span id="menu1" class="itemselectionne"><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Findex.html">Méthodes anciennes</a></span><span id="menu2" class="item"><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findex.html">Les 2 guerres</a></span><span id="menu3" class="item"><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Méthodes modernes</a></span><span id="menu4" class="item"><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=chasseur/index">Chasseurs de codes</a></span><span id="menu5" class="item"><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><span id="menu6" class="item"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Compléments</a></span><span id="menu7" class="item"><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><span id="menu8" class="item"><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="Analyse.class.html">Accueil</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme0"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert0"  style="display:none;"/></div></div><div class="itemmenumobileselectionne"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(1);">Méthodes anciennes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme1"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert1"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=substi%252Findex.html">Substitution monoalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=poly%252Findex.html">Substitution polyalphabétique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fpolygraphiqueindex.html">Chiffres polygraphiques</a></span></div><div class="sousitemmenumobile"><span><a href="https://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=ancienne/homophoneindex">Chiffres homophones</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Ftranspoindex.html">Transposition</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=ancienne%252Fsurchiffrement.html">Surchiffrement</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(2);">Les 2 guerres</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme2"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert2"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexpremguerre.html">Première Guerre Mondiale</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=debvingt%252Findexsecguerre.html">Deuxième Guerre Mondiale</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(3);">Méthodes modernes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme3"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert3"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findex.html">Préambule</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclesecrete.html">Clé secrète</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexclepublique.html">Clé publique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexprotocole.html">Protocoles</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexconcret.html">Mises en oeuvre</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=moderne%252Findexfutur.html">Futur</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(4);">Chasseurs de codes</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme4"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert4"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findextheorie.html">Quelques principes</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexvaincre.html">Quelques cas concrets</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexoutils.html">Outils</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=chasseur%252Findexenigmes.html">Enigmes</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=stegano%252Findex.html">Stéganographie</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme5"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert5"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="javascript:affiche_sousmenumobile(6)">Compléments</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme6"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert6"  style="display:none;"/></div><div class="sousmenumobile" id="sousmenumobile6"><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexfigures.html">Portraits</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexmaths.html">Compléments mathématiques</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexinfo.html">Compléments informatique</a></span></div><div class="sousitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findexclasse.html">En classe</a></span></div></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="index.php%3Faction=affiche&amp;quoi=lexique.html">Lexique</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme7"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert7"  style="display:none;"/></div></div><div class="itemmenumobile"><div class="teteitemmenumobile"><span><a href="https://www.bibmath.net/forums/viewforum.php?id=6">Forum</a></span><img src="img/flechemenumobileferme.png" id="sousmenumobileimageferme8"  /><img src="img/flechemenumobileouvert.png" id="sousmenumobileimageouvert8"  style="display:none;"/></div></div></nav></div><div id="main"><div style="width:100%"><div id="pubhaut"></div></div><div id="maincentre"><div id="gauche"><article id="contenugauche"><div class="chemin"><a href="index.php%3Faction=affiche&amp;quoi=complements%252Findex.html">Le plan de la partie : compléments pour la cryptographie</a> &gt; </div><h1>Chiffrer à l'aide des courbes elliptiques</h1>
+ 
+      <P><BR><font size=-1>Avant d'aborder cette lecture, il faut avoir lu <a href="index.php%3Faction=affiche&amp;quoi=complements%252Fcourbelliptique.html"> cette page.</a></p></font>
+      </p>
+&nbsp;&nbsp;<font size=+2>L</font>es courbes elliptiques sont bien adaptées à la cryptographie à clé publique. Elles permettent de remplacer les calculs
+sur des entiers, ou dans les groupes $\mathbb Z/n\mathbb Z$, par des calculs dans les groupes associés à une courbe elliptique.       
+
+<div class=titrepartie>Echange de clés par courbes elliptiques :</div>
+</tr>
+</table>
+ <p>&nbsp;&nbsp;<font size="+2">I</font>l s'agit d'un échange de clés à la manière de <a href="index.php%3Faction=affiche&amp;quoi=moderne%252Fdifhel.html">Diffie et Hellman</a>, c'est-à-dire sans se les communiquer directement. Alice et Bob se mettent d'accord ensemble et publiquement sur une courbe elliptique $E(a,b,\mathbb K)$, c'est-à-dire qu'ils choisissent un corps fini $\mathbb K$ (par exemple, $\mathbb Z/p\mathbb Z$)  et une courbe elliptique $y^2=x^3+ax^2+b$. Ils choisissent aussi ensemble, et toujours publiquement, un point $P$ situé sur la courbe.</p>
+<p>&nbsp;&nbsp;<font size="+2">E</font>nsuite, chacun de leur côté, et secrètement, Alice choisit un entier $k_A$ et Bob choisit un entier $k_B$. Alice envoie à Bob le point de la courbe elliptique $k_AP$, et Bob envoie à Alice le point $k_BP$. Chacun de leur côté, ils sont capables de calculer $k_A(k_B P)=k_B(k_A P)=(k_Ak_B)P$.
+Ce point de la courbe elliptique constitue leur clé secrète.</p>
+<center>
+<TABLE align=center cellspacing=0 cellpadding=4 border=1 width=85%>
+<tr><td></td>
+<td bgcolor=#FAFAFF align=center width=300px>Alice</td>
+<td bgcolor=#FAFAFF align=center width=300px>Bob</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 1 :&nbsp;&nbsp;</td>
+<td colspan=2 bgcolor=#FAFAFF>
+Alice et Bob choisissent ensemble une courbe elliptique $E(a,b,\mathbb K)$
+et un point $P$ sur la courbe. Cet échange n'a pas besoin d'être sécurisé.
+</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 2 :&nbsp;&nbsp;</td>
+<td bgcolor=#FAFAFF></p>
+Alice choisit secrètement $k_A$ et envoie
+$k_AP$ à Bob. Cet échange n'a pas besoin d'être sécurisé.</p>
+</td>
+<td bgcolor=#FAFAFF></p>
+Bob choisit secrètement $k_B$ et envoie $k_B P$ à Alice.
+Cet échange n'a pas besoin d'être sécurisé.</p>
+</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 3 :&nbsp;&nbsp;</td>
+<td bgcolor=#FAFAFF></p>
+Alice calcule $k_A(k_B P)=(k_Ak_B)P$.</p>
+</td>
+<td bgcolor=#FAFAFF></p>
+Bob calcule $k_B(k_A P)=(k_Ak_B)P$.</p>
+</td>
+</tr>
+</table>
+</center></P>
+<p>&nbsp;&nbsp;<font size="+2">S</font>i quelqu'un a espionné leurs échanges, il connait $E(a,b,K)$, $P$, $k_A P$ et $k_b P$. Pour pouvoir retrouver la clé
+$k_Ak_B P$, il faut pouvoir calculer $k_A$ connaissant $P$ et $k_A P$. C'est ce que l'on appelle résoudre le logarithme discret sur la courbe elliptique (c'est le même type de problème, avec des notations additives, que de retrouver $n$ dans une équation $y\equiv x^n\ [p]$, avec $x,y$ et $p$ connus). Le logarithme discret est déjà difficile à résoudre dans les groupes bien connus comme $\mathbb Z/p\mathbb Z$. Pour les groupes plus compliqués, et très différents les uns des autres, des courbes elliptiques, c'est encore plus difficile!</p> 
+<div class=titrepartie>Transmission de messages :</div>
+</tr>
+</table>
+      <p>&nbsp;&nbsp;<font size="+2">O</font>n suppose cette fois qu'Alice veut envoyer à Bob un message en utilisant un algorithme de chiffrement
+      par courbes elliptiques. Bob commence par fabriquer une clé publique de la façon suivante. Il choisit une courbe elliptique $E(a,b,\mathbb K)$, un point
+      $P$ de la courbe, et un entier $k_B$. Sa clé publique est constituée par la courbe elliptique $E(a,b,K)$ et par les points $P$ et $k_B P$ de cette courbe elliptique.
+ Sa clé privée est l'entier $k_B$, qu'on ne peut pas retrouver même connaissant $P$ et $k_B P$, par la difficulté de résoudre le problème
+ du logarithme discret sur une courbe elliptique.</p>
+ &nbsp;&nbsp;<font size=+2>L</font>orsqu'Alice veut envoyer de façon secrète un point $M$ de la courbe elliptique à Bob, voici l'échange qui se passe :</p>
+ <center>
+<TABLE align=center cellspacing=0 cellpadding=4 border=1 width=85%>
+<tr><td></td>
+<td bgcolor=#FAFAFF align=center width=300px>Alice</td>
+<td bgcolor=#FAFAFF align=center width=300px>Bob</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 1 :&nbsp;&nbsp;</td>
+<td  bgcolor=#FAFAFF>
+Alice prend connaissance de la clé publique $(E,a,b,\mathbb K)$, $P$ et 
+$k_B P$ de Bob.</P>
+</td>
+<td bgcolor=#FAFAFF></p>
+</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 2 :&nbsp;&nbsp;</td>
+<td bgcolor=#FAFAFF></p>
+Alice choisit secrètement et aléatoirement un entier $n$.</p>
+</td>
+<td bgcolor=#FAFAFF></p>
+</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 3 :&nbsp;&nbsp;</td>
+<td bgcolor=#FAFAFF></p>
+Alice calcule $nP$ et $M+nk_B P$ et envoie ces deux points à Bob.</p>
+</td>
+<td bgcolor=#FAFAFF></p>
+</td>
+</tr>
+<tr>
+<td bgcolor=#AAFFCC width=100px>&Eacute;tape 4 :&nbsp;&nbsp;</td>
+<td bgcolor=#FAFAFF>
+</td>
+<td bgcolor=#FAFAFF>
+Avec sa clé secrète $k_B$, Bob calcule $nk_B P$ à partir de $nP$,
+puis il calcule $(M+nk_B P)-nk_B P$.<br>
+Il retrouve ainsi $M$. 
+</td>
+</tr>
+</table>
+</center></P>
+Si quelqu'un espionne les échanges, on ne connait pas de chemin plus facile que de calculer $k_B$ pour retrouver $M$ : c'est encore une fois le problème du logarithme discret à résoudre.</p>
+&nbsp;&nbsp;<font size=+2>N</font>ous avons passé sous silence une difficulté majeure : si on veut s'échanger un texte, il faut pouvoir le tranformer
+en une suite de points de la courbe elliptique. Ceci est loint d'être trivial, car il n'est pas toujours facile de trouver des points sur une courbe elliptique. Les personnes intéressées peuvent consulter le livre de Neil Koblitz, <i>A course in number theory and cryptography</i>.</p>
+<div class=titrepartie>Avantages et inconvénients :</div>
+</tr>
+</table>
+      <p>&nbsp;&nbsp;<font size="+2">C</font>e qui fait la différence des algorithmes de chiffrement à base de courbes elliptiques par rapport aux
+      algorithmes basés sur les entiers comme RSA ou El-Gamal est que, pour les vaincre, il faut résoudre le logarithme discret sur le groupe de la courbe elliptique,
+et non un problème analogue sur les entiers. Ces groupes sont plus difficiles  à manipuler, ils peuvent différer beaucoup les uns des autres
+si on change les paramètres. Ainsi, résoudre un problème de logarithme discret sur une courbe elliptique est réputé être un problème
+plus difficile que le problème similaire dans les entiers modulo $n$. C'est pourquoi on estime qu'une clé de 200 bits (qui mesure, pour une courbe elliptique,
+la taille du corps fini $\mathbb K$ de cette courbe) pour les chiffres basés sur les courbes elliptiques est plus sûre qu'une clé de 1024 bits pour le RSA. Comme les calculs sur les courbes elliptiques ne sont pas bien compliqués à réaliser, c'est un gros avantage pour les cartes à puces où on dispose de peu de puissance, et où la taille de la clé influe beaucoup sur les performances.</p>
+ &nbsp;&nbsp;<font size="+2">L</font>es inconvénients sont de deux ordres. D'une part, la théorie des fonctions elliptiques est complexe, et encore relativement récente. Il n'est pas exclu que des trappes permettent de contourner le problème du logarithme discret. D'autre part, la technologie de cryptographie par courbe elliptique a fait l'objet du dépot de nombreux brevets à travers le monde. Cela peut rendre son utilisation très coûteuse!
+
+<div class=titrepartie>Consulter aussi</div><div class=liste><ul><li><a href="index.php%3Faction=affiche&amp;quoi=complements%252Fcourbelliptique.html">Qu'est-ce qu'une courbe elliptique?</a></li><li><a href="index.php%3Faction=affiche&amp;quoi=complements%252Ffactoelliptique.html">Factoriser des entiers en utilisant les courbes elliptiques</a></li><li><a href="index.php%3Faction=affiche&amp;quoi=%252Fmoderne%252Fdifhel.html">Le protocole de Diffie-Hellman, pour s'échanger une clé sans se la communiquer</a></li></ul></div></article></div><aside id="droite"><div id="pubdroite"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5238512654171693"
+     data-ad-slot="3610567220"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside></div></div><footer id="pied"><div id="piedcentre"><section id="listepied"><span class="item"><a href="contact.php%3Forigine=erreur.html">Signaler une erreur, une faute d'orthographe</a></span><span class="item"><a href="contact.php%3Forigine=contribuer.html">Contribuer au site</a></span><span class="item"><a href="credits.php.html">Crédits</a></span></section></div></footer><footer id="piedmobile"><span class="item"><script language="JavaScript1.1"> <!-- 
+	hsh = new Date();
+      hsd = document;
+      hsi = '<a href="http://www.xiti.com/xiti.asp?s=65164"'
+      hsi += ' TARGET="_top"><img width="80" height="15" border=0 '
+      hsi += 'src="http://logv17.xiti.com/oco.xiti?s=65164'
+      hsi += '&p=&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+      if(parseFloat(navigator.appVersion)>=4)
+            {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+      hsd.writeln(hsi + '&ref=' + hsd.referrer.replace('&', '$') + ' " title="Mesurez votre audience"></a>');//-->  
+      </script></span><span class="item"><a href="contact.php%3Forigine=mobile.html">Nous contacter</a></span></footer></body><script type="text/javascript" src="common/scrolling.js"></script></html>   

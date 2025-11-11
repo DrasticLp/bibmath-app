@@ -1,0 +1,218 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Préparer sa kholle : calcul différentiel</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Préparer sa kholle : calcul différentiel</h1><div class=titrepartie>L'exercice qu'il faut savoir faire</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater117"></span><script>var myRating = raterJs( { element:document.querySelector("#rater117"),	max:5, rating:1.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(117,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions homogènes <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=117.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(117,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce117','imageenonce117');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce117"></a><div class=inner id="innerenonce117">Soit $f:\mtr^2\to\mtr$ une application de classe $C^1$. 
+<ol class="enumeratechiffre">
+<li> On définit, pour $(x,y)\in\mtr^2$ fixé, $g:\mtr\to\mtr,$ $t\mapsto g(t)=f(tx,ty).$ 
+Montrer que $g$ est dérivable sur $\mtr$, et calculer sa dérivée.
+<li> On suppose désormais que $f(tx,ty)=tf(x,y)$ pour tous $x,y,t\in\mtr$.
+<ol class="enumeratechiffre">
+<li> Montrer que pour tous $x,y,t\in\mtr$, on a 
+$$f(x,y)=\frac{\partial f}{\partial x}(tx,ty)x+\frac{\partial f}{\partial y}(tx,ty)y.$$
+<li> En déduire qu'il existe des réels $\alpha$ et $\beta$ que l'on déterminera tels que, 
+pour tous $(x,y)\in\mtr^2$, on a 
+$$f(x,y)=\alpha x+\beta y.$$
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication117','imageindication117');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication117"></a><div class=inner id="innerindication117" style="display:none;"><ol class="enumeratechiffre">
+<li> Dérivée d'une fonction composée.
+<li>
+<ol class="enumeratechiffre">
+<li> Utiliser la relation précédente.
+<li> Appliquer en $t=0$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige117','imagecorrige117',117);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige117"></a><div class=inner id="innercorrige117" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $g$ est $C^1$ comme composée de fonctions de classe
+$C^1$. On a :
+$$g'(t)=x\frac{\partial f}{\partial x}(tx,ty)+y\frac{\partial
+f}{\partial y}(tx,ty).$$
+<li>
+<ol class="enumeratechiffre">
+<li> On peut alors écrire $g(t)=tf(x,y)$, et le calcul de la dérivée de $g$
+donne $g'(t)=f(x,y)$. La comparaison avec l'expression obtenue à
+la question précédente donne le résultat.
+<li> Il suffit d'appliquer la relation précédente pour $t=0$. On a
+$f(x,y)=\alpha x+\beta y$ avec $\alpha=\frac{\partial f}{\partial
+x}(0,0)$ et $\beta=\frac{\partial f}{\partial y}(0,0)$. Réciproquement, on vérifie facilement
+qu'une fonction vérifiant $f(x,y)=\alpha x+\beta y$ vérifie également $f(tx,ty)=tf(x,y)$.
+</ol>
+</ol></div></div></div>
+<div class=titrepartie>L'exercice standard</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater3615"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3615"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3615,rating); this.setRating(rating);   this.disable();    done();     }});</script> - EDP non linéaire avec second membre <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3615.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(3615,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3615','imageenonce3615');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3615"></a><div class=inner id="innerenonce3615">On note $\Omega=\mathbb R\times ]0,+\infty[$. 
+<ol class="enumeratechiffre">
+<li> Déterminer toutes les fonctions $f:\Omega\to\mathbb R$ de classe $\mathcal C^1$ telles que, pour tout $(x,y)\in\Omega,$
+$$x\frac{\partial f}{\partial x}(x,y)-y\frac{\partial f}{\partial y}(x,y)=0.$$
+On pourra utiliser le changement de variables $u=xy$ et $v=-\ln(y).$
+<li> On s'intéresse maintenant à l'équation aux dérivées partielles suivantes : 
+$$\forall (x,y)\in\Omega,\ x\frac{\partial f}{\partial x}(x,y)-y\frac{\partial f}{\partial y}(x,y)=2x+3y.$$
+<ol class="enumeratechiffre">
+<li> Déterminer une fonction linéaire solution de cette équation.
+<li> En déduire toutes les solutions de cette équation.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3615','imageindication3615');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3615"></a><div class=inner id="innerindication3615" style="display:none;"><ol class="enumeratechiffre">
+<li> Poser $\phi(x,y)=(xy,-\ln(y))$ et vérifier que $\phi$ est injective, et même est une bijection de $\Omega$ sur $\mathbb R^2$. Poser $F(u,v)=f(\phi^{-1}(u,v))$ puis former une équation aux dérivées partielles simple vérifiée par $f.$
+<li>
+<ol class="enumeratechiffre">
+<li> Poser $f(x,y)=ax+by$ et déterminer $a$ et $b$.
+<li> Utiliser le principe de superposition des solutions, comme pour les équations différentielles.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3615','imagecorrige3615',3615);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3615"></a><div class=inner id="innercorrige3615" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour $(x,y)\in\Omega,$ on pose $\phi(x,y)=(xy,-\ln(y))$. On va commencer par vérifier que $\phi$ est une bijection de $\Omega$ sur $\mathbb R^2$. C'est facile. En effet, pour tout $(u,v)\in\mathbb R^2,$ on a 
+$$\left\{
+\begin{array}{rcl}
+u&=&xy\\
+v&=&-\ln(y)
+\end{array}
+\right.
+\iff
+\left\{
+\begin{array}{rcl}
+x&=&ue^v\\
+y&=&e^{-v}.
+\end{array}
+\right.
+$$
+Il est donc légitime de poser, pour tout $(u,v)\in\mathbb R^2,$ 
+$F(u,v)=f(\phi^{-1}(u,v))$ de sorte que $f(x,y)=F(xy,-\ln(y))$ pour tout $(x,y)\in\Omega.$
+On observe alors que 
+\begin{align*}
+\frac{\partial f}{\partial x}(x,y)&=y\frac{\partial F}{\partial u}(xy,-\ln(y))\\
+\frac{\partial f}{\partial y}(x,y)&=x\frac{\partial F}{\partial u}(xy,-\ln(y))-\frac 1y\frac{\partial F}{\partial v}(x,y).
+\end{align*}
+Ainsi, si $f$ est solution de l'équation aux dérivées partielles donnée par l'énoncé, $F$ vérifie 
+$$\frac{\partial F}{\partial v}=0.$$
+On intègre cette équation et on trouve qu'il existe $H:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(u,v)\in\mathbb R^2,$ on a 
+$$F(u,v)=H(u).$$
+Ceci signifie que, pour tout $(x,y)\in\Omega,$
+$$f(x,y)=H(xy).$$
+Réciproquement, il est facile de voir que ces fonctions sont solutions de l'équation aux dérivées partielles.
+<li> 
+<ol class="enumeratechiffre">
+<li> Posons $f(x,y)=ax+by$ avec $a,b\in\mathbb R.$ Alors 
+$$x\frac{\partial f}{\partial x}-y\frac{\partial f}{\partial y}=ax-by$$
+et donc $f_0(x,y)=2x-3y$ est une solution particulière de l'équation.
+<li> Par linéarité, on vérifie que $f$ est solution de la second équation aux dérivées partielles si et seulement si $f-f_0$ est solution de la première équation aux dérivées partielles. Donc $f$ est solution de la seconde équation aux dérivées partielles si et seulement s'il existe $H:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(x,y)\in\Omega,$
+$$f(x,y)=H(xy)+2x-3y.$$
+</ol>
+</ol></div></div></div>
+<div class=titrepartie>L'exercice pour les héros</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater2266"></span><script>var myRating = raterJs( { element:document.querySelector("#rater2266"),	max:5, rating:2.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(2266,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Différentielle du déterminant <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=2266.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(2266,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce2266','imageenonce2266');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce2266"></a><div class=inner id="innerenonce2266">Soit $n\geq 2$. 
+<ol class="enumeratechiffre">
+<li> Démontrer que l'application déterminant est de classe $C^\infty$ sur $\mathcal M_n(\mathbb R)$.
+<li> Soit $1\leq i,j\leq n$ et $f(t)=\det(I_n+tE_{i,j})$. Que vaut $f$?
+<li> En déduire la valeur de $\frac{\partial \det}{\partial E_{i,j}}(I_n)$.
+<li> En déduire l'expression de la différentielle de $\det$ en $I_n$.
+<li> Retrouver ce résultat en calculant $\det(I_n+tH)$ en trigonalisant $H$.
+<li> Démontrer que si $A$ est inversible, alors $d_A\det(H)=\textrm{Tr}({}^t\textrm{comat}(A)H)$.
+<li> Démontrer que la formule précédente reste valide pour toute matrice $A\in\mathcal M_n(\mathbb R)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication2266','imageindication2266');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication2266"></a><div class=inner id="innerindication2266" style="display:none;"><ol class="enumeratechiffre">
+<li> Polynôme...
+<li> Séparer le cas $i=j$ et le cas $i\neq j$.
+<li> Utiliser la définition de la dérivée partielle.
+<li> Exprimer la différentielle en fonction des dérivées partielles.
+<li> 
+<li> Factoriser par $A$ pour se ramener au cas précédent.
+<li> Procéder par densité.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige2266','imagecorrige2266',2266);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige2266"></a><div class=inner id="innercorrige2266" style="display:none;"><ol class="enumeratechiffre">
+<li> L'expression du déterminant (ou son développement suivant une ligne ou une colonne) montre qu'il s'agit d'un polynôme en les coefficients de la matrice. Donc il s'agit d'une fonction de classe $C^\infty$.
+<li> Si $i=j$, alors on a $f(t)=1+t$ et si $i\neq j$, alors $f(t)=1$.
+<li> Par définition de la dérivée partielle du déterminant par rapport à la coordonnée donnée par $E_{i,j}$, on a 
+$$\frac{\partial \det}{\partial E_{i,j}}(I_n)=f'(0)$$
+et cette quantité vaut $1$ si $i=j$, $0$ sinon.
+<li> Rappelons que $(E_{i,j})_{1\leq i,j\leq n}$ est une base de $\mathcal M_n(\mathbb R)$. Toute matrice $H$ s'écrit $H=\sum_{1\leq i,j\leq n}h_{i,j}E_{i,j}$. On en déduit que :
+$$d_{I_n} \det (H)=\sum_{1\leq i,j\leq n}h_{i,j}\frac{\partial \det}{\partial E_{i,j}}(I_n)=\sum_{i=1}^n h_{i,i}=\textrm{Tr}(H).$$
+<li> En notant $\lambda_1,\dots,\lambda_n$ les valeurs propres complexes de $H$, on a, par trigonalisation, où $PHP^{-1}$ est triangulaire supérieure,
+$$\det(I_n+tH)=\det(I_n+tPHP^{-1})=\prod_{i=1}^n (1+t\lambda_i)=1+t\sum_{i=1}^n \lambda_i+o(t).$$
+Ainsi, $d\det_{I_n}(H)=\textrm{Tr}(H)$.
+
+<li> On écrit que 
+\begin{eqnarray*}
+\det(A+H)&=&\det(A(I_n+A^{-1}H))\\
+&=&\det(A)\times\det(I_n+A^{-1}H)\\
+&=&\det(A)\times (1+\textrm{Tr}(A^{-1}H)+o(\|H\|))\\
+&=&\det(A)+\textrm{Tr}(\det(A)A^{-1}H)+o(\|H\|).
+\end{eqnarray*}
+Ceci démontre que 
+$$d_A\det(H)=\textrm{Tr}(\det(A)A^{-1}H).$$
+Mais c'est le même résultat que celui donné par l'énoncé, car $\det(A)A^{-1}={}^t\textrm{comat}(A)$.
+<li> L'ensemble des matrices inversibles est dense dans $\mathcal M_n(\mathbb R)$. Notons $f$ l'application de $\mathcal M_n(\mathbb R)$ dans $\mathcal L(\mathcal M_n(\mathbb R))$, qui à $A$ associe $d_A\det$ et $g$  l'application de $\mathcal M_n(\mathbb R)$ dans $\mathcal L(\mathcal M_n(\mathbb R))$, qui à $A$ associe $H\mapsto \textrm{Tr}({}^t\textrm{comat}(A)H)$. Alors $f$ et $g$ sont deux applications continues, et elles coïncident sur l'ensemble des matrices inversibles, qui est dense dans $\mathcal M_n(\mathbb R)$. Cela implique que $f$ et $g$ sont égales sur $\mathcal M_n(\mathbb R)$, ce qu'il fallait démontrer.
+</ol></div></div></div>
+
+<div class=cardcours>
+<div class="titrecours">Calcul différentiel</div>
+<div class="contenucours">
+<div class=liste>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcours%252Fcalculdiff.html">Cours</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Ffeuillesexo%252Fcalculdiff&amp;type=fexo.html">Exercices</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fmethodes%252Fcalculdiff.html">Méthodes</a>
+    <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fcolles%252Fcalculdiff&amp;type=fexo.html">Préparer sa colle</a>
+<li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Fvideos%252Fcalculdiff.html">Vidéos</a>
+    <!-- <li><a href="index.php?action=affiche&quoi=mathspe/quizz/calculdiff.html">Quizz</a> -->
+        <li><a href="index.php%3Faction=affiche&amp;quoi=mathspe%252Foraux%252Fcalculdiff&amp;type=fexo.html">Oraux de concours</a>
+</ul>
+</div>
+</div>
+</div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

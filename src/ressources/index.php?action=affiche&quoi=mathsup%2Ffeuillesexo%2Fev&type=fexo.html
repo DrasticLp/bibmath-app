@@ -1,0 +1,1232 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Math sup : généralités sur les espaces vectoriels</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="itemselectionne"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="item"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=mathsup%252Findex.html">Documents pour la math sup</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Math sup : généralités sur les espaces vectoriels</h1><div class=titrepartie>Sous-espace vectoriel</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater820"></span><script>var myRating = raterJs( { element:document.querySelector("#rater820"),	max:5, rating:1.3814432989691, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(820,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Est-ce un sous-espace vectoriel? <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=820.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(820,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce820','imageenonce820');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce820"></a><div class=inner id="innerenonce820">Parmi les ensembles suivants, lesquels sont, ou ne sont pas, des sous-espaces vectoriels de l'espace vectoriel $\mathbb R^n$ dans lequel ils sont inclus ?
+<ol class="enumeratechiffre">
+<li> $E_1=\{(x,y,z)\in\mathbb R^3:\ x+y+3z=0\}$;
+<li> $E_2=\{(x,y,z)\in\mathbb R^3:\ x+y+3z=2\}$;
+<li> $E_3=\{(x,y,z,t)\in\mathbb R^4:\ x=y=2z=4t\}$;
+<li> $E_4=\{(x,y)\in\mathbb R^2:\ xy=0\}$;
+<li> $E_5=\{(x,y)\in\mathbb R^2:\ y=x^2\}$;
+<li> $E_6=\{(x,y,z)\in\mathbb R^3:\ 2x+3y-5z=0\}\cap\{(x,y,z)\in\mathbb R^3;\ x-y+z=0\}$;
+<li> $E_7=\{(x,y,z)\in\mathbb R^3:\ 2x+3y-5z=0\}\cup\{(x,y,z)\in\mathbb R^3;\ x-y+z=0\}$.
+<li> $E_8=\{(x,y,z)\in\mathbb R^3:\ (2x+3y-5z)^2+(x-y+z)^2=0\}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication820','imageindication820');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication820"></a><div class=inner id="innerindication820" style="display:none;">Essayer de montrer que ce sont des sous-espaces vectoriels en utilisant la caractérisation.
+Si vous ne parvenez pas à prouver que ce sont des sous-espaces vectoriels, essayez de trouver un
+contre-exemple à une des propriétés requises.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige820','imagecorrige820',820);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige820"></a><div class=inner id="innercorrige820" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Description de la méthode en vidéo</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G-282g36Rhw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> Soient $X=(x,y,z)$ et $X'=(x',y',z')$ éléments de $E_1$.
+Alors, $X+X'=(x+x',y+y',z+z')$ est aussi élément de $E_1$. En effet,
+$$(x+x')+(y+y')+3(z+z')=(x+y+3z)+(x'+y'+3z')=0.$$
+De même, pour tout $\lambda\in\mathbb R$, on a $\lambda X=(\lambda x,\lambda y,\lambda z)$
+est élément de $E_1$ puisque
+$$\lambda x+\lambda y+3\lambda z=\lambda(x+y+3z)=0.$$
+$E_1$ est donc un sous-espace vectoriel de $\mathbb R^3$.
+<li> $E_2$ n'est pas un sous-espace vectoriel de $\mathbb R^3$ car $\vec 0=(0,0,0)$ n'est pas élément de $E_2$.
+<li> Soient $X=(x,y,z,t)$ et $X'=(x',y',z',t')$ deux éléments de $E_3$.
+Alors $X+X'=(x+x',y+y',z+z',t+t')$ est aussi élément de $E_3$. En effet,
+$$x+x'=y+y'=2z+2z'=2(z+z')=4t+4t'=4(t+t').$$
+De même, on prouve que pour tout $\lambda\in\mathbb R$, $\lambda X$ est élément de $E_3$.
+$E_3$ est donc un sous-espace vectoriel de $\mathbb R^4$.
+<li> $E_4$ n'est pas un sous-espace vectoriel de $\mathbb R^2$ car il n'est pas stable par addition.
+En effet, $X=(1,0)$ et $Y=(0,1)$ sont tout les deux éléments de $E_4$, mais $X+Y=(1,1)$ n'est
+pas élément de $E_4$.
+<li> Les éléments $(1,1)$ et $(-1,1)$ sont éléments de $E_5$. Si on effectue leur somme, on trouve $(0,2)$
+qui n'est pas élément de $E_5$ : $E_5$ n'est pas un sous-espace vectoriel de $\mathbb R^2$. Plus généralement,
+un sous-espace vectoriel de $\mathbb R^2$ est une droite passant par $(0,0)$, ou $\mathbb R^2$ lui-même, ou encore
+le singleton $\{(0,0)\}$. $E_5$ est une parabole et n'est donc pas un sous-espace vectoriel.
+<li> Posons $F=\{(x,y,z)\in\mathbb R^3;\ 2x+3y-5z=0\}$ et $G=\{(x,y,z)\in\mathbb R^3;\ x-y+z=0\}$.
+Comme à la première question, on montre que $F$ et $G$ sont deux sous-espaces vectoriels de $\mathbb R^3$.
+Leur intersection $F\cap G$ est donc un sous-espace vectoriel de $\mathbb R^3$.
+<li> Cette fois, aucun théorème du cours ne dit qu'une réunion de deux sous-espaces vectoriels
+reste un sous-espace vectoriel. Ici, prenons $(5,0,2)\in F\subset F\cup G$ et $(1,1,0)\in G\subset F\cup G$.
+Alors $(5,0,2)+(1,1,0)=(6,1,2)$ n'est pas élément de $F$ car $12+3-10=5\neq 0$, et il n'est pas non plus élément de $G$ car $6-1+2=7\neq 0$. Ainsi, $F\cup G$ n'est pas stable par addition
+et n'est donc pas un sous-espace vectoriel de $\mathbb R^3$. Plus généralement, on prouve qu'une réunion 
+de deux sous-espaces vectoriels est un sous-espace vectoriel si et seulement si l'un des deux est inclus
+dans l'autre.
+<li> On remarque que si $a$ et $b$ sont deux réels, alors on a $a^2+b^2=0$ si et seulement si $a=b=0$. Ainsi, on a $(x,y,z)\in E_8$ si et seulement $2x+3y-5z=0$ et $x-y+z=0$, si et seulement si $(x,y,z)\in E_6$. Ainsi, $E_8$ est bien un sous-espace vectoriel de $\mathbb R^3$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater822"></span><script>var myRating = raterJs( { element:document.querySelector("#rater822"),	max:5, rating:1.4756097560976, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(822,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Est-ce un sous-espace vectoriel (bis)? <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=822.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(822,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce822','imageenonce822');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce822"></a><div class=inner id="innerenonce822">Déterminer si les ensembles suivants sont ou ne sont pas des sous-espaces vectoriels :
+<ol class="enumeratechiffre">
+<li> $E_1=\{P\in\mathbb R[X];\ P(0)=P(2)\}$;
+<li> $E_2=\{P\in\mathbb R[X];\ P'(0)=2\}$;
+<li> Pour $A\in\mathbb R[X]$ non-nul fixé, $E_3=\{P\in\mathbb R[X]; A|P\}$;
+<li> $\mathcal D$ l'ensemble des fonctions de $\mathbb R$ dans $\mathbb R$ qui sont dérivables;
+<li> $E_4$, l'ensemble des solutions de l'équation différentielle $y'+a(x) y=0$, où $a\in\mathcal D$.
+<li> $E_5$, l'ensemble des solutions de l'équation différentielle $y'+a(x) y=x$, où $a\in\mathcal D$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication822','imageindication822');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication822"></a><div class=inner id="innerindication822" style="display:none;">Essayer de montrer que ce sont des sous-espaces vectoriels en utilisant la caractérisation.
+Si vous ne parvenez pas à prouver que ce sont des sous-espaces vectoriels, essayez de trouver un
+contre-exemple à une des propriétés requises.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige822','imagecorrige822',822);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige822"></a><div class=inner id="innercorrige822" style="display:none;"><ol class="enumeratechiffre">
+<li> On va prouver que $E_1$ est un sous-espace vectoriel de $\mathbb R[X]$. Remarquons d'abord que le polynôme nul est un élément de $E_1$. Ensuite, prenons $P$ et $Q$ deux
+éléments de $E_1$, et $\lambda\in\mathbb R$. Alors $(P+Q)(0)=P(0)+Q(0)=P(2)+Q(2)=(P+Q)(2)$ et donc
+$P+Q\in E_1$. De même, $(\lambda P)(0)=\lambda\times P(0)=\lambda\times P(2)=(\lambda P)(2)$ et donc $\lambda P\in E_1$.
+Ceci prouve le résultat annoncé.
+<li> $E_2$ n'est pas un espace vectoriel car le polynôme nul n'est pas élément de $E_2$. Donc $E_2$ n'est
+pas un sous-espace vectoriel.
+<li> Remarquons que $E_3=\{AQ;\ Q\in\mathbb R[X]\}$. Soient $P_1=AQ_1$ et $P_2=AQ_2$ deux éléments de
+$E_3$, et soit également $\lambda\in\mathbb R$. Alors $P_1+P_2=A(Q_1+Q_2)\in E_3$ et
+$\lambda P_1=A(\lambda Q_1)\in E_3$, ce qui prouve que $E_3$ est un sous-espace
+vectoriel de $\mathbb R[X]$.
+<li> On sait que la somme de deux fonctions dérivables est une fonction dérivable,
+et que le produit d'une fonction dérivable par un scalaire est une fonction dérivable.
+Par conséquent, $\mathcal D$ est un sous-espace vectoriel de l'ensemble
+des fonctions de $\mathbb R$ dans $\mathbb R$.
+<li> Remarquons d'abord que $E_4$ est une partie de $\mathcal D$. Soient $y_1,y_2$ deux solutions et $\lambda\in\mathbb R$. Posons 
+$y=y_1+\lambda y_2$. Alors
+$$y'+a(x) y=(y_1'+a(x)y_1)+\lambda(y_2'+a(x)y_2)=0$$
+ce qui prouve que $y\in E_4$. Ainsi, $E_4$ est un sous-espace vectoriel de $\mathcal D$.
+<li> $E_5$ n'est pas un espace vectoriel car $0$ n'est pas solution de l'équation différentielle.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater824"></span><script>var myRating = raterJs( { element:document.querySelector("#rater824"),	max:5, rating:1.7021276595745, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(824,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Réunion de deux sous-espaces vectoriels <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=824.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(824,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce824','imageenonce824');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce824"></a><div class=inner id="innerenonce824">Soit $E$ un espace vectoriel et soient $F$ et $G$ deux sous-espaces vectoriels
+de $E$. Montrer que $F\cup G$ est encore un sous-espace vectoriel de $E$ si et seulement si 
+$F\subset G$ ou $G\subset F$.</div></div><div class=indication><a href="javascript:showAll('innerindication824','imageindication824');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication824"></a><div class=inner id="innerindication824" style="display:none;">Raisonner par l'absurde, prendre $x$ dans $F\backslash G$ et $y$ dans $G\backslash F$
+et considérer $x+y$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige824','imagecorrige824',824);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige824"></a><div class=inner id="innercorrige824" style="display:none;">Bien sûr, si $F\subset G$, $F\cup G=G$ est un sous-espace vectoriel ce qui prouve
+une implication. Réciproquement, supposons que $F\cup G$ est un sous-espace vectoriel de
+$E$ et que pourtant $F$ n'est pas inclus dans $G$ et $G$ n'est pas inclus dans $F$.
+Prenons $x$ dans $F\backslash G$ et $y$ dans $G\backslash F$. Alors, puisque $F\cup G$ est
+un sous-espace vectoriel, il est stable par addition et donc $x+y\in F\cup G$. Mais,
+si $x+y$ est dans $F$, alors $y=(x+y)-x\in F$ (car $F$ est un sev) ce qui n'est pas le cas.
+De même, si $x+y$ est dans $G$, alors $x=(x+y)-y\in G$ ce qui est impossible. On obtient donc
+une contradiction et l'autre implication.</div></div></div>
+
+<div class=titrepartie>Combinaisons linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater810"></span><script>var myRating = raterJs( { element:document.querySelector("#rater810"),	max:5, rating:1.8604651162791, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(810,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Combinaisons linéaires? <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=810.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(810,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce810','imageenonce810');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce810"></a><div class=inner id="innerenonce810">Les vecteurs $u$ suivants sont-ils combinaison linéaire des vecteurs $u_i$?
+<ol class="enumeratechiffre">
+<li> $E=\mathbb R^2$, $u=(1,2)$, $u_1=(1,-2)$, $u_2=(2,3)$;
+<li> $E=\mathbb R^2$, $u=(1,2)$, $u_1=(1,-2)$, $u_2=(2,3)$, $u_3=(-4,5)$;
+<li> $E=\mathbb R^3$, $u=(2,5,3)$, $u_1=(1,3,2)$, $u_2=(1,-1,4)$;
+<li> $E=\mathbb R^3$, $u=(3,1,m)$, $u_1=(1,3,2)$, $u_2=(1,-1,4)$ (discuter suivant la valeur de $m$).
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication810','imageindication810');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication810"></a><div class=inner id="innerindication810" style="display:none;">Il s'agit de résoudre $u=xu_1+yu_2$ et d'étudier si le système possède des solutions.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige810','imagecorrige810',810);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige810"></a><div class=inner id="innercorrige810" style="display:none;"><ol class="enumeratechiffre">
+<li> On se demande s'il existe $x,y\in\mathbb R$ tel que $u=xu_1+yu_2$. On doit résoudre le système
+$$\left\{\begin{array}{rcl}
+1&=&x+2y\\
+2&=&-2x+3y
+\end{array}\right.$$
+Effectuant $L_2+2L_1\to L_2$, on trouve qu'il est équivalent à
+$$\left\{\begin{array}{rcl}
+1&=&x+2y\\
+4&=&7y
+\end{array}\right.$$
+On peut donc trouver $y$, puis $x$ : $u$ est bien combinaison linéaire de $u_1$ et $u_2$. Une façon plus abstraite de
+voir les choses est de remarquer que $u_2$ n'est pas proportionnel à $u_1$. Ainsi, $(u_1,u_2)$ est une famille libre à
+deux éléments dans $\mathbb R^2$, espace de dimension 2. C'est donc une base de $E$. En particulier, tout vecteur de
+$\mathbb R^2$ s'écrit comme combinaison linéaire de $u_1$ et $u_2$.
+<li> D'après la question précédente, $u$ est combinaison linéaire de $u_1$ et $u_2$. Il est a fortiori combinaison linéaire de $u_1$, $u_2$ et $u_3$.
+<li> On ne peut plus avoir de raisonnement abstrait car on travaille avec seulement deux vecteurs
+dans un espace de dimension 3. L'équation $u=xu_1+yu_2$ équivaut successivement à 
+$$\left\{\begin{array}{rcl}
+x+y&=&2\\
+3x-y&=&5\\
+2x+4y&=&3\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcll}
+x+y&=&2\\
+4x&=&7&(L_2+L_1\to L_2)\\
+-2x&=&-5&(L_3-4L_1\to L_3)
+\end{array}
+\right.$$
+Les deux dernières équations sont incompatibles, $u$ n'est donc pas combinaison linéaire de $u_1$ et $u_2$.
+<li> On reprend le même raisonnement. L'équation $u=xu_1+yu_2$ équivaut successivement à 
+$$\left\{\begin{array}{rcl}
+x+y&=&3\\
+3x-y&=&1\\
+2x+4y&=&m\\
+\end{array}\right.
+\iff\left\{
+\begin{array}{rcll}
+x+y&=&3\\
+4x&=&4&(L_2+L_1\to L_2)\\
+-2x&=&m-12&(L_3-4L_1\to L_3)
+\end{array}
+\right.$$
+$$
+\iff
+\left\{
+\begin{array}{rcl}
+x&=&1\\
+y&=&2\\
+-2&=&m-12
+\end{array}
+\right.
+$$
+Le système admet donc une solution si et seulement si $m=10$. Par conséquent, $u$ est combinaison
+linéaire de $u_1$ et $u_2$ si et seulement si $m=10$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater811"></span><script>var myRating = raterJs( { element:document.querySelector("#rater811"),	max:5, rating:1.8157894736842, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(811,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Les bagues <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=811.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(811,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce811','imageenonce811');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce811"></a><div class=inner id="innerenonce811">&Eacute;mile achète pour sa maman une bague contenant 2g d'or, 5g de cuivre et 4g d'argent. Il la paie 6200 euros.<br>
+Paulin achète pour sa maman une bague contenant 3g d'or, 5g de cuivre et 1g d'argent. Il la paie 5300 euros.<br>
+Frédéric achète pour sa chérie une bague contenant 5g d'or, 12g de cuivre et 9g d'argent. Combien va-t-il la payer?</div></div><div class=indication><a href="javascript:showAll('innerindication811','imageindication811');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication811"></a><div class=inner id="innerindication811" style="display:none;">Le vecteur $(5,12,9)$.  est combinaison linéaire de $(2,5,4)$, $(3,5,1)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige811','imagecorrige811',811);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige811"></a><div class=inner id="innercorrige811" style="display:none;">Le vecteur $(5,12,9)$  est combinaison linéaire de $(2,5,4)$, $(3,5,1)$. Il s'écrit en effet
+$$(5,12,9)=\frac{11}5 (2,5,4)+\frac 15 (3,5,1).$$
+Autrement dit, la dernière bague peut être réalisée avec 11/5 de la première bague et 1/5 de la deuxième bague. Son coût est donc
+$$\frac{11}{5}\times 6200+\frac 15 5300=14700\textrm{ euros}.$$
+Très joli cadeau!</div></div></div>
+
+<div class=titrepartie>Familles libres</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater812"></span><script>var myRating = raterJs( { element:document.querySelector("#rater812"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(812,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Pour bien commencer... <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=812.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(812,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce812','imageenonce812');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce812"></a><div class=inner id="innerenonce812">Les familles suivantes sont-elles libres dans $\mathbb R^3$ (ou $\mathbb R^4$ pour la dernière famille)?
+<ol class="enumeratechiffre">
+<li> $(u,v)$ avec $u=(1,2,3)$ et $v=(-1,4,6)$;
+<li> $(u,v,w)$ avec $u=(1,2,-1)$, $v=(1,0,1)$ et $w=(0,0,1)$;
+<li> $(u,v,w)$ avec $u=(1,2,-1)$, $v=(1,0,1)$ et $w=(-1,2,-3)$;
+<li> $(u,v,w,z)$ avec $u=(1,2,3,4)$, $v=(5,6,7,8)$, $w=(9,10,11,12)$ et $z=(13,14,15,16)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication812','imageindication812');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication812"></a><div class=inner id="innerindication812" style="display:none;">&Eacute;crire une combinaison linéaire nulle, et résoudre le système pour voir si tous les coefficients
+de la combinaison linéaire sont nuls.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige812','imagecorrige812',812);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige812"></a><div class=inner id="innercorrige812" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque $u$ et $v$ sont non-nuls et que $u$ n'est pas proportionnel à $v$, la famille de deux vecteurs $(u,v)$
+est libre.
+<li> Soit $a,b,c$ des réels tels que $au+bv+cw=0$. On a 
+$$au+bc+cw=(a+b,2a,-a+b+c)$$
+et donc $au+bv+cw=0$ si et seulement si 
+$$
+\left\{
+\begin{array}{rcl}
+a+b&=&0\\
+2a&=&0\\
+-a+b+c&=&0
+\end{array}
+\right.$$
+On en déduit, par la deuxième ligne, $a=0$, puis $b=0$ et $c=0$. La famille $(u,v,w)$ est une famille libre.
+<li> Soit $a,b,c$ des réels tels que $au+bv+cw=0$. Ceci se traduit en le système
+$$
+\left\{
+\begin{array}{rcl}
+a+b-c&=&0\\
+2a+2c&=&0\\
+-a+b-3c&=&0
+\end{array}
+\right.
+\iff \left\{
+\begin{array}{rcl}
+a+b-c&=&0\\
+-2b+4c&=&0\ \ L_2-2L_1\to L_2\\
+2b-4c&=&0\ \ L_3+L_1\to L_3
+\end{array}
+\right.$$
+Pour $c=1$, $b=2$ et $a=-1$, on obtient une solution non-nulle du système. Autrement dit, $-u+2v+w=0$ et donc la famille $(u,v,w)$ est liée.
+<li> On peut reprendre la même méthode que précédemment, en écrivant $au+bv+cw+dz=0$, et montrer qu'il existe une solution non nulle :
+$(u,v,w,z)$ est une famille liée. On peut aussi remarquer plus facilement que $v=u+(4,4,4,4)$ et que $w=v+(4,4,4,4)$. Ainsi, $v-u=w-v$, soit $u-2v+w=0$, et la famille est liée.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater813"></span><script>var myRating = raterJs( { element:document.querySelector("#rater813"),	max:5, rating:2.1935483870968, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(813,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux par deux, et par trois? <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=813.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(813,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce813','imageenonce813');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce813"></a><div class=inner id="innerenonce813">On considère dans $\mathbb R^3$ les vecteurs 
+$v_1=(1,1,0)$, $v_2=(4,1,4)$ et $v_3=(2,-1,4)$.
+<ol class="enumeratechiffre">
+<li> Montrer que la famille $(v_1,v_2)$ est libre. Faire de même pour $(v_1,v_3)$, puis pour $(v_2,v_3)$.
+<li> La famille $(v_1,v_2,v_3)$ est-elle libre?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication813','imageindication813');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication813"></a><div class=inner id="innerindication813" style="display:none;">Pour la première question, les vecteurs sont non-nuls et non colinéaires. Pour la seconde, trouver une relation de liaison
+entre les trois vecteurs, au besoin en résolvant un système.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige813','imagecorrige813',813);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige813"></a><div class=inner id="innercorrige813" style="display:none;"><ol class="enumeratechiffre">
+<li> Les vecteurs $v_1$ et $v_2$ ne sont pas nuls et ne sont pas colinéaires.
+Ainsi, la famille de \emph{deux} vecteurs $(v_1,v_2)$ est libre. Il en est de même
+pour la famille $(v_1,v_3)$, ainsi que pour la famille $(v_2,v_3)$, par une preuve
+identique.
+<li> On remarque que $v_3=v_2-2v_1$ : il y a une combinaison linéaire des trois vecteurs
+avec des coefficients non tous nuls qui donne le vecteur nul. La famille n'est pas libre.
+Si on n'a pas la "chance" de remarquer que $v_3=v_2-2v_1$, on peut écrire
+une relation de liaison $av_1+bv_2+cv_3=0$, on obtient un système de trois équations
+dont les inconnues sont $a$, $b$ et $c$. La résolution de ce système montre qu'il admet
+une solution non-nulle.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater814"></span><script>var myRating = raterJs( { element:document.querySelector("#rater814"),	max:5, rating:2.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(814,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Complétion de familles libres <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=814.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(814,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce814','imageenonce814');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce814"></a><div class=inner id="innerenonce814">On considère dans $\mathbb R^3$ les vecteurs 
+$$v_1=(1,-1,1),\ v_2=(2,-2,2),\ v_3=(2,-1,2).$$
+<ol class="enumeratechiffre">
+<li> Peut-on trouver un vecteur $w$ tel que $(v_1,v_2,w)$ soit libre?
+Si oui, construisez-en un.
+<li> Même question en remplaçant $v_2$ par $v_3$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication814','imageindication814');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication814"></a><div class=inner id="innerindication814" style="display:none;">La famille $(v_1,v_2)$ est déjà liée, pas la famille $(v_1,v_3)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige814','imagecorrige814',814);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige814"></a><div class=inner id="innercorrige814" style="display:none;"><ol class="enumeratechiffre">
+<li> On a $v_2=2v_1$. La famille $(v_1,v_2)$ est donc liée. Quel que soit le vecteur $w$, la famille
+$(v_1,v_2,w)$ restera liée, puisqu'on aura toujours $2v_1-v_2+0w=0$, combinaison linéaire dont
+qui n'a pas tous ses coefficients nuls.
+<li> A contrario, la famille $(v_1,v_3)$ est libre. Pour $w=(1,0,0)$, il est facile de voir que
+la famille $(v_1,v_3,w)$ est libre. En effet, si $av_1+bv_3+c w=0$, on a
+$$\left\{
+\begin{array}{rcl}
+a+2b+c&=&0\\
+-a-b&=&0\\
+a+2b&=&0
+\end{array}
+\right.
+\iff\left\{
+\begin{array}{rcl}
+a+2b+c&=&0\\
+-a-b&=&0\\
+b&=&0
+\end{array}\right.
+$$
+d'où on tire $a=b=c=0$ et la famille est libre.<br>
+Quand on connait la théorie de la dimension, on sait que l'on peut compléter la famille libre $(v_1,v_3)$ grâce au théorème de la base incomplète, qui nous dit qu'on peut compléter
+la famille libre à deux vecteurs $(v_1,v_3)$ pour en faire une base (à trois vecteurs)
+de $\mathbb R^3$. De plus, on peut choisir le vecteur qui complète dans n'importe quel
+système générateur de $\mathbb R^3$. Le plus naturel est bien entendu la base canonique.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater815"></span><script>var myRating = raterJs( { element:document.querySelector("#rater815"),	max:5, rating:0.78571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(815,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Polynômes à degrés échelonnés <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=815.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(815,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce815','imageenonce815');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce815"></a><div class=inner id="innerenonce815">Soit $(P_1,\dots,P_n)$ une famille de polynômes de $\mathbb C[X]$ non nuls, à degrés échelonnés, c'est-à-dire
+$\deg(P_1)&lt;\deg(P_2)&lt;\dots&lt;\deg(P_n)$. Montrer que $(P_1,\dots,P_n)$ est une famille libre.</div></div><div class=indication><a href="javascript:showAll('innerindication815','imageindication815');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication815"></a><div class=inner id="innerindication815" style="display:none;">Si $\lambda_n\neq 0$, quel est le degré de $\lambda_1 P_1+\dots+\lambda_n P_n$?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige815','imagecorrige815',815);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige815"></a><div class=inner id="innercorrige815" style="display:none;">Considérons une relation $\lambda_1 P_1+\dots+\lambda_n P_n=0$. Si $\lambda_n\neq 0$,
+le membre de gauche de l'égalité est un polynôme de degré $\deg(P_n)\neq -\infty$ puisque tous les polynômes sont supposés non nuls. Ce ne peut donc pas être
+le polynôme nul et on trouve que $\lambda_n=0$. En itérant le raisonnement (en faisant une récurrence), on trouve
+successivement $\lambda_{n-1}=\dots=\lambda_1=0$, c'est-à-dire que la famille $(P_1,\dots,P_n)$ est une famille libre.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater819"></span><script>var myRating = raterJs( { element:document.querySelector("#rater819"),	max:5, rating:3.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(819,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des fonctions <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=819.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(819,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce819','imageenonce819');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce819"></a><div class=inner id="innerenonce819">Soit $E=\mathcal F(\mathbb R,\mathbb R)$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$. &Eacute;tudier l'indépendance linéaire des familles suivantes :
+<ol class="enumeratechiffre">
+<li> $(\sin x,\cos x)$;
+<li> $(\sin 2x,\sin x,\cos x)$;
+<li> $(\cos 2x,\sin^2 x,\cos^2 x)$;
+<li> $(x,e^x,\sin(x))$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication819','imageindication819');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication819"></a><div class=inner id="innerindication819" style="display:none;"><ol class="enumeratechiffre">
+<li> &Eacute;valuer une relation de liaison en $0$...
+<li> Idem, puis en $\pi/2$.
+<li> Utiliser une formule de trigonométrie.
+<li> Par croissance comparée.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige819','imagecorrige819',819);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige819"></a><div class=inner id="innercorrige819" style="display:none;"><ol class="enumeratechiffre">
+<li> Si on a une relation de liaison de la forme $a\cos x+b\sin x=0$, alors on l'évalue en $x=0$ et on trouve $a=0$. Puis en évaluant en $x=\pi/2$, on trouve $b=0$. La famille est libre.
+<li> Si on a une relation de liaison de la forme $a\cos x+b\sin x+c\sin(2x)=0$, alors
+on l'évalue en $x=0$ pour trouver $a=0$, puis en $x=\pi/2$ pour trouver $b=0$. On en déduit que $c=0$. La famille est donc libre. Il faut prendre garde ici à ce que la formule de trigonométrie
+$$\sin(2x)=2\sin x\cos x$$
+n'entraîne pas que $\sin(2x)$ est une combinaison linéaire de $\sin(x)$ et $\cos(x)$.
+<li> On a
+$$\cos(2x)=\cos^2x-\sin^2 x,$$
+qui prouve que $\cos(2x)$ est une combinaison linéaire de $\cos^2 x$ et de $\sin^2 x$. La famille
+est donc liée.
+<li> Si on a une relation de liaison du type 
+$$ax+be^x+c\sin(x)=0,$$ alors on met $e^x$ en facteur et on trouve :
+$$axe^{-x}+b+c\sin(x)e^{-x}=0.$$
+On fait tendre $x$ vers $+\infty$ et le membre de gauche tend vers $b$ qui doit donc être nul. On a alors
+$$ax+c\sin x=0.$$
+Si $a\neq 0$, le membre de gauche tend vers $\pm \infty$ quand $x$ tend vers $+\infty$. C'est donc que $a=0$. On en déduit $c=0$ et la famille est libre.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater816"></span><script>var myRating = raterJs( { element:document.querySelector("#rater816"),	max:5, rating:2.4594594594595, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(816,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Familles de fonctions <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=816.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(816,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce816','imageenonce816');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce816"></a><div class=inner id="innerenonce816">Démontrer que les familles suivantes sont libres dans $\mathcal F(\mathbb R,\mathbb R)$:
+<ol class="enumeratechiffre">
+<li> $(x\mapsto e^{ax})_{a\in\mathbb R}$;
+<li> $(x\mapsto |x-a|)_{a\in\mathbb R}$;
+<li> $(x\mapsto \cos(ax))_{a&gt;0}$;
+<li> $(x\mapsto (\sin x)^n)_{n\geq 1}$.
+</ol>
+</div></div><div class=indication><a href="javascript:showAll('innerindication816','imageindication816');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication816"></a><div class=inner id="innerindication816" style="display:none;">Prendre une sous-famille finie, écrire une relation de liaison, 
+et trouver que tous les coefficients sont nuls. On pourra
+<ol class="enumeratechiffre">
+<li> Factoriser par le terme dominant;
+<li> Utiliser des propriétés de dérivabilité des fonctions;
+<li> Par récurrence...
+<li> Utiliser la limite de $(\sin x)^k/x$ en $0$. 
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige816','imagecorrige816',816);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige816"></a><div class=inner id="innercorrige816" style="display:none;"><ol class="enumeratechiffre">
+<li> Soient $a_1&lt;a_2&lt;\dots&lt;a_p$, où $p$ est arbitraire. Il suffit de montrer que
+$(e^{a_1x},\dots, e^{a_px})$ est une famille libre.
+Considérons une relation de liaison $\lambda_1 e^{a_1 x}+\dots+\lambda_p e^{a_px}$.
+On factorise par le terme dominant, c'est-à-dire $e^{a_px}$. On obtient
+$$e^{a_p x}(\lambda_p+\lambda_{p-1}e^{(a_{p-1}-a_p)x}+\dots+\lambda_1e^{(a_1-a_p)x})=0,\ \forall x\in\mathbb R.$$
+On simplifie par $e^{a_p x}$, qui ne s'annule jamais, et on fait tendre $x$ vers $+\infty$.
+Puisque $e^{(a_j-a_p)x}$ tend vers $0$ pour $j&lt;p$, le membre de gauche
+converge vers $\lambda_p$ qui vaut donc 0. On répète le procédé en factorisant ensuite par 
+$e^{a_{p-1}x}$ pour prouver que $\lambda_{p-1}=0$, et on obtient successivement que
+$\lambda_p,\lambda_{p-1},\dots$ et finalement $\lambda_1$ sont nuls (on peut aussi 
+effectuer une récurrence). La famille est donc effectivement libre.
+Avec le même type de raisonnement (mais c'est plus dur d'ordonner les couples), on pourra prouver que la famille
+$(x^a(\ln x)^b)_{a,b\in\mathbb R}$ est libre.
+<li> Soient $a_1&lt;a_2&lt;\dots&lt;a_p$, où $p$ est arbitraire. Il suffit de montrer que
+$(x\mapsto |x-a_1|,\dots, x\mapsto |x-a_p|)$ est une famille libre. 
+Considérons une relation de liaison, c'est-à-dire supposons que
+$\lambda_1 |x-a_1|+\dots+\lambda_p |x-a_p|=0$ pour tout $x\in\mathbb R$. Soit $k$ 
+dans $\{1,\dots,p\}$ et réécrivons la relation sous la forme
+$$\lambda_k |x-a_k|=-\sum_{j\neq k}\lambda_j |x-a_j|:=g_k(x).$$
+Alors, la fonction $g_k$ est dérivable en $a_k$, car chaque fonction
+$x\mapsto |x-a_j|$, $j\neq k$ est dérivable en $a_k$ (au voisinage de $a_k$, 
+elle est égale à une fonction affine). Il en est donc de même de
+$x\mapsto \lambda_k |x-a_k|$. Ceci n'est possible que si $\lambda_k=0$.
+<li> On va démontrer par récurrence sur $N$ que toute famille
+$\big(\cos(a_1 x),\dots,\cos(a_N x)\big)$ avec $0&lt;a_1&lt;a_2&lt;\dots&lt;a_N$ est libre. C'est le cas
+pour $N=1$ ($\cos(ax)$ n'est jamais la fonction nulle). Supposons le résultat vrai au rang $N-1$, et
+prouvons-le au rang $N$ en écrivant une relation de liaison :
+$$\lambda_1\cos(a_1x)+\dots+\lambda_N\cos(a_Nx)=0.$$
+On dérive deux fois et on trouve 
+$$a_1^2\lambda_1\cos(a_1x)+\dots+a_N^2\lambda_N\cos(a_Nx)=0.$$
+En retranchant $a_N^2$ fois la première équation à la deuxième, on trouve
+$$(a_1^2-a_N^2)\lambda_1\cos(a_1x)+\dots+(a_{N-1}^2-a_{N}^2)\lambda_{N-1}\cos(a_{N-1}x)=0.$$
+Par hypothèse de récurrence, on a $(a_j^2-a_N^2)\lambda_j=0$ pour tout $j=1,\dots,N-1$, soit finalement
+$\lambda_j=0$ puisque $a_j^2\neq a_N^2$. De retour à l'équation initiale, on retrouve
+aussi $\lambda_N=0$, ce qui prouve bien que la famille est libre.
+<li> Soit $N\geq 1$. Il suffit de prouver que la famille $(x\mapsto (\sin x)^n)_{1\leq n\leq N}$ est
+libre. Considérons des scalaires $\lambda_1,\dots,\lambda_N$ tels que
+$$\lambda_1\sin x+\dots+\lambda_N (\sin x)^N=0.$$
+On rappelle que $\frac{\sin x}{x}\to 1$ si $x\to 0$, et par conséquent, si $k\geq 2$, on a 
+$(\sin x)^k/x\to 0$ si $x\to 0$. Reprenons l'équation précédente et divisons par $x$ pour $x\neq 0$. On a 
+$$\lambda_1\frac{\sin x}x+\lambda_2\frac{\sin^2 x}x+\dots+\lambda_N\frac{ (\sin x)^N}x=0.$$
+Faisons tendre $x$ vers $0$. Le membre de gauche tend vers $\lambda_1$, celui de droite vers $0$ et on obtient donc
+$$\lambda_1=0.$$
+Il suffit ensuite d'itérer le raisonnement en divisant successivement par $x^2,x^3,\dots$, ou bien de faire une récurrence en simplifiant par $\sin x$.<br>
+ Une autre méthode, peut-être plus simple, consiste à considérer le polynôme 
+$$P(X)=\lambda_1 X+\cdots+\lambda_N X^n$$
+et de remarquer que, pour tout $x\in \mathbb R$, $P(\sin x)=0$. Ainsi, $P$ admet une infinite de racines, et donc $P$ est le polynôme nul. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater817"></span><script>var myRating = raterJs( { element:document.querySelector("#rater817"),	max:5, rating:2.3529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(817,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Opération <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=817.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(817,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce817','imageenonce817');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce817"></a><div class=inner id="innerenonce817">Soit $(v_1,\dots,v_n)$ une famille libre d'un $\mathbb R$-espace vectoriel $E$.
+Pour $k=1,\dots,n-1$, on pose $w_k=v_k+v_{k+1}$ et $w_n=v_n+v_1$. Etudier 
+l'indépendance linéaire de la famille $(w_1,\dots,w_n)$.</div></div><div class=indication><a href="javascript:showAll('innerindication817','imageindication817');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication817"></a><div class=inner id="innerindication817" style="display:none;">&Eacute;crire une relation $\lambda_1w_1+\dots +\lambda_nw_n=0$
+en fonction des $v_i$ et trouver un système linéaire vérifié par les
+$\lambda_i$. Résoudre ce système. On pourra discuter suivant la parité de $n$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige817','imagecorrige817',817);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige817"></a><div class=inner id="innercorrige817" style="display:none;">Supposons qu'il existe $n$ scalaires $\lambda_1,\dots,\lambda_n$ tels que
+$$\lambda_1w_1+\dots +\lambda_nw_n=0.$$
+Ceci se réécrit en 
+$$\sum_{k=1}^{n-1}\lambda_k(v_k+v_{k+1})+\lambda_n (v_n+v_1)=0$$
+soit encore, en regroupant les termes différemment,
+$$(\lambda_1+\lambda_n)v_1+\sum_{k=2}^n(\lambda_k+\lambda_{k-1})v_k=0.$$
+Puisque le système $(v_1,\dots,v_n)$ est linéairement indépendant, 
+on en déduit le système :
+$$\left\{
+\begin{array}{rcl}
+\lambda_n&=&-\lambda_1\\
+\lambda_k&=&-\lambda_{k-1}\textrm{ pour }2\leq k\leq n.
+\end{array}
+\right.$$
+La deuxième égalité donne facilement par récurrence, pour
+$2\leq k\leq n$, $\lambda_k=(-1)^{k-1}\lambda_1$.
+En particulier, on a $\lambda_n=(-1)^{n-1}\lambda_1$.
+On discute maintenant suivant la parité de $n$ :
+<ol class="enumeratechiffre">
+<li> Si $n$ est impair, alors on a à la fois
+$\lambda_n=\lambda_1$ et $\lambda_n=-\lambda_1$.
+Ceci impose $\lambda_1=0$, et par suite $\lambda_k=0$ 
+pour tout $k$. Le système est libre.
+<li> Si $n$ est pair, la dernière équation
+est $\lambda_n=-\lambda_1$, qui est la même que la première.
+Elle se simplifie donc. Pour $\lambda_k=(-1)^k$, on a alors
+$\lambda_1w_1+\dots+\lambda_nw_n=0$. Le système est lié.
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>Sous-espace vectoriel engendré</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater826"></span><script>var myRating = raterJs( { element:document.querySelector("#rater826"),	max:5, rating:1.1632653061224, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(826,rating); this.setRating(rating);   this.disable();    done();     }});</script> - D'un système générateur à un système d'équations... <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=826.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(826,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce826','imageenonce826');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce826"></a><div class=inner id="innerenonce826">Donner un système d'équations des espaces vectoriels engendrés par les vecteurs suivants :
+<ol class="enumeratechiffre">
+<li> $u_1=(1,2,3)$;
+<li> $u_1=(1,2,3)$ et $u_2=(-1,0,1)$;
+<li> $u_1=(1,2,0)$, $u_2=(2,1,0)$ et $u_3=(1,0,1)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication826','imageindication826');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication826"></a><div class=inner id="innerindication826" style="display:none;">Par exemple pour 2., dire que $(x,y,z)$ est dans l'espace vectoriel
+engendré si et seulement si il existe $(a,b)\in\mathbb R^2$ tels que ...
+On obtient un système de 3 équations qu'on essaie de résoudre en $a$ et $b$. 
+On obtient alors une équation de compatibilité qui est l'équation du sev engendré.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige826','imagecorrige826',826);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige826"></a><div class=inner id="innercorrige826" style="display:none;"><ol class="enumeratechiffre">
+<li> On note $F$ le sous-espace vectoriel engendré par $u_1$.
+Alors 
+$$(x,y,z)\in F\iff \exists a\in \mathbb R,\ \left\{
+\begin{array}{rcl}
+x&=&a\\
+y&=&2a\\
+z&=&3a\\
+\end{array}
+\right.
+\iff \exists a\in\mathbb R,\ 
+\left\{
+\begin{array}{rcl}
+a&=x\\
+y-2x&=&0\\
+z-3x&=&0
+\end{array}\right.
+$$
+$$\iff \left\{
+\begin{array}{rcl}
+y-2x&=&0\\
+z-3x&=&0
+\end{array}\right.$$
+On a bien trouvé un système d'équations de $F$.
+<li> On note $G$ le sous-espace vectoriel engendré par $u_1$ et $u_2$. Alors,
+$$(x,y,z)\in G\iff \exists (a,b)\in\mathbb R^2,\ 
+\left\{
+\begin{array}{rcl}
+x&=&a-b\\
+y&=&2a\\
+z&=&3a+b\\
+\end{array}\right.
+$$
+$$\iff 
+\exists (a,b)\in\mathbb R^2,\ 
+\left\{
+\begin{array}{rcl}
+a&=&y/2\\
+b&=&z-3y/2\\
+0&=&x-2y+z
+\end{array}\right.$$
+$$\iff x-2y+z=0.$$
+Cette dernière équation est une équation de $G$.
+<li> On note $H$ le sous-espace engendré par $u_1$, $u_2$ et $u_3$.
+Alors, $$(x,y,z)\in H\iff\exists(a,b,c)\in\mathbb R^3,\ 
+\left\{
+\begin{array}{rcl}
+x&=&a+2b+c\\
+y&=&2a+b\\
+z&=&c\\
+\end{array}\right.
+$$
+$$\iff
+\exists(a,b,c)\in\mathbb R^3,\ 
+\left\{
+\begin{array}{rcl}
+a+2b+c&=&x\\
+-3b-2c&=&y-2x\\
+c&=&z
+\end{array}\right.$$
+On obtient un système triangulaire dont aucun des pivots n'est nul.
+Autrement dit, le système admet toujours une solution, quelles que soient
+les valeurs de $x$, $y$ et $z$. Ainsi, $H=\mathbb R^3$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater827"></span><script>var myRating = raterJs( { element:document.querySelector("#rater827"),	max:5, rating:1.6511627906977, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(827,rating); this.setRating(rating);   this.disable();    done();     }});</script> - D'un système d'équations à un système générateur... <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=827.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(827,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce827','imageenonce827');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce827"></a><div class=inner id="innerenonce827">Trouver un système générateur des sous-espaces vectoriels suivants de $\mathbb R^3$:
+<ol class="enumeratechiffre">
+<li> $F=\{(x,y,z)\in\mathbb R^3;\ x+2y-z=0\}$;
+<li> $G=\{(x,y,z)\in\mathbb R^3;\ x-y+z=0\textrm{ et }2x-y-z=0\}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication827','imageindication827');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication827"></a><div class=inner id="innerindication827" style="display:none;">Ecrire $(x,y,z)\in F\iff....$ et essayer de résoudre le système en écrivant une coordonnée en fonction des autres...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige827','imagecorrige827',827);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige827"></a><div class=inner id="innercorrige827" style="display:none;"><ol class="enumeratechiffre">
+<li> On a 
+$$(x,y,z)\in F\iff x=-2y+z\iff\left\{
+\begin{array}{rcl}
+x&=&y\times -2+z\times 1\\
+y&=&y\times 1+z\times 0\\
+z&=&y\times 0+z\times 1.
+\end{array}\right.$$
+Posant $u_1=(-2,1,0)$ et $u_2=(1,0,1)$, on a donc $F=\textrm{vect}(u_1,u_2)$.
+Cette solution n'est (bien sûr!) pas unique.
+<li> On a 
+$$(x,y,z)\in G\iff
+\left\{
+\begin{array}{rcl}
+x-y+z&=&0\\
+2x-y-z&=&0\\
+\end{array}
+\right.
+\iff 
+ \left\{
+\begin{array}{rcl}
+x-y+z&=&0\\
+y-3z&=&0
+\end{array}\right.$$
+$$\iff
+\left\{
+\begin{array}{rcl}
+x=2z\\
+y=3z\\
+z=z
+\end{array}\right.
+$$
+On a donc $G=\textrm{vect}(u)$, avec $u=(2,3,1)$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater825"></span><script>var myRating = raterJs( { element:document.querySelector("#rater825"),	max:5, rating:1.1111111111111, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(825,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Coïncidence de sous-espaces <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=825.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(825,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce825','imageenonce825');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce825"></a><div class=inner id="innerenonce825">Dans les exemples suivants, démontrer que les sous-espaces $F$ et $G$ de $E$ sont égaux.
+<ol class="enumeratechiffre">
+<li> $E=\mathbb R^3$, $u_1=(1,1,3)$, $u_2=(1,-1,-1)$, $v_1=(1,0,1)$, $v_2=(2,-1,0)$,
+$F=\textrm{vect}(u_1,u_2)$ et $G=\textrm{vect}(v_1,v_2)$.
+<li> $E=\mathbb R^3$, $F=\textrm{vect}\big((2,3,-1),(1,-1,-2)\big)$ et $G=\textrm{vect}\big((3,7,0),(5,0,-7)\big)$.
+<li> $E=\mathbb R^3$, $F=\{(x,y,z)\in\mathbb R^3;\ x+y+z=0\}$, $u_1=(1,1,-2)$, $u_2=(1,-4,3)$ et $G=\textrm{vect}(u_1,u_2)$.
+<li> $E=\mathbb R^4$, 
+$$F=\{(x,y,z,t)\in\mathbb R^4;\ x+y+z+t=0\textrm{ et }x-y+2z-2t=0\}$$
+$$G=\{(x,y,z,t)\in\mathbb R^4;\ 5x+y+7z-t=0\textrm{ et }x-3y+3z-5t=0\}.$$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige825','imagecorrige825',825);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige825"></a><div class=inner id="innercorrige825" style="display:none;"><ol class="enumeratechiffre">
+
+<li> Première méthode : Pour montrer que $\textrm{vect}(u_1,u_2)\subset \textrm{vect}(v_1,v_2)$, il suffit
+de montrer que $u_1$ et $u_2$ sont tous deux combinaison linéaire de $v_1$ et $v_2$.
+L'équation $u_1=xv_1+yv_2$ est équivalente à
+$$\left\{
+\begin{array}{ccc}
+1&=&x+2y\\
+1&=&-y\\
+3&=&x
+\end{array}
+\right.$$
+dont la solution est donnée par $x=3$ et $y=-1$. L'équation $u_2=x v_1+yv_2$ est équivalente à 
+$$\left\{
+\begin{array}{ccc}
+1&=&x+2y\\
+-1&=&-y\\
+-1&=&x
+\end{array}
+\right.$$
+dont la solution est donnée par  $x=-1$ et $y=1$. Donc, $\textrm{vect}(u_1,u_2)\subset\textrm{vect}(v_1,v_2)$.
+Réciproquement, pour prouver que $\textrm{vect}(v_1,v_2)\subset\textrm{vect}(u_1,u_2)$, il suffit de prouver
+que $v_1$ et $v_2$ sont combinaison linéaire de $u_1$ et $u_2$. L'équation $v_1=xu_1+yu_2$
+est équivalente à 
+$$\left\{
+\begin{array}{ccc}
+1&=&x+y\\
+0&=&x-y\\
+1&=&3x-y.
+\end{array}
+\right.$$
+On résout ce système en faisant $L_1+L_2$ qui donne $x=1/2$, on obtient ensuite $y=1/2$ et on vérifie que cela fonctionne
+dans la dernière équation. De même, on peut prouver que $v_2$ est combinaison linéaire de $u_1$ et $u_2$.<br>
+Deuxième méthode : On peut rechercher une équation de $F=\textrm{vect}(u_1,u_2)$ et
+de $G=\textrm{vect}(v_1,v_2)$. On a :
+$$(x,y,z)\in F\iff\exists (a,b)\in \mathbb R^2,\left\{
+\begin{array}{rcl}
+x&=&a+b\\
+y&=&a-b\\
+z&=&3a-b
+\end{array}\right.
+$$
+$$
+\iff\exists (a,b)\in \mathbb R^2,\left\{
+\begin{array}{rcll}
+a+b&=&x\\
+2b&=&x-y&(L_1-L_2\to L_2)\\
+4b&=&3x-z&(3L_1-L_3\to L_3)
+\end{array}\right.
+$$
+$$\iff\exists (a,b)\in \mathbb R^2,\left\{
+\begin{array}{rcll}
+a+b&=&x\\
+2b&=&x-y&(L_1-L_2\to L_2)\\
+0&=&x+2y-z&(L_3-2L_2\to L_3)\end{array}\right.
+$$
+Ce dernier système admet une solution si et seulement si $x+2y-z=0$.
+On a donc $F=\{(x,y,z)\in\mathbb R^3;\ x+2y-z=0\}$.
+De même,
+$$(x,y,z)\in G\iff\exists (a,b)\in \mathbb R^2,\left\{
+\begin{array}{rcl}
+x&=&a+2b\\
+y&=&-b\\
+z&=&a
+\end{array}\right.$$
+$$
+\iff\exists (a,b)\in \mathbb R^2,\left\{
+\begin{array}{rcl}
+x+2y-z&=&0\\
+y&=&-b\\
+z&=&a
+\end{array}\right.$$
+Ce dernier système admet donc une solution si et seulement si
+$x+2y-z=0$.
+On a donc $G=\{(x,y,z)\in\mathbb R^3;\ x+2y-z=0\}$.
+Il est alors clair que $F=G$.<br>
+Troisième méthode : On peut s'arrêter à l'inclusion $\textrm{vect}(u_1,u_2)\subset\textrm{vect}(v_1,v_2)$
+dans chacune des démonstrations précédentes si on connait la théorie de la dimension. En effet, puisque $u_2$ et $u_1$
+ne sont pas colinéaires, $\textrm{vect}(u_1,u_2)$ est de dimension 2. De même, $\textrm{vect}(v_1,v_2)$ est
+de dimension 2. Puisque l'un est inclus dans l'autre et qu'ils ont même dimension, ils sont égaux.
+<li> On peut reprendre l'une des trois méthodes de l'exercice précédent. Par exemple, on va montrer que $G\subset F$. Pour cela, on va écrire un système d'équations de $F$, et on va vérifier que les deux vecteurs qui
+engendrent $G$ satisfont ce système d'équations. On en déduit alors que tout vecteur de $G$ satisfait aussi l'équation,
+et donc que $G$ est inclus dans $F$.
+On écrit alors que 
+\begin{eqnarray*}
+(x,y,z)\in F&\iff& \exists (a,b)\in \mathbb R^2,
+\left\{\begin{array}{rcl}
+x&=&2a+b\\
+y&=&3a-b\\
+z&=&-a-2b
+\end{array}\right.
+\\
+&\iff& \exists (a,b)\in \mathbb R^2,
+\left\{\begin{array}{rcl}
+b&=&x-2a\\
+5a&=&x+y\\
+z&=&-a-2b\\
+\end{array}\right.\\
+&\iff& \exists (a,b)\in \mathbb R^2,
+\left\{\begin{array}{rcl}
+b&=&\frac{3x-2y}{5}\\
+a&=&\frac{x+y}{5}\\
+z&=&\frac{-7x+3y}{5}\\
+\end{array}\right.\\
+&\iff&7x-3y+5z=0.
+\end{eqnarray*}
+On a donc $F=\{(x,y,z)\in\mathbb R^3;\ 7x-3y+5z=0\}$. Or, $(3,7,0)$ et $(5,0,-7)$ satisfont cette équation
+et donc, d'après la discussion précédente, $G\subset F$. Avec la même méthode, ou en utilisant la théorie de la dimension, on en déduit que $G=F$.
+<li> On va chercher une équation de $G$. On a 
+$$
+\begin{array}{rcl}
+(x,y,z)\in G&\iff& 
+\exists (a,b)\in \mathbb R^2,\ 
+\left\{
+\begin{array}{rcl}
+x&=&a+b\\
+y&=&a-4b\\
+z&=&-2a+3b\\
+\end{array}\right.
+\\
+&\iff&\exists (a,b)\in \mathbb R^2,\ 
+\left\{
+\begin{array}{rcl}
+x&=&a+b\\
+y-x&=&-5b\\
+z&=&-2a+3b\\
+\end{array}\right.
+\\
+&\iff&\exists (a,b)\in \mathbb R^2,\ 
+\left\{
+\begin{array}{rcl}
+\frac{4x+y}5&=&a\\
+\frac{x-y}5&=&b\\
+z&=&-y-x
+\end{array}
+\right.
+\\
+&\iff&x+y+z=0.
+\end{array}
+$$
+On en déduit immédiatement que $F=G$.
+<li> Il y a là aussi plusieurs méthodes. On peut d'une part démontrer que les deux systèmes
+$$\left\{
+\begin{array}{rcl}
+ x+y+z+t&=&0\\
+x-y+2z-2t&=&0
+\end{array}\right. 
+\textrm{ et }
+\left\{
+\begin{array}{rcl}
+5x+y+7z-t&=&0\\
+x-3y+3z-5t&=&0
+\end{array}\right.
+$$
+sont équivalents. C'est ce qu'on obtient ici si on remarque que le deuxième système s'obtient en faisant $3L_1+2L_2$ dans la première ligne et $-L_1+2L_2$ dans la seconde. On peut aussi chercher un système générateur de $F$ et de $G$ et se ramener aux cas précédents. En réalité, le système générateur le plus simple à obtenir dans les deux cas est le système $u_1=(-3,1,2,0)$ et $u_2=(1,-3,0,2)$ et comme les deux sous-espaces ont le même système générateur, ils sont égaux!
+</ol>
+ </div></div></div>
+
+<div class=titrepartie>Sous-espaces supplémentaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater821"></span><script>var myRating = raterJs( { element:document.querySelector("#rater821"),	max:5, rating:1.3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(821,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Où sont les supplémentaires? <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=821.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(821,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce821','imageenonce821');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce821"></a><div class=inner id="innerenonce821">On considère dans $\mathbb R^4$ les cinq vecteurs suivants : $v_1=(1,0,0,1)$, $v_2=(0,0,1,0)$, $v_3=(0,1,0,0)$, $v_4=(0,0,0,1)$ et $v_5=(0,1,0,1)$. Dire si les sous-espaces vectoriels suivants sont supplémentaires dans $\mathbb R^4$.
+<ol class="enumeratechiffre">
+<li> $\textrm{vect}(v_1,v_2)$ et $\textrm{vect}(v_3)$?
+<li> $\textrm{vect}(v_1,v_2)$ et $\textrm{vect}(v_4,v_5)$?
+<li> $\textrm{vect}(v_1,v_3,v_4)$ et $\textrm{vect}(v_2,v_5)$?
+<li> $\textrm{vect}(v_1,v_4)$ et $\textrm{vect}(v_3,v_5)$?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication821','imageindication821');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication821"></a><div class=inner id="innerindication821" style="display:none;"><ol class="enumeratechiffre">
+<li> Non.
+<li> Oui.
+<li> Non.
+<li> Non.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige821','imagecorrige821',821);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige821"></a><div class=inner id="innercorrige821" style="display:none;"><ol class="enumeratechiffre">
+<li> Ils ne sont pas supplémentaires, la raison profonde étant qu'il n'y a pas assez de vecteurs. Ici, on va trouver un vecteur qui n'est pas dans la somme de $\textrm{vect}(v_1,v_2)$ et $\textrm{vect}(v_3)$, c'est-à-dire un vecteur qui n'est pas combinaison linéaire de $v_1,v_2,v_3$. Par exemple, $v_4$ n'est pas combinaison linéaire de $v_1,v_2,v_3$. En effet, s'il l'était, alors on aurait
+$$v_4=av_1+bv_2+cv_3$$ soit, en regardant coordonnées par coordonnées, le système
+$$\left\{
+\begin{array}{rcl}
+a&=&0\\
+b&=&0\\
+c&=&0\\
+a&=&1
+\end{array}\right.
+$$
+qui n'admet pas de solutions.<br>
+Bien sûr, avec la théorie de la dimension, il serait plus facile de remarquer qu'un système de 3 vecteurs de $\mathbb R^4$ ne peut pas être une base de $\mathbb R^4$.
+<li> Nous allons prouver que $\textrm{vect}(v_1,v_2)$ et $\textrm{vect}(v_4,v_5)$ sont en somme directe. Il y a deux choses à prouver :
+<ul class="rien">
+<li> $\textrm{vect}(v_1,v_2)\cap \textrm{vect}(v_4,v_5)=\{0\}$. Soit $u$ dans l'intersection. Alors d'une part $u=av_1+bv_2$ et d'autre part $u=cv_4+dv_5$. En écrivant les vecteurs, on obtient 
+$$(a,0,b,a)=(0,d,0,c+d)$$ ce qui donne le système
+$$\left\{
+\begin{array}{rcl}
+a&=&0\\
+d&=&0\\
+b&=&0\\
+a&=&c+d
+\end{array}
+\right.$$
+duquel on conclut sans peine que $a=b=c=d=0$.
+<li> $\textrm{vect}(v_1,v_2)+\textrm{vect}(v_4,v_5)=\mathbb R^4$. Mais, 
+$$\textrm{vect}(v_1,v_2)+\textrm{vect}(v_4,v_5)=\textrm{vect}(v_1,v_2,v_4,v_5).$$
+Soit $(x,y,z,t)\in\mathbb R^4$. Alors on remarque très facilement que 
+$$(x,y,z,t)=xv_1+zv_2+(t-x-y)v_4+yv_5$$
+ce qui prouve bien que $(x,y,z,t)\in\textrm{vect}(v_1,v_2)+\textrm{vect}(v_4,v_5).$
+</ul>
+<li> Non! On remarque en effet assez facilement que $v_5=v_3+v_4$ est dans l'intersection des deux sous-espaces vectoriels. On pourrait également conclure à l'aide de la théorie de la dimension.
+<li> Cette fois, la théorie de la dimension ne pourrait pas s'appliquer. Cependant, on remarque que 
+$v_4=v_5-v_3$ est dans l'intersection des deux sous-espaces vectoriels.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater836"></span><script>var myRating = raterJs( { element:document.querySelector("#rater836"),	max:5, rating:1.5652173913043, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(836,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Par deux, mais par trois? <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=836.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(836,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce836','imageenonce836');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce836"></a><div class=inner id="innerenonce836">Soit $E=\mathbb R^4$. On considère $(u_1,u_2,u_3,u_4)$ une famille libre de $E$ et on pose
+$$F=\textrm{vect}(u_1+u_2,u_3),\ G=\textrm{vect}(u_1+u_3,u_4),\ H=\textrm{vect}(u_1+u_4,u_2).$$
+Démontrer que $F\cap G=\{0\}$, que $F\cap H=\{0\}$ et que $G\cap H=\{0\}$. La somme $F+G+H$ est-elle directe?</div></div><div class=indication><a href="javascript:showAll('innerindication836','imageindication836');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication836"></a><div class=inner id="innerindication836" style="display:none;">Trouver un vecteur qui admet deux décompositions différentes dans $F+G+H$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige836','imagecorrige836',836);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige836"></a><div class=inner id="innercorrige836" style="display:none;">On va simplement démontrer que $F\cap G=\{0\}$, les deux autres égalités se prouvant de façon tout à fait similaire. Soit $u\in F\cap G$. Alors il existe des scalaires $a,b,c,d$ tels que 
+$$u=a(u_1+u_2)+bu_3=c(u_1+u_3)+du_4\implies (a-c)u_1+au_2+(b-c)u_3-du_4=0.$$
+La famille $(u_1,u_2,u_3,u_4)$ étant libre, on en déduit que 
+$$a-c=a=b-c=-d=0,$$
+d'où l'on déduit successivement $a=d=0$, puis $c=0$, $b=0$. Ainsi, $u=0$.<br>
+On va prouver que la somme $F+G+H$ n'est pas directe en trouvant un vecteur qui admet deux décompositions différentes dans $F+G+H$. Par exemple,
+\begin{eqnarray*}
+u_1&=&-u_3+(u_1+u_3)+0\in F+G+H\\
+&=&(u_1+u_2)+0+(-u_2)\in F+G+H.
+\end{eqnarray*}
+La somme n'est pas directe!
+</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater832"></span><script>var myRating = raterJs( { element:document.querySelector("#rater832"),	max:5, rating:2.1724137931034, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(832,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Périodiques et tend vers 0 à l'infini <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=832.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(832,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce832','imageenonce832');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce832"></a><div class=inner id="innerenonce832">Soit $E$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$, $F$ le sous-espace vectoriel des fonctions périodiques de période 1 et $G$ le sous-espace vectoriel des fonctions $f$ telles que $\lim_{+\infty}f=0$. Démontrer que $F\cap G=\{0\}$. Est-ce que $F$ et $G$ sont supplémentaires?</div></div><div class=indication><a href="javascript:showAll('innerindication832','imageindication832');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication832"></a><div class=inner id="innerindication832" style="display:none;">D'une part, fixer $x\in\mathbb R$ et étudier $f(x+n)$. D'autre part, que dire d'une fonction qui tend vers $+\infty$ en $+\infty$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige832','imagecorrige832',832);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige832"></a><div class=inner id="innercorrige832" style="display:none;">Soit $f\in F\cap G$ et prenons $x\in \mathbb R$. Alors $f(x+n)=f(x)$ puisque $f$ est $1-$périodique. Mais d'autre part, $f(x+n)$ tend vers 0 quand $n$ tend vers l'infini puisque $f$ est élément de $G$. Ainsi, $f(x)=0$ et puisque c'est vrai pour tout $x\in\mathbb R$, on a $f=0$. 
+D'autre part, considérons la fonction $f(x)=x$. Alors si $f\in F+G$, $f$ s'écrit $f=g+h$ avec $g$ périodique de période 1 et $h$ qui tend vers $0$ en $+\infty$. Mais alors, 
+$$f(n)=g(n)+h(n)=g(0)+h(n)\to g(0)\in\mathbb R$$
+alors que $f(n)\to+\infty$. On obtient une contradiction et donc $F+G\neq E$. $F$ et $G$ ne sont pas supplémentaires.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater833"></span><script>var myRating = raterJs( { element:document.querySelector("#rater833"),	max:5, rating:1.9411764705882, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(833,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec des suites <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=833.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(833,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce833','imageenonce833');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce833"></a><div class=inner id="innerenonce833">Soit $E$ l'espace vectoriel des suites réelles, 
+$$F=\{u\in E;\ \forall n\in\mathbb N,\ u_{2n}=0\}$$
+$$G=\{u\in E;\ \forall n\in\mathbb N,\ u_{2n}=u_{2n+1}\}.$$
+Démontrer que $F$ et $G$ sont supplémentaires dans $E.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige833','imagecorrige833',833);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige833"></a><div class=inner id="innercorrige833" style="display:none;">D'abord, il est clair que $F\cap G=\{0\}$. En effet, si la suite $(u_n)$ est dans l'intersection de $F$ et $G$, alors tous ses termes d'indice pair sont nul, et par suite tous ceux d'indice impair sont également nuls car $(u_n)\in G$.<br>
+Prouvons maintenant que $F+G=E$. Pour cela, prenons une suite $(u_n)$ de $E$ et réfléchissons un peu. Si $u_n=v_n+w_n$ avec $(v_n)\in F$ et $(w_n)\in G$, alors on a forcément $u_{2n}=w_{2n}$ ce qui définit forcément $(w_n)$ puisque $w_{2n+1}=w_{2n}$. La suite $(v_n)$ ne peut être que la différence entre $(u_n)$ et $(w_n)$, en espérant qu'elle soit dans $F$. <br>
+Agissons maintenant! On définit $(w_n)$ par $w_{2n}=w_{2n+1}=u_{2n}$ pour tout entier naturel $n$. Il est clair que $(w_n)$ est élément de $G$. Posons ensuite, pour tout entier naturel $n$, $v_n=u_n-w_n$. 
+Alors par définition on a  $(u_n)=(v_n)+(w_n)$ et il reste à prouver que $(v_n)\in F$. Mais c'est facile, car $v_{2n}=u_{2n}-w_{2n}=0$. <br>
+Ainsi, on a bien prouvé par ce raisonnement dit d'analyse-synthèse que $E=F\oplus G$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater829"></span><script>var myRating = raterJs( { element:document.querySelector("#rater829"),	max:5, rating:1.59375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(829,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Trouver un supplémentaire! <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=829.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(829,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce829','imageenonce829');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce829"></a><div class=inner id="innerenonce829">Soit $A\in\mathbb R[X]$ un polynôme non constant et $F=\{P\in\mathbb R[X];\ A\textrm{ divise }P\}$.
+Montrer que $F$ est un sous-espace vectoriel de $\mathbb R[X]$ et trouver un supplémentaire à $F$.</div></div><div class=indication><a href="javascript:showAll('innerindication829','imageindication829');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication829"></a><div class=inner id="innerindication829" style="display:none;">Utiliser la division euclidienne.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige829','imagecorrige829',829);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige829"></a><div class=inner id="innercorrige829" style="display:none;">Remarquons que $F=\{AQ;\ Q\in\mathbb R[X]\}$, ce qui permet facilement de prouver que $F$ est
+un sous-espace vectoriel de $\mathbb R[X]$. D'autre part, prenons maintenant $B\in\mathbb R[X]$.
+D'après la division euclidienne, il s'écrit de façon unique sous la forme $B=AQ+R$,
+où $Q\in\mathbb R[X]$ et $R\in\mathbb R_{d-1}[X]$, où $d$ est le degré de $A$, c'est-à-dire de façon unique comme
+la somme d'un élément de $F$ et d'un élément de $\mathbb R_{d-1}[X]$. Ceci signifie exactement que 
+$F$ et $\mathbb R_{d-1}[X]$ sont des sous-espaces vectoriels supplémentaires dans $\mathbb R[X]$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater831"></span><script>var myRating = raterJs( { element:document.querySelector("#rater831"),	max:5, rating:1.4666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(831,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Transformer une somme en somme directe <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=831.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(831,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce831','imageenonce831');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce831"></a><div class=inner id="innerenonce831">Soient $F$ et $G$ deux sous-espaces vectoriels d'un espace vectoriel $E$ tels que
+$F+G=E$. Soit $F'$ un supplémentaire de $F\cap G$ dans $F$. Montrer que
+$F'\oplus G=E$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige831','imagecorrige831',831);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige831"></a><div class=inner id="innercorrige831" style="display:none;">Prouvons d'abord que $F'$ et $G$ sont en somme directe, c'est-à-dire que $F'\cap G=\{0\}$.
+Prenons $x\in G\cap F'$. Alors, puisque $F\cap G$ et $F'$ sont en somme directe, et que 
+$x\in F\cap G$ ($x$ est dans $G$ et dans $F'\subset F$), on en déduit $x=0$.
+D'autre part, il faut montrer que $F'+G=E$. Soit $z\in E$. On sait que $z=f+g$, avec
+$f\in F$ et $g\in G$ (car $F+G=E$). D'autre part, on peut décomposer
+$f$ en $g'+f'$, avec $g'\in F\cap G$ et $f'\in F'$. Ainsi, on obtient
+$$z=g'+f'+g=f'+(g+g')$$
+avec $f'\in F'$ et $g+g'\in G$ : $F'+G=E$ ce qui achève la preuve que $F'$ et $G$
+sont supplémentaires.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater835"></span><script>var myRating = raterJs( { element:document.querySelector("#rater835"),	max:5, rating:2.1625, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(835,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Caractérisation de la somme directe de 3 sous-espaces vectoriels <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=835.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(835,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce835','imageenonce835');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce835"></a><div class=inner id="innerenonce835">Soient $E$ un espace vectoriel et $F,G,H$ trois sous-espaces vectoriels de $E$. Démontrer que $F$, $G$ et $H$ sont en somme directe si et seulement si ($F\cap G=\{0\}$ et $(F+G)\cap H=\{0\}$).</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige835','imagecorrige835',835);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige835"></a><div class=inner id="innercorrige835" style="display:none;">Prouvons d'abord le sens direct. Soit $x\in F\cap G$. Alors $x=x+0+0=0+x+0$ donne deux décompositions de $x$ dans la somme $F+G+H$ et donc $x=0$. Choisissons ensuite $x\in (F+G)\cap H$. Alors $x=y+z$ avec $y\in F$ et $z\in G$. On en déduit que $x=y+z+0=0+0+x$ admet deux décompositions dans la somme $F+G+H$ qui est directe, donc ces deux décompositions coïncident et $x=0$.<br>
+Prouvons maintenant la réciproque. Soit $(x,y,z) \in F\times G\times H$ tel que $x+y+z=0$.
+
+Alors $x+y=-z\in (F+G)\cap H=\{0\}$ donc $z=0$ et $x+y=0$. Or $F$ et $G$ sont en somme directe donc $x=y=0$ et donc finalement $x=y=z=0$. Ainsi, $F$, $G$ et $H$ sont en somme directe. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater828"></span><script>var myRating = raterJs( { element:document.querySelector("#rater828"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(828,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions paires / Fonctions impaires <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=828.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(828,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce828','imageenonce828');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce828"></a><div class=inner id="innerenonce828">Soit $E=\mathcal F(\mathbb R,\mathbb R)$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$.
+On note $F$ le sous-espace vectoriel des fonctions paires (ie $f(-x)=f(x)$ pour tout $x\in\mathbb R$)
+et $G$ le sous-espace vectoriel des fonctions impaires (ie $f(-x)=-f(x)$ pour tout $x\in\mathbb R$).
+Montrer que $F$ et $G$ sont supplémentaires.</div></div><div class=indication><a href="javascript:showAll('innerindication828','imageindication828');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication828"></a><div class=inner id="innerindication828" style="display:none;">Pour montrer que toute fonction $h$ se décompose en $h=f+g$
+avec $f$ paire et $g$ impaire, on pourra supposer dans un premier temps que
+c'est effectivement le cas. Alors, trouver à quoi doivent être égales $f(x)$ et
+$g(x)$ en calculant $h(x)$ et $h(-x)$. Puis, poser $f$ et $g$ les fonctions
+définies par ces formules, et vérifier que tout fonctionne.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige828','imagecorrige828',828);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige828"></a><div class=inner id="innercorrige828" style="display:none;">Remarquons d'abord que $F\cap G=\{0\}$. En effet, si $f$ est élément de $F\cap G$, alors,
+pour tout $x\in\mathbb R$, on a à la fois $f(-x)=f(x)$ et $f(-x)=-f(x)$, d'où
+$f(x)=-f(x)$ ce qui entraîne $f(x)=0$.<br>
+D'autre part, tout élément $h$ de $E$ se décompose sous la forme $h=f+g$, avec $f$ dans $F$
+et $g$ dans $G$. Pour cela, on utilise un raisonnement par analyse-synthèse.<br>
+ Admettons un bref instant
+que $h=f+g$ avec $f\in F$ et $g\in G$. Alors, pour tout $x\in\mathbb R$, on a 
+$h(x)=f(x)+g(x)$ et $h(-x)=f(-x)+g(-x)=f(x)-g(x)$. Des deux équations précédentes, on tire
+facilement que $f(x)=\big(h(x)+h(-x)\big)/2$ et $g(x)=\big(h(x)-h(-x)\big)/2$.<br>
+ On peut désormais passer 
+à la synthèse (le paragraphe précédent peut être considéré comme une recherche "au brouillon"). On pose $f(x)=\big(h(x)+h(-x)\big)/2$ et $g(x)=\big(h(x)-h(-x)\big)/2$.
+Alors on vérifie facilement que :
+<ul class="rien">
+<li> $h=f+g$;
+<li> $f$ est paire : en effet $f(-x)=\big(h(-x)+h(-(-x))\big)/2=\big(h(x)+h(-x)\big)/2=f(x)$;
+<li> $g$ est impaire (même raisonnement).
+</ul>
+Ainsi, on a bien $F+G=E$. <br>
+Remarquons que la partie 'analyse' du raisonnement montre aussi l'unicité de la décomposition, et redémontre donc que la somme est directe.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater834"></span><script>var myRating = raterJs( { element:document.querySelector("#rater834"),	max:5, rating:3.5862068965517, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(834,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Un supplémentaire n'est jamais unique <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=834.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(834,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce834','imageenonce834');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce834"></a><div class=inner id="innerenonce834">Soit $E$ un espace vectoriel dans lequel tout sous-espace vectoriel admet un supplémentaire. Soit $F$ un sous-espace vectoriel propre de $E$ (c'est-à-dire que $F\neq \{0\}$ et que $F\neq E$). Démontrer que $F$ admet au moins deux supplémentaires distincts.</div></div><div class=indication><a href="javascript:showAll('innerindication834','imageindication834');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication834"></a><div class=inner id="innerindication834" style="display:none;">Considérer un supplémentaire $G$ de $F$ dans $E$, choisir $x$ dans $E$ qui n'est ni dans $F$, ni dans $G$,  puis construire un supplémentaire de $F$ contenant $x$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige834','imagecorrige834',834);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige834"></a><div class=inner id="innercorrige834" style="display:none;">On commence par fixer $G$ un supplémentaire de $F$. Soit $x$ un vecteur qui n'est ni dans $F$, ni dans $G$ (par exemple, si $x_1\neq 0\in F$ et $x_2\neq 0\in G$, alors $x_1+x_2$ n'est ni dans $F$ - sinon $x_2$ serait dans $F$, ni dans $G$ - sinon $x_1$ serait dans $G$). Posons $F'=F\oplus \textrm{vect}(x)$ et considérons $G'$ un supplémentaire de $F'$ dans $E$. Alors, $G_1=\textrm{vect}(x)\oplus G'$ est un supplémentaire de $F$ dans $E$. En effet
+<ul class="rien">
+<li> si $z\in E$, alors il s'écrit sous la forme $z=y_1+y_2$, avec $y_1\in F'$ et $y_2\in G'$. De plus, $y_1$ s'écrit sous la forme $\lambda x+u$, avec $u\in F$. Finalement, $z=u+(\lambda x+y_2)$, avec $u\in F$ et $\lambda x+y_2\in G_1$.  
+<li> si $z\in F\cap G_1$, alors $z=\lambda x+u$ avec $u\in G'$ et donc $u=z-\lambda x\in G'\cap F'$. Puisque $F'$ et $G'$ sont en somme directe, on a $u=0$. On en déduit que $z-\lambda x=0$ soit, puisque $x\notin F$, $z=0$ et $\lambda=0$. Finalement, on a prouvé que $F\cap G_1=\{0\}$.
+</ul>
+Bien sûr, $G_1\neq G$ puisque $x\in G_1\backslash G$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater830"></span><script>var myRating = raterJs( { element:document.querySelector("#rater830"),	max:5, rating:3.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(830,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions qui s'annulent en un (plusieurs) point(s) <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=830.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(830,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce830','imageenonce830');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce830"></a><div class=inner id="innerenonce830">Soit $E$ l'espace vectoriel des fonctions de $\mathbb R$ dans $\mathbb R$.
+<ol class="enumeratechiffre">
+<li> Soit $a\in\mathbb R$.
+On désigne par $F$ le sous-espace des fonctions constantes et par $G_a$ le sous-espace des fonctions
+qui s'annulent en $a$. Montrer que $F$ et $G_a$ sont supplémentaires dans $E$.
+<li> Plus généralement, soient $a_0,\dots,a_N$ des éléments distincts deux à deux de $\mathbb R$
+et $G=\{f\in E;\ f(a_0)=\dots=f(a_N)=0\}$. Trouver un supplémentaire à $G$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication830','imageindication830');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication830"></a><div class=inner id="innerindication830" style="display:none;"><ol class="enumeratechiffre">
+<li> Supposons que $h=g+C$, avec $g\in G_a$. Que doit valoir $C$? et donc $g$?
+<li> Un supplémentaire qui convient est $\mathbb R_N[X]$. On pourra considérer
+l'(unique) polynôme $P$ de cet ensemble tel que $P(a_i)=h(a_i)$ pour tout $i\in\{0,\dots,N\}$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige830','imagecorrige830',830);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige830"></a><div class=inner id="innercorrige830" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque d'abord que $F\cap G_a=\{0\}$ (une fonction constante qui s'annule
+en un point est forcément identiquement nulle). Ensuite, prenons $h\in E$, on doit prouver
+que $h$ se décompose sous la forme $h=g+C$, où $C$ est une constante et $g(a)=0$.
+Admettons que ce soit le cas. Alors, nécessairement, $h(a)=C$ et $g(x)=h(x)-C=h(x)-h(a)$.
+On pose donc $C=h(a)$ et $g(x)=h(x)-h(a)$. Clairement, $h=g+C$ et $g(a)=0$ ce qui prouve que
+$g\in G_a$.
+<li> On va prouver que $G$ et $\mathbb R_N[X]$ sont supplémentaires. Pour cela, il suffit de
+prouver que toute fonction $h\in E$ se décompose uniquement sous la forme
+$h=g+P$, avec $g\in G$ et $P\in\mathbb R_N[X]$. <br>
+Unicité. Si $h=g+P$, alors, pour tout $i\in\{0,\dots,N\}$, 
+on a $P(a_i)=h(a_i)$. Or, par la théorie des polynômes interpolateurs de Lagrange (par exemple),
+on sait qu'il existe un unique polynôme $P\in\mathbb R_N[X]$ qui vérifie cette propriété. D'où l'unicité
+de $P$ et par suite celle de $g$ puisque $g=h-P$.<br>
+Existence. Considérons $P$ l'unique polynôme de $\mathbb R_N[X]$ tel que
+$P(a_i)=h(a_i)$ pour tout $i\in\{0,\dots,N\}$ (un tel polynôme existe).
+De plus, on pose $g=h-P$. Alors $g(a_i)=P(a_i)-h(a_i)=0$ pour tout $i=1,\dots,N$ et donc $g\in G$, et bien sûr $h=g+P$.
+</ol></div></div></div>
+
+<div class=titrepartie>Exemples d'applications linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater839"></span><script>var myRating = raterJs( { element:document.querySelector("#rater839"),	max:5, rating:0.68131868131868, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(839,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications linéaires ou non (sur $\mathbb R^n$)? <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=839.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(839,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce839','imageenonce839');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce839"></a><div class=inner id="innerenonce839">Dire si les applications suivantes sont des applications linéaires :
+<ol class="enumeratechiffre">
+<li> $f:\mathbb R^2\to\mathbb R^3,\ (x,y)\mapsto (x+y,x-2y,0)$;
+<li> $f:\mathbb R^2\to\mathbb R^3,\ (x,y)\mapsto (x+y,x-2y,1)$;
+<li> $f:\mathbb R^2\to\mathbb R,\ (x,y)\mapsto x^2-y^2$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication839','imageindication839');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication839"></a><div class=inner id="innerindication839" style="display:none;">Vérifiez si la définition d'une application linéaire est vérifiée, et si vous n'y parvenez pas, prouvez à l'aide d'un contre-exemple qu'il ne s'agit pas d'une application linéaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige839','imagecorrige839',839);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige839"></a><div class=inner id="innercorrige839" style="display:none;"><ol class="enumeratechiffre">
+<li> $f$ est une application linéaire. Prenons $u=(x,y)$ et $v=(x',y')$ dans $\mathbb R^2$, et $\lambda\in\mathbb R$. Alors :
+\begin{eqnarray*}
+f(u+v)&=&\big( (x+x')+(y+y'),(x+x')-2(y+y'),0)\\
+&=&\big(x+y,x-2y,0)+(x'+y',x'-2y',0)\\
+&=&f(u)+f(v).
+\end{eqnarray*}
+De même, 
+\begin{eqnarray*}
+f(\lambda u)&=&(\lambda x+\lambda y,\lambda x-2\lambda y,0)\\
+&=&\lambda(x+y,x-2y,0)\\
+&=&\lambda f(u).
+\end{eqnarray*}
+<li> $f$ n'est pas une application linéaire car $f\big((0,0)\big)\neq (0,0,0)$.
+<li> $f$ n'est pas une application linéaire. En effet,
+$$f\big((1,0)\big)=1,\ f\big((-1,0)\big)=1\textrm{ et }f\big((0,0)\big)=0\neq f\big((1,0)\big)+f\big((-1,0)\big).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater840"></span><script>var myRating = raterJs( { element:document.querySelector("#rater840"),	max:5, rating:1.758064516129, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(840,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Noyau et image <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=840.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(840,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce840','imageenonce840');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce840"></a><div class=inner id="innerenonce840">Soit $f:\mathbb R^2\to\mathbb R^3$ l'application linéaire définie par
+$$f(x,y)=(x+y,x-y,x+y).$$
+Déterminer le noyau de $f$, son image. $f$ est-elle injective? surjective?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige840','imagecorrige840',840);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige840"></a><div class=inner id="innercorrige840" style="display:none;">Commençons par déterminer le noyau de $f$. $(x,y)\in\ker f$ si et seulement si $f(x,y)=(0,0,0)$ si et seulement si 
+$$\left\{
+\begin{array}{rcl}
+x+y&=&0\\
+x-y&=&0\\
+x+y&=&0\\
+\end{array}\right.
+\iff
+\left\{
+\begin{array}{rcl}
+x+y&=&0\\
+2x&=&0\\
+\end{array}\right.$$
+On en déduit que $\ker(f)=\{(0,0)\}$, et en particulier que $f$ est injective.<br>
+Déterminons maintenant l'image de $f$. Un vecteur $(u,v,w)$ est dans l'image de $f$ si et seulement si
+\begin{eqnarray*}
+\exists (x,y)\in\mathbb R^2,\ (u,v,w)=f(x,y)&\iff&
+\exists (x,y)\in\mathbb R^2,\ \left\{
+\begin{array}{rcl}
+u&=&x+y\\
+v&=&x-y\\
+w&=&x+y
+\end{array}\right. \\
+&\iff&
+\exists (x,y)\in\mathbb R^2,\ \left\{
+\begin{array}{rcl}
+u&=&x+y\\
+u+v&=&2x\\
+w-u&=&0
+\end{array}\right. \\
+&\iff&\exists (x,y)\in\mathbb R^2,\ \left\{
+\begin{array}{rcl}
+\frac{u-v}2&=&y\\
+\frac{u+v}2&=&x\\
+w-u&=&0
+\end{array}\right. \\
+\end{eqnarray*}
+On en déduit que $\textrm{Im}(f)=\{(u,v,w)\in\mathbb R^3;\ u-w=0\}.$
+En particulier, $(1,1,0)$ n'est pas dans $\textrm{Im}(f)$, et donc $f$ n'est pas surjective.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>28</span> <span id="rater841"></span><script>var myRating = raterJs( { element:document.querySelector("#rater841"),	max:5, rating:1.75, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(841,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivation <a id=heart28 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart28" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=841.html"> [Signaler une erreur]</a><a id=exo28 href="javascript:ajouteexo(841,28,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce841','imageenonce841');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce841"></a><div class=inner id="innerenonce841">Soit $E=\mathcal C^{\infty}(\mathbb R)$ et $\phi\in\mathcal L(E)$ définie par $\phi(f)=f'$. Quel est le noyau de $\phi$? Quelle est son image? $\phi$ est-elle injective? surjective?</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige841','imagecorrige841',841);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige841"></a><div class=inner id="innercorrige841" style="display:none;">Une fonction $f:\mathbb R\to\mathbb R$ a sa dérivée nulle si et seulement si elle est constante. Le noyau de $\phi$ est donc l'ensemble des fonctions constantes. En particulier, $\phi$ n'est pas injective. D'autre part, si $g$ est une fonction de classe $\mathcal C^\infty$ sur $\mathbb R$, alors elle admet une primitive $f$ qui est donc elle aussi de classe $\mathcal C^\infty$, c'est-à-dire élément de $E$. On a alors  $\phi(f)=g$, ce qui signifie que $\textrm{Im}(\phi)=E$. $\phi$ est surjective. Cet exercice illustre le fait que $\mathcal C^\infty(\mathbb R)$ n'est pas de dimension finie, puisque $\phi$ est surjective mais n'est pas injective.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>29</span> <span id="rater838"></span><script>var myRating = raterJs( { element:document.querySelector("#rater838"),	max:5, rating:1.9736842105263, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(838,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Application linéaire définie sur un espace de polynôme <a id=heart29 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart29" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=838.html"> [Signaler une erreur]</a><a id=exo29 href="javascript:ajouteexo(838,29,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce838','imageenonce838');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce838"></a><div class=inner id="innerenonce838">Soit $E=\mathbb C[X]$, $p$ un entier naturel et $f$ l'application de $E$ dans $E$ définie par
+$f(P)=(1-pX)P+X^2P'$. $f$ est-elle injective? surjective?
+</div></div><div class=indication><a href="javascript:showAll('innerindication838','imageindication838');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication838"></a><div class=inner id="innerindication838" style="display:none;">$f$ étant linéaire, il suffit de calculer son noyau et son image. On peut notamment 
+prouver que $\textrm{Im}(f)$ ne contient pas de polynôme de degré $p+1$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige838','imagecorrige838',838);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige838"></a><div class=inner id="innercorrige838" style="display:none;">Il est facile de vérifier que $f$ est linéaire. Pour savoir si elle est injective,
+on calcule son noyau. Soit $P=\sum_{i=0}^n a_iX^i$ un polynôme.
+Alors 
+$$f(P)=\sum_{i=0}^n a_iX^i-p\sum_{i=0}^n a_i X^{i+1}+\sum_{i=1}^n i a_i X^{i+1}$$
+soit, après un changement d'indice
+$$f(P)=a_0 +\sum_{i=1}^n (a_i-(p+1-i)a_{i-1})X^i +(n-p)a_n X^{n+1}.$$
+Si $f(P)=0$, on obtient donc $a_0=0$ et $a_i=(p+1-i)a_{i-1}$ pour $1\leq i\leq n$
+ce qui entraine $a_i=0$ pour tout $i=0,\dots,n$. Ainsi, $P=0$,
+le noyau de $f$ est réduit à $\{0\}$ et $f$ est injective.<br>
+D'autre part, si $P$ est un polynôme de degré $n$, alors le
+calcul précédent montre que
+<ul class="rien">
+<li> pour $n=p$, le degré de $f(P)$ est inférieur ou égal à $n$, et
+donc différent de $p+1$;
+<li> pour $n\neq p$, alors $f(P)$ est de degré $n+1\neq p+1$.
+</ul>
+Ainsi, $\textrm{Im}(f)$ ne contient pas de polynômes de degré $p+1$. Donc $f$ n'est pas
+surjective.</div></div></div>
+
+<div class=titrepartie>Projecteurs et symétries</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>30</span> <span id="rater852"></span><script>var myRating = raterJs( { element:document.querySelector("#rater852"),	max:5, rating:1.8, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(852,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Deux projections <a id=heart30 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart30" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=852.html"> [Signaler une erreur]</a><a id=exo30 href="javascript:ajouteexo(852,30,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce852','imageenonce852');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce852"></a><div class=inner id="innerenonce852">Soit $E$ un espace vectoriel et $p,q$ deux projecteurs de $E$ tels que
+$p\neq 0$, $q\neq 0$ et $p\neq q$. Démontrer que $(p,q)$ est une famille libre
+de $\mathcal L(E)$.</div></div><div class=indication><a href="javascript:showAll('innerindication852','imageindication852');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication852"></a><div class=inner id="innerindication852" style="display:none;">Supposer que $q=\lambda p$ et calculer de deux façons différentes $q^2$ en fonction de $p$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige852','imagecorrige852',852);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige852"></a><div class=inner id="innercorrige852" style="display:none;">Si $(p,q)$ n'est pas libre, il existe $\lambda\in\mathbb K$, $\lambda\neq 0$, tel que $q=\lambda p$.
+Alors $$\lambda p=q=q^2=\lambda^2 p^2=\lambda^2 p.$$
+On a donc $\lambda^2=\lambda$, c'est-à-dire $\lambda=1$ puisque $\lambda\neq 0$, ce qui contredit $p\neq q$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>31</span> <span id="rater850"></span><script>var myRating = raterJs( { element:document.querySelector("#rater850"),	max:5, rating:2.4285714285714, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(850,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Projections et sommes directes <a id=heart31 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart31" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=850.html"> [Signaler une erreur]</a><a id=exo31 href="javascript:ajouteexo(850,31,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce850','imageenonce850');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce850"></a><div class=inner id="innerenonce850">Soient $E_1,\dots,E_n$ des sous-espaces vectoriels de $E$. On suppose que $E_1\oplus\dots\oplus E_n=E$. 
+On note $p_i$ le projecteur sur $E_i$ parallèlement à $\oplus_{j\neq i}E_j$. Montrer que 
+$p_i\circ p_j=0$ si $i\neq j$ et que $p_1+\dots+p_n=Id_E$.</div></div><div class=indication><a href="javascript:showAll('innerindication850','imageindication850');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication850"></a><div class=inner id="innerindication850" style="display:none;">Prouver d'abord que $p_1(x)+\dots+p_n(x)=x$ pour tout $x\in E_i$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige850','imagecorrige850',850);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige850"></a><div class=inner id="innercorrige850" style="display:none;">Soit $i\neq j.$ Il est clair que $\imv(p_j)=E_j\subset \ker(p_i)$ ce qui prouve que $p_i\circ p_j=0$. D'autre part, si $x\in E_i$, on a 
+$$p_1(x)+\dots+p_i(x)+\dots+p_n(x)=0+\dots+x+\dots+0=x.$$ On a $p_1+\dots+p_n=Id_E$ sur chaque $E_i$, donc sur tout l'espace
+par "recollement". En effet, tout $x\in E$ s'écrit $x=x_1+\dots+x_n$ avec $x_i\in E_i$. </div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>32</span> <span id="rater855"></span><script>var myRating = raterJs( { element:document.querySelector("#rater855"),	max:5, rating:2.7297297297297, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(855,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphismes annulant un polynôme de degré 2 <a id=heart32 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart32" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=855.html"> [Signaler une erreur]</a><a id=exo32 href="javascript:ajouteexo(855,32,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce855','imageenonce855');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce855"></a><div class=inner id="innerenonce855">Soit $f\in\mathcal L(E)$ et soient $\alpha,\beta$ deux réels distincts.
+<ol class="enumeratechiffre">
+<li> Démontrer que $E=\textrm{Im}(f-\alpha Id_E)+\textrm{Im}(f-\beta Id_E)$.<br>
+On suppose de plus que $\alpha$ et $\beta$ sont non nuls et que $$(f-\alpha Id_E)\circ (f-\beta Id_E)=0.$$
+<li> Démontrer que $f$ est inversible, et calculer $f^{-1}$.
+<li> Démontrer que $E=\ker(f-\alpha Id_E)\oplus \ker(f-\beta Id_E)$.
+<li> Exprimer en fonction de $f$ le projecteur $p$ sur $\ker(f-\alpha Id_E)$ parallèlement
+à $\ker(f-\beta Id_E)$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication855','imageindication855');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication855"></a><div class=inner id="innerindication855" style="display:none;"><ol class="enumeratechiffre">
+<li> Exprimer $Id_E$ en fonction de $f-\alpha Id_E$ et de $f-\beta Id_E$.
+<li> Développer et trouver $g$ tel que $f\circ g=g\circ f=Id_E$.
+<li> Utiliser 1.
+<li> Utiliser encore 1.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige855','imagecorrige855',855);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige855"></a><div class=inner id="innercorrige855" style="display:none;"><ol class="enumeratechiffre">
+<li> On remarque que 
+$$(\beta-\alpha)Id_E=(f-\alpha Id_E)-(f-\beta Id_E).$$
+Autrement dit, si $x\in E$, on a $x=y+z$ avec
+$$y=(f-\alpha Id_E)(y_1)\textrm{ et }y_1=\frac{1}{\beta-\alpha}x$$
+et 
+$$z=(f-\beta Id_E)(z_1)\textrm{ et }z_1=\frac{1}{\alpha-\beta}x.$$
+<li> La relation s'écrit encore 
+$$f^2-(\alpha+\beta)f+\alpha\beta Id_E=0$$
+soit 
+$$f\circ\frac{1}{-\alpha\beta}(f-(\alpha+\beta)Id_E)=Id_E$$
+et 
+$$\frac{1}{-\alpha\beta}(f-(\alpha+\beta)Id_E)\circ f=Id_E$$
+ce qui prouve que $f$ est inversible, d'inverse $\frac{1}{-\alpha\beta}(f-(\alpha+\beta)Id_E)$.
+<li> On commence par prouver que les espaces vectoriels sont en somme directe. En effet,
+si $x\in\ker(f-\alpha Id_E)\cap \ker(f-\beta Id_E)$, alors 
+$$f(x)=\alpha x\textrm{ et }f(x)=\beta x$$
+ce qui prouve que $(\beta-\alpha)x=0\implies x=0$. D'autre part, la relation implique que
+$\textrm{Im}(f-\beta Id_E)\subset\ker(f-\alpha Id_E)$. Mais dans cette relation, tout commute et on a aussi
+$$(f-\beta Id_E)\circ (f-\alpha Id_E)=0$$
+et donc $\textrm{Im}(f-\alpha Id_E)\subset \ker(f-\beta Id_E)$. Il suffit maintenant d'appliquer le résultat
+de la première question pour conclure. En effet, si $x=y+z$ avec $y\in\textrm{Im}(f-\alpha Id_E)$
+et $z\in\textrm{Im}(f-\beta Id_E)$, alors $x=y+z$ avec $y\in\ker(f-\beta Id_E)$
+et $z\in\textrm{ker}(f-\alpha Id_E)$.
+<li> On utilise à nouveau le résultat de la question 1. En effet, avec les mêmes notations que ci-dessus, on a 
+$p(x)=z$ et donc 
+$$p(x)=(f-\beta Id_E)\left(\frac{1}{\alpha-\beta}x\right).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>33</span> <span id="rater853"></span><script>var myRating = raterJs( { element:document.querySelector("#rater853"),	max:5, rating:3.1739130434783, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(853,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Somme de deux projecteurs <a id=heart33 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart33" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=853.html"> [Signaler une erreur]</a><a id=exo33 href="javascript:ajouteexo(853,33,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce853','imageenonce853');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce853"></a><div class=inner id="innerenonce853">Soit $E$ un $\mathbb R$-espace vectoriel. Soient $p$ et $q$ deux projecteurs de $E$.
+<ol class="enumeratechiffre">
+<li> Montrer que $p+q$ est un projecteur si et seulement si $p\circ q=q\circ p=0$.
+<li> Montrer que, dans ce cas, on a $\textrm{Im}(p+q)=\textrm{Im}(p)\oplus \textrm{Im}(q)$
+et $\ker(p+q)=\ker p\cap \ker q$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication853','imageindication853');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication853"></a><div class=inner id="innerindication853" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour montrer que la condition est nécessaire, on pourra d'abord prouver
+que $p\circ q+q\circ p=0$, puis calculer $p^2\circ q$ de deux façons différentes.
+<li> Pour montrer que $\textrm{Im p}$ et $\textrm{Im q}$ sont en somme directe,
+on pourra remarque que $x=p(x)=q(x)$ pour tout élément de l'intersection.
+Pour prouver que $\textrm{Im}(p)+\textrm{Im}(q)\subset \textrm{Im}(p+q)$,
+on pourra démontrer que pour tout $z$ du premier ensemble, on a
+$z=p(z)+q(z)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige853','imagecorrige853',853);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige853"></a><div class=inner id="innercorrige853" style="display:none;"><ol class="enumeratechiffre">
+<li> La condition est suffisante. En effet, si $p\circ q=q\circ p=0$, alors 
+$$(p+q)^2=p^2+p\circ q+q\circ p+q^2=p+q$$
+et donc $p+q$ est un projecteur.<br>
+Réciproquement, si $p+q$ est un projecteur, alors le calcul précédent
+donne 
+$$p\circ q+q\circ p=0.$$
+On a alors :
+$$p\circ q=p^2\circ q=p\circ(p\circ q)=-p\circ(q\circ p)=-(p\circ q)\circ p=(q\circ p)\circ p=q\circ p.$$
+On obtient donc $p\circ q=q\circ p$ et $p\circ q=-q\circ p$, ce qui entraîne $p\circ q=0$ et  $q\circ p=0$.
+<li> Prouvons d'abord que $\textrm{Im}(p)$ et $\textrm{Im}(q)$ sont en somme directe.
+En effet, si $x\in \textrm{Im}(p)\cap\textrm{Im}(q)$, alors $x=p(x)$ et $x=q(x)$ (ce sont des projecteurs)
+d'où $x=p(x)=p(q(x))=0$. <br>
+D'autre part, il est clair que $\textrm{Im}(p+q)\subset\textrm{Im}(p)+\textrm{Im}(q)$.
+Réciproquement, soit $z=p(x)+q(y)\in\textrm{Im}(p)+\textrm{Im}(q)$. Alors
+$$p(z)=p^2(x)+p\circ q(y)=p(x)\textrm{ et }q(z)=q\circ p(x)+q^2(y)=q(y).$$
+Ainsi, $z=(p+q)(z)\in \textrm{Im}(p+q)$.<br>
+Enfin, on a toujours $\ker(p)\cap \ker(q)\subset\ker(p+q)$. Réciproquement,
+si $p(x)+q(x)=0$, alors puisque $\textrm{Im}(p)$ et $\textrm{Im}(q)$ sont en 
+somme directe, on a $p(x)=0$ et $q(x)=0$, d'où $x\in\ker(p)\cap\ker(q)$.
+</ol></div></div></div>
+
+<div class=titrepartie>Exercices théoriques sur les applications linéaires</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>34</span> <span id="rater842"></span><script>var myRating = raterJs( { element:document.querySelector("#rater842"),	max:5, rating:1.3571428571429, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(842,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avez-vous compris ce qu'étaient le noyau et l'image? <a id=heart34 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart34" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=842.html"> [Signaler une erreur]</a><a id=exo34 href="javascript:ajouteexo(842,34,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce842','imageenonce842');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce842"></a><div class=inner id="innerenonce842">Soient $E,F,G$ trois $\mathbb K$-espaces vectoriels, et soient $f\in\mathcal L(E,F)$
+et $g\in\mathcal L(F,G)$. Démontrer que
+$$g\circ f=0\iff \textrm{Im}f\subset\ker g.$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige842','imagecorrige842',842);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige842"></a><div class=inner id="innercorrige842" style="display:none;">Supposons d'abord que $g\circ f=0$, et prenons $y\in\textrm{Im}f$. Alors il existe $x\in E$
+tel que $y=f(x)$. Mais alors, $g(y)=g\circ f(x)=0$, et donc $y\in \ker g$.<br>
+Réciproquement, supposons que $\textrm{Im}f\subset\ker g$. Alors, pour tout $x\in E$, 
+$f(x)\in\textrm{Im} f\subset\ker g$, et donc $g(f(x))=0$, prouvant que $g\circ f=0$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>35</span> <span id="rater849"></span><script>var myRating = raterJs( { element:document.querySelector("#rater849"),	max:5, rating:1.8064516129032, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(849,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphismes qui commutent, noyaux et images <a id=heart35 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart35" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=849.html"> [Signaler une erreur]</a><a id=exo35 href="javascript:ajouteexo(849,35,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce849','imageenonce849');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce849"></a><div class=inner id="innerenonce849">Soit $E$ un espace vectoriel et $u,v\in\mathcal L(E)$. On suppose que $u\circ v=v\circ u$. Démontrer que $\textrm{ker}(u)$ et $\textrm{Im}(u)$ sont stables par $v$, c'est-à-dire que
+$$v(\ker (u))\subset \ker (u)\textrm{ et }v(\textrm{Im}(u))\subset \textrm{Im}(u).$$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige849','imagecorrige849',849);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige849"></a><div class=inner id="innercorrige849" style="display:none;">Prenons $x\in \ker (u)$. Alors $u(x)=0$, donc $v(u(x))=0$, donc $u(v(x))=0$. Ainsi, $v(x)\in \ker (u)$.<br>
+Prenons ensuite $y\in\textrm{Im}(u)$. Alors il existe $x\in E$ tel que $y=u(x)$. Mais alors 
+$$v(y)=v(u(x))=u(v(x))\in\textrm{Im}(u).$$
+C'est bien que $v(\textrm{Im}(u))\subset \textrm{Im}(u).$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>36</span> <span id="rater843"></span><script>var myRating = raterJs( { element:document.querySelector("#rater843"),	max:5, rating:1.5416666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(843,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Endomorphisme nilpotent et famille libre <a id=heart36 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart36" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=843.html"> [Signaler une erreur]</a><a id=exo36 href="javascript:ajouteexo(843,36,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce843','imageenonce843');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce843"></a><div class=inner id="innerenonce843">Soit $f\in\mathcal L(E)$ tel qu'il existe $n\geq 1$ vérifiant $f^n=0$ et $f^{n-1}\neq 0$. Démontrer qu'il existe $x\in E$ tel que la famille $(x,f(x),\dots,f^{n-1}(x))$ soit libre.</div></div><div class=indication><a href="javascript:showAll('innerindication843','imageindication843');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication843"></a><div class=inner id="innerindication843" style="display:none;">Considérer un $x$ tel que $f^{n-1}(x)\neq 0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige843','imagecorrige843',843);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige843"></a><div class=inner id="innercorrige843" style="display:none;">Puisque $f^{n-1}\neq 0$, il existe $x\in E$ tel que $f^{n-1}(x)\neq 0$. On va prouver que la famille  $(x,f(x),\dots,f^{n-1}(x))$ est libre. Pour cela, si on a 
+$$\lambda_0 x+\lambda_1 f(x)+\dots+\lambda_{n-1}f^{n-1}(x)=0,$$
+on applique $f^{n-1}$ à cette égalité. Puisque $f^{k}(x)=0$ si $k\geq n$, on obtient 
+$$\lambda_0 f^{n-1}(x)=0\implies \lambda_0=0$$ puisque $f^{n-1}(x)\neq 0$. On continue en composant par $f^{n-2}$, puis par $f^{n-3}$,etc... pour trouver successivement que $\lambda_1,\lambda_2$ jusque $\lambda_{n-1}$ sont nuls.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>37</span> <span id="rater974"></span><script>var myRating = raterJs( { element:document.querySelector("#rater974"),	max:5, rating:1.8260869565217, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(974,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Sommes directes de noyaux <a id=heart37 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart37" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=974.html"> [Signaler une erreur]</a><a id=exo37 href="javascript:ajouteexo(974,37,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce974','imageenonce974');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce974"></a><div class=inner id="innerenonce974">Soit $f\in\mathcal L(E)$. Démontrer que $\ker(f)$, $\ker(f-Id)$ et $\ker(f+Id)$ sont en somme directe.</div></div><div class=indication><a href="javascript:showAll('innerindication974','imageindication974');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication974"></a><div class=inner id="innerindication974" style="display:none;">Supposer qu'il y a une écriture $x+y+z=0$ avec $x,y,z$ dans les espaces respectifs, et composer (deux fois) par $f$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige974','imagecorrige974',974);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige974"></a><div class=inner id="innercorrige974" style="display:none;">Soient $x\in \ker(f)$, $y\in\ker(f-Id)$ et $z\in\ker(f+Id)$ tels que $x+y+z=0$. Il s'agit de prouver que $x=y=z=0$. Appliquons $f$ à la relation $x+y+z=0$. On trouve 
+$$f(x+y+z)=y-z=0.$$ On applique à nouveau $f$ et on trouve $y+z=0$. On a donc le système d'équations :
+$$\left\{
+\begin{array}{rcl}
+x+y+z&=&0\\
+y-z&=&0\\
+y+z&=&0.
+\end{array}\right.$$
+On en déduit facilement (par exemple en commençant par faire la somme des deux dernières équations) que $x=y=z=0$. Ainsi, $\ker(f)$, $\ker(f-Id)$ et $\ker(f+Id)$ sont en somme directe.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>38</span> <span id="rater844"></span><script>var myRating = raterJs( { element:document.querySelector("#rater844"),	max:5, rating:2.6153846153846, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(844,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Isomorphisme <a id=heart38 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart38" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=844.html"> [Signaler une erreur]</a><a id=exo38 href="javascript:ajouteexo(844,38,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce844','imageenonce844');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce844"></a><div class=inner id="innerenonce844">Soient $E,F$ deux espaces vectoriels
+et $f\in\mathcal L(E,F)$. Soit $G$ un supplémentaire
+de $\ker(f)$ dans $E$. Montrer que $G$ et $\textrm{Im}(f)$
+sont isomorphes.</div></div><div class=indication><a href="javascript:showAll('innerindication844','imageindication844');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication844"></a><div class=inner id="innerindication844" style="display:none;">Définir $g:G\to \textrm{Im}(f)$ par $g(x)=f(x)$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige844','imagecorrige844',844);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige844"></a><div class=inner id="innercorrige844" style="display:none;">On définit $g:G\to \textrm{Im}(f)$ par $g(x)=f(x)$. Alors :
+<ul class="rien">
+<li> $g$ est linéaire : c'est une conséquence directe du fait que $f$ est linéaire.
+<li> $g$ est injective : si $x\in\ker(g)$, alors $x\in G$ et $x\in\ker(f)$. Comme
+$G$ et $\ker(f)$ sont
+supplémentaires, on a $x=0$.
+<li> $g$ est surjective : prenons $y\in\textrm{Im}(f)$. Alors
+$y=f(x)$ avec $x\in E$. Décomposons $x$ en $x=u+v$ avec $u\in G$
+et $v\in\ker(f)$. Alors $y=f(x)=f(u)+f(v)=f(u)=g(u)$ avec $u\in G$, ce
+ qui prouve bien que $g$ est surjective.
+</ul>
+Ainsi, $g$ définit un isomorphisme de $G$ sur $\textrm{Im}(f)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>39</span> <span id="rater846"></span><script>var myRating = raterJs( { element:document.querySelector("#rater846"),	max:5, rating:2.15, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(846,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une caractérisation des homothéties <a id=heart39 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart39" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=846.html"> [Signaler une erreur]</a><a id=exo39 href="javascript:ajouteexo(846,39,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce846','imageenonce846');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce846"></a><div class=inner id="innerenonce846">Soit $E$ un espace vectoriel et $f\in\mathcal L(E)$ tel
+que, pour tout $x\in E$, la famille $(x,f(x))$ est liée.
+<ol class="enumeratechiffre">
+<li> Démontrer que pour tout $x\in E$, $x\neq 0$, il existe un scalaire $\lambda_x$ tel que 
+$f(x)=\lambda_x x$.
+<li> Soit $x,y\in E\backslash\{0\}$. 
+<ol class="enumeratechiffre">
+<li> Comparer $\lambda_x$ et $\lambda_y$ lorsque $(x,y)$ est liée.
+<li> Comparer $\lambda_x$ et $\lambda_y$ lorsque $(x,y)$ est libre.
+</ol>
+<li> En déduire que $f$ est une homothétie.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication846','imageindication846');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication846"></a><div class=inner id="innerindication846" style="display:none;"><ol class="enumeratechiffre">
+<li>
+<li>
+<ol class="enumeratechiffre">
+<li> &Eacute;crire $y=\mu x$ et calculer $f(\mu x)$ de deux façons différentes.
+<li> Calculer $f(x+y)$ de deux façons différentes.
+</ol>
+<li>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige846','imagecorrige846',846);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige846"></a><div class=inner id="innercorrige846" style="display:none;"><ol class="enumeratechiffre">
+<li> Puisque la famille $(x,f(x))$ est liée, il existe $(a,b)\neq (0,0)$ tel que $ax+bf(x)=0$.
+Puisque $x\neq 0$, on ne peut pas avoir $b=0$ et donc $f(x)=\frac {-a}b x$. On a le résultat avec $\lambda_x=\frac{-a}b$. Bien sûr, ce $\lambda_x$ est défini uniquement, car si on a $f(x)=\lambda_1 x$ et $f(x)=\lambda_2 x$, alors $(\lambda_1-\lambda_2)x=0$ et donc $\lambda_1=\lambda_2$ puisque $x\neq 0$.
+<li> <ol class="enumeratechiffre">
+<li> &Eacute;crivons $y=\mu x$. Alors 
+$$\mu\lambda_y x=\lambda_y y=f(y)=f(\mu x)=\mu f(x)=\mu \lambda_x x$$ et on peut simplifier
+par $\mu x\neq 0$ pour prouver que $\lambda_x=\lambda_y$.
+<li> Calculons $f(x+y)$ de deux façons différentes. D'une part,
+$$f(x+y)=\lambda_{x+y}(x+y)=\lambda_{x+y}x+\lambda_{x+y}y,$$
+d'autre part,
+$$f(x+y)=f(x)+f(y)=\lambda_x x+\lambda_y y.$$
+Puisque la famille $(x,y)$ est libre, toute décomposition d'un vecteur à l'aide de combinaison linéaire de ces vecteurs
+est unique. On obtient donc $\lambda_x=\lambda_y=\lambda_{x+y}$
+</ol>
+<li> D'après les questions précédentes, tous les $\lambda_x$, pour $x\neq 0$, sont égaux, et donc il existe un scalaire $\lambda$ tel que, pour tout $x\in E\backslash\{0\}$, $f(x)=\lambda x$. Ceci reste bien sûr vrai si $x=0$ : $f$ est bien une homothétie.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>40</span> <span id="rater845"></span><script>var myRating = raterJs( { element:document.querySelector("#rater845"),	max:5, rating:3.3529411764706, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(845,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Factorisation d'une application linéaire surjective <a id=heart40 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart40" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=845.html"> [Signaler une erreur]</a><a id=exo40 href="javascript:ajouteexo(845,40,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce845','imageenonce845');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce845"></a><div class=inner id="innerenonce845">Soient $E$ et $F$ deux $K$-espaces vectoriels et $f$ appartenant à $\mathcal L(E,F)$. 
+<ol class="enumeratechiffre">
+<li> On suppose qu'il existe $g$ appartenant à $\mathcal L(F,E)$ telle que $f\circ g=Id_F$.
+Montrer que $f$ est surjective.
+<li> On suppose que $f$ est surjective. On admet l'existence d'un sous-espace
+vectoriel $G$ de $E$ tel que $G\oplus \ker(f)=E$.
+<ol class="enumeratechiffre">
+<li> Soit $\hat f:G\to F$, $x\mapsto f(x)$. Montrer que $\hat f$ est un isomorphisme
+d'espaces vectoriels.
+<li> Soit $g:F\to E$, $y\mapsto \hat f^{-1}(y)$. Calculer $f\circ g$.
+</ol>
+<li> Conclure.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication845','imageindication845');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication845"></a><div class=inner id="innerindication845" style="display:none;"><ol class="enumeratechiffre">
+<li> Ceci est un fait général, qui ne dépend pas du fait que l'application soit linéaire!
+<li>
+<ol class="enumeratechiffre">
+<li> Calculer le noyau de $\hat f$ et montrer que $\hat f$ est surjective. Pour le dernier,
+utiliser que $f$ est surjective et décomposer un élément $x$ de $E$ dans la somme
+directe $\ker(f)\oplus G=E$.
+<li> Facile!
+</ol>
+<li> Donner une équivalence pour $f$ surjective.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige845','imagecorrige845',845);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige845"></a><div class=inner id="innercorrige845" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $y$ dans $F$. Alors, $y=f\circ g(y)=f(g(y))$, et donc $f$ est surjective.
+Remarquons que ceci ne dépend pas du tout du fait que les applications $f$ et $g$ sont linéaires.
+D'ailleurs, il est facile de prouver qu'une application $f:E\to F$ est surjective si et seulement
+s'il existe $g:F\to E$ telle que $f\circ g=Id_F$. Ce qu'il s'agit de prouver maintenant,
+c'est que si $f$ est linéaire, alors on peut choisir aussi $g$ linéaire.
+<li>
+<ol class="enumeratechiffre">
+<li> On montre que $\hat f$ est injective et surjective. 
+<ul class="rien">
+<li> $\hat f$ est injective : si $x\in G$ est tel que $\hat f(x)=0$, alors $f(x)=0$ et donc $x\in \ker(f)$.
+Comme $x\in G\cap\ker(f)=\{0\}$, on a $x=0$ et donc $\hat f$ est injective (il est clair
+que $\hat f$ est linéaire).
+<li> $\hat f$ est surjective : soit $y$ élément de $F$. On sait qu'il existe $x$ de $E$
+telle que $f(x)=y$. Décomposons $x$ en $x=x_1+x_2$ avec $x_1\in \ker(f)$ et $x_2\in G$.
+Alors $f(x)=f(x_1)+f(x_2)=0+\hat f(x_2)$ et donc $\hat f(x_2)=f(x)=y$ ce qui prouve
+que $\hat f$ est surjective.
+</ul>
+<li> Soit $y$ dans $F$, il existe $x\in G$ tel que $y=\hat f(x)$. Alors $f\circ g(y)=f\circ \hat f^{-1}(\hat f(x))=\hat f(x)$. Or $x\in G$ donc
+$\hat f(x)=f(x)=y$.
+Donc $f\circ g=Id_F$.
+</ol>
+<li> Si on admet (ou si on sait) que tout sous-espace vectoriel de $E$ admet un supplémentaire,
+alors on a prouvé que $f\in\mathcal L(E,F)$ est surjective si et seulement s'il existe
+$g\in\mathcal L(F,E)$ tel que $f\circ g=Id_F$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>41</span> <span id="rater847"></span><script>var myRating = raterJs( { element:document.querySelector("#rater847"),	max:5, rating:2.25, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(847,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Factorisation et inclusion de noyaux <a id=heart41 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart41" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=847.html"> [Signaler une erreur]</a><a id=exo41 href="javascript:ajouteexo(847,41,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce847','imageenonce847');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce847"></a><div class=inner id="innerenonce847">Dans cet exercice, on admet que dans tout espace vectoriel, 
+un sous-espace admet un supplémentaire.<br>
+Soient $E,F$ deux espaces vectoriels et $u,v\in\mathcal L(E,F)$. Montrer que
+$$\ker(u)\subset\ker(v)\iff \exists f\in\mathcal L(F)\textrm{ tel que }v=f\circ u.$$</div></div><div class=indication><a href="javascript:showAll('innerindication847','imageindication847');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication847"></a><div class=inner id="innerindication847" style="display:none;">Un sens est facile. Pour la réciproque,
+on pourra regarder comment définir $f$ sur $\textrm{Im}(u)$.
+On prouvera que cette définition a bien un sens, et puis on
+la complètera sur un supplémentaire.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige847','imagecorrige847',847);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige847"></a><div class=inner id="innercorrige847" style="display:none;">Une inclusion est immédiate : si $v=f\circ u$, et $x\in\ker(u)$, avec $v(x)=f(u(x))=f(0)=0$
+et donc $\ker(u)\subset \ker(v)$.<br>
+Réciproquement, supposons que $\ker(u)\subset\ker(v)$. Prenons $y\in\textrm{Im(u)}$.
+Alors $y=u(x)$ pour un $x$ dans $E$. Nécessairement, on a $v(x)=f(u(x))=f(y)$
+et donc $f$ doit être définie sur $\textrm{Im}(u)$ par $f(y)=v(x)$ pour $y=u(x)$.<br>
+On considère donc un supplémentaire $S$ de $\textrm{Im}(u)$ dans $F$
+et on définit $f$ sur la somme directe $\textrm{Im}(u)\oplus S$
+par 
+$$\left\{
+\begin{array}{rcll}
+f(y)&=&0&\textrm{ si }y\in S\\
+f(y)&=&v(x)&\textrm{ si }y\in \textrm{Im}(u)\textrm{ et }y=u(x).
+\end{array}\right.
+$$
+Cette définition a bien un sens. En effet, si $y=u(x_1)=u(x_2)$,
+alors $x_1-x_2\in\ker(u)\subset\ker(v)$ et donc $v(x_1)=v(x_2)$.
+De plus, $f$ ainsi défini est bien linéaire. Il suffit
+de verifier la linéarité sur $\textrm{Im}(u)$.
+Mais prenons $y_1=u(x_1),\ y_2=u(x_2)\in\textrm{Im}(u)$
+et $\lambda\in\mathbb K$. Alors
+$$y_1+\lambda y_2=u(x_1)+\lambda u(x_2)=u(x_1+\lambda x_2)$$
+et donc
+$$f(y_1+\lambda y_2)=v(x_1+\lambda x_2)=v(x_1)+\lambda v(x_2)=f(y_1)+\lambda f(y_2).$$
+Ceci achève la preuve du résultat.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>42</span> <span id="rater848"></span><script>var myRating = raterJs( { element:document.querySelector("#rater848"),	max:5, rating:2.9772727272727, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(848,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Factorisation et inclusion des images <a id=heart42 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart42" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=848.html"> [Signaler une erreur]</a><a id=exo42 href="javascript:ajouteexo(848,42,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce848','imageenonce848');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce848"></a><div class=inner id="innerenonce848">Dans cet exercice, on suppose connue la propriété suivante : si $E_1$ est un espace vectoriel et $F_1$ est un sous-espace vectoriel de $E_1$, alors il possède un supplémentaire.
+Soient alors $E,F,G$ trois espaces vectoriels, $u\in\mathcal L(F,G)$ et $v\in\mathcal L(E,G)$.
+Démontrer que les propriétés suivantes sont équivalentes :
+<ol class="enumeratechiffre">
+<li> $\textrm{Im}(v)\subset\textrm{Im}(u)$;
+<li> Il existe $w\in\mathcal L(E,F)$ tel que $v=u\circ w$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication848','imageindication848');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication848"></a><div class=inner id="innerindication848" style="display:none;">Prendre $x\in E$ et réfléchir à quoi doit être égal $w(x)$... à un $y$ tel que $u(y)=v(x)$!
+</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige848','imagecorrige848',848);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige848"></a><div class=inner id="innercorrige848" style="display:none;"><ul class="rien">
+<li> $(ii)\implies (i)$ : c'est l'implication facile. En effet, si $x\in \textrm{Im}(v)$, alors
+$x=v(y)=u(w(y))$ et donc $x\in\textrm{Im}(u)$.
+<li> $(i)\implies (ii)$ : commençons par réfléchir à ce que l'on souhaite...
+Pour $x\in E$, on veut définir $w(x)\in F$ tel que $u(w(x))=v(x)$. Mais, puisque $\textrm{Im}(v)\subset\textrm{Im}(u)$,
+alors il existe $y\in F$ tel que $v(x)=u(y)$. On a envie de poser $w(x)=y$, ce qui donne la bonne factorisation.
+Le problème c'est que plusieurs $y$ peuvent répondre à ce problème... On va se simplifier la tâche en considérant $F_1$ un supplémentaire
+de $\ker u$ dans $F$. Alors $u_{|F_1}$ est un isomorphisme de $F_1$ sur $\textrm{Im}(u)$. En particulier, on peut définir l'isomorphisme réciproque
+$f:\textrm{Im}(u)\to F_1$ vérifiant $u(f(x))=x$. On pose alors $w(x)=f(v(x))$, qui a bien un sens puisque $\textrm{Im}(v)\subset\textrm{Im}(u)$. Ainsi, $w$ est bien un élément de $\mathcal L(E,F)$, et
+$$\forall x\in E, u(w(x))=u(f(v(x)))=v(x).$$
+</ul></div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	

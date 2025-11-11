@@ -1,0 +1,793 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><script async src="https://tags.refinery89.com/v2/bibmathnet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYE0T3DYG"></script><script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-CTYE0T3DYG');</script>
+<meta name="Author" CONTENT="Fred Bayart"><meta name="Description" CONTENT="Ressources de mathématiques"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exercices corrigés -Dérivées partielles - Fonctions de classe $\mathcal C^k$</title><link type="text/css" href="../css/bibstyle.css" rel="stylesheet" /><link type="text/css" href="lib/ressources.css" rel="stylesheet" /><link type="text/css" href="../common/rater-js/style.css" rel="stylesheet" /><link type="text/css" href="../css/prism.css" rel="stylesheet" /><script type='text/x-mathjax-config'>
+MathJax.Hub.Config({  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, CommonHTML: {
+scale: 90
+} }); </script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script type="text/javascript" src="../common/fonctions.js"></script><script type="text/javascript" src="lib/oXHR.js"></script><script type="text/javascript" src="lib/ajouteexo.js"></script><script type="text/javascript" src="../common/rater-js/rater-jss.js"></script><script type="text/javascript" src="lib/noteexo.js"></script><script type="text/javascript" src="../common/prism.js"></script><script type="text/javascript" src="lib/exofavori.js"></script><link rel="icon" type="image/png" href="../img/icone.png"></head><body>	<div style="display:none">$$\newcommand{\mtn}{\mathbb{N}}\newcommand{\mtns}{\mathbb{N}^*}\newcommand{\mtz}{\mathbb{Z}}\newcommand{\mtr}{\mathbb{R}}\newcommand{\mtk}{\mathbb{K}}\newcommand{\mtq}{\mathbb{Q}}\newcommand{\mtc}{\mathbb{C}}\newcommand{\mch}{\mathcal{H}}\newcommand{\mcp}{\mathcal{P}}\newcommand{\mcb}{\mathcal{B}}\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcmn}{\mathcal{M}}\newcommand{\mcmnr}{\mathcal{M}_n(\mtr)}
+\newcommand{\mcmnk}{\mathcal{M}_n(\mtk)}\newcommand{\mcsn}{\mathcal{S}_n}
+\newcommand{\mcs}{\mathcal{S}}\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mcsns}{\mathcal{S}_n^{++}}\newcommand{\glnk}{GL_n(\mtk)}
+\newcommand{\mnr}{\mathcal{M}_n(\mtr)}\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}\DeclareMathOperator{\th}{th}
+\DeclareMathOperator{\vect}{vect}\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\comat}{comat}\DeclareMathOperator{\imv}{Im}
+\DeclareMathOperator{\rang}{rg}\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\supp}{supp}
+\newcommand{\veps}{\varepsilon}\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcun}{\mcu_n}\newcommand{\dis}{\displaystyle}
+\newcommand{\croouv}{[\![}\newcommand{\crofer}{]\!]}
+\newcommand{\rab}{\mathcal{R}(a,b)}\newcommand{\pss}[2]{\langle #1,#2\rangle}
+$$</div><header id="bandeau"><div id="bandeaucentre"><a href="../index.php.html" id=bandeaulogo>Bibm@th.net</a><span id=bandeaumilieu><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw" alt="Visiter notre chaine YouTube" title="Visiter notre chaine YouTube"><img src="../img/youtube.png" /></a><a href="https://www.instagram.com/bibmath/" alt="Visiter notre compte Instagram" title="Visiter notre compte Instagram"><img src="../img/instagram.png" /></a><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre.png" /></span>
+			</span><form id="formrech" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div id=bandeaurecherche>
+	<input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" />
+	<button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> 
+	<img src="https://www.bibmath.net//img/recherche.png" height=30px>
+	</button></div></form></div></header><header id="bandeaumobile"><div class="sousbandeaumobile"><span class="itembandeaumobile" id="iconeouvremenu"><a href="javascript:ouvremenumobile()"><img src="../img/menumobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermemenu"><a href="javascript:fermemenumobile()"><img src="../img/deletemobile.png"></a></span><a href="../index.php.html" class="itembandeaumobile">Bibm@th</a></div><div class="sousbandeaumobile"><span class="itembandeaumobile"><a href="https://www.bibmath.net/forums/index.php" title="Accéder au forum du site"><img src="../img/forumgrand.png" /></a></span><span class="itembandeaumobilesansbordure"><span class="theme-btn" alt="Modifier le thème d'affichage" title="Modifier le thème d'affichage"><img src="../img/mode-sombre-mobile.png" /></a></span><span class="itembandeaumobilesansbordure"><a href="../forums/login.php.html" alt="Consulter mon compte" title="Vous n'êtes pas identifié. Identifiez-vous."><img src="../img/moncomptemobile.png" /></a></span><span class="itembandeaumobile"  id="iconeouvrerecherche"><a href="javascript:ouvrerecherchemobile()"><img src="../img/loupemobile.png" /></a></span><span class="itembandeaumobilefondnoir" id="iconefermerecherche"><a href="javascript:fermerecherchemobile()"><img src="../img/deletemobile.png"></a></span></div></header><div id="recherchemobile"><form id="formrecherchemobile" name="recherche" action="https://www.bibmath.net/recherche.php"  method="get"><div class="divinputrecherche"><input name="q" placeholder="Rechercher sur le site..." class="formulairerecherche inputrecherche" /></div><div class="divboutonmobile"><button class="formulairerecherche boutonrecherche" value="" title="Rechercher"> </button></div></form></div><div id="menuetsousmenu"><nav id="menuhaut"><div id="menuhautcentre"><div id="menuhautgauche"><section id="listemenuhaut"><span id="menu0" class="item"><a href="../index.php.html"><img src="../img/maison.png" />Accueil</a></span><span id="menu1" class="item"><a href="javascript:affiche_sousmenu(1);"><img src="../img/lycee16.png" />Lycée</a></span><span id="menu2" class="item"><a href="javascript:affiche_sousmenu(2);"><img src="../img/ressources.png" />Supérieur</a></span><span id="menu3" class="itemselectionne"><a href="javascript:affiche_sousmenu(3);"><img src="../img/bibliotheques.png" />Bibliothèques</a></span><span id="menu4" class="item"><a href="javascript:affiche_sousmenu(4);"><img src="../img/references.png" />Références</a></span><span id="menu5" class="item"><a href="javascript:affiche_sousmenu(5);"><img src="../img/themes.png" />Thèmes</a></span><span id="menu6" class="item"><a href="https://www.bibmath.net/forums/index.php"><img src="../img/forum.png" />Forum</a></span></section></div><div id="menuhautdroite"><section id="listemenuhaut"><span id="menu7" class="item"><a href="moncompte.php.html"><img src="../img/profil.png" />Mon compte</a></span><span id="menu8" class="item"><a href="https://fr.tipeee.com/bibmath"><img src="../img/coeur.png" />Faire un don</a></span></section></div></div></nav><nav id="sousmenuhaut"><div id="sousmenuhautcentre"><section id="listesousmenuhaut"><div class="sousmenucontenu" id="sousmenu_0" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_1" style="display:none" ><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html">Collège</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index">Seconde</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html">Grand Oral</a></span></div><div class="sousmenucontenu" id="sousmenu_2" style="display:none" ><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index">Math Sup</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index">Math Spé</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index">Capes</a></span><span class="sousmenuitem"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index">Agreg interne</a></span><span class="sousmenuitem"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html">BTS</a></span></div><div class="sousmenucontenu" id="sousmenu_3" style="display:flex" ><span class="sousmenuitemselectionne"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index">Bibliothèque d'exercices</a></span><span class="sousmenuitem"><a href="../pbs/index.php.html">Bibliothèque de problèmes</a></span><span class="sousmenuitem"><a href="../quizz/index.php.html">Automatismes</a></span></div><div class="sousmenucontenu" id="sousmenu_4" style="display:none" ><span class="sousmenuitem"><a href="../dico/index.php.html">Dictionnaire</a></span><span class="sousmenuitem"><a href="../bios/index.php.html">Biographies</a></span><span class="sousmenuitem"><a href="../formulaire/index.php.html">Formulaire</a></span><span class="sousmenuitem"><a href="../trans/index.php.html">Lexique français / anglais</a></span></div><div class="sousmenucontenu" id="sousmenu_5" style="display:none" ><span class="sousmenuitem"><a href="../crypto/Analyse.class.html">Cryptographie et codes secrets</a></span><span class="sousmenuitem"><a href="../jeux/index.php.html">Jeux et énigmes</a></span><span class="sousmenuitem"><a href="../quotidien/index.php.html">Mathématiques au quotidien</a></span><span class="sousmenuitem"><a href="../dossiers/index.php.html">Dossiers</a></span></div><div class="sousmenucontenu" id="sousmenu_6" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_7" style="display:none" ></div><div class="sousmenucontenu" id="sousmenu_8" style="display:none" ></div></section></div></nav><nav id="menumobile"><div class="itemmenumobile"><a href="../index.php.html"><div class="teteitemmenumobile"><span>Accueil</span></a></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(1);"><div class="teteitemmenumobile"><span>Lycée</span></a></div><div class="sousmenumobile" id="sousmenumobile1"><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=college%252Findex.html"><span>Collège</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=seconde/index"><span>Seconde</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=grandoral%252Findex.html"><span>Grand Oral</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(2);"><div class="teteitemmenumobile"><span>Supérieur</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme2"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert2"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile2"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mpsi/index"><span>Math Sup</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=mathspe/index"><span>Math Spé</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=capes/index"><span>Capes</span></a></div><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=agreginterne/index"><span>Agreg interne</span></a></div><div class="sousitemmenumobile"><a href="index.php%3Faction=affiche&amp;quoi=bts%252Findex.html"><span>BTS</span></a></div></div></div><div class="itemmenumobileselectionne"><a href="javascript:affiche_sousmenumobile(3);"><div class="teteitemmenumobile"><span>Bibliothèques</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme3"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert3"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile3"><div class="sousitemmenumobile"><a href="https://www.bibmath.net/ressources/index.php?action=affiche&amp;quoi=bde/index"><span>Bibliothèque d'exercices</span></a></div><div class="sousitemmenumobile"><a href="../pbs/index.php.html"><span>Bibliothèque de problèmes</span></a></div><div class="sousitemmenumobile"><a href="../quizz/index.php.html"><span>Automatismes</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(4);"><div class="teteitemmenumobile"><span>Références</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme4"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert4"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile4"><div class="sousitemmenumobile"><a href="../dico/index.php.html"><span>Dictionnaire</span></a></div><div class="sousitemmenumobile"><a href="../bios/index.php.html"><span>Biographies</span></a></div><div class="sousitemmenumobile"><a href="../formulaire/index.php.html"><span>Formulaire</span></a></div><div class="sousitemmenumobile"><a href="../trans/index.php.html"><span>Lexique français / anglais</span></a></div></div></div><div class="itemmenumobile"><a href="javascript:affiche_sousmenumobile(5);"><div class="teteitemmenumobile"><span>Thèmes</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme5"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert5"  style="display:none;"/></a></div><div class="sousmenumobile" id="sousmenumobile5"><div class="sousitemmenumobile"><a href="../crypto/Analyse.class.html"><span>Cryptographie et codes secrets</span></a></div><div class="sousitemmenumobile"><a href="../jeux/index.php.html"><span>Jeux et énigmes</span></a></div><div class="sousitemmenumobile"><a href="../quotidien/index.php.html"><span>Mathématiques au quotidien</span></a></div><div class="sousitemmenumobile"><a href="../dossiers/index.php.html"><span>Dossiers</span></a></div></div></div><div class="itemmenumobile"><a href="https://www.bibmath.net/forums/index.php"><div class="teteitemmenumobile"><span>Forum</span><img src="../img/flechedroite.png" id="sousmenumobileimageferme6"  /><img src="../img/flechebas.png" id="sousmenumobileimageouvert6"  style="display:none;"/></a></div></div><div class="itemmenumobile"><a href="moncompte.php.html"><div class="teteitemmenumobile"><span>Mon compte</span></a></div></div><div class="itemmenumobile"><a href="https://fr.tipeee.com/bibmath"><div class="teteitemmenumobile"><span>Faire un don</span></a></div></div></nav></div><div id="main"><div id="maincentre"><div id="gauche"><div id="pubhaute"><div class="r89-desktop-leaderboard-atf"></div><div class="r89-mobile-billboard-top"></div></div><article id="contenugauche"><div class="chemin"><a href="index.php.html">Ressources mathématiques</a> &gt; <a href="index.php%3Faction=affiche&amp;quoi=bde%252Fanalyse.html">Exercices d'analyse</a> &gt; </div><div class="chemin"><a href="moncompte.php.html">Accéder à mon compte</a> &gt; <a href="mafeuille.php.html">Accéder à ma feuille d'exercices</a> &gt; </div><h1>Exercices corrigés - Dérivées partielles - Fonctions de classe $\mathcal C^k$</h1><div class=titrepartie>Dérivées partielles, Dérivées suivant un vecteur</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>1</span> <span id="rater46"></span><script>var myRating = raterJs( { element:document.querySelector("#rater46"),	max:5, rating:1.4375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(46,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de dérivées partielles <a id=heart1 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart1" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=46.html"> [Signaler une erreur]</a><a id=exo1 href="javascript:ajouteexo(46,1,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce46','imageenonce46');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce46"></a><div class=inner id="innerenonce46">Justifier l'existence des dérivées partielles des fonctions suivantes, et les calculer.
+<ol class="enumeratechiffre">
+<li> $f(x,y)=e^x\cos y.$
+<li> $f(x,y)=(x^2+y^2)\cos(xy).$
+<li> $f(x,y)=\sqrt{1+x^2y^2}.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication46','imageindication46');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication46"></a><div class=inner id="innerindication46" style="display:none;">Dériver par rapport à une variable comme si l'autre était constante!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige46','imagecorrige46',46);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige46"></a><div class=inner id="innercorrige46" style="display:none;">Pour tout réel $y$ fixé, la fonction $x\mapsto e^x\cos y$ est dérivable sur $\mathbb R$, ce qui justifie l'existence de la dérivée partielle par rapport à la première variable dans le premier exemple. La justification est identique pour les autres fonctions et on trouve respectivement :
+<ol class="enumeratechiffre">
+<li> $$\frac{\partial f}{\partial x}(x,y)=e^x\cos y\textrm{ et }\frac{\partial f}{\partial y}(x,y)=-e^{x}\sin y.$$
+<li> $$\frac{\partial f}{\partial x}(x,y)=2x\cos(xy)-y(x^2+y^2)\sin(xy),$$
+$$\frac{\partial f}{\partial y}(x,y)=2y\cos(xy)-x(x^2+y^2)\sin(xy).$$
+<li> $$\frac{\partial f}{\partial x}(x,y)=\frac{xy^2}{\sqrt{1+x^2y^2}},\textrm{ et }\frac{\partial f}{\partial y}(x,y)=\frac{yx^2}{\sqrt{1+x^2y^2}}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>2</span> <span id="rater47"></span><script>var myRating = raterJs( { element:document.querySelector("#rater47"),	max:5, rating:1.9868421052632, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(47,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composition <a id=heart2 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart2" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=47.html"> [Signaler une erreur]</a><a id=exo2 href="javascript:ajouteexo(47,2,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce47','imageenonce47');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce47"></a><div class=inner id="innerenonce47">Soit $f:\mathbb R^2\to \mathbb R$ une fonction de classe $C^1$.
+<ol class="enumeratechiffre">
+<li> On définit $g:\mathbb R\to\mathbb R$ par $g(t)=f(2+2t,t^2)$. Démontrer que $g$ est $C^1$
+et calculer $g'(t)$ en fonction des dérivées partielles de $f$.
+<li> On définit $h:\mathbb R^2\to\mathbb R$ par $h(u,v)=f(uv,u^2+v^2)$. Démontrer que $h$ est
+$C^1$ et exprimer les dérivées partielles $\frac{\partial h}{\partial u}$ et $\frac{\partial h}{\partial v}$ en
+fonction des dérivées partielles $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication47','imageindication47');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication47"></a><div class=inner id="innerindication47" style="display:none;">Appliquer le théorème de dérivation d'une fonction composée.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige47','imagecorrige47',47);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige47"></a><div class=inner id="innercorrige47" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Méthode et résolution de l'exercice en vidéo</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pmGuvD27gk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> La fonction $t\mapsto (2+2t,t^2)$ est de classe $C^1$, car polynômiale, donc $g$ est de classe $C^1$ par composition.
+On applique ensuite la formule de la dérivée d'une fonction composée. Si on note $x(t)=2+2t$ et $y(t)=t^2$, alors
+$$g'(t)=x'(t)\frac{\partial f}{\partial x}(x(t),y(t))+y'(t)\frac{\partial f}{\partial y}(x(t),y(t)),$$
+soit 
+$$g'(t)=2\frac{\partial f}{\partial x}(2+2t,t^2)+2t\frac{\partial f}{\partial y}(2+2t,t^2).$$
+<li> La fonction $(u,v)\mapsto (uv,u^2+v^2)$ est de classe $C^1$ car polynômiale, donc 
+$h$ est de classe $C^1$. Notons $x(u,v)=uv$ et $y(u,v)=u^2+v^2$. Le théorème de dérivation d'une composée dit que
+$$\frac{\partial h}{\partial u}(u,v)=\frac{\partial x}{\partial u}(u,v)\times \frac{\partial f}{\partial x}(x(u,v),y(u,v))+\frac{\partial y}{\partial u}(u,v)\times \frac{\partial f}{\partial y}(x(u,v),y(u,v)).$$
+Ceci donne 
+$$\frac{\partial h}{\partial u}(u,v)=v \frac{\partial f}{\partial x}(uv,u^2+v^2)+2u \frac{\partial f}{\partial y}(uv,u^2+v^2).$$
+De même on trouve
+$$\frac{\partial h}{\partial v}(u,v)=u \frac{\partial f}{\partial x}(uv,u^2+v^2)+2v \frac{\partial f}{\partial y}(uv,u^2+v^2).$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>3</span> <span id="rater3608"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3608"),	max:5, rating:2.0322580645161, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3608,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Règle de la chaîne et primitive <a id=heart3 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart3" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3608.html"> [Signaler une erreur]</a><a id=exo3 href="javascript:ajouteexo(3608,3,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3608','imageenonce3608');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3608"></a><div class=inner id="innerenonce3608">Soit $\varphi:\mathbb R\to\mathbb R$ une fonction continue.
+Démontrer que la fonction $u$ définie sur $\mathbb R^2$ par $\displaystyle u(x,y)=\int_{x-y}^{x+y}\varphi(t)dt$ est de classe $\mathcal C^1$ et calculer ses dérivées partielles.</div></div><div class=indication><a href="javascript:showAll('innerindication3608','imageindication3608');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3608"></a><div class=inner id="innerindication3608" style="display:none;">Introduire une primitive $\phi$ de $\varphi.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3608','imagecorrige3608',3608);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3608"></a><div class=inner id="innercorrige3608" style="display:none;">Considérons $\phi$ une primitive de la fonction continue $\varphi.$ 
+$\phi$ est de classe $C^1$ sur $\mathbb R$ et pour tout $(x,y)\in\mathbb R^2$, on a $u(x,y)=\phi(x+y)-\phi(x-y).$ Par composition, $u$ est de classe $C^1$. Par la règle de la chaine, on a, pour tout $(x,y)\in\mathbb R^2,$
+\begin{align*}
+\frac{\partial u}{\partial x}(x,y)&=\phi'(x+y)-\phi'(x-y)=\varphi(x+y)-\varphi(x-y)\\
+\frac{\partial u}{\partial y}(x,y)&=\phi'(x+y)+\phi'(x-y)=\varphi(x+y)+\varphi(x-y).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>4</span> <span id="rater48"></span><script>var myRating = raterJs( { element:document.querySelector("#rater48"),	max:5, rating:2.0645161290323, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(48,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Composer! <a id=heart4 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart4" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=48.html"> [Signaler une erreur]</a><a id=exo4 href="javascript:ajouteexo(48,4,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce48','imageenonce48');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce48"></a><div class=inner id="innerenonce48">Soit $f$ une application de classe $C^1$ sur $\mtr^2$. Calculer les dérivées (éventuellement partielles) des fonctions suivantes :
+<ol class="enumeratechiffre">
+<li> $g(x,y)=f(y,x)$.
+<li> $g(x)=f(x,x)$.
+<li> $g(x,y)=f(y,f(x,x))$.
+<li> $g(x)=f(x,f(x,x))$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication48','imageindication48');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication48"></a><div class=inner id="innerindication48" style="display:none;">Il s'agit essentiellement d'une application bien comme il faut du théorème de composée des dérivées partielles.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige48','imagecorrige48',48);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige48"></a><div class=inner id="innercorrige48" style="display:none;"><ol class="enumeratechiffre">
+<li> On a :
+$$\frac{\partial g}{\partial x}=\frac{\partial f}{\partial x}\frac{\partial y}{\partial x}+\frac{\partial f}{\partial y}\frac{\partial x}{\partial x},$$
+soit 
+$$\frac{\partial g}{\partial x}(x,y)=\frac{\partial f}{\partial y}(y,x),$$
+et symétriquement
+$$\frac{\partial g}{\partial y}(x,y)=\frac{\partial f}{\partial x}(y,x).$$
+Pour ceux qui se perdent dans ce calcul formel, poser $u(x,y)=y$ et $v(x,y)=x$, on a $g(x,y)=f(u(x,y),v(x,y))$ et donc
+$$\frac{\partial g}{\partial x}(x,y)=\frac{\partial f}{\partial x}\frac{\partial u}{\partial x}+\dots.$$
+<li> On a :
+$$g'(x)=\frac{\partial f}{\partial x}(x,x)+\frac{\partial f}{\partial y}(x,x).$$
+<li> Notons, pour simplifier, $h(x)=f(x,x)$. On a donc :
+$$\frac{\partial g}{\partial x}(x,y)=h'(x)\frac{\partial f}{\partial y}(y,h(x))=\left(\frac{\partial f}{\partial x}(x,x)+\frac{\partial f}{\partial y}(x,x)\right)\frac{\partial f}{\partial y}(y,h(x)).$$
+De même, on a :
+$$\frac{\partial g}{\partial y}(x,y)=\frac{\partial f}{\partial x}(y,h(x)).$$
+<li> Avec les mêmes notations que précédemment, on obtient la somme des quantités précédemment calculées.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>5</span> <span id="rater49"></span><script>var myRating = raterJs( { element:document.querySelector("#rater49"),	max:5, rating:1.3488372093023, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(49,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Continue et pas de dérivées partielles <a id=heart5 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart5" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=49.html"> [Signaler une erreur]</a><a id=exo5 href="javascript:ajouteexo(49,5,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce49','imageenonce49');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce49"></a><div class=inner id="innerenonce49">On définit $f:\mathbb R^2\backslash\{(0,0)\}\to\mathbb R$ par 
+$$f(x,y)=\frac{x^2}{(x^2+y^2)^{3/4}}.$$
+Justifier que l'on peut prolonger $f$ en une fonction continue sur $\mathbb R^2$. &Eacute;tudier l'existence de dérivées partielles en $(0,0)$ pour ce prolongement.
+</div></div><div class=indication><a href="javascript:showAll('innerindication49','imageindication49');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication49"></a><div class=inner id="innerindication49" style="display:none;">Pour l'étude de l'existence de dérivées partielles, revenir à la définition en utilisant la limite du taux d'accroissement.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige49','imagecorrige49',49);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige49"></a><div class=inner id="innercorrige49" style="display:none;">D'une part, la fonction $f$  est continue sur $\mathbb R^2\backslash\{(0,0)\}$. D'autre part, on a 
+$$|f(x,y)|\leq (x^2+y^2)^{1/4}.$$
+Ainsi, $f$ se prolonge par continuité en $(0,0)$ en posant $f(0,0)=0$. Du fait que $f(0,t)=0$ pour tout réel $t$, $f$
+admet une dérivée partielle par rapport à la seconde variable en $(0,0)$ qui vaut $\frac{\partial f}{\partial y}(0,0)=0$.
+D'autre part, pour $t\neq 0$, on a 
+$$\frac{f(t,0)-f(0,0)}t=|t|^{-1/2}.$$
+Ceci tend vers $+\infty$ si $t$ tend vers 0, et donc $f$ n'admet pas de dérivée partielle par rapport à la première variable en $(0,0)$.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>6</span> <span id="rater50"></span><script>var myRating = raterJs( { element:document.querySelector("#rater50"),	max:5, rating:2.375, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(50,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Dérivée suivant tout vecteur, et pas continue <a id=heart6 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart6" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=50.html"> [Signaler une erreur]</a><a id=exo6 href="javascript:ajouteexo(50,6,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce50','imageenonce50');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce50"></a><div class=inner id="innerenonce50">Pour les fonctions suivantes, démontrer qu'elles admettent une dérivée suivant tout vecteur en $(0,0)$ sans pour autant y être continue.
+<ol class="enumeratechiffre">
+<li> $\displaystyle f(x,y)=\left\{
+\begin{array}{ll}
+y^2\ln |x|&\textrm{ si }x\neq 0\\
+0&\textrm{ sinon.}
+\end{array}
+\right.
+$
+<li> $\displaystyle g(x,y)=\left\{
+\begin{array}{ll}
+\frac{x^2y}{x^4+y^2}&\textrm{ si }(x,y)\neq (0,0)\\
+0&\textrm{ sinon.}
+\end{array}
+\right.
+$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication50','imageindication50');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication50"></a><div class=inner id="innerindication50" style="display:none;">Pour l'étude de la dérivée suivant le vecteur $(a,b)$ en $(0,0)$, revenir à la définition de l'existence du nombre dérivé.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige50','imagecorrige50',50);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige50"></a><div class=inner id="innercorrige50" style="display:none;"><ol class="enumeratechiffre">
+<li> Prouvons d'abord que $f$ n'est pas continue en $(0,0)$. En effet, on a 
+$$f(e^{-n^2},1/n)=-1,$$
+qui ne tend pas vers 0 si $n$ tend vers l'infini. Fixons maintenant $(a,b)\in\mathbb R^2$
+avec $(a,b)\neq (0,0)$, et démontrons que $f$ admet une dérivée suivant $(a,b)$ en $(0,0)$. Soit $t\neq 0$. On a
+$$\frac{f(ta,tb)-f(0,0)}t=\left\{
+\begin{array}{ll}
+tb^2\big(\ln |t|+\ln|a|\big)&\textrm{ si }a\neq 0\\
+0&\textrm{ sinon.}
+\end{array}
+\right.
+$$
+Lorsque $t$ tend vers 0, ceci tend vers $0$ (en particulier, parce que $t\ln |t|$ tend vers 0 en 0). Ainsi, $f$ admet en $(0,0)$ une dérivée
+suivant le vecteur $(a,b)$ qui est nulle.
+<li> De même, démontrons que $g$ n'est pas continue en observant que 
+$$g\left(\frac 1n,\frac1{n^2}\right)=\frac{1}{2}\neq 0=g(0,0).$$
+D'autre part, fixons $(a,b)\in\mathbb R^2\backslash\{(0,0)\}$ et prouvons que $g$ admet une dérivée suivant $(a,b)$ en $(0,0)$.
+On a, pour $t\neq 0$,
+$$\frac{g(ta,tb)-g(0,0)}t=\frac{t^3a^2b}{t\times(t^4a^4+t^2b^2)}=\frac{a^2b}{t^2a^4+b^2}.$$
+Si $b=0$, ceci est nul, sinon 
+$$\frac{g(ta,tb)-g(0,0)}t\xrightarrow{t\to 0}\frac{a^2}b.$$
+Dans tous les cas, on a prouvé que $g$ admet une dérivée en $(0,0)$ suivant le vecteur $(a,b)$ qui vaut $\frac{a^2}{b}$ si $b\neq 0$, et qui vaut
+$0$ si $b=0$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>7</span> <span id="rater3616"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3616"),	max:5, rating:2.2, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3616,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Intégrale à paramètres avec borne qui varie <a id=heart7 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart7" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3616.html"> [Signaler une erreur]</a><a id=exo7 href="javascript:ajouteexo(3616,7,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3616','imageenonce3616');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3616"></a><div class=inner id="innerenonce3616">Soit $I$ et $J$ deux intervalles (non réduits à un point) et $f:I\times J\to\mathbb R$ une fonction telle que 
+<ul class="rien">
+<li> pour tout $t\in I,$ $x\mapsto f(t,x)$ est de classe $\mathcal C^1$ sur $J,$
+<li> pour tout $x\in J,$ $t\mapsto f(t,x)$ est continue sur $I.$
+</ul>
+On fixe $a\in I$ et $b:J\to I$ dérivable. Justifier que la fonction 
+$$\phi:x\mapsto \int_a^{b(x)}f(t,x)dt$$
+est dérivable sur $J$ et déterminer sa dérivée.</div></div><div class=indication><a href="javascript:showAll('innerindication3616','imageindication3616');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3616"></a><div class=inner id="innerindication3616" style="display:none;">Introduire $F(u,v)=\int_a^u f(t,v)dt.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3616','imagecorrige3616',3616);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3616"></a><div class=inner id="innercorrige3616" style="display:none;">L'idée est d'introduire une variable supplémentaire, afin de dissocier la borne d'intégration et le paramètre à l'intérieur de l'intégrale. Pour $(u,v)\in I\times J,$ on considère 
+$$F(u,v)=\int_a^u f(t,v)dt.$$
+On va commencer par prouver que $\frac{\partial F}{\partial u}$ existe sur $I\times J.$ Pour cela on fixe $v\in J,$ et on remarque que $t\mapsto f(t,v)$ est continue sur $I.$ Par le théorème fondamental du calcul intégral, $\frac{\partial F}{\partial u}$ existe et vaut pour tout $(u,v)\in I\times J$
+$$\frac{\partial F}{\partial u}(u,v)=f(u,v).$$
+&Eacute;tudions maintenant l'existence de $\frac{\partial F}{\partial v}.$ Fixons alors $u\in I$, avec par exemple $a\leq u.$ Alors, pour tout $t\in [a,u],$ la fonction $v\mapsto f(t,v)$ est dérivable sur $[a,u]$ et sa dérivée est 
+$\frac{\partial f}{\partial v}.$ D'autre part, la fonction $(t,v)\mapsto \frac{\partial f}{\partial v}(t,v)$ est continue sur le compact $[a,u]\times K.$ Elle est donc bornée sur ce compact et il existe $M&gt;0$ tel que, pour tout $(t,v)\in [a,u]\times K,$
+$$\left|\frac{\partial f}{\partial v}(t,v)\right|\leq M.$$
+Puisque la fonction constante égale à $M$ est intégrable sur le segment $[a,u],$ il résulte du théorème de dérivation des intégrales à paramètres que $\frac{\partial F}{\partial v}$ existe et vaut pour tout $(u,v)\in I\times J,$
+$$\frac{\partial F}{\partial v}(u,v)=\int_a^u \frac{\partial f}{\partial x}(t,v)dt.$$
+Pour conclure, on remarque que, pour tout $x\in J,$ 
+$$\phi(x)=F(b(x),x).$$
+D'après la règle de la chaîne, $\phi$ est dérivable sur $J$ et pour tout $x\in J,$ 
+$$\phi'(x)=b'(x)f(b(x),x)+\int_a^{b(x)}\frac{\partial f}{\partial x}(t,x)dt.$$
+Remarquons que toutes les dérivées partielles de $f$ que l'on mentionne ici sont des dérivées partielles par rapport à la seconde variable. On pourrait écrire, pour éviter toute confusion, $\partial_2 f.$</div></div></div>
+
+<div class=titrepartie>Fonction de classe $\mathcal C^1$</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>8</span> <span id="rater3620"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3620"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3620,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Calcul de dérivées partielles et fonction de classe $\mathcal C^1$ (d'après oral CCINP) <a id=heart8 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart8" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3620.html"> [Signaler une erreur]</a><a id=exo8 href="javascript:ajouteexo(3620,8,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3620','imageenonce3620');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3620"></a><div class=inner id="innerenonce3620">On définit $f:\mathbb R^2\to\mathbb R$ par
+$$f(x,y)=\frac{xy}{\sqrt{x^2+y^2}}$$
+si $(x,y)\in\mathbb R^2\backslash\{(0,0)\}$ et par $f(0,0)=0.$
+<ol class="enumeratechiffre">
+<li> Justifier que $f$ est continue sur $\mathbb R^2.$
+<li> Démontrer que $f$ admet des dérivées partielles par rapport aux deux variables en tout point $(x,y)\in\mathbb R^2$ et les calculer.
+<li> La fonction $f$ est-elle de classe $\mathcal C^1$ sur $\mathbb R^2$ ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3620','imageindication3620');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3620"></a><div class=inner id="innerindication3620" style="display:none;"><ol class="enumeratechiffre">
+<li> Majorer $|f(x,y)-f(0,0)|$.
+<li> Distinguer le cas $(0,0)$. Pour celui-ci, revenir à la définition de la dérivée partielle par le taux d'accroissement.
+<li> &Eacute;tudier la continuité de $\frac{\partial f}{\partial x}$ en $(0,0)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3620','imagecorrige3620',3620);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3620"></a><div class=inner id="innercorrige3620" style="display:none;"><ol class="enumeratechiffre">
+<li> On sait que, pour tout $x\in\mathbb R,$ $|x|=\sqrt{x^2}\leq \sqrt{x^2+y^2}$ par croissance de la fonction racine carrée. Ainsi, pour $(x,y)\in\mathbb R^2\backslash\{(0,0)\},$ 
+$$|f(x,y)-f(0,0)|\leq |y|$$
+et $|y|$ tend vers $0$ si $(x,y)$ tend vers $(0,0)$. Ainsi, la fonction $f$ est continue en $(0,0)$. Et $f$ est continue sur $\mathbb R^2\backslash\{(0,0)\}$ comme quotient de fonctions continues dont le dénominateur ne s'annule pas.
+<li> D'abord, $f$ est $\mathcal C^1$ sur $\mathbb R^2\backslash\{(0,0)\}$ comme quotient de fonctions $\mathcal C^1$ dont le dénominateur ne s'annule pas.
+De plus, pour $(x,y)\neq (0,0)$, posant $u(t)=\frac{ty}{\sqrt{t^2+y^2}},$
+on a 
+$$\frac{\partial f}{\partial x}(x,y)=u'(x).$$
+On calcule $u'(x)$ par les méthodes usuelles, en remarquant que 
+$$u(t)=\frac{a(t)}{b(t)}\textrm{ avec }a(t)=ty\textrm{ et }b(t)=\sqrt{t^2+y^2}.$$
+et donc en particulier 
+$$v'(t)=\frac{t}{\sqrt{t^2+y^2}}.$$
+On en déduit 
+\begin{align*}
+u'(x)&=\frac{y\sqrt{x^2+y^2}-\frac{x^2y}{\sqrt{x^2+y^2}}}{x^2+y^2}\\
+&=\frac{y(x^2+y^2)-x^2y}{(x^2+y^2)^{3/2}}\\
+&=\frac{y^3}{(x^2+y^2)^{3/2}}.
+\end{align*}
+Par symétrie du rôle joué par les variables, on a aussi 
+$$\frac{\partial f}{\partial y}(x,y)=\frac{x^3}{(x^2+y^2)^{3/2}}.$$
+Pour déterminer si $f$ admet une dérivée partielle par rapport à la première variable en $0,$ on va revenir à la définition de cette dérivée partielle : $\frac{\partial f}{\partial x}(0,0)$ existe si la fonction 
+$x\mapsto f(x,0)$ est dérivable en $0,$ c'est-à-dire si le taux d'accroissement 
+$$\frac{f(h,0)-f(0)}{h}$$
+admet une limite lorsque $h$ tend vers $0$.
+Mais $f(h,0)-f(0,0)=0$ et donc le taux d'accroissement précédent est identiquement nul. Ainsi,  $\frac{\partial f}{\partial x}(0,0)$ existe et vaut $0.$ Par symétrie, $\frac{\partial f}{\partial y}(0,0)$ existe et vaut $0.$ 
+<li> Il suffit d'étudier si $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$ sont continues en $(0,0)$. Mais, pour $x&gt;0,$ d'après le calcul effectué auparavant, 
+$$\frac{\partial f}{\partial x}(x,x)=\frac{x^3}{(2x^2)^{3/2}}=\frac1{2\sqrt 2}.$$
+Ainsi, 
+$$\lim_{x\to 0}\frac{\partial f}{\partial x}(x,x)=\frac1{2\sqrt 2}\neq \frac{\partial f}{\partial x}(0,0)=0.$$
+La dérivée partielle par rapport à la première variable n'est pas continue en $(0,0)$ et $f$ n'est pas de classe $\mathcal C^1$ sur $\mathbb R^2.$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>9</span> <span id="rater51"></span><script>var myRating = raterJs( { element:document.querySelector("#rater51"),	max:5, rating:1.7142857142857, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(51,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exemples <a id=heart9 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart9" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=51.html"> [Signaler une erreur]</a><a id=exo9 href="javascript:ajouteexo(51,9,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce51','imageenonce51');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce51"></a><div class=inner id="innerenonce51">Démontrer que les applications $f:\mtr^2\to\mtr$ suivantes sont de classe $C^1$ sur $\mathbb R^2$. 
+<ol class="enumeratechiffre">
+<li> $\displaystyle f(x,y)=\frac{x^2y^3}{x^2+y^2}\textrm{ si }(x,y)\neq (0,0)\textrm{ et }f(0,0)=0$;
+<li> $\displaystyle f(x,y)=x^2y^2\ln(x^2+y^2)\textrm{ si }(x,y)\neq (0,0)\textrm{ et }f(0,0)=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication51','imageindication51');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication51"></a><div class=inner id="innerindication51" style="display:none;">Il suffit de démontrer que la fonction admet des dérivées partielles en tout point de $\mathbb R^2$, et que ces dérivées partielles sont continues sur $\mathbb R^2$. </div></div><div class=corrige><a href="javascript:showCorrige('innercorrige51','imagecorrige51',51);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige51"></a><div class=inner id="innercorrige51" style="display:none;">Il suffit de démontrer que la fonction admet des dérivées partielles en tout point de $\mathbb R^2$, et que ces dérivées partielles sont continues sur $\mathbb R^2$. 
+<ol class="enumeratechiffre">
+<li> D'une part, $f$ est clairement de classe $C^1$ sur $\mtr^2\backslash\{(0,0)\}$, et on a 
+$$\frac{\partial f}{\partial x}(x,y)=\frac{2xy^5}{(x^2+y^2)^2},\textrm{ et }\frac{\partial f}{\partial y}(x,y)=x^2y^2\frac{3x^2+y^2}{(x^2+y^2)^2}.$$
+D'autre part, montrons que $f$ admet des dérivées partielles en $(0,0)$. On a en effet :
+$$f(x,0)-f(0,0)=0,$$
+ce qui prouve que $f$ admet une dérivée partielle par rapport à la première variable valant 
+$$\frac{\partial f}{\partial x}(0,0)=0.$$
+De même pour la dérivée partielle par rapport à la seconde variable. Il reste à démontrer que ces dérivées partielles sont continues en $(0,0)$. Mais on a, pour $(x,y)\neq (0,0)$ :
+$$\left|\frac{2xy^5}{(x^2+y^2)^2}\right|=2|xy|\left(\frac{y^2}{(x^2+y^2)}\right)^2\leq 2|xy|,$$
+ce qui prouve que $\frac{\partial f}{\partial x}(x,y)$ tend vers $0=\frac{\partial f}{\partial x}(0,0)$ si $(x,y)$ tend vers $(0,0)$. De même,
+puisque $2|xy|\leq x^2+y^2$, on a :
+$$\left|\frac{\partial f}{\partial y}(x,y)\right|\leq \frac{1}{4}\left|3x^2+y^2\right|.$$
+On a également continuité de la dérivée partielle par rapport à la seconde variable en $(0,0)$.
+<li> On commence par étudier la continuité de $f$ en $(0,0)$ (même si ce n'est pas utile pour appliquer le théorème mentionné). On a 
+\begin{eqnarray*}
+|f(x,y)-f(0,0)|&\leq&x^2y^2|\ln(x^2+y^2)|\\
+&\leq&\frac 14(x^2+y^2)^2|\ln(x^2+y^2)|\\
+&\leq&\frac 14(x^2+y^2)\times (x^2+y^2)|\ln(x^2+y^2)|.
+\end{eqnarray*}
+Du fait que $u\ln u$ tend vers 0 lorsque $u$ tend vers $0^+$, on en déduit que $f$ est continue en $(0,0)$. Ensuite, remarquons que $f$ admet une dérivée partielle
+par rapport à la première variable ailleurs qu'en $(0,0)$ donnée par 
+$$\frac{\partial f}{\partial x}(x,y)=2xy^2\ln(x^2+y^2)+\frac{2x^3y^2}{x^2+y^2}.$$
+Pour étudier l'existence d'une dérivée partielle par rapport à la première variable en $(0,0)$, on étudie le taux d'accroissement
+$$\frac{f(t,0)-f(0,0)}t=0\to 0.$$
+Donc $\frac{\partial f}{\partial x}(0,0)$ existe et vaut 0. On va maintenant prouver la continuité de $\frac{\partial f}{\partial x}$ en $(0,0)$. 
+Le même raisonnement que pour la continuité de $f$ (en utilisant par exemple $|x|\leq (x^2+y^2)^{1/2}$) prouve que 
+$2xy^2\ln(x^2+y^2)$ tend vers 0 si $(x,y)$ tend vers $(0,0)$. D'autre part,
+$$\left|\frac{2x^3y^2}{x^2+y^2}\right|\leq x^2|y|$$
+ce qui prouve également que $\frac{2x^3y^2}{x^2+y^2}$ tend vers $0$ lorsque $(x,y)$ tend vers $(0,0)$. Ainsi, $\frac{\partial f}{\partial x}$ est continue en $(0,0)$, et par suite sur $\mathbb R^2$. Enfin, par symétrie des variables $x$ et $y$, ce que l'on vient de démontrer est aussi valable pour les dérivées partielles par rapport à la deuxième variable. Ainsi, $f$ est $C^1$ sur $\mathbb R^2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>10</span> <span id="rater116"></span><script>var myRating = raterJs( { element:document.querySelector("#rater116"),	max:5, rating:2.32, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(116,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Exemples <a id=heart10 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart10" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=116.html"> [Signaler une erreur]</a><a id=exo10 href="javascript:ajouteexo(116,10,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce116','imageenonce116');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce116"></a><div class=inner id="innerenonce116">Les fonctions suivantes, définies sur $\mathbb R^2$, sont-elles de classe $C^1$?
+<ol class="enumeratechiffre">
+<li> $\displaystyle f(x,y)=x\frac{x^2-y^2}{x^2+y^2}\textrm{ si }(x,y)\neq (0,0)\textrm{ et }f(0,0)=0$;
+<li> $\displaystyle f(x,y)=\frac{x^3+y^3}{x^2+y^2}\textrm{ si }(x,y)\neq (0,0)\textrm{ et }f(0,0)=0$;
+<li> $\displaystyle f(x,y)=e^{-\frac 1{x^2+y^2}}\textrm{ si }(x,y)\neq (0,0)\textrm{ et }f(0,0)=0$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication116','imageindication116');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication116"></a><div class=inner id="innerindication116" style="display:none;">Pour les deux premières, on pourra étudier la régularité des dérivées partielles en $(0,0)$.
+Pour la dernière, on pourra commencer par étudier la régularité de la fonction d'une variable réelle $g$ 
+définie par $g(t)=e^{-1/t}$ si $t&gt;0$, $g(t)=0$ sinon.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige116','imagecorrige116',116);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige116"></a><div class=inner id="innercorrige116" style="display:none;">On remarque d'abord que, dans les 3 cas, $f$ est de classe $C^1$ sur $\mathbb R^2\backslash\{(0,0)\}$. 
+<ol class="enumeratechiffre">
+<li> On a 
+$$|f(x,y)-f(0,0)|\leq |x|\times \frac{x^2+y^2}{x^2+y^2}\leq |x|,$$
+et $|x|\to 0$ lorsque $(x,y)\to (0,0)$. Ainsi, $f$ est continue en $(0,0)$. De plus, un calcul facile montre
+que, pour tout $(x,y)\neq (0,0)$, on a 
+$$\frac{\partial f}{\partial y}(x,y)=\frac{-4x^3y}{(x^2+y^2)^2}.$$
+En particulier, pour $t\neq 0$, $\frac{\partial f}{\partial y}(t,t)=-1$ tandis que $\frac{\partial f}{\partial y}(0,t)=0.$
+Ainsi, $\frac{\partial f}{\partial y}$ n'a aucune chance d'être continue en $(0,0)$ (alors qu'on n'a même pas étudié l'existence
+d'une dérivée partielle en $(0,0)$!). Ainsi, $f$ n'est pas de classe $C^1$. 
+<li> On a 
+$$|f(x,y)-f(0,0)|\leq |x|\times\frac{x^2}{x^2+y^2}+|y|\times\frac{y^2}{x^2+y^2}\leq |x|+|y|.$$
+Ainsi, $f$ est continue en $(0,0)$. D'autre part, un calcul facile montre que, pour tout $(x,y)\neq (0,0)$, on a 
+$$\frac{\partial f}{\partial x}(x,y)=\frac{x^4+3x^2y^2-2xy^3}{(x^2+y^2)^2}.$$
+Il vient, pour $t\neq 0$,  $\frac{\partial f}{\partial x}(t,0)=1$ et $\frac{\partial f}{\partial x}(0,t)=0$. Ainsi, $\frac{\partial f}{\partial x}$
+ne peut pas être continue en $(0,0)$ et $f$ n'est pas $C^1$ sur $\mathbb R^2$.
+<li> On va commencer  par étudier la régularité de la fonction d'une variable réelle $g$ 
+définie par $g(t)=e^{-1/t}$ si $t&gt;0$, $g(t)=0$ sinon. Clairement, $g$ est de classe $C^\infty$ sur $\mathbb R\backslash\{0\}$. 
+De plus, on a $g'(t)=0$ si $t&lt;0$ et $g'(t)=\frac1{t^2}e^{-\frac 1t}$ si $t&gt;0$. On a donc $g'(t)\to 0$ si $t\to 0$. On en déduit,
+par le théorème de prolongement d'une dérivée, que $g$ est de classe $C^1$ sur $\mathbb R$ avec $g'(0)=0$. 
+Maintenant, $f=g\circ \phi$ avec $\phi(x,y)=x^2+y^2$ de classe $C^1$ sur $\mathbb R^2$. Par composition, $f$ est donc de classe
+$C^1$ sur $\mathbb R^2$. 
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>11</span> <span id="rater117"></span><script>var myRating = raterJs( { element:document.querySelector("#rater117"),	max:5, rating:1.3636363636364, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(117,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions homogènes <a id=heart11 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart11" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=117.html"> [Signaler une erreur]</a><a id=exo11 href="javascript:ajouteexo(117,11,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce117','imageenonce117');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce117"></a><div class=inner id="innerenonce117">Soit $f:\mtr^2\to\mtr$ une application de classe $C^1$. 
+<ol class="enumeratechiffre">
+<li> On définit, pour $(x,y)\in\mtr^2$ fixé, $g:\mtr\to\mtr,$ $t\mapsto g(t)=f(tx,ty).$ 
+Montrer que $g$ est dérivable sur $\mtr$, et calculer sa dérivée.
+<li> On suppose désormais que $f(tx,ty)=tf(x,y)$ pour tous $x,y,t\in\mtr$.
+<ol class="enumeratechiffre">
+<li> Montrer que pour tous $x,y,t\in\mtr$, on a 
+$$f(x,y)=\frac{\partial f}{\partial x}(tx,ty)x+\frac{\partial f}{\partial y}(tx,ty)y.$$
+<li> En déduire qu'il existe des réels $\alpha$ et $\beta$ que l'on déterminera tels que, 
+pour tous $(x,y)\in\mtr^2$, on a 
+$$f(x,y)=\alpha x+\beta y.$$
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication117','imageindication117');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication117"></a><div class=inner id="innerindication117" style="display:none;"><ol class="enumeratechiffre">
+<li> Dérivée d'une fonction composée.
+<li>
+<ol class="enumeratechiffre">
+<li> Utiliser la relation précédente.
+<li> Appliquer en $t=0$.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige117','imagecorrige117',117);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige117"></a><div class=inner id="innercorrige117" style="display:none;"><ol class="enumeratechiffre">
+<li> La fonction $g$ est $C^1$ comme composée de fonctions de classe
+$C^1$. On a :
+$$g'(t)=x\frac{\partial f}{\partial x}(tx,ty)+y\frac{\partial
+f}{\partial y}(tx,ty).$$
+<li>
+<ol class="enumeratechiffre">
+<li> On peut alors écrire $g(t)=tf(x,y)$, et le calcul de la dérivée de $g$
+donne $g'(t)=f(x,y)$. La comparaison avec l'expression obtenue à
+la question précédente donne le résultat.
+<li> Il suffit d'appliquer la relation précédente pour $t=0$. On a
+$f(x,y)=\alpha x+\beta y$ avec $\alpha=\frac{\partial f}{\partial
+x}(0,0)$ et $\beta=\frac{\partial f}{\partial y}(0,0)$. Réciproquement, on vérifie facilement
+qu'une fonction vérifiant $f(x,y)=\alpha x+\beta y$ vérifie également $f(tx,ty)=tf(x,y)$.
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>12</span> <span id="rater118"></span><script>var myRating = raterJs( { element:document.querySelector("#rater118"),	max:5, rating:2.5384615384615, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(118,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Primitivation <a id=heart12 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart12" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=118.html"> [Signaler une erreur]</a><a id=exo12 href="javascript:ajouteexo(118,12,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce118','imageenonce118');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce118"></a><div class=inner id="innerenonce118">Déterminer toutes les fonctions $f:\mathbb R^2\to\mathbb R$ de classe $C^1$ solutions des systèmes suivants :
+$$
+\mathbf 1.\left\{
+\begin{array}{rcl}
+\displaystyle \frac{\partial f}{\partial x}&=&xy^2\\[3mm]
+\displaystyle \frac{\partial f}{\partial y}&=&yx^2.
+\end{array}\right.
+\quad\quad
+\mathbf 2.\left\{
+\begin{array}{rcl}
+\displaystyle \frac{\partial f}{\partial x}&=&e^xy\\[3mm]
+\displaystyle \frac{\partial f}{\partial y}&=&e^x+2y.
+\end{array}\right.
+\quad\quad
+\mathbf 3.\left\{
+\begin{array}{rcl}
+\displaystyle \frac{\partial f}{\partial x}&=&x^2y\\[3mm]
+\displaystyle \frac{\partial f}{\partial y}&=&xy^2.
+\end{array}\right.
+$$
+</div></div><div class=indication><a href="javascript:showAll('innerindication118','imageindication118');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication118"></a><div class=inner id="innerindication118" style="display:none;">Intégrer d'abord une équation en fixant l'autre variable. La constante d'intégration dépend de cette variable. Dériver en utilisant l'autre relation pour l'éliminer...</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige118','imagecorrige118',118);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige118"></a><div class=inner id="innercorrige118" style="display:none;"><ol class="enumeratechiffre">
+<li> Soit $f$ une solution du système, et soit $y\in\mathbb R$ fixé. Posons $g(x)=f(x,y)$. Alors la première relation s'exprime aussi par $g'(x)=xy^2$, soit
+$g(x)=\frac12x^2y^2+Cte.$ Cette constante dépend de $y$, qui a été fixé le temps d'intégrer la relation. On en 
+déduit l'existence de $C:\mathbb R\to\mathbb R$ de sorte que, pour tous $(x,y)\in\mathbb R^2$, 
+$$f(x,y)=\frac12x^2y^2+C(y).$$
+Puisque $f$ est $C^1$, $C$ est également $C^1$ et la deuxième relation donne 
+$$C'(y)=0,$$
+c'est-à-dire $C$ est constante. Il existe donc $A\in\mathbb R$ de sorte que 
+$$f(x,y)=\frac12x^2y^2+A.$$
+Réciproquement, une telle fonction est solution du système.
+<li> On reprend la même méthode, en fixant $y\in\mathbb R$ et en posant $g(x)=f(x,y)$. De $g'(x)=e^xy$, on tire 
+$g(x)=e^xy+cte$. Il existe donc une fonction $C:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(x,y)\in\mathbb R^2$, 
+$f(x,y)=e^xy+C(y)$. On dérive cette fois par rapport à $y$, et on trouve $C'(y)=2y$, soit $C(y)=y^2+Cte$. Ainsi, si $f$ est solution, il existe
+$A\in\mathbb R$ tel que, pour tout $(x,y)\in\mathbb R^2$, on a 
+$$f(x,y)=e^xy+y^2+A.$$
+Réciproquement, ces fonctions sont solutions.
+<li> Si on reprend la méthode des questions précédentes, on observe que si $f$ est solution, il existe une fonction $C:\mathbb R\to\mathbb R$ de classe
+$C^1$ et telle que, pour tout $(x,y)\in\mathbb R^2$, on a $f(x,y)=\frac13x^3y+C(y)$. On dérive par rapport à $y$, et en utilisant la deuxième relation, on trouve
+que, pour tout $(x,y)\in\mathbb R^2$, on a
+$$C'(y)=xy^2-\frac13x^3.$$
+Or, si $y$ est fixé, le membre de gauche est constant, et le membre de droite est un polynôme de degré 3 en $x$ : ceci est impossible et donc l'équation n'a pas
+de solutions. On aurait pu aussi remarquer que, si on cherchait une fonction de classe $C^2$, les dérivées partielles croisées 
+$\frac{\partial^2 f}{\partial x\partial y}$ et $\frac{\partial^2 f}{\partial y\partial x}$ ne pouvaient pas être égales, contredisant le théorème de Schwarz.
+</ol></div></div></div>
+
+<div class=titrepartie>Dérivées partielles d'ordre supérieur - fonctions de classe $\mathcal C^p$</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>13</span> <span id="rater119"></span><script>var myRating = raterJs( { element:document.querySelector("#rater119"),	max:5, rating:1.0666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(119,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Ordre 2 <a id=heart13 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart13" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=119.html"> [Signaler une erreur]</a><a id=exo13 href="javascript:ajouteexo(119,13,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce119','imageenonce119');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce119"></a><div class=inner id="innerenonce119">Calculer les dérivées partielles à l'ordre 2 des fonctions suivantes :
+<ol class="enumeratechiffre">
+<li> $f(x,y)=x^2(x+y)$.
+<li> $f(x,y)=e^{xy}.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige119','imagecorrige119',119);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige119"></a><div class=inner id="innercorrige119" style="display:none;">Il suffit de dériver successivement par rapport aux bonnes variables. Remarquons que les fonctions sont clairement de classe $C^2$ sur $\mathbb R^2$
+et donc que les dérivées croisées d'ordre 2 sont égales.
+<ol class="enumeratechiffre">
+<li> On trouve 
+$$\frac{\partial f}{\partial x}(x,y)=3x^2+2xy,\quad\frac{\partial f}{\partial y}(x,y)=x^2$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=6x+2y,\quad\frac{\partial^2 f}{\partial y^2}(x,y)=0,\quad \frac{\partial^2 f}{\partial x\partial y}(x,y)=2x.$$
+<li> On trouve
+$$\frac{\partial f}{\partial x}(x,y)=ye^{xy},\quad\frac{\partial f}{\partial y}(x,y)=xe^{xy}$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=y^2e^{xy},\quad\frac{\partial^2 f}{\partial y^2}(x,y)=x^2 e^{xy},\quad\frac{\partial^2 f}{\partial x\partial y}(x,y)=e^{xy}+xye^{xy}.$$
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>14</span> <span id="rater122"></span><script>var myRating = raterJs( { element:document.querySelector("#rater122"),	max:5, rating:1.9411764705882, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(122,rating); this.setRating(rating);   this.disable();    done();     }});</script> - EDP dans le bon sens <a id=heart14 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart14" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=122.html"> [Signaler une erreur]</a><a id=exo14 href="javascript:ajouteexo(122,14,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce122','imageenonce122');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce122"></a><div class=inner id="innerenonce122">Etant données deux fonctions $g_0$ et $g_1$ d'une variable réelle, de classe $C^2$ sur $\mtr$, on définit la fonction $f$
+sur $\mtr^*_+\times\mtr$ par 
+$$f(x,y)=g_0\left(\frac{y}{x}\right)+xg_1\left(\frac{y}{x}\right).$$
+Justifier que $f$ est de classe $C^2$, puis prouver que 
+$$x^2\frac{\partial^2 f}{\partial x^2}(x,y)+2xy\frac{\partial^2 f}{\partial x\partial y}(x,y)+y^2\frac{\partial^2 f}{\partial y^2}(x,y)=0.$$</div></div><div class=indication><a href="javascript:showAll('innerindication122','imageindication122');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication122"></a><div class=inner id="innerindication122" style="display:none;">Il suffit d'appliquer le théorème de composition des dérivées.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige122','imagecorrige122',122);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige122"></a><div class=inner id="innercorrige122" style="display:none;">La fonction $f$ est de classe $C^2$ comme composée de fonctions toutes de classe $C^2$. On a ensuite, en notant $t=y/x$ :
+$$\frac{\partial f}{\partial x}(x,y)=-\frac{y}{x^2}g_0'(t)+g_1(t)-\frac{y}{x}g_1'(t)$$
+$$\frac{\partial^2 f}{\partial x^2}(x,y)=\frac{2y}{x^3}g_0'(t)+\frac{y^2}{x^4}g_0''(t)+\frac{y^2}{x^3}g_1''(t)$$
+$$\frac{\partial f}{\partial y}(x,y)=\frac{1}{x}g_0'(t)+g_1'(t)$$
+$$\frac{\partial^2 f}{\partial x\partial y}=-\frac{1}{x^2}g_0'(t)-\frac{y}{x^3}g_0''(t)-\frac{y}{x^2}g_1''(t)$$
+$$\frac{\partial^2 f}{\partial y^2}=\frac{1}{x^2}g_0''(t)+\frac{1}{x}g_1''(t).$$
+Il suffit ensuite de faire la somme demandée pour obtenir le résultat.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>15</span> <span id="rater120"></span><script>var myRating = raterJs( { element:document.querySelector("#rater120"),	max:5, rating:2.8181818181818, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(120,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Contre-exemple de Peano <a id=heart15 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart15" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=120.html"> [Signaler une erreur]</a><a id=exo15 href="javascript:ajouteexo(120,15,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce120','imageenonce120');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce120"></a><div class=inner id="innerenonce120">Pour $(x,y)\neq (0,0)$, on pose $$f(x,y)=xy\frac{x^2-y^2}{x^2+y^2}.$$
+<ol class="enumeratechiffre">
+<li> $f$ admet-elle un prolongement continu à $\mathbb R^2$ ?
+<li> $f$ admet-elle un prolongement $C^1$ à $\mathbb R^2$ ?
+<li> $f$ admet-elle un prolongement $C^2$ à $\mathbb R^2$ ?
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication120','imageindication120');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication120"></a><div class=inner id="innerindication120" style="display:none;"><ol class="enumeratechiffre">
+<li> Etudier la limite!
+<li> Calculer les dérivées partielles, vérifier qu'elles existent en $(0,0)$ et qu'elles sont continues.
+<li> Nier le théorème de Schwarz.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige120','imagecorrige120',120);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige120"></a><div class=inner id="innercorrige120" style="display:none;"><ol class="enumeratechiffre">
+<li> En utilisant $2|xy|\leq x^2+y^2$, on obtient
+$$|f(x,y)|\leq 2 (x^2+y^2)=2\|(x,y)\|_2^2.$$
+On en déduit que $f(x,y)\to 0$ lorsque $(x,y)\to (0,0)$. Ainsi, $f$
+admet une limite en $(0,0)$ et on peut la prolonger par continuité en posant $f(0,0)=0$.
+<li> Il est clair que $f$ est de classe $C^\infty$ sur $\mathbb R^2\backslash\{(0,0)\}$. De plus, pour $(x,y)\neq (0,0)$, on a
+$$\frac{\partial f}{\partial x}(x,y)=y\frac{x^4+4x^2y^2-y^4}{(x^2+y^2)^2}.$$
+D'autre part, pour tout $x\in\mathbb R,$ $f(x,0)-f(0,0)=0$, ce qui prouve que $\frac{\partial f}{\partial x}(0,0)$ existe et que $\frac{\partial f}{\partial x}(0,0)=0$. De 
+$$|x^4+4x^2y^2-y^4|\leq  x^4+4x^2y^2+y^4\leq 2(x^2+y^2)^2,$$
+on déduit que, pour $(x,y)\neq (0,0),$
+$$\left|\frac{\partial f}{\partial x}(x,y)\right|\leq 2|y|.$$
+Ceci permet de démontrer que $\frac{\partial f}{\partial x}(x,y)$ tend vers $0$ lorsque $(x,y)$ tend vers $(0,0)$ et prouve la continuité de $\frac{\partial f}{\partial x}$ en $(0,0)$. L'étude de la dérivée partielle $\frac{\partial f}{\partial y}$ est totalement similaire, puisque $f(x,y)=-f(y,x)$. On en déduit que $f$ est de classe $C^1$ sur $\mathbb R^2$.
+<li> On va prouver que $f$ ne peut pas être de classe $C^2$ en niant le théorème de Schwarz. En effet,
+on a 
+$$\frac{\frac{\partial f}{\partial x}(0,y)-\frac{\partial f}{\partial x}(0,0)}{y}=-1,$$
+ce qui prouve que $\frac{\partial^2 f}{\partial y\partial x}(0,0)$ existe et vaut $-1$. 
+Mais on prouve de la même façon que $\frac{\partial^2 f}{\partial x\partial y}(0,0)$ existe et vaut $1$. Les
+deux dérivées partielles croisées n'étant pas égales, la fonction ne peut pas être de classe $C^2$ sur $\mathbb R^2$.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>16</span> <span id="rater3617"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3617"),	max:5, rating:1.2222222222222, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3617,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Laplacien d'une composée (d'après Oral Centrale) <a id=heart16 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart16" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3617.html"> [Signaler une erreur]</a><a id=exo16 href="javascript:ajouteexo(3617,16,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3617','imageenonce3617');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3617"></a><div class=inner id="innerenonce3617">Soit $f:\mathbb R^n\to\mathbb R$ et $u:\mathbb R\to\mathbb R$ deux fonctions de classe $\mathcal C^2$. On munit $\mathbb R^n$ de sa structure euclidienne canonique. Démontrer que 
+$$\Delta(u\circ f)=(u''\circ f)\|\nabla f\|^2+(u'\circ f)\Delta f.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3617','imageindication3617');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3617"></a><div class=inner id="innerindication3617" style="display:none;">Calculer les dérivées successives en utilisant la règle de la chaîne.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3617','imagecorrige3617',3617);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3617"></a><div class=inner id="innercorrige3617" style="display:none;">Soit $i\in\{1,\dots,n\}$. Par la règle de la chaîne, on a, pour tout $x\in\mathbb R^n,$
+$$\frac{\partial (u\circ f)}{\partial x_i}(x)=\frac{\partial f}{\partial x_i}(x)u'(f(x)).$$
+Puis, utilisant une deuxième fois la règle de la chaîne et la règle pour la dérivation d'un produit, on trouve
+$$\frac{\partial^2 (u\circ f)}{\partial x_i^2}(x)=\frac{\partial^2 f}{\partial x_i^2}(x)u'(f(x))+\left(\frac{\partial f}{\partial x_i}(x)\right)^2u''(f(x)).$$
+On en déduit que 
+\begin{align*}
+\Delta f(x)&=\sum_{i=1}^n \frac{\partial^2 f}{\partial x_i^2}(x)u'(f(x))+\sum_{i=1}^n \left(\frac{\partial f}{\partial x_i}(x)\right)^2u''(f(x))\\
+&=\Delta f(x)u'(f(x))+\|\nabla f(x)\|^2 u''(f(x)).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>17</span> <span id="rater3606"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3606"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3606,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Laplacien d'une fonction radiale <a id=heart17 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart17" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3606.html"> [Signaler une erreur]</a><a id=exo17 href="javascript:ajouteexo(3606,17,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3606','imageenonce3606');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3606"></a><div class=inner id="innerenonce3606">Soit $f:]0,+\infty[\to\mathbb R$ de classe $\mathcal C^2.$ On note $U=\mathbb R^3\backslash\{(0,0,0)\}$ et $g:U\to\mathbb R,$ $(x,y,z)\mapsto f(\sqrt{x^2+y^2+z^2})$. Justifier que $g$ est de classe $C^2$ sur $U$ et que, pour tout $(x,y,z)\in U,$ on a, en notant $\rho=\sqrt{x^2+y^2+z^2},$ 
+$$\Delta g(x,y,z)=f''(\rho)+\frac{2}{\rho}f'(\rho)$$
+où $\Delta g$ désigne le laplacien de $g.$</div></div><div class=indication><a href="javascript:showAll('innerindication3606','imageindication3606');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3606"></a><div class=inner id="innerindication3606" style="display:none;">Calculer les dérivées partielles $\frac{\partial g}{\partial x}$ puis $\frac{\partial^2 g}{\partial x^2}$ en utilisant la règle de la chaîne. On déduit ensuite les autres dérivées partielles par symétrie du rôle joué par les variables.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3606','imagecorrige3606',3606);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3606"></a><div class=inner id="innercorrige3606" style="display:none;">Notons $h:U\to\mathbb ]0,+\infty[,\ (x,y,z)\mapsto \sqrt{x^2+y^2+z^2}.$ Alors $h$ est de classe $\mathcal C^2$ (par composition...) et puisque $g=f\circ h,$ $g$ est de classe $C^2$. On va calculer les dérivées partielles de $g$ par la règle de la chaîne. D'abord, pour $(x,y,z)\in U$, notant $\rho=\sqrt{x^2+y^2+z^2},$ on a 
+\begin{align*}
+\frac{\partial g}{\partial x}(x,y,z)&=\frac{\partial h}{\partial x}(x,y,z)\times f'(\rho)\\
+&=\frac{x}{\sqrt{x^2+y^2+z^2}}f'(\sqrt{x^2+y^2+z^2}).
+\end{align*}
+On dérive une deuxième fois : 
+\begin{align*}
+\frac{\partial^2g}{\partial x^2}(x,y,z)&=\frac{\rho-\frac{x^2}{\rho}}{\rho^2}f'(\rho)+
+\frac{x^2}{\rho^2}f''(\rho)\\
+&=\frac{\rho^2-x^2}{\rho^3}f'(\rho)+\frac{x^2}{\rho^2}f''(\rho).
+\end{align*}
+Par symétrie du rôle joué par les variables, on a aussi
+\begin{align*}
+\frac{\partial^2g}{\partial y^2}(x,y,z)&=\frac{\rho^2-y^2}{\rho^3}f'(\rho)+\frac{y^2}{\rho^2}f''(\rho)\\
+\frac{\partial^2g}{\partial z^2}(x,y,z)&=\frac{\rho^2-z^2}{\rho^3}f'(\rho)+\frac{z^2}{\rho^2}f''(\rho).
+\end{align*}
+En faisant la somme de ces trois expressions, on trouve
+\begin{align*}
+\Delta g(x,y,z)&=\frac{3\rho^2-\rho^2}{\rho^3}f'(\rho)+f''(\rho)\\
+&=\frac{2}{\rho}f'(\rho)+f''(\rho).
+\end{align*}</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>18</span> <span id="rater121"></span><script>var myRating = raterJs( { element:document.querySelector("#rater121"),	max:5, rating:2.7894736842105, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(121,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions homogènes <a id=heart18 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart18" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=121.html"> [Signaler une erreur]</a><a id=exo18 href="javascript:ajouteexo(121,18,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce121','imageenonce121');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce121"></a><div class=inner id="innerenonce121">Soit $f$ une application de classe $C^1$ de $\mtr^2$ dans $\mtr$ et $r\in\mtr$. On dit que $f$ est homogène de degré $r$ si 
+$$\forall (x,y)\in\mtr^2,\ \forall t&gt;0,\ f(tx,ty)=t^rf(x,y).$$
+<ol class="enumeratechiffre">
+<li> Montrer que si $f$ est homogène de degré $r$, alors ses dérivées partielles sont homogènes de degré $r-1$.
+<li> Montrer que $f$ est homogène de degré $r$, alors pour tout $(x,y)\in \mathbb R^2,$ on a
+$$\forall (x,y)\in\mtr^2,\ x\frac{\partial f}{\partial x}(x,y)+y\frac{\partial f}{\partial y}(x,y)=rf(x,y).$$
+Cette relation s'appelle la relation d'Euler.
+<li> Réciproquement, on suppose que $f$ vérifie la relation d'Euler, on fixe $(x,y)\in\mathbb R^2$ et pour $t&gt;0,$ on pose $\varphi(t)=f(tx,ty).$ 
+<ol class="enumeratechiffre">
+<li> Former une équation différentielle vérifiée par $\varphi.$
+<li> En déduire que $f$ est homogène de degré $r.$
+</ol>
+<li> On suppose que $f$ est de classe $C^2$. Montrer que :
+$$x^2\frac{\partial^2 f}{\partial x^2}(x,y)+2xy\frac{\partial^2 f}{\partial x\partial y}+y^2\frac{\partial^2 f}{\partial y^2}=r(r-1)f(x,y).$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication121','imageindication121');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication121"></a><div class=inner id="innerindication121" style="display:none;"><ol class="enumeratechiffre">
+<li> Poser $g(x,y)=f(tx,ty)$, et calculer de deux façons différentes les dérivées partielles par rapport à $x$ et $y$.
+<li> Il suffit de dériver la relation par rapport à $t$ et d'appliquer le résultat de la question précédente.
+<li> <ol class="enumeratechiffre">
+<li> Dériver une composée.
+<li> Résoudre l'équation différentielle, puis utiliser que $f(x,y)=\varphi(1)$.
+</ol>
+<li> Ecrire la relation d'Euler pour les dérivées partielles de $f$ par rapport à $x$ et $y$, combiner les relations trouvées, et appliquer encore la relation d'Euler à $f$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige121','imagecorrige121',121);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige121"></a><div class=inner id="innercorrige121" style="display:none;"><ol class="enumeratechiffre">
+<li> On pose $g(x,y)=f(tx,ty)$. On a d'une part :
+$$\frac{\partial g}{\partial x}(x,y)=t\frac{\partial f}{\partial x}(tx,ty).$$
+D'autre part, en utilisant la relation $g(x,y)=t^r f(x,y)$, on a :
+$$\frac{\partial g}{\partial x}(x,y)=t^r\frac{\partial f}{\partial x}(x,y).$$
+On en déduit 
+$$\frac{\partial f}{\partial x}(tx,ty)=t^{r-1}\frac{\partial f}{\partial x}(x,y).$$
+On fait de même avec la dérivée partielle suivant $y$.
+<li> Supposons d'abord que $f$ est homogène de degré $r$. On a donc :
+$$f(tx,ty)=t^r f(x,y).$$
+On dérive cette relation par rapport à $t$. On trouve :
+$$x\frac{\partial f}{\partial x}(tx,ty)+y\frac{\partial f}{\partial y}(tx,ty)=rt^{r-1} f(x,y).$$
+Le résultat vient en appliquant le résultat de la première question, qui dit que les dérivées partielles de $f$ sont homogènes de degré $r-1$.
+<li> <ol class="enumeratechiffre">
+<li> Posons donc, pour $t&gt;0,$ $\varphi(t)=f(tx,ty).$ $\varphi$ est définie et dérivable sur $\mtr^*_+$. En utilisant la relation vérifiée par $f$, on a :
+$$\varphi'(t)=x\frac{\partial f}{\partial x}(tx,ty)+y\frac{\partial f}{\partial y}(tx,ty)=\frac{r}{t}f(tx,ty)=\frac{r}{t}\varphi(t).$$
+<li> On résout cette équation différentielle classiquement et on vérifie qu'il existe un réel $C&gt;0$ tel que, pour tout $t&gt;0,$ $\varphi(t)=C t^r.$
+On a donc 
+$$f(tx,ty)=Ct^r\textrm{ et }f(x,y)=\varphi(1)=C.$$
+Ainsi, on a bien prouvé que $f(tx,ty)=t^r f(x,y)$ et ceci pour tout $(x,y)\in\mathbb R^2.$ Ainsi, $f$ est bien homogène de degré $r$.
+</ol>
+<li> En écrivant la relation d'Euler pour $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$ (qui sont homogènes de degré $r-1$), on obtient
+$$x\frac{\partial^2 f}{\partial x^2}(x,y)+y\frac{\partial^2 f}{\partial x\partial y}(x,y)=(r-1)\frac{\partial f}{\partial x}(x,y)$$
+et
+$$x\frac{\partial^2 f}{\partial x\partial y}(x,y)+y\frac{\partial^2 f}{\partial y^2}(x,y)=(r-1)\frac{\partial f}{\partial y}(x,y).$$
+On ajoute alors $x$ fois la première relation, et $y$ fois la deuxième, puis on utilise la relation d'Euler pour $f$ pour obtenir le résultat.
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>19</span> <span id="rater3613"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3613"),	max:5, rating:1.5, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3613,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Une fonction de classe $\mathcal C^\infty$ <a id=heart19 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart19" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3613.html"> [Signaler une erreur]</a><a id=exo19 href="javascript:ajouteexo(3613,19,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3613','imageenonce3613');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3613"></a><div class=inner id="innerenonce3613"><ol class="enumeratechiffre">
+<li> Démontrer que la fonction $\varphi:]-1,+\infty[\to \mathbb R$ définie par $\varphi(t)=\frac{\ln(1+t)}{t}$ si $t\neq 0,$ $\varphi(1)=0,$ est une fonction de classe $C^\infty$ sur $]-1,+\infty[$.
+<li> Soit $U=]0,+\infty[^2.$ On définit $f:U\to\mathbb R$ par 
+$$f(x,y)=\left\{
+\begin{array}{ll}
+\frac{\ln(y)-\ln(x)}{y-x}&\textrm{ si }y\neq x\\
+\frac 1x&\textrm{ si }y=x.
+\end{array}
+\right.
+$$
+Démontrer que $\varphi$ est de classe $C^\infty$ sur $U.$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3613','imageindication3613');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3613"></a><div class=inner id="innerindication3613" style="display:none;"><ol class="enumeratechiffre">
+<li> Utiliser un développement en série entière.
+<li> Exprimer $f$ en fonction de $\varphi.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3613','imagecorrige3613',3613);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3613"></a><div class=inner id="innercorrige3613" style="display:none;"><ol class="enumeratechiffre">
+<li> Remarquons d'abord que $\varphi$ est clairement de classe $C^\infty$ sur $]-1,0[\cup]0,+\infty[$. De plus, pour tout $t\in ]-1,1[$ avec $t\neq 0,$ on sait, par le développement en série entière de $\ln$, que 
+$$\varphi(t)=\frac1t\sum_{n=1}^{+\infty}(-1)^{n-1}\frac{t^n}n=\sum_{n=0} \frac{(-1)^n}{n+1}t^n.$$
+Cette égalité est aussi vraie en $t=0$ (les deux membres de l'égalité sont égaux à $1$). Ainsi, $\varphi$ est développable en série entière en $0,$ avec rayon de convergence supérieur ou égal à $1.$ Ceci démontre que $\varphi$ est de classe $C^\infty$ sur $]-1,1[$, et finalement que $\varphi$ est de classe $C^\infty$ sur $\mathbb R.$
+<li> On remarque que, pour $x\neq y,$ on a
+\begin{align*}
+f(x,y)&=\frac{\ln\left(\frac yx\right)}{y-x}\\
+&=\frac{\ln\left(1+\frac{y-x}x\right)}{y-x}\\
+&=\frac1x \varphi\left(\frac{y-x}x\right).
+\end{align*}
+Or, les fonctions $(x,y)\mapsto \frac 1x$ et $(x,y)\mapsto \frac{y-x}x$
+sont de classe $C^\infty$ sur $U.$ De plus, on a bien pour tout $(x,y)\in U,$
+$$-1&lt;\frac{y}x-1.$$
+En utilisant le résultat précédent, par composition, on en déduit que $f$ est de classe $C^\infty$ sur $U.$
+</ol></div></div></div>
+
+<div class="r89-outstream-video"></div><div class=titrepartie>&Eacute;quations aux dérivées partielles du premier ordre</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>20</span> <span id="rater3614"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3614"),	max:5, rating:1.45, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3614,rating); this.setRating(rating);   this.disable();    done();     }});</script> - EDP linéaire du premier ordre <a id=heart20 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart20" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3614.html"> [Signaler une erreur]</a><a id=exo20 href="javascript:ajouteexo(3614,20,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3614','imageenonce3614');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3614"></a><div class=inner id="innerenonce3614">On cherche à résoudre l'équation aux dérivées partielles suivante :
+$$2\frac{\partial f}{\partial x}-\frac{\partial f}{\partial y}=0$$
+où $f$ est une fonction inconnue de classe $\mathcal C^1$ sur $\mathbb R^2$. 
+<ol class="enumeratechiffre">
+<li> Soit $a,b,c,d\in\mathbb R$ tels que $ad-bc\neq 0.$ On pose $\phi(x,y)=(u(x,y),v(x,y))=(ax+by,cx+dy)$ qui est une bijection de $\mathbb R^2$ dans $\mathbb R^2$ et pour $(u,v)\in\mathbb R^2,$
+$$F(u,v)=f\circ\phi^{-1}(u,v)$$ 
+de sorte que, pour tout $(x,y)\in\mathbb R^2,$ 
+$$f(x,y)=F\circ\phi(x,y)=F(ax+by,cx+dy).$$
+Former une équation aux dérivées partielles vérifiée par $F.$
+<li> En choisissant astucieusement les réels $a,b,c,d$, déterminer $F$ puis $f$.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3614','imageindication3614');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3614"></a><div class=inner id="innerindication3614" style="display:none;"><ol class="enumeratechiffre">
+<li> Calculer $\frac{\partial f}{\partial x}$ en utilisant $\frac{\partial F}{\partial u}$ et $\frac{\partial F}{\partial v}$ et en utilisant la règle de la chaîne.
+<li> On peut se ramener à $\frac{\partial F}{\partial u}=0.$
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3614','imagecorrige3614',3614);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3614"></a><div class=inner id="innercorrige3614" style="display:none;"><div>			<button class="boutonsvideo" onclick="showSpoiler(this);" ><span>Comment résoudre une équation aux dérivées partielles ?</span></button>
+			<div class="inner" style="display:none; padding-top:10px; padding-bottom:10px; justify-content:center; text-align:center; ">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vz1CzVLXM0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<ol class="enumeratechiffre">
+<li> On va noter $\frac{\partial F}{\partial u}$ et $\frac{\partial F}{\partial v}$ les dérivées partielles respectives de $F.$ D'après la règle de la chaine, on a, pour tout $(x,y)\in\mathbb R^2,$ 
+$$\frac{\partial f}{\partial x}=a\frac{\partial F}{\partial u}(ax+by,cx+dy)+c\frac{\partial F}{\partial v}(ax+by,cx+dy)$$
+et 
+$$\frac{\partial f}{\partial y}=b\frac{\partial F}{\partial u}(ax+by,cx+dy)+d\frac{\partial F}{\partial v}(ax+by,cx+dy).$$
+L'équation aux dérivées partielles devient 
+$$(2a-b)\frac{\partial F}{\partial u}+(2c-d)\frac{\partial F}{\partial v}=0.$$
+<li> Si on pose $a=1,$ $b=0,$ $c=1$ et $d=2,$ on a $ad-bc\neq 0$ et l'équation aux dérivées partielles devient 
+$$\frac{\partial F}{\partial u}=0.$$
+On en déduit donc qu'il existe une fonction $H:\mathbb R\to\mathbb R$ de classe $\mathcal C^1$ telle que, pour tout $(u,v)\in\mathbb R^2,$ 
+$$F(u,v)=H(v).$$
+Revenant à $f,$ on trouve $f(x,y)=H(x+2y)$ pour tout $(x,y)\in\mathbb R^2$. 
+Réciproquement, on vérifie facilement que toutes les fonctions qui s'écrivent ainsi sont solution. Remarquons qu'à aucun moment nous n'avons dû calculer la bijection réciproque !
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>21</span> <span id="rater123"></span><script>var myRating = raterJs( { element:document.querySelector("#rater123"),	max:5, rating:1.6190476190476, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(123,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Avec un second membre <a id=heart21 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart21" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=123.html"> [Signaler une erreur]</a><a id=exo21 href="javascript:ajouteexo(123,21,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce123','imageenonce123');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce123"></a><div class=inner id="innerenonce123">On cherche toutes les fonctions $f:\mtr^2\to \mtr$ vérifiant :
+$$\frac{\partial f}{\partial x}-\frac{\partial f}{\partial y}=8x+16y.$$
+Résoudre cette équation aux dérivées partielles en utilisant le changement de variables $u=x+y$ et $v=x-y$.</div></div><div class=indication><a href="javascript:showAll('innerindication123','imageindication123');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication123"></a><div class=inner id="innerindication123" style="display:none;">Poser $F(u,v)=f(x,y)=f\circ\phi^{-1}(u,v)$ où $\phi(x,y)=(x+y,x-y).$
+Exprimer $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$ en fonction des dérivées partielles de $F.$</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige123','imagecorrige123',123);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige123"></a><div class=inner id="innercorrige123" style="display:none;">Posons $\phi(x,y)=(x+y,x-y)$ qui est une bijection de $\mathbb R^2$ sur $\mathbb R^2$. On pose aussi $F(u,v)=f\circ\phi^{-1}(u,v)$, de sorte que $f(x,y)=F\circ\phi(x,y)=F(x+y,x-y).$ On a alors 
+par le théorème de dérivation d'une composée (règle de la chaîne),
+pour tout $(x,y)\in\mathbb R^2,$
+\begin{eqnarray*}
+\frac{\partial f}{\partial x}(x,y)&=&\frac{\partial F}{\partial u}(x+y,x-y)+\frac{\partial F}{\partial v}(x+y,x-y)\\
+\frac{\partial f}{\partial y}(x,y)&=&\frac{\partial F}{\partial u}(x+y,x-y)-\frac{\partial F}{\partial v}(x+y,x-y).
+\end{eqnarray*}
+De plus, dans les nouvelles coordonnées, on vérifie facilement que 
+$$\left\{
+\begin{array}{rcl}
+u&=&x+y\\
+v&=&x-y
+\end{array}\right.
+\iff 
+\left\{
+\begin{array}{rcl}
+x&=&(u+v)/2\\
+y&=&(u-v)/2.
+\end{array}\right.
+$$
+Ainsi, si $f$ est solution de l'équation aux dérivées partielles initiales, $F$ vérifie, pour tout $(u,v)\in\mathbb R^2,$
+$$2\frac{\partial F}{\partial v}(u,v)=8\frac{u+v}2+16\frac{u-v}2=12u-4v.$$
+On résout cette équation en intégrant par rapport à $v$ : il existe une fonction $H:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(u,v)\in\mathbb R^2,$ 
+$$F(u,v)=6uv-v^2+H(u).$$
+Revenant à $f$, on a prouvé que si $f$ est solution de l'équation différentielle initiale, alors $f$ s'écrit 
+\begin{align*}
+f(x,y)&=6(x+y)(x-y)-(x-y)^2+H(x+y)\\
+&=5x^2+2xy-7y^2+H(x+y).
+\end{align*}
+Réciproquement, on vérifie facilement que toute fonction s'écrivant ainsi est solution de l'équation aux dérivées partielles initiale.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>22</span> <span id="rater124"></span><script>var myRating = raterJs( { element:document.querySelector("#rater124"),	max:5, rating:2.3333333333333, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(124,rating); this.setRating(rating);   this.disable();    done();     }});</script> - EDP sans indications <a id=heart22 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart22" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=124.html"> [Signaler une erreur]</a><a id=exo22 href="javascript:ajouteexo(124,22,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce124','imageenonce124');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce124"></a><div class=inner id="innerenonce124">Chercher toutes les fonctions $f$ de classe $C^1$ sur $\mathbb R^2$ vérifiant 
+$$\frac{\partial f}{\partial x}-3\frac{\partial f}{\partial y}=0.$$</div></div><div class=indication><a href="javascript:showAll('innerindication124','imageindication124');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication124"></a><div class=inner id="innerindication124" style="display:none;">Faire un changement linéaire de coordonnées de sorte que l'équation se simplifie!</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige124','imagecorrige124',124);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige124"></a><div class=inner id="innercorrige124" style="display:none;">Dans ce genre d'exercice, l'idée est de faire un changement de variables linéaire en posant 
+$u(x,y)=ax+by$ et $v(x,y)=cx+dy$, et en définissant $F:\mathbb R^2\to\mathbb R^2$ par $f(x,y)=F(u(x,y),v(x,y))$. Ceci a un sens si $(x,y)\mapsto (u(x,y),v(x,y))$ est une bijection de $\mathbb R^2$ sur lui-même, et donc si $ad-bc\neq 0$.
+ On a donc, pour tout $(x,y)\in\mathbb R^2,$ 
+$$\frac{\partial f}{\partial x}(x,y)=a\frac{\partial F}{\partial u}(u(x,y),v(x,y))+c\frac{\partial F}{\partial v}(u(x,y),v(x,y))$$
+et
+$$\frac{\partial f}{\partial y}(x,y)=b\frac{\partial F}{\partial u}(u(x,y),v(x,y))+d\frac{\partial F}{\partial v}(u(x,y),v(x,y)).$$
+Donc :
+$$\frac{\partial f}{\partial x}(x,y)-3\frac{\partial f}{\partial y}(x,y)=(a-3b)\frac{\partial F}{\partial u}(u(x,y),v(x,y))+(c-3d)\frac{\partial F}{\partial v}(u(x,y),v(x,y)).$$
+Prenons $c=3$, $d=1$, $b=0$ et $a=1$ (on a bien $ad-bc\neq 0$). L'équation devient alors $$\frac{\partial F}{\partial u}(u(x,y),v(x,y))=0$$
+et on a donc, pour tout $(u,v)\in\mathbb R^2$, 
+$$\frac{\partial F}{\partial u}(u,v)=0.$$
+La fonction $F$ ne dépend que de sa second variable : il existe $g\in\mathcal C^1(\mathbb R)$ tel que, pour tout $(u,v)\in\mathbb R^2,$ $F(u,v)=g(v)$.
+Revenant à $f$ on trouve que $f(x,y)=g(3x+y)$. Réciproquement, une telle fonction est bien solution de l'équation.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>23</span> <span id="rater3615"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3615"),	max:5, rating:2.6923076923077, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3615,rating); this.setRating(rating);   this.disable();    done();     }});</script> - EDP non linéaire avec second membre <a id=heart23 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart23" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3615.html"> [Signaler une erreur]</a><a id=exo23 href="javascript:ajouteexo(3615,23,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3615','imageenonce3615');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3615"></a><div class=inner id="innerenonce3615">On note $\Omega=\mathbb R\times ]0,+\infty[$. 
+<ol class="enumeratechiffre">
+<li> Déterminer toutes les fonctions $f:\Omega\to\mathbb R$ de classe $\mathcal C^1$ telles que, pour tout $(x,y)\in\Omega,$
+$$x\frac{\partial f}{\partial x}(x,y)-y\frac{\partial f}{\partial y}(x,y)=0.$$
+On pourra utiliser le changement de variables $u=xy$ et $v=-\ln(y).$
+<li> On s'intéresse maintenant à l'équation aux dérivées partielles suivantes : 
+$$\forall (x,y)\in\Omega,\ x\frac{\partial f}{\partial x}(x,y)-y\frac{\partial f}{\partial y}(x,y)=2x+3y.$$
+<ol class="enumeratechiffre">
+<li> Déterminer une fonction linéaire solution de cette équation.
+<li> En déduire toutes les solutions de cette équation.
+</ol>
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication3615','imageindication3615');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3615"></a><div class=inner id="innerindication3615" style="display:none;"><ol class="enumeratechiffre">
+<li> Poser $\phi(x,y)=(xy,-\ln(y))$ et vérifier que $\phi$ est injective, et même est une bijection de $\Omega$ sur $\mathbb R^2$. Poser $F(u,v)=f(\phi^{-1}(u,v))$ puis former une équation aux dérivées partielles simple vérifiée par $f.$
+<li>
+<ol class="enumeratechiffre">
+<li> Poser $f(x,y)=ax+by$ et déterminer $a$ et $b$.
+<li> Utiliser le principe de superposition des solutions, comme pour les équations différentielles.
+</ol>
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3615','imagecorrige3615',3615);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3615"></a><div class=inner id="innercorrige3615" style="display:none;"><ol class="enumeratechiffre">
+<li> Pour $(x,y)\in\Omega,$ on pose $\phi(x,y)=(xy,-\ln(y))$. On va commencer par vérifier que $\phi$ est une bijection de $\Omega$ sur $\mathbb R^2$. C'est facile. En effet, pour tout $(u,v)\in\mathbb R^2,$ on a 
+$$\left\{
+\begin{array}{rcl}
+u&=&xy\\
+v&=&-\ln(y)
+\end{array}
+\right.
+\iff
+\left\{
+\begin{array}{rcl}
+x&=&ue^v\\
+y&=&e^{-v}.
+\end{array}
+\right.
+$$
+Il est donc légitime de poser, pour tout $(u,v)\in\mathbb R^2,$ 
+$F(u,v)=f(\phi^{-1}(u,v))$ de sorte que $f(x,y)=F(xy,-\ln(y))$ pour tout $(x,y)\in\Omega.$
+On observe alors que 
+\begin{align*}
+\frac{\partial f}{\partial x}(x,y)&=y\frac{\partial F}{\partial u}(xy,-\ln(y))\\
+\frac{\partial f}{\partial y}(x,y)&=x\frac{\partial F}{\partial u}(xy,-\ln(y))-\frac 1y\frac{\partial F}{\partial v}(x,y).
+\end{align*}
+Ainsi, si $f$ est solution de l'équation aux dérivées partielles donnée par l'énoncé, $F$ vérifie 
+$$\frac{\partial F}{\partial v}=0.$$
+On intègre cette équation et on trouve qu'il existe $H:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(u,v)\in\mathbb R^2,$ on a 
+$$F(u,v)=H(u).$$
+Ceci signifie que, pour tout $(x,y)\in\Omega,$
+$$f(x,y)=H(xy).$$
+Réciproquement, il est facile de voir que ces fonctions sont solutions de l'équation aux dérivées partielles.
+<li> 
+<ol class="enumeratechiffre">
+<li> Posons $f(x,y)=ax+by$ avec $a,b\in\mathbb R.$ Alors 
+$$x\frac{\partial f}{\partial x}-y\frac{\partial f}{\partial y}=ax-by$$
+et donc $f_0(x,y)=2x-3y$ est une solution particulière de l'équation.
+<li> Par linéarité, on vérifie que $f$ est solution de la second équation aux dérivées partielles si et seulement si $f-f_0$ est solution de la première équation aux dérivées partielles. Donc $f$ est solution de la seconde équation aux dérivées partielles si et seulement s'il existe $H:\mathbb R\to\mathbb R$ de classe $C^1$ telle que, pour tout $(x,y)\in\Omega,$
+$$f(x,y)=H(xy)+2x-3y.$$
+</ol>
+</ol></div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>24</span> <span id="rater125"></span><script>var myRating = raterJs( { element:document.querySelector("#rater125"),	max:5, rating:1.7692307692308, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(125,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions invariantes par translation <a id=heart24 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart24" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=125.html"> [Signaler une erreur]</a><a id=exo24 href="javascript:ajouteexo(125,24,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce125','imageenonce125');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce125"></a><div class=inner id="innerenonce125"><ol class="enumeratechiffre">
+<li> Soit $f:\mathbb R^2\to\mathbb R$. Démontrer que les deux conditions suivantes sont équivalentes : 
+<ul class="rien">
+<li> (C1) $\forall (x,y,t)\in\mathbb R^3,\ f(x+t,y+t)=f(x,y)$.
+<li> (C2) Il existe $g:\mathbb R\to\mathbb R$ tel que, pour tout $(x,y)\in\mathbb R^2$, $f(x,y)=g(x-y)$.
+</ul>
+<li> En déduire les fonctions $f:\mathbb R^2\to\mathbb R$ de classe $\mathcal C^1$ et telles que, pour tout $(x,y)\in\mathbb R^2,$ 
+$$\frac{\partial f}{\partial x}(x,y)+\frac{\partial f}{\partial y}(x,y)=0.$$
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication125','imageindication125');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication125"></a><div class=inner id="innerindication125" style="display:none;"><ol class="enumeratechiffre">
+<li> On pourra poser $g(t)=f(t,0)$.
+<li> Pour $(x,y)\in\mathbb R^2$, poser $h(t)=f(x+t,y+t)$.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige125','imagecorrige125',125);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige125"></a><div class=inner id="innercorrige125" style="display:none;"><ol class="enumeratechiffre">
+<li> Il est d'abord clair que la condition (C2) entraîne (C1). Si on suppose maintenant que (C1) est vrai, on pose, pour $t\in\mathbb R$, $g(t)=f(t,0)$. Alors on a, pour tout $(x,y,t)\in\mathbb R^3,$
+$$f(x,y)=f(x-y,y-y)=f(x-y,0)=g(x-y).$$
+<li> Soit $f$ une telle fonction. On fixe $(x,y)\in\mathbb R^2$ et posons, pour $t\in\mathbb R,$ $h(t)=f(x+t,y+t)$. Alors $h$ est de classe $\mathcal C^1$ sur $\mathbb R$ et pour tout $t\in\mathbb R,$
+$$h'(t)=\frac{\partial f}{\partial x}(x+t,y+t)+\frac{\partial f}{\partial y}(x+t,y+t)=0.$$
+Ainsi, $h$ est constante identiquement égale à $h(0)$. D'après la question précédente, il existe $g:\mathbb R\to\mathbb R$ tel que, pour tout $(x,y)\in\mathbb R^2,$ $f(x,y)=g(x-y)$. De plus, $g$ est $\mathcal C^1$ puisque $g(t)=f(t,0)$.<br>
+Réciproquement, s'il existe $g:\mathbb R\to\mathbb R$ de classe $\mathcal C^1$ tel que $f(x,y)=g(x-y)$ pour tout $(x,y)\in\mathbb R^2$, alors, pour tout $(x,y)\in\mathbb R^2,$ 
+$$\frac{\partial f}{\partial x}(x,y)+\frac{\partial f}{\partial y}(x,y)=g'(x-y)-g'(x-y)=0.$$
+</ol></div></div></div>
+
+
+<div class=titrepartie>&Eacute;quations aux dérivées partielles du second ordre</div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>25</span> <span id="rater3597"></span><script>var myRating = raterJs( { element:document.querySelector("#rater3597"),	max:5, rating:2.1666666666667, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(3597,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Applications dont la Hessienne est constante <a id=heart25 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart25" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=3597.html"> [Signaler une erreur]</a><a id=exo25 href="javascript:ajouteexo(3597,25,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce3597','imageenonce3597');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce3597"></a><div class=inner id="innerenonce3597">Déterminer toutes les applications $f:\mathbb R^2\to\mathbb R$ dont la matrice hessienne est constante, c'est-à-dire pour lesquelles il existe des constantes $a,b$ et $c$ telles que 
+$$\frac{\partial^2 f}{\partial x^2}=a,\ \frac{\partial^2 f}{\partial y^2}=b\textrm{ et }\frac{\partial^2 f}{\partial x\partial y}=c.$$</div></div><div class=indication><a href="javascript:showAll('innerindication3597','imageindication3597');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication3597"></a><div class=inner id="innerindication3597" style="display:none;">Commencer par déterminer toutes les fonctions qui vérifient $\frac{\partial^2 f}{\partial^2 x}=a.$ Puis, parmi ces fonctions, déterminer celles qui vérifient les autres égalités.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige3597','imagecorrige3597',3597);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige3597"></a><div class=inner id="innercorrige3597" style="display:none;">On va commencer par déterminer toutes les fonctions $f:\mathbb R^2\to\mathbb R,$ de classe $C^2,$ qui vérifient 
+$$\frac{\partial^2 f}{\partial^2 x}=a.$$
+Pour cela, posons $g=\frac{\partial f}{\partial x}.$ Alors $g$ vérifie
+$$\frac{\partial g}{\partial x}=a.$$
+Ainsi, il existe une fonction $C:\mathbb R\to\mathbb R$ telle que, pour tout $(x,y)\in\mathbb R^2,$ 
+$$\frac{\partial f}{\partial x}(x,y)=g(x,y)=ax+C(y).$$
+On va encore intégrer cette égalité : il existe une fonction $D:\mathbb R\to\mathbb R$ telle que, pour tout $(x,y)\in\mathbb R^2,$ 
+$$f(x,y)=\frac{a}2x^2+C(y)x+D(y).$$ 
+Puisque $f$ est $C^2$ et que $f(0,y)=D(y),$ on obtient que $f$ est $\mathcal C^2$, puis calculant $f(1,y)=C(y)+D(y),$ on obtient que $C$ est aussi de classe $C^2$. <br>
+Cherchons ensuite parmi les fonctions qui s'écrivent sous la forme précédente celles qui vérifient les deux autres conditions. On a d'une part 
+$$\frac{\partial^2 f}{\partial x\partial y}(x,y)=C'(y)=c.$$
+Ainsi, il existe $d_1\in\mathbb R$ tel que $C(y)=cy+d_1.$
+D'autre part, utilisant cette formule pour $C,$
+$$\frac{\partial^2 f}{\partial y^2}(x,y)=D''(y)=b,$$
+et donc il existe $d_2,d_3\in\mathbb R$ tels que 
+$$D(y)=\frac{by^2}{2}+d_2y+d_3.$$
+Finalement, on a prouvé que si $f$ est solution du problème, alors 
+$f$ s'écrit, pour tout $(x,y)\in\mathbb R^2,$
+$$f(x,y)=\frac{a}2x^2+\frac{b}2y^2+cxy+d_1x+d_2y+d_3.$$
+Autrement dit, $f$ est un polynôme de degré $2$ en les variables $x$ et $y$. Réciproquement, il est facile de vérifier que ces fonctions sont bien solution du problème.</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>26</span> <span id="rater126"></span><script>var myRating = raterJs( { element:document.querySelector("#rater126"),	max:5, rating:3, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(126,rating); this.setRating(rating);   this.disable();    done();     }});</script> - &Eacute;quation des cordes vibrantes <a id=heart26 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart26" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=126.html"> [Signaler une erreur]</a><a id=exo26 href="javascript:ajouteexo(126,26,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce126','imageenonce126');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce126"></a><div class=inner id="innerenonce126">Soit $c\neq 0$. Chercher les solutions de classe $C^2$ de l'équation aux dérivées partielles suivantes 
+$$c^2\frac{\partial^2 f}{\partial x^2}=\frac{\partial^2 f}{\partial t^2},$$
+à l'aide d'un changement de variables de la forme $u=x+at$, $v=x+bt$.</div></div><div class=indication><a href="javascript:showAll('innerindication126','imageindication126');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication126"></a><div class=inner id="innerindication126" style="display:none;">Faire comme l'énoncé le préconise, en posant $f(x,y)=F(u,v)$. Transformer l'équation aux dérivées partielles en équations aux dérivées 
+partielles pour $F$, et ajuster $a$ et $b$ de sorte de se ramener à $\frac{\partial^2 F}{\partial u\partial v}=0$.</div></div><div class=corrige><a href="javascript:showCorrige('innercorrige126','imagecorrige126',126);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige126"></a><div class=inner id="innercorrige126" style="display:none;">On pose donc $f(x,y)=F(u,v)$ avec $u=x+at$ et $v=x+bt$. On a donc 
+$$\frac{\partial^2 f}{\partial x^2}=\frac{\partial^2 F}{\partial u^2}+2\frac{\partial^2 F}{\partial u\partial v}+\frac{\partial^2 F}{\partial v^2}$$
+et 
+$$\frac{\partial^2 f}{\partial t^2}=a^2 \frac{\partial^2 F}{\partial u^2}+2ab\frac{\partial F}{\partial u\partial v}+b^2\frac{\partial^2 F}{\partial v^2}.$$
+L'équation devient alors :
+$$(c^2-a^2)\frac{\partial^2 F}{\partial u^2}+2(c^2-ab)\frac{\partial^2 F}{\partial u\partial v}+(c^2-b^2)\frac{\partial^2 F}{\partial v^2}=0.$$
+En prenant $a=c$ et $b=-c$, l'équation devient 
+$$\frac{\partial^2 F}{\partial v\partial u}=0$$
+dont la solution générale est 
+$$F(u,v)=\phi(u)+\psi(v),$$
+où $\phi$ et $\psi$ sont $C^2$. La solution générale de l'équation initiale est donc :
+$$f(x,t)=\phi(x+ct)+\psi(x-ct).$$</div></div></div>
+<div class=exo><div class=titreexo><span>Exercice </span><span>27</span> <span id="rater127"></span><script>var myRating = raterJs( { element:document.querySelector("#rater127"),	max:5, rating:2.2105263157895, ratingText: "Notez la difficulté de cet exercice", rateCallback:function rateCallback(rating, done) { noteexo(127,rating); this.setRating(rating);   this.disable();    done();     }});</script> - Fonctions harmoniques <a id=heart27 href="javascript:alertbox.render({alertIcon: 'warning',  title: 'Exercice favori',  message: 'Il faut être identifié pour placer un exercice en favori.',  btnTitle: 'Ok',  btnColor: '#229222', border:true});" title="Ajouter aux favoris"><span class="imgheart" id="imgheart27" style="color: rgb(var(--link-color))">♡</span></a> <a href="signalerreur.php%3Fnumero=127.html"> [Signaler une erreur]</a><a id=exo27 href="javascript:ajouteexo(127,27,1)">&nbsp;[Ajouter à ma feuille d'exos]</a></div><div class=enonce><a href="javascript:showAll('innerenonce127','imageenonce127');" class="lienexo">Enoncé <img src="../img/flechebas.png" id="imageenonce127"></a><div class=inner id="innerenonce127">Une fonction $f:U\to\mathbb R$ de classe $C^2$, définie sur un ouvert $U$ de $\mathbb R^2$, est dite harmonique si son laplacien est nul, ie si 
+$$\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}=0.$$
+Dans toute la suite, on fixe $f$ une fonction harmonique.
+<ol class="enumeratechiffre">
+<li> On suppose que $f$ est de classe $C^3$. Démontrer que $\frac{\partial f}{\partial x}$, 
+$\frac{\partial f}{\partial y}$ et $x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}$  sont harmoniques. 
+<li> On suppose désormais que $f$ est définie sur $\mathbb R^2\backslash\{(0,0)\}$ est radiale, c'est-à-dire qu'il existe $\varphi:\mathbb R^*\to\mathbb R$ de
+classe $C^2$ telle que $f(x,y)=\varphi(x^2+y^2)$.  Démontrer que $\varphi'$ est solution d'une
+équation différentielle linéaire du premier ordre.
+<li> En déduire toutes les fonctions harmoniques radiales.
+</ol></div></div><div class=indication><a href="javascript:showAll('innerindication127','imageindication127');" class="lienexo">Indication <img src="../img/flechedroite.png" id="imageindication127"></a><div class=inner id="innerindication127" style="display:none;"><ol class="enumeratechiffre">
+<li> Il s'agit juste d'appliquer la définition, en permutant bien sûr à sa guise l'ordre des dérivations.
+<li> Exprimer $\frac{\partial f}{\partial x}$ en fonction de $\varphi'$.
+<li> Résoudre l'équation différentielle précédente.
+</ol></div></div><div class=corrige><a href="javascript:showCorrige('innercorrige127','imagecorrige127',127);" class="lienexo">Corrigé <img src="../img/flechedroite.png" id="imagecorrige127"></a><div class=inner id="innercorrige127" style="display:none;"><ol class="enumeratechiffre">
+<li> Posons $g=\frac{\partial f}{\partial x}$. Alors, d'après le théorème de Schwarz,
+$$\frac{\partial^2 g}{\partial x^2}+\frac{\partial^2 g}{\partial y^2}=\frac{\partial}{\partial x}\left(\frac{\partial^2 f}{\partial x^2}
++\frac{\partial^2 f}{\partial y^2}\right)=0.$$
+On prouve exactement de la même façon que $\frac{\partial f}{\partial y}$ est harmonique. D'autre part, posons $h=x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}$. Alors, 
+$$\frac{\partial h}{\partial x}=\frac{\partial f}{\partial x}+x\frac{\partial^2 f}{\partial x^2}+y\frac{\partial^2 f}{\partial x\partial y}\textrm{ et }\frac{\partial^2 h}{\partial x^2}=
+2\frac{\partial^2 f}{\partial x^2}+x\frac{\partial^3 f}{\partial x^3}+y\frac{\partial^3 f}{\partial x^2\partial y}.$$
+On trouve de même que 
+$$\frac{\partial^2 h}{\partial y^2}=
+2\frac{\partial^2 f}{\partial y^2}+y\frac{\partial^3 f}{\partial y^3}+x\frac{\partial^3 f}{\partial x\partial y^2}.$$
+Ainsi,
+$$\Delta(h)=2\Delta(f)+x\Delta\left(\frac{\partial f}{\partial x}\right)+y\Delta\left(\frac{\partial f}{\partial y}\right)=0,$$
+en vertu de la première partie de la question.
+<li> D'après le théorème de dérivation d'une fonction composée,
+$$\frac{\partial f}{\partial x}=2x\varphi'(x^2+y^2)\textrm{ et }\frac{\partial^2 f}{\partial x^2}=2\varphi'(x^2+y^2)+4x^2 \varphi''(x^2+y^2).$$
+De même, 
+$$\frac{\partial^2 f}{\partial y^2}=2\varphi'(x^2+y^2)+4y^2\varphi''(x^2+y^2).$$
+En posant $t=x^2+y^2$, on en déduit que, puisque $\Delta(f)=0$,
+$$\varphi'(t)+t\varphi''(t)=0.$$
+Ainsi, $\varphi'$ est solution sur l'intervalle $]0,+\infty[$ de l'équation différentielle $xy'+y=0$.
+<li> On résout l'équation différentielle précédente. Ses solutions sont les fonctions de la forme 
+$x\mapsto C/x$. En intégrant, on trouve qu'il existe deux constantes $C,D\in\mathbb R$ de sorte que
+$\varphi(x)=C\ln (x)+D$. Ainsi, $f$ s'écrit nécessairement $f(x,y)=C\ln(x^2+y^2)+D$. Réciproquement, on vérifie
+que toute fonction de la forme précédente est harmonique. 
+</ol>
+</div></div></div>
+
+
+</article></div><aside id="droite"><div class="contenudroite"><h1>
+	Discussions des forums</h1><li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18115&amp;action=new" title="Joyeux anniversaire Vassillia">Joyeux anniversaire Vassillia</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18111&amp;action=new" title="Collatz - Besoin d&#039;explications">Collatz - Besoin d&#039;explic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17413&amp;action=new" title="Ni équerre, ni compas. Règle non graduée et crayon.">Ni équerre, ni compas. Rè …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18011&amp;action=new" title="Entreaide CAPES 2026">Entreaide CAPES 2026</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18114&amp;action=new" title="Series entières et fonctions testes">Series entières et foncti …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18092&amp;action=new" title="Je ne sais pas comment apprendre  les maths">Je ne sais pas comment ap …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18104&amp;action=new" title="L’Année 1978 et sa particularité">L’Année 1978 et sa partic …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18110&amp;action=new" title="Images mathématiques (CNRS)">Images mathématiques (CNRS)</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18108&amp;action=new" title="$56$ divise $n$">$56$ divise $n$</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18048&amp;action=new" title="Algébre">Algébre</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18109&amp;action=new" title="Téléchargement">Téléchargement</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17912&amp;action=new" title="Licence maths L1">Licence maths L1</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=17824&amp;action=new" title="Automate de Collatz">Automate de Collatz</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18106&amp;action=new" title="Equation $x^2 + y^2 = 3(z^2 + u^2).$">Equation $x^2 + y^2 = 3(z …</a></li>
+<li><a href="https://www.bibmath.net/forums/viewtopic.php?id=18103&amp;action=new" title="Propriété du Roi utile ?">Propriété du Roi utile ?</a></li>
+<div class=bascontenu><a href="../forums.html">Accéder aux forums</a></div>  </div><div id=pubdroite><div class="r89-desktop-hpa-atf"></div><div class="contenudroite"><h1>Mathématicien du mois</h1><div align=center><img src="../bios/images/lipschitz.jpg" class=imgcontenu></div><div align=center><a href="../bios/index.php%3Faction=affiche&amp;quoi=lipschitz.html">Rudolf Lipschitz (1832-1903)</a></div><div class=bascontenu><a href="../bios/index.php.html">Toutes les biographies</a></div></div></div></aside></div></div><footer class="footer"><div class="footer-lists"><ul class="footer-list"><li class="footer-list-title">Communiquer</li><li class="footer-list-item"><a href="../contact.php%3Forigine=erreur.html">Signaler une erreur</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contribuer.html">Contribuer</a></li><li class="footer-list-item"><a href="../contact.php%3Forigine=contact.html">Nous contacter</a></li></ul><ul class="footer-list"><li class="footer-list-title">Le site</li><li class="footer-list-item"><a href="../soutenir.php.html">Soutenir Bibm@th</a></li><li class="footer-list-item"><a href="../historique.php.html">Historique</a></li></ul><ul class="footer-list"><li class="footer-list-title">Légal</li><li class="footer-list-item"><a href="../credits.php.html">Mentions légales</a></li><li class="footer-list-item"><a href="index.php%3Fcmpscreen.html">Confidentialité</a></li></ul><ul class="footer-list"><li class="footer-list-title">Nos réseaux</li><li class="footer-list-item"><a href="https://www.youtube.com/channel/UCP-LXgvAe7CMdf_dddUcLmw">Youtube</a></li><li class="footer-list-item"><a href="https://www.instagram.com/bibmath/">Instagram</a></li></ul></div></footer>
+<script>
+var acc = document.getElementsByClassName("titrecours");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("activecours");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body><script type="text/javascript" src="../common/scrolling.js"></script><script type="text/javascript" src="../common/alertbox.min.js"></script><script type="text/javascript" src="../common/themehandler.js"></script></html>	
